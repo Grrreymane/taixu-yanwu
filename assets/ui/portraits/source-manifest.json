@@ -1,0 +1,133 @@
+{
+  "source": "Honkai Impact 3rd installed game, native Texture2D exports",
+  "imageModification": "None; PNG copied byte-for-byte, original alpha and dimensions retained",
+  "sourceReadOnly": true,
+  "portraits": [
+    {
+      "name": "FukaC3",
+      "pathId": "-8473132819203965812",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\68dc1517f487a11a.wmv",
+      "cab": "CAB-3af0a49626c89ad8d898de80ca1aae66",
+      "rawSHA256": "5c8dcd60da4abedeedff4aa62691364fba923dcb65268f1e11e29772806c89b3",
+      "width": 148,
+      "height": 260,
+      "format": "RGBA32",
+      "ok": true,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\roster-portraits\\original\\textures\\FukaC3_-8473132819203965812\\FukaC3.png",
+          "sha256": "5d6738c0d3ad35b158f864ccce2e9b6684cbb3f7447a3b059a730506d27f1085"
+        }
+      ],
+      "style": "night_squire",
+      "appearance": "default",
+      "projectPath": "res://assets/ui/portraits/FukaC3.png",
+      "sha256": "5d6738c0d3ad35b158f864ccce2e9b6684cbb3f7447a3b059a730506d27f1085"
+    },
+    {
+      "name": "FukaC3_04_03",
+      "pathId": "-7453740422757582123",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\909d2cb44c90c887.wmv",
+      "cab": "CAB-437e87371eedd5c132e70229090b9732",
+      "rawSHA256": "dbc9bc909e04870b8280fc2c142dc82646223fb7bb28664eab6ea38ff878a73a",
+      "width": 148,
+      "height": 257,
+      "format": "RGBA32",
+      "ok": true,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\roster-portraits\\original\\textures\\FukaC3_04_03_-7453740422757582123\\FukaC3_04_03.png",
+          "sha256": "c01f90cdc180c3a438486aeb07d68bd5020f51aec7a8c1e2cabe349f36636767"
+        }
+      ],
+      "style": "night_squire",
+      "appearance": "autumn_leaves",
+      "projectPath": "res://assets/ui/portraits/FukaC3_04_03.png",
+      "sha256": "c01f90cdc180c3a438486aeb07d68bd5020f51aec7a8c1e2cabe349f36636767"
+    },
+    {
+      "name": "FukaC4",
+      "pathId": "1462242170073035061",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\909d2cb44c90c887.wmv",
+      "cab": "CAB-e52d7b913d27090baf40cc045f757f78",
+      "rawSHA256": "bb71afa50f5bf28376daf4cacbb5ceeb01e579de94ccf7d49a04c580bf896c16",
+      "width": 148,
+      "height": 260,
+      "format": "RGBA32",
+      "ok": true,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\roster-portraits\\original\\textures\\FukaC4_1462242170073035061\\FukaC4.png",
+          "sha256": "638423213221f1366fd27b987956c5e952386ada8537d1d291ad56706170d222"
+        }
+      ],
+      "style": "fenghuang",
+      "appearance": "default",
+      "projectPath": "res://assets/ui/portraits/FukaC4.png",
+      "sha256": "638423213221f1366fd27b987956c5e952386ada8537d1d291ad56706170d222"
+    },
+    {
+      "name": "FukaC5_04_02",
+      "pathId": "-5846283950570918034",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\909d2cb44c90c887.wmv",
+      "cab": "CAB-c75bf2aa853f4ea06eb7cb865d33805f",
+      "rawSHA256": "e8a92f4f7d84654e990e1bdb200cfaf38f02616d6cedff48b6fc2bb22a4712aa",
+      "width": 148,
+      "height": 252,
+      "format": "RGBA32",
+      "ok": true,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\roster-portraits\\original\\textures\\FukaC5_04_02_-5846283950570918034\\FukaC5_04_02.png",
+          "sha256": "bfce4bf014b1027527384361d0976cceb22a85af045ebc7164b2eb0be6746b29"
+        }
+      ],
+      "style": "azure_empyrea",
+      "appearance": "taixu_memory",
+      "projectPath": "res://assets/ui/portraits/FukaC5_04_02.png",
+      "sha256": "bfce4bf014b1027527384361d0976cceb22a85af045ebc7164b2eb0be6746b29"
+    },
+    {
+      "name": "FukaC5",
+      "pathId": "-2322586281516646000",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\909d2cb44c90c887.wmv",
+      "cab": "CAB-787999686e64d8c008098f4cc7075ada",
+      "rawSHA256": "b9a69ca02639ce8b53412ed60ffa64ed5650084d62a0abb6b11c63cbf4ab2129",
+      "width": 148,
+      "height": 260,
+      "format": "RGBA32",
+      "ok": true,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\roster-portraits\\original\\textures\\FukaC5_-2322586281516646000\\FukaC5.png",
+          "sha256": "976c023e702713e11b83587e4d12523128860d08622d56b6cc3deff8afbf5be3"
+        }
+      ],
+      "style": "azure_empyrea",
+      "appearance": "default",
+      "projectPath": "res://assets/ui/portraits/FukaC5.png",
+      "sha256": "976c023e702713e11b83587e4d12523128860d08622d56b6cc3deff8afbf5be3"
+    },
+    {
+      "name": "FukaC6",
+      "pathId": "36502233928914588",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\909d2cb44c90c887.wmv",
+      "cab": "CAB-6e610066dbd12068ac3258cf819fc1db",
+      "rawSHA256": "dac1fc5f9fb60775e08a2e55bc406865334eac3c5be872288d3f472ebf1343b3",
+      "width": 148,
+      "height": 260,
+      "format": "RGBA32",
+      "ok": true,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\roster-portraits\\original\\textures\\FukaC6_36502233928914588\\FukaC6.png",
+          "sha256": "4a62f6f70956aa4c45a240b8e9becc117cd4c14d565c3bec2f797d47689c790e"
+        }
+      ],
+      "style": "sentience",
+      "appearance": "default",
+      "projectPath": "res://assets/ui/portraits/FukaC6.png",
+      "sha256": "4a62f6f70956aa4c45a240b8e9becc117cd4c14d565c3bec2f797d47689c790e"
+    }
+  ]
+}

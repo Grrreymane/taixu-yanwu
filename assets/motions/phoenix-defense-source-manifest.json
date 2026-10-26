@@ -1,0 +1,445 @@
+{
+  "schemaVersion": 1,
+  "recordedAtUtc": "2026-10-18T05:32:54.6299579Z",
+  "description": "莱特防御支援原始全局姿态独立重定向至符华炽翎 C4_JW；未经过云墨已烘焙姿态。",
+  "source": {
+    "game": "Zenless Zone Zero / 绝区零",
+    "installedVersionAtExtraction": "3.0.0",
+    "character": "Lighter / 莱特",
+    "extractionTool": "AnimeStudioUltimate v1.7.0 with local batch-host",
+    "sourceFbx": {
+      "path": "zzz-animation-extract/exports/lighter-combat-fbx/FBX/352653666/3180335817231785534/Avatar_Male_Size02_Lighter.fbx",
+      "bytes": 252352352,
+      "sha256": "18c025b75e542aee5b10c687d5cfa3b2c0ba979352c9a8dd8863c9c4bce847fe"
+    },
+    "clips": [
+      {
+        "runtimeName": "Attack_ParryAid_L",
+        "originalName": "Avatar_Male_Size02_Lighter_Ani_Attack_ParryAid_L",
+        "originalStopTimeSeconds": 0.6666667,
+        "sampleRate": 60,
+        "sourceBlock": "3179357483.blk",
+        "sourcePathId": "-1549926609511594641",
+        "currentGameIndexPreferredVariant": true,
+        "rawAnimation": {
+          "path": "zzz-animation-extract/exports/lighter-batch2/AnimationClip/3179357483/-1549926609511594641/Avatar_Male_Size02_Lighter_Ani_Attack_ParryAid_L.anim",
+          "bytes": 7309069,
+          "sha256": "9f879a614148dde92c75f0cd56915de889e469db7d1279832e0681e90d645737"
+        }
+      },
+      {
+        "runtimeName": "Attack_ParryAid_H",
+        "originalName": "Avatar_Male_Size02_Lighter_Ani_Attack_ParryAid_H",
+        "originalStopTimeSeconds": 1.0,
+        "sampleRate": 60,
+        "sourceBlock": "352653666.blk",
+        "sourcePathId": "-3347996724766688351",
+        "currentGameIndexPreferredVariant": true,
+        "rawAnimation": {
+          "path": "zzz-animation-extract/exports/lighter-batch2/AnimationClip/352653666/-3347996724766688351/Avatar_Male_Size02_Lighter_Ani_Attack_ParryAid_H.anim",
+          "bytes": 10708501,
+          "sha256": "c447294268bc1cf0ab55e2322a7c60d8537b03fdd0edc8676dd9a7bdd89d5a9c"
+        }
+      }
+    ],
+    "largeSourceFbxIncludedInWebBuild": false
+  },
+  "target": {
+    "game": "Honkai Impact 3rd / 崩坏3",
+    "character": "符华 · 炽翎",
+    "model": {
+      "path": "assets/phoenix/Avatar_Fuka_C4_JW.scn",
+      "bytes": 2585301,
+      "sha256": "45d5c3dd8bbff1a77831621cd1140cec43707ec30edb5836c85605d2f2a8eb75"
+    }
+  },
+  "runtimeAsset": {
+    "path": "assets/motions/phoenix-defense.res",
+    "bytes": 85487,
+    "sha256": "3ecb2d2c441aa1c94bd0b044baa2d0ce31138b0bc708db1c528c7c2139c86110"
+  },
+  "packagedClips": [
+    "Attack_ParryAid_L",
+    "Attack_ParryAid_H"
+  ],
+  "retarget": {
+    "engine": "Godot 4.7.2, built-in ufbx importer",
+    "samplingScript": "zzz-animation-extract/probes/defense-retarget/extract_defense.gd",
+    "bakeScript": "fuhua-godot/build/bake_phoenix_defense.gd",
+    "sampledSource": {
+      "path": "zzz-animation-extract/probes/defense-retarget/source-defense-poses.json",
+      "bytes": 5481210,
+      "sha256": "ca3f6c61b64c890cf214da6698f8de6fae3973219ffe5f053ba066cb2d227a74"
+    },
+    "sourceSkeletonBoneCount": 147,
+    "targetSkeletonBoneCount": 92,
+    "mappedBodyAndFingerBoneCount": 53,
+    "mappingRule": "Exact bone-name match; all mapped parent names also match. Cloth, hair and auxiliary source bones are excluded.",
+    "rotationRule": "desiredGlobal = sourceAnimatedGlobal * inverse(sourceRestGlobal) * targetRestGlobal; then convert through the desired animated parent into target local rotation. Quaternions are normalized.",
+    "targetBoneLengths": "Original target local translations and scales are retained; source limb positions are not copied.",
+    "rootMotion": {
+      "bone": "Bip001",
+      "horizontalXZ": "Locked to target origin; source forward/backward travel is discarded.",
+      "verticalY": "Recomputed from lower target foot. C4 fullGrounding applies the full correction after pose blending; the earlier weighted correction could leave a 0.0579m partial-blend deviation."
+    },
+    "runtimeDrapeStability": {
+      "bones": [],
+      "method": "C4 original secondary bones follow their native animation/base pose. The C5-specific cloth stability list is not claimed to apply to this rig."
+    },
+    "boneMapping": [
+      {
+        "source": "Bip001",
+        "target": "Bip001",
+        "parent": ""
+      },
+      {
+        "source": "Bip001 Pelvis",
+        "target": "Bip001 Pelvis",
+        "parent": "Bip001"
+      },
+      {
+        "source": "Bip001 Spine",
+        "target": "Bip001 Spine",
+        "parent": "Bip001 Pelvis"
+      },
+      {
+        "source": "Bip001 Spine1",
+        "target": "Bip001 Spine1",
+        "parent": "Bip001 Spine"
+      },
+      {
+        "source": "Bip001 Spine2",
+        "target": "Bip001 Spine2",
+        "parent": "Bip001 Spine1"
+      },
+      {
+        "source": "Bip001 Neck",
+        "target": "Bip001 Neck",
+        "parent": "Bip001 Spine2"
+      },
+      {
+        "source": "Bip001 Head",
+        "target": "Bip001 Head",
+        "parent": "Bip001 Neck"
+      },
+      {
+        "source": "Bip001 L Clavicle",
+        "target": "Bip001 L Clavicle",
+        "parent": "Bip001 Spine2"
+      },
+      {
+        "source": "Bip001 L UpperArm",
+        "target": "Bip001 L UpperArm",
+        "parent": "Bip001 L Clavicle"
+      },
+      {
+        "source": "Bip001 L Forearm",
+        "target": "Bip001 L Forearm",
+        "parent": "Bip001 L UpperArm"
+      },
+      {
+        "source": "Bip001 L Hand",
+        "target": "Bip001 L Hand",
+        "parent": "Bip001 L Forearm"
+      },
+      {
+        "source": "Bip001 L Finger0",
+        "target": "Bip001 L Finger0",
+        "parent": "Bip001 L Hand"
+      },
+      {
+        "source": "Bip001 L Finger01",
+        "target": "Bip001 L Finger01",
+        "parent": "Bip001 L Finger0"
+      },
+      {
+        "source": "Bip001 L Finger02",
+        "target": "Bip001 L Finger02",
+        "parent": "Bip001 L Finger01"
+      },
+      {
+        "source": "Bip001 L Finger1",
+        "target": "Bip001 L Finger1",
+        "parent": "Bip001 L Hand"
+      },
+      {
+        "source": "Bip001 L Finger11",
+        "target": "Bip001 L Finger11",
+        "parent": "Bip001 L Finger1"
+      },
+      {
+        "source": "Bip001 L Finger12",
+        "target": "Bip001 L Finger12",
+        "parent": "Bip001 L Finger11"
+      },
+      {
+        "source": "Bip001 L Finger2",
+        "target": "Bip001 L Finger2",
+        "parent": "Bip001 L Hand"
+      },
+      {
+        "source": "Bip001 L Finger21",
+        "target": "Bip001 L Finger21",
+        "parent": "Bip001 L Finger2"
+      },
+      {
+        "source": "Bip001 L Finger22",
+        "target": "Bip001 L Finger22",
+        "parent": "Bip001 L Finger21"
+      },
+      {
+        "source": "Bip001 L Finger3",
+        "target": "Bip001 L Finger3",
+        "parent": "Bip001 L Hand"
+      },
+      {
+        "source": "Bip001 L Finger31",
+        "target": "Bip001 L Finger31",
+        "parent": "Bip001 L Finger3"
+      },
+      {
+        "source": "Bip001 L Finger32",
+        "target": "Bip001 L Finger32",
+        "parent": "Bip001 L Finger31"
+      },
+      {
+        "source": "Bip001 L Finger4",
+        "target": "Bip001 L Finger4",
+        "parent": "Bip001 L Hand"
+      },
+      {
+        "source": "Bip001 L Finger41",
+        "target": "Bip001 L Finger41",
+        "parent": "Bip001 L Finger4"
+      },
+      {
+        "source": "Bip001 L Finger42",
+        "target": "Bip001 L Finger42",
+        "parent": "Bip001 L Finger41"
+      },
+      {
+        "source": "Bip001 R Clavicle",
+        "target": "Bip001 R Clavicle",
+        "parent": "Bip001 Spine2"
+      },
+      {
+        "source": "Bip001 R UpperArm",
+        "target": "Bip001 R UpperArm",
+        "parent": "Bip001 R Clavicle"
+      },
+      {
+        "source": "Bip001 R Forearm",
+        "target": "Bip001 R Forearm",
+        "parent": "Bip001 R UpperArm"
+      },
+      {
+        "source": "Bip001 R Hand",
+        "target": "Bip001 R Hand",
+        "parent": "Bip001 R Forearm"
+      },
+      {
+        "source": "Bip001 R Finger0",
+        "target": "Bip001 R Finger0",
+        "parent": "Bip001 R Hand"
+      },
+      {
+        "source": "Bip001 R Finger01",
+        "target": "Bip001 R Finger01",
+        "parent": "Bip001 R Finger0"
+      },
+      {
+        "source": "Bip001 R Finger02",
+        "target": "Bip001 R Finger02",
+        "parent": "Bip001 R Finger01"
+      },
+      {
+        "source": "Bip001 R Finger1",
+        "target": "Bip001 R Finger1",
+        "parent": "Bip001 R Hand"
+      },
+      {
+        "source": "Bip001 R Finger11",
+        "target": "Bip001 R Finger11",
+        "parent": "Bip001 R Finger1"
+      },
+      {
+        "source": "Bip001 R Finger12",
+        "target": "Bip001 R Finger12",
+        "parent": "Bip001 R Finger11"
+      },
+      {
+        "source": "Bip001 R Finger2",
+        "target": "Bip001 R Finger2",
+        "parent": "Bip001 R Hand"
+      },
+      {
+        "source": "Bip001 R Finger21",
+        "target": "Bip001 R Finger21",
+        "parent": "Bip001 R Finger2"
+      },
+      {
+        "source": "Bip001 R Finger22",
+        "target": "Bip001 R Finger22",
+        "parent": "Bip001 R Finger21"
+      },
+      {
+        "source": "Bip001 R Finger3",
+        "target": "Bip001 R Finger3",
+        "parent": "Bip001 R Hand"
+      },
+      {
+        "source": "Bip001 R Finger31",
+        "target": "Bip001 R Finger31",
+        "parent": "Bip001 R Finger3"
+      },
+      {
+        "source": "Bip001 R Finger32",
+        "target": "Bip001 R Finger32",
+        "parent": "Bip001 R Finger31"
+      },
+      {
+        "source": "Bip001 R Finger4",
+        "target": "Bip001 R Finger4",
+        "parent": "Bip001 R Hand"
+      },
+      {
+        "source": "Bip001 R Finger41",
+        "target": "Bip001 R Finger41",
+        "parent": "Bip001 R Finger4"
+      },
+      {
+        "source": "Bip001 R Finger42",
+        "target": "Bip001 R Finger42",
+        "parent": "Bip001 R Finger41"
+      },
+      {
+        "source": "Bip001 L Thigh",
+        "target": "Bip001 L Thigh",
+        "parent": "Bip001 Pelvis"
+      },
+      {
+        "source": "Bip001 L Calf",
+        "target": "Bip001 L Calf",
+        "parent": "Bip001 L Thigh"
+      },
+      {
+        "source": "Bip001 L Foot",
+        "target": "Bip001 L Foot",
+        "parent": "Bip001 L Calf"
+      },
+      {
+        "source": "Bip001 L Toe0",
+        "target": "Bip001 L Toe0",
+        "parent": "Bip001 L Foot"
+      },
+      {
+        "source": "Bip001 R Thigh",
+        "target": "Bip001 R Thigh",
+        "parent": "Bip001 Pelvis"
+      },
+      {
+        "source": "Bip001 R Calf",
+        "target": "Bip001 R Calf",
+        "parent": "Bip001 R Thigh"
+      },
+      {
+        "source": "Bip001 R Foot",
+        "target": "Bip001 R Foot",
+        "parent": "Bip001 R Calf"
+      },
+      {
+        "source": "Bip001 R Toe0",
+        "target": "Bip001 R Toe0",
+        "parent": "Bip001 R Foot"
+      }
+    ]
+  },
+  "runtimeUse": {
+    "fullSourceClipsStored": true,
+    "trimLocation": "scripts/actor.gd",
+    "hold": {
+      "clip": "Attack_ParryAid_H",
+      "sourceSeconds": [
+        0.018,
+        0.034
+      ],
+      "enterBlendSeconds": 0.1
+    },
+    "block": {
+      "clip": "Attack_ParryAid_H",
+      "sourceSeconds": [
+        0.035,
+        0.14
+      ],
+      "strongSourceSeconds": [
+        0.035,
+        0.23
+      ],
+      "sourceTraverseSimulationSeconds": 0.19,
+      "reactionSimulationSeconds": 0.3,
+      "releaseBlendStartsAtSimulationSeconds": 0.17
+    },
+    "parry": {
+      "clip": "Attack_ParryAid_L",
+      "sourceSeconds": [
+        0.0,
+        0.32
+      ],
+      "sourceTraverseSimulationSeconds": 0.27,
+      "reactionSimulationSeconds": 0.4,
+      "releaseBlendStartsAtSimulationSeconds": 0.25,
+      "note": "The later spectacle-adjustment gesture is outside the used section."
+    },
+    "timing": "Driven by simulation delta; pause and hitstop freeze the pose and reaction clocks.",
+    "attackInterrupt": "J/K attacks immediately disable the defense overlay.",
+    "automaticCounterattackDamageAdded": false
+  },
+  "validation": {
+    "mode": "Godot headless; no GPU rendering",
+    "report": "build/phoenix-defense-validation.json",
+    "result": {
+      "clips": [
+        {
+          "duration": 1.0,
+          "name": "Attack_ParryAid_H",
+          "tracks": 54
+        },
+        {
+          "duration": 0.6666667,
+          "name": "Attack_ParryAid_L",
+          "tracks": 54
+        }
+      ],
+      "floorHeight": 0.104558199644089,
+      "gpuVisualReview": false,
+      "invalidTransforms": 0,
+      "mappedBones": 53,
+      "maxBlendFootDeviation": 8.94069671630859E-08,
+      "maxDistanceFromPelvis": 1.01686668395996,
+      "maxFullWeightFootError": 8.94069671630859E-08,
+      "maxLengthError": 0.0,
+      "passed": true,
+      "previousWeightedGroundingMaximumDeviation": 0.0579006671905518,
+      "rootHorizontalError": 0.0,
+      "runtimeGrounding": "full correction after blending, matching C4 fullGrounding profile",
+      "sampledPoses": 1015,
+      "sourceFrames": 102,
+      "targetTotalBones": 92
+    },
+    "visualValidationClaim": "Data and actual actor pose checks passed. No GPU rendering or exhaustive frame-by-frame visual acceptance is claimed by this manifest.",
+    "runtimeSuite": "tests/phoenix_defense_suite.gd",
+    "runtimeResult": {
+      "checks": 149,
+      "failures": [],
+      "gpuUsed": false,
+      "passed": true,
+      "suite": "phoenix_defense"
+    }
+  },
+  "limitations": [
+    "Original ZZZ combat state machine, hitboxes, VFX and audio are not supplied by these body animations.",
+    "Imported FBX animation lengths include extra tail time; original AnimationClip stop times define the retained duration.",
+    "Two auxiliary thigh-twist bind-pose warnings occurred during source import; those auxiliary bones are excluded from the 53-bone mapping.",
+    "C4 rest is different from C5: neck local rest differs by 0.24808 radians and several limb translations differ. Sharing the C5 baked rotations directly is not equivalent; this file independently uses C4 global rest bases and lengths."
+  ]
+}

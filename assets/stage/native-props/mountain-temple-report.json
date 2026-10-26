@@ -1,0 +1,91 @@
+{
+	"commonOffset": [
+		-58.3852233886719,
+		97.7595672607422,
+		2.29440307617188
+	],
+	"invalidVertices": 0,
+	"nodes": [
+		{
+			"meshPathId": "-5259073507171445897",
+			"name": "Stage_TaiXu_B_Far_Mountain01",
+			"originalWorldTransformGodot": "[X: (0.01, 0.0, 0.0), Y: (0.0, 0.01, 0.0), Z: (0.0, 0.0, 0.01), O: (-6.91, 0.0, 0.99)]"
+		},
+		{
+			"meshPathId": "-3085698708915962708",
+			"name": "Stage_TaiXu_B_FarLOD",
+			"originalWorldTransformGodot": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]"
+		},
+		{
+			"meshPathId": "5029979508549415585",
+			"name": "Part01",
+			"originalWorldTransformGodot": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (1.70999, 0.35, -12.95)]"
+		},
+		{
+			"meshPathId": "-6726439965990558135",
+			"name": "Part02",
+			"originalWorldTransformGodot": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (1.70999, 0.35, -12.95)]"
+		},
+		{
+			"meshPathId": "-2466799681816431704",
+			"name": "Part03",
+			"originalWorldTransformGodot": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (1.70999, 0.35, -12.95)]"
+		},
+		{
+			"meshPathId": "7496643844518614440",
+			"name": "House_All",
+			"originalWorldTransformGodot": "[X: (0.074213, -0.0, 1.097494), Y: (-0.0, 1.0, 0.0), Z: (-0.997722, -0.0, 0.067466), O: (270.9, 93.5, -190.3)]"
+		},
+		{
+			"meshPathId": "4131258473805913814",
+			"name": "Stage_TaiXu_B_Stone01",
+			"originalWorldTransformGodot": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (2.61, 0.0, -10.15)]"
+		},
+		{
+			"meshPathId": "-5550601769307468296",
+			"name": "Stage_TaiXu_B_Stone01b",
+			"originalWorldTransformGodot": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (2.61, 0.0, -10.15)]"
+		},
+		{
+			"meshPathId": "-404159293301359844",
+			"name": "Stage_TaiXu_B_Stone02",
+			"originalWorldTransformGodot": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (2.61, 0.0, -10.15)]"
+		}
+	],
+	"originalWorldBoundsGodot": {
+		"min": [
+			-261.736877441406,
+			-97.7595672607422,
+			-298.327301025391
+		],
+		"size": [
+			640.244201660156,
+			491.815185546875,
+			592.065795898438
+		]
+	},
+	"packedBounds": {
+		"min": [
+			-320.122100830078,
+			0.0,
+			-296.032897949219
+		],
+		"size": [
+			640.244201660156,
+			491.815185546875,
+			592.065795898438
+		]
+	},
+	"placementHint": "Place behind playable plane; pivot is lowest terrain edge, not architectural floor. Start at (0,-9,-24) scale 0.045 and adjust from scene camera. Original backdrop is highly vertical; no GPU acceptance yet.",
+	"recommendedInitialUniformScale": 0.045,
+	"saveReload": true,
+	"scaledSizeAt0045": [
+		28.8109893798828,
+		22.1316833496094,
+		26.6429615020752
+	],
+	"scene": "res://assets/stage/native-props/NativeMountainTemple.scn",
+	"surfaces": 20,
+	"triangles": 86673,
+	"uv2Complete": true
+}

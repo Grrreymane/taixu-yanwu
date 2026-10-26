@@ -1,0 +1,3386 @@
+{
+  "Stage_TaiXu_B02_FarMountain01_Mat": {
+    "name": "Stage_TaiXu_B02_FarMountain01_Mat",
+    "originalShaderPathId": "-5500795706935829961",
+    "properties": {
+      "m_TexEnvs": {
+        "_BumpMap": {
+          "m_Texture": {
+            "m_FileID": 8,
+            "m_PathID": -1625957313485555640,
+            "Name": "Stage_TaiXu_Mountain01_Normal_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GGX_D_Tex": {
+          "m_Texture": {
+            "m_FileID": 6,
+            "m_PathID": -8423267826898015716,
+            "Name": "GGX_D",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GrdtMask": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MainTex": {
+          "m_Texture": {
+            "m_FileID": 7,
+            "m_PathID": 2951821156983563771,
+            "Name": "Stage_TaiXu_Mountain02_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatCap": {
+          "m_Texture": {
+            "m_FileID": 2,
+            "m_PathID": 1577194688567468571,
+            "Name": "DLC_Matcap_Lambet_01",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatcapMaskMap": {
+          "m_Texture": {
+            "m_FileID": 3,
+            "m_PathID": -4274253910151898917,
+            "Name": "Stage_TaiXu_Mountain01_Mask_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_ShadowTex": {
+          "m_Texture": {
+            "m_FileID": 5,
+            "m_PathID": 1909752154040224836,
+            "Name": "Stage_TaiXu_B02_FarMountain01_Lightmap_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_SpecularMap": {
+          "m_Texture": {
+            "m_FileID": 4,
+            "m_PathID": -6558203949027004748,
+            "Name": "DLC_matcap_hilight_17",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_Splat2RoughnessTex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "m_Ints": null,
+      "m_Floats": {
+        "_AlphaClip": 0.0,
+        "_AlphaDither": 0.0,
+        "_BloomFactor": 0.5,
+        "_ColorGrading": 0.0,
+        "_DistanceGR": 1.0,
+        "_DitherAlpha": 1.0,
+        "_EnableMatcapSpecular": 0.0,
+        "_FogTune": 1.0,
+        "_GGXSpecularIntensity": 0.57,
+        "_GrdtProgress": 0.0,
+        "_Instancing": 0.0,
+        "_IntensityInLightmap": 0.0,
+        "_LightMapIntensity": 1.0,
+        "_LightmapThreshold": 0.0,
+        "_MetalRef": 0.648,
+        "_PolygonOffsetFactor": 0.0,
+        "_PolygonOffsetUnit": 0.0,
+        "_Roughness": 0.0,
+        "_SpecularGGX": 1.0,
+        "_SpecularIntensity": 0.499,
+        "_Stencil": 12.0,
+        "_UnjitterMatrix": 0.0,
+        "_UsingGGXTex": 0.0,
+        "_ZDepthBias": 0.0,
+        "_fresnelBaseA": 0.0,
+        "_fresnelIndensity": 5.0,
+        "_fresnelScaleA": 0.0
+      },
+      "m_Colors": {
+        "_Color": {
+          "r": 0.52205884,
+          "g": 0.52205884,
+          "b": 0.52205884,
+          "a": 1.0
+        },
+        "_EnvColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_GrdtColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_LightColor": {
+          "r": 0.19058172,
+          "g": 0.19806477,
+          "b": 0.3455882,
+          "a": 1.0
+        },
+        "_LightDirection": {
+          "r": 4.2,
+          "g": 14.98,
+          "b": 1.73,
+          "a": 0.0
+        },
+        "_Position": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "_SpecColor": {
+          "r": 0.0,
+          "g": 0.061054766,
+          "b": 0.20588237,
+          "a": 1.0
+        },
+        "_TransparentColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_fresnelColA": {
+          "r": 0.3454801,
+          "g": 0.39784485,
+          "b": 0.52205884,
+          "a": 1.0
+        }
+      }
+    },
+    "textures": {
+      "_MainTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_Mountain02_Tex.png",
+        "sha256": "59f2a3f0693dad5311ea4945d38d5219e419a4b2d625a5a716f807045d6849b0",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_ShadowTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_B02_FarMountain01_Lightmap_Tex.png",
+        "sha256": "e8defbbcf245fceb3327d6e6ae8ab650f77ff809e44f66718f32ccecf1362d8c",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    },
+    "originalMaterialPathId": "5884347231518556330",
+    "pathId": "5884347231518556330"
+  },
+  "Stage_TaiXu_B_Far_mountain": {
+    "name": "Stage_TaiXu_B_Far_mountain",
+    "originalShaderPathId": "-927207179669102558",
+    "properties": {
+      "m_TexEnvs": {
+        "_MainTex": {
+          "m_Texture": {
+            "m_FileID": 2,
+            "m_PathID": 2951821156983563771,
+            "Name": "Stage_TaiXu_Mountain02_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_ShadowTex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 3647216215813425799,
+            "Name": "Props_Stage_TaiXu_Gradual_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "m_Ints": null,
+      "m_Floats": {
+        "_BloomFactor": 0.5,
+        "_Culling": 2.0,
+        "_FogTune": 1.0,
+        "_LightMapIntensity": 1.1,
+        "_Stencil": 12.0,
+        "_ZWrite": 1.0
+      },
+      "m_Colors": {}
+    },
+    "textures": {
+      "_MainTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_Mountain02_Tex.png",
+        "sha256": "59f2a3f0693dad5311ea4945d38d5219e419a4b2d625a5a716f807045d6849b0",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_ShadowTex": {
+        "file": "res://assets/stage/native-props/textures/Props_Stage_TaiXu_Gradual_Tex.png",
+        "sha256": "e877dfd2286aa757e3948f21ab28f1db602989e0722b3e38e6a0d80c806e13c1",
+        "size": [
+          128,
+          128
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    },
+    "originalMaterialPathId": "-1834535457250407785",
+    "pathId": "-1834535457250407785"
+  },
+  "Stage_TaiXu_B01_Stone_02_Mat": {
+    "name": "Stage_TaiXu_B01_Stone_02_Mat",
+    "originalShaderPathId": "-5500795706935829961",
+    "properties": {
+      "m_TexEnvs": {
+        "_BumpMap": {
+          "m_Texture": {
+            "m_FileID": 7,
+            "m_PathID": -1625957313485555640,
+            "Name": "Stage_TaiXu_Mountain01_Normal_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GGX_D_Tex": {
+          "m_Texture": {
+            "m_FileID": 5,
+            "m_PathID": -8423267826898015716,
+            "Name": "GGX_D",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GrdtMask": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MainTex": {
+          "m_Texture": {
+            "m_FileID": 6,
+            "m_PathID": 2951821156983563771,
+            "Name": "Stage_TaiXu_Mountain02_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatCap": {
+          "m_Texture": {
+            "m_FileID": 2,
+            "m_PathID": 1577194688567468571,
+            "Name": "DLC_Matcap_Lambet_01",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatcapMaskMap": {
+          "m_Texture": {
+            "m_FileID": 3,
+            "m_PathID": -4274253910151898917,
+            "Name": "Stage_TaiXu_Mountain01_Mask_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_ShadowTex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 1505817463111489598,
+            "Name": "Stage_TaiXu_B01_Stone_02_Lightmap_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_SpecularMap": {
+          "m_Texture": {
+            "m_FileID": 4,
+            "m_PathID": -6558203949027004748,
+            "Name": "DLC_matcap_hilight_17",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_Splat2RoughnessTex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "m_Ints": null,
+      "m_Floats": {
+        "_AlphaClip": 0.0,
+        "_AlphaDither": 0.0,
+        "_BloomFactor": 0.5,
+        "_ColorGrading": 0.0,
+        "_DistanceGR": 1.0,
+        "_DitherAlpha": 1.0,
+        "_EnableMatcapSpecular": 0.0,
+        "_FogTune": 1.0,
+        "_GGXSpecularIntensity": 2.37,
+        "_GrdtProgress": 0.0,
+        "_Instancing": 0.0,
+        "_IntensityInLightmap": 0.0,
+        "_LightMapIntensity": 1.0,
+        "_LightmapThreshold": 0.0,
+        "_MetalRef": 0.639,
+        "_PolygonOffsetFactor": 0.0,
+        "_PolygonOffsetUnit": 0.0,
+        "_Roughness": 0.181,
+        "_SpecularGGX": 1.0,
+        "_SpecularIntensity": 0.3,
+        "_Stencil": 12.0,
+        "_UnjitterMatrix": 0.0,
+        "_UsingGGXTex": 1.0,
+        "_ZDepthBias": 0.0,
+        "_fresnelBaseA": 0.0,
+        "_fresnelIndensity": 5.0,
+        "_fresnelScaleA": 0.0
+      },
+      "m_Colors": {
+        "_Color": {
+          "r": 0.52205884,
+          "g": 0.52205884,
+          "b": 0.52205884,
+          "a": 1.0
+        },
+        "_EnvColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_GrdtColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_LightColor": {
+          "r": 0.125,
+          "g": 0.125,
+          "b": 0.125,
+          "a": 1.0
+        },
+        "_LightDirection": {
+          "r": -1.04,
+          "g": 6.89,
+          "b": 1.0,
+          "a": 0.0
+        },
+        "_Position": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "_SpecColor": {
+          "r": 0.0,
+          "g": 0.061054766,
+          "b": 0.20588237,
+          "a": 1.0
+        },
+        "_TransparentColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_fresnelColA": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        }
+      }
+    },
+    "textures": {
+      "_MainTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_Mountain02_Tex.png",
+        "sha256": "59f2a3f0693dad5311ea4945d38d5219e419a4b2d625a5a716f807045d6849b0",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_ShadowTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_B01_Stone_02_Lightmap_Tex.png",
+        "sha256": "1f4f9b9155ff028ccdbce3525a79fba1f98606e53cf77acf547913f5b0e6c7d1",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    },
+    "originalMaterialPathId": "3416780136467104970",
+    "pathId": "3416780136467104970"
+  },
+  "Stage_TaiXu_B02_FarMountain03_Mat": {
+    "name": "Stage_TaiXu_B02_FarMountain03_Mat",
+    "originalShaderPathId": "-927207179669102558",
+    "properties": {
+      "m_TexEnvs": {
+        "_MainTex": {
+          "m_Texture": {
+            "m_FileID": 1,
+            "m_PathID": 8680766271697782394,
+            "Name": "Stage_TaiXu_Grass01_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_ShadowTex": {
+          "m_Texture": {
+            "m_FileID": 3,
+            "m_PathID": 1909752154040224836,
+            "Name": "Stage_TaiXu_B02_FarMountain01_Lightmap_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "m_Ints": null,
+      "m_Floats": {
+        "_BloomFactor": 0.5,
+        "_Culling": 2.0,
+        "_FogTune": 1.0,
+        "_LightMapIntensity": 1.0,
+        "_Stencil": 12.0,
+        "_ZWrite": 1.0
+      },
+      "m_Colors": {}
+    },
+    "textures": {
+      "_MainTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_Grass01_Tex.png",
+        "sha256": "8546b7b742e50f60ce42a40ac63d413ab74e23eff7bfd1de234c5c6feb4d6b1b",
+        "size": [
+          512,
+          512
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_ShadowTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_B02_FarMountain01_Lightmap_Tex.png",
+        "sha256": "e8defbbcf245fceb3327d6e6ae8ab650f77ff809e44f66718f32ccecf1362d8c",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    },
+    "originalMaterialPathId": "7860719530234313606",
+    "pathId": "7860719530234313606"
+  },
+  "Stage_TaiXu_B01_Stone_03_Mat": {
+    "name": "Stage_TaiXu_B01_Stone_03_Mat",
+    "originalShaderPathId": "-5500795706935829961",
+    "properties": {
+      "m_TexEnvs": {
+        "_BumpMap": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GGX_D_Tex": {
+          "m_Texture": {
+            "m_FileID": 4,
+            "m_PathID": -8423267826898015716,
+            "Name": "GGX_D",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GrdtMask": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MainTex": {
+          "m_Texture": {
+            "m_FileID": 5,
+            "m_PathID": 2951821156983563771,
+            "Name": "Stage_TaiXu_Mountain02_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatCap": {
+          "m_Texture": {
+            "m_FileID": 2,
+            "m_PathID": 1577194688567468571,
+            "Name": "DLC_Matcap_Lambet_01",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatcapMaskMap": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_ShadowTex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 6129603982209907604,
+            "Name": "Stage_TaiXu_B01_Stone_03_Lightmap_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_SpecularMap": {
+          "m_Texture": {
+            "m_FileID": 3,
+            "m_PathID": -6558203949027004748,
+            "Name": "DLC_matcap_hilight_17",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_Splat2RoughnessTex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "m_Ints": null,
+      "m_Floats": {
+        "_AlphaClip": 0.0,
+        "_AlphaDither": 0.0,
+        "_BloomFactor": 0.5,
+        "_ColorGrading": 0.0,
+        "_DistanceGR": 1.0,
+        "_DitherAlpha": 1.0,
+        "_EnableMatcapSpecular": 0.0,
+        "_FogTune": 1.0,
+        "_GGXSpecularIntensity": 2.37,
+        "_GrdtProgress": 0.0,
+        "_Instancing": 0.0,
+        "_IntensityInLightmap": 0.0,
+        "_LightMapIntensity": 1.2,
+        "_LightmapThreshold": 0.0,
+        "_MetalRef": 0.639,
+        "_PolygonOffsetFactor": 0.0,
+        "_PolygonOffsetUnit": 0.0,
+        "_Roughness": 0.181,
+        "_SpecularGGX": 1.0,
+        "_SpecularIntensity": 0.3,
+        "_Stencil": 12.0,
+        "_UnjitterMatrix": 0.0,
+        "_UsingGGXTex": 1.0,
+        "_ZDepthBias": 0.0,
+        "_fresnelBaseA": 0.0,
+        "_fresnelIndensity": 5.0,
+        "_fresnelScaleA": 0.0
+      },
+      "m_Colors": {
+        "_Color": {
+          "r": 0.52205884,
+          "g": 0.52205884,
+          "b": 0.52205884,
+          "a": 1.0
+        },
+        "_EnvColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_GrdtColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_LightColor": {
+          "r": 0.125,
+          "g": 0.125,
+          "b": 0.125,
+          "a": 1.0
+        },
+        "_LightDirection": {
+          "r": -1.04,
+          "g": 6.89,
+          "b": 1.0,
+          "a": 0.0
+        },
+        "_Position": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "_SpecColor": {
+          "r": 0.0,
+          "g": 0.061054766,
+          "b": 0.20588237,
+          "a": 1.0
+        },
+        "_TransparentColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_fresnelColA": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        }
+      }
+    },
+    "textures": {
+      "_MainTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_Mountain02_Tex.png",
+        "sha256": "59f2a3f0693dad5311ea4945d38d5219e419a4b2d625a5a716f807045d6849b0",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_ShadowTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_B01_Stone_03_Lightmap_Tex.png",
+        "sha256": "c1ef41ae1e88a5e6cfc57f5a3c7df3b80d006dbca6c0aa45ce6f15b813f7280b",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    },
+    "originalMaterialPathId": "7020067620711095972",
+    "pathId": "7020067620711095972"
+  },
+  "Stage_TaiXu_B01_Stone_01_Mat": {
+    "name": "Stage_TaiXu_B01_Stone_01_Mat",
+    "originalShaderPathId": "-5500795706935829961",
+    "properties": {
+      "m_TexEnvs": {
+        "_BumpMap": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GGX_D_Tex": {
+          "m_Texture": {
+            "m_FileID": 2,
+            "m_PathID": -8423267826898015716,
+            "Name": "GGX_D",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GrdtMask": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MainTex": {
+          "m_Texture": {
+            "m_FileID": 3,
+            "m_PathID": 2951821156983563771,
+            "Name": "Stage_TaiXu_Mountain02_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatCap": {
+          "m_Texture": {
+            "m_FileID": 4,
+            "m_PathID": 1577194688567468571,
+            "Name": "DLC_Matcap_Lambet_01",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatcapMaskMap": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_ShadowTex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": -3897581343341082446,
+            "Name": "Stage_TaiXu_B01_Stone_01_Lightmap_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_SpecularMap": {
+          "m_Texture": {
+            "m_FileID": 5,
+            "m_PathID": -6558203949027004748,
+            "Name": "DLC_matcap_hilight_17",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_Splat2RoughnessTex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "m_Ints": null,
+      "m_Floats": {
+        "_AlphaClip": 0.0,
+        "_AlphaDither": 0.0,
+        "_BloomFactor": 0.5,
+        "_ColorGrading": 0.0,
+        "_DistanceGR": 1.0,
+        "_DitherAlpha": 1.0,
+        "_EnableMatcapSpecular": 0.0,
+        "_FogTune": 1.0,
+        "_GGXSpecularIntensity": 2.37,
+        "_GrdtProgress": 0.0,
+        "_Instancing": 0.0,
+        "_IntensityInLightmap": 0.0,
+        "_LightMapIntensity": 1.2,
+        "_LightmapThreshold": 0.0,
+        "_MetalRef": 0.639,
+        "_PolygonOffsetFactor": 0.0,
+        "_PolygonOffsetUnit": 0.0,
+        "_Roughness": 0.181,
+        "_SpecularGGX": 1.0,
+        "_SpecularIntensity": 0.3,
+        "_Stencil": 12.0,
+        "_UnjitterMatrix": 0.0,
+        "_UsingGGXTex": 1.0,
+        "_ZDepthBias": 0.0,
+        "_fresnelBaseA": 0.0,
+        "_fresnelIndensity": 5.0,
+        "_fresnelScaleA": 0.0
+      },
+      "m_Colors": {
+        "_Color": {
+          "r": 0.52205884,
+          "g": 0.52205884,
+          "b": 0.52205884,
+          "a": 1.0
+        },
+        "_EnvColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_GrdtColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_LightColor": {
+          "r": 0.125,
+          "g": 0.125,
+          "b": 0.125,
+          "a": 1.0
+        },
+        "_LightDirection": {
+          "r": -1.04,
+          "g": 6.89,
+          "b": 1.0,
+          "a": 0.0
+        },
+        "_Position": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "_SpecColor": {
+          "r": 0.0,
+          "g": 0.061054766,
+          "b": 0.20588237,
+          "a": 1.0
+        },
+        "_TransparentColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_fresnelColA": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        }
+      }
+    },
+    "textures": {
+      "_MainTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_Mountain02_Tex.png",
+        "sha256": "59f2a3f0693dad5311ea4945d38d5219e419a4b2d625a5a716f807045d6849b0",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_ShadowTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_B01_Stone_01_Lightmap_Tex.png",
+        "sha256": "4ab11c7be25f32d8891ea364937191dcdfdad77181dffc481ee9ae3d74c53da2",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    },
+    "originalMaterialPathId": "-8204178471015822215",
+    "pathId": "-8204178471015822215"
+  },
+  "Stage_TaiXu_B02_Stone01b01_Mat": {
+    "name": "Stage_TaiXu_B02_Stone01b01_Mat",
+    "originalMaterialPathId": "-4834539175505836327",
+    "pathId": "-4834539175505836327",
+    "originalShaderPathId": "-5500795706935829961",
+    "properties": {
+      "m_TexEnvs": {
+        "_BumpMap": {
+          "m_Texture": {
+            "m_FileID": 2,
+            "m_PathID": -1625957313485555640,
+            "Name": "Stage_TaiXu_Mountain01_Normal_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GGX_D_Tex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GrdtMask": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MainTex": {
+          "m_Texture": {
+            "m_FileID": 3,
+            "m_PathID": 4334650013281577418,
+            "Name": "Stage_TaiXu_Mountain01_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatCap": {
+          "m_Texture": {
+            "m_FileID": 4,
+            "m_PathID": 1577194688567468571,
+            "Name": "DLC_Matcap_Lambet_01",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatcapMaskMap": {
+          "m_Texture": {
+            "m_FileID": 5,
+            "m_PathID": -4274253910151898917,
+            "Name": "Stage_TaiXu_Mountain01_Mask_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_ShadowTex": {
+          "m_Texture": {
+            "m_FileID": 6,
+            "m_PathID": 100949179194318420,
+            "Name": "Stage_TaiXu_B02_Stone01b_Lightmap_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_SpecularMap": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_Splat2RoughnessTex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "m_Ints": null,
+      "m_Floats": {
+        "_AlphaClip": 0.0,
+        "_AlphaDither": 0.0,
+        "_BloomFactor": 0.5,
+        "_ColorGrading": 0.0,
+        "_DistanceGR": 1.0,
+        "_DitherAlpha": 1.0,
+        "_EnableMatcapSpecular": 0.0,
+        "_FogTune": 1.0,
+        "_GGXSpecularIntensity": 0.57,
+        "_GrdtProgress": 0.0,
+        "_Instancing": 0.0,
+        "_IntensityInLightmap": 0.0,
+        "_LightMapIntensity": 1.0,
+        "_LightmapThreshold": 0.0,
+        "_MetalRef": 0.648,
+        "_PolygonOffsetFactor": 0.0,
+        "_PolygonOffsetUnit": 0.0,
+        "_Roughness": 0.0,
+        "_SpecularGGX": 1.0,
+        "_SpecularIntensity": 0.499,
+        "_Stencil": 12.0,
+        "_UnjitterMatrix": 0.0,
+        "_UsingGGXTex": 0.0,
+        "_ZDepthBias": 0.0,
+        "_fresnelBaseA": 0.0,
+        "_fresnelIndensity": 5.0,
+        "_fresnelScaleA": 0.0
+      },
+      "m_Colors": {
+        "_Color": {
+          "r": 0.52205884,
+          "g": 0.52205884,
+          "b": 0.52205884,
+          "a": 1.0
+        },
+        "_EnvColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_GrdtColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_LightColor": {
+          "r": 0.19058172,
+          "g": 0.19806477,
+          "b": 0.3455882,
+          "a": 1.0
+        },
+        "_LightDirection": {
+          "r": 4.2,
+          "g": 14.98,
+          "b": 1.73,
+          "a": 0.0
+        },
+        "_Position": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "_SpecColor": {
+          "r": 0.0,
+          "g": 0.061054766,
+          "b": 0.20588237,
+          "a": 1.0
+        },
+        "_TransparentColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_fresnelColA": {
+          "r": 0.3454801,
+          "g": 0.39784485,
+          "b": 0.52205884,
+          "a": 1.0
+        }
+      }
+    },
+    "textures": {
+      "_MainTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_Mountain01_Tex.png",
+        "sha256": "a1a268022783067dcae60e8ae8a13cc1fa43c1a2c94e6175dff47dfb986af009",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_ShadowTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_B02_Stone01b_Lightmap_Tex.png",
+        "sha256": "731796df9c9bd2bcbd3e4a03b8b41e9d766d52286306ecf8d10fb94b0ebcfc1b",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  "Stage_TaiXu_B02_Stone01b02_Mat": {
+    "name": "Stage_TaiXu_B02_Stone01b02_Mat",
+    "originalMaterialPathId": "8396826070732308812",
+    "pathId": "8396826070732308812",
+    "originalShaderPathId": "-5500795706935829961",
+    "properties": {
+      "m_TexEnvs": {
+        "_BumpMap": {
+          "m_Texture": {
+            "m_FileID": 6,
+            "m_PathID": -1625957313485555640,
+            "Name": "Stage_TaiXu_Mountain01_Normal_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GGX_D_Tex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GrdtMask": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MainTex": {
+          "m_Texture": {
+            "m_FileID": 5,
+            "m_PathID": 2951821156983563771,
+            "Name": "Stage_TaiXu_Mountain02_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatCap": {
+          "m_Texture": {
+            "m_FileID": 3,
+            "m_PathID": 1577194688567468571,
+            "Name": "DLC_Matcap_Lambet_01",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatcapMaskMap": {
+          "m_Texture": {
+            "m_FileID": 4,
+            "m_PathID": -4274253910151898917,
+            "Name": "Stage_TaiXu_Mountain01_Mask_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_ShadowTex": {
+          "m_Texture": {
+            "m_FileID": 1,
+            "m_PathID": 100949179194318420,
+            "Name": "Stage_TaiXu_B02_Stone01b_Lightmap_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_SpecularMap": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_Splat2RoughnessTex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "m_Ints": null,
+      "m_Floats": {
+        "_AlphaClip": 0.0,
+        "_AlphaDither": 0.0,
+        "_BloomFactor": 0.5,
+        "_ColorGrading": 0.0,
+        "_DistanceGR": 1.0,
+        "_DitherAlpha": 1.0,
+        "_EnableMatcapSpecular": 0.0,
+        "_FogTune": 1.0,
+        "_GGXSpecularIntensity": 0.57,
+        "_GrdtProgress": 0.0,
+        "_Instancing": 0.0,
+        "_IntensityInLightmap": 0.0,
+        "_LightMapIntensity": 1.0,
+        "_LightmapThreshold": 0.0,
+        "_MetalRef": 0.648,
+        "_PolygonOffsetFactor": 0.0,
+        "_PolygonOffsetUnit": 0.0,
+        "_Roughness": 0.0,
+        "_SpecularGGX": 1.0,
+        "_SpecularIntensity": 0.499,
+        "_Stencil": 12.0,
+        "_UnjitterMatrix": 0.0,
+        "_UsingGGXTex": 0.0,
+        "_ZDepthBias": 0.0,
+        "_fresnelBaseA": 0.0,
+        "_fresnelIndensity": 5.0,
+        "_fresnelScaleA": 0.0
+      },
+      "m_Colors": {
+        "_Color": {
+          "r": 0.52205884,
+          "g": 0.52205884,
+          "b": 0.52205884,
+          "a": 1.0
+        },
+        "_EnvColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_GrdtColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_LightColor": {
+          "r": 0.19058172,
+          "g": 0.19806477,
+          "b": 0.3455882,
+          "a": 1.0
+        },
+        "_LightDirection": {
+          "r": 4.2,
+          "g": 14.98,
+          "b": 1.73,
+          "a": 0.0
+        },
+        "_Position": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "_SpecColor": {
+          "r": 0.0,
+          "g": 0.061054766,
+          "b": 0.20588237,
+          "a": 1.0
+        },
+        "_TransparentColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_fresnelColA": {
+          "r": 0.3454801,
+          "g": 0.39784485,
+          "b": 0.52205884,
+          "a": 1.0
+        }
+      }
+    },
+    "textures": {
+      "_MainTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_Mountain02_Tex.png",
+        "sha256": "59f2a3f0693dad5311ea4945d38d5219e419a4b2d625a5a716f807045d6849b0",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_ShadowTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_B02_Stone01b_Lightmap_Tex.png",
+        "sha256": "731796df9c9bd2bcbd3e4a03b8b41e9d766d52286306ecf8d10fb94b0ebcfc1b",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  "Stage_TaiXu_B02_Stone02_Mat": {
+    "name": "Stage_TaiXu_B02_Stone02_Mat",
+    "originalMaterialPathId": "-439180481806816035",
+    "pathId": "-439180481806816035",
+    "originalShaderPathId": "-5500795706935829961",
+    "properties": {
+      "m_TexEnvs": {
+        "_BumpMap": {
+          "m_Texture": {
+            "m_FileID": 2,
+            "m_PathID": -1625957313485555640,
+            "Name": "Stage_TaiXu_Mountain01_Normal_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GGX_D_Tex": {
+          "m_Texture": {
+            "m_FileID": 3,
+            "m_PathID": -8423267826898015716,
+            "Name": "GGX_D",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GrdtMask": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MainTex": {
+          "m_Texture": {
+            "m_FileID": 4,
+            "m_PathID": 4334650013281577418,
+            "Name": "Stage_TaiXu_Mountain01_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatCap": {
+          "m_Texture": {
+            "m_FileID": 5,
+            "m_PathID": 1577194688567468571,
+            "Name": "DLC_Matcap_Lambet_01",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatcapMaskMap": {
+          "m_Texture": {
+            "m_FileID": 6,
+            "m_PathID": -4274253910151898917,
+            "Name": "Stage_TaiXu_Mountain01_Mask_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_ShadowTex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 1112671612919862292,
+            "Name": "Stage_TaiXu_B02_Stone02_Lightmap_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_SpecularMap": {
+          "m_Texture": {
+            "m_FileID": 7,
+            "m_PathID": -6558203949027004748,
+            "Name": "DLC_matcap_hilight_17",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_Splat2RoughnessTex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "m_Ints": null,
+      "m_Floats": {
+        "_AlphaClip": 0.0,
+        "_AlphaDither": 0.0,
+        "_BloomFactor": 0.5,
+        "_ColorGrading": 0.0,
+        "_DistanceGR": 1.0,
+        "_DitherAlpha": 1.0,
+        "_EnableMatcapSpecular": 0.0,
+        "_FogTune": 1.0,
+        "_GGXSpecularIntensity": 0.57,
+        "_GrdtProgress": 0.0,
+        "_Instancing": 0.0,
+        "_IntensityInLightmap": 0.0,
+        "_LightMapIntensity": 1.0,
+        "_LightmapThreshold": 0.0,
+        "_MetalRef": 0.648,
+        "_PolygonOffsetFactor": 0.0,
+        "_PolygonOffsetUnit": 0.0,
+        "_Roughness": 0.0,
+        "_SpecularGGX": 1.0,
+        "_SpecularIntensity": 0.499,
+        "_Stencil": 12.0,
+        "_UnjitterMatrix": 0.0,
+        "_UsingGGXTex": 0.0,
+        "_ZDepthBias": 0.0,
+        "_fresnelBaseA": 0.0,
+        "_fresnelIndensity": 5.0,
+        "_fresnelScaleA": 0.0
+      },
+      "m_Colors": {
+        "_Color": {
+          "r": 0.52205884,
+          "g": 0.52205884,
+          "b": 0.52205884,
+          "a": 1.0
+        },
+        "_EnvColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_GrdtColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_LightColor": {
+          "r": 0.19058172,
+          "g": 0.19806477,
+          "b": 0.3455882,
+          "a": 1.0
+        },
+        "_LightDirection": {
+          "r": 4.2,
+          "g": 14.98,
+          "b": 1.73,
+          "a": 0.0
+        },
+        "_Position": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "_SpecColor": {
+          "r": 0.0,
+          "g": 0.061054766,
+          "b": 0.20588237,
+          "a": 1.0
+        },
+        "_TransparentColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_fresnelColA": {
+          "r": 0.3454801,
+          "g": 0.39784485,
+          "b": 0.52205884,
+          "a": 1.0
+        }
+      }
+    },
+    "textures": {
+      "_MainTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_Mountain01_Tex.png",
+        "sha256": "a1a268022783067dcae60e8ae8a13cc1fa43c1a2c94e6175dff47dfb986af009",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_ShadowTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_B02_Stone02_Lightmap_Tex.png",
+        "sha256": "e1de5cebfa5a75a2f84c521ae33b93335f938cbb350e4d8ee77dc54cb5383b1d",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  "Stage_TaiXu_B02_Grass01_Mat": {
+    "name": "Stage_TaiXu_B02_Grass01_Mat",
+    "originalMaterialPathId": "-5811391775863512397",
+    "pathId": "-5811391775863512397",
+    "originalShaderPathId": "-927207179669102558",
+    "properties": {
+      "m_TexEnvs": {
+        "_MainTex": {
+          "m_Texture": {
+            "m_FileID": 2,
+            "m_PathID": 8680766271697782394,
+            "Name": "Stage_TaiXu_Grass01_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 8.0,
+            "Y": 8.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_ShadowTex": {
+          "m_Texture": {
+            "m_FileID": 3,
+            "m_PathID": -9083876917868494389,
+            "Name": "Stage_TaiXu_B02_Stone01_Lightmap_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "m_Ints": null,
+      "m_Floats": {
+        "_BloomFactor": 0.5,
+        "_Culling": 2.0,
+        "_FogTune": 1.0,
+        "_LightMapIntensity": 0.9,
+        "_Stencil": 12.0,
+        "_ZWrite": 1.0
+      },
+      "m_Colors": {}
+    },
+    "textures": {
+      "_MainTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_Grass01_Tex.png",
+        "sha256": "8546b7b742e50f60ce42a40ac63d413ab74e23eff7bfd1de234c5c6feb4d6b1b",
+        "size": [
+          512,
+          512
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 8.0,
+          "Y": 8.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_ShadowTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_B02_Stone01_Lightmap_Tex.png",
+        "sha256": "71c8542f95e885b8e5549f935aae25fc7054acd7f06b45686a9572b476295e5c",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  "Stage_TaiXu_B02_Stone01a01_Mat": {
+    "name": "Stage_TaiXu_B02_Stone01a01_Mat",
+    "originalMaterialPathId": "5100685682369459013",
+    "pathId": "5100685682369459013",
+    "originalShaderPathId": "-5500795706935829961",
+    "properties": {
+      "m_TexEnvs": {
+        "_BumpMap": {
+          "m_Texture": {
+            "m_FileID": 6,
+            "m_PathID": -1625957313485555640,
+            "Name": "Stage_TaiXu_Mountain01_Normal_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GGX_D_Tex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GrdtMask": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MainTex": {
+          "m_Texture": {
+            "m_FileID": 4,
+            "m_PathID": 4334650013281577418,
+            "Name": "Stage_TaiXu_Mountain01_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatCap": {
+          "m_Texture": {
+            "m_FileID": 2,
+            "m_PathID": 1577194688567468571,
+            "Name": "DLC_Matcap_Lambet_01",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatcapMaskMap": {
+          "m_Texture": {
+            "m_FileID": 3,
+            "m_PathID": -4274253910151898917,
+            "Name": "Stage_TaiXu_Mountain01_Mask_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_ShadowTex": {
+          "m_Texture": {
+            "m_FileID": 5,
+            "m_PathID": -9083876917868494389,
+            "Name": "Stage_TaiXu_B02_Stone01_Lightmap_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_SpecularMap": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_Splat2RoughnessTex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "m_Ints": null,
+      "m_Floats": {
+        "_AlphaClip": 0.0,
+        "_AlphaDither": 0.0,
+        "_BloomFactor": 0.5,
+        "_ColorGrading": 0.0,
+        "_DistanceGR": 1.0,
+        "_DitherAlpha": 1.0,
+        "_EnableMatcapSpecular": 0.0,
+        "_FogTune": 1.0,
+        "_GGXSpecularIntensity": 0.57,
+        "_GrdtProgress": 0.0,
+        "_Instancing": 0.0,
+        "_IntensityInLightmap": 0.0,
+        "_LightMapIntensity": 1.0,
+        "_LightmapThreshold": 0.0,
+        "_MetalRef": 0.648,
+        "_PolygonOffsetFactor": 0.0,
+        "_PolygonOffsetUnit": 0.0,
+        "_Roughness": 0.0,
+        "_SpecularGGX": 1.0,
+        "_SpecularIntensity": 0.499,
+        "_Stencil": 12.0,
+        "_UnjitterMatrix": 0.0,
+        "_UsingGGXTex": 0.0,
+        "_ZDepthBias": 0.0,
+        "_fresnelBaseA": 0.0,
+        "_fresnelIndensity": 5.0,
+        "_fresnelScaleA": 0.0
+      },
+      "m_Colors": {
+        "_Color": {
+          "r": 0.52205884,
+          "g": 0.52205884,
+          "b": 0.52205884,
+          "a": 1.0
+        },
+        "_EnvColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_GrdtColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_LightColor": {
+          "r": 0.19058172,
+          "g": 0.19806477,
+          "b": 0.3455882,
+          "a": 1.0
+        },
+        "_LightDirection": {
+          "r": 4.2,
+          "g": 14.98,
+          "b": 1.73,
+          "a": 0.0
+        },
+        "_Position": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "_SpecColor": {
+          "r": 0.0,
+          "g": 0.061054766,
+          "b": 0.20588237,
+          "a": 1.0
+        },
+        "_TransparentColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_fresnelColA": {
+          "r": 0.3454801,
+          "g": 0.39784485,
+          "b": 0.52205884,
+          "a": 1.0
+        }
+      }
+    },
+    "textures": {
+      "_MainTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_Mountain01_Tex.png",
+        "sha256": "a1a268022783067dcae60e8ae8a13cc1fa43c1a2c94e6175dff47dfb986af009",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_ShadowTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_B02_Stone01_Lightmap_Tex.png",
+        "sha256": "71c8542f95e885b8e5549f935aae25fc7054acd7f06b45686a9572b476295e5c",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  "Stage_TaiXu_B02_Stone01a02_Mat": {
+    "name": "Stage_TaiXu_B02_Stone01a02_Mat",
+    "originalMaterialPathId": "-4880904953038018309",
+    "pathId": "-4880904953038018309",
+    "originalShaderPathId": "-5500795706935829961",
+    "properties": {
+      "m_TexEnvs": {
+        "_BumpMap": {
+          "m_Texture": {
+            "m_FileID": 2,
+            "m_PathID": -1625957313485555640,
+            "Name": "Stage_TaiXu_Mountain01_Normal_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GGX_D_Tex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GrdtMask": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MainTex": {
+          "m_Texture": {
+            "m_FileID": 3,
+            "m_PathID": 2951821156983563771,
+            "Name": "Stage_TaiXu_Mountain02_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatCap": {
+          "m_Texture": {
+            "m_FileID": 4,
+            "m_PathID": 1577194688567468571,
+            "Name": "DLC_Matcap_Lambet_01",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatcapMaskMap": {
+          "m_Texture": {
+            "m_FileID": 5,
+            "m_PathID": -4274253910151898917,
+            "Name": "Stage_TaiXu_Mountain01_Mask_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_ShadowTex": {
+          "m_Texture": {
+            "m_FileID": 6,
+            "m_PathID": -9083876917868494389,
+            "Name": "Stage_TaiXu_B02_Stone01_Lightmap_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_SpecularMap": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_Splat2RoughnessTex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "m_Ints": null,
+      "m_Floats": {
+        "_AlphaClip": 0.0,
+        "_AlphaDither": 0.0,
+        "_BloomFactor": 0.5,
+        "_ColorGrading": 0.0,
+        "_DistanceGR": 1.0,
+        "_DitherAlpha": 1.0,
+        "_EnableMatcapSpecular": 0.0,
+        "_FogTune": 1.0,
+        "_GGXSpecularIntensity": 0.57,
+        "_GrdtProgress": 0.0,
+        "_Instancing": 0.0,
+        "_IntensityInLightmap": 0.428,
+        "_LightMapIntensity": 1.0,
+        "_LightmapThreshold": 0.113,
+        "_MetalRef": 0.648,
+        "_PolygonOffsetFactor": 0.0,
+        "_PolygonOffsetUnit": 0.0,
+        "_Roughness": 0.0,
+        "_SpecularGGX": 1.0,
+        "_SpecularIntensity": 0.287,
+        "_Stencil": 12.0,
+        "_UnjitterMatrix": 0.0,
+        "_UsingGGXTex": 0.0,
+        "_ZDepthBias": 0.0,
+        "_fresnelBaseA": 0.0,
+        "_fresnelIndensity": 5.0,
+        "_fresnelScaleA": 0.0
+      },
+      "m_Colors": {
+        "_Color": {
+          "r": 0.52205884,
+          "g": 0.52205884,
+          "b": 0.52205884,
+          "a": 1.0
+        },
+        "_EnvColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_GrdtColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_LightColor": {
+          "r": 0.19058172,
+          "g": 0.19806477,
+          "b": 0.3455882,
+          "a": 1.0
+        },
+        "_LightDirection": {
+          "r": 4.2,
+          "g": 14.98,
+          "b": 1.73,
+          "a": 0.0
+        },
+        "_Position": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "_SpecColor": {
+          "r": 0.0,
+          "g": 0.061054766,
+          "b": 0.20588237,
+          "a": 1.0
+        },
+        "_TransparentColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_fresnelColA": {
+          "r": 0.7205882,
+          "g": 0.69574034,
+          "b": 0.3602941,
+          "a": 1.0
+        }
+      }
+    },
+    "textures": {
+      "_MainTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_Mountain02_Tex.png",
+        "sha256": "59f2a3f0693dad5311ea4945d38d5219e419a4b2d625a5a716f807045d6849b0",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_ShadowTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_B02_Stone01_Lightmap_Tex.png",
+        "sha256": "71c8542f95e885b8e5549f935aae25fc7054acd7f06b45686a9572b476295e5c",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  "Stage_TaiXu_B02_Stone01a03_Mat": {
+    "name": "Stage_TaiXu_B02_Stone01a03_Mat",
+    "originalMaterialPathId": "-6627053835585639386",
+    "pathId": "-6627053835585639386",
+    "originalShaderPathId": "-5500795706935829961",
+    "properties": {
+      "m_TexEnvs": {
+        "_BumpMap": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GGX_D_Tex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GrdtMask": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MainTex": {
+          "m_Texture": {
+            "m_FileID": 2,
+            "m_PathID": -4673621260474862246,
+            "Name": "Stage_TaiXu_Mountain03_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatCap": {
+          "m_Texture": {
+            "m_FileID": 3,
+            "m_PathID": 1577194688567468571,
+            "Name": "DLC_Matcap_Lambet_01",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatcapMaskMap": {
+          "m_Texture": {
+            "m_FileID": 4,
+            "m_PathID": -4274253910151898917,
+            "Name": "Stage_TaiXu_Mountain01_Mask_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_ShadowTex": {
+          "m_Texture": {
+            "m_FileID": 5,
+            "m_PathID": -9083876917868494389,
+            "Name": "Stage_TaiXu_B02_Stone01_Lightmap_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_SpecularMap": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_Splat2RoughnessTex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "m_Ints": null,
+      "m_Floats": {
+        "_AlphaClip": 0.0,
+        "_AlphaDither": 0.0,
+        "_BloomFactor": 0.5,
+        "_ColorGrading": 0.0,
+        "_DistanceGR": 1.0,
+        "_DitherAlpha": 1.0,
+        "_EnableMatcapSpecular": 0.0,
+        "_FogTune": 1.0,
+        "_GGXSpecularIntensity": 2.37,
+        "_GrdtProgress": 0.0,
+        "_Instancing": 0.0,
+        "_IntensityInLightmap": 0.0,
+        "_LightMapIntensity": 1.0,
+        "_LightmapThreshold": 0.0,
+        "_MetalRef": 0.639,
+        "_PolygonOffsetFactor": 0.0,
+        "_PolygonOffsetUnit": 0.0,
+        "_Roughness": 0.181,
+        "_SpecularGGX": 1.0,
+        "_SpecularIntensity": 0.3,
+        "_Stencil": 12.0,
+        "_UnjitterMatrix": 0.0,
+        "_UsingGGXTex": 0.0,
+        "_ZDepthBias": 0.0,
+        "_fresnelBaseA": 0.0,
+        "_fresnelIndensity": 5.0,
+        "_fresnelScaleA": 0.0
+      },
+      "m_Colors": {
+        "_Color": {
+          "r": 0.52205884,
+          "g": 0.52205884,
+          "b": 0.52205884,
+          "a": 1.0
+        },
+        "_EnvColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_GrdtColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_LightColor": {
+          "r": 0.125,
+          "g": 0.125,
+          "b": 0.125,
+          "a": 1.0
+        },
+        "_LightDirection": {
+          "r": -1.04,
+          "g": 6.89,
+          "b": 1.0,
+          "a": 0.0
+        },
+        "_Position": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "_SpecColor": {
+          "r": 0.0,
+          "g": 0.061054766,
+          "b": 0.20588237,
+          "a": 1.0
+        },
+        "_TransparentColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_fresnelColA": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        }
+      }
+    },
+    "textures": {
+      "_MainTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_Mountain03_Tex.png",
+        "sha256": "cdfb8f457fa56d6d0d6c4117cf347b7b489bd7d30c702ec64c290fd5391adac7",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_ShadowTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_B02_Stone01_Lightmap_Tex.png",
+        "sha256": "71c8542f95e885b8e5549f935aae25fc7054acd7f06b45686a9572b476295e5c",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  "Stage_TaiXu_B02_Stone01a04_Mat": {
+    "name": "Stage_TaiXu_B02_Stone01a04_Mat",
+    "originalMaterialPathId": "482532738672171746",
+    "pathId": "482532738672171746",
+    "originalShaderPathId": "-5500795706935829961",
+    "properties": {
+      "m_TexEnvs": {
+        "_BumpMap": {
+          "m_Texture": {
+            "m_FileID": 7,
+            "m_PathID": -1625957313485555640,
+            "Name": "Stage_TaiXu_Mountain01_Normal_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GGX_D_Tex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GrdtMask": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MainTex": {
+          "m_Texture": {
+            "m_FileID": 5,
+            "m_PathID": 2951821156983563771,
+            "Name": "Stage_TaiXu_Mountain02_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatCap": {
+          "m_Texture": {
+            "m_FileID": 2,
+            "m_PathID": 1577194688567468571,
+            "Name": "DLC_Matcap_Lambet_01",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatcapMaskMap": {
+          "m_Texture": {
+            "m_FileID": 3,
+            "m_PathID": -4274253910151898917,
+            "Name": "Stage_TaiXu_Mountain01_Mask_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_ShadowTex": {
+          "m_Texture": {
+            "m_FileID": 6,
+            "m_PathID": -9083876917868494389,
+            "Name": "Stage_TaiXu_B02_Stone01_Lightmap_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_SpecularMap": {
+          "m_Texture": {
+            "m_FileID": 4,
+            "m_PathID": -6558203949027004748,
+            "Name": "DLC_matcap_hilight_17",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_Splat2RoughnessTex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "m_Ints": null,
+      "m_Floats": {
+        "_AlphaClip": 0.0,
+        "_AlphaDither": 0.0,
+        "_BloomFactor": 0.5,
+        "_ColorGrading": 0.0,
+        "_DistanceGR": 1.0,
+        "_DitherAlpha": 1.0,
+        "_EnableMatcapSpecular": 1.0,
+        "_FogTune": 1.0,
+        "_GGXSpecularIntensity": 0.57,
+        "_GrdtProgress": 0.0,
+        "_Instancing": 0.0,
+        "_IntensityInLightmap": 0.428,
+        "_LightMapIntensity": 1.0,
+        "_LightmapThreshold": 0.1,
+        "_MetalRef": 0.648,
+        "_PolygonOffsetFactor": 0.0,
+        "_PolygonOffsetUnit": 0.0,
+        "_Roughness": 0.0,
+        "_SpecularGGX": 1.0,
+        "_SpecularIntensity": 0.15,
+        "_Stencil": 12.0,
+        "_UnjitterMatrix": 0.0,
+        "_UsingGGXTex": 0.0,
+        "_ZDepthBias": 0.0,
+        "_fresnelBaseA": 0.0,
+        "_fresnelIndensity": 2.5,
+        "_fresnelScaleA": 0.15
+      },
+      "m_Colors": {
+        "_Color": {
+          "r": 0.52205884,
+          "g": 0.52205884,
+          "b": 0.52205884,
+          "a": 1.0
+        },
+        "_EnvColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_GrdtColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_LightColor": {
+          "r": 0.19058172,
+          "g": 0.19806477,
+          "b": 0.3455882,
+          "a": 1.0
+        },
+        "_LightDirection": {
+          "r": 4.2,
+          "g": 14.98,
+          "b": 1.73,
+          "a": 0.0
+        },
+        "_Position": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "_SpecColor": {
+          "r": 0.0,
+          "g": 0.061054766,
+          "b": 0.20588237,
+          "a": 1.0
+        },
+        "_TransparentColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_fresnelColA": {
+          "r": 0.7205882,
+          "g": 0.69574034,
+          "b": 0.3602941,
+          "a": 1.0
+        }
+      }
+    },
+    "textures": {
+      "_MainTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_Mountain02_Tex.png",
+        "sha256": "59f2a3f0693dad5311ea4945d38d5219e419a4b2d625a5a716f807045d6849b0",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_ShadowTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_B02_Stone01_Lightmap_Tex.png",
+        "sha256": "71c8542f95e885b8e5549f935aae25fc7054acd7f06b45686a9572b476295e5c",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "scope": "All exact main combat prefab roots under client9.1 fuka_c3_nd, excluding duplicate UI/story/island/LOD/TL prefab variants",
+  "completeMainCombatPrefabCount": 5,
+  "includesOfficialRecolor": true,
+  "order": [
+    "default",
+    "autumn_leaves",
+    "spring_traveler",
+    "xuanyi_sushang",
+    "black_butler"
+  ],
+  "existing": [
+    {
+      "id": "default",
+      "name": "白夜执事",
+      "code": "C3_ND"
+    },
+    {
+      "id": "autumn_leaves",
+      "name": "红叶知秋",
+      "code": "C3_04_03"
+    }
+  ],
+  "new": [
+    {
+      "appearanceId": "spring_traveler",
+      "localizedName": "春风之旅",
+      "internalCode": "C3_04_01",
+      "sourcePrefab": [
+        {
+          "Name": "Avatar",
+          "Container": "assets/asbres/entities/avatar/fuka_c3_nd/dress_01/avatar.prefab",
+          "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a303f703da40756b.wmv",
+          "PathID": -8040596504695456373,
+          "Type": "GameObject",
+          "Hash": "3cda3845cf261ec6",
+          "Offset": 39860527
+        }
+      ],
+      "bones": 75,
+      "scene": "res://assets/night-squire-spring-traveler/Avatar_Fuka_C3_04_01.scn",
+      "portrait": "res://assets/night-squire-skins/portraits/FukaC3_04_01.png"
+    },
+    {
+      "appearanceId": "xuanyi_sushang",
+      "localizedName": "玄衣素裳",
+      "internalCode": "C3_04_02",
+      "sourcePrefab": [
+        {
+          "Name": "Avatar",
+          "Container": "assets/asbres/entities/avatar/fuka_c3_nd/dress_02/avatar.prefab",
+          "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a303f703da40756b.wmv",
+          "PathID": -2069290597171041078,
+          "Type": "GameObject",
+          "Hash": "ffb6f7b1d3c19017",
+          "Offset": 39918698
+        }
+      ],
+      "bones": 94,
+      "scene": "res://assets/night-squire-xuanyi/Avatar_Fuka_C3_04_02.scn",
+      "portrait": "res://assets/night-squire-skins/portraits/FukaC3_04_02.png"
+    },
+    {
+      "appearanceId": "black_butler",
+      "localizedName": "黑执事",
+      "internalCode": "C3_03_01",
+      "sourcePrefab": [
+        {
+          "Name": "Avatar",
+          "Container": "assets/asbres/entities/avatar/fuka_c3_nd/dress_fuka_c3_03_01/avatar.prefab",
+          "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a303f703da40756b.wmv",
+          "PathID": -417952305283583346,
+          "Type": "GameObject",
+          "Hash": "656727709732591e",
+          "Offset": 39964347
+        }
+      ],
+      "bones": 78,
+      "scene": "res://assets/night-squire-black-butler/Avatar_Fuka_C3_03_01.scn",
+      "portrait": "res://assets/night-squire-skins/portraits/FukaC3_03_01.png"
+    }
+  ],
+  "allNativePrefabRoots": [
+    {
+      "Name": "Avatar_Fuka_C3_ND",
+      "Container": "assets/asbres/entities/avatar/fuka_c3_nd/avatar_fuka_c3_nd.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a303f703da40756b.wmv",
+      "PathID": -254047150115557311,
+      "Type": "GameObject",
+      "Hash": "83b90c1792761269",
+      "Offset": 39808116
+    },
+    {
+      "Name": "Avatar",
+      "Container": "assets/asbres/entities/avatar/fuka_c3_nd/dress_01/avatar.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a303f703da40756b.wmv",
+      "PathID": -8040596504695456373,
+      "Type": "GameObject",
+      "Hash": "3cda3845cf261ec6",
+      "Offset": 39860527
+    },
+    {
+      "Name": "Avatar",
+      "Container": "assets/asbres/entities/avatar/fuka_c3_nd/dress_02/avatar.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a303f703da40756b.wmv",
+      "PathID": -2069290597171041078,
+      "Type": "GameObject",
+      "Hash": "ffb6f7b1d3c19017",
+      "Offset": 39918698
+    },
+    {
+      "Name": "Avatar",
+      "Container": "assets/asbres/entities/avatar/fuka_c3_nd/dress_fuka_c3_03_01/avatar.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a303f703da40756b.wmv",
+      "PathID": -417952305283583346,
+      "Type": "GameObject",
+      "Hash": "656727709732591e",
+      "Offset": 39964347
+    },
+    {
+      "Name": "Avatar",
+      "Container": "assets/asbres/entities/avatar/fuka_c3_nd/dress_fuka_c3_04_03/avatar.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a303f703da40756b.wmv",
+      "PathID": 6480448104156695592,
+      "Type": "GameObject",
+      "Hash": "fecce0ef1d1ac989",
+      "Offset": 40021349
+    }
+  ],
+  "namePortraitEvidence": "portraits/source-manifest.json"
+}

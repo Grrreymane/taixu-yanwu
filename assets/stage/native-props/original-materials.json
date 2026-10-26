@@ -1,0 +1,2188 @@
+{
+  "Stage_TaiXu_House01_Mat": {
+    "name": "Stage_TaiXu_House01_Mat",
+    "originalShaderPathId": "-5500795706935829961",
+    "properties": {
+      "m_TexEnvs": {
+        "_BumpMap": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GGX_D_Tex": {
+          "m_Texture": {
+            "m_FileID": 6,
+            "m_PathID": -8423267826898015716,
+            "Name": "GGX_D",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GrdtMask": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MainTex": {
+          "m_Texture": {
+            "m_FileID": 4,
+            "m_PathID": 1232263861854858967,
+            "Name": "Stage_TaiXu_house02_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatCap": {
+          "m_Texture": {
+            "m_FileID": 2,
+            "m_PathID": 1577194688567468571,
+            "Name": "DLC_Matcap_Lambet_01",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatcapMaskMap": {
+          "m_Texture": {
+            "m_FileID": 4,
+            "m_PathID": 1232263861854858967,
+            "Name": "Stage_TaiXu_house02_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_ShadowTex": {
+          "m_Texture": {
+            "m_FileID": 3,
+            "m_PathID": 7933081700126357225,
+            "Name": "Stage_TaiXu_B_House_Lightmap",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_SpecularMap": {
+          "m_Texture": {
+            "m_FileID": 5,
+            "m_PathID": -6558203949027004748,
+            "Name": "DLC_matcap_hilight_17",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_Splat2RoughnessTex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "m_Ints": null,
+      "m_Floats": {
+        "_AlphaClip": 0.0,
+        "_AlphaDither": 0.0,
+        "_BloomFactor": 0.5,
+        "_ColorGrading": 0.0,
+        "_DistanceGR": 1.0,
+        "_DitherAlpha": 1.0,
+        "_EnableMatcapSpecular": 0.0,
+        "_FogTune": 1.0,
+        "_GGXSpecularIntensity": 2.37,
+        "_GrdtProgress": 0.0,
+        "_Instancing": 0.0,
+        "_IntensityInLightmap": 0.0,
+        "_LightMapIntensity": 1.0,
+        "_LightmapThreshold": 0.0,
+        "_MetalRef": 0.639,
+        "_PolygonOffsetFactor": 0.0,
+        "_PolygonOffsetUnit": 0.0,
+        "_Roughness": 0.181,
+        "_SpecularGGX": 1.0,
+        "_SpecularIntensity": 0.3,
+        "_Stencil": 12.0,
+        "_UnjitterMatrix": 0.0,
+        "_UsingGGXTex": 1.0,
+        "_ZDepthBias": 0.0,
+        "_fresnelBaseA": 0.0,
+        "_fresnelIndensity": 5.0,
+        "_fresnelScaleA": 0.0
+      },
+      "m_Colors": {
+        "_Color": {
+          "r": 0.52205884,
+          "g": 0.52205884,
+          "b": 0.52205884,
+          "a": 1.0
+        },
+        "_EnvColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_GrdtColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_LightColor": {
+          "r": 0.125,
+          "g": 0.125,
+          "b": 0.125,
+          "a": 1.0
+        },
+        "_LightDirection": {
+          "r": -1.04,
+          "g": 6.89,
+          "b": 1.0,
+          "a": 0.0
+        },
+        "_Position": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "_SpecColor": {
+          "r": 0.0,
+          "g": 0.061054766,
+          "b": 0.20588237,
+          "a": 1.0
+        },
+        "_TransparentColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_fresnelColA": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        }
+      }
+    },
+    "textures": {
+      "_MainTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_house02_Tex.png",
+        "sha256": "1201e66fdb8eaff0417f93fc8e6d931d1c4243bd40f3b6cfab35a77042a88c13",
+        "size": [
+          512,
+          512
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "alphaBelow128": 0.0,
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_ShadowTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_B_House_Lightmap.png",
+        "sha256": "216159c78cf1308fb32b55da7eaa2aaf5aeb06842f5cf5203df546280bdefcdb",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          0,
+          255
+        ],
+        "alphaBelow128": 0.07197761535644531,
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    },
+    "originalShaderNames": [
+      "miHoYo/miHoYo_Scenes/Scenes_NewCommon/Scene_Air_LightMap_Matcap"
+    ]
+  },
+  "Stage_TaiXu_House02_Mat": {
+    "name": "Stage_TaiXu_House02_Mat",
+    "originalShaderPathId": "-5500795706935829961",
+    "properties": {
+      "m_TexEnvs": {
+        "_BumpMap": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GGX_D_Tex": {
+          "m_Texture": {
+            "m_FileID": 6,
+            "m_PathID": -8423267826898015716,
+            "Name": "GGX_D",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GrdtMask": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MainTex": {
+          "m_Texture": {
+            "m_FileID": 5,
+            "m_PathID": 3171895559486658996,
+            "Name": "Stage_TaiXu_house03_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatCap": {
+          "m_Texture": {
+            "m_FileID": 2,
+            "m_PathID": 1577194688567468571,
+            "Name": "DLC_Matcap_Lambet_01",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatcapMaskMap": {
+          "m_Texture": {
+            "m_FileID": 5,
+            "m_PathID": 3171895559486658996,
+            "Name": "Stage_TaiXu_house03_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_ShadowTex": {
+          "m_Texture": {
+            "m_FileID": 3,
+            "m_PathID": 7933081700126357225,
+            "Name": "Stage_TaiXu_B_House_Lightmap",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_SpecularMap": {
+          "m_Texture": {
+            "m_FileID": 4,
+            "m_PathID": -6558203949027004748,
+            "Name": "DLC_matcap_hilight_17",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_Splat2RoughnessTex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "m_Ints": null,
+      "m_Floats": {
+        "_AlphaClip": 0.0,
+        "_AlphaDither": 0.0,
+        "_BloomFactor": 0.5,
+        "_ColorGrading": 0.0,
+        "_DistanceGR": 1.0,
+        "_DitherAlpha": 1.0,
+        "_EnableMatcapSpecular": 0.0,
+        "_FogTune": 1.0,
+        "_GGXSpecularIntensity": 2.37,
+        "_GrdtProgress": 0.0,
+        "_Instancing": 0.0,
+        "_IntensityInLightmap": 0.0,
+        "_LightMapIntensity": 1.0,
+        "_LightmapThreshold": 0.0,
+        "_MetalRef": 0.639,
+        "_PolygonOffsetFactor": 0.0,
+        "_PolygonOffsetUnit": 0.0,
+        "_Roughness": 0.181,
+        "_SpecularGGX": 1.0,
+        "_SpecularIntensity": 0.3,
+        "_Stencil": 12.0,
+        "_UnjitterMatrix": 0.0,
+        "_UsingGGXTex": 1.0,
+        "_ZDepthBias": 0.0,
+        "_fresnelBaseA": 0.0,
+        "_fresnelIndensity": 5.0,
+        "_fresnelScaleA": 0.0
+      },
+      "m_Colors": {
+        "_Color": {
+          "r": 0.52205884,
+          "g": 0.52205884,
+          "b": 0.52205884,
+          "a": 1.0
+        },
+        "_EnvColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_GrdtColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_LightColor": {
+          "r": 0.125,
+          "g": 0.125,
+          "b": 0.125,
+          "a": 1.0
+        },
+        "_LightDirection": {
+          "r": -1.04,
+          "g": 6.89,
+          "b": 1.0,
+          "a": 0.0
+        },
+        "_Position": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "_SpecColor": {
+          "r": 0.0,
+          "g": 0.061054766,
+          "b": 0.20588237,
+          "a": 1.0
+        },
+        "_TransparentColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_fresnelColA": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        }
+      }
+    },
+    "textures": {
+      "_MainTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_house03_Tex.png",
+        "sha256": "7278409f3cb142099878dc448dd48bb2aa3e25d10632fdbbdcb804737870a3ad",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "alphaBelow128": 0.0,
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_ShadowTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_B_House_Lightmap.png",
+        "sha256": "216159c78cf1308fb32b55da7eaa2aaf5aeb06842f5cf5203df546280bdefcdb",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          0,
+          255
+        ],
+        "alphaBelow128": 0.07197761535644531,
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    },
+    "originalShaderNames": [
+      "miHoYo/miHoYo_Scenes/Scenes_NewCommon/Scene_Air_LightMap_Matcap"
+    ]
+  },
+  "Stage_TaiXu_House03_Mat": {
+    "name": "Stage_TaiXu_House03_Mat",
+    "originalShaderPathId": "-5500795706935829961",
+    "properties": {
+      "m_TexEnvs": {
+        "_BumpMap": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GGX_D_Tex": {
+          "m_Texture": {
+            "m_FileID": 6,
+            "m_PathID": -8423267826898015716,
+            "Name": "GGX_D",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GrdtMask": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MainTex": {
+          "m_Texture": {
+            "m_FileID": 2,
+            "m_PathID": -3647813172356571926,
+            "Name": "Stage_TaiXu_house01_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatCap": {
+          "m_Texture": {
+            "m_FileID": 3,
+            "m_PathID": 1577194688567468571,
+            "Name": "DLC_Matcap_Lambet_01",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatcapMaskMap": {
+          "m_Texture": {
+            "m_FileID": 2,
+            "m_PathID": -3647813172356571926,
+            "Name": "Stage_TaiXu_house01_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_ShadowTex": {
+          "m_Texture": {
+            "m_FileID": 4,
+            "m_PathID": 7933081700126357225,
+            "Name": "Stage_TaiXu_B_House_Lightmap",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_SpecularMap": {
+          "m_Texture": {
+            "m_FileID": 5,
+            "m_PathID": -6558203949027004748,
+            "Name": "DLC_matcap_hilight_17",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_Splat2RoughnessTex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "m_Ints": null,
+      "m_Floats": {
+        "_AlphaClip": 0.0,
+        "_AlphaDither": 0.0,
+        "_BloomFactor": 0.5,
+        "_ColorGrading": 0.0,
+        "_DistanceGR": 1.0,
+        "_DitherAlpha": 1.0,
+        "_EnableMatcapSpecular": 0.0,
+        "_FogTune": 1.0,
+        "_GGXSpecularIntensity": 2.37,
+        "_GrdtProgress": 0.0,
+        "_Instancing": 0.0,
+        "_IntensityInLightmap": 0.0,
+        "_LightMapIntensity": 1.0,
+        "_LightmapThreshold": 0.0,
+        "_MetalRef": 0.639,
+        "_PolygonOffsetFactor": 0.0,
+        "_PolygonOffsetUnit": 0.0,
+        "_Roughness": 0.181,
+        "_SpecularGGX": 1.0,
+        "_SpecularIntensity": 0.3,
+        "_Stencil": 12.0,
+        "_UnjitterMatrix": 0.0,
+        "_UsingGGXTex": 1.0,
+        "_ZDepthBias": 0.0,
+        "_fresnelBaseA": 0.0,
+        "_fresnelIndensity": 5.0,
+        "_fresnelScaleA": 0.0
+      },
+      "m_Colors": {
+        "_Color": {
+          "r": 0.52205884,
+          "g": 0.52205884,
+          "b": 0.52205884,
+          "a": 1.0
+        },
+        "_EnvColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_GrdtColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_LightColor": {
+          "r": 0.125,
+          "g": 0.125,
+          "b": 0.125,
+          "a": 1.0
+        },
+        "_LightDirection": {
+          "r": -1.04,
+          "g": 6.89,
+          "b": 1.0,
+          "a": 0.0
+        },
+        "_Position": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "_SpecColor": {
+          "r": 0.0,
+          "g": 0.061054766,
+          "b": 0.20588237,
+          "a": 1.0
+        },
+        "_TransparentColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_fresnelColA": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        }
+      }
+    },
+    "textures": {
+      "_MainTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_house01_Tex.png",
+        "sha256": "eb88e41847303494d72e80bce2d2fed24306b8bac948549b8bfbe676b0242171",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          0,
+          255
+        ],
+        "alphaBelow128": 0.034491539001464844,
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_ShadowTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_B_House_Lightmap.png",
+        "sha256": "216159c78cf1308fb32b55da7eaa2aaf5aeb06842f5cf5203df546280bdefcdb",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          0,
+          255
+        ],
+        "alphaBelow128": 0.07197761535644531,
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    },
+    "originalShaderNames": [
+      "miHoYo/miHoYo_Scenes/Scenes_NewCommon/Scene_Air_LightMap_Matcap"
+    ]
+  },
+  "Stage_TaiXu_House04_Mat 1": {
+    "name": "Stage_TaiXu_House04_Mat 1",
+    "originalShaderPathId": "-5500795706935829961",
+    "properties": {
+      "m_TexEnvs": {
+        "_BumpMap": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GGX_D_Tex": {
+          "m_Texture": {
+            "m_FileID": 2,
+            "m_PathID": -8423267826898015716,
+            "Name": "GGX_D",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GrdtMask": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MainTex": {
+          "m_Texture": {
+            "m_FileID": 3,
+            "m_PathID": -8397216005223187182,
+            "Name": "Stage_TaiXu_Bridge",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatCap": {
+          "m_Texture": {
+            "m_FileID": 4,
+            "m_PathID": 1577194688567468571,
+            "Name": "DLC_Matcap_Lambet_01",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatcapMaskMap": {
+          "m_Texture": {
+            "m_FileID": 3,
+            "m_PathID": -8397216005223187182,
+            "Name": "Stage_TaiXu_Bridge",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_ShadowTex": {
+          "m_Texture": {
+            "m_FileID": 5,
+            "m_PathID": 7933081700126357225,
+            "Name": "Stage_TaiXu_B_House_Lightmap",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_SpecularMap": {
+          "m_Texture": {
+            "m_FileID": 6,
+            "m_PathID": -6558203949027004748,
+            "Name": "DLC_matcap_hilight_17",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_Splat2RoughnessTex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "m_Ints": null,
+      "m_Floats": {
+        "_AlphaClip": 0.0,
+        "_AlphaDither": 0.0,
+        "_BloomFactor": 0.5,
+        "_ColorGrading": 0.0,
+        "_DistanceGR": 1.0,
+        "_DitherAlpha": 1.0,
+        "_EnableMatcapSpecular": 0.0,
+        "_FogTune": 1.0,
+        "_GGXSpecularIntensity": 2.37,
+        "_GrdtProgress": 0.0,
+        "_Instancing": 0.0,
+        "_IntensityInLightmap": 0.0,
+        "_LightMapIntensity": 1.0,
+        "_LightmapThreshold": 0.0,
+        "_MetalRef": 0.639,
+        "_PolygonOffsetFactor": 0.0,
+        "_PolygonOffsetUnit": 0.0,
+        "_Roughness": 0.181,
+        "_SpecularGGX": 1.0,
+        "_SpecularIntensity": 0.3,
+        "_Stencil": 12.0,
+        "_UnjitterMatrix": 0.0,
+        "_UsingGGXTex": 1.0,
+        "_ZDepthBias": 0.0,
+        "_fresnelBaseA": 0.0,
+        "_fresnelIndensity": 5.0,
+        "_fresnelScaleA": 0.0
+      },
+      "m_Colors": {
+        "_Color": {
+          "r": 0.52205884,
+          "g": 0.52205884,
+          "b": 0.52205884,
+          "a": 1.0
+        },
+        "_EnvColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_GrdtColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_LightColor": {
+          "r": 0.125,
+          "g": 0.125,
+          "b": 0.125,
+          "a": 1.0
+        },
+        "_LightDirection": {
+          "r": -1.04,
+          "g": 6.89,
+          "b": 1.0,
+          "a": 0.0
+        },
+        "_Position": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "_SpecColor": {
+          "r": 0.0,
+          "g": 0.061054766,
+          "b": 0.20588237,
+          "a": 1.0
+        },
+        "_TransparentColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_fresnelColA": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        }
+      }
+    },
+    "textures": {
+      "_MainTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_Bridge.png",
+        "sha256": "d00e023c56449edbec31c9778915fd30ac286f9c2f353f62c65baf40bcd485ba",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          214,
+          255
+        ],
+        "alphaBelow128": 0.0,
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_ShadowTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_B_House_Lightmap.png",
+        "sha256": "216159c78cf1308fb32b55da7eaa2aaf5aeb06842f5cf5203df546280bdefcdb",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          0,
+          255
+        ],
+        "alphaBelow128": 0.07197761535644531,
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    },
+    "originalShaderNames": [
+      "miHoYo/miHoYo_Scenes/Scenes_NewCommon/Scene_Air_LightMap_Matcap"
+    ]
+  },
+  "Stage_TaiXu_House05_Mat": {
+    "name": "Stage_TaiXu_House05_Mat",
+    "originalShaderPathId": "-927207179669102558",
+    "properties": {
+      "m_TexEnvs": {
+        "_MainTex": {
+          "m_Texture": {
+            "m_FileID": 2,
+            "m_PathID": 8414803436098318925,
+            "Name": "Stage_TaiXu_Bridge01",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.6,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_ShadowTex": {
+          "m_Texture": {
+            "m_FileID": 1,
+            "m_PathID": 7933081700126357225,
+            "Name": "Stage_TaiXu_B_House_Lightmap",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "m_Ints": null,
+      "m_Floats": {
+        "_BloomFactor": 0.5,
+        "_Culling": 2.0,
+        "_FogTune": 1.0,
+        "_LightMapIntensity": 1.0,
+        "_Stencil": 12.0,
+        "_ZWrite": 1.0
+      },
+      "m_Colors": {}
+    },
+    "textures": {
+      "_MainTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_Bridge01.png",
+        "sha256": "be1773a4c2805c61cee1274b9e450777604fab8b0adad777a0dce9e01849a7e3",
+        "size": [
+          512,
+          512
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "alphaBelow128": 0.0,
+        "scale": {
+          "X": 1.6,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_ShadowTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_B_House_Lightmap.png",
+        "sha256": "216159c78cf1308fb32b55da7eaa2aaf5aeb06842f5cf5203df546280bdefcdb",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          0,
+          255
+        ],
+        "alphaBelow128": 0.07197761535644531,
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    },
+    "originalShaderNames": [
+      "miHoYo/miHoYo_Scenes/Scenes_Common/AirEffect_LightMap"
+    ]
+  },
+  "Stage_TaiXu_House06_Mat": {
+    "name": "Stage_TaiXu_House06_Mat",
+    "originalShaderPathId": "-5500795706935829961",
+    "properties": {
+      "m_TexEnvs": {
+        "_BumpMap": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GGX_D_Tex": {
+          "m_Texture": {
+            "m_FileID": 5,
+            "m_PathID": -8423267826898015716,
+            "Name": "GGX_D",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GrdtMask": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MainTex": {
+          "m_Texture": {
+            "m_FileID": 6,
+            "m_PathID": -6002494556944689536,
+            "Name": "Stage_TaiXu_house04_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.6,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatCap": {
+          "m_Texture": {
+            "m_FileID": 2,
+            "m_PathID": 1577194688567468571,
+            "Name": "DLC_Matcap_Lambet_01",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatcapMaskMap": {
+          "m_Texture": {
+            "m_FileID": 6,
+            "m_PathID": -6002494556944689536,
+            "Name": "Stage_TaiXu_house04_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_ShadowTex": {
+          "m_Texture": {
+            "m_FileID": 3,
+            "m_PathID": 7933081700126357225,
+            "Name": "Stage_TaiXu_B_House_Lightmap",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_SpecularMap": {
+          "m_Texture": {
+            "m_FileID": 4,
+            "m_PathID": -6558203949027004748,
+            "Name": "DLC_matcap_hilight_17",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 1.6,
+            "Y": 0.0
+          }
+        },
+        "_Splat2RoughnessTex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "m_Ints": null,
+      "m_Floats": {
+        "_AlphaClip": 0.0,
+        "_AlphaDither": 0.0,
+        "_BloomFactor": 0.5,
+        "_ColorGrading": 0.0,
+        "_DistanceGR": 1.0,
+        "_DitherAlpha": 1.0,
+        "_EnableMatcapSpecular": 1.0,
+        "_FogTune": 1.0,
+        "_GGXSpecularIntensity": 2.37,
+        "_GrdtProgress": 0.0,
+        "_Instancing": 0.0,
+        "_IntensityInLightmap": 0.0,
+        "_LightMapIntensity": 1.0,
+        "_LightmapThreshold": 0.0,
+        "_MetalRef": 0.639,
+        "_PolygonOffsetFactor": 0.0,
+        "_PolygonOffsetUnit": 0.0,
+        "_Roughness": 0.181,
+        "_SpecularGGX": 0.0,
+        "_SpecularIntensity": 0.374,
+        "_Stencil": 12.0,
+        "_UnjitterMatrix": 0.0,
+        "_UsingGGXTex": 0.0,
+        "_ZDepthBias": 0.0,
+        "_fresnelBaseA": 0.0,
+        "_fresnelIndensity": 5.0,
+        "_fresnelScaleA": 0.3
+      },
+      "m_Colors": {
+        "_Color": {
+          "r": 0.52205884,
+          "g": 0.52205884,
+          "b": 0.52205884,
+          "a": 1.0
+        },
+        "_EnvColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_GrdtColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_LightColor": {
+          "r": 0.125,
+          "g": 0.125,
+          "b": 0.125,
+          "a": 1.0
+        },
+        "_LightDirection": {
+          "r": -1.04,
+          "g": 6.89,
+          "b": 1.0,
+          "a": 0.0
+        },
+        "_Position": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "_SpecColor": {
+          "r": 0.0,
+          "g": 0.061054766,
+          "b": 0.20588237,
+          "a": 1.0
+        },
+        "_TransparentColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_fresnelColA": {
+          "r": 1.0,
+          "g": 0.9920893,
+          "b": 0.71323526,
+          "a": 1.0
+        }
+      }
+    },
+    "textures": {
+      "_MainTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_house04_Tex.png",
+        "sha256": "6df18e8db103ebe64f4db0337ae3c37c654ef08adb5fc02973736bc710936771",
+        "size": [
+          512,
+          512
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "alphaBelow128": 0.0,
+        "scale": {
+          "X": 1.6,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_ShadowTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_B_House_Lightmap.png",
+        "sha256": "216159c78cf1308fb32b55da7eaa2aaf5aeb06842f5cf5203df546280bdefcdb",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          0,
+          255
+        ],
+        "alphaBelow128": 0.07197761535644531,
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    },
+    "originalShaderNames": [
+      "miHoYo/miHoYo_Scenes/Scenes_NewCommon/Scene_Air_LightMap_Matcap"
+    ]
+  },
+  "Stage_TaiXu_BigTree_Leaf_Mat": {
+    "name": "Stage_TaiXu_BigTree_Leaf_Mat",
+    "originalShaderPathId": "5433782976248706318",
+    "properties": {
+      "m_TexEnvs": {
+        "_MainTex": {
+          "m_Texture": {
+            "m_FileID": 2,
+            "m_PathID": -7861306735974937990,
+            "Name": "Stage_TaiXu_BigTree_Leaf",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "m_Ints": null,
+      "m_Floats": {
+        "_BloomFactor": 1.0,
+        "_Culling": 0.0,
+        "_Cutoff": 0.5,
+        "_FadeDistance": 0.5,
+        "_FadeOffset": 1.0,
+        "_LightIndensity": 0.482,
+        "_fresnelBase": 0.0,
+        "_fresnelIndensity": 5.0,
+        "_fresnelScale": 0.038
+      },
+      "m_Colors": {
+        "_LightPosition": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 1.0
+        },
+        "_MainColor": {
+          "r": 0.41911763,
+          "g": 0.41911763,
+          "b": 0.41911763,
+          "a": 1.0
+        },
+        "_MainColorFar": {
+          "r": 0.2794118,
+          "g": 0.2794118,
+          "b": 0.2794118,
+          "a": 1.0
+        },
+        "_fresnelCol": {
+          "r": 0.0,
+          "g": 0.28676468,
+          "b": 0.23930016,
+          "a": 1.0
+        }
+      }
+    },
+    "textures": {
+      "_MainTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_BigTree_Leaf.png",
+        "sha256": "b5ea647ad74796120335b02fd4cf613aa8b1b53873fb1355e016820d6f43827e",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          0,
+          255
+        ],
+        "alphaBelow128": 0.7994270324707031,
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    },
+    "originalShaderNames": [
+      "miHoYo/miHoYo_Scenes/Scenes_NewCommon/AirEffect_Texture_Cutoff_VertexNormal"
+    ]
+  },
+  "Stage_TaiXu_BigTree_Tunk_Mat": {
+    "name": "Stage_TaiXu_BigTree_Tunk_Mat",
+    "originalShaderPathId": "-927207179669102558",
+    "properties": {
+      "m_TexEnvs": {
+        "_MainTex": {
+          "m_Texture": {
+            "m_FileID": 2,
+            "m_PathID": 3570787633917534068,
+            "Name": "Stage_TaiXu_BigTree_Tunk",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_ShadowTex": {
+          "m_Texture": {
+            "m_FileID": 3,
+            "m_PathID": -2710763639737253093,
+            "Name": "Stage_TaiXu_B02_Item01_Lightmap_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "m_Ints": null,
+      "m_Floats": {
+        "_BloomFactor": 0.5,
+        "_Culling": 2.0,
+        "_FogTune": 1.0,
+        "_LightMapIntensity": 1.0,
+        "_Stencil": 12.0,
+        "_ZWrite": 1.0
+      },
+      "m_Colors": {}
+    },
+    "textures": {
+      "_MainTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_BigTree_Tunk.png",
+        "sha256": "2d33eb316429e85fd9417bcb473c0c473d9c0e1401b9fc00e3965b32c98409cb",
+        "size": [
+          512,
+          512
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "alphaBelow128": 0.0,
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_ShadowTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_B02_Item01_Lightmap_Tex.png",
+        "sha256": "f1cb8a2779823bc99e95fa617faeddf168310ef42f991bddac12426a7d8e484f",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "alphaBelow128": 0.0,
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    },
+    "originalShaderNames": [
+      "miHoYo/miHoYo_Scenes/Scenes_Common/AirEffect_LightMap"
+    ]
+  },
+  "Stage_TaiXu_B02_Rock01_Mat": {
+    "name": "Stage_TaiXu_B02_Rock01_Mat",
+    "originalShaderPathId": "-5500795706935829961",
+    "properties": {
+      "m_TexEnvs": {
+        "_BumpMap": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GGX_D_Tex": {
+          "m_Texture": {
+            "m_FileID": 6,
+            "m_PathID": -8423267826898015716,
+            "Name": "GGX_D",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_GrdtMask": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MainTex": {
+          "m_Texture": {
+            "m_FileID": 7,
+            "m_PathID": -4673621260474862246,
+            "Name": "Stage_TaiXu_Mountain03_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatCap": {
+          "m_Texture": {
+            "m_FileID": 3,
+            "m_PathID": 1577194688567468571,
+            "Name": "DLC_Matcap_Lambet_01",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_MatcapMaskMap": {
+          "m_Texture": {
+            "m_FileID": 4,
+            "m_PathID": -4274253910151898917,
+            "Name": "Stage_TaiXu_Mountain01_Mask_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_ShadowTex": {
+          "m_Texture": {
+            "m_FileID": 1,
+            "m_PathID": -2710763639737253093,
+            "Name": "Stage_TaiXu_B02_Item01_Lightmap_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_SpecularMap": {
+          "m_Texture": {
+            "m_FileID": 5,
+            "m_PathID": -6558203949027004748,
+            "Name": "DLC_matcap_hilight_17",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_Splat2RoughnessTex": {
+          "m_Texture": {
+            "m_FileID": 0,
+            "m_PathID": 0,
+            "Name": "",
+            "IsNull": true
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "m_Ints": null,
+      "m_Floats": {
+        "_AlphaClip": 0.0,
+        "_AlphaDither": 0.0,
+        "_BloomFactor": 0.5,
+        "_ColorGrading": 0.0,
+        "_DistanceGR": 1.0,
+        "_DitherAlpha": 1.0,
+        "_EnableMatcapSpecular": 0.0,
+        "_FogTune": 1.0,
+        "_GGXSpecularIntensity": 2.37,
+        "_GrdtProgress": 0.0,
+        "_Instancing": 0.0,
+        "_IntensityInLightmap": 0.0,
+        "_LightMapIntensity": 1.0,
+        "_LightmapThreshold": 0.0,
+        "_MetalRef": 0.639,
+        "_PolygonOffsetFactor": 0.0,
+        "_PolygonOffsetUnit": 0.0,
+        "_Roughness": 0.181,
+        "_SpecularGGX": 1.0,
+        "_SpecularIntensity": 0.3,
+        "_Stencil": 12.0,
+        "_UnjitterMatrix": 0.0,
+        "_UsingGGXTex": 1.0,
+        "_ZDepthBias": 0.0,
+        "_fresnelBaseA": 0.0,
+        "_fresnelIndensity": 5.0,
+        "_fresnelScaleA": 0.0
+      },
+      "m_Colors": {
+        "_Color": {
+          "r": 0.52205884,
+          "g": 0.52205884,
+          "b": 0.52205884,
+          "a": 1.0
+        },
+        "_EnvColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_GrdtColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_LightColor": {
+          "r": 0.125,
+          "g": 0.125,
+          "b": 0.125,
+          "a": 1.0
+        },
+        "_LightDirection": {
+          "r": -1.04,
+          "g": 6.89,
+          "b": 1.0,
+          "a": 0.0
+        },
+        "_Position": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 0.0
+        },
+        "_SpecColor": {
+          "r": 0.0,
+          "g": 0.061054766,
+          "b": 0.20588237,
+          "a": 1.0
+        },
+        "_TransparentColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "_fresnelColA": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        }
+      }
+    },
+    "textures": {
+      "_MainTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_Mountain03_Tex.png",
+        "sha256": "cdfb8f457fa56d6d0d6c4117cf347b7b489bd7d30c702ec64c290fd5391adac7",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "alphaBelow128": 0.0,
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_ShadowTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_B02_Item01_Lightmap_Tex.png",
+        "sha256": "f1cb8a2779823bc99e95fa617faeddf168310ef42f991bddac12426a7d8e484f",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "alphaBelow128": 0.0,
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    },
+    "originalShaderNames": [
+      "miHoYo/miHoYo_Scenes/Scenes_NewCommon/Scene_Air_LightMap_Matcap"
+    ]
+  },
+  "Stage_TaiXu_Props05_Mat": {
+    "name": "Stage_TaiXu_Props05_Mat",
+    "originalShaderPathId": "-927207179669102558",
+    "properties": {
+      "m_TexEnvs": {
+        "_MainTex": {
+          "m_Texture": {
+            "m_FileID": 2,
+            "m_PathID": 7458669679360261690,
+            "Name": "Stage_TaiXu_Props02_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_ShadowTex": {
+          "m_Texture": {
+            "m_FileID": 3,
+            "m_PathID": 5551321808005884501,
+            "Name": "Stage_TaiXu_Mountain_Lightmap05_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "m_Ints": null,
+      "m_Floats": {
+        "_BloomFactor": 0.5,
+        "_Culling": 2.0,
+        "_FogTune": 1.0,
+        "_LightMapIntensity": 1.1,
+        "_Stencil": 12.0,
+        "_ZWrite": 1.0
+      },
+      "m_Colors": {}
+    },
+    "textures": {
+      "_MainTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_Props02_Tex.png",
+        "sha256": "87c4e1df97c62fd32ab06cb0183f6c946c4a38b7d3219f1c292522bb193cca28",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "alphaBelow128": 0.0,
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_ShadowTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_Mountain_Lightmap05_Tex.png",
+        "sha256": "c723c65b108ac6cf1674ffdd919f65bc9f1d2daa18e1fe277edff34c93c89975",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "alphaBelow128": 0.0,
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    },
+    "originalShaderNames": [
+      "miHoYo/miHoYo_Scenes/Scenes_Common/AirEffect_LightMap"
+    ]
+  },
+  "Stage_TaiXu_B02_Floor02_Mat": {
+    "name": "Stage_TaiXu_B02_Floor02_Mat",
+    "originalShaderPathId": "-927207179669102558",
+    "properties": {
+      "m_TexEnvs": {
+        "_MainTex": {
+          "m_Texture": {
+            "m_FileID": 3,
+            "m_PathID": -7750019213915252043,
+            "Name": "Stage_TaiXu_Stone02_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        },
+        "_ShadowTex": {
+          "m_Texture": {
+            "m_FileID": 1,
+            "m_PathID": -2710763639737253093,
+            "Name": "Stage_TaiXu_B02_Item01_Lightmap_Tex",
+            "IsNull": false
+          },
+          "m_Scale": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "m_Offset": {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "m_Ints": null,
+      "m_Floats": {
+        "_BloomFactor": 0.5,
+        "_Culling": 2.0,
+        "_FogTune": 1.0,
+        "_LightMapIntensity": 0.8,
+        "_Stencil": 12.0,
+        "_ZWrite": 1.0
+      },
+      "m_Colors": {}
+    },
+    "textures": {
+      "_MainTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_Stone02_Tex.png",
+        "sha256": "40f8bdb884b733b6312dd396d8fd929dfa51c7c84628ecbdd05019ff34ae0b09",
+        "size": [
+          512,
+          512
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "alphaBelow128": 0.0,
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_ShadowTex": {
+        "file": "res://assets/stage/native-props/textures/Stage_TaiXu_B02_Item01_Lightmap_Tex.png",
+        "sha256": "f1cb8a2779823bc99e95fa617faeddf168310ef42f991bddac12426a7d8e484f",
+        "size": [
+          1024,
+          1024
+        ],
+        "alphaMinMax": [
+          255,
+          255
+        ],
+        "alphaBelow128": 0.0,
+        "scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    },
+    "originalShaderNames": [
+      "miHoYo/miHoYo_Scenes/Scenes_Common/AirEffect_LightMap"
+    ]
+  }
+}

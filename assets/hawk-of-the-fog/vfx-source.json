@@ -1,0 +1,239 @@
+{
+  "selection": "Transitive dependency textures of original FK_Artifact b1_attack/b1_chase/b1_explode/b2/c1/c2/ultra prefabs; no unrelated armor substituted",
+  "prefabs": [
+    {
+      "Name": "Add (10)",
+      "Container": "assets/asbres/effect/avatarfuka/fk_artifact/avatar_fuka_fk_af01_b1_attack.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -5833898352690326779,
+      "Type": "GameObject",
+      "Hash": "3c7201d4d50e00a5",
+      "Offset": 7077438
+    },
+    {
+      "Name": "spot (1)",
+      "Container": "assets/asbres/effect/avatarfuka/fk_artifact/avatar_fuka_fk_af01_b1_chase.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -2216141400231411575,
+      "Type": "GameObject",
+      "Hash": "abfdf61a721a171c",
+      "Offset": 7087915
+    },
+    {
+      "Name": "wind01 (3)",
+      "Container": "assets/asbres/effect/avatarfuka/fk_artifact/avatar_fuka_fk_af01_b1_explode.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -7298172416588338843,
+      "Type": "GameObject",
+      "Hash": "96e33fb78a09271c",
+      "Offset": 7097125
+    },
+    {
+      "Name": "ls-X (2)",
+      "Container": "assets/asbres/effect/avatarfuka/fk_artifact/avatar_fuka_fk_af01_b2.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -7726900179553003136,
+      "Type": "GameObject",
+      "Hash": "29666d21bde0f78e",
+      "Offset": 7105004
+    },
+    {
+      "Name": "particle",
+      "Container": "assets/asbres/effect/avatarfuka/fk_artifact/avatar_fuka_fk_af01_c1.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -7319877090640358019,
+      "Type": "GameObject",
+      "Hash": "a9539ce7e1e822ed",
+      "Offset": 7157881
+    },
+    {
+      "Name": "GameObject (1)",
+      "Container": "assets/asbres/effect/avatarfuka/fk_artifact/avatar_fuka_fk_af01_c2.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -7682988546485692778,
+      "Type": "GameObject",
+      "Hash": "60c928f62870c474",
+      "Offset": 7166088
+    },
+    {
+      "Name": "Fuka_C1_05_01_Skirt_RB_02",
+      "Container": "assets/asbres/effect/avatarfuka/fk_artifact/avatar_fuka_fk_af01_ultra.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -9190779728435388067,
+      "Type": "GameObject",
+      "Hash": "92b30140a5733b95",
+      "Offset": 7179962
+    }
+  ],
+  "textures": [
+    {
+      "name": "SFX_Trail_314",
+      "pathId": "-572547575114225924",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+      "cab": "CAB-6b8210996783fc8c0145c93584b13cf0",
+      "rawSHA256": "70976345ca2fb76f0d204f4a7191a52c397c4eaa9a7c54706a7a164fc9f2cf53",
+      "width": 256,
+      "height": 64,
+      "format": "DXT5",
+      "ok": true,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\hawk-of-the-fog\\vfx\\original\\textures\\SFX_Trail_314_-572547575114225924\\SFX_Trail_314.png",
+          "sha256": "76244ec261db12b99d19891de407e40bc27936c145c92d696cd321ec0cb0ee48"
+        }
+      ],
+      "semantic": "trail",
+      "runtimePath": "res://assets/hawk-of-the-fog/vfx/SFX_Trail_314.png",
+      "exportPngSHA256": "76244ec261db12b99d19891de407e40bc27936c145c92d696cd321ec0cb0ee48"
+    },
+    {
+      "name": "SFX_Ray_503",
+      "pathId": "5176621394455261832",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+      "cab": "CAB-41a8ea6c1185673edde4c34c296492aa",
+      "rawSHA256": "f530f97771f68fe89b21f7f3be75eb27805f070f16c28d61c890473e701e20b8",
+      "width": 512,
+      "height": 512,
+      "format": "DXT5",
+      "ok": true,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\hawk-of-the-fog\\vfx\\original\\textures\\SFX_Ray_503_5176621394455261832\\SFX_Ray_503.png",
+          "sha256": "afedfb46b4caedbf90d688cfb7c1c428fba2ec32a84b68577fa8137336c9208d"
+        }
+      ],
+      "semantic": "lightning",
+      "runtimePath": "res://assets/hawk-of-the-fog/vfx/SFX_Ray_503.png",
+      "exportPngSHA256": "afedfb46b4caedbf90d688cfb7c1c428fba2ec32a84b68577fa8137336c9208d"
+    },
+    {
+      "name": "SFX_Ray_304",
+      "pathId": "-2325331431740809518",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\9ee905c04554a78d.wmv",
+      "cab": "CAB-ce3330b6194fe1fde030da612d97839c",
+      "rawSHA256": "92c5608e62c06ed95ebc6bbc152a6a324208544a25702ad8eb6c07f10ffed010",
+      "width": 256,
+      "height": 256,
+      "format": "DXT5",
+      "ok": true,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\hawk-of-the-fog\\vfx\\original\\textures\\SFX_Ray_304_-2325331431740809518\\SFX_Ray_304.png",
+          "sha256": "2edc69673c493e866c8310777a99bdc251e8a9b6a0cd9eb74658eae5e1b0151e"
+        }
+      ],
+      "semantic": "impact",
+      "runtimePath": "res://assets/hawk-of-the-fog/vfx/SFX_Ray_304.png",
+      "exportPngSHA256": "2edc69673c493e866c8310777a99bdc251e8a9b6a0cd9eb74658eae5e1b0151e"
+    },
+    {
+      "name": "Glow_Ball05",
+      "pathId": "9081000254100049938",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5f2084de38ff805d.wmv",
+      "cab": "CAB-c666f87077a9a6c5098d06c8f7de0928",
+      "rawSHA256": "85f458e1128194cd5004a1e8ac815b69ee89c12b38bd639b0214fbd9aa67315b",
+      "width": 64,
+      "height": 64,
+      "format": "DXT5",
+      "ok": true,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\hawk-of-the-fog\\vfx\\original\\textures\\Glow_Ball05_9081000254100049938\\Glow_Ball05.png",
+          "sha256": "7766105634ade324a6e6fe89e82fd96dfcd9152b44c150e6097ee9824d02a102"
+        }
+      ],
+      "semantic": "glow",
+      "runtimePath": "res://assets/hawk-of-the-fog/vfx/Glow_Ball05.png",
+      "exportPngSHA256": "7766105634ade324a6e6fe89e82fd96dfcd9152b44c150e6097ee9824d02a102"
+    },
+    {
+      "name": "SFX_Smoke_504",
+      "pathId": "-8371946263850050994",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+      "cab": "CAB-366d4eac495a314d513b9add53f08b2b",
+      "rawSHA256": "475c34e05eb2b4c7a9f4e3ed306fcae60cd7bfeb5bf024466d15f863d6e2d59d",
+      "width": 128,
+      "height": 128,
+      "format": "DXT5",
+      "ok": true,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\hawk-of-the-fog\\vfx\\original\\textures\\SFX_Smoke_504_-8371946263850050994\\SFX_Smoke_504.png",
+          "sha256": "fe31f707d317626a228f8e78c84b5db23b87bac771c99ae98453ff50af6a07c3"
+        }
+      ],
+      "semantic": "smoke",
+      "runtimePath": "res://assets/hawk-of-the-fog/vfx/SFX_Smoke_504.png",
+      "exportPngSHA256": "fe31f707d317626a228f8e78c84b5db23b87bac771c99ae98453ff50af6a07c3"
+    },
+    {
+      "name": "SFX_Trail_318",
+      "pathId": "-4375816755106291199",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\9ee905c04554a78d.wmv",
+      "cab": "CAB-531919d13524ffb07cf9db9eda0b9c06",
+      "rawSHA256": "98ad8a1928bfe4ad70696316b18532c604ebd0beac7a971d13c5960c2012d3fe",
+      "width": 512,
+      "height": 512,
+      "format": "DXT5",
+      "ok": true,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\hawk-of-the-fog\\vfx\\original\\textures\\SFX_Trail_318_-4375816755106291199\\SFX_Trail_318.png",
+          "sha256": "e8fa7057c3d9f2f391efc92bab5e22dcb5c3a1dd6ae0a0445c58729e8d0b5a62"
+        }
+      ],
+      "semantic": "burstTrail",
+      "runtimePath": "res://assets/hawk-of-the-fog/vfx/SFX_Trail_318.png",
+      "exportPngSHA256": "e8fa7057c3d9f2f391efc92bab5e22dcb5c3a1dd6ae0a0445c58729e8d0b5a62"
+    },
+    {
+      "name": "SFX_Particle_507",
+      "pathId": "-9199818658322584397",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+      "cab": "CAB-149548e8a4c29040c04a0d60d9b75d80",
+      "rawSHA256": "369c200e01dfc1d553f77dee1e2af4902cfdd2f98c5b6aa62a9a05c4e942d482",
+      "width": 128,
+      "height": 128,
+      "format": "DXT1",
+      "ok": true,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\hawk-of-the-fog\\vfx\\original\\textures\\SFX_Particle_507_-9199818658322584397\\SFX_Particle_507.png",
+          "sha256": "311ff3d75494b334752da4ca3ef61fa1f1869d2699eef36a0b892822759f6acc"
+        }
+      ],
+      "semantic": "particle",
+      "runtimePath": "res://assets/hawk-of-the-fog/vfx/SFX_Particle_507.png",
+      "exportPngSHA256": "311ff3d75494b334752da4ca3ef61fa1f1869d2699eef36a0b892822759f6acc"
+    },
+    {
+      "name": "Line_08",
+      "pathId": "79006037490847664",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a4d0e30ddf017f83.wmv",
+      "cab": "CAB-93c08098cd2941fb5d69bebaf4890873",
+      "rawSHA256": "8962ac8bc5d8ce7d9a5f1cd9607b07ece104afd818def324b7ac9171d985d1b2",
+      "width": 256,
+      "height": 64,
+      "format": "DXT5",
+      "ok": true,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\hawk-of-the-fog\\vfx\\original\\textures\\Line_08_79006037490847664\\Line_08.png",
+          "sha256": "568815c0ebdec1b3adee8d65e0d3e89974e82d6f3cadbac32717dbf34ecd72a6"
+        }
+      ],
+      "semantic": "line",
+      "runtimePath": "res://assets/hawk-of-the-fog/vfx/Line_08.png",
+      "exportPngSHA256": "568815c0ebdec1b3adee8d65e0d3e89974e82d6f3cadbac32717dbf34ecd72a6"
+    }
+  ],
+  "renderNotes": {
+    "lightning": "SFX_Ray_503 is a 512x512 atlas with three horizontal arcs; crop one row, use original alpha and tint RGB white/cyan. RGB in alpha-zero pixels contains irrelevant compression padding.",
+    "trail": "SFX_Trail_314 is a single horizontal gray trail; multiply with pale lightning tint.",
+    "burstTrail": "SFX_Trail_318 is a 4x2 trail flipbook atlas, not a single card.",
+    "particle": "SFX_Particle_507 has opaque alpha and black RGB background: use brightness as opacity for additive rendering.",
+    "glow": "Glow_Ball05 is white with soft native alpha, safe to tint.",
+    "smoke": "SFX_Smoke_504 has native blue gray baked RGB with alpha.",
+    "excluded": "Circle explosion-2 and Seele_Glow_504 export as constant white, excluded rather than invent a ring asset. AttackTrail_08_dianlu_1 has circuit-art RGB, excluded from thunder slash."
+  }
+}

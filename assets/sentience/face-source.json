@@ -1,0 +1,384 @@
+{
+  "schemaVersion": 1,
+  "identity": "C6_FL NewFace",
+  "texture": "Avatar_Fuka_C6_Texture_NewFace_Color.png",
+  "scale": [
+    1,
+    1
+  ],
+  "offset": [
+    0,
+    0
+  ],
+  "atlas": false,
+  "evidence": "Texture has full face UV islands with a single red iris region, and original material _MainTex_ST is identity. Expression is vertex blendshape based, not C5 UV atlas cycling.",
+  "meshes": [
+    {
+      "blendShapes": [
+        {
+          "index": 0,
+          "name": "Eyebrow_Smily",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 1,
+          "name": "Eyebrow_Shy",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 2,
+          "name": "Eyebrow_Serious",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 3,
+          "name": "Eyebrow_Trouble",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 4,
+          "name": "Eyebrow_Angry",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 5,
+          "name": "Eyebrow_Up",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 6,
+          "name": "Eyebrow_Down",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 7,
+          "name": "Eyebrow_Shy02",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 8,
+          "name": "Eyebrow_Trouble02",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 9,
+          "name": "Eyebrow_Serious_R",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 10,
+          "name": "Eyebrow_Serious_L",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 11,
+          "name": "Eyebrow_Trouble_L",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 12,
+          "name": "Eyebrow_Trouble_R",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 13,
+          "name": "Eyebrow_Angry_L",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 14,
+          "name": "Eyebrow_Angry_R",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 15,
+          "name": "Eyebrow_Smily_L",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 16,
+          "name": "Eyebrow_Smily_R",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 17,
+          "name": "Eyebrow_Shy_L",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 18,
+          "name": "Eyebrow_Shy_R",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 19,
+          "name": "Eyebrow_Up_L",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 20,
+          "name": "Eyebrow_Up_R",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 21,
+          "name": "Eyebrow_Down_L",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 22,
+          "name": "Eyebrow_Down_R",
+          "originalDefaultWeight": 0.0
+        }
+      ],
+      "hidden": false,
+      "name": "Eyebrow",
+      "path": "Avatar_Fuka_C6_FL/Skeleton3D/Eyebrow"
+    },
+    {
+      "blendShapes": [
+        {
+          "index": 0,
+          "name": "Eye_Wail",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 1,
+          "name": "Eye_Wink01_L",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 2,
+          "name": "Eye_Wink01_R",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 3,
+          "name": "Eye_Wink02_L",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 4,
+          "name": "Eye_Wink02_R",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 5,
+          "name": "Eye_Hostitlity",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 6,
+          "name": "Eye_Contempt",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 7,
+          "name": "Eye_Surprised",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 8,
+          "name": "Eye_Surprised02",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 9,
+          "name": "Eye_Surprised03",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 10,
+          "name": "Eye_Lookat_Left",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 11,
+          "name": "Eye_Lookat_Right",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 12,
+          "name": "Eye_Lookat_Top",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 13,
+          "name": "Eye_Lookat_Bottom",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 14,
+          "name": "Eye_Lookat_TopRight",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 15,
+          "name": "Eye_Lookat_TopLeft",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 16,
+          "name": "Eye_Lookat_BottomRight",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 17,
+          "name": "Eye_Lookat_BottomLeft",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 18,
+          "name": "Eye_Highlight_Down",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 19,
+          "name": "Eye_Sanbyaku",
+          "originalDefaultWeight": 0.0
+        }
+      ],
+      "hidden": false,
+      "name": "EyeShape",
+      "path": "Avatar_Fuka_C6_FL/Skeleton3D/EyeShape"
+    },
+    {
+      "blendShapes": [
+        {
+          "index": 0,
+          "name": "Mouth_A01",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 1,
+          "name": "Mouth_I01",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 2,
+          "name": "Mouth_U01",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 3,
+          "name": "Mouth_E01",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 4,
+          "name": "Mouth_O01",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 5,
+          "name": "Mouth_N01",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 6,
+          "name": "Mouth_O02",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 7,
+          "name": "Mouth_Smile01",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 8,
+          "name": "Mouth_Smile02",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 9,
+          "name": "Mouth_Smile03",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 10,
+          "name": "Mouth_Smile04",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 11,
+          "name": "Mouth_Smile05",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 12,
+          "name": "Mouth_Angry01",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 13,
+          "name": "Mouth_Angry02",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 14,
+          "name": "Mouth_Angry03",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 15,
+          "name": "Mouth_Angry04",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 16,
+          "name": "Mouth_Proud01",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 17,
+          "name": "Mouth_Proud02",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 18,
+          "name": "Mouth_Line01",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 19,
+          "name": "Mouth_Line02",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 20,
+          "name": "Tongue_Up",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 21,
+          "name": "Tongue_Down",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 22,
+          "name": "Tongue_Front",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 23,
+          "name": "Tongue_Naughty01",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 24,
+          "name": "Mouth_Triangle",
+          "originalDefaultWeight": 0.0
+        },
+        {
+          "index": 25,
+          "name": "Mouth_Hate",
+          "originalDefaultWeight": 0.0
+        }
+      ],
+      "hidden": false,
+      "name": "Face",
+      "path": "Avatar_Fuka_C6_FL/Skeleton3D/Face"
+    }
+  ],
+  "expressionState": "Model is initialized at zero blendshape weights. Native facial timing was not transferred to adapted C4 combat animations."
+}

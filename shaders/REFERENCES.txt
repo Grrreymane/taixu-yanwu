@@ -1,0 +1,70 @@
+Character rendering reconstruction, 2026-10-18
+
+Primary evidence is the installed HI3 9.1 client, read without modification:
+../hi3-fuhua-extract/exports/c5-material-reference/shader-audit/
+- Face/001-ps_4_0.asm and 022-vs_4_0.asm
+- Hair/038-ps_4_0.asm
+- AvatarGS/155-ps_4_0.asm (hard specular) and 300-ps_4_0.asm (soft specular)
+- CommonOutline/031-ps_4_0.asm and 056-ps_4_0.asm
+- globals/player-settings-decoded.json
+
+The original compiled shaders were disassembled locally with D3DDisassemble.
+shaders/native_character_math.gdshaderinc expresses the recovered ordinary-light,
+normal-weather equations in Godot's shader language. Per-appearance parameters
+and texture paths live in assets/materials/native-character-profiles.json.
+Cloud effects, custom dynamic lights and the full original postprocessing chain
+are not part of this reconstruction.
+
+Corrected assumptions from the earlier approximation:
+- Avatar_Fuka_FaceMap RGB is white, but its ALPHA contains the face shadow field.
+  The separate FaceLightMap GREEN contains bangs/face occlusion. Both are used.
+- Face direction uses original object YZ, tilted 10 degrees. Original model axes
+  are X=right, Y=up, Z=front. Current animated head basis provides those axes.
+- Body and shared outline add 0.1 to LightMap alpha before testing .2/.4/.6/.8.
+  Actual alpha boundaries are .1/.3/.5/.7. Inspector labels alone were misleading.
+- LightMap G times vertex R controls the recovered shadow selection. Body's
+  active SHADOWRAMPTEXUSED branch does not use the stored second-shadow color.
+- Specular R is intensity; B controls hard highlight width. _Specular selects
+  the soft branch, not a global enable switch. Taixu's body uses that soft branch.
+- Hair uses its own first/second shadow branch and hard specular response.
+- Body, hair and face parameters are separately loaded for all three appearances.
+- Shared outline uses UV1, independent of the body's BackFaceUseUV2 property.
+
+Color space: the original PlayerSettings m_ActiveColorSpace is 0 (Gamma), decoded
+with a matching Unity 2017.4.18f1 type tree, consuming all 599 bytes. The shipped
+Godot Compatibility/Web renderer also has OUTPUT_IS_SRGB=true. Therefore source
+colors already participate in Gamma-domain shading here; do not add a second
+linear-to-sRGB conversion. Forward+ would need a deliberate conversion adapter.
+Godot renderer documentation:
+https://docs.godotengine.org/en/latest/tutorials/shaders/shader_reference/spatial_shader.html
+
+Remaining engine adaptations:
+- Shadow masks and specular are recovered; outline extrusion is in screen pixels,
+  rather than the original distance/vertex-driven extrusion system.
+- Taixu Body restores all 8,883 original vertices and UV2 seams in an independent
+  mesh resource. UV1, positions, weights and bind interfaces are unchanged.
+  Native BackFaceUseUV2 is enabled only when actual mesh UV2 exists. The other
+  imported meshes retain UV1 when UV2 is absent, rather than sampling (0,0).
+- Face Part polygon offset is represented by a 0.0005-model-unit normal lift.
+- Unity atlas ST uses Godot's flipped V coordinates. The default quarter-height
+  face parts sample offset.y=.75. Left/right eye offsets remain distinct.
+- Character light mirrors with battle facing; full original runtime light rigs,
+  postprocessing, cloth collision and particle systems have not been reproduced.
+- Opponent color identity and impact edge flashes belong to this fighting demo.
+
+Visual checks use fixed-time, fixed-camera three-appearance comparisons in
+build/screenshots/native-material-comparison, plus actual exported Web battles.
+Reference Taixu outfit screenshot for qualitative comparison only (different
+lighting, pose, framing and compression; not pixel-equivalent ground truth):
+https://www.miyoushe.com/ys/article/65596598
+
+Earlier generic material reference, no longer used as the shading formula:
+https://github.com/festivize/Blender-miHoYo-Shaders
+That repository contains Genshin/outline Blender materials, not HI3's renderer.
+
+Battle presentation reference (Arc System Works / GDC 2015):
+https://www.ggxrd.com/Motomura_Junya_GuiltyGearXrd.pdf
+Page 20: stable independent character lighting; pages 24-25: silhouette widths;
+pages 27-29: expressive poses/composition. Timing, camera and contact emphasis
+are authored for this demo, not copied Guilty Gear parameters or animations.
+Original game models, textures and shader data belong to miHoYo.

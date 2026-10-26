@@ -1,0 +1,347 @@
+[
+	{
+		"invalidValues": 0,
+		"name": "House_All",
+		"originalLocalBounds": {
+			"position": [
+				-15.3802051544189,
+				-191.259567260742,
+				-50.9936714172363
+			],
+			"size": [
+				205.372329711914,
+				290.570739746094,
+				494.759307861328
+			]
+		},
+		"packError": 0,
+		"packedBounds": {
+			"position": [
+				-102.686164855957,
+				0.0,
+				-247.379653930664
+			],
+			"size": [
+				205.372329711914,
+				290.570739746094,
+				494.759307861328
+			]
+		},
+		"pivotOffset": [
+			-87.3059616088867,
+			191.259567260742,
+			-196.385986328125
+		],
+		"saveError": 0,
+		"scene": "res://assets/stage/native-props/House_All.scn",
+		"surfaces": [
+			{
+				"material": "Stage_TaiXu_House03_Mat",
+				"triangles": 19076,
+				"uv1": 35649,
+				"uv2": 35649,
+				"vertices": 35649
+			},
+			{
+				"material": "Stage_TaiXu_House06_Mat",
+				"triangles": 3295,
+				"uv1": 6247,
+				"uv2": 6247,
+				"vertices": 6247
+			},
+			{
+				"material": "Stage_TaiXu_House04_Mat 1",
+				"triangles": 2602,
+				"uv1": 5204,
+				"uv2": 5204,
+				"vertices": 5204
+			},
+			{
+				"material": "Stage_TaiXu_House05_Mat",
+				"triangles": 4307,
+				"uv1": 6818,
+				"uv2": 6818,
+				"vertices": 6818
+			},
+			{
+				"material": "Stage_TaiXu_House02_Mat",
+				"triangles": 2468,
+				"uv1": 4668,
+				"uv2": 4668,
+				"vertices": 4668
+			},
+			{
+				"material": "Stage_TaiXu_House01_Mat",
+				"triangles": 882,
+				"uv1": 1557,
+				"uv2": 1557,
+				"vertices": 1557
+			}
+		],
+		"triangles": 32630,
+		"vertices": 60143
+	},
+	{
+		"invalidValues": 0,
+		"name": "TempleUpper",
+		"originalLocalBounds": {
+			"position": [
+				150.164688110352,
+				6.85256814956665,
+				194.922882080078
+			],
+			"size": [
+				24.5146636962891,
+				16.3724117279053,
+				27.3399810791016
+			]
+		},
+		"packError": 0,
+		"packedBounds": {
+			"position": [
+				-12.2573394775391,
+				0.0,
+				-13.6699829101563
+			],
+			"size": [
+				24.5146636962891,
+				16.3724117279053,
+				27.3399810791016
+			]
+		},
+		"pivotOffset": [
+			-162.422027587891,
+			-6.85256814956665,
+			-208.592864990234
+		],
+		"saveError": 0,
+		"scene": "res://assets/stage/native-props/TempleUpper.scn",
+		"surfaces": [
+			{
+				"material": "Stage_TaiXu_House03_Mat",
+				"triangles": 1066,
+				"uv1": 1869,
+				"uv2": 1869,
+				"vertices": 1869
+			},
+			{
+				"material": "Stage_TaiXu_House05_Mat",
+				"triangles": 64,
+				"uv1": 84,
+				"uv2": 84,
+				"vertices": 84
+			},
+			{
+				"material": "Stage_TaiXu_House02_Mat",
+				"triangles": 108,
+				"uv1": 204,
+				"uv2": 204,
+				"vertices": 204
+			},
+			{
+				"material": "Stage_TaiXu_House01_Mat",
+				"triangles": 88,
+				"uv1": 143,
+				"uv2": 143,
+				"vertices": 143
+			}
+		],
+		"triangles": 1326,
+		"vertices": 2300
+	},
+	{
+		"invalidValues": 0,
+		"name": "BigTree",
+		"originalLocalBounds": {
+			"position": [
+				-1.98752176761627,
+				-0.150621026754379,
+				-3.90535950660706
+			],
+			"size": [
+				25.5872974395752,
+				16.9816761016846,
+				28.7115211486816
+			]
+		},
+		"packError": 0,
+		"packedBounds": {
+			"position": [
+				-12.7936487197876,
+				0.0,
+				-14.3557605743408
+			],
+			"size": [
+				25.5872974395752,
+				16.9816761016846,
+				28.7115211486816
+			]
+		},
+		"pivotOffset": [
+			-10.8061265945435,
+			0.150621026754379,
+			-10.4504013061523
+		],
+		"saveError": 0,
+		"scene": "res://assets/stage/native-props/BigTree.scn",
+		"surfaces": [
+			{
+				"material": "Stage_TaiXu_BigTree_Tunk_Mat",
+				"triangles": 2504,
+				"uv1": 1674,
+				"uv2": 1674,
+				"vertices": 1674
+			},
+			{
+				"material": "Stage_TaiXu_BigTree_Leaf_Mat",
+				"triangles": 1504,
+				"uv1": 2141,
+				"uv2": 2141,
+				"vertices": 2141
+			}
+		],
+		"triangles": 4008,
+		"vertices": 3815
+	},
+	{
+		"invalidValues": 0,
+		"name": "RockGroup",
+		"originalLocalBounds": {
+			"position": [
+				-25.43408203125,
+				-1.48996198177338,
+				-81.5786819458008
+			],
+			"size": [
+				110.616539001465,
+				17.972204208374,
+				110.764877319336
+			]
+		},
+		"packError": 0,
+		"packedBounds": {
+			"position": [
+				-55.3082695007324,
+				0.0,
+				-55.382438659668
+			],
+			"size": [
+				110.616539001465,
+				17.972204208374,
+				110.764877319336
+			]
+		},
+		"pivotOffset": [
+			-29.8741874694824,
+			1.48996198177338,
+			26.1962432861328
+		],
+		"saveError": 0,
+		"scene": "res://assets/stage/native-props/RockGroup.scn",
+		"surfaces": [
+			{
+				"material": "Stage_TaiXu_B02_Rock01_Mat",
+				"triangles": 1358,
+				"uv1": 3324,
+				"uv2": 3324,
+				"vertices": 3324
+			}
+		],
+		"triangles": 1358,
+		"vertices": 3324
+	},
+	{
+		"invalidValues": 0,
+		"name": "StonePlatform",
+		"originalLocalBounds": {
+			"position": [
+				-1.93651390075684,
+				-3.42544555664063,
+				-0.626699566841125
+			],
+			"size": [
+				3.87302780151367,
+				6.85089111328125,
+				2.25976705551147
+			]
+		},
+		"packError": 0,
+		"packedBounds": {
+			"position": [
+				-1.93651390075684,
+				0.0,
+				-1.12988352775574
+			],
+			"size": [
+				3.87302780151367,
+				6.85089111328125,
+				2.25976705551147
+			]
+		},
+		"pivotOffset": [
+			0.0,
+			3.42544555664063,
+			-0.503183960914612
+		],
+		"saveError": 0,
+		"scene": "res://assets/stage/native-props/StonePlatform.scn",
+		"surfaces": [
+			{
+				"material": "Stage_TaiXu_Props05_Mat",
+				"triangles": 983,
+				"uv1": 1133,
+				"uv2": 1133,
+				"vertices": 1133
+			}
+		],
+		"triangles": 983,
+		"vertices": 1133
+	},
+	{
+		"invalidValues": 0,
+		"name": "StoneFloor",
+		"originalLocalBounds": {
+			"position": [
+				-33.0429191589355,
+				-0.254084467887878,
+				-88.2441940307617
+			],
+			"size": [
+				129.6474609375,
+				13.8722829818726,
+				104.988098144531
+			]
+		},
+		"packError": 0,
+		"packedBounds": {
+			"position": [
+				-64.82373046875,
+				0.0,
+				-52.4940490722656
+			],
+			"size": [
+				129.6474609375,
+				13.8722829818726,
+				104.988098144531
+			]
+		},
+		"pivotOffset": [
+			-31.7808113098145,
+			0.254084467887878,
+			35.7501449584961
+		],
+		"saveError": 0,
+		"scene": "res://assets/stage/native-props/StoneFloor.scn",
+		"surfaces": [
+			{
+				"material": "Stage_TaiXu_B02_Floor02_Mat",
+				"triangles": 10604,
+				"uv1": 12855,
+				"uv2": 12855,
+				"vertices": 12855
+			}
+		],
+		"triangles": 10604,
+		"vertices": 12855
+	}
+]

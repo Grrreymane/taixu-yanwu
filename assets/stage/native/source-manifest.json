@@ -1,0 +1,409 @@
+{
+  "game": "Honkai Impact 3rd 9.1.0",
+  "sourceReadOnly": true,
+  "sourcePrefabs": [
+    "assets/asbres/stage/stage_taixu/stage_taixu_b.prefab",
+    "assets/asbres/stage/stage_taixu/stage_taixu_c.prefab"
+  ],
+  "pngsUnmodified": true,
+  "excluded": [
+    "Stage_TaiXu_Road is an RGB terrain layer control map with zero alpha, NOT stone albedo.",
+    "Stage_TaiXu_B02_Floor01_M_Tex is also a control mask."
+  ],
+  "assets": [
+    {
+      "file": "Stage_TaiXu_Grass03_Tex.png",
+      "path": "res://assets/stage/native/Stage_TaiXu_Grass03_Tex.png",
+      "usage": "Mossy stone paving; actual Taixu road color layer _Splat2Tex, not grass-only despite name. Repeatable surface texture.",
+      "width": 512,
+      "height": 512,
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "alphaCoverage": 1.0,
+      "recommendedTransparency": "opaque; ignore source alpha",
+      "mipmapsGenerate": true,
+      "sha256": "92ea30597eca8bdc411fceec3a9e133f6927b1465601f3f71f03dda9adda866d",
+      "sourcePackage": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\0af013573b1175f2.wmv",
+      "sourceCab": "CAB-2290bdf802c0d2ceef3291041719476f",
+      "sourcePathId": "4812954355986112055",
+      "sourceRawSHA256": "3b2c0d23bde73bc4d16c9e31231f35e14507ce526a8b3721384a5224683fe7fe",
+      "originalExport": "../hi3-fuhua-extract\\exports\\taixu-environment\\floor-probe\\textures\\Stage_TaiXu_Grass03_Tex_4812954355986112055\\Stage_TaiXu_Grass03_Tex.png",
+      "materials": [
+        {
+          "material": "Stage_TaiXu_Road_Mat",
+          "textureSlots": [
+            {
+              "slot": "_Splat2Tex",
+              "scale": {
+                "X": 10,
+                "Y": 10
+              },
+              "offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          ]
+        },
+        {
+          "material": "Stage_TaiXu_B01_Road_01_Mat",
+          "textureSlots": [
+            {
+              "slot": "_Splat2Tex",
+              "scale": {
+                "X": 2,
+                "Y": 2
+              },
+              "offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          ]
+        },
+        {
+          "material": "Stage_TaiXu_B02_Floor01_Mat",
+          "textureSlots": [
+            {
+              "slot": "_Splat1Tex",
+              "scale": {
+                "X": 10,
+                "Y": 10
+              },
+              "offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          ]
+        },
+        {
+          "material": "Stage_TaiXu_FarStone_01_Mat",
+          "textureSlots": [
+            {
+              "slot": "_Splat2Tex",
+              "scale": {
+                "X": 18,
+                "Y": 18
+              },
+              "offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          ]
+        },
+        {
+          "material": "Stage_TaiXu_FarStone_02_Mat",
+          "textureSlots": [
+            {
+              "slot": "_Splat2Tex",
+              "scale": {
+                "X": 10,
+                "Y": 10
+              },
+              "offset": {
+                "X": -0.5,
+                "Y": -0.5
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "Stage_TaiXu_Props02_Tex.png",
+      "path": "res://assets/stage/native/Stage_TaiXu_Props02_Tex.png",
+      "usage": "Stone wall, steps and border atlas; use selected UV region, not the complete atlas as a repeated wall. Top-left quadrant is dark masonry, top-right quadrant pale masonry.",
+      "width": 1024,
+      "height": 1024,
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "alphaCoverage": 1.0,
+      "recommendedTransparency": "opaque; ignore source alpha",
+      "mipmapsGenerate": true,
+      "sha256": "87c4e1df97c62fd32ab06cb0183f6c946c4a38b7d3219f1c292522bb193cca28",
+      "sourcePackage": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\85ad5986cf261b35.wmv",
+      "sourceCab": "CAB-ef8d6ab5bae21eef46411427102c7adf",
+      "sourcePathId": "7458669679360261690",
+      "sourceRawSHA256": "8e63b6aa8a4835880c06936dae9bc7a039154fcfbc23a4d22a106be8d42c0f20",
+      "originalExport": "../hi3-fuhua-extract\\exports\\taixu-environment\\original\\textures\\Stage_TaiXu_Props02_Tex_7458669679360261690\\Stage_TaiXu_Props02_Tex.png",
+      "materials": [
+        {
+          "material": "Stage_TaiXu_Props02_Mat",
+          "textureSlots": [
+            {
+              "slot": "_MainTex",
+              "scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          ]
+        },
+        {
+          "material": "Stage_TaiXu_Props03_Mat",
+          "textureSlots": [
+            {
+              "slot": "_MainTex",
+              "scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          ]
+        },
+        {
+          "material": "Stage_TaiXu_Props04_Mat",
+          "textureSlots": [
+            {
+              "slot": "_MainTex",
+              "scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          ]
+        },
+        {
+          "material": "Stage_TaiXu_Props05_Mat",
+          "textureSlots": [
+            {
+              "slot": "_MainTex",
+              "scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          ]
+        },
+        {
+          "material": "Stage_TaiXu_Props06_Mat",
+          "textureSlots": [
+            {
+              "slot": "_MainTex",
+              "scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "Stage_TaiXu_house02_Tex.png",
+      "path": "res://assets/stage/native/Stage_TaiXu_house02_Tex.png",
+      "usage": "Blue-gray roof tiles. Opaque and repeatable.",
+      "width": 512,
+      "height": 512,
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "alphaCoverage": 1.0,
+      "recommendedTransparency": "opaque; ignore source alpha",
+      "mipmapsGenerate": true,
+      "sha256": "1201e66fdb8eaff0417f93fc8e6d931d1c4243bd40f3b6cfab35a77042a88c13",
+      "sourcePackage": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\85ad5986cf261b35.wmv",
+      "sourceCab": "CAB-476e1550217f903878f3b0a96047b371",
+      "sourcePathId": "1232263861854858967",
+      "sourceRawSHA256": "d53d05026ef908ac8f8bbfc032a30fd8c37c4a113b5ff01cb8c47c06c1501962",
+      "originalExport": "../hi3-fuhua-extract\\exports\\taixu-environment\\original\\textures\\Stage_TaiXu_house02_Tex_1232263861854858967\\Stage_TaiXu_house02_Tex.png",
+      "materials": [
+        {
+          "material": "Stage_TaiXu_House01_Mat",
+          "textureSlots": [
+            {
+              "slot": "_MainTex",
+              "scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "offset": {
+                "X": 0,
+                "Y": 0
+              }
+            },
+            {
+              "slot": "_MatcapMaskMap",
+              "scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "Stage_TaiXu_house04_Tex.png",
+      "path": "res://assets/stage/native/Stage_TaiXu_house04_Tex.png",
+      "usage": "Weathered wood planks. Opaque and repeatable.",
+      "width": 512,
+      "height": 512,
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "alphaCoverage": 1.0,
+      "recommendedTransparency": "opaque; ignore source alpha",
+      "mipmapsGenerate": true,
+      "sha256": "6df18e8db103ebe64f4db0337ae3c37c654ef08adb5fc02973736bc710936771",
+      "sourcePackage": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\85ad5986cf261b35.wmv",
+      "sourceCab": "CAB-fea1970b73ae61c663d622d1d73370c3",
+      "sourcePathId": "-6002494556944689536",
+      "sourceRawSHA256": "58eb247e8e9b6cdcfa171bdc1e0605a52aac54f809047d5665e9bbbbf1bea75b",
+      "originalExport": "../hi3-fuhua-extract\\exports\\taixu-environment\\original\\textures\\Stage_TaiXu_house04_Tex_-6002494556944689536\\Stage_TaiXu_house04_Tex.png",
+      "materials": [
+        {
+          "material": "Stage_TaiXu_House06_Mat",
+          "textureSlots": [
+            {
+              "slot": "_MainTex",
+              "scale": {
+                "X": 1.6,
+                "Y": 1
+              },
+              "offset": {
+                "X": 0,
+                "Y": 0
+              }
+            },
+            {
+              "slot": "_MatcapMaskMap",
+              "scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "Stage_TaiXu_C_FarMountain_Tex.png",
+      "path": "res://assets/stage/native/Stage_TaiXu_C_FarMountain_Tex.png",
+      "usage": "Four transparent far-mountain silhouettes side by side. Use quarter-width UV selections; preserve alpha.",
+      "width": 1024,
+      "height": 256,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaCoverage": 0.4847,
+      "recommendedTransparency": "alpha cutout or alpha blend",
+      "mipmapsGenerate": true,
+      "sha256": "b00a784cf3e34c1196ca5b9806745d7b08af4689704b93ea55801f38a651d70e",
+      "sourcePackage": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\85ad5986cf261b35.wmv",
+      "sourceCab": "CAB-8c66985b6547414d71f18a43d1d9e37a",
+      "sourcePathId": "3963452742361735032",
+      "sourceRawSHA256": "d6efde6967d92a310a2c5821b620f66feadc0cc0fe5274f6c92cc27237519f15",
+      "originalExport": "../hi3-fuhua-extract\\exports\\taixu-environment\\original\\textures\\Stage_TaiXu_C_FarMountain_Tex_3963452742361735032\\Stage_TaiXu_C_FarMountain_Tex.png",
+      "materials": [
+        {
+          "material": "Stage_TaiXu_C_FarMountain_Mat",
+          "textureSlots": [
+            {
+              "slot": "_MainTex",
+              "scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "Stage_TaiXu_Leaf_Tex.png",
+      "path": "res://assets/stage/native/Stage_TaiXu_Leaf_Tex.png",
+      "usage": "Transparent foliage atlas, crowns in the top half and grasses in the bottom half. Use selected UV region; preserve alpha.",
+      "width": 512,
+      "height": 512,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaCoverage": 0.3086,
+      "recommendedTransparency": "alpha cutout or alpha blend",
+      "mipmapsGenerate": true,
+      "sha256": "56f094b894fd75d131aa65f6cf4602b53dde3948bd7fefdab41e35abaa5453fa",
+      "sourcePackage": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\85ad5986cf261b35.wmv",
+      "sourceCab": "CAB-b5b44ec852f0683ef0dcf2c348475f27",
+      "sourcePathId": "-7545496491270104358",
+      "sourceRawSHA256": "d408870873f8397f433569f008d643bccd44f81f99e3a11b4c9b7b17ecb18b84",
+      "originalExport": "../hi3-fuhua-extract\\exports\\taixu-environment\\original\\textures\\Stage_TaiXu_Leaf_Tex_-7545496491270104358\\Stage_TaiXu_Leaf_Tex.png",
+      "materials": [
+        {
+          "material": "Stage_Taixu_Leaf01_Mat",
+          "textureSlots": [
+            {
+              "slot": "_MainTex",
+              "scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          ]
+        },
+        {
+          "material": "Stage_Taixu_Leaf02_Mat",
+          "textureSlots": [
+            {
+              "slot": "_MainTex",
+              "scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

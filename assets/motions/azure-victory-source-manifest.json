@@ -1,0 +1,330 @@
+{
+  "schemaVersion": 1,
+  "recordedAtUtc": "2026-10-18T05:06:20.027320+00:00",
+  "description": "Native Fu Hua C5 / Azure Empyrea victory body motion and matching idle; compatible with the existing Godot C5 model. No new character model or textures are bundled.",
+  "sourceGame": "Honkai Impact 3rd, installed client 9.1.0",
+  "sourceFilesModified": false,
+  "sourceFbx": {
+    "path": "../hi3-fuhua-extract\\exports\\fuka-c5-full\\FBX\\a303f703da40756b\\-8681997045896087424\\Avatar_Fuka_C5_IN.fbx",
+    "bytes": 126613744,
+    "sha256": "9b93994250399312b5112a381570f90880bb9de6a79618561d0bd642d3825aea"
+  },
+  "runtimeAsset": {
+    "path": "assets/motions/azure-victory.res",
+    "type": "AnimationLibrary",
+    "bytes": 309144,
+    "sha256": "618c8ee91a00ce6650420f21b95f99bb44d82c8947cba9b2e4903d263c471b95"
+  },
+  "integration": {
+    "animationPlayerRoot": "..",
+    "skeletonPath": "Avatar_Fuka_C5_IN/Skeleton3D",
+    "boneCount": 153,
+    "clipNames": [
+      "Victory",
+      "VictoryIdle"
+    ],
+    "recommendedLibraryName": "victory",
+    "playNamesIfUsingRecommendedLibrary": [
+      "victory/Victory",
+      "victory/VictoryIdle"
+    ],
+    "victoryDurationSeconds": 3.8,
+    "idleDurationSeconds": 2.016666666666667,
+    "idleLoops": true,
+    "requiresNewModel": false,
+    "requiresNewMaterials": false
+  },
+  "processing": {
+    "importer": "Godot 4.7.2 FBXDocument/FBXState, headless",
+    "sampleRate": 30,
+    "originalMotionPreserved": true,
+    "retargeted": false,
+    "sourceTakeRangesRestored": true,
+    "details": "Extracted two matching-skeleton animation takes, remapped paths to the existing model, restored the FBX-declared take duration (including its final 1/60 s sample interval), removed padding after that interval, and compressed the Godot resource. No motion time scaling or gesture replacement."
+  },
+  "facialAnimation": {
+    "includedInLibrary": false,
+    "nativeTrigger": "TriggerFaceAnimation: IN_Fuka_Winning",
+    "nativeTriggerTimeSeconds": 0.018916667,
+    "evidence": "Victory Unity AnimationClip event. Its exported float curves contain only RootT/RootQ/MotionT/MotionQ. FBX/Godot tracks contain body/helper transforms, no eye/mouth atlas tracks.",
+    "status": "Separate facial driver data was not present in the existing compact extraction indices; no further broad scan was performed. Keep the current default facial material unless an independently implemented presentation is explicitly labeled."
+  },
+  "clips": [
+    {
+      "clipName": "Avatar_Fuka_Ani_C5_Victory",
+      "sourceAssetPath": "assets/asbres/entities/avatar/fuka_c5_in/_dependencies/animation/avatar_fuka_ani_c5_victory.fbx",
+      "sourceBlock": "7c562b6ee355f448.wmv",
+      "serializedFile": "CAB-d21fab9542560f9b2abe4363003801b2",
+      "pathId": "5213439917471479696",
+      "isIndexPreferredVariant": true,
+      "runtimeName": "Victory",
+      "rawUnityClip": "../hi3-fuhua-extract\\exports\\c5-victory-original\\decoded\\AnimationClip\\7c562b6ee355f448\\5213439917471479696\\Avatar_Fuka_Ani_C5_Victory.anim",
+      "rawSha256": "816f34e9c05427370fb2fad640e29bf238f977de8cdad98d2cf61338707b077e",
+      "nativeStopTime": 3.7833333,
+      "nativeSampleRate": 60.0,
+      "floatCurveAttributes": [
+        "RootT.x",
+        "RootT.y",
+        "RootT.z",
+        "RootQ.x",
+        "RootQ.y",
+        "RootQ.z",
+        "RootQ.w",
+        "MotionT.x",
+        "MotionT.y",
+        "MotionT.z",
+        "MotionQ.x",
+        "MotionQ.y",
+        "MotionQ.z",
+        "MotionQ.w"
+      ],
+      "nativeEventsNotAutomaticallyPlayed": [
+        {
+          "timeSeconds": 0.0,
+          "functionName": "TriggerEffectPattern",
+          "data": "Avatar_Common_FX_End_Shadow"
+        },
+        {
+          "timeSeconds": 0.018916667,
+          "functionName": "TriggerFaceAnimation",
+          "data": "IN_Fuka_Winning"
+        },
+        {
+          "timeSeconds": 0.018916667,
+          "functionName": "TriggerEffectPattern",
+          "data": "Avatar_Fuka_IN_Victory_FX"
+        },
+        {
+          "timeSeconds": 0.61668336,
+          "functionName": "TriggerAudioPattern",
+          "data": "VO_L_Fuk_C5_Victory"
+        },
+        {
+          "timeSeconds": 2.3381,
+          "functionName": "TriggerAudioPattern",
+          "data": "Avatar_Fuka_IN_Victory"
+        }
+      ],
+      "godot": {
+        "length": 3.8,
+        "loopMode": 0,
+        "maxBoneDistance": 1.93753957748413,
+        "name": "Victory",
+        "poseSamples": 229,
+        "rightHandHalfSecondSamples": [
+          [
+            0.149764463305473,
+            1.09077310562134,
+            0.392725706100464
+          ],
+          [
+            0.149676859378815,
+            1.09087872505188,
+            0.38809734582901
+          ],
+          [
+            0.1556636095047,
+            1.09290945529938,
+            0.238549709320068
+          ],
+          [
+            0.154193833470345,
+            1.09076619148254,
+            0.0754792392253876
+          ],
+          [
+            0.180351436138153,
+            1.09671020507813,
+            -0.0624175891280174
+          ],
+          [
+            0.195753112435341,
+            1.12518608570099,
+            -0.148191571235657
+          ],
+          [
+            0.151977881789207,
+            1.13048648834229,
+            -0.164908230304718
+          ],
+          [
+            0.140253290534019,
+            1.12722218036652,
+            -0.168453991413116
+          ]
+        ],
+        "tracks": 144,
+        "unresolvedTargetPaths": 0,
+        "validFiniteKeys": 13702
+      }
+    },
+    {
+      "clipName": "Avatar_Fuka_Ani_C5_VictoryIdle",
+      "sourceAssetPath": "assets/asbres/entities/avatar/fuka_c5_in/_dependencies/animation/avatar_fuka_ani_c5_victoryidle.fbx",
+      "sourceBlock": "7c562b6ee355f448.wmv",
+      "serializedFile": "CAB-b314c07fe4ccba68d57c11c188a77487",
+      "pathId": "5838293750631592130",
+      "isIndexPreferredVariant": true,
+      "runtimeName": "VictoryIdle",
+      "rawUnityClip": "../hi3-fuhua-extract\\exports\\c5-victory-original\\decoded\\AnimationClip\\7c562b6ee355f448\\5838293750631592130\\Avatar_Fuka_Ani_C5_VictoryIdle.anim",
+      "rawSha256": "2dc2649e3a2c09ce6111f5c336b34c10e925303478fa208d0edc387f860c7d66",
+      "nativeStopTime": 2.0,
+      "nativeSampleRate": 60.0,
+      "floatCurveAttributes": [
+        "MotionT.x",
+        "MotionT.y",
+        "MotionT.z",
+        "MotionQ.x",
+        "MotionQ.y",
+        "MotionQ.z",
+        "MotionQ.w",
+        "RootT.x",
+        "RootT.y",
+        "RootT.z",
+        "RootQ.x",
+        "RootQ.y",
+        "RootQ.z",
+        "RootQ.w"
+      ],
+      "nativeEventsNotAutomaticallyPlayed": [],
+      "godot": {
+        "length": 2.01666666666667,
+        "loopMode": 1,
+        "maxBoneDistance": 1.84872221946716,
+        "name": "VictoryIdle",
+        "poseSamples": 123,
+        "rightHandHalfSecondSamples": [
+          [
+            0.144538551568985,
+            1.12627601623535,
+            -0.169199347496033
+          ],
+          [
+            0.139923050999641,
+            1.12886655330658,
+            -0.168308198451996
+          ],
+          [
+            0.137285619974136,
+            1.12979376316071,
+            -0.168848261237144
+          ],
+          [
+            0.141510725021362,
+            1.12717640399933,
+            -0.170566409826279
+          ],
+          [
+            0.144537672400475,
+            1.12627553939819,
+            -0.16920131444931
+          ]
+        ],
+        "tracks": 140,
+        "unresolvedTargetPaths": 0,
+        "validFiniteKeys": 6445
+      }
+    }
+  ],
+  "verification": {
+    "boneCount": 153,
+    "browserUsed": false,
+    "clips": [
+      {
+        "length": 3.8,
+        "loopMode": 0,
+        "maxBoneDistance": 1.93753957748413,
+        "name": "Victory",
+        "poseSamples": 229,
+        "rightHandHalfSecondSamples": [
+          [
+            0.149764463305473,
+            1.09077310562134,
+            0.392725706100464
+          ],
+          [
+            0.149676859378815,
+            1.09087872505188,
+            0.38809734582901
+          ],
+          [
+            0.1556636095047,
+            1.09290945529938,
+            0.238549709320068
+          ],
+          [
+            0.154193833470345,
+            1.09076619148254,
+            0.0754792392253876
+          ],
+          [
+            0.180351436138153,
+            1.09671020507813,
+            -0.0624175891280174
+          ],
+          [
+            0.195753112435341,
+            1.12518608570099,
+            -0.148191571235657
+          ],
+          [
+            0.151977881789207,
+            1.13048648834229,
+            -0.164908230304718
+          ],
+          [
+            0.140253290534019,
+            1.12722218036652,
+            -0.168453991413116
+          ]
+        ],
+        "tracks": 144,
+        "unresolvedTargetPaths": 0,
+        "validFiniteKeys": 13702
+      },
+      {
+        "length": 2.01666666666667,
+        "loopMode": 1,
+        "maxBoneDistance": 1.84872221946716,
+        "name": "VictoryIdle",
+        "poseSamples": 123,
+        "rightHandHalfSecondSamples": [
+          [
+            0.144538551568985,
+            1.12627601623535,
+            -0.169199347496033
+          ],
+          [
+            0.139923050999641,
+            1.12886655330658,
+            -0.168308198451996
+          ],
+          [
+            0.137285619974136,
+            1.12979376316071,
+            -0.168848261237144
+          ],
+          [
+            0.141510725021362,
+            1.12717640399933,
+            -0.170566409826279
+          ],
+          [
+            0.144537672400475,
+            1.12627553939819,
+            -0.16920131444931
+          ]
+        ],
+        "tracks": 140,
+        "unresolvedTargetPaths": 0,
+        "validFiniteKeys": 6445
+      }
+    ],
+    "gpuUsed": false,
+    "pass": true
+  },
+  "limitations": [
+    "Headless target-path, key-finiteness and pose-sampling tests are complete; this asset task did not run GPU or browser rendering.",
+    "Original facial animation, victory particle events and voice events are recorded but are not embedded or automatically played by this body animation library."
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "source": "User-installed Honkai Impact 3 client, InLevelMainPage battle UI dependency",
+  "cab": "CAB-c62fab912cd6f9d8dbacf0a74da532bb",
+  "files": {
+    "hi3-icon-pause.png": "IconPause Sprite",
+    "hi3-icon-skill.png": "IconSkill Sprite"
+  },
+  "usage": "Local fan-game prototype UI; source pixels retained. The skill icon is tinted orange in Godot."
+}

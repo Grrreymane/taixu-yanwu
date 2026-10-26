@@ -1,0 +1,1125 @@
+{
+  "schemaVersion": 1,
+  "source": "Original prefab materials; Godot shader adaptation.",
+  "profiles": {
+    "shadow_knight": {
+      "body": {
+        "sourceMaterial": "Avatar_Fuka_C2_Material_Body",
+        "source": {
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a303f703da40756b.wmv",
+          "serializedFile": "CAB-2299974576f1c05bbd4ed5515e6e8e72",
+          "pathId": "6807827435894696353",
+          "shader": {
+            "fileId": 1,
+            "pathId": "-639400686301036128"
+          }
+        },
+        "textures": {
+          "albedo": "res://assets/shadow-knight/Avatar_Fuka_C2_Texture_Body_Color_New.png",
+          "lightmap": "res://assets/shadow-knight/Avatar_Fuka_C2_Texture_Body_LightMap_New.png"
+        },
+        "firstShadowColors": [
+          [
+            0.6246756,
+            0.62589484,
+            0.8014706
+          ],
+          [
+            0.6246756,
+            0.62589484,
+            0.8014706
+          ],
+          [
+            0.6246756,
+            0.62589484,
+            0.8014706
+          ],
+          [
+            0.6246756,
+            0.62589484,
+            0.8014706
+          ],
+          [
+            0.6246756,
+            0.62589484,
+            0.8014706
+          ]
+        ],
+        "secondShadowColor": [
+          0.6246756,
+          0.62589484,
+          0.8014706
+        ],
+        "outlineColors": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "useAlphaBands": false,
+        "useOutlineAlphaBands": false,
+        "specularSoft": false,
+        "backFaceUseUv2": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "specColor": [
+          1,
+          1,
+          1
+        ],
+        "specularSmooth": 0.04,
+        "lightArea": 0.51,
+        "secondShadowArea": 0.51,
+        "shininess": 10,
+        "specMulti": 0.25,
+        "outlineWidth": 0.04,
+        "outlineScale": 0.01,
+        "maxOutlineZOffset": 1,
+        "emission": 1.2,
+        "emissionColor": [
+          0.42039296,
+          0.32082614,
+          0.9485294
+        ]
+      },
+      "native_1": {
+        "sourceMaterial": "Avatar_Fuka_C2_Material_BodySkin_New",
+        "source": {
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\c5808965df75be44.wmv",
+          "serializedFile": "CAB-63d91729cdecc2450f5a3853663291fb",
+          "pathId": "1418411180358754221",
+          "shader": {
+            "fileId": 1,
+            "pathId": "-639400686301036128"
+          }
+        },
+        "textures": {
+          "albedo": "res://assets/shadow-knight/Avatar_Fuka_C2_Texture_Body_Color_New.png",
+          "lightmap": "res://assets/shadow-knight/Avatar_Fuka_C2_Texture_Body_LightMap_New.png"
+        },
+        "firstShadowColors": [
+          [
+            0.6246756,
+            0.62589484,
+            0.8014706
+          ],
+          [
+            0.6246756,
+            0.62589484,
+            0.8014706
+          ],
+          [
+            0.6246756,
+            0.62589484,
+            0.8014706
+          ],
+          [
+            0.6246756,
+            0.62589484,
+            0.8014706
+          ],
+          [
+            0.6246756,
+            0.62589484,
+            0.8014706
+          ]
+        ],
+        "secondShadowColor": [
+          0.6246756,
+          0.62589484,
+          0.8014706
+        ],
+        "outlineColors": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "useAlphaBands": false,
+        "useOutlineAlphaBands": false,
+        "specularSoft": false,
+        "backFaceUseUv2": false,
+        "color": [
+          0.3529412,
+          0.32941177,
+          0.32156864
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "specColor": [
+          1,
+          1,
+          1
+        ],
+        "specularSmooth": 0.04,
+        "lightArea": 0.51,
+        "secondShadowArea": 0.51,
+        "shininess": 10,
+        "specMulti": 0.25,
+        "outlineWidth": 0.04,
+        "outlineScale": 0.01,
+        "maxOutlineZOffset": 1,
+        "emission": 1,
+        "emissionColor": [
+          1,
+          1,
+          1
+        ]
+      },
+      "native_2": {
+        "sourceMaterial": "Avatar_Fuka_C2_Material_Body_Ultra",
+        "source": {
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a303f703da40756b.wmv",
+          "serializedFile": "CAB-dfaed884409dc16fc0d74cd297641a7a",
+          "pathId": "-2624217698708987554",
+          "shader": {
+            "fileId": 1,
+            "pathId": "-639400686301036128"
+          }
+        },
+        "textures": {
+          "albedo": "res://assets/shadow-knight/Avatar_Fuka_C2_Texture_Body_Color_New.png",
+          "lightmap": "res://assets/shadow-knight/Avatar_Fuka_C2_Texture_Body_LightMap_New.png"
+        },
+        "firstShadowColors": [
+          [
+            0.6246756,
+            0.62589484,
+            0.8014706
+          ],
+          [
+            0.6246756,
+            0.62589484,
+            0.8014706
+          ],
+          [
+            0.6246756,
+            0.62589484,
+            0.8014706
+          ],
+          [
+            0.6246756,
+            0.62589484,
+            0.8014706
+          ],
+          [
+            0.6246756,
+            0.62589484,
+            0.8014706
+          ]
+        ],
+        "secondShadowColor": [
+          0.6246756,
+          0.62589484,
+          0.8014706
+        ],
+        "outlineColors": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "useAlphaBands": false,
+        "useOutlineAlphaBands": false,
+        "specularSoft": false,
+        "backFaceUseUv2": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "specColor": [
+          1,
+          1,
+          1
+        ],
+        "specularSmooth": 0.04,
+        "lightArea": 0.51,
+        "secondShadowArea": 0.51,
+        "shininess": 10,
+        "specMulti": 0.25,
+        "outlineWidth": 0.04,
+        "outlineScale": 0.01,
+        "maxOutlineZOffset": 0,
+        "emission": 4,
+        "emissionColor": [
+          0.8897059,
+          0.20158245,
+          0.08504539
+        ]
+      },
+      "native_3": {
+        "sourceMaterial": "Avatar_Fuka_C2_Material_Gray_New",
+        "source": {
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\31d6e08389ae9a98.wmv",
+          "serializedFile": "CAB-5e222f00877a6b3669c9decdea84fc9a",
+          "pathId": "4176909804400374306",
+          "shader": {
+            "fileId": 1,
+            "pathId": "-639400686301036128"
+          }
+        },
+        "textures": {
+          "albedo": "res://assets/shadow-knight/Avatar_Fuka_C2_Texture_Body_Color_New.png",
+          "lightmap": "res://assets/shadow-knight/Avatar_Fuka_C2_Texture_Body_LightMap_New.png"
+        },
+        "firstShadowColors": [
+          [
+            0.6246756,
+            0.62589484,
+            0.8014706
+          ],
+          [
+            0.6246756,
+            0.62589484,
+            0.8014706
+          ],
+          [
+            0.6246756,
+            0.62589484,
+            0.8014706
+          ],
+          [
+            0.6246756,
+            0.62589484,
+            0.8014706
+          ],
+          [
+            0.6246756,
+            0.62589484,
+            0.8014706
+          ]
+        ],
+        "secondShadowColor": [
+          0.6246756,
+          0.62589484,
+          0.8014706
+        ],
+        "outlineColors": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "useAlphaBands": false,
+        "useOutlineAlphaBands": false,
+        "specularSoft": false,
+        "backFaceUseUv2": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "specColor": [
+          1,
+          1,
+          1
+        ],
+        "specularSmooth": 0.04,
+        "lightArea": 0.51,
+        "secondShadowArea": 0.51,
+        "shininess": 10,
+        "specMulti": 0.25,
+        "outlineWidth": 0.04,
+        "outlineScale": 0.01,
+        "maxOutlineZOffset": 1,
+        "emission": 1,
+        "emissionColor": [
+          0.36078432,
+          0.3647059,
+          0.40784317
+        ]
+      },
+      "native_4": {
+        "sourceMaterial": "Avatar_Fuka_C2_Material_Skin",
+        "source": {
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a303f703da40756b.wmv",
+          "serializedFile": "CAB-905aebe00e2c4c95dc85737629c5c312",
+          "pathId": "-8586123412607952172",
+          "shader": {
+            "fileId": 1,
+            "pathId": "84480072165628607"
+          }
+        },
+        "textures": {
+          "albedo": "res://assets/shadow-knight/Avatar_Fuka_C2_Texture_Body_Color_New.png",
+          "lightmap": "res://assets/shadow-knight/Avatar_Fuka_C2_Texture_Body_LightMap_New.png"
+        },
+        "firstShadowColors": [
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ]
+        ],
+        "secondShadowColor": [
+          0.9372549,
+          0.7647059,
+          0.78039217
+        ],
+        "outlineColors": [
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ]
+        ],
+        "useAlphaBands": false,
+        "useOutlineAlphaBands": false,
+        "specularSoft": false,
+        "backFaceUseUv2": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "specColor": [
+          1,
+          1,
+          1
+        ],
+        "specularSmooth": 0.04,
+        "lightArea": 0.51,
+        "secondShadowArea": 0.51,
+        "shininess": 10,
+        "specMulti": 0.2,
+        "outlineWidth": 0.04,
+        "outlineScale": 0.01,
+        "maxOutlineZOffset": 1
+      },
+      "native_5": {
+        "sourceMaterial": "Avatar_Fuka_Left_Eye",
+        "source": {
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\2a9cd0db7461adce.wmv",
+          "serializedFile": "CAB-296df02b44ecc4186e85c76b245a9b0f",
+          "pathId": "878048587806463636",
+          "shader": {
+            "fileId": 1,
+            "pathId": "7611511129886886146"
+          }
+        },
+        "textures": {
+          "albedo": "res://assets/shadow-knight/1.png"
+        },
+        "firstShadowColors": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "secondShadowColor": [
+          1,
+          1,
+          1
+        ],
+        "outlineColors": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "useAlphaBands": false,
+        "useOutlineAlphaBands": false,
+        "specularSoft": false,
+        "backFaceUseUv2": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "specColor": [
+          1,
+          1,
+          1
+        ],
+        "specularSmooth": 0.04
+      },
+      "face": {
+        "sourceMaterial": "Avatar_Fuka_Material_Face",
+        "source": {
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\c5808965df75be44.wmv",
+          "serializedFile": "CAB-a88474f3ab10509ef10b522c75c494b6",
+          "pathId": "-5340648037747909520",
+          "shader": {
+            "fileId": 1,
+            "pathId": "8679466564415281629"
+          }
+        },
+        "textures": {
+          "albedo": "res://assets/shadow-knight/Avatar_Fuka_Texture_Face_Color.png",
+          "lightmap": "res://assets/shadow-knight/Avatar_Fuka_Texture_Face_LightMap.png",
+          "faceMap": "res://assets/shadow-knight/Avatar_Fuka_FaceMap.png"
+        },
+        "firstShadowColors": [
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ]
+        ],
+        "secondShadowColor": [
+          0.9372549,
+          0.7647059,
+          0.78039217
+        ],
+        "outlineColors": [
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ]
+        ],
+        "useAlphaBands": false,
+        "useOutlineAlphaBands": false,
+        "specularSoft": false,
+        "backFaceUseUv2": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "specColor": [
+          1,
+          1,
+          1
+        ],
+        "specularSmooth": 0.04,
+        "outlineWidth": 0.05,
+        "outlineScale": 0.01,
+        "shadowFeather": 0.001,
+        "maxOutlineZOffset": 1
+      },
+      "hair": {
+        "sourceMaterial": "Avatar_Fuka_Material_Hair",
+        "source": {
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\2a9cd0db7461adce.wmv",
+          "serializedFile": "CAB-943f8848a9f0f5ae890fc859fb30ec73",
+          "pathId": "-6208462217947000843",
+          "shader": {
+            "fileId": 1,
+            "pathId": "84480072165628607"
+          }
+        },
+        "textures": {
+          "albedo": "res://assets/shadow-knight/Avatar_Fuka_Texture_Hair_Color.png",
+          "lightmap": "res://assets/shadow-knight/Avatar_Fuka_Texture_Hair_LightMap.png"
+        },
+        "firstShadowColors": [
+          [
+            0.83975667,
+            0.7915225,
+            0.88235295
+          ],
+          [
+            0.83975667,
+            0.7915225,
+            0.88235295
+          ],
+          [
+            0.83975667,
+            0.7915225,
+            0.88235295
+          ],
+          [
+            0.83975667,
+            0.7915225,
+            0.88235295
+          ],
+          [
+            0.83975667,
+            0.7915225,
+            0.88235295
+          ]
+        ],
+        "secondShadowColor": [
+          0.78448284,
+          0.6819853,
+          0.875
+        ],
+        "outlineColors": [
+          [
+            0.19215688,
+            0.15294118,
+            0.2901961
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0.19215688,
+            0.15294118,
+            0.2901961
+          ],
+          [
+            0.19215688,
+            0.15294118,
+            0.2901961
+          ],
+          [
+            0.19215688,
+            0.15294118,
+            0.2901961
+          ]
+        ],
+        "useAlphaBands": false,
+        "useOutlineAlphaBands": false,
+        "specularSoft": false,
+        "backFaceUseUv2": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "specColor": [
+          1,
+          1,
+          1
+        ],
+        "specularSmooth": 0.04,
+        "lightArea": 0.51,
+        "secondShadowArea": 0.51,
+        "shininess": 1,
+        "specMulti": 0.15,
+        "outlineWidth": 0.05,
+        "outlineScale": 0.01,
+        "maxOutlineZOffset": 1
+      },
+      "native_8": {
+        "sourceMaterial": "Avatar_Fuka_Mouth",
+        "source": {
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\2a9cd0db7461adce.wmv",
+          "serializedFile": "CAB-18699bdcf6232f19c178522cd616fea2",
+          "pathId": "-9179134474775049061",
+          "shader": {
+            "fileId": 1,
+            "pathId": "7611511129886886146"
+          }
+        },
+        "textures": {
+          "albedo": "res://assets/shadow-knight/1.png"
+        },
+        "firstShadowColors": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "secondShadowColor": [
+          1,
+          1,
+          1
+        ],
+        "outlineColors": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "useAlphaBands": false,
+        "useOutlineAlphaBands": false,
+        "specularSoft": false,
+        "backFaceUseUv2": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "specColor": [
+          1,
+          1,
+          1
+        ],
+        "specularSmooth": 0.04
+      },
+      "native_9": {
+        "sourceMaterial": "Avatar_Fuka_Right_Eye",
+        "source": {
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\2a9cd0db7461adce.wmv",
+          "serializedFile": "CAB-339435c2cc8f633d96b9a98af5b5ea29",
+          "pathId": "-1472222139836677401",
+          "shader": {
+            "fileId": 1,
+            "pathId": "7611511129886886146"
+          }
+        },
+        "textures": {
+          "albedo": "res://assets/shadow-knight/1.png"
+        },
+        "firstShadowColors": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "secondShadowColor": [
+          1,
+          1,
+          1
+        ],
+        "outlineColors": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "useAlphaBands": false,
+        "useOutlineAlphaBands": false,
+        "specularSoft": false,
+        "backFaceUseUv2": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "specColor": [
+          1,
+          1,
+          1
+        ],
+        "specularSmooth": 0.04
+      },
+      "weapon": {
+        "sourceMaterial": "Weapon_Fist_F1_25_2_Material",
+        "source": {
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5763c013ee7717cb.wmv",
+          "serializedFile": "CAB-bb903b8f6eb9d41162809ce7c6636822",
+          "pathId": "-986205606595911152",
+          "shader": {
+            "fileId": 1,
+            "pathId": "-2224870653762880750"
+          }
+        },
+        "textures": {
+          "albedo": "res://assets/shadow-knight/Weapon_Fist_F1_25_2.png"
+        },
+        "firstShadowColors": [
+          [
+            0.6841479,
+            0.695985,
+            0.8161765
+          ],
+          [
+            0.6841479,
+            0.695985,
+            0.8161765
+          ],
+          [
+            0.6841479,
+            0.695985,
+            0.8161765
+          ],
+          [
+            0.6841479,
+            0.695985,
+            0.8161765
+          ],
+          [
+            0.6841479,
+            0.695985,
+            0.8161765
+          ]
+        ],
+        "secondShadowColor": [
+          0.6841479,
+          0.695985,
+          0.8161765
+        ],
+        "outlineColors": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "useAlphaBands": false,
+        "useOutlineAlphaBands": false,
+        "specularSoft": false,
+        "backFaceUseUv2": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "specColor": [
+          1,
+          1,
+          1
+        ],
+        "lightArea": 0.51,
+        "shininess": 10,
+        "specMulti": 0.1,
+        "outlineWidth": 0.04,
+        "outlineScale": 0.01,
+        "maxOutlineZOffset": 1
+      }
+    }
+  }
+}

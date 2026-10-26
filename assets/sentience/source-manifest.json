@@ -1,0 +1,852 @@
+{
+  "schemaVersion": 1,
+  "game": "Honkai Impact 3rd",
+  "clientVersion": "9.1.0",
+  "internalCode": "C6_FL",
+  "character": "识之律者 / Herrscher of Sentience",
+  "sourceReadOnly": true,
+  "identityEvidence": {
+    "catalog": "../hi3-fuhua-extract\\maps\\armor-catalog.json",
+    "characterGroup": "separate_character_Senti",
+    "prefab": [
+      {
+        "Name": "Avatar_Fuka_C6_FL",
+        "Container": "assets/asbres/entities/avatar/fuka_c6_fl/avatar_fuka_c6_fl.prefab",
+        "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\c5808965df75be44.wmv",
+        "PathID": 8846677326417147616,
+        "Type": "GameObject",
+        "Hash": "c03f92d9607c9a0",
+        "Offset": 10421724
+      }
+    ],
+    "visibleEvidence": "Original NewFace red iris texture, C6_FL long-hair body/cloak and weapon-case mesh set; final GPU character-appearance review delegated to parent."
+  },
+  "scene": "res://assets/sentience/Avatar_Fuka_C6_FL.scn",
+  "skeletonPath": "Avatar_Fuka_C6_FL/Skeleton3D",
+  "animationPlayerPath": "AnimationPlayer",
+  "animationPlayerRoot": "..",
+  "boneCount": 193,
+  "meshNodes": 15,
+  "hiddenMeshes": [
+    "Cloak",
+    "Hair_Lod_L",
+    "Hair_S",
+    "Weapon_A",
+    "Weapon_B_01",
+    "Weapon_B_02",
+    "Weapon_C",
+    "WeaponCase_01",
+    "WeaponCase_02",
+    "WeaponCase_L"
+  ],
+  "visibilityReason": "Exact original prefab mesh GameObject active states: only Body, Eyebrow, EyeShape, Face, Hair_L are active. Cloak, short/LOD hair and all weapons/cases are inactive; this appearance matches the original serialized prefab default.",
+  "nativeAnimationAudit": {
+    "sourceLibraryFiles": 155,
+    "selectedNativeClips": 24,
+    "fbxExportErrors": 0,
+    "runtimeStatus": "Superseded original FBX limitation: 24 original C6 Humanoid clips are now reconstructed from source muscle/RootT/RootQ/IK curves using the original C6 Avatar, with original weapon/accessory tracks retained. Active presentation uses native-motions.res; see native-motion-source.json for residuals and limits.",
+    "proof": "../hi3-fuhua-extract/exports/sentience-native/godot-native-validation.json",
+    "sourceCurveProof": "../hi3-fuhua-extract\\exports\\sentience\\native-core-curve-audit.json",
+    "archivedScene": "../hi3-fuhua-extract\\exports\\sentience\\unbaked-native-24clips.scn",
+    "exporterHistory": {
+      "sourceLibraryFiles": 155,
+      "selectedNativeClips": 24,
+      "fbxExportErrors": 0,
+      "runtimeStatus": "Native Humanoid core muscle curves were NOT baked by this exporter. All 24 imported clips left pelvis/hands stationary; removed from production scene. Never count these as playable native C6 combat animations.",
+      "proof": "../hi3-fuhua-extract\\exports\\sentience\\main-bone-motion-verification.json",
+      "sourceCurveProof": "../hi3-fuhua-extract\\exports\\sentience\\native-core-curve-audit.json",
+      "archivedScene": "../hi3-fuhua-extract\\exports\\sentience\\unbaked-native-24clips.scn"
+    },
+    "recoveryManifest": "native-motion-source.json",
+    "currentBodyMotionValidation": "../hi3-fuhua-extract/exports/sentience-native/godot-native-validation.json",
+    "sourceCurveProofScope": "Historical proof that the FBX exporter omitted core Transform bindings; original classID95 curves were subsequently recovered."
+  },
+  "adaptedAnimationLibrary": "res://assets/sentience/combat-motions.res",
+  "adaptedAnimationStatus": "HISTORICAL, SUPERSEDED for current native C6 presentation: C4 body actions and existing C4-rest Lighter defense retargeted to C6 by actor agent, 16 clips / 57 body bones; actor agent reports max bone-length error 0 and source-relative foot-floor error 1.33e-6. See retarget report for full validation.",
+  "materials": "material-profiles.json",
+  "originalMaterialSlots": "original-materials.json",
+  "face": "face-source.json",
+  "textures": [
+    {
+      "file": "Avatar_Fuka_C6_Texture_Body_Color.png",
+      "bytes": 1042990,
+      "sha256": "f2e47c94a9cb470c9424db86610a54e255181d275a5e16a537ca61de75397e4d",
+      "size": [
+        1024,
+        1024
+      ],
+      "rgbaExtrema": [
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ]
+      ]
+    },
+    {
+      "file": "Avatar_Fuka_C6_Texture_Body_LightMap.png",
+      "bytes": 616233,
+      "sha256": "24a445c0bce7a27566ac663718b00606b4142ecbb72dfcfe097d075ac71cd1e5",
+      "size": [
+        1024,
+        1024
+      ],
+      "rgbaExtrema": [
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          211
+        ],
+        [
+          0,
+          52
+        ],
+        [
+          0,
+          223
+        ]
+      ]
+    },
+    {
+      "file": "Avatar_Fuka_C6_Texture_Cloak_Color.png",
+      "bytes": 304531,
+      "sha256": "d2ce82d349414e1f26806d32da8e15621c184597ab30265655346f1445284ee2",
+      "size": [
+        1024,
+        1024
+      ],
+      "rgbaExtrema": [
+        [
+          82,
+          255
+        ],
+        [
+          0,
+          243
+        ],
+        [
+          0,
+          239
+        ],
+        [
+          0,
+          255
+        ]
+      ]
+    },
+    {
+      "file": "Avatar_Fuka_C6_Texture_Cloak_Lightmap.png",
+      "bytes": 107389,
+      "sha256": "92cba470b8b9f252f9d4d9baac50878db5bb11d6fa25ecd0d7b95543bb575742",
+      "size": [
+        512,
+        512
+      ],
+      "rgbaExtrema": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          132
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          12,
+          46
+        ]
+      ]
+    },
+    {
+      "file": "Avatar_Fuka_C6_Texture_EyeEffect_Star.png",
+      "bytes": 7932,
+      "sha256": "797a4b75a4dbbe0fda3ce383ee8139bad3f09aace9c361babd0ad33962a78afb",
+      "size": [
+        128,
+        128
+      ],
+      "rgbaExtrema": [
+        [
+          222,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          47,
+          255
+        ],
+        [
+          0,
+          255
+        ]
+      ]
+    },
+    {
+      "file": "Avatar_Fuka_C6_Texture_Hair_Color.png",
+      "bytes": 494797,
+      "sha256": "228b07b90c48e59059483f094817c3b468512ca91e243457cfe8c85ea3833f92",
+      "size": [
+        1024,
+        1024
+      ],
+      "rgbaExtrema": [
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          253
+        ],
+        [
+          254,
+          255
+        ]
+      ]
+    },
+    {
+      "file": "Avatar_Fuka_C6_Texture_Hair_LightMap.png",
+      "bytes": 158913,
+      "sha256": "d5024e45cc4a0395001e471dcbba4f9600bcbd2f3ebed9f4e877b73053855ecd",
+      "size": [
+        1024,
+        1024
+      ],
+      "rgbaExtrema": [
+        [
+          140,
+          245
+        ],
+        [
+          0,
+          133
+        ],
+        [
+          0,
+          114
+        ],
+        [
+          254,
+          255
+        ]
+      ]
+    },
+    {
+      "file": "Avatar_Fuka_C6_Texture_HairShort_Color.png",
+      "bytes": 310639,
+      "sha256": "a2af578e20e1223ce3e712d84def56656a546a271942bf7a510131c2d038753d",
+      "size": [
+        1024,
+        1024
+      ],
+      "rgbaExtrema": [
+        [
+          66,
+          255
+        ],
+        [
+          48,
+          255
+        ],
+        [
+          90,
+          253
+        ],
+        [
+          254,
+          255
+        ]
+      ]
+    },
+    {
+      "file": "Avatar_Fuka_C6_Texture_HairShort_LightMap.png",
+      "bytes": 115690,
+      "sha256": "1a2b7c745b22cfaa580722b28e5a753b5274f6cdb24714023480aa5f2db3b1c7",
+      "size": [
+        1024,
+        1024
+      ],
+      "rgbaExtrema": [
+        [
+          214,
+          222
+        ],
+        [
+          0,
+          132
+        ],
+        [
+          0,
+          112
+        ],
+        [
+          254,
+          255
+        ]
+      ]
+    },
+    {
+      "file": "Avatar_Fuka_C6_Texture_NewFace_Color.png",
+      "bytes": 148214,
+      "sha256": "b1a123e4d1be4f00d08ed98aa3cd785e4c10b613a2cd39188f5b545c7a47eedf",
+      "size": [
+        1024,
+        1024
+      ],
+      "rgbaExtrema": [
+        [
+          12,
+          255
+        ],
+        [
+          14,
+          255
+        ],
+        [
+          16,
+          255
+        ],
+        [
+          252,
+          255
+        ]
+      ]
+    },
+    {
+      "file": "Avatar_Fuka_C6_Texture_NewFace_Lightmap.png",
+      "bytes": 21718,
+      "sha256": "674e859301dd840d48266f45cd96f6918f553a5bc7e1c628f7cd55eeff5f238c",
+      "size": [
+        512,
+        512
+      ],
+      "rgbaExtrema": [
+        [
+          254,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          254,
+          255
+        ],
+        [
+          0,
+          255
+        ]
+      ]
+    },
+    {
+      "file": "Avatar_Fuka_C6_Texture_Wing_Color.png",
+      "bytes": 91850,
+      "sha256": "7872980e7b65b7fb8a39cefd9b1174364a8fe231af364da8abccc5aee2d4d425",
+      "size": [
+        512,
+        512
+      ],
+      "rgbaExtrema": [
+        [
+          82,
+          255
+        ],
+        [
+          3,
+          255
+        ],
+        [
+          2,
+          255
+        ],
+        [
+          0,
+          178
+        ]
+      ]
+    },
+    {
+      "file": "Avatar_Fuka_NewFace_ColorMask.png",
+      "bytes": 157048,
+      "sha256": "d185652d391ff0e5b056423915f18de39f2f1f64fad19a6303890759a026c53e",
+      "size": [
+        1024,
+        1024
+      ],
+      "rgbaExtrema": [
+        [
+          0,
+          134
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          255
+        ]
+      ]
+    },
+    {
+      "file": "Avatar_Fuka_Texture_NewFace_Facemap.png",
+      "bytes": 43877,
+      "sha256": "d669b0b9043b5a8a466f563fc0ced757537d64ad5a48afe27db6f82f9d2c0f61",
+      "size": [
+        512,
+        512
+      ],
+      "rgbaExtrema": [
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          0,
+          255
+        ]
+      ]
+    },
+    {
+      "file": "b1.png",
+      "bytes": 161,
+      "sha256": "3e231973104a3cac16cd8e9c22fdea54307a2d454bc4ec660737ba2071c686da",
+      "size": [
+        32,
+        32
+      ],
+      "rgbaExtrema": [
+        [
+          132,
+          132
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          22,
+          28
+        ]
+      ]
+    },
+    {
+      "file": "b10.png",
+      "bytes": 160,
+      "sha256": "14b8af5f618f498959fb041bd2d3df5ef40d9f4dd10b0d9d5f25e531197c7f43",
+      "size": [
+        32,
+        32
+      ],
+      "rgbaExtrema": [
+        [
+          255,
+          255
+        ],
+        [
+          144,
+          144
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          27,
+          34
+        ]
+      ]
+    },
+    {
+      "file": "b4.png",
+      "bytes": 311,
+      "sha256": "7be53343ed7be60d370f45ed09fd1ab5fda5878803a2d86ca8280e7f4a91a7e8",
+      "size": [
+        32,
+        32
+      ],
+      "rgbaExtrema": [
+        [
+          107,
+          109
+        ],
+        [
+          79,
+          81
+        ],
+        [
+          189,
+          189
+        ],
+        [
+          36,
+          47
+        ]
+      ]
+    },
+    {
+      "file": "fringe6.png",
+      "bytes": 199,
+      "sha256": "8d614dc1431fb5ae12668b8d2db70c30536335f682b7cb2d3d82fc1cd2b16dd4",
+      "size": [
+        64,
+        4
+      ],
+      "rgbaExtrema": [
+        [
+          49,
+          142
+        ],
+        [
+          18,
+          42
+        ],
+        [
+          16,
+          21
+        ],
+        [
+          255,
+          255
+        ]
+      ]
+    },
+    {
+      "file": "Fuka_C6_Weapon_A_Color.png",
+      "bytes": 157882,
+      "sha256": "5fc508ffc42584c2f3cb4bf272deff9ee8bb0bb441512b78ed11316efbd1b525",
+      "size": [
+        512,
+        512
+      ],
+      "rgbaExtrema": [
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ]
+      ]
+    },
+    {
+      "file": "Fuka_C6_Weapon_B_Color.png",
+      "bytes": 184792,
+      "sha256": "5a552048fa370797691dcfe4024bd7b5086d3049d53cbcdf30568fbcf2afe043",
+      "size": [
+        512,
+        512
+      ],
+      "rgbaExtrema": [
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          254,
+          255
+        ]
+      ]
+    },
+    {
+      "file": "Fuka_C6_Weapon_C_Color.png",
+      "bytes": 164532,
+      "sha256": "0f1f6e9795b5c67b216a3586acb14580fb96e18f22855efc86115e6aa7ee4287",
+      "size": [
+        512,
+        512
+      ],
+      "rgbaExtrema": [
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          254,
+          255
+        ]
+      ]
+    },
+    {
+      "file": "Fuka_C6_Weapon_C_Emission.png",
+      "bytes": 1639,
+      "sha256": "3bd5582ec76cae1534168a178526847d97c40ad47b1e5d68f012a5057c0ee95d",
+      "size": [
+        128,
+        128
+      ],
+      "rgbaExtrema": [
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          231,
+          255
+        ]
+      ]
+    },
+    {
+      "file": "Fuka_C6_WeaponCase_01_Color.png",
+      "bytes": 133193,
+      "sha256": "958837af058ab3e2c655202a9a75f40465cb6e53f561b329a07e4f6815306b0d",
+      "size": [
+        512,
+        512
+      ],
+      "rgbaExtrema": [
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          254,
+          255
+        ]
+      ]
+    },
+    {
+      "file": "Fuka_C6_WeaponCase_Color.png",
+      "bytes": 236048,
+      "sha256": "4c09b279a422dcabc18f86cc75044b2ee69adc719761d36e3de634584bc926c2",
+      "size": [
+        512,
+        512
+      ],
+      "rgbaExtrema": [
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ]
+      ]
+    },
+    {
+      "file": "Fuka_C6_WeaponCase_Emission.png",
+      "bytes": 1240,
+      "sha256": "e46d478fe29423f6b9dfdbefab59381f6e1c24e60648cee270d1dce1445e768c",
+      "size": [
+        256,
+        256
+      ],
+      "rgbaExtrema": [
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          255,
+          255
+        ]
+      ]
+    },
+    {
+      "file": "noise_rough.png",
+      "bytes": 32918,
+      "sha256": "f3359bf91c0a53f4e2c02d19ce724490c9e1a4071eca454b45878cd6522d332b",
+      "size": [
+        256,
+        128
+      ],
+      "rgbaExtrema": [
+        [
+          33,
+          231
+        ],
+        [
+          36,
+          231
+        ],
+        [
+          33,
+          231
+        ],
+        [
+          255,
+          255
+        ]
+      ]
+    },
+    {
+      "file": "SFX_Noise_505.png",
+      "bytes": 113855,
+      "sha256": "472c5b3d3bbf8df9cd74c732130b922b33f168420d5f982c0886349ee6fb2092",
+      "size": [
+        256,
+        256
+      ],
+      "rgbaExtrema": [
+        [
+          63,
+          255
+        ],
+        [
+          63,
+          255
+        ],
+        [
+          63,
+          255
+        ],
+        [
+          0,
+          255
+        ]
+      ]
+    },
+    {
+      "file": "Smoke_Noise01.png",
+      "bytes": 29762,
+      "sha256": "d0530cd108e4fdfee2cf5e845306bd795c4b23828db1e3a9496d5af4b6f23d21",
+      "size": [
+        128,
+        128
+      ],
+      "rgbaExtrema": [
+        [
+          0,
+          247
+        ],
+        [
+          0,
+          252
+        ],
+        [
+          0,
+          247
+        ],
+        [
+          0,
+          255
+        ]
+      ]
+    }
+  ],
+  "sceneBytes": 2018654,
+  "sceneSha256": "29b8260de2e7bb0100f82eeb768da0c317b1f2e9d32995cf01c610e908cb05d7",
+  "limitations": [
+    "Original C6 motion is reconstructed and shipped in native-motions.res, but is not claimed to be bit-identical to Unity native Humanoid solving. Side-view root lock, contact timing and weapon visibility are runtime adaptations; quantified recovery residuals are in native-motion-source.json.",
+    "Native ThinFilm_Wing, Face Expression special shader effects and original blendshape animation timing are not fully reproduced.",
+    "No GPU render or browser was run by the extraction agent."
+  ],
+  "nativeActiveEvidence": {
+    "report": "../hi3-fuhua-extract\\exports\\sentience\\native-gameobject-active.json",
+    "validatedGameObjects": 278,
+    "binaryValidation": "component PPtrs + layer + UTF-8 Name + alignment + tag + active; consumes all bytes and matches parsed names."
+  },
+  "presentation": "presentation.json",
+  "runtimeAnimation": {
+    "library": "res://assets/sentience/native-motions.res",
+    "libraryName": "native",
+    "prefix": "native/",
+    "sourceManifest": "native-motion-source.json",
+    "sha256": "ca437b329905ea22de3a73d6c729093c6c91559233549d1dcbba92aa2397a2a4",
+    "clips": 24,
+    "usesHistoricalAdaptedLibrary": false,
+    "presentationEvidence": "presentation.json actor.animationLibraryPath/prefix now reference native-motions.res and native/"
+  },
+  "visibilityScope": "hiddenMeshes describes the original prefab/base-scene default. Native weapon combat selectively enables original sword/spear/chain meshes during the source-time action intervals in presentation.json; story and neutral/default presentation retain their intended hidden state.",
+  "recoveryCodeSourcesAndLicenses": "native-motion-notices.txt"
+}

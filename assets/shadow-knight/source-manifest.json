@@ -1,0 +1,2743 @@
+{
+  "schemaVersion": 1,
+  "game": "Honkai Impact 3rd",
+  "sourceReadOnly": true,
+  "internalArmorCode": "C2_NL",
+  "appearanceCode": "C2_NL",
+  "prefabDependencyEvidence": "../hi3-fuhua-extract\\maps\\c2_nl-prefab-dependencies.json",
+  "bones": 91,
+  "nativeClips": [
+    {
+      "name": "Avatar_Fuka_Ani_NL_B",
+      "stopTime": 1.6666667,
+      "maxKeyTime": 1.7,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_nl_b.fbx",
+        "clipName": "Avatar_Fuka_Ani_NL_B",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "-1615924814508623629",
+        "serializedFile": "CAB-45fa97487864520714f35a28bccf55ea",
+        "isIndexPreferredVariant": true,
+        "offset": 57121712
+      },
+      "eventsYaml": "\n  - time: 0.29833335\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_Ani_C2_3\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.3483335\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_Victory_idle",
+      "stopTime": 2.0,
+      "maxKeyTime": 2.0666666,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_victory_idle.fbx",
+        "clipName": "Avatar_Fuka_Ani_Victory_idle",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "-3246214430739595015",
+        "serializedFile": "CAB-a722dd80d4670f62793dfd9dac43c5db",
+        "isIndexPreferredVariant": true,
+        "offset": 59096346
+      },
+      "eventsYaml": " []\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_NL_B_Ultra",
+      "stopTime": 3.1166668,
+      "maxKeyTime": 3.1333334,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_nl_b_ultra.fbx",
+        "clipName": "Avatar_Fuka_Ani_NL_B_Ultra",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "-3989295787226359416",
+        "serializedFile": "CAB-618f238e3b8bc1cf29672a67eeaa3ff8",
+        "isIndexPreferredVariant": true,
+        "offset": 57227652
+      },
+      "eventsYaml": "\n  - time: 1.1512966\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_TeamQTE_C2:NLQTE\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.1999165\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_Ani_B\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_SwitchIn",
+      "stopTime": 1.7333336,
+      "maxKeyTime": 1.7666667,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_switchrole.fbx",
+        "clipName": "Avatar_Fuka_Ani_SwitchIn",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "-5612862684706573172",
+        "serializedFile": "CAB-9bcc0ccee4ac3085061db8a9566c7ee4",
+        "isIndexPreferredVariant": true,
+        "offset": 57374918
+      },
+      "eventsYaml": "\n  - time: 0.12306666\n    functionName: TriggerAudioPattern\n    data: Avatar_Spawn_Landing\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.15888888\n    functionName: TriggerAudioPattern\n    data: Set_VO_Switch_Fuk_C1_Dress1:FUKA_FK_VO_AF01\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.2392\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_SwitchIn\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.26\n    functionName: TriggerAudioPattern\n    data: Avatar_FootStep_Left\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.27386665\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_Scratch\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.3137333\n    functionName: TriggerAudioPattern\n    data: Avatar_FootStep_Right\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.0486665\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.5322664\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_Die",
+      "stopTime": 3.1333334,
+      "maxKeyTime": 3.2,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_die.fbx",
+        "clipName": "Avatar_Fuka_Ani_Die",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "-9090851488556395714",
+        "serializedFile": "CAB-1640496fd8565056a36870cf44d5050e",
+        "isIndexPreferredVariant": true,
+        "offset": 55677027
+      },
+      "eventsYaml": "\n  - time: 0.081466675\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_DeathSingle\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.0971333\n    functionName: TriggerAudioPattern\n    data: Avatar_FootStep_Left\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.26006666\n    functionName: TriggerAudioPattern\n    data: Avatar_FootStep_Right\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.68306667\n    functionName: TriggerAudioPattern\n    data: Avatar_Mei_Death_Drop_Knee\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 2.146333\n    functionName: TriggerAudioPattern\n    data: Avatar_Mei_Death_Drop_Body\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 2.7605948\n    functionName: DeadHandler\n    data:\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_EvadeForward",
+      "stopTime": 1.1333334,
+      "maxKeyTime": 1.1666666,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_evadeforward.fbx",
+        "clipName": "Avatar_Fuka_Ani_EvadeForward",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "1393876893542002609",
+        "serializedFile": "CAB-a7d840bdeede5da360a26bcba8c252f2",
+        "isIndexPreferredVariant": true,
+        "offset": 56398810
+      },
+      "eventsYaml": "\n  - time: 0.040799998\n    functionName: TriggerAudioPattern\n    data: Avatar_Mei_Dodge\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_Combat",
+      "stopTime": 2.0,
+      "maxKeyTime": 2.0666666,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_combat.fbx",
+        "clipName": "Avatar_Fuka_Ani_Combat",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "4199738284049731865",
+        "serializedFile": "CAB-a4bed402129a23a17551e1e41e99ae0b",
+        "isIndexPreferredVariant": true,
+        "offset": 55433018
+      },
+      "eventsYaml": " []\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_C2_3",
+      "stopTime": 3.0833335,
+      "maxKeyTime": 3.1,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_c2_3.fbx",
+        "clipName": "Avatar_Fuka_Ani_C2_3",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "7200067360923891406",
+        "serializedFile": "CAB-39f5e1a4240b7d70d9d88cb5b4e94710",
+        "isIndexPreferredVariant": true,
+        "offset": 54947803
+      },
+      "eventsYaml": "\n  - time: 0.3918917\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_TeamQTE_C1:FKQTE\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.40699995\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_Ani_C2_3:NormalMode\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.42549995\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_Ani_C2_3_Ultra:UltraMode\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.9979995\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 2.3679993\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_Victory",
+      "stopTime": 4.316667,
+      "maxKeyTime": 4.366667,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_victory.fbx",
+        "clipName": "Avatar_Fuka_Ani_Victory",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "9202966355963246024",
+        "serializedFile": "CAB-bc47d06263c222e88a548fe92d3f09be",
+        "isIndexPreferredVariant": true,
+        "offset": 57712820
+      },
+      "eventsYaml": "\n  - time: 0\n    functionName: TriggerFaceAnimation\n    data: Fuka_Winning\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0\n    functionName: TriggerEffectPattern\n    data: Avatar_Common_FX_End_Shadow\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.7726833\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_Victory\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_CombatToStandby",
+      "stopTime": 1.3333334,
+      "maxKeyTime": 1.4,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_combattostandby.fbx",
+        "clipName": "Avatar_Fuka_Ani_CombatToStandby",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "942246513350235999",
+        "serializedFile": "CAB-d3935126a3789e5d61ae3acdd1395480",
+        "isIndexPreferredVariant": true,
+        "offset": 55072631
+      },
+      "eventsYaml": "\n  - time: 0.46800002\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.0280001\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_C2_Dress_04_01_Ani_Ultra_Add",
+      "stopTime": 0.33333334,
+      "maxKeyTime": 0.36666667,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animationadd/avatar_fuka_c2_dress_04_01_ani_ultra_add.anim",
+        "clipName": "Avatar_Fuka_C2_Dress_04_01_Ani_Ultra_Add",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-1142512827814018886",
+        "serializedFile": "CAB-deb391c5786fe7bcee8513626c532443",
+        "isIndexPreferredVariant": true,
+        "offset": 35409452
+      },
+      "eventsYaml": " []\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_NL_C1_1",
+      "stopTime": 1.4333334,
+      "maxKeyTime": 1.4666667,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_nl_c1_1.fbx",
+        "clipName": "Avatar_Fuka_Ani_NL_C1_1",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-2270974762024323850",
+        "serializedFile": "CAB-a87e195bc82c0d1e6f30a7e65ccfa874",
+        "isIndexPreferredVariant": true,
+        "offset": 33505438
+      },
+      "eventsYaml": "\n  - time: 0.08313331\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.33969998\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_CBT_Ha\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.35259995\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_Run",
+      "stopTime": 0.6666667,
+      "maxKeyTime": 0.7,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_run.fbx",
+        "clipName": "Avatar_Fuka_Ani_Run",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-2313169151355544291",
+        "serializedFile": "CAB-1bb643eabf2f42ce944dada942deff30",
+        "isIndexPreferredVariant": true,
+        "offset": 34696149
+      },
+      "eventsYaml": "\n  - time: 0.02600721\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.030836262\n    functionName: RunOnRightFoot\n    data:\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.03535855\n    functionName: AnimEventHandler\n    data: '#Avatar/Avatar_Walk_Smoke_Right'\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.36347672\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.3690928\n    functionName: RunOnLeftFoot\n    data:\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.4053566\n    functionName: AnimEventHandler\n    data: '#Avatar/Avatar_Walk_Smoke_Left'\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_NL_C1_1_Ultra",
+      "stopTime": 2.1666667,
+      "maxKeyTime": 2.2,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_nl_c1_1_ultra.fbx",
+        "clipName": "Avatar_Fuka_Ani_NL_C1_1_Ultra",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-2719360644656417109",
+        "serializedFile": "CAB-634fc128962aeab1e72ef39453a1604b",
+        "isIndexPreferredVariant": true,
+        "offset": 33594759
+      },
+      "eventsYaml": "\n  - time: 0.09966667\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.42466667\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.45716667\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_CBT_Hey\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_NL_B_BS",
+      "stopTime": 0.20000002,
+      "maxKeyTime": 0.23333333,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_nl_b_bs.fbx",
+        "clipName": "Avatar_Fuka_Ani_NL_B_BS",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-3105330136981600538",
+        "serializedFile": "CAB-3c927cfc1b3e4d629542d7621ac010c0",
+        "isIndexPreferredVariant": true,
+        "offset": 33304445
+      },
+      "eventsYaml": "\n  - time: 0.065\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_A1",
+      "stopTime": 2.4166667,
+      "maxKeyTime": 2.4333334,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_a1.fbx",
+        "clipName": "Avatar_Fuka_Ani_A1",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-3283695897295270567",
+        "serializedFile": "CAB-a6187a5305549cc039317ad6f8954709",
+        "isIndexPreferredVariant": true,
+        "offset": 27382495
+      },
+      "eventsYaml": "\n  - time: 0.07733334\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.145\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.14983334\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_CBT_Hey\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.277163\n    functionName: AnimEventHandler\n    data: '#Avatar/Avatar_Walk_Smoke_Right'\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.277163\n    functionName: AnimEventHandler\n    data: '#Avatar/Avatar_Walk_Smoke_Left'\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.2155834\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.8004167\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_Hit_H",
+      "stopTime": 1.5000001,
+      "maxKeyTime": 1.5666667,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_hit_h.fbx",
+        "clipName": "Avatar_Fuka_Ani_Hit_H",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-3312896931131321407",
+        "serializedFile": "CAB-70f9f9ba13b5bbbbe19cdf9915be96f1",
+        "isIndexPreferredVariant": true,
+        "offset": 29708583
+      },
+      "eventsYaml": "\n  - time: 0.036\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_Hit_H\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.05399999\n    functionName: TriggerAudioPattern\n    data: Avatar_Hit_H\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.65699995\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_Scratch\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.8414999\n    functionName: TriggerAudioPattern\n    data: Avatar_FootStep_Right\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.9254999\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_Scratch\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_NL_C2_1",
+      "stopTime": 2.4833333,
+      "maxKeyTime": 2.5,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_nl_c2_1.fbx",
+        "clipName": "Avatar_Fuka_Ani_NL_C2_1",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-3532258641129177620",
+        "serializedFile": "CAB-5516fc57f26936e6d2429bd6ea2ec7a7",
+        "isIndexPreferredVariant": true,
+        "offset": 34038677
+      },
+      "eventsYaml": "\n  - time: 0.0745\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.44948334\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_CBT_Hey\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.4594167\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.8575335\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_EvadeBackward",
+      "stopTime": 1.0,
+      "maxKeyTime": 1.0333333,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_evadebackward.fbx",
+        "clipName": "Avatar_Fuka_Ani_EvadeBackward",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-3721986816941069971",
+        "serializedFile": "CAB-dacc886300ff3cbe83be6d2203b5ac1c",
+        "isIndexPreferredVariant": true,
+        "offset": 29533531
+      },
+      "eventsYaml": "\n  - time: 0.045\n    functionName: TriggerAudioPattern\n    data: Avatar_Mei_Dodge\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.248\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.844\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_Stun",
+      "stopTime": 2.0,
+      "maxKeyTime": 2.0666666,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_stun.fbx",
+        "clipName": "Avatar_Fuka_Ani_Stun",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-502015533322131184",
+        "serializedFile": "CAB-f4e92f26015c2f2f0208a347e3d61317",
+        "isIndexPreferredVariant": true,
+        "offset": 34959841
+      },
+      "eventsYaml": " []\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_Hit_L",
+      "stopTime": 0.9166667,
+      "maxKeyTime": 0.96666664,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_hit_l.fbx",
+        "clipName": "Avatar_Fuka_Ani_Hit_L",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-5891229552932393282",
+        "serializedFile": "CAB-f5e75b943acbaa48cc7ec0cca793cacc",
+        "isIndexPreferredVariant": true,
+        "offset": 30069889
+      },
+      "eventsYaml": "\n  - time: 0.021083334\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.024750002\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_Hit_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.14483334\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.30616668\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.40883335\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_B_Attack",
+      "stopTime": 1.3833334,
+      "maxKeyTime": 1.4,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_b_attack.fbx",
+        "clipName": "Avatar_Fuka_Ani_B_Attack",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-5923467108686843781",
+        "serializedFile": "CAB-a4862865aa266bfe988aef1e0e564e10",
+        "isIndexPreferredVariant": true,
+        "offset": 29241179
+      },
+      "eventsYaml": "\n  - time: 0.048416656\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.17015\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_Ani_B_Attack\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.9780165\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_NL_C2_2_Ultra_End",
+      "stopTime": 2.0833335,
+      "maxKeyTime": 2.1,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_nl_c2_2_ultra.fbx",
+        "clipName": "Avatar_Fuka_Ani_NL_C2_2_Ultra_End",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-664604808051038974",
+        "serializedFile": "CAB-1139c0089b141de899a4a015ac91023b",
+        "isIndexPreferredVariant": true,
+        "offset": 34242528
+      },
+      "eventsYaml": "\n  - time: 0.07916666\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.22291666\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_Ani_C1_2\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.5020833\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_NL_EX_Open",
+      "stopTime": 0.033333335,
+      "maxKeyTime": 0.1,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_nl_ex_open.fbx",
+        "clipName": "Avatar_Fuka_Ani_NL_EX_Open",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-6742992233371062705",
+        "serializedFile": "CAB-ddc266475d6d17c9490cac52ccded058",
+        "isIndexPreferredVariant": true,
+        "offset": 34445911
+      },
+      "eventsYaml": " []\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_NL_EX_Closed",
+      "stopTime": 0.033333335,
+      "maxKeyTime": 0.1,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_nl_ex_closed.fbx",
+        "clipName": "Avatar_Fuka_Ani_NL_EX_Closed",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-7203696571397959452",
+        "serializedFile": "CAB-53812d24b01d87a9d222a602f38714f5",
+        "isIndexPreferredVariant": true,
+        "offset": 34440356
+      },
+      "eventsYaml": " []\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_NL_B_Lite",
+      "stopTime": 1.8333334,
+      "maxKeyTime": 1.8666667,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_nl_b_lite.fbx",
+        "clipName": "Avatar_Fuka_Ani_NL_B_Lite",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-7385008687607585573",
+        "serializedFile": "CAB-8462ad3142219a5d1dac82c0b68db296",
+        "isIndexPreferredVariant": true,
+        "offset": 33420377
+      },
+      "eventsYaml": "\n  - time: 0.29333332\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_Ani_C1_2\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_NL_C2_2_Loop",
+      "stopTime": 3.066667,
+      "maxKeyTime": 3.1,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_nl_c2_2_ultra.fbx",
+        "clipName": "Avatar_Fuka_Ani_NL_C2_2_Loop",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-7482851574351890638",
+        "serializedFile": "CAB-1139c0089b141de899a4a015ac91023b",
+        "isIndexPreferredVariant": true,
+        "offset": 34242528
+      },
+      "eventsYaml": "\n  - time: 1.1990662\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_Ani_C1_2\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.1990662\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_Ani_C1_2\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 2.3950655\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 2.3950655\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_C2_Ani_Ultra_Add",
+      "stopTime": 0.33333334,
+      "maxKeyTime": 0.36666667,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animationadd/avatar_fuka_c2_ani_ultra_add.anim",
+        "clipName": "Avatar_Fuka_C2_Ani_Ultra_Add",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-8078715509418700200",
+        "serializedFile": "CAB-edc233cd6f779fd364dec5dbfed933e7",
+        "isIndexPreferredVariant": true,
+        "offset": 35406513
+      },
+      "eventsYaml": " []\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_B_Charge",
+      "stopTime": 0.6666667,
+      "maxKeyTime": 0.73333335,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_b_charge.fbx",
+        "clipName": "Avatar_Fuka_Ani_B_Charge",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-8783932878355188920",
+        "serializedFile": "CAB-25b15e33a75dbf835351aa9bf8aa2dde",
+        "isIndexPreferredVariant": true,
+        "offset": 29285831
+      },
+      "eventsYaml": " []\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_Idle",
+      "stopTime": 6.15,
+      "maxKeyTime": 6.2,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_idle.fbx",
+        "clipName": "Avatar_Fuka_Ani_Idle",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-9017499435417148247",
+        "serializedFile": "CAB-dab9e557890cae1ba9d38dae13f85f96",
+        "isIndexPreferredVariant": true,
+        "offset": 30344174
+      },
+      "eventsYaml": "\n  - time: 0.34440002\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.80565\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_Idle\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.03935\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 5.2828503\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 5.8302007\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_NL_C2_2",
+      "stopTime": 2.3833334,
+      "maxKeyTime": 2.4,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_nl_c2_2.fbx",
+        "clipName": "Avatar_Fuka_Ani_NL_C2_2",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "2567094905548549069",
+        "serializedFile": "CAB-3ce7ed8b6aba89939a156dce601db150",
+        "isIndexPreferredVariant": true,
+        "offset": 34141598
+      },
+      "eventsYaml": "\n  - time: 0.07388333\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.21211667\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.23356667\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_Ani_C1_2\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.73745\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_C2_2",
+      "stopTime": 1.7,
+      "maxKeyTime": 1.7333333,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_c2_2.fbx",
+        "clipName": "Avatar_Fuka_Ani_C2_2",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "325428682045010884",
+        "serializedFile": "CAB-aa58e09d012a55b40c432da7641c0266",
+        "isIndexPreferredVariant": true,
+        "offset": 29412161
+      },
+      "eventsYaml": "\n  - time: 0.0527\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.0901\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.21760002\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.8262\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.87890005\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.3753\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_NL_C1_3_Ultra",
+      "stopTime": 2.9333334,
+      "maxKeyTime": 2.9666667,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_nl_c1_3_ultra.fbx",
+        "clipName": "Avatar_Fuka_Ani_NL_C1_3_Ultra",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "3566172070076888243",
+        "serializedFile": "CAB-72008d6f6f6a239a66ccedb7939f4ae3",
+        "isIndexPreferredVariant": true,
+        "offset": 33923911
+      },
+      "eventsYaml": "\n  - time: 0.0264\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.44586667\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.47813335\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.50453335\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_Ani_B\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 2.1442668\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 2.3760002\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_C1_2",
+      "stopTime": 2.6166668,
+      "maxKeyTime": 2.6333334,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_c1_2.fbx",
+        "clipName": "Avatar_Fuka_Ani_C1_2",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "3758298432396471057",
+        "serializedFile": "CAB-4e373469fff73bf1afb4251609d85ee4",
+        "isIndexPreferredVariant": true,
+        "offset": 29331871
+      },
+      "eventsYaml": "\n  - time: 0.20148328\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.52856666\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_Ani_C1_2_Ultra:UltraMode\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.5573499\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_Ani_C1_2:NormalMode\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.7950329\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 2.067166\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_NL_B_Charge",
+      "stopTime": 2.0833335,
+      "maxKeyTime": 2.1333334,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_nl_b_charge.fbx",
+        "clipName": "Avatar_Fuka_Ani_NL_B_Charge",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "4056752505944989547",
+        "serializedFile": "CAB-35f51b20a24cc315d8a0a01680a58b36",
+        "isIndexPreferredVariant": true,
+        "offset": 33355546
+      },
+      "eventsYaml": " []\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_A3",
+      "stopTime": 2.5333335,
+      "maxKeyTime": 2.5666666,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_a3.fbx",
+        "clipName": "Avatar_Fuka_Ani_A3",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "4338303119375680643",
+        "serializedFile": "CAB-75a2a0f3024c62d8ef31f1f2112eae34",
+        "isIndexPreferredVariant": true,
+        "offset": 27874365
+      },
+      "eventsYaml": "\n  - time: 0.058266662\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.18746665\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.2128\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_CBT_Ha\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.26505703\n    functionName: AnimEventHandler\n    data: '#Avatar/Avatar_Walk_Smoke_Right'\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.2818664\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.6846665\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_A6",
+      "stopTime": 2.2333336,
+      "maxKeyTime": 2.2666667,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_a6.fbx",
+        "clipName": "Avatar_Fuka_Ani_A6",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "4355403421753794213",
+        "serializedFile": "CAB-bbcceacdf4b210d5456ee1a021386ad1",
+        "isIndexPreferredVariant": true,
+        "offset": 28313329
+      },
+      "eventsYaml": "\n  - time: 0.20249999\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.26775\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_CBT_Hia\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.32142854\n    functionName: AnimEventHandler\n    data: '#Avatar/Avatar_Walk_Smoke_Right'\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.7032499\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.9574999\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_A5",
+      "stopTime": 2.25,
+      "maxKeyTime": 2.2666667,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_a5.fbx",
+        "clipName": "Avatar_Fuka_Ani_A5",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "6053989911101769999",
+        "serializedFile": "CAB-b030c884e503ea5782b5cb5cfdf4c822",
+        "isIndexPreferredVariant": true,
+        "offset": 28173853
+      },
+      "eventsYaml": "\n  - time: 0.07875\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.38475\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_CBT_Hae\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.40725\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.5115694\n    functionName: AnimEventHandler\n    data: '#Avatar/Avatar_Walk_Smoke_Left'\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.5115694\n    functionName: AnimEventHandler\n    data: '#Avatar/Avatar_Walk_Smoke_Right'\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.52775\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_StandBy",
+      "stopTime": 2.0,
+      "maxKeyTime": 2.0666666,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_standby.fbx",
+        "clipName": "Avatar_Fuka_Ani_StandBy",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "61859981234845613",
+        "serializedFile": "CAB-22966168fc09fa63c00df1332bef46a7",
+        "isIndexPreferredVariant": true,
+        "offset": 34778429
+      },
+      "eventsYaml": " []\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_A4",
+      "stopTime": 2.5333335,
+      "maxKeyTime": 2.5666666,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_a4.fbx",
+        "clipName": "Avatar_Fuka_Ani_A4",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "6223542049104770197",
+        "serializedFile": "CAB-2b20328643d6ff99d170e8b2e8cd12ba",
+        "isIndexPreferredVariant": true,
+        "offset": 28014911
+      },
+      "eventsYaml": "\n  - time: 0.15706664\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.6206667\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_CBT_Ho\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.65754527\n    functionName: AnimEventHandler\n    data: '#Avatar/Avatar_Walk_Smoke_Left'\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.8265332\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 2.1659997\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_UI_Standby",
+      "stopTime": 2.0,
+      "maxKeyTime": 2.0666666,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/avatar_fuka_common_anicontroller_battley.controller",
+        "clipName": "Avatar_Fuka_Ani_UI_Standby",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "6468332531158727840",
+        "serializedFile": "CAB-3ca082935109e76efca1bff0646548b4",
+        "isIndexPreferredVariant": true,
+        "offset": 27142117
+      },
+      "eventsYaml": " []\n"
+    },
+    {
+      "name": "Avatar_Fuka_C2_Dress_04_01_Ani_Normal_Add",
+      "stopTime": 0.33333334,
+      "maxKeyTime": 0.36666667,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animationadd/avatar_fuka_c2_dress_04_01_ani_normal_add.anim",
+        "clipName": "Avatar_Fuka_C2_Dress_04_01_Ani_Normal_Add",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "6640553750206292889",
+        "serializedFile": "CAB-ef5cb2148e75006fbb61191b15d25c09",
+        "isIndexPreferredVariant": true,
+        "offset": 35408141
+      },
+      "eventsYaml": " []\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_NL_C1_2",
+      "stopTime": 2.2000003,
+      "maxKeyTime": 2.2333333,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_nl_c1_2.fbx",
+        "clipName": "Avatar_Fuka_Ani_NL_C1_2",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "6728142305132480828",
+        "serializedFile": "CAB-a369be3cc9585cc91113454da85194c4",
+        "isIndexPreferredVariant": true,
+        "offset": 33698566
+      },
+      "eventsYaml": "\n  - time: 0.16719997\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.1936\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_CBT_Hia\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.2275999\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_C2_1",
+      "stopTime": 2.1666667,
+      "maxKeyTime": 2.2,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_c2_1.fbx",
+        "clipName": "Avatar_Fuka_Ani_C2_1",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "722029149637568210",
+        "serializedFile": "CAB-91c9a2d61d8724980f008164be83c2fe",
+        "isIndexPreferredVariant": true,
+        "offset": 29375256
+      },
+      "eventsYaml": "\n  - time: 0.078\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.34233338\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_Ani_C2_1\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.36183333\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.37491617\n    functionName: AnimEventHandler\n    data: '#Avatar/Avatar_Walk_Smoke_Left'\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.37491617\n    functionName: AnimEventHandler\n    data: '#Avatar/Avatar_Walk_Smoke_Right'\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.4105\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_B1",
+      "stopTime": 1.5000001,
+      "maxKeyTime": 1.5333333,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_b1.fbx",
+        "clipName": "Avatar_Fuka_Ani_B1",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "72999355183596317",
+        "serializedFile": "CAB-e178eea9cc8b312e3ccbda1ebfcf8380",
+        "isIndexPreferredVariant": true,
+        "offset": 29221232
+      },
+      "eventsYaml": "\n  - time: 0.081\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.255\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_Ani_B\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_C2_Ani_Normal_Add",
+      "stopTime": 0.33333334,
+      "maxKeyTime": 0.36666667,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animationadd/avatar_fuka_c2_ani_normal_add.anim",
+        "clipName": "Avatar_Fuka_C2_Ani_Normal_Add",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "7659223789734904506",
+        "serializedFile": "CAB-6459aaf333e6b768b8f1e8953afbd862",
+        "isIndexPreferredVariant": true,
+        "offset": 35404913
+      },
+      "eventsYaml": " []\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_Appear",
+      "stopTime": 1.8000001,
+      "maxKeyTime": 1.8666667,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_appear.fbx",
+        "clipName": "Avatar_Fuka_Ani_Appear",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "7855769747091722390",
+        "serializedFile": "CAB-a203ca070b5921dc01b6d61e0283c40a",
+        "isIndexPreferredVariant": true,
+        "offset": 28453428
+      },
+      "eventsYaml": "\n  - time: 0.1043999\n    functionName: TriggerAudioPattern\n    data: Avatar_Spawn_Landing\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.22319987\n    functionName: TriggerAudioPattern\n    data: Avatar_FootStep_Right\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.2321999\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_Scratch\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.27\n    functionName: TriggerAudioPattern\n    data: Avatar_FootStep_Left\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.375\n    functionName: TriggerAudioPattern\n    data: Set_VO_Switch_Fuk_C1_Dress1:FUKA_FK_VO_AF01\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.54\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_SwitchIn_2\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.0889996\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.5911992\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_A2",
+      "stopTime": 1.7,
+      "maxKeyTime": 1.7666667,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_a2.fbx",
+        "clipName": "Avatar_Fuka_Ani_A2",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "8487926170942689489",
+        "serializedFile": "CAB-29a3bd2e342123a78796c82b122662a4",
+        "isIndexPreferredVariant": true,
+        "offset": 27523635
+      },
+      "eventsYaml": "\n  - time: 0.085\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.15300001\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.1649\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.0999\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_NL_C1_2_Ultra",
+      "stopTime": 2.0,
+      "maxKeyTime": 2.0333333,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_nl_c1_2_ultra.fbx",
+        "clipName": "Avatar_Fuka_Ani_NL_C1_2_Ultra",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "9097083989502156235",
+        "serializedFile": "CAB-2428ae3bb172d40935c45e2972ae1ba3",
+        "isIndexPreferredVariant": true,
+        "offset": 33830799
+      },
+      "eventsYaml": "\n  - time: 0.174\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_CBT_Ha\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.19\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.358\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_C1_1",
+      "stopTime": 1.4333334,
+      "maxKeyTime": 1.4666667,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_c1_1.fbx",
+        "clipName": "Avatar_Fuka_Ani_C1_1",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "9163637390869881680",
+        "serializedFile": "CAB-bf228959708cdb56c7e3c1a75ee726f4",
+        "isIndexPreferredVariant": true,
+        "offset": 29302787
+      },
+      "eventsYaml": "\n  - time: 0.06879999\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.08599999\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.3239333\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_Ani_C1_1\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.3497333\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.43547952\n    functionName: AnimEventHandler\n    data: '#Avatar/Avatar_Walk_Smoke_Left'\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.43547952\n    functionName: AnimEventHandler\n    data: '#Avatar/Avatar_Walk_Smoke_Right'\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.1738998\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    }
+  ],
+  "files": [
+    {
+      "file": "1 (1).png",
+      "bytes": 54198,
+      "sha256": "637e4485ab47bba8ff3542221f265bc84e56474118052c538eba73ef7cec93f5"
+    },
+    {
+      "file": "1.png",
+      "bytes": 209001,
+      "sha256": "d0bff4da00b0660749af27bc63a57a91a26d175086073f6e9b303fd737173696"
+    },
+    {
+      "file": "Avatar_Fuka_C2_NL.scn",
+      "bytes": 4225618,
+      "sha256": "059081b9e378bf2889fea7e2440af71e8f09b03bac27323f109ff339a24b9271"
+    },
+    {
+      "file": "Avatar_Fuka_C2_Texture_Body_Color_New.png",
+      "bytes": 497839,
+      "sha256": "0a1bd12b607df63671ef7852f32aaf74064fffcfd6724c1d310f2535ec2a07a9"
+    },
+    {
+      "file": "Avatar_Fuka_C2_Texture_Body_LightMap_New.png",
+      "bytes": 617251,
+      "sha256": "ea57ae21e491d9c1d11a058c3a03002b2f2e4aa77f8604c3a219ee20debd3ecd"
+    },
+    {
+      "file": "Avatar_Fuka_FaceMap.png",
+      "bytes": 35538,
+      "sha256": "b2881ef8d8561c172807a0e19c2c5eccf8adc990afef4a7151f2dba8ee2b8385"
+    },
+    {
+      "file": "Avatar_Fuka_Texture_Face_Color.png",
+      "bytes": 93189,
+      "sha256": "8e95789d461a1b3d2f51c5993121523545d7c9f521fde7b51e5054599226ab69"
+    },
+    {
+      "file": "Avatar_Fuka_Texture_Face_LightMap.png",
+      "bytes": 12110,
+      "sha256": "f63dfc02ebf52c80f107d61eea4260ea525688c6d43b596be4b14d218bdb40ad"
+    },
+    {
+      "file": "Avatar_Fuka_Texture_Hair_Color.png",
+      "bytes": 398193,
+      "sha256": "545e470d28d629c3cd07cd564bcab316508b3970655dde9578bd0a1f6759edc2"
+    },
+    {
+      "file": "Avatar_Fuka_Texture_Hair_LightMap.png",
+      "bytes": 198097,
+      "sha256": "2b3e7a1229db2eded4db0af279baedb5f1f03205e38f21c8550d95b324f570f6"
+    },
+    {
+      "file": "BloomMask.png",
+      "bytes": 712,
+      "sha256": "c089523b17d7d9642972a82d6c17082233554bd47e7bbf47f9b286d5dbf9dc80"
+    },
+    {
+      "file": "FukaC2.png",
+      "bytes": 71112,
+      "sha256": "72d66e8fd15a8b55c68797828348d1929a2e6118d5a0624cfe6475f8703b036b"
+    },
+    {
+      "file": "Weapon_Fist_F1_25_2.png",
+      "bytes": 215896,
+      "sha256": "b57db0c0ac73a9f83e710c5ff4fa0ae5c8eabab28fe6ea07ecbef30db9504b88"
+    }
+  ],
+  "validation": {
+    "sourceClips": 50,
+    "transformClips": 46,
+    "zeroTrackAuxiliaryClips": [
+      "Avatar_Fuka_C2_Ani_Normal_Add",
+      "Avatar_Fuka_C2_Ani_Ultra_Add",
+      "Avatar_Fuka_C2_Dress_04_01_Ani_Normal_Add",
+      "Avatar_Fuka_C2_Dress_04_01_Ani_Ultra_Add"
+    ],
+    "poseSamples": 5715,
+    "finiteSamples": true,
+    "unresolvedTrackPaths": 0
+  },
+  "limitations": [
+    "Original material activation curves require explicit Godot mesh visibility adaptation.",
+    "Particle textures are original; runtime particle orchestration is adapted.",
+    "Source bones, skin matrices and body motion curves retained without generic retargeting."
+  ],
+  "equippedOriginalFists": {
+    "prefab": "Weapon_Fist_F1_25_2",
+    "source": [
+      {
+        "name": "cab-aaa9f5d4ba808c3ca54a314dc3951d36",
+        "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\043bf26f7cc46ff1.wmv",
+        "offset": 6254825,
+        "container": "assets/asbres/entities/weapon/fist_f1/weapon_fist_f1_25_2.prefab"
+      }
+    ],
+    "nativeBinding": {
+      "appearance": "shadow-knight",
+      "meshes": [
+        {
+          "binds": 56,
+          "bones": [
+            {
+              "name": "Bip001 L UpperArm",
+              "restOriginDelta": 0.01310811098665,
+              "sourceOrigin": [
+                0.00220147147774696,
+                -0.000272400473477319,
+                0.00118410703726113
+              ],
+              "targetOrigin": [
+                0.00118411157745868,
+                0.0127324340865016,
+                -0.000105011917185038
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 L Forearm",
+              "restOriginDelta": 0.0120869493111968,
+              "sourceOrigin": [
+                0.000713617657311261,
+                -0.000335558957885951,
+                0.00266249990090728
+              ],
+              "targetOrigin": [
+                0.00266250316053629,
+                0.0112459547817707,
+                -0.000194900174392387
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 L Hand",
+              "restOriginDelta": 0.0119203999638557,
+              "sourceOrigin": [
+                -0.000652390182949603,
+                -0.000272878416581079,
+                0.00400629872456193
+              ],
+              "targetOrigin": [
+                0.00400629872456193,
+                0.00987903773784637,
+                -0.000156772264745086
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 L Finger0",
+              "restOriginDelta": 0.0116295907646418,
+              "sourceOrigin": [
+                -0.000958278949838132,
+                -5.12307160533965e-05,
+                0.00414273515343666
+              ],
+              "targetOrigin": [
+                0.00414273329079151,
+                0.00956921465694904,
+                5.93439035583287e-05
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 L Finger01",
+              "restOriginDelta": 0.0114088803529739,
+              "sourceOrigin": [
+                -0.00120388017967343,
+                0.000137498849653639,
+                0.00425230618566275
+              ],
+              "targetOrigin": [
+                0.0042523043230176,
+                0.00932026095688343,
+                0.000243629765463993
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 L Finger02",
+              "restOriginDelta": 0.0112524461001158,
+              "sourceOrigin": [
+                -0.00144438073039055,
+                0.000271386292297393,
+                0.00433368980884552
+              ],
+              "targetOrigin": [
+                0.00433368561789393,
+                0.00907739531248808,
+                0.000373172631952912
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 L Finger1",
+              "restOriginDelta": 0.0119163440540433,
+              "sourceOrigin": [
+                -0.0012869113124907,
+                -6.86009152559564e-05,
+                0.00459264637902379
+              ],
+              "targetOrigin": [
+                0.0045926459133625,
+                0.00924094766378403,
+                3.60720441676676e-05
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 L Finger11",
+              "restOriginDelta": 0.0119797112420201,
+              "sourceOrigin": [
+                -0.00155056000221521,
+                7.79129914008081e-06,
+                0.00483332294970751
+              ],
+              "targetOrigin": [
+                0.00483331922441721,
+                0.00897596776485443,
+                0.000107714477053378
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 L Finger12",
+              "restOriginDelta": 0.0120441149920225,
+              "sourceOrigin": [
+                -0.00170185905881226,
+                5.60218395548873e-05,
+                0.00499047338962555
+              ],
+              "targetOrigin": [
+                0.00499047106131911,
+                0.00882382597774267,
+                0.00015321907994803
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 L Finger2",
+              "restOriginDelta": 0.0121655315160751,
+              "sourceOrigin": [
+                -0.00128244142979383,
+                -0.000262053217738867,
+                0.00461442349478602
+              ],
+              "targetOrigin": [
+                0.00461442163214087,
+                0.00924889463931322,
+                -0.000157268732436933
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 L Finger21",
+              "restOriginDelta": 0.0123370420187712,
+              "sourceOrigin": [
+                -0.00157927931286395,
+                -0.000258785497862846,
+                0.0048906896263361
+              ],
+              "targetOrigin": [
+                0.00489068729802966,
+                0.00895204395055771,
+                -0.000159334726049565
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 L Finger22",
+              "restOriginDelta": 0.012467491440475,
+              "sourceOrigin": [
+                -0.00177188613452017,
+                -0.000256642029853538,
+                0.00506907561793923
+              ],
+              "targetOrigin": [
+                0.00506907422095537,
+                0.00875943060964346,
+                -0.000160652081831358
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 L Finger3",
+              "restOriginDelta": 0.0123222749680281,
+              "sourceOrigin": [
+                -0.0013319980353117,
+                -0.000457172718597576,
+                0.00454455800354481
+              ],
+              "targetOrigin": [
+                0.00454455707222223,
+                0.00920285191386938,
+                -0.000353247509337962
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 L Finger31",
+              "restOriginDelta": 0.0125860264524817,
+              "sourceOrigin": [
+                -0.00159081630408764,
+                -0.000546436931472272,
+                0.00479710940271616
+              ],
+              "targetOrigin": [
+                0.00479710940271616,
+                0.00894567742943764,
+                -0.000447147322120145
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 L Finger32",
+              "restOriginDelta": 0.0127817485481501,
+              "sourceOrigin": [
+                -0.00176959368400276,
+                -0.000607763009611517,
+                0.0049698636867106
+              ],
+              "targetOrigin": [
+                0.00496986415237188,
+                0.00876803044229746,
+                -0.000511675549205393
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 L Finger4",
+              "restOriginDelta": 0.0123847806826234,
+              "sourceOrigin": [
+                -0.00133415660820901,
+                -0.000593562610447407,
+                0.00442900834605098
+              ],
+              "targetOrigin": [
+                0.00442901067435741,
+                0.00920314341783524,
+                -0.000489655591081828
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 L Finger41",
+              "restOriginDelta": 0.0125822592526674,
+              "sourceOrigin": [
+                -0.00149073253851384,
+                -0.000700630247592926,
+                0.00456157978624105
+              ],
+              "targetOrigin": [
+                0.00456157838925719,
+                0.0090485168620944,
+                -0.000599516788497567
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 L Finger42",
+              "restOriginDelta": 0.0127445533871651,
+              "sourceOrigin": [
+                -0.00163640163373202,
+                -0.000789132725913078,
+                0.00466789212077856
+              ],
+              "targetOrigin": [
+                0.00466789165511727,
+                0.00890446454286575,
+                -0.000690624350681901
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 L ForeTwist",
+              "restOriginDelta": 0.0120869493111968,
+              "sourceOrigin": [
+                0.000713615794666111,
+                -0.000335558957885951,
+                0.00266250036656857
+              ],
+              "targetOrigin": [
+                0.00266250409185886,
+                0.0112459538504481,
+                -0.000194899999769405
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 L ForeTwist1",
+              "restOriginDelta": 0.0118879061192274,
+              "sourceOrigin": [
+                3.06134461425245e-05,
+                -0.0003042186726816,
+                0.00333439791575074
+              ],
+              "targetOrigin": [
+                0.00333440280519426,
+                0.0105624971911311,
+                -0.000175839886651374
+              ],
+              "weighted": true
+            },
+            {
+              "name": "bone_C2_WJ_L",
+              "restOriginDelta": 0.0120092052966356,
+              "sourceOrigin": [
+                -0.000459388422314078,
+                -0.000253685313509777,
+                0.00403655925765634
+              ],
+              "targetOrigin": [
+                0.00403656298294663,
+                0.0100716650485992,
+                -0.000134120782604441
+              ],
+              "weighted": false
+            },
+            {
+              "name": "bone_C2_WJ_L02",
+              "restOriginDelta": 0.0123275611549616,
+              "sourceOrigin": [
+                -0.000229001423576847,
+                -0.000257827923633158,
+                0.00431579304859042
+              ],
+              "targetOrigin": [
+                0.00431579677388072,
+                0.0103020882233977,
+                -0.000134121539304033
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 R UpperArm",
+              "restOriginDelta": 0.0134815517812967,
+              "sourceOrigin": [
+                0.00220147334039211,
+                -0.000272394099738449,
+                -0.00118410889990628
+              ],
+              "targetOrigin": [
+                -0.00118410447612405,
+                0.0127324378117919,
+                -0.000105008308310062
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 R Forearm",
+              "restOriginDelta": 0.012313349172473,
+              "sourceOrigin": [
+                0.000713618006557226,
+                -0.000335544173140079,
+                -0.00266250176355243
+              ],
+              "targetOrigin": [
+                -0.00266249990090728,
+                0.0112459622323513,
+                -0.000194892112631351
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 R Hand",
+              "restOriginDelta": 0.0113634821027517,
+              "sourceOrigin": [
+                -0.00065238936804235,
+                -0.000272856326773763,
+                -0.00400630105286837
+              ],
+              "targetOrigin": [
+                -0.00400630105286837,
+                0.00987905077636242,
+                -0.000156783687998541
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 R Finger0",
+              "restOriginDelta": 0.0109704555943608,
+              "sourceOrigin": [
+                -0.000958276796154678,
+                -5.12070255354047e-05,
+                -0.00414273561909795
+              ],
+              "targetOrigin": [
+                -0.00414273981004953,
+                0.00956922676414251,
+                5.93297590967268e-05
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 R Finger01",
+              "restOriginDelta": 0.0106690702959895,
+              "sourceOrigin": [
+                -0.00120387820061296,
+                0.000137523107696325,
+                -0.00425230665132403
+              ],
+              "targetOrigin": [
+                -0.00425231223925948,
+                0.0093202693387866,
+                0.000243611575569957
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 R Finger02",
+              "restOriginDelta": 0.0103946160525084,
+              "sourceOrigin": [
+                -0.00144437700510025,
+                0.000271409488050267,
+                -0.00433368934318423
+              ],
+              "targetOrigin": [
+                -0.00433369446545839,
+                0.00907740462571383,
+                0.000373150687664747
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 R Finger1",
+              "restOriginDelta": 0.0109096420928836,
+              "sourceOrigin": [
+                -0.00128690898418427,
+                -6.85748527757823e-05,
+                -0.00459264917299151
+              ],
+              "targetOrigin": [
+                -0.00459265429526567,
+                0.00924096070230007,
+                3.60523845301941e-05
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 R Finger11",
+              "restOriginDelta": 0.0107525903731585,
+              "sourceOrigin": [
+                -0.00155055604409426,
+                7.81779090175405e-06,
+                -0.00483332108706236
+              ],
+              "targetOrigin": [
+                -0.00483332714065909,
+                0.00897598452866077,
+                0.000107690480945166
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 R Finger12",
+              "restOriginDelta": 0.0106839407235384,
+              "sourceOrigin": [
+                -0.00170185463503003,
+                5.60488260816783e-05,
+                -0.00499047385528684
+              ],
+              "targetOrigin": [
+                -0.00499048037454486,
+                0.00882384367287159,
+                0.000153192799189128
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 R Finger2",
+              "restOriginDelta": 0.0110193537548184,
+              "sourceOrigin": [
+                -0.00128243863582611,
+                -0.000262027780991048,
+                -0.00461442489176989
+              ],
+              "targetOrigin": [
+                -0.00461442722007632,
+                0.00924891047179699,
+                -0.000157289148773998
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 R Finger21",
+              "restOriginDelta": 0.0108715305104852,
+              "sourceOrigin": [
+                -0.00157927605323493,
+                -0.000258758547715843,
+                -0.0048906896263361
+              ],
+              "targetOrigin": [
+                -0.00489069474861026,
+                0.00895206071436405,
+                -0.000159359406097792
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 R Finger22",
+              "restOriginDelta": 0.0107820779085159,
+              "sourceOrigin": [
+                -0.00177188380621374,
+                -0.000256613973760977,
+                -0.00506907654926181
+              ],
+              "targetOrigin": [
+                -0.00506907934322953,
+                0.00875944644212723,
+                -0.000160679439431988
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 R Finger3",
+              "restOriginDelta": 0.0110092433169484,
+              "sourceOrigin": [
+                -0.00133199454285204,
+                -0.0004571475146804,
+                -0.00454455986618996
+              ],
+              "targetOrigin": [
+                -0.00454455986618996,
+                0.00920287054032087,
+                -0.000353267882019281
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 R Finger31",
+              "restOriginDelta": 0.010922565124929,
+              "sourceOrigin": [
+                -0.00159081455785781,
+                -0.00054641003953293,
+                -0.00479711266234517
+              ],
+              "targetOrigin": [
+                -0.00479711219668388,
+                0.0089456969872117,
+                -0.000447171099949628
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 R Finger32",
+              "restOriginDelta": 0.0108638135716319,
+              "sourceOrigin": [
+                -0.00176959077361971,
+                -0.000607735884841532,
+                -0.00496987020596862
+              ],
+              "targetOrigin": [
+                -0.00496987020596862,
+                0.00876805186271667,
+                -0.0005117027903907
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 R Finger4",
+              "restOriginDelta": 0.0110032670199871,
+              "sourceOrigin": [
+                -0.00133415451273322,
+                -0.000593538046814501,
+                -0.00442901253700256
+              ],
+              "targetOrigin": [
+                -0.00442901439964771,
+                0.00920316204428673,
+                -0.000489675032440573
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 R Finger41",
+              "restOriginDelta": 0.010962376371026,
+              "sourceOrigin": [
+                -0.00149073044303805,
+                -0.00070060504367575,
+                -0.00456158444285393
+              ],
+              "targetOrigin": [
+                -0.00456158397719264,
+                0.00904853641986847,
+                -0.000599540304392576
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 R Finger42",
+              "restOriginDelta": 0.0109075307846069,
+              "sourceOrigin": [
+                -0.00163639837410301,
+                -0.00078910804586485,
+                -0.00466789770871401
+              ],
+              "targetOrigin": [
+                -0.00466789631173015,
+                0.00890448410063982,
+                -0.000690648041199893
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 R ForeTwist",
+              "restOriginDelta": 0.0123133501037955,
+              "sourceOrigin": [
+                0.000713618472218513,
+                -0.000335544114932418,
+                -0.00266250385902822
+              ],
+              "targetOrigin": [
+                -0.00266249920241535,
+                0.0112459631636739,
+                -0.000194892025319859
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 R ForeTwist1",
+              "restOriginDelta": 0.0118061508983374,
+              "sourceOrigin": [
+                3.06149013340473e-05,
+                -0.000304200279060751,
+                -0.0033344014082104
+              ],
+              "targetOrigin": [
+                -0.00333439907990396,
+                0.0105625055730343,
+                -0.000175829904037528
+              ],
+              "weighted": true
+            },
+            {
+              "name": "bone_C2_WJ_R",
+              "restOriginDelta": 0.011603388004005,
+              "sourceOrigin": [
+                -0.000459388014860451,
+                -0.000253674137638882,
+                -0.00403660023584962
+              ],
+              "targetOrigin": [
+                -0.00403659697622061,
+                0.010071674361825,
+                -0.000134119836729951
+              ],
+              "weighted": false
+            },
+            {
+              "name": "bone_C2_WJ_R02",
+              "restOriginDelta": 0.0120706353336573,
+              "sourceOrigin": [
+                -0.00022899653413333,
+                -0.000257812382187694,
+                -0.00431579863652587
+              ],
+              "targetOrigin": [
+                -0.00431579630821943,
+                0.0103021040558815,
+                -0.000134116926346906
+              ],
+              "weighted": false
+            }
+          ],
+          "mappedNativeBones": 44,
+          "meshAabbPosition": [
+            -0.00528956763446331,
+            0.00855405535548925,
+            -0.00080139993224293
+          ],
+          "meshAabbSize": [
+            0.0105791352689266,
+            0.00315939728170633,
+            0.00135052634868771
+          ],
+          "node": "NativeFistWeapon001",
+          "unresolvedWeightedBinds": 0,
+          "weightedBinds": 36,
+          "rawRootCoordinateDifferenceNotFitMetric": 0.0127817485481501
+        },
+        {
+          "binds": 38,
+          "bones": [
+            {
+              "name": "Bip001 L Clavicle",
+              "restOriginDelta": 0.0133464448153973,
+              "sourceOrigin": [
+                0.00237861950881779,
+                -0.000279424653854221,
+                0.000399587850552052
+              ],
+              "targetOrigin": [
+                0.000399593700421974,
+                0.0129096815362573,
+                -0.000108851818367839
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 L UpperArm",
+              "restOriginDelta": 0.01310811098665,
+              "sourceOrigin": [
+                0.00220147147774696,
+                -0.000272400473477319,
+                0.00118410703726113
+              ],
+              "targetOrigin": [
+                0.00118411157745868,
+                0.0127324340865016,
+                -0.000105011917185038
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 L Forearm",
+              "restOriginDelta": 0.0120869493111968,
+              "sourceOrigin": [
+                0.000713617657311261,
+                -0.000335558957885951,
+                0.00266249990090728
+              ],
+              "targetOrigin": [
+                0.00266250316053629,
+                0.0112459547817707,
+                -0.000194900174392387
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 L Hand",
+              "restOriginDelta": 0.0119203999638557,
+              "sourceOrigin": [
+                -0.000652390182949603,
+                -0.000272878416581079,
+                0.00400629872456193
+              ],
+              "targetOrigin": [
+                0.00400629872456193,
+                0.00987903773784637,
+                -0.000156772264745086
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 L Finger0",
+              "restOriginDelta": 0.0116295907646418,
+              "sourceOrigin": [
+                -0.000958278949838132,
+                -5.12307160533965e-05,
+                0.00414273515343666
+              ],
+              "targetOrigin": [
+                0.00414273329079151,
+                0.00956921465694904,
+                5.93439035583287e-05
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 L Finger01",
+              "restOriginDelta": 0.0114088803529739,
+              "sourceOrigin": [
+                -0.00120388017967343,
+                0.000137498849653639,
+                0.00425230618566275
+              ],
+              "targetOrigin": [
+                0.0042523043230176,
+                0.00932026095688343,
+                0.000243629765463993
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 L Finger1",
+              "restOriginDelta": 0.0119163440540433,
+              "sourceOrigin": [
+                -0.0012869113124907,
+                -6.86009152559564e-05,
+                0.00459264637902379
+              ],
+              "targetOrigin": [
+                0.0045926459133625,
+                0.00924094766378403,
+                3.60720441676676e-05
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 L Finger11",
+              "restOriginDelta": 0.0119797112420201,
+              "sourceOrigin": [
+                -0.00155056000221521,
+                7.79129914008081e-06,
+                0.00483332294970751
+              ],
+              "targetOrigin": [
+                0.00483331922441721,
+                0.00897596776485443,
+                0.000107714477053378
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 L Finger12",
+              "restOriginDelta": 0.0120441149920225,
+              "sourceOrigin": [
+                -0.00170185905881226,
+                5.60218395548873e-05,
+                0.00499047338962555
+              ],
+              "targetOrigin": [
+                0.00499047106131911,
+                0.00882382597774267,
+                0.00015321907994803
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 L Finger2",
+              "restOriginDelta": 0.0121655315160751,
+              "sourceOrigin": [
+                -0.00128244142979383,
+                -0.000262053217738867,
+                0.00461442349478602
+              ],
+              "targetOrigin": [
+                0.00461442163214087,
+                0.00924889463931322,
+                -0.000157268732436933
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 L Finger21",
+              "restOriginDelta": 0.0123370420187712,
+              "sourceOrigin": [
+                -0.00157927931286395,
+                -0.000258785497862846,
+                0.0048906896263361
+              ],
+              "targetOrigin": [
+                0.00489068729802966,
+                0.00895204395055771,
+                -0.000159334726049565
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 L Finger3",
+              "restOriginDelta": 0.0123222749680281,
+              "sourceOrigin": [
+                -0.0013319980353117,
+                -0.000457172718597576,
+                0.00454455800354481
+              ],
+              "targetOrigin": [
+                0.00454455707222223,
+                0.00920285191386938,
+                -0.000353247509337962
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 L Finger31",
+              "restOriginDelta": 0.0125860264524817,
+              "sourceOrigin": [
+                -0.00159081630408764,
+                -0.000546436931472272,
+                0.00479710940271616
+              ],
+              "targetOrigin": [
+                0.00479710940271616,
+                0.00894567742943764,
+                -0.000447147322120145
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 L Finger4",
+              "restOriginDelta": 0.0123847806826234,
+              "sourceOrigin": [
+                -0.00133415660820901,
+                -0.000593562610447407,
+                0.00442900834605098
+              ],
+              "targetOrigin": [
+                0.00442901067435741,
+                0.00920314341783524,
+                -0.000489655591081828
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 L Finger41",
+              "restOriginDelta": 0.0125822592526674,
+              "sourceOrigin": [
+                -0.00149073253851384,
+                -0.000700630247592926,
+                0.00456157978624105
+              ],
+              "targetOrigin": [
+                0.00456157838925719,
+                0.0090485168620944,
+                -0.000599516788497567
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 L ForeTwist",
+              "restOriginDelta": 0.0120869493111968,
+              "sourceOrigin": [
+                0.000713615794666111,
+                -0.000335558957885951,
+                0.00266250036656857
+              ],
+              "targetOrigin": [
+                0.00266250409185886,
+                0.0112459538504481,
+                -0.000194899999769405
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 L ForeTwist1",
+              "restOriginDelta": 0.0118879061192274,
+              "sourceOrigin": [
+                3.06134461425245e-05,
+                -0.0003042186726816,
+                0.00333439791575074
+              ],
+              "targetOrigin": [
+                0.00333440280519426,
+                0.0105624971911311,
+                -0.000175839886651374
+              ],
+              "weighted": true
+            },
+            {
+              "name": "bone_C2_WJ_L",
+              "restOriginDelta": 0.0120092052966356,
+              "sourceOrigin": [
+                -0.000459388422314078,
+                -0.000253685313509777,
+                0.00403655925765634
+              ],
+              "targetOrigin": [
+                0.00403656298294663,
+                0.0100716650485992,
+                -0.000134120782604441
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 R Clavicle",
+              "restOriginDelta": 0.0134816709905863,
+              "sourceOrigin": [
+                0.00237861974164844,
+                -0.000279422383755445,
+                -0.000399589363951236
+              ],
+              "targetOrigin": [
+                -0.000399583368562162,
+                0.0129096824675798,
+                -0.000108850683318451
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 R UpperArm",
+              "restOriginDelta": 0.0134815517812967,
+              "sourceOrigin": [
+                0.00220147334039211,
+                -0.000272394099738449,
+                -0.00118410889990628
+              ],
+              "targetOrigin": [
+                -0.00118410447612405,
+                0.0127324378117919,
+                -0.000105008308310062
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 R Forearm",
+              "restOriginDelta": 0.012313349172473,
+              "sourceOrigin": [
+                0.000713618006557226,
+                -0.000335544173140079,
+                -0.00266250176355243
+              ],
+              "targetOrigin": [
+                -0.00266249990090728,
+                0.0112459622323513,
+                -0.000194892112631351
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 R Hand",
+              "restOriginDelta": 0.0113634821027517,
+              "sourceOrigin": [
+                -0.00065238936804235,
+                -0.000272856326773763,
+                -0.00400630105286837
+              ],
+              "targetOrigin": [
+                -0.00400630105286837,
+                0.00987905077636242,
+                -0.000156783687998541
+              ],
+              "weighted": true
+            },
+            {
+              "name": "Bip001 R Finger0",
+              "restOriginDelta": 0.0109704555943608,
+              "sourceOrigin": [
+                -0.000958276796154678,
+                -5.12070255354047e-05,
+                -0.00414273561909795
+              ],
+              "targetOrigin": [
+                -0.00414273981004953,
+                0.00956922676414251,
+                5.93297590967268e-05
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 R Finger01",
+              "restOriginDelta": 0.0106690702959895,
+              "sourceOrigin": [
+                -0.00120387820061296,
+                0.000137523107696325,
+                -0.00425230665132403
+              ],
+              "targetOrigin": [
+                -0.00425231223925948,
+                0.0093202693387866,
+                0.000243611575569957
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 R Finger1",
+              "restOriginDelta": 0.0109096420928836,
+              "sourceOrigin": [
+                -0.00128690898418427,
+                -6.85748527757823e-05,
+                -0.00459264917299151
+              ],
+              "targetOrigin": [
+                -0.00459265429526567,
+                0.00924096070230007,
+                3.60523845301941e-05
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 R Finger11",
+              "restOriginDelta": 0.0107525903731585,
+              "sourceOrigin": [
+                -0.00155055604409426,
+                7.81779090175405e-06,
+                -0.00483332108706236
+              ],
+              "targetOrigin": [
+                -0.00483332714065909,
+                0.00897598452866077,
+                0.000107690480945166
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 R Finger12",
+              "restOriginDelta": 0.0106839407235384,
+              "sourceOrigin": [
+                -0.00170185463503003,
+                5.60488260816783e-05,
+                -0.00499047385528684
+              ],
+              "targetOrigin": [
+                -0.00499048037454486,
+                0.00882384367287159,
+                0.000153192799189128
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 R Finger2",
+              "restOriginDelta": 0.0110193537548184,
+              "sourceOrigin": [
+                -0.00128243863582611,
+                -0.000262027780991048,
+                -0.00461442489176989
+              ],
+              "targetOrigin": [
+                -0.00461442722007632,
+                0.00924891047179699,
+                -0.000157289148773998
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 R Finger21",
+              "restOriginDelta": 0.0108715305104852,
+              "sourceOrigin": [
+                -0.00157927605323493,
+                -0.000258758547715843,
+                -0.0048906896263361
+              ],
+              "targetOrigin": [
+                -0.00489069474861026,
+                0.00895206071436405,
+                -0.000159359406097792
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 R Finger3",
+              "restOriginDelta": 0.0110092433169484,
+              "sourceOrigin": [
+                -0.00133199454285204,
+                -0.0004571475146804,
+                -0.00454455986618996
+              ],
+              "targetOrigin": [
+                -0.00454455986618996,
+                0.00920287054032087,
+                -0.000353267882019281
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 R Finger31",
+              "restOriginDelta": 0.010922565124929,
+              "sourceOrigin": [
+                -0.00159081455785781,
+                -0.00054641003953293,
+                -0.00479711266234517
+              ],
+              "targetOrigin": [
+                -0.00479711219668388,
+                0.0089456969872117,
+                -0.000447171099949628
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 R Finger4",
+              "restOriginDelta": 0.0110032670199871,
+              "sourceOrigin": [
+                -0.00133415451273322,
+                -0.000593538046814501,
+                -0.00442901253700256
+              ],
+              "targetOrigin": [
+                -0.00442901439964771,
+                0.00920316204428673,
+                -0.000489675032440573
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 R Finger41",
+              "restOriginDelta": 0.010962376371026,
+              "sourceOrigin": [
+                -0.00149073044303805,
+                -0.00070060504367575,
+                -0.00456158444285393
+              ],
+              "targetOrigin": [
+                -0.00456158397719264,
+                0.00904853641986847,
+                -0.000599540304392576
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 R ForeTwist",
+              "restOriginDelta": 0.0123133501037955,
+              "sourceOrigin": [
+                0.000713618472218513,
+                -0.000335544114932418,
+                -0.00266250385902822
+              ],
+              "targetOrigin": [
+                -0.00266249920241535,
+                0.0112459631636739,
+                -0.000194892025319859
+              ],
+              "weighted": false
+            },
+            {
+              "name": "Bip001 R ForeTwist1",
+              "restOriginDelta": 0.0118061508983374,
+              "sourceOrigin": [
+                3.06149013340473e-05,
+                -0.000304200279060751,
+                -0.0033344014082104
+              ],
+              "targetOrigin": [
+                -0.00333439907990396,
+                0.0105625055730343,
+                -0.000175829904037528
+              ],
+              "weighted": true
+            },
+            {
+              "name": "bone_C2_WJ_R",
+              "restOriginDelta": 0.011603388004005,
+              "sourceOrigin": [
+                -0.000459388014860451,
+                -0.000253674137638882,
+                -0.00403660023584962
+              ],
+              "targetOrigin": [
+                -0.00403659697622061,
+                0.010071674361825,
+                -0.000134119836729951
+              ],
+              "weighted": false
+            }
+          ],
+          "mappedNativeBones": 36,
+          "meshAabbPosition": [
+            -0.00498031126335263,
+            0.00909462850540876,
+            -0.000916500925086439
+          ],
+          "meshAabbSize": [
+            0.00996062252670527,
+            0.00311616901308298,
+            0.00150430505163968
+          ],
+          "node": "NativeFistWeapon002",
+          "unresolvedWeightedBinds": 0,
+          "weightedBinds": 6,
+          "rawRootCoordinateDifferenceNotFitMetric": 0.012313349172473
+        }
+      ],
+      "originalNodesPromotedToBones": [],
+      "sourceSkeletonScale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "targetBoneCount": 91,
+      "targetSkeletonScale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unchangedTracksRebound": 0
+    },
+    "material": {
+      "name": "Weapon_Fist_F1_25_2_Material",
+      "pathId": "-986205606595911152",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5763c013ee7717cb.wmv",
+      "serializedFile": "CAB-bb903b8f6eb9d41162809ce7c6636822",
+      "shader": {
+        "fileId": 1,
+        "pathId": "-2224870653762880750"
+      },
+      "savedProperties": {
+        "m_TexEnvs": [
+          {
+            "Key": "_AnimMap",
+            "Value": {
+              "m_Texture": {
+                "fileId": 0,
+                "pathId": "0"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_BlockFxLineTex",
+            "Value": {
+              "m_Texture": {
+                "fileId": 0,
+                "pathId": "0"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_BloomMaskTex",
+            "Value": {
+              "m_Texture": {
+                "fileId": 0,
+                "pathId": "0"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_MainTex",
+            "Value": {
+              "m_Texture": {
+                "fileId": 2,
+                "pathId": "2822173566207682867"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_MainTex2",
+            "Value": {
+              "m_Texture": {
+                "fileId": 0,
+                "pathId": "0"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_MaskDisTex",
+            "Value": {
+              "m_Texture": {
+                "fileId": 0,
+                "pathId": "0"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_NoiseTex",
+            "Value": {
+              "m_Texture": {
+                "fileId": 0,
+                "pathId": "0"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_SPNoiseTex",
+            "Value": {
+              "m_Texture": {
+                "fileId": 0,
+                "pathId": "0"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_SPTex",
+            "Value": {
+              "m_Texture": {
+                "fileId": 0,
+                "pathId": "0"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          }
+        ],
+        "m_Ints": null,
+        "m_Floats": [
+          {
+            "Key": "_AlphaPosition",
+            "Value": 0
+          },
+          {
+            "Key": "_AnimLength",
+            "Value": 1
+          },
+          {
+            "Key": "_BlockFxAlphaClip",
+            "Value": 0
+          },
+          {
+            "Key": "_BlockFxClip",
+            "Value": 0
+          },
+          {
+            "Key": "_BlockFxLineIntensity",
+            "Value": 1
+          },
+          {
+            "Key": "_BloomFactor",
+            "Value": 1
+          },
+          {
+            "Key": "_DisAngle",
+            "Value": 0
+          },
+          {
+            "Key": "_DisColorScale",
+            "Value": 1
+          },
+          {
+            "Key": "_DissolveUseUV2",
+            "Value": 1
+          },
+          {
+            "Key": "_DitherAlpha",
+            "Value": 1
+          },
+          {
+            "Key": "_EOEmissionBloomFactor",
+            "Value": 1
+          },
+          {
+            "Key": "_EOEmissionScaler",
+            "Value": 1
+          },
+          {
+            "Key": "_Edge",
+            "Value": 0.2
+          },
+          {
+            "Key": "_EmissionBloomFactor",
+            "Value": 1
+          },
+          {
+            "Key": "_EmissionFactor",
+            "Value": 1
+          },
+          {
+            "Key": "_EmissionFactorFromTexToggle",
+            "Value": 1
+          },
+          {
+            "Key": "_EmissionOverride",
+            "Value": 0
+          },
+          {
+            "Key": "_EmissionScaler",
+            "Value": 1
+          },
+          {
+            "Key": "_EnableAnimationMap",
+            "Value": 0
+          },
+          {
+            "Key": "_FadeDistance",
+            "Value": 0.1
+          },
+          {
+            "Key": "_FadeOffset",
+            "Value": 0
+          },
+          {
+            "Key": "_IgnoreWeaponDarken",
+            "Value": 0
+          },
+          {
+            "Key": "_InvertDir",
+            "Value": 0
+          },
+          {
+            "Key": "_LengthWaysDis",
+            "Value": 0
+          },
+          {
+            "Key": "_LengthWaysDisBlend",
+            "Value": 0
+          },
+          {
+            "Key": "_LightArea",
+            "Value": 0.51
+          },
+          {
+            "Key": "_MaskDisTexScale",
+            "Value": 1
+          },
+          {
+            "Key": "_MaskOffsetSpeed",
+            "Value": 0
+          },
+          {
+            "Key": "_MaxOutlineZOffset",
+            "Value": 1
+          },
+          {
+            "Key": "_NoiseIntensity",
+            "Value": 5
+          },
+          {
+            "Key": "_OnlyUseMaskDis",
+            "Value": 0
+          },
+          {
+            "Key": "_Opaqueness",
+            "Value": 1
+          },
+          {
+            "Key": "_OpaquenessReduse",
+            "Value": 0
+          },
+          {
+            "Key": "_OutlineCamStart",
+            "Value": 1000
+          },
+          {
+            "Key": "_OutlineWidth",
+            "Value": 0.04
+          },
+          {
+            "Key": "_RGBias",
+            "Value": 0
+          },
+          {
+            "Key": "_RGBloomFactor",
+            "Value": 1
+          },
+          {
+            "Key": "_RGRatio",
+            "Value": 0.5
+          },
+          {
+            "Key": "_RGScale",
+            "Value": 1
+          },
+          {
+            "Key": "_RGShininess",
+            "Value": 1
+          },
+          {
+            "Key": "_RimGlow",
+            "Value": 0
+          },
+          {
+            "Key": "_SPIntensity",
+            "Value": 0.5
+          },
+          {
+            "Key": "_SPNoiseScaler",
+            "Value": 1
+          },
+          {
+            "Key": "_SPOpaqueness",
+            "Value": 1
+          },
+          {
+            "Key": "_SPTransition",
+            "Value": 0
+          },
+          {
+            "Key": "_SPTransitionBloomFactor",
+            "Value": 1
+          },
+          {
+            "Key": "_SPTransitionEmissionScaler",
+            "Value": 1
+          },
+          {
+            "Key": "_Scale",
+            "Value": 0.01
+          },
+          {
+            "Key": "_Shininess",
+            "Value": 10
+          },
+          {
+            "Key": "_SmoothRange",
+            "Value": 0.5
+          },
+          {
+            "Key": "_Soft",
+            "Value": 0
+          },
+          {
+            "Key": "_SpecMulti",
+            "Value": 0.1
+          },
+          {
+            "Key": "_SpecialState",
+            "Value": 0
+          },
+          {
+            "Key": "_Stencil",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilComp",
+            "Value": 8
+          },
+          {
+            "Key": "_StencilOp",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilOption",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilReadMask",
+            "Value": 255
+          },
+          {
+            "Key": "_StencilWriteMask",
+            "Value": 0
+          },
+          {
+            "Key": "_TintColorEdge",
+            "Value": 0
+          },
+          {
+            "Key": "_TintColorPower",
+            "Value": 1
+          },
+          {
+            "Key": "_UseCameraFade",
+            "Value": 0
+          },
+          {
+            "Key": "_UseMainTexAlpha",
+            "Value": 0
+          },
+          {
+            "Key": "_UsingBloomMask",
+            "Value": 0
+          },
+          {
+            "Key": "_UsingDitherAlpha",
+            "Value": 0
+          },
+          {
+            "Key": "_VertexAlphaFactor",
+            "Value": 0
+          }
+        ],
+        "m_Colors": [
+          {
+            "Key": "_BlockFxLineColor",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_ClipPlane",
+            "Value": {
+              "R": 0,
+              "G": 0,
+              "B": 0,
+              "A": 0
+            }
+          },
+          {
+            "Key": "_Color",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_DisColor",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_EmissionTintColor",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_EnvColor",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_LightSpecColor",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_MainColor",
+            "Value": {
+              "R": 1,
+              "G": 0.9934077,
+              "B": 0.9044118,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_MaskTillingOffset",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 0,
+              "A": 0
+            }
+          },
+          {
+            "Key": "_NoiseTillingOffset",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 0,
+              "A": 0
+            }
+          },
+          {
+            "Key": "_OutlineColor",
+            "Value": {
+              "R": 0,
+              "G": 0,
+              "B": 0,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_RGColor",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_SPNoiseOffsetSpeed",
+            "Value": {
+              "R": 0,
+              "G": 0,
+              "B": 0,
+              "A": 0
+            }
+          },
+          {
+            "Key": "_SPOutlineColor",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_SPTransitionColor",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_ShadowMultColor",
+            "Value": {
+              "R": 0.6841479,
+              "G": 0.695985,
+              "B": 0.8161765,
+              "A": 1
+            }
+          }
+        ]
+      },
+      "raw": {
+        "m_Shader": {
+          "fileId": 1,
+          "pathId": "-2224870653762880750"
+        },
+        "m_SavedProperties": {
+          "m_TexEnvs": "List`1",
+          "m_Ints": null,
+          "m_Floats": "List`1",
+          "m_Colors": "List`1"
+        },
+        "m_Name": "Weapon_Fist_F1_25_2_Material",
+        "m_PathID": -986205606595911152,
+        "version": [
+          2017,
+          4,
+          18,
+          1,
+          2
+        ],
+        "platform": 19,
+        "type": 21,
+        "serializedType": {
+          "classID": 21,
+          "m_IsStrippedType": false,
+          "m_ScriptTypeIndex": -1,
+          "m_Type": null,
+          "m_ScriptID": null,
+          "m_OldTypeHash": "Byte[]",
+          "m_TypeDependencies": null,
+          "m_KlassName": null,
+          "m_NameSpace": null,
+          "m_AsmName": null
+        },
+        "byteSize": 2592,
+        "Name": "Weapon_Fist_F1_25_2_Material"
+      }
+    },
+    "sourceRendererEvidence": "../hi3-fuhua-extract\\exports\\c2-arm-repair\\source-renderers.json",
+    "reason": "Original Weapon001 renderer has a null mesh and references this original equipment material. Body CommonEmpty surfaces intentionally leave forearms/hands to the equipped fists. Blood moon original Node3D equipment-bone hierarchy is promoted into Skin-compatible Skeleton bones; original local transforms and 433 original tracks retained."
+  },
+  "equipmentValidation": {
+    "sourceGeometryWeightsAndWeightedInverseBinds": "unaltered",
+    "existingBodyPoseMaxError": 0.0,
+    "sourceEquipmentCurveRestMaxPositionError": 2.912e-11,
+    "nativeGeometryCrossSections": 120,
+    "rayHitsPerSection": 24,
+    "rayCountPerSection": 24,
+    "sourceVisibilityEvidence": "../hi3-fuhua-extract/exports/c2-arm-visibility-audit/report.json"
+  }
+}

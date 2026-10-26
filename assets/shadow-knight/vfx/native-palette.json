@@ -1,0 +1,39 @@
+{
+  "default": {
+    "lightning": [
+      0.0,
+      0.6705882549285889,
+      1.0,
+      1.0
+    ],
+    "fist": [
+      1.0,
+      0.724,
+      0.0,
+      0.498
+    ],
+    "sourceLightningNode": "Avatar_Fuka_NL_Attack_UltraThunder/Electro (13)"
+  },
+  "blood_moon": {
+    "lightning": [
+      1.0,
+      0.245,
+      0.176,
+      0.863
+    ],
+    "lightningMin": [
+      0.784,
+      0.138,
+      0.182,
+      0.686
+    ],
+    "flash": [
+      1.0,
+      0.118,
+      0.118,
+      0.502
+    ],
+    "sourceLightningNode": "Avatar_Fuka_NL_Attack_UltraThunder_Dress01/dmx (7)"
+  },
+  "note": "Rounded display palette; full source precision and complete fields are in native-particle-reference.json."
+}

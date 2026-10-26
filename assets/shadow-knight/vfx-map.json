@@ -1,0 +1,13 @@
+{
+  "trail": "res://assets/shadow-knight/vfx/trail_2_new.png",
+  "lightning": "res://assets/shadow-knight/vfx/SFX_Lightning_501.png",
+  "ring": "res://assets/shadow-knight/vfx/circle.png",
+  "impact": "res://assets/shadow-knight/vfx/Spark_3.png",
+  "glow": "res://assets/shadow-knight/vfx/Fx_Glow_01.png",
+  "smoke": "res://assets/shadow-knight/vfx/ground_explode_smoke.png",
+  "sourceMaterials": "res://assets/shadow-knight/vfx/original-material-colors.json",
+  "sourceManifest": "res://assets/shadow-knight/vfx/source-manifest.json",
+  "particleSource": "res://assets/shadow-knight/vfx/native-particle-reference.json",
+  "note": "NL and NL_Dress01 share several grayscale source textures; native particle colors are recorded separately.",
+  "lightningMask": 0
+}

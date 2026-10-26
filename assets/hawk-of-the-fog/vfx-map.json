@@ -1,0 +1,10 @@
+{
+  "trail": "res://assets/hawk-of-the-fog/vfx/SFX_Trail_314.png",
+  "lightning": "res://assets/hawk-of-the-fog/vfx/SFX_Ray_503.png",
+  "impact": "res://assets/hawk-of-the-fog/vfx/SFX_Ray_304.png",
+  "glow": "res://assets/hawk-of-the-fog/vfx/Glow_Ball05.png",
+  "smoke": "res://assets/hawk-of-the-fog/vfx/SFX_Smoke_504.png",
+  "burstTrail": "res://assets/hawk-of-the-fog/vfx/SFX_Trail_318.png",
+  "particle": "res://assets/hawk-of-the-fog/vfx/SFX_Particle_507.png",
+  "line": "res://assets/hawk-of-the-fog/vfx/Line_08.png"
+}

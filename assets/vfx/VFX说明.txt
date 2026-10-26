@@ -1,0 +1,27 @@
+本目录相关特效为本demo自行编写的解析式shader和合并网格粒子。
+没有使用未核验的原游戏VFX纹理，不代表原版特效或整套演出复刻。
+
+接口：
+handle_event(data) / tick(delta) / clear()
+update_fighters(player: Dictionary, enemies: Array)
+set_palette(Color)
+
+事件：attack、hit、ultHit、parry、block、dodge、evade、guardBreak、
+ultimate、ability、bossPhase、enemyDown、spawnStage、reset。
+sourceId用于出招者跟随。预警与寸劲蓄力读取stateTime/windup，
+攻击被打断时取消；tick(0)冻结所有已生成特效与待触发提示。
+普通拳脚弧线在实际接触前35ms出现，命中爆点由实际hit事件触发。
+telegraphColor=amber对应金色提示，red对应红色提示。
+
+表现：定向短弧、青金爆点、水墨碎片、重击墨晕和地面波、
+闪避条带残迹、弹反交叉闪光、寸劲范围波、Boss阶段红色爆发、
+太极墨轮与大招金光落点。地面提示与背后墨轮避免厚圈遮脸。
+
+性能：最多112个同时存在的特效网格；每一批碎片合并为一个网格，
+不为每个碎片创建节点，不使用compute、屏幕读取或glow。
+同类音效45ms内合并一次。暂停、source跟随、打断取消、技能接触、
+资源上限与clear有独立检查；Compatibility原生GPU已验证shader编译。
+最终WebGL画面与整体战斗节奏仍由主工程网页验收。
+
+检查：Godot --headless --path 工程 --script res://assets/vfx/effects_check.gd
+加 -- --render 可生成八种shader形状与粒子的校验图。

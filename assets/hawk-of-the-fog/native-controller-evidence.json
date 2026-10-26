@@ -1,0 +1,1687 @@
+{
+  "sourceController": "Avatar_Fuka_Common_AniController_BattleY",
+  "exportGraphFormat": "AnimeStudio animator graph 1",
+  "frameRate": 30.0,
+  "states": [
+    {
+      "name": "C1_AF01_B_3_BS",
+      "path": "BaseLayer.AttackSubS.AttackNormal.Style_1_Subs.C1_AF01_B_3_BS",
+      "clip": "Avatar_Fuka_Ani_FK_Artifact_ATK_B3_BS",
+      "clipUnloaded": false,
+      "frames": 53,
+      "loop": false,
+      "speed": 1.5,
+      "blendTree": false,
+      "transitions": [
+        {
+          "to": {
+            "state": 64
+          },
+          "conditions": [],
+          "exitFrame": 40,
+          "blendFrames": 0,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        }
+      ]
+    },
+    {
+      "name": "C1_AF01_B_3",
+      "path": "BaseLayer.AttackSubS.AttackNormal.Style_1_Subs.C1_AF01_B_3",
+      "clip": "Avatar_Fuka_Ani_FK_Artifact_ATK__Hidden",
+      "clipUnloaded": false,
+      "frames": 53,
+      "loop": false,
+      "speed": 1.0,
+      "blendTree": false,
+      "transitions": [
+        {
+          "to": {
+            "state": 65
+          },
+          "conditions": [],
+          "exitFrame": 53,
+          "blendFrames": 0,
+          "offsetNormalized": 0.07170261,
+          "canTransitionToSelf": true
+        }
+      ]
+    },
+    {
+      "name": "C1_AF01_B_3_AS",
+      "path": "BaseLayer.AttackSubS.AttackNormal.Style_1_Subs.C1_AF01_B_3_AS",
+      "clip": "Avatar_Fuka_Ani_FK_Artifact_ATK_B3_AS",
+      "clipUnloaded": false,
+      "frames": 118,
+      "loop": false,
+      "speed": 1.0,
+      "blendTree": false,
+      "transitions": [
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "TriggerHit",
+              "mode": "If",
+              "value": 0.0
+            },
+            {
+              "param": "IsDead",
+              "mode": "IfNot",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "IsDead",
+              "mode": "IfNot",
+              "value": 0.0
+            },
+            {
+              "param": "TriggerSwitchOut",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "TriggerSkill_1",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "state": 74
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.22
+            },
+            {
+              "param": "NormalizedTime",
+              "mode": "Less",
+              "value": 0.45
+            },
+            {
+              "param": "TriggerHoldSkill",
+              "mode": "If",
+              "value": 0.0
+            },
+            {
+              "param": "CanUseUltra_FK_AF01",
+              "mode": "If",
+              "value": 0.0
+            },
+            {
+              "param": "ExtraComboRoute_MS69",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 0,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "state": 67
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.22
+            },
+            {
+              "param": "NormalizedTime",
+              "mode": "Less",
+              "value": 0.45
+            },
+            {
+              "param": "TriggerAttack",
+              "mode": "If",
+              "value": 0.0
+            },
+            {
+              "param": "_AttackIndex",
+              "mode": "Equals",
+              "value": 2.0
+            }
+          ],
+          "blendFrames": 2,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "state": 66
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.22
+            },
+            {
+              "param": "NormalizedTime",
+              "mode": "Less",
+              "value": 0.45
+            },
+            {
+              "param": "TriggerAttack",
+              "mode": "If",
+              "value": 0.0
+            },
+            {
+              "param": "_AttackIndex",
+              "mode": "Equals",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.45
+            },
+            {
+              "param": "IsMove",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 5,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [],
+          "exitFrame": 111,
+          "blendFrames": 5,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        }
+      ]
+    },
+    {
+      "name": "C1_AF01_C_1",
+      "path": "BaseLayer.AttackSubS.AttackNormal.Style_1_Subs.C1_AF01_C_1",
+      "clip": "Avatar_Fuka_Ani_FK_Artifact_ATK_C1",
+      "clipUnloaded": false,
+      "frames": 93,
+      "loop": false,
+      "speed": 1.0,
+      "blendTree": false,
+      "transitions": [
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "IsDead",
+              "mode": "IfNot",
+              "value": 0.0
+            },
+            {
+              "param": "TriggerHit",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "IsDead",
+              "mode": "IfNot",
+              "value": 0.0
+            },
+            {
+              "param": "TriggerSwitchOut",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "TriggerSkill_1",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.33
+            },
+            {
+              "param": "TriggerWeapon",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.33
+            },
+            {
+              "param": "TriggerAttack",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.38
+            },
+            {
+              "param": "IsMove",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 3,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [],
+          "exitFrame": 87,
+          "blendFrames": 3,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        }
+      ]
+    },
+    {
+      "name": "C1_AF01_C_2",
+      "path": "BaseLayer.AttackSubS.AttackNormal.Style_1_Subs.C1_AF01_C_2",
+      "clip": "Avatar_Fuka_Ani_FK_Artifact_ATK_C2",
+      "clipUnloaded": false,
+      "frames": 120,
+      "loop": false,
+      "speed": 1.0,
+      "blendTree": false,
+      "transitions": [
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "IsDead",
+              "mode": "IfNot",
+              "value": 0.0
+            },
+            {
+              "param": "TriggerHit",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "TriggerSwitchOut",
+              "mode": "If",
+              "value": 0.0
+            },
+            {
+              "param": "IsDead",
+              "mode": "IfNot",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "TriggerSkill_1",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "state": 74
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.38
+            },
+            {
+              "param": "TriggerHoldSkill",
+              "mode": "If",
+              "value": 0.0
+            },
+            {
+              "param": "CanUseUltra_FK_AF01",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 0,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.52
+            },
+            {
+              "param": "TriggerWeapon",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.52
+            },
+            {
+              "param": "CanUseUltra",
+              "mode": "IfNot",
+              "value": 0.0
+            },
+            {
+              "param": "TriggerHoldSkill",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.52
+            },
+            {
+              "param": "TriggerAttack",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.58
+            },
+            {
+              "param": "IsMove",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 2,
+          "offsetNormalized": 0.09106231,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [],
+          "exitFrame": 113,
+          "blendFrames": 3,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        }
+      ]
+    },
+    {
+      "name": "C1_AF01_B_1_Chase",
+      "path": "BaseLayer.AttackSubS.AttackNormal.Style_1_Subs.C1_AF01_B_1_Chase",
+      "clip": "Avatar_Fuka_Ani_FK_Artifact_ATK_B1_02",
+      "clipUnloaded": false,
+      "frames": 125,
+      "loop": false,
+      "speed": 1.3,
+      "blendTree": false,
+      "transitions": [
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "IsDead",
+              "mode": "IfNot",
+              "value": 0.0
+            },
+            {
+              "param": "TriggerHit",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "IsDead",
+              "mode": "IfNot",
+              "value": 0.0
+            },
+            {
+              "param": "TriggerSwitchOut",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "TriggerSkill_1",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "state": 72
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.24
+            },
+            {
+              "param": "_AttackIndex",
+              "mode": "Equals",
+              "value": 2.0
+            },
+            {
+              "param": "TriggerAttack",
+              "mode": "If",
+              "value": 0.0
+            },
+            {
+              "param": "Style_AttackIndex",
+              "mode": "Equals",
+              "value": 1.0
+            },
+            {
+              "param": "C1_Artifact",
+              "mode": "Equals",
+              "value": 1.0
+            },
+            {
+              "param": "ExtraComboRoute_MS69",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.037876178,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.24
+            },
+            {
+              "param": "TriggerWeapon",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.24
+            },
+            {
+              "param": "TriggerAttack",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 2,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.3
+            },
+            {
+              "param": "IsMove",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 3,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [],
+          "exitFrame": 118,
+          "blendFrames": 3,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        }
+      ]
+    },
+    {
+      "name": "C1_AF01_B_1_3",
+      "path": "BaseLayer.AttackSubS.AttackNormal.Style_1_Subs.C1_AF01_B_1_3",
+      "clip": "Avatar_Fuka_Ani_FK_Artifact_ATK_B1_01",
+      "clipUnloaded": false,
+      "frames": 112,
+      "loop": false,
+      "speed": 1.3,
+      "blendTree": false,
+      "transitions": [
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "IsDead",
+              "mode": "IfNot",
+              "value": 0.0
+            },
+            {
+              "param": "TriggerHit",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "TriggerSwitchOut",
+              "mode": "If",
+              "value": 0.0
+            },
+            {
+              "param": "IsDead",
+              "mode": "IfNot",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "TriggerSkill_1",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "state": 68
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.23
+            },
+            {
+              "param": "_AttackIndex",
+              "mode": "Equals",
+              "value": 2.0
+            },
+            {
+              "param": "TriggerAttack",
+              "mode": "If",
+              "value": 0.0
+            },
+            {
+              "param": "C1_AF01_AllowChase",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 2,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.25
+            },
+            {
+              "param": "TriggerWeapon",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.35
+            },
+            {
+              "param": "TriggerAttack",
+              "mode": "If",
+              "value": 0.0
+            },
+            {
+              "param": "_AttackIndex",
+              "mode": "Equals",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.4
+            },
+            {
+              "param": "IsMove",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [],
+          "exitFrame": 107,
+          "blendFrames": 2,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        }
+      ]
+    },
+    {
+      "name": "C1_AF01_B_1_2",
+      "path": "BaseLayer.AttackSubS.AttackNormal.Style_1_Subs.C1_AF01_B_1_2",
+      "clip": "Avatar_Fuka_Ani_FK_Artifact_ATK_B1_01_02",
+      "clipUnloaded": false,
+      "frames": 100,
+      "loop": false,
+      "speed": 1.0,
+      "blendTree": false,
+      "transitions": [
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "IsDead",
+              "mode": "IfNot",
+              "value": 0.0
+            },
+            {
+              "param": "TriggerHit",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "TriggerSwitchOut",
+              "mode": "If",
+              "value": 0.0
+            },
+            {
+              "param": "IsDead",
+              "mode": "IfNot",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "TriggerSkill_1",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "state": 68
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.23
+            },
+            {
+              "param": "_AttackIndex",
+              "mode": "Equals",
+              "value": 2.0
+            },
+            {
+              "param": "TriggerAttack",
+              "mode": "If",
+              "value": 0.0
+            },
+            {
+              "param": "C1_AF01_AllowChase",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 2,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.25
+            },
+            {
+              "param": "TriggerWeapon",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.7
+            },
+            {
+              "param": "_AttackIndex",
+              "mode": "Equals",
+              "value": 2.0
+            },
+            {
+              "param": "TriggerAttack",
+              "mode": "If",
+              "value": 0.0
+            },
+            {
+              "param": "C1_AF01_AllowChase",
+              "mode": "IfNot",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.35
+            },
+            {
+              "param": "TriggerAttack",
+              "mode": "If",
+              "value": 0.0
+            },
+            {
+              "param": "_AttackIndex",
+              "mode": "Equals",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.4
+            },
+            {
+              "param": "IsMove",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 4,
+          "offsetNormalized": 0.103020124,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [],
+          "exitFrame": 95,
+          "blendFrames": 2,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        }
+      ]
+    },
+    {
+      "name": "C1_AF01_B_1_1",
+      "path": "BaseLayer.AttackSubS.AttackNormal.Style_1_Subs.C1_AF01_B_1_1",
+      "clip": "Avatar_Fuka_Ani_FK_Artifact_ATK_B1_01_01",
+      "clipUnloaded": false,
+      "frames": 94,
+      "loop": false,
+      "speed": 1.0,
+      "blendTree": false,
+      "transitions": [
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "IsDead",
+              "mode": "IfNot",
+              "value": 0.0
+            },
+            {
+              "param": "TriggerHit",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "TriggerSwitchOut",
+              "mode": "If",
+              "value": 0.0
+            },
+            {
+              "param": "IsDead",
+              "mode": "IfNot",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "TriggerSkill_1",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "state": 68
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.25
+            },
+            {
+              "param": "_AttackIndex",
+              "mode": "Equals",
+              "value": 2.0
+            },
+            {
+              "param": "TriggerAttack",
+              "mode": "If",
+              "value": 0.0
+            },
+            {
+              "param": "C1_AF01_AllowChase",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 2,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.25
+            },
+            {
+              "param": "TriggerWeapon",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "state": 70
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.25
+            },
+            {
+              "param": "TriggerAttack",
+              "mode": "If",
+              "value": 0.0
+            },
+            {
+              "param": "_AttackIndex",
+              "mode": "Equals",
+              "value": 2.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.27
+            },
+            {
+              "param": "TriggerAttack",
+              "mode": "If",
+              "value": 0.0
+            },
+            {
+              "param": "_AttackIndex",
+              "mode": "Equals",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.7
+            },
+            {
+              "param": "_AttackIndex",
+              "mode": "Equals",
+              "value": 2.0
+            },
+            {
+              "param": "TriggerAttack",
+              "mode": "If",
+              "value": 0.0
+            },
+            {
+              "param": "C1_AF01_AllowChase",
+              "mode": "IfNot",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.4
+            },
+            {
+              "param": "IsMove",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 4,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [],
+          "exitFrame": 90,
+          "blendFrames": 2,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        }
+      ]
+    },
+    {
+      "name": "C1_AF01_B_2",
+      "path": "BaseLayer.AttackSubS.AttackNormal.Style_1_Subs.C1_AF01_B_2",
+      "clip": "Avatar_Fuka_Ani_FK_Artifact_ATK_B2",
+      "clipUnloaded": false,
+      "frames": 102,
+      "loop": false,
+      "speed": 1.0,
+      "blendTree": false,
+      "transitions": [
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "IsDead",
+              "mode": "IfNot",
+              "value": 0.0
+            },
+            {
+              "param": "TriggerHit",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "IsDead",
+              "mode": "IfNot",
+              "value": 0.0
+            },
+            {
+              "param": "TriggerSwitchOut",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "TriggerSkill_1",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.26
+            },
+            {
+              "param": "TriggerWeapon",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 2,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "state": 64
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.26
+            },
+            {
+              "param": "_AttackIndex",
+              "mode": "Equals",
+              "value": 2.0
+            },
+            {
+              "param": "TriggerAttack",
+              "mode": "If",
+              "value": 0.0
+            },
+            {
+              "param": "Style_AttackIndex",
+              "mode": "Equals",
+              "value": 1.0
+            },
+            {
+              "param": "C1_Artifact",
+              "mode": "Equals",
+              "value": 1.0
+            },
+            {
+              "param": "ExtraComboRoute_MS69",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.26
+            },
+            {
+              "param": "TriggerAttack",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 2,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.48
+            },
+            {
+              "param": "IsMove",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 4,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [],
+          "exitFrame": 99,
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        }
+      ]
+    },
+    {
+      "name": "C1_AF01_Ultra_AS",
+      "path": "BaseLayer.AttackSubS.AttackNormal.Style_1_Subs.C1_AF01_Ultra_AS",
+      "clip": "Avatar_Fuka_Ani_FK_Artifact_Ultra_AS",
+      "clipUnloaded": false,
+      "frames": 164,
+      "loop": false,
+      "speed": 1.5,
+      "blendTree": false,
+      "transitions": [
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "TriggerHit",
+              "mode": "If",
+              "value": 0.0
+            },
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 0,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.0
+            },
+            {
+              "param": "TriggerSwitchOut",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.0
+            },
+            {
+              "param": "TriggerSkill_1",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.21
+            },
+            {
+              "param": "TriggerWeapon",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.21
+            },
+            {
+              "param": "TriggerAttack",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 1,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [
+            {
+              "param": "NormalizedTime",
+              "mode": "Greater",
+              "value": 0.38
+            },
+            {
+              "param": "IsMove",
+              "mode": "If",
+              "value": 0.0
+            }
+          ],
+          "blendFrames": 4,
+          "offsetNormalized": 0.15841378,
+          "canTransitionToSelf": true
+        },
+        {
+          "to": {
+            "selector": 21
+          },
+          "conditions": [],
+          "exitFrame": 156,
+          "blendFrames": 2,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        }
+      ]
+    },
+    {
+      "name": "C1_AF01_Ultra",
+      "path": "BaseLayer.AttackSubS.AttackNormal.Style_1_Subs.C1_AF01_Ultra",
+      "clip": "Avatar_Fuka_Ani_FK_Artifact_ATK__Hidden",
+      "clipUnloaded": false,
+      "frames": 53,
+      "loop": false,
+      "speed": 0.75,
+      "blendTree": false,
+      "transitions": [
+        {
+          "to": {
+            "state": 73
+          },
+          "conditions": [],
+          "exitFrame": 40,
+          "blendFrames": 0,
+          "offsetNormalized": 0.0,
+          "canTransitionToSelf": true
+        }
+      ]
+    }
+  ],
+  "interpretation": "These are original animator states, not restored gameplay. Damage scripts were not recovered. Ultra_AS is the visible landing/recovery take, state speed1.5; the side-view demo may use source-time slow framing."
+}

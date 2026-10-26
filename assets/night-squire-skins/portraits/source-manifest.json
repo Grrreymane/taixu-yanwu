@@ -1,0 +1,115 @@
+{
+  "sourceReadOnly": true,
+  "source": "Native Texture2D exports from installed Honkai Impact 3 9.1.0 client",
+  "imageModification": "None; exported PNG bytes, alpha and dimensions retained",
+  "localNameEvidenceLimit": "No readable AvatarDressData localized name table found in the existing client index. Internal code/model/portrait mapping is from local assets; Chinese names are cross-checked against official announcements and contemporary outfit lists.",
+  "portraits": [
+    {
+      "name": "FukaC3_03_01",
+      "pathId": "5791485673066987375",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\909d2cb44c90c887.wmv",
+      "cab": "CAB-a8dff73781bc825d52d5a35d63809d2a",
+      "rawSHA256": "00be185e6d97e0b4b6693e5d062e0fcc2075df6c15c625c74fb0fdfde95ee53c",
+      "width": 148,
+      "height": 260,
+      "format": "RGBA32",
+      "ok": true,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\c3-all-skins-portraits\\original\\textures\\FukaC3_03_01_5791485673066987375\\FukaC3_03_01.png",
+          "sha256": "e0073a1c3be97340d66a69bb3139162cd395d6c462f3f32775dc063c1e9a2640"
+        }
+      ],
+      "appearanceId": "black_butler",
+      "localizedName": "黑执事",
+      "internalCode": "C3_03_01",
+      "modelPrefab": "assets/asbres/entities/avatar/fuka_c3_nd/dress_fuka_c3_03_01/avatar.prefab",
+      "projectPath": "res://assets/night-squire-skins/portraits/FukaC3_03_01.png",
+      "sha256": "e0073a1c3be97340d66a69bb3139162cd395d6c462f3f32775dc063c1e9a2640",
+      "visualMatch": "Original 148x260 portrait independently viewed: black/gold tailcoat; green travel shirt; black/gold sleeveless top and white shorts respectively. Corresponds to local model texture identity.",
+      "localizedNameReference": "https://m.ali213.net/news/gl2008/478651.html"
+    },
+    {
+      "name": "FukaC3_04_01",
+      "pathId": "3939448748297127424",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\909d2cb44c90c887.wmv",
+      "cab": "CAB-3bafd87414fc10d442d6f768a7568b2d",
+      "rawSHA256": "833b9ade1637677d50dc0c95058607017fff42b3f177f5d79b4ffa32935a1e5d",
+      "width": 148,
+      "height": 260,
+      "format": "RGBA32",
+      "ok": true,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\c3-all-skins-portraits\\original\\textures\\FukaC3_04_01_3939448748297127424\\FukaC3_04_01.png",
+          "sha256": "ac8a5d2686c344610709bd918fde4836ba66e2cb48af5aa0465378e045967bdd"
+        }
+      ],
+      "appearanceId": "spring_traveler",
+      "localizedName": "春风之旅",
+      "internalCode": "C3_04_01",
+      "modelPrefab": "assets/asbres/entities/avatar/fuka_c3_nd/dress_01/avatar.prefab",
+      "projectPath": "res://assets/night-squire-skins/portraits/FukaC3_04_01.png",
+      "sha256": "ac8a5d2686c344610709bd918fde4836ba66e2cb48af5aa0465378e045967bdd",
+      "visualMatch": "Original 148x260 portrait independently viewed: black/gold tailcoat; green travel shirt; black/gold sleeveless top and white shorts respectively. Corresponds to local model texture identity.",
+      "localizedNameReference": "https://www.bilibili.com/video/BV1gW411A78K/"
+    },
+    {
+      "name": "FukaC3_04_02",
+      "pathId": "-6564700743932188537",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\909d2cb44c90c887.wmv",
+      "cab": "CAB-3e708a20177c3313d0335d22bbd8e080",
+      "rawSHA256": "a411fd8bb3c0d37b9acd825ab594ac24e0e3e685878cc95b53d1e05926b906be",
+      "width": 148,
+      "height": 260,
+      "format": "RGBA32",
+      "ok": true,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\c3-all-skins-portraits\\original\\textures\\FukaC3_04_02_-6564700743932188537\\FukaC3_04_02.png",
+          "sha256": "adfd61192fc5c91847ab47bd6eddccad0200850a9afaeb1570870f9d69b743ef"
+        }
+      ],
+      "appearanceId": "xuanyi_sushang",
+      "localizedName": "玄衣素裳",
+      "internalCode": "C3_04_02",
+      "modelPrefab": "assets/asbres/entities/avatar/fuka_c3_nd/dress_02/avatar.prefab",
+      "projectPath": "res://assets/night-squire-skins/portraits/FukaC3_04_02.png",
+      "sha256": "adfd61192fc5c91847ab47bd6eddccad0200850a9afaeb1570870f9d69b743ef",
+      "visualMatch": "Original 148x260 portrait independently viewed: black/gold tailcoat; green travel shirt; black/gold sleeveless top and white shorts respectively. Corresponds to local model texture identity.",
+      "localizedNameReference": "https://www.taptap.cn/moment/108626431235328659"
+    }
+  ],
+  "wardrobe": [
+    {
+      "id": "default",
+      "name": "原装",
+      "code": "C3_ND",
+      "portrait": "res://assets/ui/portraits/FukaC3.png"
+    },
+    {
+      "id": "black_butler",
+      "name": "黑执事",
+      "code": "C3_03_01",
+      "portrait": "res://assets/night-squire-skins/portraits/FukaC3_03_01.png"
+    },
+    {
+      "id": "spring_traveler",
+      "name": "春风之旅",
+      "code": "C3_04_01",
+      "portrait": "res://assets/night-squire-skins/portraits/FukaC3_04_01.png"
+    },
+    {
+      "id": "xuanyi_sushang",
+      "name": "玄衣素裳",
+      "code": "C3_04_02",
+      "portrait": "res://assets/night-squire-skins/portraits/FukaC3_04_02.png"
+    },
+    {
+      "id": "autumn_leaves",
+      "name": "红叶知秋",
+      "code": "C3_04_03",
+      "portrait": "res://assets/ui/portraits/FukaC3_04_03.png"
+    }
+  ]
+}

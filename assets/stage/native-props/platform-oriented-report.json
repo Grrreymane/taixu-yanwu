@@ -1,0 +1,20 @@
+{
+	"bottomY": -2.65503263473511,
+	"godotEulerDegrees": "(-83.00002, 150.0, -86.00005)",
+	"meshUnmodified": true,
+	"originalQuaternion": {
+		"W": 0.57827604,
+		"X": -0.6188082,
+		"Y": -0.41212556,
+		"Z": -0.33589566
+	},
+	"scene": "res://assets/stage/native-props/PlatformOriented.scn",
+	"size": [
+		6.42123699188232,
+		2.65503263473511,
+		4.71169662475586
+	],
+	"source": "StonePlatform.scn",
+	"sourceWorldBasisApplied": true,
+	"topY": 0
+}

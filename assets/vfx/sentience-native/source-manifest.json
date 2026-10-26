@@ -1,0 +1,5514 @@
+{
+  "schemaVersion": 1,
+  "character": "Herrscher of Sentience / C6_FL",
+  "game": "Honkai Impact 3rd",
+  "clientVersion": "9.1.0",
+  "sourceReadOnly": true,
+  "selection": "20 exact assets/asbres/effect/avatarfuka/fl/ prefabs; excludes rogue variants",
+  "sourceDirectory": "../hi3-fuhua-extract\\exports\\sentience-native-vfx",
+  "textures": [
+    {
+      "name": "SFX_Icon_602",
+      "pathId": "2926833977770395452",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\edd52944ad12f7a3.wmv",
+      "cab": "CAB-1154f0e29a3131a3aa67fcbf4c6329cd",
+      "rawSHA256": "27f93a77e45649c189c3449024962a08c93cd8b2654e3f6e363f92e6b9aa73bc",
+      "width": 256,
+      "height": 256,
+      "format": "DXT5",
+      "ok": true,
+      "files": [
+        {
+          "path": "res://assets/vfx/sentience-native/SFX_Icon_602.png",
+          "bytes": 30045,
+          "sha256": "7934359c8d5c5b79b566cef308adcedea8346ac4c6432aa8dc933e9505fe5871"
+        }
+      ],
+      "rgbaExtrema": [
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ]
+      ]
+    },
+    {
+      "name": "SFX_Icon_603",
+      "pathId": "5254210020308379039",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\edd52944ad12f7a3.wmv",
+      "cab": "CAB-0407b54923af5cf8c152a24e3a0ec767",
+      "rawSHA256": "dd34bc75575710061de7f0c10cc89b756b22af5b86328dfef09b3d785b3296d2",
+      "width": 256,
+      "height": 256,
+      "format": "DXT5",
+      "ok": true,
+      "files": [
+        {
+          "path": "res://assets/vfx/sentience-native/SFX_Icon_603.png",
+          "bytes": 39803,
+          "sha256": "cd648c77d1a92bfcc5db9e9c0fa8b7597754acb9b77d23a8ceb37e461d07a3f3"
+        }
+      ],
+      "rgbaExtrema": [
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ]
+      ]
+    },
+    {
+      "name": "SFX_Icon_604",
+      "pathId": "2694270781629169575",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\edd52944ad12f7a3.wmv",
+      "cab": "CAB-8cbdb14f8d882e88a521d275b5810414",
+      "rawSHA256": "998453afafbe3f67ea866ecfb16649aba6d5944d5eeeaaca6f562607e2bf40a3",
+      "width": 256,
+      "height": 256,
+      "format": "DXT5",
+      "ok": true,
+      "files": [
+        {
+          "path": "res://assets/vfx/sentience-native/SFX_Icon_604.png",
+          "bytes": 25583,
+          "sha256": "89f4658b3a7439ddd207069e34bec6cad110b74520a1e42ee58df91d0b7d0343"
+        }
+      ],
+      "rgbaExtrema": [
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ]
+      ]
+    },
+    {
+      "name": "SFX_BladeTrail_603",
+      "pathId": "-7589987788505749965",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a4d0e30ddf017f83.wmv",
+      "cab": "CAB-86a9bf90403345bf41555a84ab081661",
+      "rawSHA256": "5ac30e510d5efdc358d4ccc8519b40a1a026b39c85d6996845e3e6631a8cfe2d",
+      "width": 256,
+      "height": 128,
+      "format": "DXT5",
+      "ok": true,
+      "files": [
+        {
+          "path": "res://assets/vfx/sentience-native/SFX_BladeTrail_603.png",
+          "bytes": 10669,
+          "sha256": "3a095c6f5808b53ef869059633c8bf30090876980fe6fa894a5c7f772c380ca7"
+        }
+      ],
+      "rgbaExtrema": [
+        [
+          66,
+          255
+        ],
+        [
+          65,
+          255
+        ],
+        [
+          66,
+          255
+        ],
+        [
+          0,
+          255
+        ]
+      ]
+    },
+    {
+      "name": "SFX_Trail_401",
+      "pathId": "-4964821822805812598",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a4d0e30ddf017f83.wmv",
+      "cab": "CAB-2c703fbe9b3d5128cf4dd46cabdf3b92",
+      "rawSHA256": "5dd871add1b943a5fc1af4376a67e0b82577557ba4d45f7f402d7ff0e76e3ca9",
+      "width": 512,
+      "height": 256,
+      "format": "DXT5",
+      "ok": true,
+      "files": [
+        {
+          "path": "res://assets/vfx/sentience-native/SFX_Trail_401.png",
+          "bytes": 81558,
+          "sha256": "28dc761761032d3836655e9197ca2de6ee0fb93342f29ba6a568334877aed277"
+        }
+      ],
+      "rgbaExtrema": [
+        [
+          0,
+          247
+        ],
+        [
+          0,
+          252
+        ],
+        [
+          0,
+          247
+        ],
+        [
+          0,
+          255
+        ]
+      ]
+    },
+    {
+      "name": "SFX_Ray_608_OP",
+      "pathId": "-4175178360037917731",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\0ea7d74c6a0696ff.wmv",
+      "cab": "CAB-b3a59e1acc82a2c31f01347bc9b2171c",
+      "rawSHA256": "f0f07331912ef3370d3b58cf8ea277bbd91232257e3a6d71d8e35676022dc33d",
+      "width": 512,
+      "height": 512,
+      "format": "DXT5",
+      "ok": true,
+      "files": [
+        {
+          "path": "res://assets/vfx/sentience-native/SFX_Ray_608_OP.png",
+          "bytes": 82650,
+          "sha256": "f745f2851748f411fb8dde46edb7061f19446aa666e01c98c9be274fa77fe210"
+        }
+      ],
+      "rgbaExtrema": [
+        [
+          161,
+          255
+        ],
+        [
+          162,
+          255
+        ],
+        [
+          161,
+          255
+        ],
+        [
+          0,
+          255
+        ]
+      ]
+    },
+    {
+      "name": "SFX_Flash_602",
+      "pathId": "-2844919945893895230",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5865b49c0ad352d3.wmv",
+      "cab": "CAB-7506d4fb7c727c9e8a5f1fbce1899880",
+      "rawSHA256": "1857ada886aa9d45b8c3ca18cb2b92b2dfa421d27144c11a18640d6d8f632eb8",
+      "width": 256,
+      "height": 256,
+      "format": "DXT5",
+      "ok": true,
+      "files": [
+        {
+          "path": "res://assets/vfx/sentience-native/SFX_Flash_602.png",
+          "bytes": 22235,
+          "sha256": "95ff82da0ad8219ffcdbb16be5ea91c30db7d7a155ec74c9d1f99e00bc93f1f5"
+        }
+      ],
+      "rgbaExtrema": [
+        [
+          16,
+          252
+        ],
+        [
+          16,
+          251
+        ],
+        [
+          16,
+          252
+        ],
+        [
+          0,
+          255
+        ]
+      ]
+    },
+    {
+      "name": "SFX_Lightning_603",
+      "pathId": "5586290384900058029",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\30ef5b95e3e48154.wmv",
+      "cab": "CAB-2141584622095f2e756a231f64ea9413",
+      "rawSHA256": "87660e46f726d7fa1e86c88b59f96e93f9823e5710b2402d0ae1d1e12514885b",
+      "width": 512,
+      "height": 128,
+      "format": "DXT5",
+      "ok": true,
+      "files": [
+        {
+          "path": "res://assets/vfx/sentience-native/SFX_Lightning_603.png",
+          "bytes": 55950,
+          "sha256": "44be871284befd52aaac79bd76a4a19fd542a816ff50ce7bf5e12219986e19f3"
+        }
+      ],
+      "rgbaExtrema": [
+        [
+          0,
+          247
+        ],
+        [
+          0,
+          251
+        ],
+        [
+          0,
+          247
+        ],
+        [
+          0,
+          254
+        ]
+      ]
+    },
+    {
+      "name": "SFX_Smoke_103",
+      "pathId": "-7978282087091911172",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+      "cab": "CAB-6e75c483da545afe4fb9687aa547a16f",
+      "rawSHA256": "88338de640a1e1063d8be2978fbe3230d158c5d5ef514395c8b041df3fffadca",
+      "width": 256,
+      "height": 256,
+      "format": "DXT5",
+      "ok": true,
+      "files": [
+        {
+          "path": "res://assets/vfx/sentience-native/SFX_Smoke_103.png",
+          "bytes": 110310,
+          "sha256": "c60098de7e0e09b644a921cd28794ba51752d30a4e2a594bb14b676e14b2a2b9"
+        }
+      ],
+      "rgbaExtrema": [
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          208
+        ]
+      ]
+    },
+    {
+      "name": "SFX_Nature_601_OP",
+      "pathId": "1865193020090699052",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\0ea7d74c6a0696ff.wmv",
+      "cab": "CAB-06dec29c51af26f749685fc878d7cc84",
+      "rawSHA256": "6ba68c30acae25a7b8de4cfc7e4e210d4014d846613efe42ea682844ae615f75",
+      "width": 256,
+      "height": 256,
+      "format": "DXT5",
+      "ok": true,
+      "files": [
+        {
+          "path": "res://assets/vfx/sentience-native/SFX_Nature_601_OP.png",
+          "bytes": 40711,
+          "sha256": "7b85d62413ca22ccded794e41a29deb5c55efc447c447b4042826d2093453e60"
+        }
+      ],
+      "rgbaExtrema": [
+        [
+          16,
+          255
+        ],
+        [
+          8,
+          109
+        ],
+        [
+          16,
+          148
+        ],
+        [
+          0,
+          255
+        ]
+      ]
+    },
+    {
+      "name": "SFX_Ground_615",
+      "pathId": "-1203090556392351210",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\318e546998b1902e.wmv",
+      "cab": "CAB-cd02aa976ee03c5abdb08dfb39a3ddaa",
+      "rawSHA256": "2b55adf4b8646958fa920874a7f2cc6cd0c33a323ea3c6ba15682b9b1b1fb7f2",
+      "width": 512,
+      "height": 512,
+      "format": "DXT5",
+      "ok": true,
+      "files": [
+        {
+          "path": "res://assets/vfx/sentience-native/SFX_Ground_615.png",
+          "bytes": 20107,
+          "sha256": "c6d799221278b2add197b9c5600015e109e90e8513c9867715ba14d235410f07"
+        }
+      ],
+      "rgbaExtrema": [
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          255,
+          255
+        ],
+        [
+          0,
+          255
+        ]
+      ]
+    },
+    {
+      "name": "SFX_Mask_619",
+      "pathId": "629016115391597989",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\318e546998b1902e.wmv",
+      "cab": "CAB-f2d4ce9d7f79529aae4628e9985d6ea8",
+      "rawSHA256": "7135c94e0aadc383cd554965fe42fca229258f9ccd19cfc5314249b379706b46",
+      "width": 256,
+      "height": 128,
+      "format": "DXT1",
+      "ok": true,
+      "files": [
+        {
+          "path": "res://assets/vfx/sentience-native/SFX_Mask_619.png",
+          "bytes": 18327,
+          "sha256": "93c1998b59ad9694e150d045fd8f57aa35eb2e11f61d4a2920e04fd3ff3d4a57"
+        }
+      ],
+      "rgbaExtrema": [
+        [
+          8,
+          233
+        ],
+        [
+          8,
+          239
+        ],
+        [
+          8,
+          239
+        ],
+        [
+          255,
+          255
+        ]
+      ]
+    },
+    {
+      "name": "SFX_Noise_611",
+      "pathId": "-8857281167378169340",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+      "cab": "CAB-3b2e8d704c1a9146bd2ad2579f1f72ec",
+      "rawSHA256": "f4d9c717652c2c11422a16dcba4e0af734df6b50b6c20ab9043650317e49e0ff",
+      "width": 128,
+      "height": 128,
+      "format": "DXT1",
+      "ok": true,
+      "files": [
+        {
+          "path": "res://assets/vfx/sentience-native/SFX_Noise_611.png",
+          "bytes": 17442,
+          "sha256": "b100cb6856fe9b0956b7c65d98757acd7cae9697427e652f5b2d473eeccc7f5b"
+        }
+      ],
+      "rgbaExtrema": [
+        [
+          33,
+          181
+        ],
+        [
+          32,
+          182
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          255,
+          255
+        ]
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "name": "SFX_Nature_601_OP_Diss_801",
+      "pathId": "2738093185511203050",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\0ea7d74c6a0696ff.wmv",
+      "cab": "CAB-4da29e324e220b057ddcdeac2a0a330e",
+      "rawSHA256": "d2c52970da4a8407958a5ad9c021f2a62b2c39831ae1a44958841fc430814238",
+      "shader": {
+        "cab": "cab-cd3e9d02498e16eaae5f45ba11677361",
+        "pathId": "2084134656227909847",
+        "name": "",
+        "type": "NamedObject",
+        "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\1c6c818740017e75.wmv",
+        "unresolved": false
+      },
+      "savedProperties": {
+        "m_TexEnvs": [
+          {
+            "Key": "_DisTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 3,
+                "pathId": "-6022823312752954894"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 0.3
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": -0.4
+              }
+            }
+          },
+          {
+            "Key": "_MainSmokeTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 1,
+                "pathId": "1865193020090699052"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_MaskTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 0,
+                "pathId": "0"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_NoiseTex",
+            "Value": {
+              "m_Texture": {
+                "fileId": 0,
+                "pathId": "0"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          }
+        ],
+        "m_Ints": null,
+        "m_Floats": [
+          {
+            "Key": "_Alpha",
+            "Value": 0
+          },
+          {
+            "Key": "_Alpham",
+            "Value": 0
+          },
+          {
+            "Key": "_AlwaysOnTop",
+            "Value": 4
+          },
+          {
+            "Key": "_Cull",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthBlendType",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthCt",
+            "Value": 0.5
+          },
+          {
+            "Key": "_DisTexG_Switch",
+            "Value": 0
+          },
+          {
+            "Key": "_EdgeBrightness",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeContrast",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeEffectCol",
+            "Value": 0
+          },
+          {
+            "Key": "_NoiseScale",
+            "Value": 0
+          },
+          {
+            "Key": "_NoiseX",
+            "Value": 0
+          },
+          {
+            "Key": "_NoiseY",
+            "Value": 0
+          },
+          {
+            "Key": "_Rim",
+            "Value": 0
+          },
+          {
+            "Key": "_Rim_Switch",
+            "Value": 0
+          },
+          {
+            "Key": "_SmokeBrightness",
+            "Value": 4.07
+          },
+          {
+            "Key": "_Smoothstep",
+            "Value": 0.5
+          },
+          {
+            "Key": "_Stencil",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilComp",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilOp",
+            "Value": 0
+          },
+          {
+            "Key": "_UseDepth",
+            "Value": 0
+          }
+        ],
+        "m_Colors": [
+          {
+            "Key": "_DisUvG",
+            "Value": {
+              "R": 0,
+              "G": 0,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_DisUvR",
+            "Value": {
+              "R": 0,
+              "G": 0,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_EdgeLight",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_RimColor",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 0
+            }
+          }
+        ]
+      },
+      "textureSlots": [
+        {
+          "slot": "_DisTexture",
+          "scale": {
+            "X": 1,
+            "Y": 0.3
+          },
+          "offset": {
+            "X": 0,
+            "Y": -0.4
+          },
+          "texture": {
+            "cab": "cab-ceee5dff3346e85276210b51ba4afe93",
+            "pathId": "-6022823312752954894",
+            "name": "SFX_Mask_608",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\318e546998b1902e.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_MainSmokeTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-06dec29c51af26f749685fc878d7cc84",
+            "pathId": "1865193020090699052",
+            "name": "SFX_Nature_601_OP",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\0ea7d74c6a0696ff.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_MaskTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": null
+        },
+        {
+          "slot": "_NoiseTex",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": null
+        }
+      ],
+      "rawMetadata": {
+        "m_Shader": {
+          "fileId": 2,
+          "pathId": "2084134656227909847"
+        },
+        "m_SavedProperties": {
+          "m_TexEnvs": "List`1",
+          "m_Ints": null,
+          "m_Floats": "List`1",
+          "m_Colors": "List`1"
+        },
+        "m_Name": "SFX_Nature_601_OP_Diss_801",
+        "m_PathID": 2738093185511203050,
+        "version": [
+          2017,
+          4,
+          18,
+          1,
+          2
+        ],
+        "platform": 19,
+        "type": 21,
+        "serializedType": {
+          "classID": 21,
+          "m_IsStrippedType": false,
+          "m_ScriptTypeIndex": -1,
+          "m_Type": null,
+          "m_ScriptID": null,
+          "m_OldTypeHash": "Byte[]",
+          "m_TypeDependencies": null,
+          "m_KlassName": null,
+          "m_NameSpace": null,
+          "m_AsmName": null
+        },
+        "byteSize": 816,
+        "Name": "SFX_Nature_601_OP_Diss_801"
+      },
+      "directory": "../hi3-fuhua-extract\\exports\\sentience-native-vfx\\original\\materials\\SFX_Nature_601_OP_Diss_801_2738093185511203050"
+    },
+    {
+      "name": "SFX_Ray_608_OP_Diss_801",
+      "pathId": "3334858311440293244",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\0ea7d74c6a0696ff.wmv",
+      "cab": "CAB-0b6901c96d6c9be7e6e6e52991736908",
+      "rawSHA256": "e8e7a67c1c3c204d068ddb1f02bd8e20b1a4e1674698e50a38972ee58e0d1a97",
+      "shader": {
+        "cab": "cab-cd3e9d02498e16eaae5f45ba11677361",
+        "pathId": "2084134656227909847",
+        "name": "",
+        "type": "NamedObject",
+        "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\1c6c818740017e75.wmv",
+        "unresolved": false
+      },
+      "savedProperties": {
+        "m_TexEnvs": [
+          {
+            "Key": "_DisTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 4,
+                "pathId": "4075434091057096594"
+              },
+              "m_Scale": {
+                "X": 0.25,
+                "Y": 0.66
+              },
+              "m_Offset": {
+                "X": 0.46,
+                "Y": -0.12
+              }
+            }
+          },
+          {
+            "Key": "_MainSmokeTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 2,
+                "pathId": "-4175178360037917731"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": -0.15,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_MaskTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 5,
+                "pathId": "5824604462804706574"
+              },
+              "m_Scale": {
+                "X": 0.58,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": -0.73,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_NoiseTex",
+            "Value": {
+              "m_Texture": {
+                "fileId": 1,
+                "pathId": "5024239154150024973"
+              },
+              "m_Scale": {
+                "X": 0.57,
+                "Y": 0.6
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          }
+        ],
+        "m_Ints": null,
+        "m_Floats": [
+          {
+            "Key": "_Alpha",
+            "Value": 0
+          },
+          {
+            "Key": "_Alpham",
+            "Value": 1
+          },
+          {
+            "Key": "_AlwaysOnTop",
+            "Value": 4
+          },
+          {
+            "Key": "_Cull",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthBlendType",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthCt",
+            "Value": 0.5
+          },
+          {
+            "Key": "_DisTexG_Switch",
+            "Value": 0
+          },
+          {
+            "Key": "_EdgeBrightness",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeContrast",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeEffectCol",
+            "Value": 0
+          },
+          {
+            "Key": "_NoiseScale",
+            "Value": 0.16
+          },
+          {
+            "Key": "_NoiseX",
+            "Value": 0.5
+          },
+          {
+            "Key": "_NoiseY",
+            "Value": 0
+          },
+          {
+            "Key": "_Rim",
+            "Value": -0.4
+          },
+          {
+            "Key": "_Rim_Switch",
+            "Value": 0
+          },
+          {
+            "Key": "_SmokeBrightness",
+            "Value": 5
+          },
+          {
+            "Key": "_Smoothstep",
+            "Value": 0.525
+          },
+          {
+            "Key": "_Stencil",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilComp",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilOp",
+            "Value": 0
+          },
+          {
+            "Key": "_UseDepth",
+            "Value": 0
+          }
+        ],
+        "m_Colors": [
+          {
+            "Key": "_DisUvG",
+            "Value": {
+              "R": 1,
+              "G": 1.42,
+              "B": 0,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_DisUvR",
+            "Value": {
+              "R": 0.34,
+              "G": 0,
+              "B": 0,
+              "A": 0
+            }
+          },
+          {
+            "Key": "_EdgeLight",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_RimColor",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          }
+        ]
+      },
+      "textureSlots": [
+        {
+          "slot": "_DisTexture",
+          "scale": {
+            "X": 0.25,
+            "Y": 0.66
+          },
+          "offset": {
+            "X": 0.46,
+            "Y": -0.12
+          },
+          "texture": {
+            "cab": "cab-e55d421db7097682d6e1e02990b7241f",
+            "pathId": "4075434091057096594",
+            "name": "SFX_Noise_304",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_MainSmokeTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": -0.15,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-b3a59e1acc82a2c31f01347bc9b2171c",
+            "pathId": "-4175178360037917731",
+            "name": "SFX_Ray_608_OP",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\0ea7d74c6a0696ff.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_MaskTexture",
+          "scale": {
+            "X": 0.58,
+            "Y": 1
+          },
+          "offset": {
+            "X": -0.73,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-f3396a592916bed91a251944cfb74822",
+            "pathId": "5824604462804706574",
+            "name": "SFX_Mask_101",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_NoiseTex",
+          "scale": {
+            "X": 0.57,
+            "Y": 0.6
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-2f237c44b75051c91a391a80abc130eb",
+            "pathId": "5024239154150024973",
+            "name": "SFX_Noise_004",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        }
+      ],
+      "rawMetadata": {
+        "m_Shader": {
+          "fileId": 3,
+          "pathId": "2084134656227909847"
+        },
+        "m_SavedProperties": {
+          "m_TexEnvs": "List`1",
+          "m_Ints": null,
+          "m_Floats": "List`1",
+          "m_Colors": "List`1"
+        },
+        "m_Name": "SFX_Ray_608_OP_Diss_801",
+        "m_PathID": 3334858311440293244,
+        "version": [
+          2017,
+          4,
+          18,
+          1,
+          2
+        ],
+        "platform": 19,
+        "type": 21,
+        "serializedType": {
+          "classID": 21,
+          "m_IsStrippedType": false,
+          "m_ScriptTypeIndex": -1,
+          "m_Type": null,
+          "m_ScriptID": null,
+          "m_OldTypeHash": "Byte[]",
+          "m_TypeDependencies": null,
+          "m_KlassName": null,
+          "m_NameSpace": null,
+          "m_AsmName": null
+        },
+        "byteSize": 820,
+        "Name": "SFX_Ray_608_OP_Diss_801"
+      },
+      "directory": "../hi3-fuhua-extract\\exports\\sentience-native-vfx\\original\\materials\\SFX_Ray_608_OP_Diss_801_3334858311440293244"
+    },
+    {
+      "name": "SFX_Ray_608_OP_Diss_802",
+      "pathId": "-5028659898174457443",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\0ea7d74c6a0696ff.wmv",
+      "cab": "CAB-9520103a59f97763a299f23428c9640d",
+      "rawSHA256": "9203969eb19ad1a959e8a64a59e35e459612c182198d12a2be00c0f67ae6eb46",
+      "shader": {
+        "cab": "cab-cd3e9d02498e16eaae5f45ba11677361",
+        "pathId": "2084134656227909847",
+        "name": "",
+        "type": "NamedObject",
+        "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\1c6c818740017e75.wmv",
+        "unresolved": false
+      },
+      "savedProperties": {
+        "m_TexEnvs": [
+          {
+            "Key": "_DisTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 2,
+                "pathId": "4075434091057096594"
+              },
+              "m_Scale": {
+                "X": 0.66,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_MainSmokeTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 3,
+                "pathId": "-4175178360037917731"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": -0.15,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_MaskTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 4,
+                "pathId": "5824604462804706574"
+              },
+              "m_Scale": {
+                "X": 0.58,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": -0.73,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_NoiseTex",
+            "Value": {
+              "m_Texture": {
+                "fileId": 5,
+                "pathId": "7543344875402019728"
+              },
+              "m_Scale": {
+                "X": 0.59,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          }
+        ],
+        "m_Ints": null,
+        "m_Floats": [
+          {
+            "Key": "_Alpha",
+            "Value": 0
+          },
+          {
+            "Key": "_Alpham",
+            "Value": 1
+          },
+          {
+            "Key": "_AlwaysOnTop",
+            "Value": 4
+          },
+          {
+            "Key": "_Cull",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthBlendType",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthCt",
+            "Value": 0.5
+          },
+          {
+            "Key": "_DisTexG_Switch",
+            "Value": 0
+          },
+          {
+            "Key": "_EdgeBrightness",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeContrast",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeEffectCol",
+            "Value": 0
+          },
+          {
+            "Key": "_NoiseScale",
+            "Value": 0.2
+          },
+          {
+            "Key": "_NoiseX",
+            "Value": 0.5
+          },
+          {
+            "Key": "_NoiseY",
+            "Value": 0
+          },
+          {
+            "Key": "_Rim",
+            "Value": -0.4
+          },
+          {
+            "Key": "_Rim_Switch",
+            "Value": 0
+          },
+          {
+            "Key": "_SmokeBrightness",
+            "Value": 8.15
+          },
+          {
+            "Key": "_Smoothstep",
+            "Value": 0.525
+          },
+          {
+            "Key": "_Stencil",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilComp",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilOp",
+            "Value": 0
+          },
+          {
+            "Key": "_UseDepth",
+            "Value": 0
+          }
+        ],
+        "m_Colors": [
+          {
+            "Key": "_DisUvG",
+            "Value": {
+              "R": 1,
+              "G": 1.42,
+              "B": 0,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_DisUvR",
+            "Value": {
+              "R": 0.34,
+              "G": 0,
+              "B": 0,
+              "A": 0
+            }
+          },
+          {
+            "Key": "_EdgeLight",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_RimColor",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          }
+        ]
+      },
+      "textureSlots": [
+        {
+          "slot": "_DisTexture",
+          "scale": {
+            "X": 0.66,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-e55d421db7097682d6e1e02990b7241f",
+            "pathId": "4075434091057096594",
+            "name": "SFX_Noise_304",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_MainSmokeTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": -0.15,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-b3a59e1acc82a2c31f01347bc9b2171c",
+            "pathId": "-4175178360037917731",
+            "name": "SFX_Ray_608_OP",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\0ea7d74c6a0696ff.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_MaskTexture",
+          "scale": {
+            "X": 0.58,
+            "Y": 1
+          },
+          "offset": {
+            "X": -0.73,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-f3396a592916bed91a251944cfb74822",
+            "pathId": "5824604462804706574",
+            "name": "SFX_Mask_101",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_NoiseTex",
+          "scale": {
+            "X": 0.59,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-056334bdbcda0c2e3d7cc7779af78b52",
+            "pathId": "7543344875402019728",
+            "name": "SFX_Noise_014",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        }
+      ],
+      "rawMetadata": {
+        "m_Shader": {
+          "fileId": 1,
+          "pathId": "2084134656227909847"
+        },
+        "m_SavedProperties": {
+          "m_TexEnvs": "List`1",
+          "m_Ints": null,
+          "m_Floats": "List`1",
+          "m_Colors": "List`1"
+        },
+        "m_Name": "SFX_Ray_608_OP_Diss_802",
+        "m_PathID": -5028659898174457443,
+        "version": [
+          2017,
+          4,
+          18,
+          1,
+          2
+        ],
+        "platform": 19,
+        "type": 21,
+        "serializedType": {
+          "classID": 21,
+          "m_IsStrippedType": false,
+          "m_ScriptTypeIndex": -1,
+          "m_Type": null,
+          "m_ScriptID": null,
+          "m_OldTypeHash": "Byte[]",
+          "m_TypeDependencies": null,
+          "m_KlassName": null,
+          "m_NameSpace": null,
+          "m_AsmName": null
+        },
+        "byteSize": 820,
+        "Name": "SFX_Ray_608_OP_Diss_802"
+      },
+      "directory": "../hi3-fuhua-extract\\exports\\sentience-native-vfx\\original\\materials\\SFX_Ray_608_OP_Diss_802_-5028659898174457443"
+    },
+    {
+      "name": "SFX_Flash_602_Blend_602",
+      "pathId": "3161559247630167164",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\318e546998b1902e.wmv",
+      "cab": "CAB-37444fa0ea6469229a62106308641c2d",
+      "rawSHA256": "fde745687377dd33599e20a62fe18d8c1c2aa568c37ba4ab920901fabd87e74c",
+      "shader": {
+        "cab": "cab-6d74fd62adc3d85de8031a50c65a9d79",
+        "pathId": "792449582552474952",
+        "name": "",
+        "type": "NamedObject",
+        "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\1c6c818740017e75.wmv",
+        "unresolved": false
+      },
+      "savedProperties": {
+        "m_TexEnvs": [
+          {
+            "Key": "_MainTex",
+            "Value": {
+              "m_Texture": {
+                "fileId": 2,
+                "pathId": "-2844919945893895230"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          }
+        ],
+        "m_Ints": null,
+        "m_Floats": [
+          {
+            "Key": "_AlwaysOnTop",
+            "Value": 4
+          },
+          {
+            "Key": "_Cull",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthBlendType",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthCt",
+            "Value": 0.5
+          },
+          {
+            "Key": "_EdgeBrightness",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeContrast",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeEffectCol",
+            "Value": 0
+          },
+          {
+            "Key": "_EmissionScaler",
+            "Value": 22.8
+          },
+          {
+            "Key": "_OffsetFactor",
+            "Value": 0
+          },
+          {
+            "Key": "_OffsetUnit",
+            "Value": 0
+          },
+          {
+            "Key": "_Stencil",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilComp",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilOp",
+            "Value": 0
+          },
+          {
+            "Key": "_TSAspectRatio",
+            "Value": 1
+          },
+          {
+            "Key": "_TextureScale",
+            "Value": 0
+          },
+          {
+            "Key": "_UIParticleMask",
+            "Value": 0
+          },
+          {
+            "Key": "_UseDepth",
+            "Value": 0
+          },
+          {
+            "Key": "_ZWrite",
+            "Value": 0
+          }
+        ],
+        "m_Colors": [
+          {
+            "Key": "_EdgeLight",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_TintColor",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          }
+        ]
+      },
+      "textureSlots": [
+        {
+          "slot": "_MainTex",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-7506d4fb7c727c9e8a5f1fbce1899880",
+            "pathId": "-2844919945893895230",
+            "name": "SFX_Flash_602",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5865b49c0ad352d3.wmv",
+            "unresolved": false
+          }
+        }
+      ],
+      "rawMetadata": {
+        "m_Shader": {
+          "fileId": 1,
+          "pathId": "792449582552474952"
+        },
+        "m_SavedProperties": {
+          "m_TexEnvs": "List`1",
+          "m_Ints": null,
+          "m_Floats": "List`1",
+          "m_Colors": "List`1"
+        },
+        "m_Name": "SFX_Flash_602_Blend_602",
+        "m_PathID": 3161559247630167164,
+        "version": [
+          2017,
+          4,
+          18,
+          1,
+          2
+        ],
+        "platform": 19,
+        "type": 21,
+        "serializedType": {
+          "classID": 21,
+          "m_IsStrippedType": false,
+          "m_ScriptTypeIndex": -1,
+          "m_Type": null,
+          "m_ScriptID": null,
+          "m_OldTypeHash": "Byte[]",
+          "m_TypeDependencies": null,
+          "m_KlassName": null,
+          "m_NameSpace": null,
+          "m_AsmName": null
+        },
+        "byteSize": 584,
+        "Name": "SFX_Flash_602_Blend_602"
+      },
+      "directory": "../hi3-fuhua-extract\\exports\\sentience-native-vfx\\original\\materials\\SFX_Flash_602_Blend_602_3161559247630167164"
+    },
+    {
+      "name": "SFX_Ray_610_Dissolve_601",
+      "pathId": "-1234138999900608769",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\318e546998b1902e.wmv",
+      "cab": "CAB-0a6f89b618ea5e45e6f33c7e58b1fd1c",
+      "rawSHA256": "02e638fb2c3c9f5b7c293a7350f7fdc8f111f2e7b3e6fa3bb15ba0c464bdaa9e",
+      "shader": {
+        "cab": "cab-cd3e9d02498e16eaae5f45ba11677361",
+        "pathId": "2084134656227909847",
+        "name": "",
+        "type": "NamedObject",
+        "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\1c6c818740017e75.wmv",
+        "unresolved": false
+      },
+      "savedProperties": {
+        "m_TexEnvs": [
+          {
+            "Key": "_DisTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 2,
+                "pathId": "-8857281167378169340"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_MainSmokeTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 3,
+                "pathId": "5066400885953865271"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_MaskTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 0,
+                "pathId": "0"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_NoiseTex",
+            "Value": {
+              "m_Texture": {
+                "fileId": 4,
+                "pathId": "7543344875402019728"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1.37
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          }
+        ],
+        "m_Ints": null,
+        "m_Floats": [
+          {
+            "Key": "_Alpha",
+            "Value": 0
+          },
+          {
+            "Key": "_Alpham",
+            "Value": 0
+          },
+          {
+            "Key": "_AlwaysOnTop",
+            "Value": 0
+          },
+          {
+            "Key": "_Cull",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthBlendType",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthCt",
+            "Value": 0.5
+          },
+          {
+            "Key": "_DisTexG_Switch",
+            "Value": 0
+          },
+          {
+            "Key": "_EdgeBrightness",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeContrast",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeEffectCol",
+            "Value": 0
+          },
+          {
+            "Key": "_NoiseScale",
+            "Value": 0.17
+          },
+          {
+            "Key": "_NoiseX",
+            "Value": 0
+          },
+          {
+            "Key": "_NoiseY",
+            "Value": -1.04
+          },
+          {
+            "Key": "_Rim",
+            "Value": 0.487
+          },
+          {
+            "Key": "_Rim_Switch",
+            "Value": 0
+          },
+          {
+            "Key": "_SmokeBrightness",
+            "Value": 3.98
+          },
+          {
+            "Key": "_Smoothstep",
+            "Value": 1
+          },
+          {
+            "Key": "_Stencil",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilComp",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilOp",
+            "Value": 0
+          },
+          {
+            "Key": "_UseDepth",
+            "Value": 0
+          }
+        ],
+        "m_Colors": [
+          {
+            "Key": "_DisUvG",
+            "Value": {
+              "R": 0.06,
+              "G": 0.1,
+              "B": 0.71,
+              "A": 0.1
+            }
+          },
+          {
+            "Key": "_DisUvR",
+            "Value": {
+              "R": 0,
+              "G": 0,
+              "B": 0,
+              "A": 0
+            }
+          },
+          {
+            "Key": "_EdgeLight",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_RimColor",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 0
+            }
+          }
+        ]
+      },
+      "textureSlots": [
+        {
+          "slot": "_DisTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-3b2e8d704c1a9146bd2ad2579f1f72ec",
+            "pathId": "-8857281167378169340",
+            "name": "SFX_Noise_611",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_MainSmokeTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-6885e74579af2276378d898b57d3a2d9",
+            "pathId": "5066400885953865271",
+            "name": "SFX_Ray_610",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\68dc1517f487a11a.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_MaskTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": null
+        },
+        {
+          "slot": "_NoiseTex",
+          "scale": {
+            "X": 1,
+            "Y": 1.37
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-056334bdbcda0c2e3d7cc7779af78b52",
+            "pathId": "7543344875402019728",
+            "name": "SFX_Noise_014",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        }
+      ],
+      "rawMetadata": {
+        "m_Shader": {
+          "fileId": 1,
+          "pathId": "2084134656227909847"
+        },
+        "m_SavedProperties": {
+          "m_TexEnvs": "List`1",
+          "m_Ints": null,
+          "m_Floats": "List`1",
+          "m_Colors": "List`1"
+        },
+        "m_Name": "SFX_Ray_610_Dissolve_601",
+        "m_PathID": -1234138999900608769,
+        "version": [
+          2017,
+          4,
+          18,
+          1,
+          2
+        ],
+        "platform": 19,
+        "type": 21,
+        "serializedType": {
+          "classID": 21,
+          "m_IsStrippedType": false,
+          "m_ScriptTypeIndex": -1,
+          "m_Type": null,
+          "m_ScriptID": null,
+          "m_OldTypeHash": "Byte[]",
+          "m_TypeDependencies": null,
+          "m_KlassName": null,
+          "m_NameSpace": null,
+          "m_AsmName": null
+        },
+        "byteSize": 788,
+        "Name": "SFX_Ray_610_Dissolve_601"
+      },
+      "directory": "../hi3-fuhua-extract\\exports\\sentience-native-vfx\\original\\materials\\SFX_Ray_610_Dissolve_601_-1234138999900608769"
+    },
+    {
+      "name": "SFX_Smoke_103_SmoothDiss_601",
+      "pathId": "-4388050541841416149",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\318e546998b1902e.wmv",
+      "cab": "CAB-b55909ab49ca1f9cdacf8bac497bc2e3",
+      "rawSHA256": "11fe6561d4f39513599412aa3668c44b255f1441237598a09297c1a2e55a4df5",
+      "shader": {
+        "cab": "cab-553b7872d71ee2461f42da1d5c49fd76",
+        "pathId": "1987893071256791637",
+        "name": "",
+        "type": "NamedObject",
+        "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\1c6c818740017e75.wmv",
+        "unresolved": false
+      },
+      "savedProperties": {
+        "m_TexEnvs": [
+          {
+            "Key": "_DisTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 2,
+                "pathId": "-8857281167378169340"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_MainSmokeTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 3,
+                "pathId": "-7978282087091911172"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          }
+        ],
+        "m_Ints": null,
+        "m_Floats": [
+          {
+            "Key": "_AlwaysOnTop",
+            "Value": 4
+          },
+          {
+            "Key": "_Cull",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthCt",
+            "Value": 0.7
+          },
+          {
+            "Key": "_DisTexG_Switch",
+            "Value": 1
+          },
+          {
+            "Key": "_Rim",
+            "Value": 0.487
+          },
+          {
+            "Key": "_Rim_Switch",
+            "Value": 0
+          },
+          {
+            "Key": "_SmokeBrightness",
+            "Value": 3.98
+          },
+          {
+            "Key": "_Smoothstep",
+            "Value": 0.632
+          },
+          {
+            "Key": "_Stencil",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilComp",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilOp",
+            "Value": 0
+          }
+        ],
+        "m_Colors": [
+          {
+            "Key": "_DisUvG",
+            "Value": {
+              "R": 0.06,
+              "G": 0.1,
+              "B": 0.71,
+              "A": 0.1
+            }
+          },
+          {
+            "Key": "_DisUvR",
+            "Value": {
+              "R": 0,
+              "G": 0,
+              "B": 0,
+              "A": 0
+            }
+          },
+          {
+            "Key": "_RimColor",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 0
+            }
+          }
+        ]
+      },
+      "textureSlots": [
+        {
+          "slot": "_DisTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-3b2e8d704c1a9146bd2ad2579f1f72ec",
+            "pathId": "-8857281167378169340",
+            "name": "SFX_Noise_611",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_MainSmokeTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-6e75c483da545afe4fb9687aa547a16f",
+            "pathId": "-7978282087091911172",
+            "name": "SFX_Smoke_103",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        }
+      ],
+      "rawMetadata": {
+        "m_Shader": {
+          "fileId": 1,
+          "pathId": "1987893071256791637"
+        },
+        "m_SavedProperties": {
+          "m_TexEnvs": "List`1",
+          "m_Ints": null,
+          "m_Floats": "List`1",
+          "m_Colors": "List`1"
+        },
+        "m_Name": "SFX_Smoke_103_SmoothDiss_601",
+        "m_PathID": -4388050541841416149,
+        "version": [
+          2017,
+          4,
+          18,
+          1,
+          2
+        ],
+        "platform": 19,
+        "type": 21,
+        "serializedType": {
+          "classID": 21,
+          "m_IsStrippedType": false,
+          "m_ScriptTypeIndex": -1,
+          "m_Type": null,
+          "m_ScriptID": null,
+          "m_OldTypeHash": "Byte[]",
+          "m_TypeDependencies": null,
+          "m_KlassName": null,
+          "m_NameSpace": null,
+          "m_AsmName": null
+        },
+        "byteSize": 472,
+        "Name": "SFX_Smoke_103_SmoothDiss_601"
+      },
+      "directory": "../hi3-fuhua-extract\\exports\\sentience-native-vfx\\original\\materials\\SFX_Smoke_103_SmoothDiss_601_-4388050541841416149"
+    },
+    {
+      "name": "SFX_Smoke_103_SmoothDiss_604",
+      "pathId": "3489774958928194688",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\318e546998b1902e.wmv",
+      "cab": "CAB-3c2b6645fcce4bbe4035b74986f585f7",
+      "rawSHA256": "f5186a87e12d476ae41bd984d83dd16f141db96201d3f5319846231446e36d1f",
+      "shader": {
+        "cab": "cab-553b7872d71ee2461f42da1d5c49fd76",
+        "pathId": "1987893071256791637",
+        "name": "",
+        "type": "NamedObject",
+        "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\1c6c818740017e75.wmv",
+        "unresolved": false
+      },
+      "savedProperties": {
+        "m_TexEnvs": [
+          {
+            "Key": "_DisTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 3,
+                "pathId": "4423373332746924265"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_MainSmokeTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 2,
+                "pathId": "-7978282087091911172"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          }
+        ],
+        "m_Ints": null,
+        "m_Floats": [
+          {
+            "Key": "_AlwaysOnTop",
+            "Value": 4
+          },
+          {
+            "Key": "_Cull",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthCt",
+            "Value": 0.7
+          },
+          {
+            "Key": "_DisTexG_Switch",
+            "Value": 1
+          },
+          {
+            "Key": "_Rim",
+            "Value": 0.487
+          },
+          {
+            "Key": "_Rim_Switch",
+            "Value": 0
+          },
+          {
+            "Key": "_SmokeBrightness",
+            "Value": 1
+          },
+          {
+            "Key": "_Smoothstep",
+            "Value": 0.803
+          },
+          {
+            "Key": "_Stencil",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilComp",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilOp",
+            "Value": 0
+          }
+        ],
+        "m_Colors": [
+          {
+            "Key": "_DisUvG",
+            "Value": {
+              "R": -0.08,
+              "G": 0.1,
+              "B": 0.71,
+              "A": 0.1
+            }
+          },
+          {
+            "Key": "_DisUvR",
+            "Value": {
+              "R": 0.3,
+              "G": 0.3,
+              "B": 0.3,
+              "A": 0.3
+            }
+          },
+          {
+            "Key": "_RimColor",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 0
+            }
+          }
+        ]
+      },
+      "textureSlots": [
+        {
+          "slot": "_DisTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-ecba209d504d2463ac48ea39a75a6998",
+            "pathId": "4423373332746924265",
+            "name": "SFX_Noise_308",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_MainSmokeTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-6e75c483da545afe4fb9687aa547a16f",
+            "pathId": "-7978282087091911172",
+            "name": "SFX_Smoke_103",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        }
+      ],
+      "rawMetadata": {
+        "m_Shader": {
+          "fileId": 1,
+          "pathId": "1987893071256791637"
+        },
+        "m_SavedProperties": {
+          "m_TexEnvs": "List`1",
+          "m_Ints": null,
+          "m_Floats": "List`1",
+          "m_Colors": "List`1"
+        },
+        "m_Name": "SFX_Smoke_103_SmoothDiss_604",
+        "m_PathID": 3489774958928194688,
+        "version": [
+          2017,
+          4,
+          18,
+          1,
+          2
+        ],
+        "platform": 19,
+        "type": 21,
+        "serializedType": {
+          "classID": 21,
+          "m_IsStrippedType": false,
+          "m_ScriptTypeIndex": -1,
+          "m_Type": null,
+          "m_ScriptID": null,
+          "m_OldTypeHash": "Byte[]",
+          "m_TypeDependencies": null,
+          "m_KlassName": null,
+          "m_NameSpace": null,
+          "m_AsmName": null
+        },
+        "byteSize": 472,
+        "Name": "SFX_Smoke_103_SmoothDiss_604"
+      },
+      "directory": "../hi3-fuhua-extract\\exports\\sentience-native-vfx\\original\\materials\\SFX_Smoke_103_SmoothDiss_604_3489774958928194688"
+    },
+    {
+      "name": "SFX_Lightning_603_Electric_601",
+      "pathId": "3427879958629770632",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\37933bad1a0b0d29.wmv",
+      "cab": "CAB-16bb14a6319fe94475ddba9ce4d89d7f",
+      "rawSHA256": "3e507bfa0cf12bc8d980c3257d7addf42d6471a6b9e57150d75220b615bd62f3",
+      "shader": {
+        "cab": "cab-96c375328d04a2559b30ef297c4743ad",
+        "pathId": "8778919676326187644",
+        "name": "",
+        "type": "NamedObject",
+        "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\1c6c818740017e75.wmv",
+        "unresolved": false
+      },
+      "savedProperties": {
+        "m_TexEnvs": [
+          {
+            "Key": "_MainLight",
+            "Value": {
+              "m_Texture": {
+                "fileId": 1,
+                "pathId": "5586290384900058029"
+              },
+              "m_Scale": {
+                "X": 0.5,
+                "Y": 0.38
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0.23
+              }
+            }
+          },
+          {
+            "Key": "_MaskTex",
+            "Value": {
+              "m_Texture": {
+                "fileId": 3,
+                "pathId": "5964373274024593285"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_SwirlTex",
+            "Value": {
+              "m_Texture": {
+                "fileId": 4,
+                "pathId": "3358865690137324800"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_texcoord",
+            "Value": {
+              "m_Texture": {
+                "fileId": 0,
+                "pathId": "0"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          }
+        ],
+        "m_Ints": null,
+        "m_Floats": [
+          {
+            "Key": "_AlphaClip",
+            "Value": 0.68
+          },
+          {
+            "Key": "_AlphaClipWidht",
+            "Value": 0.04
+          },
+          {
+            "Key": "_AlwaysOnTop",
+            "Value": 4
+          },
+          {
+            "Key": "_Cull",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthBlendType",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthCt",
+            "Value": 0.5
+          },
+          {
+            "Key": "_EdgeBrightness",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeContrast",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeEffectCol",
+            "Value": 0
+          },
+          {
+            "Key": "_InvColor",
+            "Value": 0
+          },
+          {
+            "Key": "_LightRandom",
+            "Value": 1
+          },
+          {
+            "Key": "_LineRandom",
+            "Value": 0
+          },
+          {
+            "Key": "_MainLightIntensity",
+            "Value": 8.85
+          },
+          {
+            "Key": "_Stencil",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilComp",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilOp",
+            "Value": 0
+          },
+          {
+            "Key": "_SwirlTexIntensity",
+            "Value": 0
+          },
+          {
+            "Key": "_UseColorA",
+            "Value": 0
+          },
+          {
+            "Key": "_UseDepth",
+            "Value": 0
+          },
+          {
+            "Key": "_UseLine",
+            "Value": 0
+          }
+        ],
+        "m_Colors": [
+          {
+            "Key": "_EdgeLight",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_LineCustom1",
+            "Value": {
+              "R": 0,
+              "G": 0,
+              "B": 0,
+              "A": 0
+            }
+          },
+          {
+            "Key": "_MainLightColor",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 0
+            }
+          }
+        ]
+      },
+      "textureSlots": [
+        {
+          "slot": "_MainLight",
+          "scale": {
+            "X": 0.5,
+            "Y": 0.38
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0.23
+          },
+          "texture": {
+            "cab": "cab-2141584622095f2e756a231f64ea9413",
+            "pathId": "5586290384900058029",
+            "name": "SFX_Lightning_603",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\30ef5b95e3e48154.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_MaskTex",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-cf3180e9197895eb4cf20175d53592f2",
+            "pathId": "5964373274024593285",
+            "name": "SFX_Mask_104",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_SwirlTex",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-e2a81b5623b084212471ca020af265b4",
+            "pathId": "3358865690137324800",
+            "name": "SFX_Noise_404",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_texcoord",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": null
+        }
+      ],
+      "rawMetadata": {
+        "m_Shader": {
+          "fileId": 2,
+          "pathId": "8778919676326187644"
+        },
+        "m_SavedProperties": {
+          "m_TexEnvs": "List`1",
+          "m_Ints": null,
+          "m_Floats": "List`1",
+          "m_Colors": "List`1"
+        },
+        "m_Name": "SFX_Lightning_603_Electric_601",
+        "m_PathID": 3427879958629770632,
+        "version": [
+          2017,
+          4,
+          18,
+          1,
+          2
+        ],
+        "platform": 19,
+        "type": 21,
+        "serializedType": {
+          "classID": 21,
+          "m_IsStrippedType": false,
+          "m_ScriptTypeIndex": -1,
+          "m_Type": null,
+          "m_ScriptID": null,
+          "m_OldTypeHash": "Byte[]",
+          "m_TypeDependencies": null,
+          "m_KlassName": null,
+          "m_NameSpace": null,
+          "m_AsmName": null
+        },
+        "byteSize": 812,
+        "Name": "SFX_Lightning_603_Electric_601"
+      },
+      "directory": "../hi3-fuhua-extract\\exports\\sentience-native-vfx\\original\\materials\\SFX_Lightning_603_Electric_601_3427879958629770632"
+    },
+    {
+      "name": "SFX_Smoke_103_SmoothDiss_602",
+      "pathId": "-8311141322081852787",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+      "cab": "CAB-9dac5c4b69734351d8bef54de68229fb",
+      "rawSHA256": "ad0227e187e86cec98b4dc20afc7278b01a656be48880c6e9424106f38609a77",
+      "shader": {
+        "cab": "cab-cd3e9d02498e16eaae5f45ba11677361",
+        "pathId": "2084134656227909847",
+        "name": "",
+        "type": "NamedObject",
+        "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\1c6c818740017e75.wmv",
+        "unresolved": false
+      },
+      "savedProperties": {
+        "m_TexEnvs": [
+          {
+            "Key": "_DisTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 2,
+                "pathId": "-8857281167378169340"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_MainSmokeTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 3,
+                "pathId": "-7978282087091911172"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_MaskTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 0,
+                "pathId": "0"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_NoiseTex",
+            "Value": {
+              "m_Texture": {
+                "fileId": 4,
+                "pathId": "7543344875402019728"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          }
+        ],
+        "m_Ints": null,
+        "m_Floats": [
+          {
+            "Key": "_Alpha",
+            "Value": 0
+          },
+          {
+            "Key": "_Alpham",
+            "Value": 0
+          },
+          {
+            "Key": "_AlwaysOnTop",
+            "Value": 4
+          },
+          {
+            "Key": "_Cull",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthBlendType",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthCt",
+            "Value": 0.5
+          },
+          {
+            "Key": "_DisTexG_Switch",
+            "Value": 0
+          },
+          {
+            "Key": "_EdgeBrightness",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeContrast",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeEffectCol",
+            "Value": 0
+          },
+          {
+            "Key": "_NoiseScale",
+            "Value": 0.16
+          },
+          {
+            "Key": "_NoiseX",
+            "Value": 0.5
+          },
+          {
+            "Key": "_NoiseY",
+            "Value": 0.5
+          },
+          {
+            "Key": "_Rim",
+            "Value": 0.487
+          },
+          {
+            "Key": "_Rim_Switch",
+            "Value": 0
+          },
+          {
+            "Key": "_SmokeBrightness",
+            "Value": 3.98
+          },
+          {
+            "Key": "_Smoothstep",
+            "Value": 1
+          },
+          {
+            "Key": "_Stencil",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilComp",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilOp",
+            "Value": 0
+          },
+          {
+            "Key": "_UseDepth",
+            "Value": 0
+          }
+        ],
+        "m_Colors": [
+          {
+            "Key": "_DisUvG",
+            "Value": {
+              "R": 0.06,
+              "G": 0.1,
+              "B": 0.71,
+              "A": 0.1
+            }
+          },
+          {
+            "Key": "_DisUvR",
+            "Value": {
+              "R": 0,
+              "G": 0,
+              "B": 0,
+              "A": 0
+            }
+          },
+          {
+            "Key": "_EdgeLight",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_RimColor",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 0
+            }
+          }
+        ]
+      },
+      "textureSlots": [
+        {
+          "slot": "_DisTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-3b2e8d704c1a9146bd2ad2579f1f72ec",
+            "pathId": "-8857281167378169340",
+            "name": "SFX_Noise_611",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_MainSmokeTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-6e75c483da545afe4fb9687aa547a16f",
+            "pathId": "-7978282087091911172",
+            "name": "SFX_Smoke_103",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_MaskTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": null
+        },
+        {
+          "slot": "_NoiseTex",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-056334bdbcda0c2e3d7cc7779af78b52",
+            "pathId": "7543344875402019728",
+            "name": "SFX_Noise_014",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        }
+      ],
+      "rawMetadata": {
+        "m_Shader": {
+          "fileId": 1,
+          "pathId": "2084134656227909847"
+        },
+        "m_SavedProperties": {
+          "m_TexEnvs": "List`1",
+          "m_Ints": null,
+          "m_Floats": "List`1",
+          "m_Colors": "List`1"
+        },
+        "m_Name": "SFX_Smoke_103_SmoothDiss_602",
+        "m_PathID": -8311141322081852787,
+        "version": [
+          2017,
+          4,
+          18,
+          1,
+          2
+        ],
+        "platform": 19,
+        "type": 21,
+        "serializedType": {
+          "classID": 21,
+          "m_IsStrippedType": false,
+          "m_ScriptTypeIndex": -1,
+          "m_Type": null,
+          "m_ScriptID": null,
+          "m_OldTypeHash": "Byte[]",
+          "m_TypeDependencies": null,
+          "m_KlassName": null,
+          "m_NameSpace": null,
+          "m_AsmName": null
+        },
+        "byteSize": 792,
+        "Name": "SFX_Smoke_103_SmoothDiss_602"
+      },
+      "directory": "../hi3-fuhua-extract\\exports\\sentience-native-vfx\\original\\materials\\SFX_Smoke_103_SmoothDiss_602_-8311141322081852787"
+    },
+    {
+      "name": "SFX_BladeTrail_602_Diss_601",
+      "pathId": "4074915119612666124",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\9ee905c04554a78d.wmv",
+      "cab": "CAB-40fb09325194837516c366ff2b6918f7",
+      "rawSHA256": "a3784b094fe8a1d42c8330e81a22a16df06e107ebb4eb78bb77054aa2e64a592",
+      "shader": {
+        "cab": "cab-415f6d91d62d53382e28b5cf0c8edd81",
+        "pathId": "4851934531699602926",
+        "name": "",
+        "type": "NamedObject",
+        "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\1c6c818740017e75.wmv",
+        "unresolved": false
+      },
+      "savedProperties": {
+        "m_TexEnvs": [
+          {
+            "Key": "_DisTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 3,
+                "pathId": "629016115391597989"
+              },
+              "m_Scale": {
+                "X": 0.7,
+                "Y": 0.78
+              },
+              "m_Offset": {
+                "X": 0.25,
+                "Y": 0.76
+              }
+            }
+          },
+          {
+            "Key": "_MainSmokeTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 1,
+                "pathId": "-3615369529965032248"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0.02,
+                "Y": 0
+              }
+            }
+          }
+        ],
+        "m_Ints": null,
+        "m_Floats": [
+          {
+            "Key": "_AlwaysOnTop",
+            "Value": 4
+          },
+          {
+            "Key": "_Cull",
+            "Value": 0
+          },
+          {
+            "Key": "_CustomDataProp1X",
+            "Value": 0
+          },
+          {
+            "Key": "_CustomDataProp1Y",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthBlendType",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthCt",
+            "Value": 0.5
+          },
+          {
+            "Key": "_DisTexG_Switch",
+            "Value": 0
+          },
+          {
+            "Key": "_EdgeBrightness",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeContrast",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeEffectCol",
+            "Value": 0
+          },
+          {
+            "Key": "_Rim",
+            "Value": 0.066
+          },
+          {
+            "Key": "_Rim_Switch",
+            "Value": 1
+          },
+          {
+            "Key": "_SmokeBrightness",
+            "Value": 8.38
+          },
+          {
+            "Key": "_Smoothstep",
+            "Value": 0.51
+          },
+          {
+            "Key": "_Stencil",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilComp",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilOp",
+            "Value": 0
+          },
+          {
+            "Key": "_UseDepth",
+            "Value": 0
+          },
+          {
+            "Key": "_UseLumiFactor",
+            "Value": 1
+          },
+          {
+            "Key": "_UseMateriaoPropAsCustomData",
+            "Value": 0
+          }
+        ],
+        "m_Colors": [
+          {
+            "Key": "_ColorOverLifeTime",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_CustomDataProp2",
+            "Value": {
+              "R": 0,
+              "G": 0,
+              "B": 0,
+              "A": 0
+            }
+          },
+          {
+            "Key": "_DisUvG",
+            "Value": {
+              "R": 0,
+              "G": 0,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_DisUvR",
+            "Value": {
+              "R": 0,
+              "G": 0,
+              "B": 0,
+              "A": 0
+            }
+          },
+          {
+            "Key": "_EdgeLight",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_RimColor",
+            "Value": {
+              "R": 0.08823532,
+              "G": 0,
+              "B": 0.0018255856,
+              "A": 0
+            }
+          }
+        ]
+      },
+      "textureSlots": [
+        {
+          "slot": "_DisTexture",
+          "scale": {
+            "X": 0.7,
+            "Y": 0.78
+          },
+          "offset": {
+            "X": 0.25,
+            "Y": 0.76
+          },
+          "texture": {
+            "cab": "cab-f2d4ce9d7f79529aae4628e9985d6ea8",
+            "pathId": "629016115391597989",
+            "name": "SFX_Mask_619",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\318e546998b1902e.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_MainSmokeTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0.02,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-179a29f4cfff5fb27fedc9e54f33170c",
+            "pathId": "-3615369529965032248",
+            "name": "SFX_BladeTrail_602",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\318e546998b1902e.wmv",
+            "unresolved": false
+          }
+        }
+      ],
+      "rawMetadata": {
+        "m_Shader": {
+          "fileId": 2,
+          "pathId": "4851934531699602926"
+        },
+        "m_SavedProperties": {
+          "m_TexEnvs": "List`1",
+          "m_Ints": null,
+          "m_Floats": "List`1",
+          "m_Colors": "List`1"
+        },
+        "m_Name": "SFX_BladeTrail_602_Diss_601",
+        "m_PathID": 4074915119612666124,
+        "version": [
+          2017,
+          4,
+          18,
+          1,
+          2
+        ],
+        "platform": 19,
+        "type": 21,
+        "serializedType": {
+          "classID": 21,
+          "m_IsStrippedType": false,
+          "m_ScriptTypeIndex": -1,
+          "m_Type": null,
+          "m_ScriptID": null,
+          "m_OldTypeHash": "Byte[]",
+          "m_TypeDependencies": null,
+          "m_KlassName": null,
+          "m_NameSpace": null,
+          "m_AsmName": null
+        },
+        "byteSize": 852,
+        "Name": "SFX_BladeTrail_602_Diss_601"
+      },
+      "directory": "../hi3-fuhua-extract\\exports\\sentience-native-vfx\\original\\materials\\SFX_BladeTrail_602_Diss_601_4074915119612666124"
+    },
+    {
+      "name": "SFX_BladeTrail_603_Diss_601",
+      "pathId": "-8114680250778123736",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\9ee905c04554a78d.wmv",
+      "cab": "CAB-c1aa4c006943241d66c90a26e0f95f16",
+      "rawSHA256": "30cffc390d1851245acf1add955efc2875556da40b234c7f469373d799a08b69",
+      "shader": {
+        "cab": "cab-415f6d91d62d53382e28b5cf0c8edd81",
+        "pathId": "4851934531699602926",
+        "name": "",
+        "type": "NamedObject",
+        "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\1c6c818740017e75.wmv",
+        "unresolved": false
+      },
+      "savedProperties": {
+        "m_TexEnvs": [
+          {
+            "Key": "_DisTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 2,
+                "pathId": "629016115391597989"
+              },
+              "m_Scale": {
+                "X": 0.7,
+                "Y": 0.78
+              },
+              "m_Offset": {
+                "X": 0.25,
+                "Y": 0.76
+              }
+            }
+          },
+          {
+            "Key": "_MainSmokeTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 3,
+                "pathId": "-7589987788505749965"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": -0.12,
+                "Y": 0
+              }
+            }
+          }
+        ],
+        "m_Ints": null,
+        "m_Floats": [
+          {
+            "Key": "_AlwaysOnTop",
+            "Value": 4
+          },
+          {
+            "Key": "_Cull",
+            "Value": 0
+          },
+          {
+            "Key": "_CustomDataProp1X",
+            "Value": 0
+          },
+          {
+            "Key": "_CustomDataProp1Y",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthBlendType",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthCt",
+            "Value": 0.5
+          },
+          {
+            "Key": "_DisTexG_Switch",
+            "Value": 0
+          },
+          {
+            "Key": "_EdgeBrightness",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeContrast",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeEffectCol",
+            "Value": 0
+          },
+          {
+            "Key": "_Rim",
+            "Value": 0.066
+          },
+          {
+            "Key": "_Rim_Switch",
+            "Value": 1
+          },
+          {
+            "Key": "_SmokeBrightness",
+            "Value": 8.38
+          },
+          {
+            "Key": "_Smoothstep",
+            "Value": 0.519
+          },
+          {
+            "Key": "_Stencil",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilComp",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilOp",
+            "Value": 0
+          },
+          {
+            "Key": "_UseDepth",
+            "Value": 0
+          },
+          {
+            "Key": "_UseLumiFactor",
+            "Value": 1
+          },
+          {
+            "Key": "_UseMateriaoPropAsCustomData",
+            "Value": 0
+          }
+        ],
+        "m_Colors": [
+          {
+            "Key": "_ColorOverLifeTime",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_CustomDataProp2",
+            "Value": {
+              "R": 0,
+              "G": 0,
+              "B": 0,
+              "A": 0
+            }
+          },
+          {
+            "Key": "_DisUvG",
+            "Value": {
+              "R": 0,
+              "G": 0,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_DisUvR",
+            "Value": {
+              "R": 0,
+              "G": 0,
+              "B": 0,
+              "A": 0
+            }
+          },
+          {
+            "Key": "_EdgeLight",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_RimColor",
+            "Value": {
+              "R": 0.08823532,
+              "G": 0,
+              "B": 0.0018255856,
+              "A": 0
+            }
+          }
+        ]
+      },
+      "textureSlots": [
+        {
+          "slot": "_DisTexture",
+          "scale": {
+            "X": 0.7,
+            "Y": 0.78
+          },
+          "offset": {
+            "X": 0.25,
+            "Y": 0.76
+          },
+          "texture": {
+            "cab": "cab-f2d4ce9d7f79529aae4628e9985d6ea8",
+            "pathId": "629016115391597989",
+            "name": "SFX_Mask_619",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\318e546998b1902e.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_MainSmokeTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": -0.12,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-86a9bf90403345bf41555a84ab081661",
+            "pathId": "-7589987788505749965",
+            "name": "SFX_BladeTrail_603",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a4d0e30ddf017f83.wmv",
+            "unresolved": false
+          }
+        }
+      ],
+      "rawMetadata": {
+        "m_Shader": {
+          "fileId": 1,
+          "pathId": "4851934531699602926"
+        },
+        "m_SavedProperties": {
+          "m_TexEnvs": "List`1",
+          "m_Ints": null,
+          "m_Floats": "List`1",
+          "m_Colors": "List`1"
+        },
+        "m_Name": "SFX_BladeTrail_603_Diss_601",
+        "m_PathID": -8114680250778123736,
+        "version": [
+          2017,
+          4,
+          18,
+          1,
+          2
+        ],
+        "platform": 19,
+        "type": 21,
+        "serializedType": {
+          "classID": 21,
+          "m_IsStrippedType": false,
+          "m_ScriptTypeIndex": -1,
+          "m_Type": null,
+          "m_ScriptID": null,
+          "m_OldTypeHash": "Byte[]",
+          "m_TypeDependencies": null,
+          "m_KlassName": null,
+          "m_NameSpace": null,
+          "m_AsmName": null
+        },
+        "byteSize": 852,
+        "Name": "SFX_BladeTrail_603_Diss_601"
+      },
+      "directory": "../hi3-fuhua-extract\\exports\\sentience-native-vfx\\original\\materials\\SFX_BladeTrail_603_Diss_601_-8114680250778123736"
+    },
+    {
+      "name": "SFX_Ground_615_Diss_602",
+      "pathId": "6950176120356983498",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\9ee905c04554a78d.wmv",
+      "cab": "CAB-367beada31d2d03b1731918bf45d292c",
+      "rawSHA256": "4bcf84b55f5b249798a579979407ff694c3910cadd8ffc44c69337b86b379224",
+      "shader": {
+        "cab": "cab-cd3e9d02498e16eaae5f45ba11677361",
+        "pathId": "2084134656227909847",
+        "name": "",
+        "type": "NamedObject",
+        "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\1c6c818740017e75.wmv",
+        "unresolved": false
+      },
+      "savedProperties": {
+        "m_TexEnvs": [
+          {
+            "Key": "_DisTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 3,
+                "pathId": "-7415529994766153754"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_MainSmokeTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 1,
+                "pathId": "-1203090556392351210"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_MaskTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 0,
+                "pathId": "0"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_NoiseTex",
+            "Value": {
+              "m_Texture": {
+                "fileId": 0,
+                "pathId": "0"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          }
+        ],
+        "m_Ints": null,
+        "m_Floats": [
+          {
+            "Key": "_Alpha",
+            "Value": 0
+          },
+          {
+            "Key": "_Alpham",
+            "Value": 0
+          },
+          {
+            "Key": "_AlwaysOnTop",
+            "Value": 4
+          },
+          {
+            "Key": "_Cull",
+            "Value": 2
+          },
+          {
+            "Key": "_DepthBlendType",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthCt",
+            "Value": 0.5
+          },
+          {
+            "Key": "_DisTexG_Switch",
+            "Value": 0
+          },
+          {
+            "Key": "_EdgeBrightness",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeContrast",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeEffectCol",
+            "Value": 0
+          },
+          {
+            "Key": "_NoiseScale",
+            "Value": 1
+          },
+          {
+            "Key": "_NoiseX",
+            "Value": 0
+          },
+          {
+            "Key": "_NoiseY",
+            "Value": 0
+          },
+          {
+            "Key": "_Rim",
+            "Value": 0
+          },
+          {
+            "Key": "_Rim_Switch",
+            "Value": 0
+          },
+          {
+            "Key": "_SmokeBrightness",
+            "Value": 43.33
+          },
+          {
+            "Key": "_Smoothstep",
+            "Value": 0.866
+          },
+          {
+            "Key": "_Stencil",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilComp",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilOp",
+            "Value": 0
+          },
+          {
+            "Key": "_UseDepth",
+            "Value": 0
+          }
+        ],
+        "m_Colors": [
+          {
+            "Key": "_DisUvG",
+            "Value": {
+              "R": 0,
+              "G": 0,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_DisUvR",
+            "Value": {
+              "R": 0,
+              "G": 0,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_EdgeLight",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_RimColor",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 0
+            }
+          }
+        ]
+      },
+      "textureSlots": [
+        {
+          "slot": "_DisTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-ef6ade29b7ca5eef6950d8d294fe6409",
+            "pathId": "-7415529994766153754",
+            "name": "SFX_Ray_612",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\318e546998b1902e.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_MainSmokeTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-cd02aa976ee03c5abdb08dfb39a3ddaa",
+            "pathId": "-1203090556392351210",
+            "name": "SFX_Ground_615",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\318e546998b1902e.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_MaskTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": null
+        },
+        {
+          "slot": "_NoiseTex",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": null
+        }
+      ],
+      "rawMetadata": {
+        "m_Shader": {
+          "fileId": 2,
+          "pathId": "2084134656227909847"
+        },
+        "m_SavedProperties": {
+          "m_TexEnvs": "List`1",
+          "m_Ints": null,
+          "m_Floats": "List`1",
+          "m_Colors": "List`1"
+        },
+        "m_Name": "SFX_Ground_615_Diss_602",
+        "m_PathID": 6950176120356983498,
+        "version": [
+          2017,
+          4,
+          18,
+          1,
+          2
+        ],
+        "platform": 19,
+        "type": 21,
+        "serializedType": {
+          "classID": 21,
+          "m_IsStrippedType": false,
+          "m_ScriptTypeIndex": -1,
+          "m_Type": null,
+          "m_ScriptID": null,
+          "m_OldTypeHash": "Byte[]",
+          "m_TypeDependencies": null,
+          "m_KlassName": null,
+          "m_NameSpace": null,
+          "m_AsmName": null
+        },
+        "byteSize": 812,
+        "Name": "SFX_Ground_615_Diss_602"
+      },
+      "directory": "../hi3-fuhua-extract\\exports\\sentience-native-vfx\\original\\materials\\SFX_Ground_615_Diss_602_6950176120356983498"
+    },
+    {
+      "name": "SFX_Smoke_103_SmoothDiss_603_Top",
+      "pathId": "-7730481880052443105",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\9ee905c04554a78d.wmv",
+      "cab": "CAB-c6f0e1062733dd752ec7936f974af065",
+      "rawSHA256": "0ae64bdc9f385e1a480da703fe169dc7d52f6e8f2d1960364cd10fd832ac7beb",
+      "shader": {
+        "cab": "cab-cd3e9d02498e16eaae5f45ba11677361",
+        "pathId": "2084134656227909847",
+        "name": "",
+        "type": "NamedObject",
+        "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\1c6c818740017e75.wmv",
+        "unresolved": false
+      },
+      "savedProperties": {
+        "m_TexEnvs": [
+          {
+            "Key": "_DisTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 2,
+                "pathId": "-8857281167378169340"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_MainSmokeTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 3,
+                "pathId": "4388468226149728595"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_MaskTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 0,
+                "pathId": "0"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_NoiseTex",
+            "Value": {
+              "m_Texture": {
+                "fileId": 4,
+                "pathId": "7543344875402019728"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          }
+        ],
+        "m_Ints": null,
+        "m_Floats": [
+          {
+            "Key": "_Alpha",
+            "Value": 0
+          },
+          {
+            "Key": "_Alpham",
+            "Value": 0
+          },
+          {
+            "Key": "_AlwaysOnTop",
+            "Value": 0
+          },
+          {
+            "Key": "_Cull",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthBlendType",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthCt",
+            "Value": 0.5
+          },
+          {
+            "Key": "_DisTexG_Switch",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeBrightness",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeContrast",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeEffectCol",
+            "Value": 0
+          },
+          {
+            "Key": "_NoiseScale",
+            "Value": 0.16
+          },
+          {
+            "Key": "_NoiseX",
+            "Value": 0.5
+          },
+          {
+            "Key": "_NoiseY",
+            "Value": 0.5
+          },
+          {
+            "Key": "_Rim",
+            "Value": 0.487
+          },
+          {
+            "Key": "_Rim_Switch",
+            "Value": 0
+          },
+          {
+            "Key": "_SmokeBrightness",
+            "Value": 3.98
+          },
+          {
+            "Key": "_Smoothstep",
+            "Value": 1
+          },
+          {
+            "Key": "_Stencil",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilComp",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilOp",
+            "Value": 0
+          },
+          {
+            "Key": "_UseDepth",
+            "Value": 0
+          }
+        ],
+        "m_Colors": [
+          {
+            "Key": "_DisUvG",
+            "Value": {
+              "R": 0.06,
+              "G": 0.1,
+              "B": 0.71,
+              "A": 0.1
+            }
+          },
+          {
+            "Key": "_DisUvR",
+            "Value": {
+              "R": 0,
+              "G": 0,
+              "B": 0,
+              "A": 0
+            }
+          },
+          {
+            "Key": "_EdgeLight",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_RimColor",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 0
+            }
+          }
+        ]
+      },
+      "textureSlots": [
+        {
+          "slot": "_DisTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-3b2e8d704c1a9146bd2ad2579f1f72ec",
+            "pathId": "-8857281167378169340",
+            "name": "SFX_Noise_611",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_MainSmokeTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-1da959e86ca7ea49ee526d68be6da040",
+            "pathId": "4388468226149728595",
+            "name": "SFX_Smoke_303",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_MaskTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": null
+        },
+        {
+          "slot": "_NoiseTex",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-056334bdbcda0c2e3d7cc7779af78b52",
+            "pathId": "7543344875402019728",
+            "name": "SFX_Noise_014",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        }
+      ],
+      "rawMetadata": {
+        "m_Shader": {
+          "fileId": 1,
+          "pathId": "2084134656227909847"
+        },
+        "m_SavedProperties": {
+          "m_TexEnvs": "List`1",
+          "m_Ints": null,
+          "m_Floats": "List`1",
+          "m_Colors": "List`1"
+        },
+        "m_Name": "SFX_Smoke_103_SmoothDiss_603_Top",
+        "m_PathID": -7730481880052443105,
+        "version": [
+          2017,
+          4,
+          18,
+          1,
+          2
+        ],
+        "platform": 19,
+        "type": 21,
+        "serializedType": {
+          "classID": 21,
+          "m_IsStrippedType": false,
+          "m_ScriptTypeIndex": -1,
+          "m_Type": null,
+          "m_ScriptID": null,
+          "m_OldTypeHash": "Byte[]",
+          "m_TypeDependencies": null,
+          "m_KlassName": null,
+          "m_NameSpace": null,
+          "m_AsmName": null
+        },
+        "byteSize": 816,
+        "Name": "SFX_Smoke_103_SmoothDiss_603_Top"
+      },
+      "directory": "../hi3-fuhua-extract\\exports\\sentience-native-vfx\\original\\materials\\SFX_Smoke_103_SmoothDiss_603_Top_-7730481880052443105"
+    },
+    {
+      "name": "SFX_Trail_401_UV_602",
+      "pathId": "8594743726849617090",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a4d0e30ddf017f83.wmv",
+      "cab": "CAB-c316736aa80f86ca48c5d967bd9da415",
+      "rawSHA256": "95256cdf964e5edf70c97dea0aa470817ef20cafa88efde5eece54cf509eab9d",
+      "shader": {
+        "cab": "cab-be85609c750b06a44a09df2255d6e06e",
+        "pathId": "-4067106898909583686",
+        "name": "",
+        "type": "NamedObject",
+        "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\1c6c818740017e75.wmv",
+        "unresolved": false
+      },
+      "savedProperties": {
+        "m_TexEnvs": [
+          {
+            "Key": "_MainTex",
+            "Value": {
+              "m_Texture": {
+                "fileId": 2,
+                "pathId": "-4964821822805812598"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": -0.32
+              }
+            }
+          },
+          {
+            "Key": "_MainTex1",
+            "Value": {
+              "m_Texture": {
+                "fileId": 0,
+                "pathId": "0"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_MaskTex",
+            "Value": {
+              "m_Texture": {
+                "fileId": 3,
+                "pathId": "-4985455163217451176"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 0.2
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": -0.03
+              }
+            }
+          },
+          {
+            "Key": "_NoiseTex01",
+            "Value": {
+              "m_Texture": {
+                "fileId": 1,
+                "pathId": "7543344875402019728"
+              },
+              "m_Scale": {
+                "X": 3,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          }
+        ],
+        "m_Ints": null,
+        "m_Floats": [
+          {
+            "Key": "_AlwaysOnTop",
+            "Value": 4
+          },
+          {
+            "Key": "_Clip",
+            "Value": 0
+          },
+          {
+            "Key": "_ClipA",
+            "Value": 0
+          },
+          {
+            "Key": "_Cull",
+            "Value": 0
+          },
+          {
+            "Key": "_CustomData",
+            "Value": 0
+          },
+          {
+            "Key": "_CustomData1",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthBlendType",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthCt",
+            "Value": 0.5
+          },
+          {
+            "Key": "_DstBlend",
+            "Value": 10
+          },
+          {
+            "Key": "_EdgeBrightness",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeContrast",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeEffectCol",
+            "Value": 0
+          },
+          {
+            "Key": "_EmissionScaler",
+            "Value": 4
+          },
+          {
+            "Key": "_MaskChannelMapping",
+            "Value": 3
+          },
+          {
+            "Key": "_MaskInst",
+            "Value": 1
+          },
+          {
+            "Key": "_Noise01ChannelMapping",
+            "Value": 0
+          },
+          {
+            "Key": "_Noise01RandomU",
+            "Value": 0
+          },
+          {
+            "Key": "_Noise01RandomV",
+            "Value": 0
+          },
+          {
+            "Key": "_Noise01USpeed",
+            "Value": 0.2
+          },
+          {
+            "Key": "_Noise01VSpeed",
+            "Value": 0.6
+          },
+          {
+            "Key": "_NoiseBrightness",
+            "Value": 0.27
+          },
+          {
+            "Key": "_NoiseOffset",
+            "Value": -0.46
+          },
+          {
+            "Key": "_RandomU",
+            "Value": 0
+          },
+          {
+            "Key": "_RandomV",
+            "Value": 0
+          },
+          {
+            "Key": "_USpeed",
+            "Value": 0
+          },
+          {
+            "Key": "_USpeed1",
+            "Value": 0
+          },
+          {
+            "Key": "_UseDepth",
+            "Value": 0
+          },
+          {
+            "Key": "_UseMainTex1",
+            "Value": 0
+          },
+          {
+            "Key": "_UseMaskTex",
+            "Value": 1
+          },
+          {
+            "Key": "_UseNoiseTex01",
+            "Value": 1
+          },
+          {
+            "Key": "_VSpeed",
+            "Value": 0
+          },
+          {
+            "Key": "_VSpeed1",
+            "Value": 0
+          },
+          {
+            "Key": "_ZWrite",
+            "Value": 0
+          }
+        ],
+        "m_Colors": [
+          {
+            "Key": "_EdgeLight",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_MainColor",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_SecondColor",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          }
+        ]
+      },
+      "textureSlots": [
+        {
+          "slot": "_MainTex",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": -0.32
+          },
+          "texture": {
+            "cab": "cab-2c703fbe9b3d5128cf4dd46cabdf3b92",
+            "pathId": "-4964821822805812598",
+            "name": "SFX_Trail_401",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a4d0e30ddf017f83.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_MainTex1",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": null
+        },
+        {
+          "slot": "_MaskTex",
+          "scale": {
+            "X": 1,
+            "Y": 0.2
+          },
+          "offset": {
+            "X": 0,
+            "Y": -0.03
+          },
+          "texture": {
+            "cab": "cab-7631a15139e1fb2c223c8282d478a6b1",
+            "pathId": "-4985455163217451176",
+            "name": "SFX_Mask_001_C",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_NoiseTex01",
+          "scale": {
+            "X": 3,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-056334bdbcda0c2e3d7cc7779af78b52",
+            "pathId": "7543344875402019728",
+            "name": "SFX_Noise_014",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        }
+      ],
+      "rawMetadata": {
+        "m_Shader": {
+          "fileId": 4,
+          "pathId": "-4067106898909583686"
+        },
+        "m_SavedProperties": {
+          "m_TexEnvs": "List`1",
+          "m_Ints": null,
+          "m_Floats": "List`1",
+          "m_Colors": "List`1"
+        },
+        "m_Name": "SFX_Trail_401_UV_602",
+        "m_PathID": 8594743726849617090,
+        "version": [
+          2017,
+          4,
+          18,
+          1,
+          2
+        ],
+        "platform": 19,
+        "type": 21,
+        "serializedType": {
+          "classID": 21,
+          "m_IsStrippedType": false,
+          "m_ScriptTypeIndex": -1,
+          "m_Type": null,
+          "m_ScriptID": null,
+          "m_OldTypeHash": "Byte[]",
+          "m_TypeDependencies": null,
+          "m_KlassName": null,
+          "m_NameSpace": null,
+          "m_AsmName": null
+        },
+        "byteSize": 1072,
+        "Name": "SFX_Trail_401_UV_602"
+      },
+      "directory": "../hi3-fuhua-extract\\exports\\sentience-native-vfx\\original\\materials\\SFX_Trail_401_UV_602_8594743726849617090"
+    },
+    {
+      "name": "SFX_Icon_602_Diss_601",
+      "pathId": "3332301670175474183",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\edd52944ad12f7a3.wmv",
+      "cab": "CAB-1154f0e29a3131a3aa67fcbf4c6329cd",
+      "rawSHA256": "a407c2e3003c543718b2100656bccc1d3a82a9c88cc541b1ee9816b5de597d9f",
+      "shader": {
+        "cab": "cab-cd3e9d02498e16eaae5f45ba11677361",
+        "pathId": "2084134656227909847",
+        "name": "",
+        "type": "NamedObject",
+        "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\1c6c818740017e75.wmv",
+        "unresolved": false
+      },
+      "savedProperties": {
+        "m_TexEnvs": [
+          {
+            "Key": "_DisTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 2,
+                "pathId": "-8857281167378169340"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_MainSmokeTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 0,
+                "pathId": "2926833977770395452"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0.03
+              }
+            }
+          },
+          {
+            "Key": "_MaskTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 0,
+                "pathId": "0"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_NoiseTex",
+            "Value": {
+              "m_Texture": {
+                "fileId": 1,
+                "pathId": "7543344875402019728"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          }
+        ],
+        "m_Ints": null,
+        "m_Floats": [
+          {
+            "Key": "_Alpha",
+            "Value": 0
+          },
+          {
+            "Key": "_Alpham",
+            "Value": 0
+          },
+          {
+            "Key": "_AlwaysOnTop",
+            "Value": 0
+          },
+          {
+            "Key": "_Cull",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthBlendType",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthCt",
+            "Value": 0.5
+          },
+          {
+            "Key": "_DisTexG_Switch",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeBrightness",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeContrast",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeEffectCol",
+            "Value": 0
+          },
+          {
+            "Key": "_NoiseScale",
+            "Value": -0.04
+          },
+          {
+            "Key": "_NoiseX",
+            "Value": 0
+          },
+          {
+            "Key": "_NoiseY",
+            "Value": -0.54
+          },
+          {
+            "Key": "_Rim",
+            "Value": 0.1
+          },
+          {
+            "Key": "_Rim_Switch",
+            "Value": 0
+          },
+          {
+            "Key": "_SmokeBrightness",
+            "Value": 7.14
+          },
+          {
+            "Key": "_Smoothstep",
+            "Value": 0.561
+          },
+          {
+            "Key": "_Stencil",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilComp",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilOp",
+            "Value": 0
+          },
+          {
+            "Key": "_UseDepth",
+            "Value": 0
+          }
+        ],
+        "m_Colors": [
+          {
+            "Key": "_DisUvG",
+            "Value": {
+              "R": 0.18,
+              "G": -0.33,
+              "B": 1,
+              "A": 0.1
+            }
+          },
+          {
+            "Key": "_DisUvR",
+            "Value": {
+              "R": 0,
+              "G": -0.38,
+              "B": 0,
+              "A": 0
+            }
+          },
+          {
+            "Key": "_EdgeLight",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_RimColor",
+            "Value": {
+              "R": 0,
+              "G": 0,
+              "B": 0,
+              "A": 0
+            }
+          }
+        ]
+      },
+      "textureSlots": [
+        {
+          "slot": "_DisTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-3b2e8d704c1a9146bd2ad2579f1f72ec",
+            "pathId": "-8857281167378169340",
+            "name": "SFX_Noise_611",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_MainSmokeTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0.03
+          },
+          "texture": {
+            "cab": "CAB-1154f0e29a3131a3aa67fcbf4c6329cd",
+            "pathId": "2926833977770395452",
+            "name": "SFX_Icon_602",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\edd52944ad12f7a3.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_MaskTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": null
+        },
+        {
+          "slot": "_NoiseTex",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-056334bdbcda0c2e3d7cc7779af78b52",
+            "pathId": "7543344875402019728",
+            "name": "SFX_Noise_014",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        }
+      ],
+      "rawMetadata": {
+        "m_Shader": {
+          "fileId": 3,
+          "pathId": "2084134656227909847"
+        },
+        "m_SavedProperties": {
+          "m_TexEnvs": "List`1",
+          "m_Ints": null,
+          "m_Floats": "List`1",
+          "m_Colors": "List`1"
+        },
+        "m_Name": "SFX_Icon_602_Diss_601",
+        "m_PathID": 3332301670175474183,
+        "version": [
+          2017,
+          4,
+          18,
+          1,
+          2
+        ],
+        "platform": 19,
+        "type": 21,
+        "serializedType": {
+          "classID": 21,
+          "m_IsStrippedType": false,
+          "m_ScriptTypeIndex": -1,
+          "m_Type": null,
+          "m_ScriptID": null,
+          "m_OldTypeHash": "Byte[]",
+          "m_TypeDependencies": null,
+          "m_KlassName": null,
+          "m_NameSpace": null,
+          "m_AsmName": null
+        },
+        "byteSize": 808,
+        "Name": "SFX_Icon_602_Diss_601"
+      },
+      "directory": "../hi3-fuhua-extract\\exports\\sentience-native-vfx\\original\\materials\\SFX_Icon_602_Diss_601_3332301670175474183"
+    },
+    {
+      "name": "SFX_Icon_603_Diss_601",
+      "pathId": "-5247917516044337650",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\edd52944ad12f7a3.wmv",
+      "cab": "CAB-0407b54923af5cf8c152a24e3a0ec767",
+      "rawSHA256": "950bc88451b510ddf617dd62fb091abb71aadb28ab150b618346ccae50855c78",
+      "shader": {
+        "cab": "cab-cd3e9d02498e16eaae5f45ba11677361",
+        "pathId": "2084134656227909847",
+        "name": "",
+        "type": "NamedObject",
+        "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\1c6c818740017e75.wmv",
+        "unresolved": false
+      },
+      "savedProperties": {
+        "m_TexEnvs": [
+          {
+            "Key": "_DisTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 2,
+                "pathId": "-8857281167378169340"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_MainSmokeTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 0,
+                "pathId": "5254210020308379039"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0.03
+              }
+            }
+          },
+          {
+            "Key": "_MaskTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 0,
+                "pathId": "0"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_NoiseTex",
+            "Value": {
+              "m_Texture": {
+                "fileId": 3,
+                "pathId": "7543344875402019728"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          }
+        ],
+        "m_Ints": null,
+        "m_Floats": [
+          {
+            "Key": "_Alpha",
+            "Value": 0
+          },
+          {
+            "Key": "_Alpham",
+            "Value": 0
+          },
+          {
+            "Key": "_AlwaysOnTop",
+            "Value": 0
+          },
+          {
+            "Key": "_Cull",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthBlendType",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthCt",
+            "Value": 0.5
+          },
+          {
+            "Key": "_DisTexG_Switch",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeBrightness",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeContrast",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeEffectCol",
+            "Value": 0
+          },
+          {
+            "Key": "_NoiseScale",
+            "Value": -0.04
+          },
+          {
+            "Key": "_NoiseX",
+            "Value": 0
+          },
+          {
+            "Key": "_NoiseY",
+            "Value": -0.87
+          },
+          {
+            "Key": "_Rim",
+            "Value": 0.1
+          },
+          {
+            "Key": "_Rim_Switch",
+            "Value": 0
+          },
+          {
+            "Key": "_SmokeBrightness",
+            "Value": 12
+          },
+          {
+            "Key": "_Smoothstep",
+            "Value": 0.561
+          },
+          {
+            "Key": "_Stencil",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilComp",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilOp",
+            "Value": 0
+          },
+          {
+            "Key": "_UseDepth",
+            "Value": 0
+          }
+        ],
+        "m_Colors": [
+          {
+            "Key": "_DisUvG",
+            "Value": {
+              "R": 0.18,
+              "G": -0.33,
+              "B": 1,
+              "A": 0.1
+            }
+          },
+          {
+            "Key": "_DisUvR",
+            "Value": {
+              "R": 0,
+              "G": -0.38,
+              "B": 0,
+              "A": 0
+            }
+          },
+          {
+            "Key": "_EdgeLight",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_RimColor",
+            "Value": {
+              "R": 0,
+              "G": 0,
+              "B": 0,
+              "A": 0
+            }
+          }
+        ]
+      },
+      "textureSlots": [
+        {
+          "slot": "_DisTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-3b2e8d704c1a9146bd2ad2579f1f72ec",
+            "pathId": "-8857281167378169340",
+            "name": "SFX_Noise_611",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_MainSmokeTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0.03
+          },
+          "texture": {
+            "cab": "CAB-0407b54923af5cf8c152a24e3a0ec767",
+            "pathId": "5254210020308379039",
+            "name": "SFX_Icon_603",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\edd52944ad12f7a3.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_MaskTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": null
+        },
+        {
+          "slot": "_NoiseTex",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-056334bdbcda0c2e3d7cc7779af78b52",
+            "pathId": "7543344875402019728",
+            "name": "SFX_Noise_014",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        }
+      ],
+      "rawMetadata": {
+        "m_Shader": {
+          "fileId": 1,
+          "pathId": "2084134656227909847"
+        },
+        "m_SavedProperties": {
+          "m_TexEnvs": "List`1",
+          "m_Ints": null,
+          "m_Floats": "List`1",
+          "m_Colors": "List`1"
+        },
+        "m_Name": "SFX_Icon_603_Diss_601",
+        "m_PathID": -5247917516044337650,
+        "version": [
+          2017,
+          4,
+          18,
+          1,
+          2
+        ],
+        "platform": 19,
+        "type": 21,
+        "serializedType": {
+          "classID": 21,
+          "m_IsStrippedType": false,
+          "m_ScriptTypeIndex": -1,
+          "m_Type": null,
+          "m_ScriptID": null,
+          "m_OldTypeHash": "Byte[]",
+          "m_TypeDependencies": null,
+          "m_KlassName": null,
+          "m_NameSpace": null,
+          "m_AsmName": null
+        },
+        "byteSize": 808,
+        "Name": "SFX_Icon_603_Diss_601"
+      },
+      "directory": "../hi3-fuhua-extract\\exports\\sentience-native-vfx\\original\\materials\\SFX_Icon_603_Diss_601_-5247917516044337650"
+    },
+    {
+      "name": "SFX_Icon_604_Diss_601",
+      "pathId": "-4909517814128002014",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\edd52944ad12f7a3.wmv",
+      "cab": "CAB-8cbdb14f8d882e88a521d275b5810414",
+      "rawSHA256": "6c33a6216b14cdd4189487322f961b354f720677a8d354ec6371355244c9fe1c",
+      "shader": {
+        "cab": "cab-cd3e9d02498e16eaae5f45ba11677361",
+        "pathId": "2084134656227909847",
+        "name": "",
+        "type": "NamedObject",
+        "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\1c6c818740017e75.wmv",
+        "unresolved": false
+      },
+      "savedProperties": {
+        "m_TexEnvs": [
+          {
+            "Key": "_DisTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 2,
+                "pathId": "-8857281167378169340"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_MainSmokeTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 0,
+                "pathId": "2694270781629169575"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0.02,
+                "Y": 0.03
+              }
+            }
+          },
+          {
+            "Key": "_MaskTexture",
+            "Value": {
+              "m_Texture": {
+                "fileId": 0,
+                "pathId": "0"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          },
+          {
+            "Key": "_NoiseTex",
+            "Value": {
+              "m_Texture": {
+                "fileId": 3,
+                "pathId": "7543344875402019728"
+              },
+              "m_Scale": {
+                "X": 1,
+                "Y": 1
+              },
+              "m_Offset": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          }
+        ],
+        "m_Ints": null,
+        "m_Floats": [
+          {
+            "Key": "_Alpha",
+            "Value": 0
+          },
+          {
+            "Key": "_Alpham",
+            "Value": 0
+          },
+          {
+            "Key": "_AlwaysOnTop",
+            "Value": 0
+          },
+          {
+            "Key": "_Cull",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthBlendType",
+            "Value": 0
+          },
+          {
+            "Key": "_DepthCt",
+            "Value": 0.5
+          },
+          {
+            "Key": "_DisTexG_Switch",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeBrightness",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeContrast",
+            "Value": 1
+          },
+          {
+            "Key": "_EdgeEffectCol",
+            "Value": 0
+          },
+          {
+            "Key": "_NoiseScale",
+            "Value": -0.04
+          },
+          {
+            "Key": "_NoiseX",
+            "Value": 0
+          },
+          {
+            "Key": "_NoiseY",
+            "Value": -0.87
+          },
+          {
+            "Key": "_Rim",
+            "Value": 0.1
+          },
+          {
+            "Key": "_Rim_Switch",
+            "Value": 0
+          },
+          {
+            "Key": "_SmokeBrightness",
+            "Value": 12
+          },
+          {
+            "Key": "_Smoothstep",
+            "Value": 0.561
+          },
+          {
+            "Key": "_Stencil",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilComp",
+            "Value": 0
+          },
+          {
+            "Key": "_StencilOp",
+            "Value": 0
+          },
+          {
+            "Key": "_UseDepth",
+            "Value": 0
+          }
+        ],
+        "m_Colors": [
+          {
+            "Key": "_DisUvG",
+            "Value": {
+              "R": 0.18,
+              "G": -0.33,
+              "B": 1,
+              "A": 0.1
+            }
+          },
+          {
+            "Key": "_DisUvR",
+            "Value": {
+              "R": 0,
+              "G": -0.38,
+              "B": 0,
+              "A": 0
+            }
+          },
+          {
+            "Key": "_EdgeLight",
+            "Value": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          },
+          {
+            "Key": "_RimColor",
+            "Value": {
+              "R": 0,
+              "G": 0,
+              "B": 0,
+              "A": 0
+            }
+          }
+        ]
+      },
+      "textureSlots": [
+        {
+          "slot": "_DisTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-3b2e8d704c1a9146bd2ad2579f1f72ec",
+            "pathId": "-8857281167378169340",
+            "name": "SFX_Noise_611",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_MainSmokeTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0.02,
+            "Y": 0.03
+          },
+          "texture": {
+            "cab": "CAB-8cbdb14f8d882e88a521d275b5810414",
+            "pathId": "2694270781629169575",
+            "name": "SFX_Icon_604",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\edd52944ad12f7a3.wmv",
+            "unresolved": false
+          }
+        },
+        {
+          "slot": "_MaskTexture",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": null
+        },
+        {
+          "slot": "_NoiseTex",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "texture": {
+            "cab": "cab-056334bdbcda0c2e3d7cc7779af78b52",
+            "pathId": "7543344875402019728",
+            "name": "SFX_Noise_014",
+            "type": "Texture2D",
+            "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+            "unresolved": false
+          }
+        }
+      ],
+      "rawMetadata": {
+        "m_Shader": {
+          "fileId": 1,
+          "pathId": "2084134656227909847"
+        },
+        "m_SavedProperties": {
+          "m_TexEnvs": "List`1",
+          "m_Ints": null,
+          "m_Floats": "List`1",
+          "m_Colors": "List`1"
+        },
+        "m_Name": "SFX_Icon_604_Diss_601",
+        "m_PathID": -4909517814128002014,
+        "version": [
+          2017,
+          4,
+          18,
+          1,
+          2
+        ],
+        "platform": 19,
+        "type": 21,
+        "serializedType": {
+          "classID": 21,
+          "m_IsStrippedType": false,
+          "m_ScriptTypeIndex": -1,
+          "m_Type": null,
+          "m_ScriptID": null,
+          "m_OldTypeHash": "Byte[]",
+          "m_TypeDependencies": null,
+          "m_KlassName": null,
+          "m_NameSpace": null,
+          "m_AsmName": null
+        },
+        "byteSize": 808,
+        "Name": "SFX_Icon_604_Diss_601"
+      },
+      "directory": "../hi3-fuhua-extract\\exports\\sentience-native-vfx\\original\\materials\\SFX_Icon_604_Diss_601_-4909517814128002014"
+    }
+  ],
+  "particleEvidence": "selected-particles.json (114 renderer/material-linked original particles decoded through EmissionModule; later modules not assumed)",
+  "runtimeAdaptation": {
+    "geometry": "Godot billboard cards and curved ribbon meshes; native Unity particle renderer not reproduced",
+    "timing": "Combat simulation stateTime, adapted to actual contact; cancels interrupted windup. Particle lifetimes guided by original data.",
+    "shader": "Original RGBA textures/tints with portable alpha blend and softened dissolve. Distortion, full custom-data shader and original particle mesh choreography not reproduced."
+  },
+  "weaponIdentityEvidence": {
+    "A": "Original BladeIcon uses SFX_Icon_602 which reads 剑",
+    "B": "Original LancerIcon uses SFX_Icon_603 which reads 枪",
+    "C": "Original WhipIcon uses SFX_Icon_604 which reads 链"
+  }
+}

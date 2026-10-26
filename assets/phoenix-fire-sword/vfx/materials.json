@@ -1,0 +1,3348 @@
+[
+  {
+    "name": "ground_new_2",
+    "pathId": "8523764194604028485",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\318e546998b1902e.wmv",
+    "cab": "CAB-3e7a543c71dd0beb927c25aceb97ec13",
+    "rawSHA256": "607dc19ea04d8a4c49b332d7a453f6403ecf66b57cb39c50ca6dc144a8ec9ec5",
+    "shader": {
+      "cab": "cab-dcbf1233f16bf3495b987e79bd9f35f8",
+      "pathId": "6053017407293748749",
+      "name": "",
+      "type": "NamedObject",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\71ffe098f339c887.wmv",
+      "unresolved": false
+    },
+    "savedProperties": {
+      "m_TexEnvs": [
+        {
+          "Key": "_DistortionTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 0,
+              "pathId": "0"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        },
+        {
+          "Key": "_MainTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 1,
+              "pathId": "7594447125257435008"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        }
+      ],
+      "m_Ints": null,
+      "m_Floats": [
+        {
+          "Key": "_BloomFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_Distortion",
+          "Value": 0
+        },
+        {
+          "Key": "_DistortionIntensity",
+          "Value": 5
+        },
+        {
+          "Key": "_EmissionScaler",
+          "Value": 1
+        },
+        {
+          "Key": "_OffestFactor",
+          "Value": 0
+        },
+        {
+          "Key": "_OffestUnit",
+          "Value": 0
+        },
+        {
+          "Key": "_TSAspectRatio",
+          "Value": 1
+        },
+        {
+          "Key": "_TextureGradient",
+          "Value": 0
+        },
+        {
+          "Key": "_TextureScale",
+          "Value": 0
+        },
+        {
+          "Key": "_UnjitterMatrix",
+          "Value": 0
+        }
+      ],
+      "m_Colors": [
+        {
+          "Key": "_TintColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        }
+      ]
+    },
+    "textureSlots": [
+      {
+        "slot": "_DistortionTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": null
+      },
+      {
+        "slot": "_MainTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": {
+          "cab": "cab-63e52a12548460c9d20b4a46f9983c02",
+          "pathId": "7594447125257435008",
+          "name": "SFX_Ground_302",
+          "type": "Texture2D",
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\318e546998b1902e.wmv",
+          "unresolved": false
+        }
+      }
+    ],
+    "rawMetadata": {
+      "m_Shader": {
+        "fileId": 2,
+        "pathId": "6053017407293748749"
+      },
+      "m_SavedProperties": {
+        "m_TexEnvs": "List\u00601",
+        "m_Ints": null,
+        "m_Floats": "List\u00601",
+        "m_Colors": "List\u00601"
+      },
+      "m_Name": "ground_new_2",
+      "m_PathID": 8523764194604028485,
+      "version": [
+        2017,
+        4,
+        18,
+        1,
+        2
+      ],
+      "platform": 19,
+      "type": 21,
+      "serializedType": {
+        "classID": 21,
+        "m_IsStrippedType": false,
+        "m_ScriptTypeIndex": -1,
+        "m_Type": null,
+        "m_ScriptID": null,
+        "m_OldTypeHash": "Byte[]",
+        "m_TypeDependencies": null,
+        "m_KlassName": null,
+        "m_NameSpace": null,
+        "m_AsmName": null
+      },
+      "byteSize": 456,
+      "Name": "ground_new_2"
+    },
+    "directory": "../hi3-fuhua-extract\\exports\\c4-fire-sword\\vfx\\original\\materials\\ground_new_2_8523764194604028485"
+  },
+  {
+    "name": "laser_inner_3",
+    "pathId": "4272149848710254615",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\318e546998b1902e.wmv",
+    "cab": "CAB-087b5aa15124c8668182debb0a18b42d",
+    "rawSHA256": "af6125c55282144e9768deb69e96285f123c0297dc9982837c7763dd7b18d003",
+    "shader": {
+      "cab": "cab-0046e3dc5799739368332830562622de",
+      "pathId": "7772377661243739055",
+      "name": "",
+      "type": "NamedObject",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\71ffe098f339c887.wmv",
+      "unresolved": false
+    },
+    "savedProperties": {
+      "m_TexEnvs": [
+        {
+          "Key": "_DistortionTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 0,
+              "pathId": "0"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        },
+        {
+          "Key": "_MainTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 0,
+              "pathId": "0"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        }
+      ],
+      "m_Ints": null,
+      "m_Floats": [
+        {
+          "Key": "_BloomFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_Distortion",
+          "Value": 0
+        },
+        {
+          "Key": "_DistortionIntensity",
+          "Value": 5
+        },
+        {
+          "Key": "_EmissionScaler",
+          "Value": 1
+        },
+        {
+          "Key": "_OffsetFactor",
+          "Value": 0
+        },
+        {
+          "Key": "_OffsetUnit",
+          "Value": 0
+        },
+        {
+          "Key": "_TSAspectRatio",
+          "Value": 1
+        },
+        {
+          "Key": "_TextureScale",
+          "Value": 0
+        },
+        {
+          "Key": "_UIParticleMask",
+          "Value": 0
+        }
+      ],
+      "m_Colors": [
+        {
+          "Key": "_TintColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        }
+      ]
+    },
+    "textureSlots": [
+      {
+        "slot": "_DistortionTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": null
+      },
+      {
+        "slot": "_MainTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": null
+      }
+    ],
+    "rawMetadata": {
+      "m_Shader": {
+        "fileId": 1,
+        "pathId": "7772377661243739055"
+      },
+      "m_SavedProperties": {
+        "m_TexEnvs": "List\u00601",
+        "m_Ints": null,
+        "m_Floats": "List\u00601",
+        "m_Colors": "List\u00601"
+      },
+      "m_Name": "laser_inner_3",
+      "m_PathID": 4272149848710254615,
+      "version": [
+        2017,
+        4,
+        18,
+        1,
+        2
+      ],
+      "platform": 19,
+      "type": 21,
+      "serializedType": {
+        "classID": 21,
+        "m_IsStrippedType": false,
+        "m_ScriptTypeIndex": -1,
+        "m_Type": null,
+        "m_ScriptID": null,
+        "m_OldTypeHash": "Byte[]",
+        "m_TypeDependencies": null,
+        "m_KlassName": null,
+        "m_NameSpace": null,
+        "m_AsmName": null
+      },
+      "byteSize": 448,
+      "Name": "laser_inner_3"
+    },
+    "directory": "../hi3-fuhua-extract\\exports\\c4-fire-sword\\vfx\\original\\materials\\laser_inner_3_4272149848710254615"
+  },
+  {
+    "name": "Fire_3",
+    "pathId": "4091037863409603780",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\318e546998b1902e.wmv",
+    "cab": "CAB-1eda1fa8dee4a2e47bc5a1827882130a",
+    "rawSHA256": "c38579849b1dbe4615278efbbdac38d6e461bdb462e0b554b25e61a205dff961",
+    "shader": {
+      "cab": "cab-dcbf1233f16bf3495b987e79bd9f35f8",
+      "pathId": "6053017407293748749",
+      "name": "",
+      "type": "NamedObject",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\71ffe098f339c887.wmv",
+      "unresolved": false
+    },
+    "savedProperties": {
+      "m_TexEnvs": [
+        {
+          "Key": "_DistortionTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 0,
+              "pathId": "0"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        },
+        {
+          "Key": "_MainTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 1,
+              "pathId": "8919941999460571704"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        }
+      ],
+      "m_Ints": null,
+      "m_Floats": [
+        {
+          "Key": "_BloomFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_Distortion",
+          "Value": 0
+        },
+        {
+          "Key": "_DistortionIntensity",
+          "Value": 0.05
+        },
+        {
+          "Key": "_EmissionScaler",
+          "Value": 1
+        },
+        {
+          "Key": "_OffestFactor",
+          "Value": 0
+        },
+        {
+          "Key": "_OffestUnit",
+          "Value": 0
+        },
+        {
+          "Key": "_TSAspectRatio",
+          "Value": 1
+        },
+        {
+          "Key": "_TextureGradient",
+          "Value": 0
+        },
+        {
+          "Key": "_TextureScale",
+          "Value": 0
+        },
+        {
+          "Key": "_UnjitterMatrix",
+          "Value": 0
+        }
+      ],
+      "m_Colors": [
+        {
+          "Key": "_TintColor",
+          "Value": {
+            "R": 0.5,
+            "G": 0.5,
+            "B": 0.5,
+            "A": 0.5
+          }
+        }
+      ]
+    },
+    "textureSlots": [
+      {
+        "slot": "_DistortionTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": null
+      },
+      {
+        "slot": "_MainTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": {
+          "cab": "cab-46218601b25f1f18d3c3d3a6e2b1ae4c",
+          "pathId": "8919941999460571704",
+          "name": "Fire_1",
+          "type": "Texture2D",
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5f2084de38ff805d.wmv",
+          "unresolved": false
+        }
+      }
+    ],
+    "rawMetadata": {
+      "m_Shader": {
+        "fileId": 2,
+        "pathId": "6053017407293748749"
+      },
+      "m_SavedProperties": {
+        "m_TexEnvs": "List\u00601",
+        "m_Ints": null,
+        "m_Floats": "List\u00601",
+        "m_Colors": "List\u00601"
+      },
+      "m_Name": "Fire_3",
+      "m_PathID": 4091037863409603780,
+      "version": [
+        2017,
+        4,
+        18,
+        1,
+        2
+      ],
+      "platform": 19,
+      "type": 21,
+      "serializedType": {
+        "classID": 21,
+        "m_IsStrippedType": false,
+        "m_ScriptTypeIndex": -1,
+        "m_Type": null,
+        "m_ScriptID": null,
+        "m_OldTypeHash": "Byte[]",
+        "m_TypeDependencies": null,
+        "m_KlassName": null,
+        "m_NameSpace": null,
+        "m_AsmName": null
+      },
+      "byteSize": 452,
+      "Name": "Fire_3"
+    },
+    "directory": "../hi3-fuhua-extract\\exports\\c4-fire-sword\\vfx\\original\\materials\\Fire_3_4091037863409603780"
+  },
+  {
+    "name": "attackfire_new_19",
+    "pathId": "3818904411627497160",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\318e546998b1902e.wmv",
+    "cab": "CAB-efcc62cea88d717e6e7d397b46899b68",
+    "rawSHA256": "f7f3ed0eea3f6da0a5d57bbefb334a06ec8e852e6c5eca2eba20001842d526da",
+    "shader": {
+      "cab": "cab-89f6384e3032004b0c881eac9829e0a7",
+      "pathId": "675527670108420962",
+      "name": "",
+      "type": "NamedObject",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\71ffe098f339c887.wmv",
+      "unresolved": false
+    },
+    "savedProperties": {
+      "m_TexEnvs": [
+        {
+          "Key": "_GradingMask",
+          "Value": {
+            "m_Texture": {
+              "fileId": 0,
+              "pathId": "0"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        },
+        {
+          "Key": "_GradingNoise",
+          "Value": {
+            "m_Texture": {
+              "fileId": 0,
+              "pathId": "0"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        },
+        {
+          "Key": "_MainTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 1,
+              "pathId": "-2076887148154597604"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        },
+        {
+          "Key": "_SPCubeMap",
+          "Value": {
+            "m_Texture": {
+              "fileId": 0,
+              "pathId": "0"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        },
+        {
+          "Key": "_SPNoiseTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 0,
+              "pathId": "0"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        },
+        {
+          "Key": "_SPTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 0,
+              "pathId": "0"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        }
+      ],
+      "m_Ints": null,
+      "m_Floats": [
+        {
+          "Key": "_BloomFactor",
+          "Value": 0.25
+        },
+        {
+          "Key": "_BrightnessAmount",
+          "Value": 1
+        },
+        {
+          "Key": "_BrightnessAmount1",
+          "Value": 1
+        },
+        {
+          "Key": "_ClipPlaneWorld",
+          "Value": 0
+        },
+        {
+          "Key": "_ColorGrading",
+          "Value": 0
+        },
+        {
+          "Key": "_ColorGradingDisv",
+          "Value": 0
+        },
+        {
+          "Key": "_ContrastAmount",
+          "Value": 1
+        },
+        {
+          "Key": "_ContrastAmount1",
+          "Value": 1
+        },
+        {
+          "Key": "_Disv",
+          "Value": 0
+        },
+        {
+          "Key": "_DitherAlpha",
+          "Value": 1
+        },
+        {
+          "Key": "_EOEmissionBloomFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_EOEmissionScaler",
+          "Value": 1
+        },
+        {
+          "Key": "_EmissionBloomFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_EmissionFactor",
+          "Value": 0.452
+        },
+        {
+          "Key": "_EmissionFactorFromTexToggle",
+          "Value": 0
+        },
+        {
+          "Key": "_EmissionOverride",
+          "Value": 0
+        },
+        {
+          "Key": "_EmissionScaler",
+          "Value": 3.5
+        },
+        {
+          "Key": "_EmissionStr",
+          "Value": 0
+        },
+        {
+          "Key": "_FadeDistance",
+          "Value": 0.1
+        },
+        {
+          "Key": "_FadeOffset",
+          "Value": 0
+        },
+        {
+          "Key": "_HRRimIntensity",
+          "Value": 0
+        },
+        {
+          "Key": "_HRRimPower",
+          "Value": 0.1
+        },
+        {
+          "Key": "_Hardness",
+          "Value": 0
+        },
+        {
+          "Key": "_LightArea",
+          "Value": 0.51
+        },
+        {
+          "Key": "_MoreHardRimColor",
+          "Value": 0
+        },
+        {
+          "Key": "_Opaqueness",
+          "Value": 1
+        },
+        {
+          "Key": "_OutlineWidth",
+          "Value": 0
+        },
+        {
+          "Key": "_RGBias",
+          "Value": 0
+        },
+        {
+          "Key": "_RGBloomFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_RGRatio",
+          "Value": 0.5
+        },
+        {
+          "Key": "_RGScale",
+          "Value": 1
+        },
+        {
+          "Key": "_RGShininess",
+          "Value": 1
+        },
+        {
+          "Key": "_RimGlow",
+          "Value": 0
+        },
+        {
+          "Key": "_SPCubeMapBrightness",
+          "Value": 1.26
+        },
+        {
+          "Key": "_SPCubeMapIntensity",
+          "Value": 0
+        },
+        {
+          "Key": "_SPCubeMapNoiseIntensity",
+          "Value": 0
+        },
+        {
+          "Key": "_SPIntensity",
+          "Value": 0.5
+        },
+        {
+          "Key": "_SPNoiseScaler",
+          "Value": 1
+        },
+        {
+          "Key": "_SPOpaqueness",
+          "Value": 1
+        },
+        {
+          "Key": "_SPTransition",
+          "Value": 0
+        },
+        {
+          "Key": "_SPTransitionBloomFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_SPTransitionEmissionScaler",
+          "Value": 1
+        },
+        {
+          "Key": "_SaturationAmount",
+          "Value": 1
+        },
+        {
+          "Key": "_SaturationAmount1",
+          "Value": 1
+        },
+        {
+          "Key": "_Scale",
+          "Value": 0.005
+        },
+        {
+          "Key": "_Shininess",
+          "Value": 0.1
+        },
+        {
+          "Key": "_SpecMulti",
+          "Value": 0
+        },
+        {
+          "Key": "_SpecialState",
+          "Value": 0
+        },
+        {
+          "Key": "_UsingDitherAlpha",
+          "Value": 0
+        },
+        {
+          "Key": "_VertexAlphaFactor",
+          "Value": 0
+        }
+      ],
+      "m_Colors": [
+        {
+          "Key": "_ClipPlane",
+          "Value": {
+            "R": 0,
+            "G": 0,
+            "B": 0,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_Color",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_EmissionTintColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_EnvColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_HRRimColor2",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_HRRimColor3",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_HRRimColor4",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_HRRimColor5",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_LightSpecColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_MainColor",
+          "Value": {
+            "R": 1,
+            "G": 0.80172414,
+            "B": 0.66176474,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_OutlineColor",
+          "Value": {
+            "R": 1,
+            "G": 0.26896548,
+            "B": 0,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_RGColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_SPCubeMapColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_SPCubeMapOffset",
+          "Value": {
+            "R": 0,
+            "G": 0,
+            "B": 0,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_SPNoiseOffsetSpeed",
+          "Value": {
+            "R": 0,
+            "G": 0,
+            "B": 0,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_SPOldColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_SPOutlineColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_SPTransitionColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_ShadowMultColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        }
+      ]
+    },
+    "textureSlots": [
+      {
+        "slot": "_GradingMask",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": null
+      },
+      {
+        "slot": "_GradingNoise",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": null
+      },
+      {
+        "slot": "_MainTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": {
+          "cab": "cab-6a422f07e32b15195edb043d5677d0fc",
+          "pathId": "-2076887148154597604",
+          "name": "ul050ball",
+          "type": "Texture2D",
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\318e546998b1902e.wmv",
+          "unresolved": false
+        }
+      },
+      {
+        "slot": "_SPCubeMap",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": null
+      },
+      {
+        "slot": "_SPNoiseTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": null
+      },
+      {
+        "slot": "_SPTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": null
+      }
+    ],
+    "rawMetadata": {
+      "m_Shader": {
+        "fileId": 2,
+        "pathId": "675527670108420962"
+      },
+      "m_SavedProperties": {
+        "m_TexEnvs": "List\u00601",
+        "m_Ints": null,
+        "m_Floats": "List\u00601",
+        "m_Colors": "List\u00601"
+      },
+      "m_Name": "attackfire_new_19",
+      "m_PathID": 3818904411627497160,
+      "version": [
+        2017,
+        4,
+        18,
+        1,
+        2
+      ],
+      "platform": 19,
+      "type": 21,
+      "serializedType": {
+        "classID": 21,
+        "m_IsStrippedType": false,
+        "m_ScriptTypeIndex": -1,
+        "m_Type": null,
+        "m_ScriptID": null,
+        "m_OldTypeHash": "Byte[]",
+        "m_TypeDependencies": null,
+        "m_KlassName": null,
+        "m_NameSpace": null,
+        "m_AsmName": null
+      },
+      "byteSize": 2236,
+      "Name": "attackfire_new_19"
+    },
+    "directory": "../hi3-fuhua-extract\\exports\\c4-fire-sword\\vfx\\original\\materials\\attackfire_new_19_3818904411627497160"
+  },
+  {
+    "name": "attackfire_new_1",
+    "pathId": "200899639290807935",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\318e546998b1902e.wmv",
+    "cab": "CAB-c508bb74650d5958280fe48c335aaca2",
+    "rawSHA256": "5bc7c19a210acb694241c1400231cb2d2369530a7dd0f24a7a4008544d8f0eaa",
+    "shader": {
+      "cab": "cab-dcbf1233f16bf3495b987e79bd9f35f8",
+      "pathId": "6053017407293748749",
+      "name": "",
+      "type": "NamedObject",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\71ffe098f339c887.wmv",
+      "unresolved": false
+    },
+    "savedProperties": {
+      "m_TexEnvs": [
+        {
+          "Key": "_DistortionTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 0,
+              "pathId": "0"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        },
+        {
+          "Key": "_MainTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 0,
+              "pathId": "-2215329306385895413"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        }
+      ],
+      "m_Ints": null,
+      "m_Floats": [
+        {
+          "Key": "_BloomFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_Distortion",
+          "Value": 0
+        },
+        {
+          "Key": "_DistortionIntensity",
+          "Value": 5.61
+        },
+        {
+          "Key": "_EmissionScaler",
+          "Value": 2.8
+        },
+        {
+          "Key": "_OffestFactor",
+          "Value": 0
+        },
+        {
+          "Key": "_OffestUnit",
+          "Value": 0
+        },
+        {
+          "Key": "_TSAspectRatio",
+          "Value": 1
+        },
+        {
+          "Key": "_TextureGradient",
+          "Value": 0
+        },
+        {
+          "Key": "_TextureScale",
+          "Value": 0
+        },
+        {
+          "Key": "_UnjitterMatrix",
+          "Value": 0
+        }
+      ],
+      "m_Colors": [
+        {
+          "Key": "_TintColor",
+          "Value": {
+            "R": 0.64705884,
+            "G": 0.33055118,
+            "B": 0.21410036,
+            "A": 0.497
+          }
+        }
+      ]
+    },
+    "textureSlots": [
+      {
+        "slot": "_DistortionTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": null
+      },
+      {
+        "slot": "_MainTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": {
+          "cab": "CAB-c508bb74650d5958280fe48c335aaca2",
+          "pathId": "-2215329306385895413",
+          "name": "quan6_new",
+          "type": "Texture2D",
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\318e546998b1902e.wmv",
+          "unresolved": false
+        }
+      }
+    ],
+    "rawMetadata": {
+      "m_Shader": {
+        "fileId": 1,
+        "pathId": "6053017407293748749"
+      },
+      "m_SavedProperties": {
+        "m_TexEnvs": "List\u00601",
+        "m_Ints": null,
+        "m_Floats": "List\u00601",
+        "m_Colors": "List\u00601"
+      },
+      "m_Name": "attackfire_new_1",
+      "m_PathID": 200899639290807935,
+      "version": [
+        2017,
+        4,
+        18,
+        1,
+        2
+      ],
+      "platform": 19,
+      "type": 21,
+      "serializedType": {
+        "classID": 21,
+        "m_IsStrippedType": false,
+        "m_ScriptTypeIndex": -1,
+        "m_Type": null,
+        "m_ScriptID": null,
+        "m_OldTypeHash": "Byte[]",
+        "m_TypeDependencies": null,
+        "m_KlassName": null,
+        "m_NameSpace": null,
+        "m_AsmName": null
+      },
+      "byteSize": 460,
+      "Name": "attackfire_new_1"
+    },
+    "directory": "../hi3-fuhua-extract\\exports\\c4-fire-sword\\vfx\\original\\materials\\attackfire_new_1_200899639290807935"
+  },
+  {
+    "name": "light_new_2",
+    "pathId": "-9197670754797821533",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\318e546998b1902e.wmv",
+    "cab": "CAB-e0c1a8fe47bf0d1d1232275b317ced83",
+    "rawSHA256": "c22684214a4c01ba0bddc7f8c44317591d83b051020142b3e09ba7f150491738",
+    "shader": {
+      "cab": "cab-dcbf1233f16bf3495b987e79bd9f35f8",
+      "pathId": "6053017407293748749",
+      "name": "",
+      "type": "NamedObject",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\71ffe098f339c887.wmv",
+      "unresolved": false
+    },
+    "savedProperties": {
+      "m_TexEnvs": [
+        {
+          "Key": "_DistortionTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 0,
+              "pathId": "0"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        },
+        {
+          "Key": "_MainTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 2,
+              "pathId": "5176621394455261832"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        }
+      ],
+      "m_Ints": null,
+      "m_Floats": [
+        {
+          "Key": "_BloomFactor",
+          "Value": 0.5
+        },
+        {
+          "Key": "_Distortion",
+          "Value": 0
+        },
+        {
+          "Key": "_DistortionIntensity",
+          "Value": 5
+        },
+        {
+          "Key": "_EmissionScaler",
+          "Value": 4.4
+        },
+        {
+          "Key": "_OffestFactor",
+          "Value": 0
+        },
+        {
+          "Key": "_OffestUnit",
+          "Value": 0
+        },
+        {
+          "Key": "_TSAspectRatio",
+          "Value": 1
+        },
+        {
+          "Key": "_TextureGradient",
+          "Value": 0
+        },
+        {
+          "Key": "_TextureScale",
+          "Value": 0
+        },
+        {
+          "Key": "_UnjitterMatrix",
+          "Value": 0
+        }
+      ],
+      "m_Colors": [
+        {
+          "Key": "_TintColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 0.259
+          }
+        }
+      ]
+    },
+    "textureSlots": [
+      {
+        "slot": "_DistortionTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": null
+      },
+      {
+        "slot": "_MainTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": {
+          "cab": "cab-41a8ea6c1185673edde4c34c296492aa",
+          "pathId": "5176621394455261832",
+          "name": "SFX_Ray_503",
+          "type": "Texture2D",
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+          "unresolved": false
+        }
+      }
+    ],
+    "rawMetadata": {
+      "m_Shader": {
+        "fileId": 1,
+        "pathId": "6053017407293748749"
+      },
+      "m_SavedProperties": {
+        "m_TexEnvs": "List\u00601",
+        "m_Ints": null,
+        "m_Floats": "List\u00601",
+        "m_Colors": "List\u00601"
+      },
+      "m_Name": "light_new_2",
+      "m_PathID": -9197670754797821533,
+      "version": [
+        2017,
+        4,
+        18,
+        1,
+        2
+      ],
+      "platform": 19,
+      "type": 21,
+      "serializedType": {
+        "classID": 21,
+        "m_IsStrippedType": false,
+        "m_ScriptTypeIndex": -1,
+        "m_Type": null,
+        "m_ScriptID": null,
+        "m_OldTypeHash": "Byte[]",
+        "m_TypeDependencies": null,
+        "m_KlassName": null,
+        "m_NameSpace": null,
+        "m_AsmName": null
+      },
+      "byteSize": 456,
+      "Name": "light_new_2"
+    },
+    "directory": "../hi3-fuhua-extract\\exports\\c4-fire-sword\\vfx\\original\\materials\\light_new_2_-9197670754797821533"
+  },
+  {
+    "name": "ring_1",
+    "pathId": "2148564664606279934",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5763c013ee7717cb.wmv",
+    "cab": "CAB-067a316747f2bb32d1880b7fbfe20bb5",
+    "rawSHA256": "33ad5277c7eac81d7b1ff00019e4eb66f41c53b3bb08fd7efb1a22f650f32427",
+    "shader": {
+      "cab": "cab-dcbf1233f16bf3495b987e79bd9f35f8",
+      "pathId": "6053017407293748749",
+      "name": "",
+      "type": "NamedObject",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\71ffe098f339c887.wmv",
+      "unresolved": false
+    },
+    "savedProperties": {
+      "m_TexEnvs": [
+        {
+          "Key": "_DistortionTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 0,
+              "pathId": "0"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        },
+        {
+          "Key": "_MainTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 1,
+              "pathId": "-2010347560329837244"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        }
+      ],
+      "m_Ints": null,
+      "m_Floats": [
+        {
+          "Key": "_BloomFactor",
+          "Value": 1.92
+        },
+        {
+          "Key": "_Distortion",
+          "Value": 0
+        },
+        {
+          "Key": "_DistortionIntensity",
+          "Value": 5
+        },
+        {
+          "Key": "_EmissionScaler",
+          "Value": 1.1
+        },
+        {
+          "Key": "_OffestFactor",
+          "Value": 0
+        },
+        {
+          "Key": "_OffestUnit",
+          "Value": 0
+        },
+        {
+          "Key": "_TSAspectRatio",
+          "Value": 1
+        },
+        {
+          "Key": "_TextureGradient",
+          "Value": 0
+        },
+        {
+          "Key": "_TextureScale",
+          "Value": 0
+        },
+        {
+          "Key": "_UnjitterMatrix",
+          "Value": 0
+        }
+      ],
+      "m_Colors": [
+        {
+          "Key": "_TintColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 0.372
+          }
+        }
+      ]
+    },
+    "textureSlots": [
+      {
+        "slot": "_DistortionTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": null
+      },
+      {
+        "slot": "_MainTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": {
+          "cab": "cab-42dcff42f421ad8b5ba43879eb47e63d",
+          "pathId": "-2010347560329837244",
+          "name": "SFX_Nature_603",
+          "type": "Texture2D",
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\37933bad1a0b0d29.wmv",
+          "unresolved": false
+        }
+      }
+    ],
+    "rawMetadata": {
+      "m_Shader": {
+        "fileId": 2,
+        "pathId": "6053017407293748749"
+      },
+      "m_SavedProperties": {
+        "m_TexEnvs": "List\u00601",
+        "m_Ints": null,
+        "m_Floats": "List\u00601",
+        "m_Colors": "List\u00601"
+      },
+      "m_Name": "ring_1",
+      "m_PathID": 2148564664606279934,
+      "version": [
+        2017,
+        4,
+        18,
+        1,
+        2
+      ],
+      "platform": 19,
+      "type": 21,
+      "serializedType": {
+        "classID": 21,
+        "m_IsStrippedType": false,
+        "m_ScriptTypeIndex": -1,
+        "m_Type": null,
+        "m_ScriptID": null,
+        "m_OldTypeHash": "Byte[]",
+        "m_TypeDependencies": null,
+        "m_KlassName": null,
+        "m_NameSpace": null,
+        "m_AsmName": null
+      },
+      "byteSize": 452,
+      "Name": "ring_1"
+    },
+    "directory": "../hi3-fuhua-extract\\exports\\c4-fire-sword\\vfx\\original\\materials\\ring_1_2148564664606279934"
+  },
+  {
+    "name": "Avatar_Fuka_C4_04_01_Material_UltraBlade",
+    "pathId": "7479759955389162949",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+    "cab": "CAB-eef08d08c3fe4d6d5fb5fc00863cddb0",
+    "rawSHA256": "f543069424a2953095a586855370fa8488303349e1ab682ca5bb0463bd8525c8",
+    "shader": {
+      "cab": "cab-c15b11e63520ae4004de1f71df18593b",
+      "pathId": "-6921508511827709198",
+      "name": "",
+      "type": "NamedObject",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\71ffe098f339c887.wmv",
+      "unresolved": false
+    },
+    "savedProperties": {
+      "m_TexEnvs": [
+        {
+          "Key": "_FringeBumpTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 0,
+              "pathId": "0"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        },
+        {
+          "Key": "_FringeTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 17,
+              "pathId": "4636209983481964196"
+            },
+            "m_Scale": {
+              "X": 0,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        },
+        {
+          "Key": "_MainTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 0,
+              "pathId": "0"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        }
+      ],
+      "m_Ints": null,
+      "m_Floats": [
+        {
+          "Key": "_BloomFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_DitherAlpha",
+          "Value": 1
+        },
+        {
+          "Key": "_EmissionScaler",
+          "Value": 1.59
+        },
+        {
+          "Key": "_EmissionScalerScalerWithoutHDR",
+          "Value": 1
+        },
+        {
+          "Key": "_FadeDistance",
+          "Value": 0.1
+        },
+        {
+          "Key": "_FadeOffset",
+          "Value": 0
+        },
+        {
+          "Key": "_FringeBumpScaler",
+          "Value": 3.43
+        },
+        {
+          "Key": "_FringeIntensity",
+          "Value": 3.2
+        },
+        {
+          "Key": "_FringeRangeOffset",
+          "Value": 1
+        },
+        {
+          "Key": "_FringeRangeScaler",
+          "Value": 0.4
+        },
+        {
+          "Key": "_FringeViewDistance",
+          "Value": 5
+        },
+        {
+          "Key": "_MinAlpha",
+          "Value": 0
+        },
+        {
+          "Key": "_Opaqueness",
+          "Value": 1
+        },
+        {
+          "Key": "_OpaquenessScalerWithoutHDR",
+          "Value": 1
+        },
+        {
+          "Key": "_Stencil",
+          "Value": 8
+        },
+        {
+          "Key": "_UsingDitherAlpha",
+          "Value": 1
+        },
+        {
+          "Key": "_WithFog",
+          "Value": 0
+        }
+      ],
+      "m_Colors": [
+        {
+          "Key": "_Color",
+          "Value": {
+            "R": 1,
+            "G": 0,
+            "B": 0,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_EnvColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_FringeFresnel",
+          "Value": {
+            "R": 0.45,
+            "G": 1,
+            "B": 0,
+            "A": 0
+          }
+        }
+      ]
+    },
+    "textureSlots": [
+      {
+        "slot": "_FringeBumpTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": null
+      },
+      {
+        "slot": "_FringeTex",
+        "scale": {
+          "X": 0,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": {
+          "cab": "cab-70c96526322b1f64531f4db37cda782a",
+          "pathId": "4636209983481964196",
+          "name": "fringe",
+          "type": "Texture2D",
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5763c013ee7717cb.wmv",
+          "unresolved": false
+        }
+      },
+      {
+        "slot": "_MainTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": null
+      }
+    ],
+    "rawMetadata": {
+      "m_Shader": {
+        "fileId": 21,
+        "pathId": "-6921508511827709198"
+      },
+      "m_SavedProperties": {
+        "m_TexEnvs": "List\u00601",
+        "m_Ints": null,
+        "m_Floats": "List\u00601",
+        "m_Colors": "List\u00601"
+      },
+      "m_Name": "Avatar_Fuka_C4_04_01_Material_UltraBlade",
+      "m_PathID": 7479759955389162949,
+      "version": [
+        2017,
+        4,
+        18,
+        1,
+        2
+      ],
+      "platform": 19,
+      "type": 21,
+      "serializedType": {
+        "classID": 21,
+        "m_IsStrippedType": false,
+        "m_ScriptTypeIndex": -1,
+        "m_Type": null,
+        "m_ScriptID": null,
+        "m_OldTypeHash": "Byte[]",
+        "m_TypeDependencies": null,
+        "m_KlassName": null,
+        "m_NameSpace": null,
+        "m_AsmName": null
+      },
+      "byteSize": 740,
+      "Name": "Avatar_Fuka_C4_04_01_Material_UltraBlade"
+    },
+    "directory": "../hi3-fuhua-extract\\exports\\c4-fire-sword\\vfx\\original\\materials\\Avatar_Fuka_C4_04_01_Material_UltraBlade_7479759955389162949"
+  },
+  {
+    "name": "Smoke-y",
+    "pathId": "-3182406652044079010",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5f2084de38ff805d.wmv",
+    "cab": "CAB-944b345db054676bf2c78d1c2c653c73",
+    "rawSHA256": "b287f3e4444f36bbdc8d7016c58e4006eeea5ecf8152dc5f1873a398af38fecb",
+    "shader": {
+      "cab": "cab-dcbf1233f16bf3495b987e79bd9f35f8",
+      "pathId": "6053017407293748749",
+      "name": "",
+      "type": "NamedObject",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\71ffe098f339c887.wmv",
+      "unresolved": false
+    },
+    "savedProperties": {
+      "m_TexEnvs": [
+        {
+          "Key": "_DistortionTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 0,
+              "pathId": "0"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        },
+        {
+          "Key": "_MainTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 2,
+              "pathId": "439537943395892592"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        }
+      ],
+      "m_Ints": null,
+      "m_Floats": [
+        {
+          "Key": "_BloomFactor",
+          "Value": 0.3
+        },
+        {
+          "Key": "_Distortion",
+          "Value": 0
+        },
+        {
+          "Key": "_DistortionIntensity",
+          "Value": 5
+        },
+        {
+          "Key": "_EmissionScaler",
+          "Value": 1
+        },
+        {
+          "Key": "_OffestFactor",
+          "Value": 0
+        },
+        {
+          "Key": "_OffestUnit",
+          "Value": 0
+        },
+        {
+          "Key": "_TSAspectRatio",
+          "Value": 1
+        },
+        {
+          "Key": "_TextureGradient",
+          "Value": 0
+        },
+        {
+          "Key": "_TextureScale",
+          "Value": 0
+        },
+        {
+          "Key": "_UnjitterMatrix",
+          "Value": 0
+        }
+      ],
+      "m_Colors": [
+        {
+          "Key": "_TintColor",
+          "Value": {
+            "R": 0.66176474,
+            "G": 0.66176474,
+            "B": 0.66176474,
+            "A": 0.49803922
+          }
+        }
+      ]
+    },
+    "textureSlots": [
+      {
+        "slot": "_DistortionTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": null
+      },
+      {
+        "slot": "_MainTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": {
+          "cab": "cab-e67be72c7aa222e9ba1dd35702622028",
+          "pathId": "439537943395892592",
+          "name": "SFX_Smoke_608",
+          "type": "Texture2D",
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\68dc1517f487a11a.wmv",
+          "unresolved": false
+        }
+      }
+    ],
+    "rawMetadata": {
+      "m_Shader": {
+        "fileId": 1,
+        "pathId": "6053017407293748749"
+      },
+      "m_SavedProperties": {
+        "m_TexEnvs": "List\u00601",
+        "m_Ints": null,
+        "m_Floats": "List\u00601",
+        "m_Colors": "List\u00601"
+      },
+      "m_Name": "Smoke-y",
+      "m_PathID": -3182406652044079010,
+      "version": [
+        2017,
+        4,
+        18,
+        1,
+        2
+      ],
+      "platform": 19,
+      "type": 21,
+      "serializedType": {
+        "classID": 21,
+        "m_IsStrippedType": false,
+        "m_ScriptTypeIndex": -1,
+        "m_Type": null,
+        "m_ScriptID": null,
+        "m_OldTypeHash": "Byte[]",
+        "m_TypeDependencies": null,
+        "m_KlassName": null,
+        "m_NameSpace": null,
+        "m_AsmName": null
+      },
+      "byteSize": 452,
+      "Name": "Smoke-y"
+    },
+    "directory": "../hi3-fuhua-extract\\exports\\c4-fire-sword\\vfx\\original\\materials\\Smoke-y_-3182406652044079010"
+  },
+  {
+    "name": "Glow_Ball05",
+    "pathId": "-9028837736070425893",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5f2084de38ff805d.wmv",
+    "cab": "CAB-e3bc5fa3a14a818a71f33bc73fbe0aac",
+    "rawSHA256": "d03d125806d44ca12c6b035d5319d060f23eb802c33d4e118930ab59b3895819",
+    "shader": {
+      "cab": "cab-d4eeebed366307a4a89eedf0a04b8702",
+      "pathId": "9029668557235774604",
+      "name": "",
+      "type": "NamedObject",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\71ffe098f339c887.wmv",
+      "unresolved": false
+    },
+    "savedProperties": {
+      "m_TexEnvs": [
+        {
+          "Key": "_DistortionTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 0,
+              "pathId": "0"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        },
+        {
+          "Key": "_MainTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 2,
+              "pathId": "9081000254100049938"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        }
+      ],
+      "m_Ints": null,
+      "m_Floats": [
+        {
+          "Key": "_BloomFactor",
+          "Value": 2
+        },
+        {
+          "Key": "_Distortion",
+          "Value": 0
+        },
+        {
+          "Key": "_DistortionIntensity",
+          "Value": 5
+        },
+        {
+          "Key": "_EmissionScaler",
+          "Value": 2
+        },
+        {
+          "Key": "_PolygonOffsetFactor",
+          "Value": 0
+        },
+        {
+          "Key": "_PolygonOffsetUnit",
+          "Value": 0
+        },
+        {
+          "Key": "_TSAspectRatio",
+          "Value": 1
+        },
+        {
+          "Key": "_TextureScale",
+          "Value": 0
+        },
+        {
+          "Key": "_UnjitterMatrix",
+          "Value": 0
+        },
+        {
+          "Key": "_WriteDepth",
+          "Value": 0
+        },
+        {
+          "Key": "_ZDepthBias",
+          "Value": 0
+        }
+      ],
+      "m_Colors": [
+        {
+          "Key": "_TintColor",
+          "Value": {
+            "R": 0.209,
+            "G": 0.209,
+            "B": 0.209,
+            "A": 1
+          }
+        }
+      ]
+    },
+    "textureSlots": [
+      {
+        "slot": "_DistortionTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": null
+      },
+      {
+        "slot": "_MainTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": {
+          "cab": "cab-c666f87077a9a6c5098d06c8f7de0928",
+          "pathId": "9081000254100049938",
+          "name": "Glow_Ball05",
+          "type": "Texture2D",
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5f2084de38ff805d.wmv",
+          "unresolved": false
+        }
+      }
+    ],
+    "rawMetadata": {
+      "m_Shader": {
+        "fileId": 1,
+        "pathId": "9029668557235774604"
+      },
+      "m_SavedProperties": {
+        "m_TexEnvs": "List\u00601",
+        "m_Ints": null,
+        "m_Floats": "List\u00601",
+        "m_Colors": "List\u00601"
+      },
+      "m_Name": "Glow_Ball05",
+      "m_PathID": -9028837736070425893,
+      "version": [
+        2017,
+        4,
+        18,
+        1,
+        2
+      ],
+      "platform": 19,
+      "type": 21,
+      "serializedType": {
+        "classID": 21,
+        "m_IsStrippedType": false,
+        "m_ScriptTypeIndex": -1,
+        "m_Type": null,
+        "m_ScriptID": null,
+        "m_OldTypeHash": "Byte[]",
+        "m_TypeDependencies": null,
+        "m_KlassName": null,
+        "m_NameSpace": null,
+        "m_AsmName": null
+      },
+      "byteSize": 484,
+      "Name": "Glow_Ball05"
+    },
+    "directory": "../hi3-fuhua-extract\\exports\\c4-fire-sword\\vfx\\original\\materials\\Glow_Ball05_-9028837736070425893"
+  },
+  {
+    "name": "Swirl-new-20",
+    "pathId": "4933386713912194318",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5f2084de38ff805d.wmv",
+    "cab": "CAB-33b60f5ad5cb06aaca7e5a97b7b38938",
+    "rawSHA256": "3602447ee39c7208494d6d5b4a0860d506d94cbf7a1513573827214ee42ed715",
+    "shader": {
+      "cab": "cab-dcbf1233f16bf3495b987e79bd9f35f8",
+      "pathId": "6053017407293748749",
+      "name": "",
+      "type": "NamedObject",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\71ffe098f339c887.wmv",
+      "unresolved": false
+    },
+    "savedProperties": {
+      "m_TexEnvs": [
+        {
+          "Key": "_DistortionTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 0,
+              "pathId": "0"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        },
+        {
+          "Key": "_MainTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 1,
+              "pathId": "-1185755484052075371"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        }
+      ],
+      "m_Ints": null,
+      "m_Floats": [
+        {
+          "Key": "_BloomFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_Distortion",
+          "Value": 0
+        },
+        {
+          "Key": "_DistortionIntensity",
+          "Value": 5
+        },
+        {
+          "Key": "_EmissionScaler",
+          "Value": 2
+        },
+        {
+          "Key": "_OffestFactor",
+          "Value": 0
+        },
+        {
+          "Key": "_OffestUnit",
+          "Value": 0
+        },
+        {
+          "Key": "_TSAspectRatio",
+          "Value": 1.85
+        },
+        {
+          "Key": "_TextureGradient",
+          "Value": 0
+        },
+        {
+          "Key": "_TextureScale",
+          "Value": 0
+        },
+        {
+          "Key": "_UnjitterMatrix",
+          "Value": 0
+        }
+      ],
+      "m_Colors": [
+        {
+          "Key": "_TintColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 0.447
+          }
+        }
+      ]
+    },
+    "textureSlots": [
+      {
+        "slot": "_DistortionTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": null
+      },
+      {
+        "slot": "_MainTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": {
+          "cab": "cab-10795fe974a756f29ae61d9b5920c049",
+          "pathId": "-1185755484052075371",
+          "name": "explosionpoint1",
+          "type": "Texture2D",
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5f2084de38ff805d.wmv",
+          "unresolved": false
+        }
+      }
+    ],
+    "rawMetadata": {
+      "m_Shader": {
+        "fileId": 2,
+        "pathId": "6053017407293748749"
+      },
+      "m_SavedProperties": {
+        "m_TexEnvs": "List\u00601",
+        "m_Ints": null,
+        "m_Floats": "List\u00601",
+        "m_Colors": "List\u00601"
+      },
+      "m_Name": "Swirl-new-20",
+      "m_PathID": 4933386713912194318,
+      "version": [
+        2017,
+        4,
+        18,
+        1,
+        2
+      ],
+      "platform": 19,
+      "type": 21,
+      "serializedType": {
+        "classID": 21,
+        "m_IsStrippedType": false,
+        "m_ScriptTypeIndex": -1,
+        "m_Type": null,
+        "m_ScriptID": null,
+        "m_OldTypeHash": "Byte[]",
+        "m_TypeDependencies": null,
+        "m_KlassName": null,
+        "m_NameSpace": null,
+        "m_AsmName": null
+      },
+      "byteSize": 456,
+      "Name": "Swirl-new-20"
+    },
+    "directory": "../hi3-fuhua-extract\\exports\\c4-fire-sword\\vfx\\original\\materials\\Swirl-new-20_4933386713912194318"
+  },
+  {
+    "name": "spot1_new_5",
+    "pathId": "-2490290911636917527",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5f2084de38ff805d.wmv",
+    "cab": "CAB-65a0a30ef7544aae98524325430e3db8",
+    "rawSHA256": "efb05f050682a46ba8f83232a0e32026305121f5dae3dc00d64ac001d7d868b7",
+    "shader": {
+      "cab": "cab-d4eeebed366307a4a89eedf0a04b8702",
+      "pathId": "9029668557235774604",
+      "name": "",
+      "type": "NamedObject",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\71ffe098f339c887.wmv",
+      "unresolved": false
+    },
+    "savedProperties": {
+      "m_TexEnvs": [
+        {
+          "Key": "_DistortionTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 0,
+              "pathId": "0"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        },
+        {
+          "Key": "_MainTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 2,
+              "pathId": "4450602069166727676"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        }
+      ],
+      "m_Ints": null,
+      "m_Floats": [
+        {
+          "Key": "_BloomFactor",
+          "Value": 1.92
+        },
+        {
+          "Key": "_Distortion",
+          "Value": 0
+        },
+        {
+          "Key": "_DistortionIntensity",
+          "Value": 5
+        },
+        {
+          "Key": "_EmissionScaler",
+          "Value": 1.1
+        },
+        {
+          "Key": "_PolygonOffsetFactor",
+          "Value": 0
+        },
+        {
+          "Key": "_PolygonOffsetUnit",
+          "Value": 0
+        },
+        {
+          "Key": "_TSAspectRatio",
+          "Value": 1
+        },
+        {
+          "Key": "_TextureScale",
+          "Value": 0
+        },
+        {
+          "Key": "_UnjitterMatrix",
+          "Value": 0
+        },
+        {
+          "Key": "_WriteDepth",
+          "Value": 0
+        },
+        {
+          "Key": "_ZDepthBias",
+          "Value": 0
+        }
+      ],
+      "m_Colors": [
+        {
+          "Key": "_TintColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        }
+      ]
+    },
+    "textureSlots": [
+      {
+        "slot": "_DistortionTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": null
+      },
+      {
+        "slot": "_MainTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": {
+          "cab": "cab-dfdba79d6762a0c6fe486e944b5be96a",
+          "pathId": "4450602069166727676",
+          "name": "SFX_Particle_101",
+          "type": "Texture2D",
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+          "unresolved": false
+        }
+      }
+    ],
+    "rawMetadata": {
+      "m_Shader": {
+        "fileId": 1,
+        "pathId": "9029668557235774604"
+      },
+      "m_SavedProperties": {
+        "m_TexEnvs": "List\u00601",
+        "m_Ints": null,
+        "m_Floats": "List\u00601",
+        "m_Colors": "List\u00601"
+      },
+      "m_Name": "spot1_new_5",
+      "m_PathID": -2490290911636917527,
+      "version": [
+        2017,
+        4,
+        18,
+        1,
+        2
+      ],
+      "platform": 19,
+      "type": 21,
+      "serializedType": {
+        "classID": 21,
+        "m_IsStrippedType": false,
+        "m_ScriptTypeIndex": -1,
+        "m_Type": null,
+        "m_ScriptID": null,
+        "m_OldTypeHash": "Byte[]",
+        "m_TypeDependencies": null,
+        "m_KlassName": null,
+        "m_NameSpace": null,
+        "m_AsmName": null
+      },
+      "byteSize": 516,
+      "Name": "spot1_new_5"
+    },
+    "directory": "../hi3-fuhua-extract\\exports\\c4-fire-sword\\vfx\\original\\materials\\spot1_new_5_-2490290911636917527"
+  },
+  {
+    "name": "Lightbeam4",
+    "pathId": "7380766473730832067",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5f2084de38ff805d.wmv",
+    "cab": "CAB-ba950eaed54d29dab8f37126835fd8ea",
+    "rawSHA256": "1fab58aaf410ea264b5963b6ae8faed935e662ab7f9428e4dbf35ac169629897",
+    "shader": {
+      "cab": "cab-0046e3dc5799739368332830562622de",
+      "pathId": "7772377661243739055",
+      "name": "",
+      "type": "NamedObject",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\71ffe098f339c887.wmv",
+      "unresolved": false
+    },
+    "savedProperties": {
+      "m_TexEnvs": [
+        {
+          "Key": "_DistortionTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 0,
+              "pathId": "0"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        },
+        {
+          "Key": "_MainTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 2,
+              "pathId": "-3959637371056945708"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        }
+      ],
+      "m_Ints": null,
+      "m_Floats": [
+        {
+          "Key": "_BloomFactor",
+          "Value": 0.1
+        },
+        {
+          "Key": "_Distortion",
+          "Value": 0
+        },
+        {
+          "Key": "_DistortionIntensity",
+          "Value": 5
+        },
+        {
+          "Key": "_EmissionScaler",
+          "Value": 1
+        },
+        {
+          "Key": "_OffsetFactor",
+          "Value": 0
+        },
+        {
+          "Key": "_OffsetUnit",
+          "Value": 0
+        },
+        {
+          "Key": "_TSAspectRatio",
+          "Value": 1
+        },
+        {
+          "Key": "_TextureScale",
+          "Value": 0
+        },
+        {
+          "Key": "_UIParticleMask",
+          "Value": 0
+        }
+      ],
+      "m_Colors": [
+        {
+          "Key": "_TintColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 0.49803922
+          }
+        }
+      ]
+    },
+    "textureSlots": [
+      {
+        "slot": "_DistortionTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": null
+      },
+      {
+        "slot": "_MainTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": {
+          "cab": "cab-ce5ebf471945828377c7d0696e37d017",
+          "pathId": "-3959637371056945708",
+          "name": "VFX_Ray_609",
+          "type": "Texture2D",
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\39dfd8fd77a84845.wmv",
+          "unresolved": false
+        }
+      }
+    ],
+    "rawMetadata": {
+      "m_Shader": {
+        "fileId": 1,
+        "pathId": "7772377661243739055"
+      },
+      "m_SavedProperties": {
+        "m_TexEnvs": "List\u00601",
+        "m_Ints": null,
+        "m_Floats": "List\u00601",
+        "m_Colors": "List\u00601"
+      },
+      "m_Name": "Lightbeam4",
+      "m_PathID": 7380766473730832067,
+      "version": [
+        2017,
+        4,
+        18,
+        1,
+        2
+      ],
+      "platform": 19,
+      "type": 21,
+      "serializedType": {
+        "classID": 21,
+        "m_IsStrippedType": false,
+        "m_ScriptTypeIndex": -1,
+        "m_Type": null,
+        "m_ScriptID": null,
+        "m_OldTypeHash": "Byte[]",
+        "m_TypeDependencies": null,
+        "m_KlassName": null,
+        "m_NameSpace": null,
+        "m_AsmName": null
+      },
+      "byteSize": 432,
+      "Name": "Lightbeam4"
+    },
+    "directory": "../hi3-fuhua-extract\\exports\\c4-fire-sword\\vfx\\original\\materials\\Lightbeam4_7380766473730832067"
+  },
+  {
+    "name": "yuanqidan",
+    "pathId": "-1631669209538290927",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5f2084de38ff805d.wmv",
+    "cab": "CAB-a504eab6823ade47c255b3700e25b5e0",
+    "rawSHA256": "5423105c0e3ad894f4490b50104f8b43c35e8dcc6565ba8f4b9e3bac469ab5cb",
+    "shader": {
+      "cab": "cab-dcbf1233f16bf3495b987e79bd9f35f8",
+      "pathId": "6053017407293748749",
+      "name": "",
+      "type": "NamedObject",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\71ffe098f339c887.wmv",
+      "unresolved": false
+    },
+    "savedProperties": {
+      "m_TexEnvs": [
+        {
+          "Key": "_DistortionTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 0,
+              "pathId": "0"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        },
+        {
+          "Key": "_MainTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 2,
+              "pathId": "-525828131808152343"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        }
+      ],
+      "m_Ints": null,
+      "m_Floats": [
+        {
+          "Key": "_BloomFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_Distortion",
+          "Value": 0
+        },
+        {
+          "Key": "_DistortionIntensity",
+          "Value": 5
+        },
+        {
+          "Key": "_EmissionScaler",
+          "Value": 6
+        },
+        {
+          "Key": "_OffestFactor",
+          "Value": 0
+        },
+        {
+          "Key": "_OffestUnit",
+          "Value": 0
+        },
+        {
+          "Key": "_TSAspectRatio",
+          "Value": 1
+        },
+        {
+          "Key": "_TextureGradient",
+          "Value": 0
+        },
+        {
+          "Key": "_TextureScale",
+          "Value": 0
+        },
+        {
+          "Key": "_UnjitterMatrix",
+          "Value": 0
+        }
+      ],
+      "m_Colors": [
+        {
+          "Key": "_TintColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 0.5
+          }
+        }
+      ]
+    },
+    "textureSlots": [
+      {
+        "slot": "_DistortionTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": null
+      },
+      {
+        "slot": "_MainTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": {
+          "cab": "cab-133c1f2b6d1de350797dba7704b1db65",
+          "pathId": "-525828131808152343",
+          "name": "yuanqidan_new",
+          "type": "Texture2D",
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5f2084de38ff805d.wmv",
+          "unresolved": false
+        }
+      }
+    ],
+    "rawMetadata": {
+      "m_Shader": {
+        "fileId": 1,
+        "pathId": "6053017407293748749"
+      },
+      "m_SavedProperties": {
+        "m_TexEnvs": "List\u00601",
+        "m_Ints": null,
+        "m_Floats": "List\u00601",
+        "m_Colors": "List\u00601"
+      },
+      "m_Name": "yuanqidan",
+      "m_PathID": -1631669209538290927,
+      "version": [
+        2017,
+        4,
+        18,
+        1,
+        2
+      ],
+      "platform": 19,
+      "type": 21,
+      "serializedType": {
+        "classID": 21,
+        "m_IsStrippedType": false,
+        "m_ScriptTypeIndex": -1,
+        "m_Type": null,
+        "m_ScriptID": null,
+        "m_OldTypeHash": "Byte[]",
+        "m_TypeDependencies": null,
+        "m_KlassName": null,
+        "m_NameSpace": null,
+        "m_AsmName": null
+      },
+      "byteSize": 456,
+      "Name": "yuanqidan"
+    },
+    "directory": "../hi3-fuhua-extract\\exports\\c4-fire-sword\\vfx\\original\\materials\\yuanqidan_-1631669209538290927"
+  },
+  {
+    "name": "Fire_6",
+    "pathId": "5911837929844324696",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5f2084de38ff805d.wmv",
+    "cab": "CAB-56172bb268ec99bf83ab9507899a5bc4",
+    "rawSHA256": "34a17aed1064d38b63136874cce02e53c5fde8e14363d69cf0ab2c39fdde69ce",
+    "shader": {
+      "cab": "cab-dcbf1233f16bf3495b987e79bd9f35f8",
+      "pathId": "6053017407293748749",
+      "name": "",
+      "type": "NamedObject",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\71ffe098f339c887.wmv",
+      "unresolved": false
+    },
+    "savedProperties": {
+      "m_TexEnvs": [
+        {
+          "Key": "_DistortionTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 0,
+              "pathId": "0"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        },
+        {
+          "Key": "_MainTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 1,
+              "pathId": "8919941999460571704"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        }
+      ],
+      "m_Ints": null,
+      "m_Floats": [
+        {
+          "Key": "_BloomFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_Distortion",
+          "Value": 0
+        },
+        {
+          "Key": "_DistortionIntensity",
+          "Value": 0.05
+        },
+        {
+          "Key": "_EmissionScaler",
+          "Value": 2
+        },
+        {
+          "Key": "_OffestFactor",
+          "Value": 0
+        },
+        {
+          "Key": "_OffestUnit",
+          "Value": 0
+        },
+        {
+          "Key": "_TSAspectRatio",
+          "Value": 1
+        },
+        {
+          "Key": "_TextureGradient",
+          "Value": 0
+        },
+        {
+          "Key": "_TextureScale",
+          "Value": 0
+        },
+        {
+          "Key": "_UnjitterMatrix",
+          "Value": 0
+        }
+      ],
+      "m_Colors": [
+        {
+          "Key": "_TintColor",
+          "Value": {
+            "R": 0.5,
+            "G": 0.5,
+            "B": 0.5,
+            "A": 0.5
+          }
+        }
+      ]
+    },
+    "textureSlots": [
+      {
+        "slot": "_DistortionTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": null
+      },
+      {
+        "slot": "_MainTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": {
+          "cab": "cab-46218601b25f1f18d3c3d3a6e2b1ae4c",
+          "pathId": "8919941999460571704",
+          "name": "Fire_1",
+          "type": "Texture2D",
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5f2084de38ff805d.wmv",
+          "unresolved": false
+        }
+      }
+    ],
+    "rawMetadata": {
+      "m_Shader": {
+        "fileId": 2,
+        "pathId": "6053017407293748749"
+      },
+      "m_SavedProperties": {
+        "m_TexEnvs": "List\u00601",
+        "m_Ints": null,
+        "m_Floats": "List\u00601",
+        "m_Colors": "List\u00601"
+      },
+      "m_Name": "Fire_6",
+      "m_PathID": 5911837929844324696,
+      "version": [
+        2017,
+        4,
+        18,
+        1,
+        2
+      ],
+      "platform": 19,
+      "type": 21,
+      "serializedType": {
+        "classID": 21,
+        "m_IsStrippedType": false,
+        "m_ScriptTypeIndex": -1,
+        "m_Type": null,
+        "m_ScriptID": null,
+        "m_OldTypeHash": "Byte[]",
+        "m_TypeDependencies": null,
+        "m_KlassName": null,
+        "m_NameSpace": null,
+        "m_AsmName": null
+      },
+      "byteSize": 452,
+      "Name": "Fire_6"
+    },
+    "directory": "../hi3-fuhua-extract\\exports\\c4-fire-sword\\vfx\\original\\materials\\Fire_6_5911837929844324696"
+  },
+  {
+    "name": "light_new_4",
+    "pathId": "4488230985564667119",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5f2084de38ff805d.wmv",
+    "cab": "CAB-65b23adcb81328b2d2e967c869be4e73",
+    "rawSHA256": "ae356cc21bcbfe980e65e75dda0de3def145aea0f212ec33f6f51be6b2c520a4",
+    "shader": {
+      "cab": "cab-e63c9b8ef5db625068c7e67bf137be4c",
+      "pathId": "5488699631002785429",
+      "name": "",
+      "type": "NamedObject",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\71ffe098f339c887.wmv",
+      "unresolved": false
+    },
+    "savedProperties": {
+      "m_TexEnvs": [
+        {
+          "Key": "_DistortionTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 0,
+              "pathId": "0"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        },
+        {
+          "Key": "_MainTex",
+          "Value": {
+            "m_Texture": {
+              "fileId": 1,
+              "pathId": "5176621394455261832"
+            },
+            "m_Scale": {
+              "X": 1,
+              "Y": 1
+            },
+            "m_Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        }
+      ],
+      "m_Ints": null,
+      "m_Floats": [
+        {
+          "Key": "_Cull",
+          "Value": 0
+        },
+        {
+          "Key": "_Distortion",
+          "Value": 0
+        },
+        {
+          "Key": "_DistortionIntensity",
+          "Value": 5
+        },
+        {
+          "Key": "_EmissionScaler",
+          "Value": 1
+        },
+        {
+          "Key": "_OffestFactor",
+          "Value": -1
+        },
+        {
+          "Key": "_OffestUnit",
+          "Value": -1
+        },
+        {
+          "Key": "_TSAspectRatio",
+          "Value": 1
+        },
+        {
+          "Key": "_TextureScale",
+          "Value": 0
+        }
+      ],
+      "m_Colors": [
+        {
+          "Key": "_TintColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 0.259
+          }
+        }
+      ]
+    },
+    "textureSlots": [
+      {
+        "slot": "_DistortionTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": null
+      },
+      {
+        "slot": "_MainTex",
+        "scale": {
+          "X": 1,
+          "Y": 1
+        },
+        "offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "texture": {
+          "cab": "cab-41a8ea6c1185673edde4c34c296492aa",
+          "pathId": "5176621394455261832",
+          "name": "SFX_Ray_503",
+          "type": "Texture2D",
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+          "unresolved": false
+        }
+      }
+    ],
+    "rawMetadata": {
+      "m_Shader": {
+        "fileId": 2,
+        "pathId": "5488699631002785429"
+      },
+      "m_SavedProperties": {
+        "m_TexEnvs": "List\u00601",
+        "m_Ints": null,
+        "m_Floats": "List\u00601",
+        "m_Colors": "List\u00601"
+      },
+      "m_Name": "light_new_4",
+      "m_PathID": 4488230985564667119,
+      "version": [
+        2017,
+        4,
+        18,
+        1,
+        2
+      ],
+      "platform": 19,
+      "type": 21,
+      "serializedType": {
+        "classID": 21,
+        "m_IsStrippedType": false,
+        "m_ScriptTypeIndex": -1,
+        "m_Type": null,
+        "m_ScriptID": null,
+        "m_OldTypeHash": "Byte[]",
+        "m_TypeDependencies": null,
+        "m_KlassName": null,
+        "m_NameSpace": null,
+        "m_AsmName": null
+      },
+      "byteSize": 404,
+      "Name": "light_new_4"
+    },
+    "directory": "../hi3-fuhua-extract\\exports\\c4-fire-sword\\vfx\\original\\materials\\light_new_4_4488230985564667119"
+  }
+]

@@ -1,0 +1,308 @@
+[
+  {
+    "name": "SFX_Noise_610",
+    "pathId": "8320612499388053865",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\318e546998b1902e.wmv",
+    "cab": "CAB-5afa4704e2f902deacf600f9b31f7e11",
+    "rawSHA256": "fbbe7b1dc012bba2a6010ce3f286e2f46ff56d8d816fd786af786f71811a2c74",
+    "width": 32,
+    "height": 32,
+    "format": "DXT1",
+    "ok": true,
+    "files": [
+      {
+        "path": "../hi3-fuhua-extract\\exports\\c5-native-vfx\\original\\textures\\SFX_Noise_610_8320612499388053865\\SFX_Noise_610.png",
+        "sha256": "30e868750ab471233d34d80b0c552b0740e0f1456c48516bd83b98f6d6e7079b"
+      }
+    ]
+  },
+  {
+    "name": "SFX_Icon_306",
+    "pathId": "4117374950398652442",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\37933bad1a0b0d29.wmv",
+    "cab": "CAB-e13d3be3f429aab934f29277ad754c53",
+    "rawSHA256": "f6801c28197decce2bc55de6062ce411897ad2cf5a27b5271832416b8c97b78d",
+    "width": 512,
+    "height": 512,
+    "format": "DXT1",
+    "ok": true,
+    "files": [
+      {
+        "path": "../hi3-fuhua-extract\\exports\\c5-native-vfx\\original\\textures\\SFX_Icon_306_4117374950398652442\\SFX_Icon_306.png",
+        "sha256": "a174e0f8e47a0816a1873eb3021edf9ce924f12aa7d0240de1a38998a022b76d"
+      }
+    ]
+  },
+  {
+    "name": "SFX_Noise_311",
+    "pathId": "-7882204033456314358",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\37933bad1a0b0d29.wmv",
+    "cab": "CAB-544fb90ef1acc3b4ec572aa3715ccfcc",
+    "rawSHA256": "e3cdbf95e8e17b7fffa9408607cab0002b9f59fc6b8712d1aa3d0305a4963910",
+    "width": 256,
+    "height": 128,
+    "format": "RGB24",
+    "ok": true,
+    "files": [
+      {
+        "path": "../hi3-fuhua-extract\\exports\\c5-native-vfx\\original\\textures\\SFX_Noise_311_-7882204033456314358\\SFX_Noise_311.png",
+        "sha256": "c12a398268d6f385ecd4c4620c0384b76460a30f1d205285bc60650193dbe233"
+      }
+    ]
+  },
+  {
+    "name": "SFX_Mask_306",
+    "pathId": "-4219111460814414717",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+    "cab": "CAB-a026717ba1733fa395424a200301a119",
+    "rawSHA256": "b4a1c79133c634c4e0d1f2fee6ee30422d213fb64882b66767c4cc4c16d67dca",
+    "width": 4,
+    "height": 128,
+    "format": "DXT1",
+    "ok": true,
+    "files": [
+      {
+        "path": "../hi3-fuhua-extract\\exports\\c5-native-vfx\\original\\textures\\SFX_Mask_306_-4219111460814414717\\SFX_Mask_306.png",
+        "sha256": "e4f1bbdc560b953c929cc2e0e20c83ce32b64ba60a550c19f3f44cd735eabcea"
+      }
+    ]
+  },
+  {
+    "name": "SFX_Noise_310",
+    "pathId": "2388593331935856554",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+    "cab": "CAB-793d19e4363957b7b3d6caf338e98137",
+    "rawSHA256": "f86c27d1e5136c40d9cd2b0df58bd166d3542af6f473e6b07a0469c0fe51b456",
+    "width": 64,
+    "height": 64,
+    "format": "DXT1",
+    "ok": true,
+    "files": [
+      {
+        "path": "../hi3-fuhua-extract\\exports\\c5-native-vfx\\original\\textures\\SFX_Noise_310_2388593331935856554\\SFX_Noise_310.png",
+        "sha256": "6a61f69dbb7e989321013940f0b8477df36fa2517406ee7b45a5c44d048aa44e"
+      }
+    ]
+  },
+  {
+    "name": "SFX_Noise_611",
+    "pathId": "-8857281167378169340",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+    "cab": "CAB-3b2e8d704c1a9146bd2ad2579f1f72ec",
+    "rawSHA256": "f4d9c717652c2c11422a16dcba4e0af734df6b50b6c20ab9043650317e49e0ff",
+    "width": 128,
+    "height": 128,
+    "format": "DXT1",
+    "ok": true,
+    "files": [
+      {
+        "path": "../hi3-fuhua-extract\\exports\\c5-native-vfx\\original\\textures\\SFX_Noise_611_-8857281167378169340\\SFX_Noise_611.png",
+        "sha256": "b100cb6856fe9b0956b7c65d98757acd7cae9697427e652f5b2d473eeccc7f5b"
+      }
+    ]
+  },
+  {
+    "name": "SFX_Smoke_301",
+    "pathId": "487050699365108205",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+    "cab": "CAB-8f22f18032c5871406e0b154cbc37f8c",
+    "rawSHA256": "00ed5e56f8216ff3e2864438d4511245e554797efed2ddfde2ccd5639684e796",
+    "width": 64,
+    "height": 64,
+    "format": "DXT5",
+    "ok": true,
+    "files": [
+      {
+        "path": "../hi3-fuhua-extract\\exports\\c5-native-vfx\\original\\textures\\SFX_Smoke_301_487050699365108205\\SFX_Smoke_301.png",
+        "sha256": "4a9a0b63f67bfedff5d9f943b876d06578393584c2446a340796bd6fd214f070"
+      }
+    ]
+  },
+  {
+    "name": "Fx_Symbol_09",
+    "pathId": "7557931188482493189",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\9ee905c04554a78d.wmv",
+    "cab": "CAB-c8bd46b700958a43dfb81fa9d363dc8c",
+    "rawSHA256": "8c822eb5e89376288975117893508256472032a472326ac589dbc8d41f03d6ac",
+    "width": 512,
+    "height": 512,
+    "format": "DXT5",
+    "ok": true,
+    "files": [
+      {
+        "path": "../hi3-fuhua-extract\\exports\\c5-native-vfx\\original\\textures\\Fx_Symbol_09_7557931188482493189\\Fx_Symbol_09.png",
+        "sha256": "4c77fc909b31d9c84ec94ad7757957c319907bdee489652f7aa5abae0857dde1"
+      }
+    ]
+  },
+  {
+    "name": "SFX_Fluid_304",
+    "pathId": "-7917065540293996749",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\9ee905c04554a78d.wmv",
+    "cab": "CAB-88f648e8aa3c789fc5481abe8d29c2ec",
+    "rawSHA256": "ea7a80847bb67e7bf7ae2336883de22ed817be7fda68adc3d64a68c198424c5c",
+    "width": 256,
+    "height": 256,
+    "format": "DXT5",
+    "ok": true,
+    "files": [
+      {
+        "path": "../hi3-fuhua-extract\\exports\\c5-native-vfx\\original\\textures\\SFX_Fluid_304_-7917065540293996749\\SFX_Fluid_304.png",
+        "sha256": "bdd277b5c3bb3b2ea28ed186704f187ff1474543bb26509032bf54a1135aa0e8"
+      }
+    ]
+  },
+  {
+    "name": "SFX_Noise_316",
+    "pathId": "-8689636369793837712",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\9ee905c04554a78d.wmv",
+    "cab": "CAB-9ac67e160969e6fb66bd402329be53cf",
+    "rawSHA256": "6c22774839ebb3b1ec49a459d43573a89491b943388a730bc5d0f2b7ea5ed8c8",
+    "width": 128,
+    "height": 128,
+    "format": "DXT5",
+    "ok": true,
+    "files": [
+      {
+        "path": "../hi3-fuhua-extract\\exports\\c5-native-vfx\\original\\textures\\SFX_Noise_316_-8689636369793837712\\SFX_Noise_316.png",
+        "sha256": "94a135db3b61138ead7c953dc7774007da0ac5e851603acd546ce5d015d6f138"
+      }
+    ]
+  },
+  {
+    "name": "SFX_Trail_311",
+    "pathId": "-6643523830821501609",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a4d0e30ddf017f83.wmv",
+    "cab": "CAB-ebb8c9123b58ad2f2c969ed1071daf3d",
+    "rawSHA256": "f9d947830ebbcc67816b8aa8040b152ab093ec0c9ea8f3f3809b91e5badef52f",
+    "width": 128,
+    "height": 64,
+    "format": "DXT5",
+    "ok": true,
+    "files": [
+      {
+        "path": "../hi3-fuhua-extract\\exports\\c5-native-vfx\\original\\textures\\SFX_Trail_311_-6643523830821501609\\SFX_Trail_311.png",
+        "sha256": "60a11312f27354efcafda77329b10bf92ec683e786a41e824e5ac5bde9f69d29"
+      }
+    ]
+  },
+  {
+    "name": "SFX_Icon_304",
+    "pathId": "704330232198639185",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\ced1e316e6774349.wmv",
+    "cab": "CAB-95bf57b6ca2333eadd3ed8dfa12f1158",
+    "rawSHA256": "a93413eab637a7aed525318496241bbc0944038808f65634f3bdf2f3a183bc23",
+    "width": 1024,
+    "height": 256,
+    "format": "DXT1",
+    "ok": true,
+    "files": [
+      {
+        "path": "../hi3-fuhua-extract\\exports\\c5-native-vfx\\original\\textures\\SFX_Icon_304_704330232198639185\\SFX_Icon_304.png",
+        "sha256": "064ed90abe9e1df6af7b1264400ae5b289a79cfc05d67616ab692d04a6f941ac"
+      }
+    ]
+  },
+  {
+    "name": "SFX_Nature_626_Cloud",
+    "pathId": "-3188977876642682551",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\ced1e316e6774349.wmv",
+    "cab": "CAB-fef130f8f5da7049d0f02a21dd34f269",
+    "rawSHA256": "435d83dca1957e98c176953d608a3909e96e31c649da9da984c0ddd9faf44451",
+    "width": 1024,
+    "height": 256,
+    "format": "DXT5",
+    "ok": true,
+    "files": [
+      {
+        "path": "../hi3-fuhua-extract\\exports\\c5-native-vfx\\original\\textures\\SFX_Nature_626_Cloud_-3188977876642682551\\SFX_Nature_626_Cloud.png",
+        "sha256": "7c49c29c9cd105e48ae81435f8217b1a188b2fedf59a955545fa039d4694da98"
+      }
+    ]
+  },
+  {
+    "name": "Fx_Line_54",
+    "pathId": "-8143444660124310434",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\e2f4f6d352e88af9.wmv",
+    "cab": "CAB-656f14575ec2ae93cce48e3cef60f925",
+    "rawSHA256": "6a562bc7db67946f860fa8cf7e598bc092d60fcd4c6bd22e393ae07dd4f8406b",
+    "width": 512,
+    "height": 128,
+    "format": "DXT5",
+    "ok": true,
+    "files": [
+      {
+        "path": "../hi3-fuhua-extract\\exports\\c5-native-vfx\\original\\textures\\Fx_Line_54_-8143444660124310434\\Fx_Line_54.png",
+        "sha256": "fb2533e47b42317d46ce60d1246ad561d4d5c33dfc4efc4160fb46514c5d321f"
+      }
+    ]
+  },
+  {
+    "name": "Fx_Line_55",
+    "pathId": "-664597172736116911",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\e2f4f6d352e88af9.wmv",
+    "cab": "CAB-8b2e472fd732ea189d9b54cf9f82ce33",
+    "rawSHA256": "4e32cbd0432dcde419e1f8850d699af217c087fe5a7c4f2a98ae90ad817f81e8",
+    "width": 128,
+    "height": 128,
+    "format": "DXT5",
+    "ok": true,
+    "files": [
+      {
+        "path": "../hi3-fuhua-extract\\exports\\c5-native-vfx\\original\\textures\\Fx_Line_55_-664597172736116911\\Fx_Line_55.png",
+        "sha256": "f6ef7842a219ec932ebe2f67b7fc1a04655bc909a7d59b2476733cc86cc9cd54"
+      }
+    ]
+  },
+  {
+    "name": "Fx_Line_56",
+    "pathId": "3815065362378328014",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\e2f4f6d352e88af9.wmv",
+    "cab": "CAB-6ef326077f168bf9989c1bbb12e41f51",
+    "rawSHA256": "6c4493b1bf2008093f113c29bd48b3bebede66bb09cee8a5a4aed8795778a8a6",
+    "width": 128,
+    "height": 128,
+    "format": "DXT5",
+    "ok": true,
+    "files": [
+      {
+        "path": "../hi3-fuhua-extract\\exports\\c5-native-vfx\\original\\textures\\Fx_Line_56_3815065362378328014\\Fx_Line_56.png",
+        "sha256": "c201fe997a185fc2a4c144a6521f34ecb26fcf0ddd688bd349cdf932e9b154a3"
+      }
+    ]
+  },
+  {
+    "name": "Fx_Nature_44",
+    "pathId": "-2649028683180136646",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\e2f4f6d352e88af9.wmv",
+    "cab": "CAB-efa966eccc4d645496b189068863a6db",
+    "rawSHA256": "de343b0cb1fef5e46dca6b2db0adba31c09b22c3e6c02b1c3d2fc408598a1655",
+    "width": 256,
+    "height": 256,
+    "format": "DXT5",
+    "ok": true,
+    "files": [
+      {
+        "path": "../hi3-fuhua-extract\\exports\\c5-native-vfx\\original\\textures\\Fx_Nature_44_-2649028683180136646\\Fx_Nature_44.png",
+        "sha256": "519aecc07e09db1817fbf949b64e2c20dc5f1d1ba6b285d683035b2797d70f2f"
+      }
+    ]
+  },
+  {
+    "name": "Fx_Nature_47",
+    "pathId": "-3258836693499499658",
+    "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\e2f4f6d352e88af9.wmv",
+    "cab": "CAB-e77351c80e849d8ae1770403a886dead",
+    "rawSHA256": "de5f0dec5ad15a7d431ea98c2815033df1912309ba614a5e0d78dac33ab47766",
+    "width": 128,
+    "height": 128,
+    "format": "DXT5",
+    "ok": true,
+    "files": [
+      {
+        "path": "../hi3-fuhua-extract\\exports\\c5-native-vfx\\original\\textures\\Fx_Nature_47_-3258836693499499658\\Fx_Nature_47.png",
+        "sha256": "fa2af281e6b9ed56ac281d7116cc78d7f1ff5278ebb613952b1ac0c31343a376"
+      }
+    ]
+  }
+]

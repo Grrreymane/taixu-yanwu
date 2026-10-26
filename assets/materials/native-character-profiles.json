@@ -1,0 +1,1127 @@
+{
+  "schemaVersion": 1,
+  "source": "original Unity material serialized values; no runtime shader code changed",
+  "clientVersion": "9.1.0",
+  "valueInterpretation": [
+    "RGB numbers are copied verbatim from serialized materials. Native PlayerSettings m_ActiveColorSpace=0 (Gamma), so native color arithmetic uses sRGB-number space. Respect Godot OUTPUT_IS_SRGB: Compatibility already uses this domain; convert only in a linear working renderer.",
+    "Single-color shaders have padded 5-element arrays for consumption; *NativeCount states how many original color properties exist.",
+    "Missing common-shader _Specular is represented by specularSoft=false with specularSoftNativePropertyPresent=false. This does not imply no specular.",
+    "_Specular is labelled Soft Specular / Toggle(SPECULAR) in original AvatarGS shader; false does not establish that all highlights are disabled.",
+    "Face has no original second-shadow or light-area property; secondShadowColor is a same-color fallback marked secondShadowColorNative=false.",
+    "Original outline width and _Scale are not screen-space pixel units. Do not assign outlineWidth directly to the current outline_pixels shader."
+  ],
+  "alphaBandEvidence": {
+    "shader": "miHoYo/miHoYo_Character/Character_AvatarGS/AvatarGS_DualFace",
+    "shaderCab": "cab-53a6c1a37cf111d4cf5e70af61b0b899",
+    "shaderPathId": "-6245594438899174256",
+    "source": "hi3-fuhua-extract/exports/c5-material-reference/shader-raw-metadata.json",
+    "labels": [
+      "_FirstShadowMultColor: First Shadow Multiply Color(UV1)",
+      "_FirstShadowMultColor2: Shadow Color2(0.4>A>0.2)",
+      "_FirstShadowMultColor3: Shadow Color3(0.6>A>0.4)",
+      "_FirstShadowMultColor4: Shadow Color4(0.8>A>0.6)",
+      "_FirstShadowMultColor5: Shadow Color5(A>0.8)",
+      "_OutlineColor2: Outline Color2(0.4>A>0.2)",
+      "_OutlineColor3: Outline Color3(0.6>A>0.4)",
+      "_OutlineColor4: Outline Color4(0.8>A>0.6)",
+      "_OutlineColor5: Outline Color5(A>0.8)"
+    ],
+    "boundaryEquality": "Recovered AvatarGS body DXBC uses >= after adding 0.1 to original alpha.",
+    "bodyAlphaOffset": 0.1,
+    "bodyEffectiveThresholds": [
+      0.1,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "bodyFormulaEvidence": [
+      "shader-audit/AvatarGS/155-ps_4_0.asm",
+      "shader-audit/AvatarGS/300-ps_4_0.asm"
+    ],
+    "outlineFormulaStatus": "Recovered from Hidden/Common_Avatar/Outline MORE_OUTLINE_COLOR DXBC. LightMap alpha + 0.1, then >= 0.2/0.4/0.6/0.8. Same effective thresholds as Body.",
+    "outlineShader": {
+      "name": "Hidden/Common_Avatar/Outline",
+      "sourceBlock": "71ffe098f339c887.wmv",
+      "cab": "CAB-727bce9962389aace5a1bf6809a2d8bb",
+      "pathId": "-630201551894553901",
+      "evidence": [
+        "CommonOutline/017-vs_4_0.asm",
+        "CommonOutline/031-ps_4_0.asm",
+        "CommonOutline/056-ps_4_0.asm"
+      ],
+      "sampleUV": "UV1 transformed by _MainTex_ST; independent of _BackFaceUseUV2",
+      "alphaBandOffset": 0.1,
+      "effectiveThresholds": [
+        0.1,
+        0.3,
+        0.5,
+        0.7
+      ]
+    }
+  },
+  "lightmapChannelSemantics": {
+    "rgbFormulaStatus": "recovered from original DXBC: Face 001/022, Hair 038/026, AvatarGS 155/300; normal weather and no special effects. See native_character_math.gdshaderinc and shader-audit bindings.",
+    "alpha": "AvatarGS body region uses A+0.1 before >=.2/.4/.6/.8 comparisons. This differs from inspector labels.",
+    "faceMap": "FaceMap ALPHA is compared with angle threshold using ShadowFeather. U is mirrored when native YZ-plane angle <0.",
+    "currentShaderApproximation": "Audit reference is the pre-fix runtime: G threshold perturbation, B intensity, UV.x face split. Root is replacing it; this audit did not edit runtime.",
+    "faceLightmap": "FaceLightMap GREEN multiplies the result of FaceMap alpha threshold. Contains appearance-specific hairline occlusion.",
+    "channelPreview": "res://build/reports/native-face-map-channels.png",
+    "red": "Hard specular amplitude. In soft-specular branch it multiplies the lobe before smoothstep.",
+    "green": "Multiplied by vertex color R; piecewise linear remap then combined with vertex half Lambert for shadow threshold.",
+    "blue": "Hard-specular branch: threshold 1-B. Soft branch: exponent = shininess * B."
+  },
+  "profiles": {
+    "azure_default": {
+      "body": {
+        "sourceMaterial": "Avatar_Fuka_C5_Material_Body",
+        "source": {
+          "file": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\c5808965df75be44.wmv",
+          "cab": "CAB-80e3f77f8848252be5a3cfc5282f40ba",
+          "pathId": "-8532770548269785496",
+          "shader": {
+            "fileId": 1,
+            "pathId": "-6245594438899174256",
+            "serializedFile": "cab-53a6c1a37cf111d4cf5e70af61b0b899",
+            "resolvedName": "miHoYo/miHoYo_Character/Character_AvatarGS/AvatarGS_DualFace"
+          }
+        },
+        "textures": {
+          "lightmap": "res://assets/azure/Avatar_Fuka_C5_Body_Lightmap.png"
+        },
+        "firstShadowColors": [
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.7136678,
+            0.75543565,
+            0.88235295
+          ],
+          [
+            0.9117647,
+            0.7661227,
+            0.61007786
+          ],
+          [
+            0.9266988,
+            0.88532656,
+            0.9632353
+          ],
+          [
+            0.7086938,
+            0.73924094,
+            0.8308824
+          ]
+        ],
+        "firstShadowColorNativeCount": 5,
+        "secondShadowColor": [
+          0.75,
+          0.6,
+          0.65
+        ],
+        "secondShadowColorNative": true,
+        "outlineColors": [
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.11764707,
+            0.1137255,
+            0.20392159
+          ],
+          [
+            0.32352942,
+            0.13653204,
+            0
+          ],
+          [
+            0.09948096,
+            0.09948096,
+            0.16911763
+          ],
+          [
+            0,
+            0.04705883,
+            0.08235294
+          ]
+        ],
+        "outlineColorNativeCount": 5,
+        "useAlphaBands": true,
+        "useOutlineAlphaBands": true,
+        "specularSoft": false,
+        "specularSoftNativePropertyPresent": true,
+        "backFaceUseUv2": false,
+        "backFaceUseUv2NativePropertyPresent": true,
+        "rimGlow": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "lightArea": 0.51,
+        "secondShadowArea": 0.51,
+        "shininess": 13,
+        "specMulti": 0.4,
+        "outlineWidth": 0.04,
+        "outlineScale": 0.01,
+        "hardRimIntensity": 0,
+        "hardRimPower": 0.1,
+        "vertexAlphaFactor": 0,
+        "specColor": [
+          1,
+          1,
+          1
+        ],
+        "backFaceColor": [
+          0.11764707,
+          0.1137255,
+          0.20392159
+        ],
+        "alphaBandOffset": 0.1,
+        "activeShadowBranch": "SHADOWRAMPTEXUSED regional first-shadow only",
+        "secondShadowUsedInRecoveredBranch": false,
+        "specularSmooth": 0.0,
+        "outlineAlphaBandOffset": 0.1,
+        "outlineSampleUV": "UV1 * _MainTex_ST.xy + _MainTex_ST.zw (not back-face UV2)"
+      },
+      "hair": {
+        "sourceMaterial": "Avatar_Fuka_C5_Material_Hair",
+        "source": {
+          "file": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\c5808965df75be44.wmv",
+          "cab": "CAB-4eb693ad3063aaabb6bcf6c86d7be198",
+          "pathId": "-2384505830415126752",
+          "shader": {
+            "fileId": 1,
+            "pathId": "84480072165628607",
+            "serializedFile": "cab-1a86d68e38b622c06028ffdd76a5bf82",
+            "resolvedName": "miHoYo/miHoYo_Character/Character_Common/Avatar"
+          }
+        },
+        "textures": {
+          "lightmap": "res://assets/azure/Avatar_Fuka_C5_Hair_LightMap.png"
+        },
+        "firstShadowColors": [
+          [
+            0.7418865,
+            0.66608995,
+            0.8088235
+          ],
+          [
+            0.7418865,
+            0.66608995,
+            0.8088235
+          ],
+          [
+            0.7418865,
+            0.66608995,
+            0.8088235
+          ],
+          [
+            0.7418865,
+            0.66608995,
+            0.8088235
+          ],
+          [
+            0.7418865,
+            0.66608995,
+            0.8088235
+          ]
+        ],
+        "firstShadowColorNativeCount": 1,
+        "secondShadowColor": [
+          0.7418865,
+          0.66608995,
+          0.8088235
+        ],
+        "secondShadowColorNative": true,
+        "outlineColors": [
+          [
+            0.19215688,
+            0.15294118,
+            0.2901961
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0.19215688,
+            0.15294118,
+            0.2901961
+          ],
+          [
+            0.19215688,
+            0.15294118,
+            0.2901961
+          ],
+          [
+            0.19215688,
+            0.15294118,
+            0.2901961
+          ]
+        ],
+        "outlineColorNativeCount": 2,
+        "useAlphaBands": false,
+        "useOutlineAlphaBands": false,
+        "specularSoft": false,
+        "specularSoftNativePropertyPresent": false,
+        "backFaceUseUv2": false,
+        "backFaceUseUv2NativePropertyPresent": false,
+        "rimGlow": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "lightArea": 0.51,
+        "secondShadowArea": 0.51,
+        "shininess": 2,
+        "specMulti": 0.185,
+        "outlineWidth": 0.05,
+        "outlineScale": 0.01,
+        "outlineLerpOffset": 1.5,
+        "hardRimIntensity": 0,
+        "hardRimPower": 0.1,
+        "vertexAlphaFactor": 0,
+        "cull": 2,
+        "specColor": [
+          1,
+          1,
+          1
+        ],
+        "activeShadowBranch": "Common/Avatar two-shadow branch; G * vertex R < .09 invokes second-shadow test",
+        "outlineUseLerpColor": false
+      },
+      "face": {
+        "sourceMaterial": "Avatar_Fuka_C5_Material_Face",
+        "source": {
+          "file": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\c5808965df75be44.wmv",
+          "cab": "CAB-06ce4290ae273f1bb7ca89bb2d457a96",
+          "pathId": "-4610021067084676583",
+          "shader": {
+            "fileId": 1,
+            "pathId": "8679466564415281629",
+            "serializedFile": "cab-6cdf611ce4070119c7a9e4d89053b2e3",
+            "resolvedName": "miHoYo/miHoYo_Character/Character_Common/Face"
+          }
+        },
+        "textures": {
+          "lightmap": "res://assets/azure/Avatar_Fuka_C5_Face_LightMap.png",
+          "faceMap": "res://assets/azure/Avatar_Fuka_FaceMap.png",
+          "albedo": "res://assets/azure/Avatar_Fuka_Texture_Face_Color.png"
+        },
+        "firstShadowColors": [
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ]
+        ],
+        "firstShadowColorNativeCount": 1,
+        "secondShadowColor": [
+          0.9372549,
+          0.7647059,
+          0.78039217
+        ],
+        "secondShadowColorNative": false,
+        "outlineColors": [
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ]
+        ],
+        "outlineColorNativeCount": 1,
+        "useAlphaBands": false,
+        "useOutlineAlphaBands": false,
+        "specularSoft": false,
+        "specularSoftNativePropertyPresent": false,
+        "backFaceUseUv2": false,
+        "backFaceUseUv2NativePropertyPresent": false,
+        "rimGlow": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "outlineWidth": 0.05,
+        "outlineScale": 0.01,
+        "shadowFeather": 0.001,
+        "vertexAlphaFactor": 0,
+        "faceMapChannel": "a",
+        "faceLightmapChannel": "g",
+        "originalObjectAxes": {
+          "x": "right",
+          "y": "up",
+          "z": "forward"
+        },
+        "directionProjection": "native object YZ with +10-degree basis tilt; see math include"
+      }
+    },
+    "taixu_memory": {
+      "body": {
+        "sourceMaterial": "Avatar_Fuka_C5_04_02_Material_Body",
+        "maxOutlineZOffset": 1.0,
+        "source": {
+          "file": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\c5808965df75be44.wmv",
+          "cab": "CAB-e2cf2bf775b6e2fa2ff0a54c0e9b6b4c",
+          "pathId": "-8777079500315475454",
+          "shader": {
+            "fileId": 1,
+            "pathId": "-6245594438899174256",
+            "serializedFile": "cab-53a6c1a37cf111d4cf5e70af61b0b899",
+            "resolvedName": "miHoYo/miHoYo_Character/Character_AvatarGS/AvatarGS_DualFace"
+          }
+        },
+        "textures": {
+          "lightmap": "res://assets/azure-skin/Avatar_Fuka_C5_04_02_Body_LightMap.png"
+        },
+        "firstShadowColors": [
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.72156864,
+            0.7725491,
+            0.8980393
+          ],
+          [
+            0.8308824,
+            0.7836923,
+            0.7331315
+          ],
+          [
+            0.9266988,
+            0.88532656,
+            0.9632353
+          ],
+          [
+            0.7086938,
+            0.73924094,
+            0.8308824
+          ]
+        ],
+        "firstShadowColorNativeCount": 5,
+        "secondShadowColor": [
+          0.665279,
+          0.71736836,
+          0.8455882
+        ],
+        "secondShadowColorNative": true,
+        "outlineColors": [
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.11764707,
+            0.1137255,
+            0.20392159
+          ],
+          [
+            0.1544118,
+            0.10279503,
+            0.037467565
+          ],
+          [
+            0.09948096,
+            0.09948096,
+            0.16911763
+          ],
+          [
+            0,
+            0.04705883,
+            0.08235294
+          ]
+        ],
+        "outlineColorNativeCount": 5,
+        "useAlphaBands": true,
+        "useOutlineAlphaBands": true,
+        "specularSoft": true,
+        "specularSoftNativePropertyPresent": true,
+        "backFaceUseUv2": true,
+        "backFaceUseUv2NativePropertyPresent": true,
+        "rimGlow": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "lightArea": 0.51,
+        "secondShadowArea": 0.51,
+        "shininess": 11,
+        "specMulti": 1.95,
+        "outlineWidth": 0.04,
+        "outlineScale": 0.01,
+        "hardRimIntensity": 0,
+        "hardRimPower": 0.1,
+        "vertexAlphaFactor": 0,
+        "specColor": [
+          0.882353,
+          0.86159176,
+          0.86159176
+        ],
+        "backFaceColor": [
+          1,
+          1,
+          1
+        ],
+        "alphaBandOffset": 0.1,
+        "activeShadowBranch": "SHADOWRAMPTEXUSED regional first-shadow only",
+        "secondShadowUsedInRecoveredBranch": false,
+        "specularSmooth": 0.04,
+        "uv2AvailabilityInCurrentScene": false,
+        "outlineAlphaBandOffset": 0.1,
+        "outlineSampleUV": "UV1 * _MainTex_ST.xy + _MainTex_ST.zw (not back-face UV2)"
+      },
+      "hair": {
+        "sourceMaterial": "Avatar_Fuka_C5_04_02_Material_Hair",
+        "source": {
+          "file": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\c5808965df75be44.wmv",
+          "cab": "CAB-f58006b9fcd5b80a8c33247f51fa41fe",
+          "pathId": "3772961155454554794",
+          "shader": {
+            "fileId": 1,
+            "pathId": "84480072165628607",
+            "serializedFile": "cab-1a86d68e38b622c06028ffdd76a5bf82",
+            "resolvedName": "miHoYo/miHoYo_Character/Character_Common/Avatar"
+          }
+        },
+        "textures": {
+          "lightmap": "res://assets/azure-skin/Avatar_Fuka_C5_04_02_Hair_LightMap.png"
+        },
+        "firstShadowColors": [
+          [
+            0.8112024,
+            0.8185606,
+            0.9117647
+          ],
+          [
+            0.8112024,
+            0.8185606,
+            0.9117647
+          ],
+          [
+            0.8112024,
+            0.8185606,
+            0.9117647
+          ],
+          [
+            0.8112024,
+            0.8185606,
+            0.9117647
+          ],
+          [
+            0.8112024,
+            0.8185606,
+            0.9117647
+          ]
+        ],
+        "firstShadowColorNativeCount": 1,
+        "secondShadowColor": [
+          0.72745454,
+          0.73609847,
+          0.8455882
+        ],
+        "secondShadowColorNative": true,
+        "outlineColors": [
+          [
+            0.19215688,
+            0.15294118,
+            0.2901961
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0.19215688,
+            0.15294118,
+            0.2901961
+          ],
+          [
+            0.19215688,
+            0.15294118,
+            0.2901961
+          ],
+          [
+            0.19215688,
+            0.15294118,
+            0.2901961
+          ]
+        ],
+        "outlineColorNativeCount": 2,
+        "useAlphaBands": false,
+        "useOutlineAlphaBands": false,
+        "specularSoft": false,
+        "specularSoftNativePropertyPresent": false,
+        "backFaceUseUv2": false,
+        "backFaceUseUv2NativePropertyPresent": false,
+        "rimGlow": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "lightArea": 0.51,
+        "secondShadowArea": 0.51,
+        "shininess": 3,
+        "specMulti": 0.1,
+        "outlineWidth": 0.04,
+        "outlineScale": 0.01,
+        "outlineLerpOffset": 1.5,
+        "hardRimIntensity": 0,
+        "hardRimPower": 0.1,
+        "vertexAlphaFactor": 0,
+        "cull": 2,
+        "specColor": [
+          1,
+          1,
+          1
+        ],
+        "activeShadowBranch": "Common/Avatar two-shadow branch; G * vertex R < .09 invokes second-shadow test",
+        "outlineUseLerpColor": false
+      },
+      "face": {
+        "sourceMaterial": "Avatar_Fuka_C5_04_02_Material_Face",
+        "source": {
+          "file": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\c5808965df75be44.wmv",
+          "cab": "CAB-11ba1ad43b5d1cc3957ae0a1249cc51d",
+          "pathId": "4280272203404751819",
+          "shader": {
+            "fileId": 1,
+            "pathId": "8679466564415281629",
+            "serializedFile": "cab-6cdf611ce4070119c7a9e4d89053b2e3",
+            "resolvedName": "miHoYo/miHoYo_Character/Character_Common/Face"
+          }
+        },
+        "textures": {
+          "lightmap": "res://assets/azure-skin/Avatar_Fuka_C5_04_02_Texture_Face_LightMap.png",
+          "faceMap": "res://assets/azure-skin/Avatar_Fuka_FaceMap.png",
+          "albedo": "res://assets/azure-skin/Avatar_Fuka_Texture_Face_Color.png"
+        },
+        "firstShadowColors": [
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ]
+        ],
+        "firstShadowColorNativeCount": 1,
+        "secondShadowColor": [
+          0.9372549,
+          0.7647059,
+          0.78039217
+        ],
+        "secondShadowColorNative": false,
+        "outlineColors": [
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ]
+        ],
+        "outlineColorNativeCount": 1,
+        "useAlphaBands": false,
+        "useOutlineAlphaBands": false,
+        "specularSoft": false,
+        "specularSoftNativePropertyPresent": false,
+        "backFaceUseUv2": false,
+        "backFaceUseUv2NativePropertyPresent": false,
+        "rimGlow": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "outlineWidth": 0.05,
+        "outlineScale": 0.01,
+        "shadowFeather": 0.001,
+        "vertexAlphaFactor": 0,
+        "faceMapChannel": "a",
+        "faceLightmapChannel": "g",
+        "originalObjectAxes": {
+          "x": "right",
+          "y": "up",
+          "z": "forward"
+        },
+        "directionProjection": "native object YZ with +10-degree basis tilt; see math include"
+      }
+    },
+    "phoenix": {
+      "body": {
+        "sourceMaterial": "Avatar_Fuka_C4_Material_Body",
+        "source": {
+          "file": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a303f703da40756b.wmv",
+          "cab": "CAB-5158e69671acbe49135f37a1d4901746",
+          "pathId": "-2943878446146920274",
+          "shader": {
+            "fileId": 1,
+            "pathId": "-4359768581157484908"
+          }
+        },
+        "textures": {
+          "lightmap": "res://assets/phoenix/Avatar_Fuka_C4_Texture_Body_LightMap.png"
+        },
+        "firstShadowColors": [
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.59957045,
+            0.59472317,
+            0.7352941
+          ],
+          [
+            0.7352941,
+            0.47037196,
+            0.71702373
+          ],
+          [
+            0.59957045,
+            0.59472317,
+            0.7352941
+          ],
+          [
+            0.8161765,
+            0.6841479,
+            0.7305856
+          ]
+        ],
+        "firstShadowColorNativeCount": 5,
+        "secondShadowColor": [
+          0.9372549,
+          0.7647059,
+          0.78039217
+        ],
+        "secondShadowColorNative": false,
+        "outlineColors": [
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.44852942,
+            0.07255622,
+            0.07255622
+          ],
+          [
+            0.13235295,
+            0,
+            0
+          ],
+          [
+            0.44852942,
+            0.07255622,
+            0.07255622
+          ],
+          [
+            0.28676468,
+            0.029519888,
+            0.029519888
+          ]
+        ],
+        "outlineColorNativeCount": 5,
+        "useAlphaBands": true,
+        "useOutlineAlphaBands": true,
+        "specularSoft": false,
+        "specularSoftNativePropertyPresent": true,
+        "backFaceUseUv2": false,
+        "backFaceUseUv2NativePropertyPresent": false,
+        "rimGlow": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "lightArea": 0.51,
+        "secondShadowArea": 0.51,
+        "shininess": 13.5,
+        "specMulti": 0.355,
+        "outlineWidth": 0.04,
+        "outlineScale": 0.01,
+        "hardRimIntensity": 0,
+        "hardRimPower": 0.1,
+        "vertexAlphaFactor": 0,
+        "specColor": [
+          1,
+          1,
+          1
+        ],
+        "activeFormulaStatus": "Verified original AvatarGS SHADOWRAMPTEXUSED normal branch from C4Body/301-ps_4_0.asm and 085-vs_4_0.asm; same regional first-shadow and hard-specular functions as C5 default.",
+        "activeShadowBranch": "SHADOWRAMPTEXUSED regional first-shadow only",
+        "secondShadowUsedInRecoveredBranch": false,
+        "nativeFormulaFamily": "avatar_gs_regional_hard_specular",
+        "alphaBandOffset": 0.1,
+        "outlineAlphaBandOffset": 0.1,
+        "outlineSampleUV": "UV1 * _MainTex_ST.xy + _MainTex_ST.zw",
+        "specularSmooth": 0.0,
+        "shadowRampTexUsed": true,
+        "recoveredFormulaEvidence": [
+          "C4Body/301-ps_4_0.asm",
+          "C4Body/301-bindings.json",
+          "C4Body/085-vs_4_0.asm"
+        ],
+        "sourceShaderName": "miHoYo/miHoYo_Character/Character_Common/AvatarGS",
+        "sourceShaderCab": "CAB-0f61b4ed95b2ae0cb6a7d5b565757179"
+      },
+      "hair": {
+        "sourceMaterial": "Avatar_Fuka_C4_Material_Hair",
+        "source": {
+          "file": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\c5808965df75be44.wmv",
+          "cab": "CAB-f6c17ed492d6adcf5f4eb1e972360a04",
+          "pathId": "-225233696460702127",
+          "shader": {
+            "fileId": 1,
+            "pathId": "84480072165628607"
+          }
+        },
+        "textures": {
+          "lightmap": "res://assets/phoenix/Avatar_Fuka_Texture_Hair_LightMap.png"
+        },
+        "firstShadowColors": [
+          [
+            0.7418865,
+            0.66608995,
+            0.8088235
+          ],
+          [
+            0.7418865,
+            0.66608995,
+            0.8088235
+          ],
+          [
+            0.7418865,
+            0.66608995,
+            0.8088235
+          ],
+          [
+            0.7418865,
+            0.66608995,
+            0.8088235
+          ],
+          [
+            0.7418865,
+            0.66608995,
+            0.8088235
+          ]
+        ],
+        "firstShadowColorNativeCount": 1,
+        "secondShadowColor": [
+          0.7418865,
+          0.66608995,
+          0.8088235
+        ],
+        "secondShadowColorNative": true,
+        "outlineColors": [
+          [
+            0.19852942,
+            0.042333484,
+            0.18365368
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0.19852942,
+            0.042333484,
+            0.18365368
+          ],
+          [
+            0.19852942,
+            0.042333484,
+            0.18365368
+          ],
+          [
+            0.19852942,
+            0.042333484,
+            0.18365368
+          ]
+        ],
+        "outlineColorNativeCount": 2,
+        "useAlphaBands": false,
+        "useOutlineAlphaBands": false,
+        "specularSoft": false,
+        "specularSoftNativePropertyPresent": false,
+        "backFaceUseUv2": false,
+        "backFaceUseUv2NativePropertyPresent": false,
+        "rimGlow": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "lightArea": 0.51,
+        "secondShadowArea": 0.51,
+        "shininess": 10,
+        "specMulti": 0.3,
+        "outlineWidth": 0.05,
+        "outlineScale": 0.01,
+        "outlineLerpOffset": 1.5,
+        "hardRimIntensity": 0,
+        "hardRimPower": 0.1,
+        "vertexAlphaFactor": 0,
+        "cull": 2,
+        "specColor": [
+          1,
+          1,
+          1
+        ]
+      },
+      "face": {
+        "sourceMaterial": "Avatar_Fuka_Material_Face",
+        "source": {
+          "file": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\c5808965df75be44.wmv",
+          "cab": "CAB-a88474f3ab10509ef10b522c75c494b6",
+          "pathId": "-5340648037747909520",
+          "shader": {
+            "fileId": 1,
+            "pathId": "8679466564415281629"
+          }
+        },
+        "textures": {
+          "lightmap": "res://assets/phoenix/Avatar_Fuka_Texture_Face_LightMap.png",
+          "faceMap": "res://assets/phoenix/Avatar_Fuka_FaceMap.png",
+          "albedo": "res://assets/phoenix/Avatar_Fuka_Texture_Face_Color.png"
+        },
+        "firstShadowColors": [
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ]
+        ],
+        "firstShadowColorNativeCount": 1,
+        "secondShadowColor": [
+          0.9372549,
+          0.7647059,
+          0.78039217
+        ],
+        "secondShadowColorNative": false,
+        "outlineColors": [
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ]
+        ],
+        "outlineColorNativeCount": 1,
+        "useAlphaBands": false,
+        "useOutlineAlphaBands": false,
+        "specularSoft": false,
+        "specularSoftNativePropertyPresent": false,
+        "backFaceUseUv2": false,
+        "backFaceUseUv2NativePropertyPresent": false,
+        "rimGlow": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "outlineWidth": 0.05,
+        "outlineScale": 0.01,
+        "shadowFeather": 0.001,
+        "vertexAlphaFactor": 0
+      }
+    }
+  },
+  "nativeColorSpace": {
+    "activeColorSpace": 0,
+    "name": "Gamma",
+    "sourceAsset": "BH3_Data/globalgamemanagers",
+    "class": "PlayerSettings",
+    "pathId": "1",
+    "fieldOffset": 252,
+    "sourceAssetBytes": 599,
+    "bytesDecodedWithExactVersionReleaseTree": 599,
+    "unityVersion": "2017.4.18f1",
+    "clientVersion": "9.1.0",
+    "colorGamut": {
+      "value": 0,
+      "name": "sRGB"
+    },
+    "evidence": "../hi3-fuhua-extract/exports/c5-material-reference/shader-audit/globals/player-settings-decoded.json",
+    "layoutReference": "https://raw.githubusercontent.com/AssetRipper/TypeTreeDumps/main/InfoJson/2017.4.18f1.json",
+    "enumReference": "https://raw.githubusercontent.com/Unity-Technologies/UnityCsReference/master/Runtime/Export/Graphics/GraphicsEnums.cs",
+    "integration": "Evaluate native albedo/material multiply/add/specular in sRGB-number space. Respect Godot OUTPUT_IS_SRGB: Compatibility already uses this domain and must NOT receive an unconditional second conversion. In a linear working renderer only, convert albedo to sRGB-number space before native math and the resulting RGB back to linear afterwards. Keep packed masks unconverted. Native global postprocessing is not recovered."
+  }
+}

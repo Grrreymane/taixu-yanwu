@@ -1,0 +1,93 @@
+{
+  "source": "Readonly local HI3 9.1 original Texture2D exports; PNG bytes copied without editing.",
+  "textures": [
+    {
+      "name": "DLC_Matcap_Lambet_01",
+      "pathId": "1577194688567468571",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5763c013ee7717cb.wmv",
+      "cab": "CAB-2c57dd74410fc56b0c630f63b84e3aaf",
+      "rawSHA256": "79145f22600fbf28b50712e8406d4dabd1e857bc36d5cb35f5d830a3154669ac",
+      "width": 512,
+      "height": 512,
+      "format": "DXT1",
+      "ok": true,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\c5-material-reference\\shader-audit\\scene-shaders\\matcap-resources\\original\\textures\\DLC_Matcap_Lambet_01_1577194688567468571\\DLC_Matcap_Lambet_01.png",
+          "sha256": "f477c88ca938be735a8816f26fc892cec342bc9a97728d5d6da65afc3b55b2fe"
+        }
+      ],
+      "output": "../fuhua-godot\\assets\\stage\\native-props\\textures\\DLC_Matcap_Lambet_01.png",
+      "pngSha256": "f477c88ca938be735a8816f26fc892cec342bc9a97728d5d6da65afc3b55b2fe"
+    },
+    {
+      "name": "Stage_TaiXu_Mountain01_Mask_Tex",
+      "pathId": "-4274253910151898917",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\85ad5986cf261b35.wmv",
+      "cab": "CAB-3bb7b30eac92d10dc0f38da32f964064",
+      "rawSHA256": "7797c5ed880f80c84b07e2bc1cc92d1c3ae1e79f444032c365f3e6a8d8cf4187",
+      "width": 512,
+      "height": 512,
+      "format": "DXT1",
+      "ok": true,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\c5-material-reference\\shader-audit\\scene-shaders\\matcap-resources\\original\\textures\\Stage_TaiXu_Mountain01_Mask_Tex_-4274253910151898917\\Stage_TaiXu_Mountain01_Mask_Tex.png",
+          "sha256": "4b2a2cd73fe27d4388fed5771b49e21b30524c677663658b014032ca4643524f"
+        }
+      ],
+      "output": "../fuhua-godot\\assets\\stage\\native-props\\textures\\Stage_TaiXu_Mountain01_Mask_Tex.png",
+      "pngSha256": "4b2a2cd73fe27d4388fed5771b49e21b30524c677663658b014032ca4643524f"
+    },
+    {
+      "name": "Stage_TaiXu_Mountain01_Normal_Tex",
+      "pathId": "-1625957313485555640",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\978ababbb6ed862b.wmv",
+      "cab": "CAB-fa263742c00033ad8e6c841d3910b360",
+      "rawSHA256": "54103ba4d2d70d5319c62aca1679264dddcf1944f432e7524656a710c59ae51c",
+      "width": 1024,
+      "height": 1024,
+      "format": "DXT1",
+      "ok": true,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\c5-material-reference\\shader-audit\\scene-shaders\\matcap-resources\\original\\textures\\Stage_TaiXu_Mountain01_Normal_Tex_-1625957313485555640\\Stage_TaiXu_Mountain01_Normal_Tex.png",
+          "sha256": "1d4de78f95fe2081fdccb29b6e8f9ff63072a915f2187300934f8c9cab7a591a"
+        }
+      ],
+      "output": "../fuhua-godot\\assets\\stage\\native-props\\textures\\Stage_TaiXu_Mountain01_Normal_Tex.png",
+      "pngSha256": "1d4de78f95fe2081fdccb29b6e8f9ff63072a915f2187300934f8c9cab7a591a"
+    }
+  ],
+  "implementation": {
+    "shader": "res://assets/stage/native-props/native_prop.gdshader",
+    "nativeShaderPathId": "-5500795706935829961",
+    "sourcePrograms": [
+      "SceneMatcap/118-vs_4_0.asm",
+      "SceneMatcap/072-ps_4_0.asm"
+    ],
+    "matcapUV": "native=.5+.5*mix(nView.xy, normalize(I_ts-2*dot(I_ts,nView)*nView).xy, _MetalRef); PNG=(u,1-v)",
+    "normalUnpack": "xy=2*(sample.r*sample.a,sample.g)-1; z=sqrt(1-min(dot(xy,xy),1))",
+    "mask": "_MatcapMaskMap.r sampled at transformed MainTex UV; null mask defaults white",
+    "textureST": "Godot UV=(u,1-v): scale unchanged, offset=(nativeOffset.x,1-nativeScale.y-nativeOffset.y)",
+    "tangentConversion": "XYZ mirrors X; tangent.w=-native.w; Godot BINORMAL=cross(N,T)*w. No second green-channel inversion.",
+    "import": {
+      "mipmaps": true,
+      "compression": "Lossless",
+      "normalMap": "Disabled",
+      "channelRemap": "Identity",
+      "automatic3DCompression": false
+    },
+    "unported": [
+      "additive GGX",
+      "additive MatcapSpecular",
+      "Fresnel",
+      "native fog/postprocess"
+    ],
+    "gpuVerifiedByThisAgent": false,
+    "godotSourceEvidence": [
+      "https://raw.githubusercontent.com/godotengine/godot/master/drivers/gles3/shaders/scene.glsl",
+      "https://raw.githubusercontent.com/godotengine/godot/master/editor/import/resource_importer_texture.cpp"
+    ]
+  }
+}

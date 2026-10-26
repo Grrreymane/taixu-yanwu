@@ -1,0 +1,427 @@
+{
+  "schemaVersion": 1,
+  "source": "Native C6 muscle/RootT/RootQ/IK curves restored on original C6 Avatar; original weapon and accessory Transform tracks retained. No C4/C5 body action fallback. Horizontal root lock and gameplay contact timing are adaptations.",
+  "actor": {
+    "modelPath": "res://assets/sentience/Avatar_Fuka_C6_FL.scn",
+    "textureDir": "res://assets/sentience/",
+    "animationLibraryPath": "res://assets/sentience/native-motions.res",
+    "animationLibraryName": "native",
+    "prefix": "native/",
+    "motions": {
+      "idle": {
+        "clip": "Standby",
+        "end": 2.0
+      },
+      "intro": {
+        "clip": "Standby_2",
+        "end": 2.0
+      },
+      "move": {
+        "clip": "Run",
+        "end": 0.6666667
+      },
+      "guard": {
+        "clip": "Standby",
+        "end": 2.0
+      },
+      "dodge": {
+        "clip": "EvadeForward",
+        "end": 1.2500001
+      },
+      "dodgeBack": {
+        "clip": "EvadeBackward",
+        "end": 1.2666668
+      },
+      "stagger": {
+        "clip": "Hit_L",
+        "end": 2.0000002
+      },
+      "dead": {
+        "clip": "Die",
+        "end": 3.0000002
+      },
+      "light1": {
+        "clip": "Attack_A_01",
+        "end": 0.85,
+        "contact": 0.2916666666666667,
+        "weapon": "sword",
+        "weaponStart": 0.1,
+        "weaponEnd": 1.55,
+        "sourceDuration": 2.3000002
+      },
+      "light2": {
+        "clip": "Attack_A_02",
+        "end": 1.05,
+        "contact": 0.42,
+        "weapon": "sword",
+        "weaponStart": 0.0,
+        "weaponEnd": 1.85,
+        "sourceDuration": 2.3333335
+      },
+      "light3": {
+        "clip": "Attack_A_03",
+        "end": 1.63,
+        "contact": 1.1833333333333333,
+        "weapon": "sword",
+        "weaponStart": 0.0,
+        "weaponEnd": 1.6,
+        "sourceDuration": 2.25,
+        "start": 0.7
+      },
+      "heavy": {
+        "clip": "Attack_C_01",
+        "end": 0.8,
+        "contact": 0.3333333333333333,
+        "weapon": "chain",
+        "weaponStart": 0.12,
+        "weaponEnd": 2.8,
+        "sourceDuration": 3.6333334,
+        "start": 0.12,
+        "contactHeight": 2.15
+      },
+      "ability": {
+        "clip": "Attack_B_01",
+        "end": 1.1,
+        "contact": 0.24,
+        "weapon": "spear",
+        "weaponStart": 0.1,
+        "weaponEnd": 2.12,
+        "sourceDuration": 2.8666668
+      },
+      "ultimate": {
+        "clip": "Ultra_1",
+        "end": 2.6333334,
+        "contact": 1.6677778
+      },
+      "senti_sword_1": {
+        "clip": "Attack_A_01",
+        "end": 0.85,
+        "contact": 0.2916666666666667,
+        "weapon": "sword",
+        "weaponStart": 0.1,
+        "weaponEnd": 1.55,
+        "sourceDuration": 2.3000002
+      },
+      "senti_sword_2": {
+        "clip": "Attack_A_02",
+        "end": 1.05,
+        "contact": 0.42,
+        "weapon": "sword",
+        "weaponStart": 0.0,
+        "weaponEnd": 1.85,
+        "sourceDuration": 2.3333335
+      },
+      "senti_sword_3": {
+        "clip": "Attack_A_03",
+        "end": 1.63,
+        "contact": 1.1833333333333333,
+        "weapon": "sword",
+        "weaponStart": 0.0,
+        "weaponEnd": 1.6,
+        "sourceDuration": 2.25,
+        "start": 0.7
+      },
+      "senti_spear_1": {
+        "clip": "Attack_B_01",
+        "end": 1.1,
+        "contact": 0.24,
+        "weapon": "spear",
+        "weaponStart": 0.1,
+        "weaponEnd": 2.12,
+        "sourceDuration": 2.8666668
+      },
+      "senti_spear_2": {
+        "clip": "Attack_B_02",
+        "end": 0.72,
+        "contact": 0.175,
+        "weapon": "spear",
+        "weaponStart": 0.0,
+        "weaponEnd": 2.58,
+        "sourceDuration": 3.466667
+      },
+      "senti_chain_1": {
+        "clip": "Attack_C_01",
+        "end": 0.8,
+        "contact": 0.3333333333333333,
+        "weapon": "chain",
+        "weaponStart": 0.12,
+        "weaponEnd": 2.8,
+        "sourceDuration": 3.6333334,
+        "start": 0.12,
+        "contactHeight": 2.15
+      },
+      "senti_chain_2": {
+        "clip": "Attack_C_Charge",
+        "end": 2.35,
+        "contact": 1.7333333333333334,
+        "weapon": "chain",
+        "weaponStart": 0.12,
+        "weaponEnd": 2.35,
+        "sourceDuration": 4.4666667,
+        "start": 1.4
+      },
+      "senti_burst": {
+        "clip": "Ultra_1",
+        "end": 2.6333334,
+        "contact": 1.6677778
+      },
+      "senti_sword_charge": {
+        "clip": "Attack_A_Charge",
+        "end": 2.5000002,
+        "contact": 0.48,
+        "weapon": "sword",
+        "weaponStart": 0.13,
+        "weaponEnd": 0.95
+      },
+      "senti_spear_charge": {
+        "clip": "Attack_B_Charge_AS",
+        "end": 2.9166667,
+        "contact": 0.72,
+        "weapon": "spear",
+        "weaponStart": 0.0,
+        "weaponEnd": 1.5
+      }
+    },
+    "attackPacing": {},
+    "visual": {
+      "height": 2.85,
+      "rootBone": "Bip001",
+      "headBone": "Bip001 Head",
+      "hiddenMeshes": [
+        "weaponcase_01",
+        "weaponcase_02",
+        "weapon_b_02",
+        "cloak",
+        "weapon_c",
+        "weapon_a",
+        "weapon_b_01",
+        "hair_s",
+        "hair_lod_l",
+        "weaponcase_l"
+      ],
+      "hiddenSurfaces": [],
+      "textures": {
+        "bodyColor": "res://assets/sentience/Avatar_Fuka_C6_Texture_Body_Color.png",
+        "bodyLightmap": "res://assets/sentience/Avatar_Fuka_C6_Texture_Body_LightMap.png",
+        "hairLightmap": "res://assets/sentience/Avatar_Fuka_C6_Texture_Hair_LightMap.png",
+        "faceColor": "res://assets/sentience/Avatar_Fuka_C6_Texture_NewFace_Color.png",
+        "faceMask": "res://assets/sentience/Avatar_Fuka_Texture_NewFace_Facemap.png"
+      },
+      "outlinePixels": {
+        "body": 0.92,
+        "hair": 1.05,
+        "face": 0.38
+      },
+      "hairShadowTint": [
+        0.7418865,
+        0.66608995,
+        0.8088235
+      ],
+      "nativeMaterialProfile": "sentience",
+      "nativeMaterialCatalog": "res://assets/sentience/material-profiles.json",
+      "faceMode": "material",
+      "faceAtlas": {
+        "scale": [
+          1,
+          1
+        ],
+        "leftEyeOffset": [
+          0,
+          0
+        ],
+        "otherOffset": [
+          0,
+          0
+        ]
+      },
+      "surfaceKinds": {
+        "eyebrow:0": "face_part",
+        "eyeshape:0": "face_part",
+        "eyeshape:1": "face_part"
+      },
+      "surfaceNativeRoles": {
+        "body:2": "body_alpha",
+        "cloak:0": "cloak",
+        "cloak:1": "cloak_effect",
+        "weapon_a:0": "weapon_a",
+        "weapon_a:1": "weapon_a_blade",
+        "weapon_b_01:0": "weapon_b_blade",
+        "weapon_b_02:0": "weapon_b",
+        "weapon_c:0": "weapon_c"
+      },
+      "surfaceUv": {
+        "face:0": {
+          "scale": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        "eyebrow:0": {
+          "scale": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        "eyeshape:0": {
+          "scale": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        "eyeshape:1": {
+          "scale": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        "weapon_a:0": {
+          "scale": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        "weapon_a:1": {
+          "scale": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        "weapon_b_01:0": {
+          "scale": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        "weapon_b_02:0": {
+          "scale": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        "weapon_c:0": {
+          "scale": [
+            1,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      },
+      "surfaceTextures": {
+        "weapon_a:0": {
+          "albedo": "res://assets/sentience/Fuka_C6_Weapon_A_Color.png"
+        },
+        "weapon_a:1": {
+          "albedo": "res://assets/sentience/Fuka_C6_Weapon_A_Color.png"
+        },
+        "weapon_b_01:0": {
+          "albedo": "res://assets/sentience/Fuka_C6_Weapon_B_Color.png"
+        },
+        "weapon_b_02:0": {
+          "albedo": "res://assets/sentience/Fuka_C6_Weapon_B_Color.png"
+        },
+        "weapon_c:0": {
+          "albedo": "res://assets/sentience/Fuka_C6_Weapon_C_Color.png"
+        }
+      },
+      "ultimateJumpLimit": 0.65,
+      "weaponMeshes": {
+        "sword": [
+          "weapon_a"
+        ],
+        "spear": [
+          "weapon_b_01",
+          "weapon_b_02"
+        ],
+        "chain": [
+          "weapon_c"
+        ]
+      },
+      "expressionMode": "native_blendshapes",
+      "chainWorldReachLimit": 3.2
+    },
+    "defense": {
+      "source": "none",
+      "explanation": "Native C6 Standby provides guard stance; this enemy has no copied C4/Lighter guard animation."
+    },
+    "victory": {
+      "clip": "Victory",
+      "idleClip": "Victory_Loop",
+      "clipDuration": 4.3333335,
+      "idleDuration": 2.6666667
+    },
+    "adaptationSource": "Native C6 muscle/RootT/RootQ/IK curves restored on original C6 Avatar; original weapon and accessory Transform tracks retained. No C4/C5 body action fallback. Horizontal root lock and gameplay contact timing are adaptations.",
+    "motionOrigin": "native_c6"
+  },
+  "visibilityEvidence": "Native GameObject binary layout fully consumed and Name validated for all 278 objects; active flags in native-gameobject-active.json.",
+  "facialEvidence": "NewFace mesh blendshapes and full-face UV. No C5 atlas playback.",
+  "weaponEvidence": {
+    "geometry": "Native Weapon_A, Weapon_B_01/02, Weapon_C remain skinned to their original Fuka_C6_Weapon_* bones. No second hand attachment.",
+    "motion": "Enable only per native motion weapon field after native body+local weapon track validation.",
+    "identity": "Original switchweapon_hint_a/b/c -> BladeIcon/LancerIcon/WhipIcon and source PNG text 剑/枪/链.",
+    "default": "Native prefab inactive weapon/cases preserved outside weapon combat; story always hides all weapons.",
+    "chainAdaptation": "Only eight Fuka_C6_Weapon_C_01..08 local position curves receive a world-space soft reach limit of 3.2m; body/handle/rotations remain native. This is an explicit horizontal-arena adaptation, not original chain length.",
+    "sourcePrefab": {
+      "block": "c5808965df75be44.wmv",
+      "cab": "CAB-bd76c61291ab97bbf61395a412a3cdb3",
+      "transforms": "../hi3-fuhua-extract/exports/sentience-native-vfx/weapon-transform-evidence.json",
+      "materials": "assets/sentience/original-materials.json"
+    },
+    "verifiedChainMaxForwardMeters": {
+      "normal": 3.167,
+      "boss1_1": 3.182
+    },
+    "nativeLibrarySHA256": "ca437b329905ea22de3a73d6c729093c6c91559233549d1dcbba92aa2397a2a4"
+  },
+  "contactEvidence": {
+    "method": "Source-time keyframes selected from original weapon trajectory samples, adjusted to horizontal combat startup. Ordinary attack clips have no recovered damage animation event.",
+    "report": "../hi3-fuhua-extract/exports/sentience-native/weapon-grips.json",
+    "nativeEvent": {
+      "clip": "Ultra_1",
+      "name": "PlayVibrate",
+      "data": "Explode1",
+      "time": 1.6677778
+    },
+    "weaponVisibility": "Original prefabs default hidden. Draw only action-phase intervals, hide during returned/stowed end poses, idle, story, stagger and death. Intervals are portable runtime reconstruction.",
+    "refinement": "Actual Godot CPU-skinned weapon vertices sampled at 120 Hz in both facings, with root locking. A1=35/120; A3=142/120; B2=21/120; C1 first upper-body sweep40/120 at impactY2.15; CCharge208/120. End/start windows omit stowed or inactive portions; full native source library is retained.",
+    "geometryReports": [
+      "build/reports/sentience-contact-sweep-dense.json",
+      "build/reports/sentience-contact-chain.json",
+      "build/reports/sentience-contact-chain-boss.json"
+    ]
+  }
+}

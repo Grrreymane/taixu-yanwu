@@ -1,0 +1,27 @@
+云墨丹心原生特效素材接入
+
+本目录 PNG 为本机崩坏3客户端对应 Texture2D 的解码原图，未重绘。
+source-manifest.json 保留每张图的源包、CAB、PathID、源字节和PNG SHA256。
+Sphere002-source.json 保存原始网格及 Sphere001 形变数据；Sphere002-morph.res
+由 tests/import-native-sphere.gd 转换，镜像 X、反转索引以匹配导出 OBJ。
+scripts/native_sphere_motion.gd 的位置、旋转、缩放、形变值来自
+Fx_FukaC5_Ultra_Sphere_01，原 30fps、1.1666666 秒动画。
+
+对应关系（依据原 Renderer 的 CAB+PathID，而非仅按纹理名推断）：
+普通拳：Line54 近黑笔刷、Line55 灰白旋墨、Line56 墨点。
+分支 Charge03：Fx_Symbol_09 太极八卦、Line54/55/56。
+必杀 PLANE/SKY：SFX_Icon_304；SKY/Cloud：SFX_Nature_626_Cloud。
+必杀 SM_Q：SFX_Noise_310 + SFX_Mask_306；保留原尺寸曲线形状。
+必杀 Sphere_Ani：Sphere002 网格与 Sphere001 原形变。
+必杀落点：Fx_Nature_47 喷墨、Fx_Nature_44 墨滴图集。
+
+原资源与参数读取记录：
+hi3-fuhua-extract/exports/c5-native-vfx/
+hi3-fuhua-extract/exports/c5-vfx-structure/
+
+移植边界：
+Unity Shader 原始字节已保存，但未完整解码全部运算。native_ink 与
+native_ink_sphere 是 Godot 适配材质，不是直接运行原 Unity Shader。
+原预制体关键延时0.25/1.65/1.85/2.5秒用于演出分段；世界坐标、
+摄像机、持续时间、粒子数量与部分层次按横版战斗调整。
+原球体运动中的垂直范围与亮度做了适配。未宣称逐帧一比一还原。

@@ -1,0 +1,22 @@
+{
+  "purpose": "Loading-page-only font subset; complete in-game font remains unchanged.",
+  "sourceFont": "assets/fonts/hi3-sdk-zh-cn.ttf",
+  "sourceProvenanceRecord": "assets/fonts/hi3-sdk-font-source.json",
+  "sourceFamily": "FZLanTingHei-B-GBK-V2",
+  "sourceSha256": "8747eae0941c1ea7f1db938568184e20df758dffa7ee4b4a4758f81d56612b48",
+  "sourceBytes": 6840180,
+  "outputFont": "assets/fonts/loading-ui.woff2",
+  "outputSha256": "ba1e76e99d0609c34ba58769e7481d1dc2e6484c67634fe8a89ee6a199db210e",
+  "outputBytes": 10044,
+  "format": "WOFF2",
+  "tool": "fontTools 4.60.2",
+  "isolatedToolDirectory": "../tools\\font-subset-deps",
+  "selectionRule": "All non-ASCII characters in web-shell.html plus printable ASCII U+0020..U+007E. Includes loading title/note and browser-compatibility fallback.",
+  "nonAsciiCharacters": "。与丹云使准启器图在场墨备太开形心或持支新未正武浏演版用练虚览训请，",
+  "requestedCodepointCount": 129,
+  "subsetCodepointCount": 129,
+  "missingCodepoints": [],
+  "fullGameFontUnchanged": true,
+  "faviconDataUriPreserved": true,
+  "rebuildNote": "If shell copy changes to new characters, regenerate the subset before publishing."
+}

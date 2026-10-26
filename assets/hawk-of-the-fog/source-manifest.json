@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 1,
+  "character": "符华",
+  "armor": "雾都迅羽",
+  "styleId": "hawk_of_the_fog",
+  "nativeOutfit": "C1_05_01",
+  "identityEvidence": "https://honkaiimpact3.hoyoverse.com/tw/zh-tw/news/108936?source=v1",
+  "prefab": [
+    {
+      "Name": "Avatar",
+      "Container": "assets/asbres/entities/avatar/fuka_c1_fk/dress_fuka_c1_05_01/avatar.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a303f703da40756b.wmv",
+      "PathID": -2404614042418492832,
+      "Type": "GameObject",
+      "Hash": "a7c469691abe2fc3",
+      "Offset": 27338659
+    }
+  ],
+  "scene": "Avatar_Fuka_C1_05_01.scn",
+  "boneCount": 154,
+  "meshCount": 9,
+  "sourceMeshCount": 7,
+  "sourceClipCount": 27,
+  "skeletonPolicy": "Own original C1_05_01 skeleton, weights and inverse bind matrices preserved. FBX export scale100 converts centimeters consistently to game-model meters. No rest inverse substitution or generic rig retargeting. Original index skin binds remain; shared equipped gauntlets use original named binds.",
+  "equippedWeapon": {
+    "meshes": [
+      {
+        "node": "NativeFistWeapon001",
+        "sourceTargetRestOriginMaxError": 1.70625335158547e-05,
+        "weightedBinds": 36
+      },
+      {
+        "node": "NativeFistWeapon002",
+        "sourceTargetRestOriginMaxError": 7.28315899323206e-06,
+        "weightedBinds": 6
+      }
+    ],
+    "reuse": "Same original gauntlets already audited on Night Squire",
+    "source": "Original equippable Weapon_Fist_F1_25_3",
+    "verticesWeightsAndBindMatricesUnchanged": true
+  },
+  "weaponSource": "res://assets/night-squire/source-manifest.json",
+  "materials": "original-materials.json",
+  "nativeMotionCatalog": "native-motion-catalog.json",
+  "controllerEvidence": "native-controller-evidence.json",
+  "contactTiming": {
+    "evidence": "Source bone forward-extrema sampled60fps; source events contain only audio/footsteps and do not encode damage. Gameplay timing is an explicit side-view adaptation.",
+    "light1": {
+      "clip": "A1",
+      "sourcePeak": 0.1
+    },
+    "light2": {
+      "clip": "A2",
+      "sourcePeak": 0.05,
+      "adaptationContact": 0.1
+    },
+    "light3": {
+      "clip": "A3",
+      "sourcePeak": 0.2333333
+    },
+    "heavy": {
+      "clip": "FK_Artifact_ATK_C1",
+      "sourcePeaks": [
+        0.3,
+        0.3333333
+      ]
+    },
+    "ability": {
+      "clip": "FK_Artifact_ATK_C2",
+      "sourcePeaks": [
+        0.45,
+        0.55,
+        0.75
+      ]
+    },
+    "ultimate": {
+      "clip": "FK_Artifact_Ultra_AS",
+      "sourceLandingEvent": 0.4701334,
+      "nativeStateSpeed": 1.5,
+      "nativeStopTime": 2.7333336,
+      "excludedHiddenTake": "FK_Artifact_ATK_Hidden_Ultra has constant elevated offscreen pose for1.7667s, not a visible strike animation."
+    }
+  },
+  "portrait": {
+    "source": "909d2cb44c90c887.wmv",
+    "cab": "CAB-761395e6b4fc90a2d9cb90ff87189fef",
+    "pathId": "-1302375314331487540",
+    "texture": "FukaC1_05_01.png",
+    "nativePixels": true
+  },
+  "vfx": "vfx-source.json",
+  "clothBoundary": "All23 outfit-specific skirt bones retained in original bind and applicable authored animation. Native Unity dynamic cloth solver is not transplanted.",
+  "files": [
+    {
+      "path": "1 (1).png",
+      "bytes": 54198,
+      "sha256": "637e4485ab47bba8ff3542221f265bc84e56474118052c538eba73ef7cec93f5"
+    },
+    {
+      "path": "1.png",
+      "bytes": 209001,
+      "sha256": "d0bff4da00b0660749af27bc63a57a91a26d175086073f6e9b303fd737173696"
+    },
+    {
+      "path": "Avatar_Fuka_C1_05_01.scn",
+      "bytes": 4211291,
+      "sha256": "515e463c3da6f76adc7e80efc67521e10f4730a2dbcb4d266350035efe465402"
+    },
+    {
+      "path": "Avatar_Fuka_C1_05_01_Body_Color.png",
+      "bytes": 626776,
+      "sha256": "3f73bea50acc6be0883f4cb903c18c59b8da4a339dc654966f6d4d1292b13ba1"
+    },
+    {
+      "path": "Avatar_Fuka_C1_05_01_Body_LightMap.png",
+      "bytes": 427740,
+      "sha256": "dd7161551a16ca939b2f483484883c4bc12730d3218b43d998f2f54e63f1878a"
+    },
+    {
+      "path": "Avatar_Fuka_C1_05_01_Hair_Color.png",
+      "bytes": 362557,
+      "sha256": "09be38be3a1bfbc58bd23b33866af4473007a6d8a630e31b6c6eafbec2c4bacd"
+    },
+    {
+      "path": "Avatar_Fuka_C1_05_01_Hair_LightMap.png",
+      "bytes": 180184,
+      "sha256": "86a97aa423298f7ffebba8d9562fb042bb2249714242c4f1453504e6ba57b06f"
+    },
+    {
+      "path": "Avatar_Fuka_FaceMap.png",
+      "bytes": 35538,
+      "sha256": "b2881ef8d8561c172807a0e19c2c5eccf8adc990afef4a7151f2dba8ee2b8385"
+    },
+    {
+      "path": "Avatar_Fuka_Texture_Face_Color.png",
+      "bytes": 93189,
+      "sha256": "8e95789d461a1b3d2f51c5993121523545d7c9f521fde7b51e5054599226ab69"
+    },
+    {
+      "path": "Avatar_Fuka_Texture_Face_LightMap.png",
+      "bytes": 12110,
+      "sha256": "f63dfc02ebf52c80f107d61eea4260ea525688c6d43b596be4b14d218bdb40ad"
+    },
+    {
+      "path": "FukaC1_05_01.png",
+      "bytes": 70603,
+      "sha256": "941970c30d2c04ebc18f2e0efc876e43d420a52aea873b11bd818bc663458525"
+    },
+    {
+      "path": "vfx/Glow_Ball05.png",
+      "bytes": 3047,
+      "sha256": "7766105634ade324a6e6fe89e82fd96dfcd9152b44c150e6097ee9824d02a102"
+    },
+    {
+      "path": "vfx/Line_08.png",
+      "bytes": 11157,
+      "sha256": "568815c0ebdec1b3adee8d65e0d3e89974e82d6f3cadbac32717dbf34ecd72a6"
+    },
+    {
+      "path": "vfx/SFX_Particle_507.png",
+      "bytes": 3258,
+      "sha256": "311ff3d75494b334752da4ca3ef61fa1f1869d2699eef36a0b892822759f6acc"
+    },
+    {
+      "path": "vfx/SFX_Ray_304.png",
+      "bytes": 16696,
+      "sha256": "2edc69673c493e866c8310777a99bdc251e8a9b6a0cd9eb74658eae5e1b0151e"
+    },
+    {
+      "path": "vfx/SFX_Ray_503.png",
+      "bytes": 39693,
+      "sha256": "afedfb46b4caedbf90d688cfb7c1c428fba2ec32a84b68577fa8137336c9208d"
+    },
+    {
+      "path": "vfx/SFX_Smoke_504.png",
+      "bytes": 21079,
+      "sha256": "fe31f707d317626a228f8e78c84b5db23b87bac771c99ae98453ff50af6a07c3"
+    },
+    {
+      "path": "vfx/SFX_Trail_314.png",
+      "bytes": 16495,
+      "sha256": "76244ec261db12b99d19891de407e40bc27936c145c92d696cd321ec0cb0ee48"
+    },
+    {
+      "path": "vfx/SFX_Trail_318.png",
+      "bytes": 105379,
+      "sha256": "e8fa7057c3d9f2f391efc92bab5e22dcb5c3a1dd6ae0a0445c58729e8d0b5a62"
+    }
+  ]
+}

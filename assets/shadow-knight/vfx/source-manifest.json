@@ -1,0 +1,1006 @@
+{
+  "sourceReadOnly": true,
+  "prefabs": [
+    {
+      "Name": "effect",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_attack_a1.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -7172098802693392464,
+      "Type": "GameObject",
+      "Hash": "8e201d36263e9680",
+      "Offset": 10820192
+    },
+    {
+      "Name": "spark_main",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_attack_a1.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -4699762494890521446,
+      "Type": "GameObject",
+      "Hash": "262a4065186d4e6a",
+      "Offset": 10820192
+    },
+    {
+      "Name": "wave_b",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_attack_a1.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -2714945287271174126,
+      "Type": "GameObject",
+      "Hash": "864419c3723886d6",
+      "Offset": 10820192
+    },
+    {
+      "Name": "spark_big",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_attack_a1.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -1488761712087337324,
+      "Type": "GameObject",
+      "Hash": "8ec155a9abe1d8ec",
+      "Offset": 10820192
+    },
+    {
+      "Name": "spark_small",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_attack_a1.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 4012783270321958441,
+      "Type": "GameObject",
+      "Hash": "5556892591b3e5b0",
+      "Offset": 10820192
+    },
+    {
+      "Name": "wave_f",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_attack_a1.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 4433292113614440796,
+      "Type": "GameObject",
+      "Hash": "ab1e4841058329bb",
+      "Offset": 10820192
+    },
+    {
+      "Name": "Particle System",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_attack_a1.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 7709182757954247123,
+      "Type": "GameObject",
+      "Hash": "b80e3677ad5a7e5c",
+      "Offset": 10820192
+    },
+    {
+      "Name": "Avatar_Fuka_NL_Attack_A1",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_attack_a1.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 8064122223227306718,
+      "Type": "GameObject",
+      "Hash": "48191c950cae897c",
+      "Offset": 10820192
+    },
+    {
+      "Name": "Spot (10)",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_attack_b_ultra_attack.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -5033005641925524979,
+      "Type": "GameObject",
+      "Hash": "a3a8258665c9299e",
+      "Offset": 10893001
+    },
+    {
+      "Name": "wind1 (8)",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_attack_b_ultra_attack.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -4254731644626439934,
+      "Type": "GameObject",
+      "Hash": "a840c7d600d59efa",
+      "Offset": 10893001
+    },
+    {
+      "Name": "Spot-3 (3)",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_attack_b_ultra_attack.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -4244850886376053369,
+      "Type": "GameObject",
+      "Hash": "90c7e7b3c83d9d60",
+      "Offset": 10893001
+    },
+    {
+      "Name": "Smoke01_1 (13)",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_attack_b_ultra_attack.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 269615230887340281,
+      "Type": "GameObject",
+      "Hash": "6229d7c22690388c",
+      "Offset": 10893001
+    },
+    {
+      "Name": "Glow (3)",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_attack_b_ultra_attack.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 507636879459923258,
+      "Type": "GameObject",
+      "Hash": "90dc4daf0b34fff0",
+      "Offset": 10893001
+    },
+    {
+      "Name": "Spot (11)",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_attack_b_ultra_attack.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 636383066619169122,
+      "Type": "GameObject",
+      "Hash": "d7fd3da19b2b8a1c",
+      "Offset": 10893001
+    },
+    {
+      "Name": "Avatar_Fuka_NL_Attack_B_Ultra_Attack",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_attack_b_ultra_attack.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 2242629625429114118,
+      "Type": "GameObject",
+      "Hash": "838c7981786bb0f9",
+      "Offset": 10893001
+    },
+    {
+      "Name": "Smoke-Y (5)",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_attack_b_ultra_attack.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 5881589875388289440,
+      "Type": "GameObject",
+      "Hash": "a23d70688206f7c1",
+      "Offset": 10893001
+    },
+    {
+      "Name": "laser_inner (13)",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_attack_b_ultra_attack.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 6070974421881191347,
+      "Type": "GameObject",
+      "Hash": "4c538857146af15c",
+      "Offset": 10893001
+    },
+    {
+      "Name": "Lightbeam04 (3)",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_attack_b_ultra_attack.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 7753881270707844695,
+      "Type": "GameObject",
+      "Hash": "4390a2865b2a6e60",
+      "Offset": 10893001
+    },
+    {
+      "Name": "splash_1 (3)",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_attack_b_ultra_attack.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 7817743624228171897,
+      "Type": "GameObject",
+      "Hash": "61ef3fd2fa6fb856",
+      "Offset": 10893001
+    },
+    {
+      "Name": "Lightbeam04 (3)",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_attack_c1_3_ultra_hit.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 1748692057970042611,
+      "Type": "GameObject",
+      "Hash": "e4719d5ae027a053",
+      "Offset": 10929132
+    },
+    {
+      "Name": "Avatar_Fuka_NL_Attack_C1_3_Ultra_Hit",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_attack_c1_3_ultra_hit.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 6974267362644220171,
+      "Type": "GameObject",
+      "Hash": "2165d0985db0ea",
+      "Offset": 10929132
+    },
+    {
+      "Name": "Particle System (1)",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_attack_c1_3_ultra_hit.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 7195902745545193959,
+      "Type": "GameObject",
+      "Hash": "27ceac59b7fd0057",
+      "Offset": 10929132
+    },
+    {
+      "Name": "Boom_2 (4)",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_attack_c1_3_ultra_hit.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 8295657030576389066,
+      "Type": "GameObject",
+      "Hash": "ae5687f97e2aaae5",
+      "Offset": 10929132
+    },
+    {
+      "Name": "Avatar_Fuka_NL_Attack_UltraThunder",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_attack_ultrathunder.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 4616479413736211769,
+      "Type": "GameObject",
+      "Hash": "6059b68e6569456e",
+      "Offset": 10993152
+    },
+    {
+      "Name": "Electro (13)",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_attack_ultrathunder.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 9192067983416008010,
+      "Type": "GameObject",
+      "Hash": "4eca4a113a2adee9",
+      "Offset": 10993152
+    },
+    {
+      "Name": "Electro (13)",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_ultra_follow.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -4923563438372682395,
+      "Type": "GameObject",
+      "Hash": "5e6eb6070259355b",
+      "Offset": 11008994
+    },
+    {
+      "Name": "To light",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_ultra_follow.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -943692236970772076,
+      "Type": "GameObject",
+      "Hash": "1f6bcab03a8dc6d6",
+      "Offset": 11008994
+    },
+    {
+      "Name": "Avatar_Fuka_NL_Ultra_Follow",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_ultra_follow.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -463547540774005694,
+      "Type": "GameObject",
+      "Hash": "421a42ccc02be8ad",
+      "Offset": 11008994
+    },
+    {
+      "Name": "Light (1)",
+      "Container": "assets/asbres/effect/avatarfuka/nl/avatar_fuka_nl_ultra_follow.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 2009583632143128453,
+      "Type": "GameObject",
+      "Hash": "df6f48a74eb0e1ef",
+      "Offset": 11008994
+    },
+    {
+      "Name": "Avatar_Fuka_NL_Attack_A1_Dress01",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_a1_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -8225232703398751244,
+      "Type": "GameObject",
+      "Hash": "a394495145017127",
+      "Offset": 11015490
+    },
+    {
+      "Name": "Particle System (2)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_a1_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -4668412286969337405,
+      "Type": "GameObject",
+      "Hash": "beee8ec834159629",
+      "Offset": 11015490
+    },
+    {
+      "Name": "LZ_F (2)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -8212008553183051239,
+      "Type": "GameObject",
+      "Hash": "1aac2137beec3ca8",
+      "Offset": 11095426
+    },
+    {
+      "Name": "zx_h",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -7609828666216039981,
+      "Type": "GameObject",
+      "Hash": "607ad909656b2d3b",
+      "Offset": 11095426
+    },
+    {
+      "Name": "CONE (1)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -7574434176739046600,
+      "Type": "GameObject",
+      "Hash": "8e4388f294033642",
+      "Offset": 11095426
+    },
+    {
+      "Name": "NQ_SF (1)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -6862463798467347998,
+      "Type": "GameObject",
+      "Hash": "231e400b9df93eae",
+      "Offset": 11095426
+    },
+    {
+      "Name": "by_f (1)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -6791318748980106875,
+      "Type": "GameObject",
+      "Hash": "a76c6b7c3416c3f7",
+      "Offset": 11095426
+    },
+    {
+      "Name": "FX1_1.2 (1)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -6587626129260003577,
+      "Type": "GameObject",
+      "Hash": "23ce30a175a7884f",
+      "Offset": 11095426
+    },
+    {
+      "Name": "LZ XS",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -6481298303222569410,
+      "Type": "GameObject",
+      "Hash": "1783c77a38177dbc",
+      "Offset": 11095426
+    },
+    {
+      "Name": "dmx (10)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -5095181975779205888,
+      "Type": "GameObject",
+      "Hash": "b4f111739dc5a65d",
+      "Offset": 11095426
+    },
+    {
+      "Name": "dmx (8)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -4650745538836011503,
+      "Type": "GameObject",
+      "Hash": "4243e7f0d1304976",
+      "Offset": 11095426
+    },
+    {
+      "Name": "LZ_LS",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -4580697196204924924,
+      "Type": "GameObject",
+      "Hash": "2b02eac206c91b85",
+      "Offset": 11095426
+    },
+    {
+      "Name": "Avatar_Fuka_NL_Attack_B_Ultra_Attack_Dress01",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -3963949512302200013,
+      "Type": "GameObject",
+      "Hash": "94e482b21f51398d",
+      "Offset": 11095426
+    },
+    {
+      "Name": "LZ (3)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -3072528442576699062,
+      "Type": "GameObject",
+      "Hash": "d39824eaca98613c",
+      "Offset": 11095426
+    },
+    {
+      "Name": "FLAR 90 (1)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -2705881351663409986,
+      "Type": "GameObject",
+      "Hash": "5ad124e9fab358c3",
+      "Offset": 11095426
+    },
+    {
+      "Name": "3 (1)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -1803743401274985085,
+      "Type": "GameObject",
+      "Hash": "8bcb51e4655f1e48",
+      "Offset": 11095426
+    },
+    {
+      "Name": "DL",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -1680703267901461690,
+      "Type": "GameObject",
+      "Hash": "7762aaac6030af3e",
+      "Offset": 11095426
+    },
+    {
+      "Name": "FIRE__mx_FRONT (2)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -1151348865121312853,
+      "Type": "GameObject",
+      "Hash": "f8d827982124e7ba",
+      "Offset": 11095426
+    },
+    {
+      "Name": "Avatar_Seele_C2_Scythe_Model",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 6849648904660150,
+      "Type": "GameObject",
+      "Hash": "e99b9d15c66e3340",
+      "Offset": 11095426
+    },
+    {
+      "Name": "LSG (4)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 1017664103829094564,
+      "Type": "GameObject",
+      "Hash": "a94dd719c71d96f1",
+      "Offset": 11095426
+    },
+    {
+      "Name": "BD_RJ_DL",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 1023681985963105162,
+      "Type": "GameObject",
+      "Hash": "394f2437c8238f74",
+      "Offset": 11095426
+    },
+    {
+      "Name": "BL_SP (3)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 1240281012633063827,
+      "Type": "GameObject",
+      "Hash": "6296b6d374d662be",
+      "Offset": 11095426
+    },
+    {
+      "Name": "Distortion (1)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 1731878860025903434,
+      "Type": "GameObject",
+      "Hash": "7ac68520e1d2d73b",
+      "Offset": 11095426
+    },
+    {
+      "Name": "CONE B",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 1855723202878627926,
+      "Type": "GameObject",
+      "Hash": "798b02829c582c50",
+      "Offset": 11095426
+    },
+    {
+      "Name": "YT_LZ_MX (1)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 1874579423977758310,
+      "Type": "GameObject",
+      "Hash": "a60fce8c51b4f914",
+      "Offset": 11095426
+    },
+    {
+      "Name": "GYH",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 2982269074148154286,
+      "Type": "GameObject",
+      "Hash": "745b5b561a13af17",
+      "Offset": 11095426
+    },
+    {
+      "Name": "F",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 3037945588654586862,
+      "Type": "GameObject",
+      "Hash": "624dcd9fb3e0db7b",
+      "Offset": 11095426
+    },
+    {
+      "Name": "Avatar_Fuka_C2_04_01_Effect_Model (1)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 3306620343363348234,
+      "Type": "GameObject",
+      "Hash": "3330af96eceaf0e9",
+      "Offset": 11095426
+    },
+    {
+      "Name": "Fx_FukaNLDress1_Ultra",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 3871601043268733718,
+      "Type": "AnimationClip",
+      "Hash": "719308b240016cc0",
+      "Offset": 11095426
+    },
+    {
+      "Name": "dmx (4)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 4058235517433767319,
+      "Type": "GameObject",
+      "Hash": "c98ce66280920b0e",
+      "Offset": 11095426
+    },
+    {
+      "Name": "JG (2)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 4603874988828490086,
+      "Type": "GameObject",
+      "Hash": "63190da5bf19dae5",
+      "Offset": 11095426
+    },
+    {
+      "Name": "FX_WQ (1)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 5628307656581935879,
+      "Type": "GameObject",
+      "Hash": "87dbd23fadec88cf",
+      "Offset": 11095426
+    },
+    {
+      "Name": "GY_M",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 5879536552721835160,
+      "Type": "GameObject",
+      "Hash": "6529f9efb30762f1",
+      "Offset": 11095426
+    },
+    {
+      "Name": "ST (1)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 6405936611469209304,
+      "Type": "GameObject",
+      "Hash": "e043b06775259300",
+      "Offset": 11095426
+    },
+    {
+      "Name": "sb (1)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 7753434094946496790,
+      "Type": "GameObject",
+      "Hash": "3277fb91a009908",
+      "Offset": 11095426
+    },
+    {
+      "Name": "CONE (1)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 7873832099186327805,
+      "Type": "GameObject",
+      "Hash": "ef0f9867dad9c9a",
+      "Offset": 11095426
+    },
+    {
+      "Name": "XLT_3H",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_b_ultra_attack_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 8826445686224217440,
+      "Type": "GameObject",
+      "Hash": "f41108733772c174",
+      "Offset": 11095426
+    },
+    {
+      "Name": "GY_YZ (6)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_c1_3_ultra_hit_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -5588253392461364535,
+      "Type": "GameObject",
+      "Hash": "8aba87bba9d27eb4",
+      "Offset": 11264138
+    },
+    {
+      "Name": "XLT_3",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_c1_3_ultra_hit_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 1236764982329744628,
+      "Type": "GameObject",
+      "Hash": "a7a7867889c4f97c",
+      "Offset": 11264138
+    },
+    {
+      "Name": "gy H (2)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_c1_3_ultra_hit_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 3050301388309880275,
+      "Type": "GameObject",
+      "Hash": "8550d60d087f190e",
+      "Offset": 11264138
+    },
+    {
+      "Name": "spark_big (1)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_c1_3_ultra_hit_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 3081441013422722580,
+      "Type": "GameObject",
+      "Hash": "cf4c3cab8db05a99",
+      "Offset": 11264138
+    },
+    {
+      "Name": "LZ ls",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_c1_3_ultra_hit_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 4034894224712021012,
+      "Type": "GameObject",
+      "Hash": "42008a2693b639c7",
+      "Offset": 11264138
+    },
+    {
+      "Name": "1",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_c1_3_ultra_hit_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 6535456544991680399,
+      "Type": "GameObject",
+      "Hash": "644c3c79468e1ab",
+      "Offset": 11264138
+    },
+    {
+      "Name": "Avatar_Fuka_NL_Attack_C1_3_Ultra_Hit_Dress01",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_c1_3_ultra_hit_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 7085555076795820338,
+      "Type": "GameObject",
+      "Hash": "dbc0884cc6e90f7b",
+      "Offset": 11264138
+    },
+    {
+      "Name": "RJ (3)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_c1_3_ultra_hit_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 7443181865435768541,
+      "Type": "GameObject",
+      "Hash": "36ac6d61369e3f2a",
+      "Offset": 11264138
+    },
+    {
+      "Name": "Distortion (2)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_c1_3_ultra_hit_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 8019155196965686151,
+      "Type": "GameObject",
+      "Hash": "9df02c0dc9cc6e5c",
+      "Offset": 11264138
+    },
+    {
+      "Name": "dmx (8)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_c1_3_ultra_hit_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 8496825739093661069,
+      "Type": "GameObject",
+      "Hash": "f9cbe784ad0ad155",
+      "Offset": 11264138
+    },
+    {
+      "Name": "dmx (7)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_ultrathunder_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -8778009163947313981,
+      "Type": "GameObject",
+      "Hash": "effbe49aa8f150c8",
+      "Offset": 11528681
+    },
+    {
+      "Name": "GYH (1)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_ultrathunder_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -8499238712540500856,
+      "Type": "GameObject",
+      "Hash": "3c35e7fedc3384f",
+      "Offset": 11528681
+    },
+    {
+      "Name": "D_CONE",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_ultrathunder_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -128250319043730825,
+      "Type": "GameObject",
+      "Hash": "88b6d005cbee0675",
+      "Offset": 11528681
+    },
+    {
+      "Name": "Avatar_Fuka_NL_Attack_UltraThunder_Dress01",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_attack_ultrathunder_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 8439664421764665516,
+      "Type": "GameObject",
+      "Hash": "a22728cae6b13c19",
+      "Offset": 11528681
+    },
+    {
+      "Name": "dmx (10)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_ultra_follow_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": -5956951176051081383,
+      "Type": "GameObject",
+      "Hash": "61aed2dd0ff673d0",
+      "Offset": 11553330
+    },
+    {
+      "Name": "FLAR 90 (1)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_ultra_follow_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 2754127828090733321,
+      "Type": "GameObject",
+      "Hash": "c7fc09306892412b",
+      "Offset": 11553330
+    },
+    {
+      "Name": "Avatar_Fuka_NL_Ultra_Follow_Dress01",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_ultra_follow_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 4850872549559573378,
+      "Type": "GameObject",
+      "Hash": "584e8bc6cfce52cd",
+      "Offset": 11553330
+    },
+    {
+      "Name": "2NQ (1)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_ultra_follow_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 5751062523690081472,
+      "Type": "GameObject",
+      "Hash": "8c3f974fc21cf44a",
+      "Offset": 11553330
+    },
+    {
+      "Name": "BL_SP (5)",
+      "Container": "assets/asbres/effect/avatarfuka/nl_dress01/avatar_fuka_nl_ultra_follow_dress01.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5e092fb48ad1d3d1.wmv",
+      "PathID": 8263008122268807668,
+      "Type": "GameObject",
+      "Hash": "b21e1df4ccbafa87",
+      "Offset": 11553330
+    }
+  ],
+  "textures": [
+    {
+      "name": "SFX_Trail_305",
+      "pathId": "8764013164254178922",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\30ef5b95e3e48154.wmv",
+      "cab": "CAB-554a9debc5a10d65bb869553e5612cf2",
+      "rawSHA256": "c7253802204621b7dc3a841319c76a2dd442307bb27c51f47c2780bd9554397f",
+      "width": 64,
+      "height": 64,
+      "format": "DXT5",
+      "ok": false,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\c2-native-vfx\\original\\textures\\SFX_Trail_305_8764013164254178922\\SFX_Trail_305.png",
+          "sha256": "30a52336e7870b66085b937cee3a2e0f36371ce84c009e8670ec19058e50922c"
+        }
+      ]
+    },
+    {
+      "name": "Fx_Lightning_02",
+      "pathId": "-8082711949915280364",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\318e546998b1902e.wmv",
+      "cab": "CAB-8d3263ca9e7a92e94902389059115bbd",
+      "rawSHA256": "52cb5800aaa506a2064a6536c0501f1d1d5074548faffff7a2aae7c4def95e58",
+      "width": 256,
+      "height": 256,
+      "format": "BC7",
+      "ok": false,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\c2-native-vfx\\original\\textures\\Fx_Lightning_02_-8082711949915280364\\Fx_Lightning_02.png",
+          "sha256": "f730e7db765816f9906d446fb382592bea1aaf15c4f049a95b2a71b116fb3d2b"
+        }
+      ]
+    },
+    {
+      "name": "SFX_Lightning_501",
+      "pathId": "5802043998854586234",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+      "cab": "CAB-5d3c05f72cdd04830cddd0f3527c227e",
+      "rawSHA256": "b026680f48003d150303d2b80f593aba79dde4939553011262fce4b03dd35fce",
+      "width": 256,
+      "height": 512,
+      "format": "DXT5",
+      "ok": false,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\c2-native-vfx\\original\\textures\\SFX_Lightning_501_5802043998854586234\\SFX_Lightning_501.png",
+          "sha256": "81ab02869fe10625ec8af7ead57b087871a8c3fdc8325ee466208a62201e047f"
+        }
+      ]
+    },
+    {
+      "name": "SFX_Mask_631_C",
+      "pathId": "-6528657062457361738",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+      "cab": "CAB-9d640e82a7afdd0a22a3d17736240a2b",
+      "rawSHA256": "3545ee541a324a22e1f5b85a0870ace36e138b06d9f34c9ae029786b87e6ad88",
+      "width": 128,
+      "height": 128,
+      "format": "DXT5",
+      "ok": true,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\c2-native-vfx\\original\\textures\\SFX_Mask_631_C_-6528657062457361738\\SFX_Mask_631_C.png",
+          "sha256": "a9e5052d361b4296936c562c8d575c3994820cf7ca9a947195251d146ada3d50"
+        }
+      ]
+    },
+    {
+      "name": "SFX_Ring_603",
+      "pathId": "-8619573392432357133",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+      "cab": "CAB-a876b5f96e8f26204d2c498b411d046f",
+      "rawSHA256": "1164ce110c218efef8088e100b43346869f9233bd9da6f05a461fca371e66d9b",
+      "width": 256,
+      "height": 256,
+      "format": "DXT5",
+      "ok": false,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\c2-native-vfx\\original\\textures\\SFX_Ring_603_-8619573392432357133\\SFX_Ring_603.png",
+          "sha256": "649bdfe53dffd550af4785e73fa72268a30a8af42d75e30e5dac24669422f3cb"
+        }
+      ]
+    },
+    {
+      "name": "SFX_Smoke_303",
+      "pathId": "4388468226149728595",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\449d97db6f97c23b.wmv",
+      "cab": "CAB-1da959e86ca7ea49ee526d68be6da040",
+      "rawSHA256": "c8628fbe95fe30c516e725b4c73199b981620756d378f5fd64b0d00f6cb6767c",
+      "width": 256,
+      "height": 256,
+      "format": "DXT5",
+      "ok": false,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\c2-native-vfx\\original\\textures\\SFX_Smoke_303_4388468226149728595\\SFX_Smoke_303.png",
+          "sha256": "21cae591a4ee28142d44b66cb326a497eacc14489b25ea92504882f4327b78c6"
+        }
+      ]
+    },
+    {
+      "name": "Spark_3",
+      "pathId": "8357494553401871760",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5763c013ee7717cb.wmv",
+      "cab": "CAB-09bc009bfe44eda36236f2db3debaa8c",
+      "rawSHA256": "d5c33d83bb05f78a0bab22d82d62788d3d16adb7bef634b1e68bd71724391b4f",
+      "width": 512,
+      "height": 512,
+      "format": "DXT5",
+      "ok": false,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\c2-native-vfx\\original\\textures\\Spark_3_8357494553401871760\\Spark_3.png",
+          "sha256": "aedb6c92f7084d568c95aaeac7500134fd1758d1f9a75eb2897636b6104526f3"
+        }
+      ]
+    },
+    {
+      "name": "ground_explode_smoke",
+      "pathId": "-7094862990730369554",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5865b49c0ad352d3.wmv",
+      "cab": "CAB-f4bd7fcc584f4a071aa475ad3042fb12",
+      "rawSHA256": "770013e827824fe84c52d92dcdf22debdd2c8cbf2b662d9eda348a7f7ad90a31",
+      "width": 256,
+      "height": 256,
+      "format": "DXT5",
+      "ok": false,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\c2-native-vfx\\original\\textures\\ground_explode_smoke_-7094862990730369554\\ground_explode_smoke.png",
+          "sha256": "6f32f06db9d946ec4eb5180ebffe95df7ec3ff27dc3337f20bc520c9626db6f4"
+        }
+      ]
+    },
+    {
+      "name": "Fx_Glow_01",
+      "pathId": "3727617223792400216",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5f2084de38ff805d.wmv",
+      "cab": "CAB-d326c31b4d0b5525e49dd24841e5b6cb",
+      "rawSHA256": "20e5d12b9442446a8466474c117b13292bf65ce37b2e0ccd15deb6cdaf4e3129",
+      "width": 64,
+      "height": 64,
+      "format": "DXT5",
+      "ok": false,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\c2-native-vfx\\original\\textures\\Fx_Glow_01_3727617223792400216\\Fx_Glow_01.png",
+          "sha256": "6683a1500ed8259076af5ddbb39470e637bc2b574707b8d8e6d1a29652ed4a06"
+        }
+      ]
+    },
+    {
+      "name": "circle",
+      "pathId": "2045652031295774829",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5f2084de38ff805d.wmv",
+      "cab": "CAB-8910ef76b3d9b4204fd90594406da893",
+      "rawSHA256": "f3ad6517717f44fda60fb76b80fe2b05d03efc0405e1054bdced9567295b55a0",
+      "width": 256,
+      "height": 256,
+      "format": "DXT5",
+      "ok": false,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\c2-native-vfx\\original\\textures\\circle_2045652031295774829\\circle.png",
+          "sha256": "7b2a90709ba7ed38e2196fd15f7a811e9d68d5e270c8aa8a684ac7f803e28111"
+        }
+      ]
+    },
+    {
+      "name": "trail_2_new",
+      "pathId": "6600595152638053704",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5f2084de38ff805d.wmv",
+      "cab": "CAB-b2150552ed06d70a662b015d621cb372",
+      "rawSHA256": "1c4d72b2009b16af2e327183efb91719e7ce70220eed18393cdf200e5dcfc9cc",
+      "width": 512,
+      "height": 512,
+      "format": "DXT5",
+      "ok": false,
+      "files": [
+        {
+          "path": "../hi3-fuhua-extract\\exports\\c2-native-vfx\\original\\textures\\trail_2_new_6600595152638053704\\trail_2_new.png",
+          "sha256": "9451f1cb3b583bd64b5bc9227a27e693a6f72a255b48b5bbddc6dcaf4dfc50ce"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "file": "circle.png",
+      "sha256": "7b2a90709ba7ed38e2196fd15f7a811e9d68d5e270c8aa8a684ac7f803e28111"
+    },
+    {
+      "file": "Fx_Glow_01.png",
+      "sha256": "6683a1500ed8259076af5ddbb39470e637bc2b574707b8d8e6d1a29652ed4a06"
+    },
+    {
+      "file": "Fx_Lightning_02.png",
+      "sha256": "f730e7db765816f9906d446fb382592bea1aaf15c4f049a95b2a71b116fb3d2b"
+    },
+    {
+      "file": "ground_explode_smoke.png",
+      "sha256": "6f32f06db9d946ec4eb5180ebffe95df7ec3ff27dc3337f20bc520c9626db6f4"
+    },
+    {
+      "file": "SFX_Lightning_501.png",
+      "sha256": "81ab02869fe10625ec8af7ead57b087871a8c3fdc8325ee466208a62201e047f"
+    },
+    {
+      "file": "SFX_Mask_631_C.png",
+      "sha256": "a9e5052d361b4296936c562c8d575c3994820cf7ca9a947195251d146ada3d50"
+    },
+    {
+      "file": "SFX_Ring_603.png",
+      "sha256": "649bdfe53dffd550af4785e73fa72268a30a8af42d75e30e5dac24669422f3cb"
+    },
+    {
+      "file": "SFX_Smoke_303.png",
+      "sha256": "21cae591a4ee28142d44b66cb326a497eacc14489b25ea92504882f4327b78c6"
+    },
+    {
+      "file": "SFX_Trail_305.png",
+      "sha256": "30a52336e7870b66085b937cee3a2e0f36371ce84c009e8670ec19058e50922c"
+    },
+    {
+      "file": "Spark_3.png",
+      "sha256": "aedb6c92f7084d568c95aaeac7500134fd1758d1f9a75eb2897636b6104526f3"
+    },
+    {
+      "file": "trail_2_new.png",
+      "sha256": "9451f1cb3b583bd64b5bc9227a27e693a6f72a255b48b5bbddc6dcaf4dfc50ce"
+    }
+  ],
+  "note": "Native NL and NL_Dress01 prefab dependency textures; no painted replacements. Runtime particle arrangement needs Godot adaptation."
+}

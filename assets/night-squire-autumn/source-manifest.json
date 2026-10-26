@@ -1,0 +1,1200 @@
+{
+  "schemaVersion": 1,
+  "game": "Honkai Impact 3rd",
+  "clientVersion": "9.1.0",
+  "internalArmorCode": "C3_04_03",
+  "characterStyle": "night_squire",
+  "appearanceId": "autumn_leaves",
+  "localizedName": "红叶知秋",
+  "sourceReadOnly": true,
+  "sourcePrefab": [
+    {
+      "Name": "Avatar",
+      "Container": "assets/asbres/entities/avatar/fuka_c3_nd/dress_fuka_c3_04_03/avatar.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a303f703da40756b.wmv",
+      "PathID": 6480448104156695592,
+      "Type": "GameObject",
+      "Hash": "fecce0ef1d1ac989",
+      "Offset": 40021349
+    }
+  ],
+  "identityEvidence": {
+    "officialAnnouncement": "https://www.sohu.com/a/499724306_632941",
+    "officialPublisher": "崩坏3",
+    "announcementDate": "2021-11-07",
+    "title": "红叶知秋｜白夜执事全新服装即将登场",
+    "localReference": "../符华—红叶知秋/衣服.png",
+    "nativeTextureLayoutMatchesLocalReference": true,
+    "bodyTextureRgbMeanAbsoluteError": [
+      0.24245738983154297,
+      0.2421855926513672,
+      0.24615478515625
+    ]
+  },
+  "scene": "res://assets/night-squire-autumn/Avatar_Fuka_C3_04_03.scn",
+  "bones": 86,
+  "meshNodes": 8,
+  "originalSkinMatricesPreserved": true,
+  "originalClothingBonesPreserved": [
+    "Bone_C3_04_03_Baldric_A",
+    "Bone_C3_04_03_Ribbon_F_01",
+    "Bone_C3_04_03_Ribbon_F_02",
+    "Bone_C3_04_03_Ribbon_F_03",
+    "Bone_C3_04_03_Ribbon_FL1_01",
+    "Bone_C3_04_03_Ribbon_FL2_01",
+    "Bone_C3_04_03_Baldric_B",
+    "Bone_C3_04_03_Bag_Root",
+    "Bone_C3_04_03_Bag_Ears_L_01",
+    "Bone_C3_04_03_Bag_Ears_L_02",
+    "Bone_C3_04_03_Bag_Ears_R_01",
+    "Bone_C3_04_03_Bag_Ears_R_02",
+    "Bone_C3_04_03_Bag_Ears_R_03",
+    "Bone_C3_04_03_Bag_Ribbon_01",
+    "Bone_C3_04_03_Bag_Ribbon_02",
+    "Bone_C3_04_03_Bag_Wing_L_01",
+    "Bone_C3_04_03_Bag_Wing_R_01",
+    "Bone_C3_04_03_Baldric_D",
+    "Bone_C3_04_03_Baldric_C"
+  ],
+  "nativeAnimationTransfer": {
+    "bodyBindMaxBasisDelta": 1.94747626665048e-05,
+    "bodyBindMaxPositionDelta": 1.09475677163573e-05,
+    "clips": [
+      {
+        "length": 2.01666666666667,
+        "name": "Avatar_Fuka_Ani_Combat",
+        "removedIncompatibleOutfitTracks": [
+          "Skeleton3D/Bip001 R Finger4Nub/Bip001 R Finger4Nub",
+          "Skeleton3D/Bip001 R Finger1Nub/Bip001 R Finger1Nub",
+          "Skeleton3D/Bip001 R Finger0Nub/Bip001 R Finger0Nub",
+          "Skeleton3D/Bones_Hair13/Bones_Hair13",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R/bone_C2_WJ_R02",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L/bone_C2_WJ_L02",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/boneglasses00/boneglasses00",
+          "Skeleton3D/Bip001 L Toe0Nub/Bip001 L Toe0Nub",
+          "Skeleton3D:bone_C3_Dress_R02",
+          "Skeleton3D:bone_C3_Dress_L02",
+          "Skeleton3D:bonebreast_L00",
+          "Skeleton3D:bone_C3_Dress_R01",
+          "Skeleton3D:bone_C3_Dress_L01",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R00",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L00"
+        ],
+        "tracks": 69
+      },
+      {
+        "length": 3.15000006666667,
+        "name": "Avatar_Fuka_Ani_Die",
+        "removedIncompatibleOutfitTracks": [
+          "Skeleton3D/Bip001 R Finger4Nub/Bip001 R Finger4Nub",
+          "Skeleton3D/Bip001 R Finger3Nub/Bip001 R Finger3Nub",
+          "Skeleton3D/Bip001 R Finger2Nub/Bip001 R Finger2Nub",
+          "Skeleton3D/Bip001 R Finger1Nub/Bip001 R Finger1Nub",
+          "Skeleton3D/Bones_Hair13/Bones_Hair13",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R/bone_C2_WJ_R02",
+          "Skeleton3D/Bones_Hair05/Bones_Hair05",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L/bone_C2_WJ_L02",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R",
+          "Skeleton3D/Bone019/Bone019",
+          "Skeleton3D/Bone019/Bone019",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/Bip001 L Toe0Nub/Bip001 L Toe0Nub",
+          "Skeleton3D:bone_C3_Dress_R02",
+          "Skeleton3D:bone_C3_Dress_L02",
+          "Skeleton3D:bonebreast_L00",
+          "Skeleton3D:bone_C3_Dress_R01",
+          "Skeleton3D:bone_C3_Dress_L01",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R00",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L00"
+        ],
+        "tracks": 72
+      },
+      {
+        "length": 1.01666666666667,
+        "name": "Avatar_Fuka_Ani_EvadeBackward",
+        "removedIncompatibleOutfitTracks": [
+          "Skeleton3D/Bip001 R Finger4Nub/Bip001 R Finger4Nub",
+          "Skeleton3D/Bip001 R Finger3Nub/Bip001 R Finger3Nub",
+          "Skeleton3D/Bip001 R Finger2Nub/Bip001 R Finger2Nub",
+          "Skeleton3D/Bip001 R Finger1Nub/Bip001 R Finger1Nub",
+          "Skeleton3D/Bones_Hair13/Bones_Hair13",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R/bone_C2_WJ_R02",
+          "Skeleton3D/Bones_Hair05/Bones_Hair05",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L/bone_C2_WJ_L02",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R",
+          "Skeleton3D/Bone019/Bone019",
+          "Skeleton3D/Bone019/Bone019",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/boneglasses00/boneglasses00",
+          "Skeleton3D/bone_C3_Dress_R03/bone_C3_Dress_R03",
+          "Skeleton3D/Bip001 L Toe0Nub/Bip001 L Toe0Nub",
+          "Skeleton3D:bone_C3_Dress_R02",
+          "Skeleton3D:bone_C3_Dress_L02",
+          "Skeleton3D:bonebreast_L00",
+          "Skeleton3D:bone_C3_Dress_R01",
+          "Skeleton3D:bone_C3_Dress_L01",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R00",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L00"
+        ],
+        "tracks": 70
+      },
+      {
+        "length": 1.15000006666667,
+        "name": "Avatar_Fuka_Ani_EvadeForward",
+        "removedIncompatibleOutfitTracks": [
+          "Skeleton3D/Bip001 R Finger3Nub/Bip001 R Finger3Nub",
+          "Skeleton3D/Bip001 R Finger2Nub/Bip001 R Finger2Nub",
+          "Skeleton3D/Bip001 R Finger0Nub/Bip001 R Finger0Nub",
+          "Skeleton3D/Bones_Hair13/Bones_Hair13",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R/bone_C2_WJ_R02",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L/bone_C2_WJ_L02",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R",
+          "Skeleton3D/Bone019/Bone019",
+          "Skeleton3D/Bone019/Bone019",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/boneglasses00/boneglasses00",
+          "Skeleton3D:bone_C3_Dress_R02",
+          "Skeleton3D:bone_C3_Dress_L02",
+          "Skeleton3D:bonebreast_R00",
+          "Skeleton3D:bonebreast_L00",
+          "Skeleton3D:bone_C3_Dress_R01",
+          "Skeleton3D:bone_C3_Dress_L01",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R00",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L00"
+        ],
+        "tracks": 70
+      },
+      {
+        "length": 1.51666676666667,
+        "name": "Avatar_Fuka_Ani_Hit_H",
+        "removedIncompatibleOutfitTracks": [
+          "Skeleton3D/Bip001 R Finger4Nub/Bip001 R Finger4Nub",
+          "Skeleton3D/Bip001 R Finger3Nub/Bip001 R Finger3Nub",
+          "Skeleton3D/Bip001 R Finger2Nub/Bip001 R Finger2Nub",
+          "Skeleton3D/Bip001 R Finger1Nub/Bip001 R Finger1Nub",
+          "Skeleton3D/Bones_Hair13/Bones_Hair13",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R/bone_C2_WJ_R02",
+          "Skeleton3D/Bones_Hair05/Bones_Hair05",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L/bone_C2_WJ_L02",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R",
+          "Skeleton3D/Bone019/Bone019",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/boneglasses00/boneglasses00",
+          "Skeleton3D/Bip001 L Toe0Nub/Bip001 L Toe0Nub",
+          "Skeleton3D:bonebreast_L00",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L00"
+        ],
+        "tracks": 72
+      },
+      {
+        "length": 0.933333366666667,
+        "name": "Avatar_Fuka_Ani_Hit_L",
+        "removedIncompatibleOutfitTracks": [
+          "Skeleton3D/Bip001 R Finger4Nub/Bip001 R Finger4Nub",
+          "Skeleton3D/Bip001 R Finger3Nub/Bip001 R Finger3Nub",
+          "Skeleton3D/Bip001 R Finger2Nub/Bip001 R Finger2Nub",
+          "Skeleton3D/Bip001 R Finger1Nub/Bip001 R Finger1Nub",
+          "Skeleton3D/Bones_Hair13/Bones_Hair13",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R/bone_C2_WJ_R02",
+          "Skeleton3D/Bones_Hair05/Bones_Hair05",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L/bone_C2_WJ_L02",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R",
+          "Skeleton3D/Bone019/Bone019",
+          "Skeleton3D/Bone019/Bone019",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/Bip001 L Toe0Nub/Bip001 L Toe0Nub",
+          "Skeleton3D:bone_C3_Dress_R02",
+          "Skeleton3D:bone_C3_Dress_L02",
+          "Skeleton3D:bonebreast_R00",
+          "Skeleton3D:bonebreast_L00",
+          "Skeleton3D:bone_C3_Dress_R01",
+          "Skeleton3D:bone_C3_Dress_L01",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R00",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L00"
+        ],
+        "tracks": 72
+      },
+      {
+        "length": 1.18333336666667,
+        "name": "Avatar_Fuka_Ani_ND_A",
+        "removedIncompatibleOutfitTracks": [
+          "Skeleton3D/Bip001 R Finger3Nub/Bip001 R Finger3Nub",
+          "Skeleton3D/Bip001 R Finger2Nub/Bip001 R Finger2Nub",
+          "Skeleton3D/Bip001 R Finger1Nub/Bip001 R Finger1Nub",
+          "Skeleton3D/Bones_Hair13/Bones_Hair13",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R/bone_C2_WJ_R02",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L/bone_C2_WJ_L02",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R",
+          "Skeleton3D/Bone019/Bone019",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/boneglasses00/boneglasses00",
+          "Skeleton3D/Bip001 L Toe0Nub/Bip001 L Toe0Nub",
+          "Skeleton3D:bone_C3_Dress_R02",
+          "Skeleton3D:bone_C3_Dress_L02",
+          "Skeleton3D:bonebreast_L00",
+          "Skeleton3D:bone_C3_Dress_R01",
+          "Skeleton3D:bone_C3_Dress_L01",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R00",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L00"
+        ],
+        "tracks": 70
+      },
+      {
+        "length": 2.21666666666667,
+        "name": "Avatar_Fuka_Ani_ND_AA",
+        "removedIncompatibleOutfitTracks": [
+          "Skeleton3D/Bip001 R Finger3Nub/Bip001 R Finger3Nub",
+          "Skeleton3D/Bip001 R Finger2Nub/Bip001 R Finger2Nub",
+          "Skeleton3D/Bones_Hair13/Bones_Hair13",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R/bone_C2_WJ_R02",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L/bone_C2_WJ_L02",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R",
+          "Skeleton3D/Bone019/Bone019",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/boneglasses00/boneglasses00",
+          "Skeleton3D:bone_C3_Dress_R02",
+          "Skeleton3D:bone_C3_Dress_L02",
+          "Skeleton3D:bonebreast_L00",
+          "Skeleton3D:bone_C3_Dress_R01",
+          "Skeleton3D:bone_C3_Dress_L01",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R00",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L00"
+        ],
+        "tracks": 71
+      },
+      {
+        "length": 2.18333336666667,
+        "name": "Avatar_Fuka_Ani_ND_AAA",
+        "removedIncompatibleOutfitTracks": [
+          "Skeleton3D/Bip001 R Finger2Nub/Bip001 R Finger2Nub",
+          "Skeleton3D/Bip001 R Finger1Nub/Bip001 R Finger1Nub",
+          "Skeleton3D/Bones_Hair13/Bones_Hair13",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R/bone_C2_WJ_R02",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L/bone_C2_WJ_L02",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R",
+          "Skeleton3D/Bone019/Bone019",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/boneglasses00/boneglasses00",
+          "Skeleton3D/Bip001 L Toe0Nub/Bip001 L Toe0Nub",
+          "Skeleton3D:bone_C3_Dress_R02",
+          "Skeleton3D:bone_C3_Dress_L02",
+          "Skeleton3D:bonebreast_L00",
+          "Skeleton3D:bone_C3_Dress_R01",
+          "Skeleton3D:bone_C3_Dress_L01",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R00",
+          "Skeleton3D:bone_C3_Dress_R00",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L00",
+          "Skeleton3D:bone_C3_Dress_L00"
+        ],
+        "tracks": 70
+      },
+      {
+        "length": 1.11666666666667,
+        "name": "Avatar_Fuka_Ani_ND_AAB",
+        "removedIncompatibleOutfitTracks": [
+          "Skeleton3D/Bip001 R Finger4Nub/Bip001 R Finger4Nub",
+          "Skeleton3D/Bip001 R Finger3Nub/Bip001 R Finger3Nub",
+          "Skeleton3D/Bip001 R Finger1Nub/Bip001 R Finger1Nub",
+          "Skeleton3D/Bones_Hair13/Bones_Hair13",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R/bone_C2_WJ_R02",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L/bone_C2_WJ_L02",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R",
+          "Skeleton3D/Bone019/Bone019",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/boneglasses00/boneglasses00",
+          "Skeleton3D/Bip001 L Toe0Nub/Bip001 L Toe0Nub",
+          "Skeleton3D:bone_C3_Dress_R02",
+          "Skeleton3D:bone_C3_Dress_L02",
+          "Skeleton3D:bonebreast_L00",
+          "Skeleton3D:bone_C3_Dress_R01",
+          "Skeleton3D:bone_C3_Dress_L01",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R00",
+          "Skeleton3D:bone_C3_Dress_R00",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L00"
+        ],
+        "tracks": 70
+      },
+      {
+        "length": 1.78333346666667,
+        "name": "Avatar_Fuka_Ani_ND_AB",
+        "removedIncompatibleOutfitTracks": [
+          "Skeleton3D/Bip001 R Finger3Nub/Bip001 R Finger3Nub",
+          "Skeleton3D/Bip001 R Finger1Nub/Bip001 R Finger1Nub",
+          "Skeleton3D/Bip001 R Finger0Nub/Bip001 R Finger0Nub",
+          "Skeleton3D/Bones_Hair13/Bones_Hair13",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R/bone_C2_WJ_R02",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L/bone_C2_WJ_L02",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R",
+          "Skeleton3D/Bone019/Bone019",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/boneglasses00/boneglasses00",
+          "Skeleton3D/bone_C3_Dress_R03/bone_C3_Dress_R03",
+          "Skeleton3D/bone_C3_Dress_L03/bone_C3_Dress_L03",
+          "Skeleton3D/Bip001 L Toe0Nub/Bip001 L Toe0Nub",
+          "Skeleton3D:bone_C3_Dress_R02",
+          "Skeleton3D:bone_C3_Dress_L02",
+          "Skeleton3D:bonebreast_L00",
+          "Skeleton3D:bone_C3_Dress_R01",
+          "Skeleton3D:bone_C3_Dress_L01",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R00",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L00"
+        ],
+        "tracks": 71
+      },
+      {
+        "length": 2.06666686666667,
+        "name": "Avatar_Fuka_Ani_ND_ABB",
+        "removedIncompatibleOutfitTracks": [
+          "Skeleton3D/Bip001 R Finger4Nub/Bip001 R Finger4Nub",
+          "Skeleton3D/Bip001 R Finger2Nub/Bip001 R Finger2Nub",
+          "Skeleton3D/Bip001 R Finger0Nub/Bip001 R Finger0Nub",
+          "Skeleton3D/Bones_Hair13/Bones_Hair13",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R/bone_C2_WJ_R02",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L/bone_C2_WJ_L02",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R",
+          "Skeleton3D/Bone019/Bone019",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/boneglasses00/boneglasses00",
+          "Skeleton3D/bone_C3_Dress_R03/bone_C3_Dress_R03",
+          "Skeleton3D/bone_C3_Dress_L03/bone_C3_Dress_L03",
+          "Skeleton3D/Bip001 L Toe0Nub/Bip001 L Toe0Nub",
+          "Skeleton3D:bone_C3_Dress_R02",
+          "Skeleton3D:bone_C3_Dress_L02",
+          "Skeleton3D:bonebreast_L00",
+          "Skeleton3D:bone_C3_Dress_R01",
+          "Skeleton3D:bone_C3_Dress_L01",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R00",
+          "Skeleton3D:bone_C3_Dress_R00",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L00"
+        ],
+        "tracks": 71
+      },
+      {
+        "length": 2.26666666666667,
+        "name": "Avatar_Fuka_Ani_ND_B",
+        "removedIncompatibleOutfitTracks": [
+          "Skeleton3D/Bip001 R Finger4Nub/Bip001 R Finger4Nub",
+          "Skeleton3D/Bip001 R Finger1Nub/Bip001 R Finger1Nub",
+          "Skeleton3D/Bip001 R Finger0Nub/Bip001 R Finger0Nub",
+          "Skeleton3D/Bones_Hair13/Bones_Hair13",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R/bone_C2_WJ_R02",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L/bone_C2_WJ_L02",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R",
+          "Skeleton3D/Bone019/Bone019",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/boneglasses00/boneglasses00",
+          "Skeleton3D/Bip001 L Toe0Nub/Bip001 L Toe0Nub",
+          "Skeleton3D:bone_C3_Dress_R02",
+          "Skeleton3D:bone_C3_Dress_L02",
+          "Skeleton3D:bonebreast_L00",
+          "Skeleton3D:bone_C3_Dress_R01",
+          "Skeleton3D:bone_C3_Dress_L01",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R00",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L00",
+          "Skeleton3D:bone_C3_Dress_L00"
+        ],
+        "tracks": 70
+      },
+      {
+        "length": 1.83333336666667,
+        "name": "Avatar_Fuka_Ani_ND_BA",
+        "removedIncompatibleOutfitTracks": [
+          "Skeleton3D/Bip001 R Finger2Nub/Bip001 R Finger2Nub",
+          "Skeleton3D/Bip001 R Finger1Nub/Bip001 R Finger1Nub",
+          "Skeleton3D/Bones_Hair13/Bones_Hair13",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R/bone_C2_WJ_R02",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L/bone_C2_WJ_L02",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R",
+          "Skeleton3D/Bone019/Bone019",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/boneglasses00/boneglasses00",
+          "Skeleton3D:bone_C3_Dress_R02",
+          "Skeleton3D:bone_C3_Dress_L02",
+          "Skeleton3D:bonebreast_L00",
+          "Skeleton3D:bone_C3_Dress_R01",
+          "Skeleton3D:bone_C3_Dress_L01",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R00",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L00",
+          "Skeleton3D:bone_C3_Dress_L00"
+        ],
+        "tracks": 71
+      },
+      {
+        "length": 2.96666666666667,
+        "name": "Avatar_Fuka_Ani_ND_BAA",
+        "removedIncompatibleOutfitTracks": [
+          "Skeleton3D/Bip001 R Finger4Nub/Bip001 R Finger4Nub",
+          "Skeleton3D/Bip001 R Finger2Nub/Bip001 R Finger2Nub",
+          "Skeleton3D/Bip001 R Finger0Nub/Bip001 R Finger0Nub",
+          "Skeleton3D/Bones_Hair13/Bones_Hair13",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R/bone_C2_WJ_R02",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L/bone_C2_WJ_L02",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R",
+          "Skeleton3D/Bone019/Bone019",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/boneglasses00/boneglasses00",
+          "Skeleton3D/Bip001 L Toe0Nub/Bip001 L Toe0Nub",
+          "Skeleton3D:bone_C3_Dress_R02",
+          "Skeleton3D:bone_C3_Dress_L02",
+          "Skeleton3D:bonebreast_L00",
+          "Skeleton3D:bone_C3_Dress_R01",
+          "Skeleton3D:bone_C3_Dress_L01",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R00",
+          "Skeleton3D:bone_C3_Dress_R00",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L00",
+          "Skeleton3D:bone_C3_Dress_L00"
+        ],
+        "tracks": 70
+      },
+      {
+        "length": 1.63333346666667,
+        "name": "Avatar_Fuka_Ani_ND_BB",
+        "removedIncompatibleOutfitTracks": [
+          "Skeleton3D/Bip001 R Finger3Nub/Bip001 R Finger3Nub",
+          "Skeleton3D/Bip001 R Finger0Nub/Bip001 R Finger0Nub",
+          "Skeleton3D/Bones_Hair13/Bones_Hair13",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R/bone_C2_WJ_R02",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L/bone_C2_WJ_L02",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R",
+          "Skeleton3D/Bone019/Bone019",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/boneglasses00/boneglasses00",
+          "Skeleton3D:bone_C3_Dress_R02",
+          "Skeleton3D:bone_C3_Dress_L02",
+          "Skeleton3D:bonebreast_L00",
+          "Skeleton3D:bone_C3_Dress_R01",
+          "Skeleton3D:bone_C3_Dress_L01",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R00",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L00",
+          "Skeleton3D:bone_C3_Dress_L00"
+        ],
+        "tracks": 70
+      },
+      {
+        "length": 2.24999996666667,
+        "name": "Avatar_Fuka_Ani_ND_BBA",
+        "removedIncompatibleOutfitTracks": [
+          "Skeleton3D/Bip001 R Finger2Nub/Bip001 R Finger2Nub",
+          "Skeleton3D/Bip001 R Finger1Nub/Bip001 R Finger1Nub",
+          "Skeleton3D/Bip001 R Finger0Nub/Bip001 R Finger0Nub",
+          "Skeleton3D/Bones_Hair13/Bones_Hair13",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R/bone_C2_WJ_R02",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L/bone_C2_WJ_L02",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R",
+          "Skeleton3D/Bone019/Bone019",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/boneglasses00/boneglasses00",
+          "Skeleton3D:bone_C3_Dress_R02",
+          "Skeleton3D:bone_C3_Dress_L02",
+          "Skeleton3D:bonebreast_L00",
+          "Skeleton3D:bone_C3_Dress_R01",
+          "Skeleton3D:bone_C3_Dress_L01",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R00",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L00",
+          "Skeleton3D:bone_C3_Dress_L00"
+        ],
+        "tracks": 71
+      },
+      {
+        "length": 2.06666686666667,
+        "name": "Avatar_Fuka_Ani_ND_BBB",
+        "removedIncompatibleOutfitTracks": [
+          "Skeleton3D/Bip001 R Finger2Nub/Bip001 R Finger2Nub",
+          "Skeleton3D/Bones_Hair13/Bones_Hair13",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R/bone_C2_WJ_R02",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L/bone_C2_WJ_L02",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R",
+          "Skeleton3D/Bone019/Bone019",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/boneglasses00/boneglasses00",
+          "Skeleton3D:bone_C3_Dress_R02",
+          "Skeleton3D:bone_C3_Dress_L02",
+          "Skeleton3D:bonebreast_L00",
+          "Skeleton3D:bone_C3_Dress_R01",
+          "Skeleton3D:bone_C3_Dress_L01",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R00",
+          "Skeleton3D:bone_C3_Dress_R00",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L00",
+          "Skeleton3D:bone_C3_Dress_L00"
+        ],
+        "tracks": 70
+      },
+      {
+        "length": 1.60000006666667,
+        "name": "Avatar_Fuka_Ani_ND_Ultra",
+        "removedIncompatibleOutfitTracks": [
+          "Skeleton3D/Bip001 R Finger1Nub/Bip001 R Finger1Nub",
+          "Skeleton3D/Bip001 R Finger0Nub/Bip001 R Finger0Nub",
+          "Skeleton3D/Bones_Hair13/Bones_Hair13",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R/bone_C2_WJ_R02",
+          "Skeleton3D/Bones_Hair05/Bones_Hair05",
+          "Skeleton3D/boneglasses00/boneglasses00",
+          "Skeleton3D/bone_C3_Dress_R03/bone_C3_Dress_R03",
+          "Skeleton3D/bone_C3_Dress_L03/bone_C3_Dress_L03",
+          "Skeleton3D:bone_C3_Dress_R02",
+          "Skeleton3D:bone_C3_Dress_L02",
+          "Skeleton3D:bonebreast_L00",
+          "Skeleton3D:bone_C3_Dress_R01",
+          "Skeleton3D:bone_C3_Dress_L01",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R00",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L00"
+        ],
+        "tracks": 70
+      },
+      {
+        "length": 0.683333366666667,
+        "name": "Avatar_Fuka_Ani_Run",
+        "removedIncompatibleOutfitTracks": [
+          "Skeleton3D/Bip001 R Finger3Nub/Bip001 R Finger3Nub",
+          "Skeleton3D/Bip001 R Finger1Nub/Bip001 R Finger1Nub",
+          "Skeleton3D/Bip001 R Finger0Nub/Bip001 R Finger0Nub",
+          "Skeleton3D/Bones_Hair13/Bones_Hair13",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R/bone_C2_WJ_R02",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L/bone_C2_WJ_L02",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R",
+          "Skeleton3D/Bone019/Bone019",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/boneglasses00/boneglasses00",
+          "Skeleton3D/Bip001 L Toe0Nub/Bip001 L Toe0Nub",
+          "Skeleton3D:bone_C3_Dress_R02",
+          "Skeleton3D:bone_C3_Dress_L02",
+          "Skeleton3D:bonebreast_R00",
+          "Skeleton3D:bonebreast_L00",
+          "Skeleton3D:bone_C3_Dress_R01",
+          "Skeleton3D:bone_C3_Dress_L01",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R00",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L00"
+        ],
+        "tracks": 70
+      },
+      {
+        "length": 2.01666666666667,
+        "name": "Avatar_Fuka_Ani_StandBy",
+        "removedIncompatibleOutfitTracks": [
+          "Skeleton3D/Bip001 R Finger4Nub/Bip001 R Finger4Nub",
+          "Skeleton3D/Bip001 R Finger3Nub/Bip001 R Finger3Nub",
+          "Skeleton3D/Bip001 R Finger2Nub/Bip001 R Finger2Nub",
+          "Skeleton3D/Bip001 R Finger1Nub/Bip001 R Finger1Nub",
+          "Skeleton3D/Bip001 R Finger0Nub/Bip001 R Finger0Nub",
+          "Skeleton3D/Bones_Hair13/Bones_Hair13",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R/bone_C2_WJ_R02",
+          "Skeleton3D/Bones_Hair05/Bones_Hair05",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L/bone_C2_WJ_L02",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R",
+          "Skeleton3D/Bone019/Bone019",
+          "Skeleton3D/Bone019/Bone019",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/boneglasses00/boneglasses00",
+          "Skeleton3D/bone_C3_Dress_R03/bone_C3_Dress_R03",
+          "Skeleton3D/bone_C3_Dress_L03/bone_C3_Dress_L03",
+          "Skeleton3D:bone_C3_Dress_R02",
+          "Skeleton3D:bone_C3_Dress_L02",
+          "Skeleton3D:bonebreast_R00",
+          "Skeleton3D:bonebreast_L00",
+          "Skeleton3D:bone_C3_Dress_R01",
+          "Skeleton3D:bone_C3_Dress_L01",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R00",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L00"
+        ],
+        "tracks": 69
+      },
+      {
+        "length": 4.33333366666667,
+        "name": "Avatar_Fuka_Ani_Victory",
+        "removedIncompatibleOutfitTracks": [
+          "Skeleton3D/Bip001 R Finger4Nub/Bip001 R Finger4Nub",
+          "Skeleton3D/Bip001 R Finger2Nub/Bip001 R Finger2Nub",
+          "Skeleton3D/Bones_Hair13/Bones_Hair13",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R/bone_C2_WJ_R02",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R",
+          "Skeleton3D/Bone019/Bone019",
+          "Skeleton3D/Bone019/Bone019",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/boneglasses00/boneglasses00",
+          "Skeleton3D/Bip001 L Toe0Nub/Bip001 L Toe0Nub",
+          "Skeleton3D:bone_C3_Dress_R02",
+          "Skeleton3D:bone_C3_Dress_L02",
+          "Skeleton3D:bonebreast_R00",
+          "Skeleton3D:bonebreast_L00",
+          "Skeleton3D:bone_C3_Dress_R01",
+          "Skeleton3D:bone_C3_Dress_L01",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R00",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L00"
+        ],
+        "tracks": 69
+      },
+      {
+        "length": 2.01666666666667,
+        "name": "Avatar_Fuka_Ani_Victory_idle",
+        "removedIncompatibleOutfitTracks": [
+          "Skeleton3D/Bip001 R Finger4Nub/Bip001 R Finger4Nub",
+          "Skeleton3D/Bip001 R Finger3Nub/Bip001 R Finger3Nub",
+          "Skeleton3D/Bip001 R Finger2Nub/Bip001 R Finger2Nub",
+          "Skeleton3D/Bip001 R Finger1Nub/Bip001 R Finger1Nub",
+          "Skeleton3D/Bip001 R Finger0Nub/Bip001 R Finger0Nub",
+          "Skeleton3D/Bones_Hair13/Bones_Hair13",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R/bone_C2_WJ_R02",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L/bone_C2_WJ_L02",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R",
+          "Skeleton3D/bone_C2_WJ_R/bone_C2_WJ_R",
+          "Skeleton3D/Bone019/Bone019",
+          "Skeleton3D/bone_C2_WJ_L/bone_C2_WJ_L",
+          "Skeleton3D/boneglasses00/boneglasses00",
+          "Skeleton3D/bone_C3_Dress_R03/bone_C3_Dress_R03",
+          "Skeleton3D/bone_C3_Dress_L03/bone_C3_Dress_L03",
+          "Skeleton3D/Bip001 L Toe0Nub/Bip001 L Toe0Nub",
+          "Skeleton3D:bone_C3_Dress_R02",
+          "Skeleton3D:bone_C3_Dress_L02",
+          "Skeleton3D:bonebreast_R00",
+          "Skeleton3D:bonebreast_L00",
+          "Skeleton3D:bone_C3_Dress_R01",
+          "Skeleton3D:bone_C3_Dress_L01",
+          "Skeleton3D:bone_C3_Dress_R04",
+          "Skeleton3D:bone_C3_Dress_R00",
+          "Skeleton3D:bone_C3_Dress_L04",
+          "Skeleton3D:bone_C3_Dress_L00"
+        ],
+        "tracks": 68
+      }
+    ],
+    "gauntlets": [
+      {
+        "name": "NativeFistWeapon001",
+        "originalMeshWeightsAndBindMatricesUnchanged": true,
+        "weightedBinds": 36
+      },
+      {
+        "name": "NativeFistWeapon002",
+        "originalMeshWeightsAndBindMatricesUnchanged": true,
+        "weightedBinds": 6
+      }
+    ],
+    "sampledPoses60Fps": 2677,
+    "sharedBones": [
+      {
+        "localPositionDelta": 0.0,
+        "localRotationDelta": 0.0,
+        "name": "Bip001"
+      },
+      {
+        "localPositionDelta": 0.0,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 Pelvis"
+      },
+      {
+        "localPositionDelta": 1.74476454617434e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 L Thigh"
+      },
+      {
+        "localPositionDelta": 0.0,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 L Calf"
+      },
+      {
+        "localPositionDelta": 0.0,
+        "localRotationDelta": 0.000690533954184502,
+        "name": "Bip001 L Foot"
+      },
+      {
+        "localPositionDelta": 0.0,
+        "localRotationDelta": 0.000690533954184502,
+        "name": "Bip001 L Toe0"
+      },
+      {
+        "localPositionDelta": 1.17343468275521e-08,
+        "localRotationDelta": 0.000690533954184502,
+        "name": "Bip001 R Thigh"
+      },
+      {
+        "localPositionDelta": 0.0,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 R Calf"
+      },
+      {
+        "localPositionDelta": 0.0,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 R Foot"
+      },
+      {
+        "localPositionDelta": 0.0,
+        "localRotationDelta": 0.000690533954184502,
+        "name": "Bip001 R Toe0"
+      },
+      {
+        "localPositionDelta": 1.49011611938477e-07,
+        "localRotationDelta": 0.000690533954184502,
+        "name": "Bip001 Spine"
+      },
+      {
+        "localPositionDelta": 9.16770659387112e-10,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 Spine1"
+      },
+      {
+        "localPositionDelta": 1.41590646762779e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 Spine2"
+      },
+      {
+        "localPositionDelta": 2.83562883396371e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 L Clavicle"
+      },
+      {
+        "localPositionDelta": 7.19954584837978e-08,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 L UpperArm"
+      },
+      {
+        "localPositionDelta": 2.30374055831817e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 L Forearm"
+      },
+      {
+        "localPositionDelta": 3.40285112088168e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 L Hand"
+      },
+      {
+        "localPositionDelta": 2.81752392083945e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 L Finger0"
+      },
+      {
+        "localPositionDelta": 1.93760087086048e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 L Finger01"
+      },
+      {
+        "localPositionDelta": 2.5822569682532e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 L Finger02"
+      },
+      {
+        "localPositionDelta": 1.82738688181416e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 L Finger1"
+      },
+      {
+        "localPositionDelta": 3.39994187470438e-07,
+        "localRotationDelta": 0.000690533954184502,
+        "name": "Bip001 L Finger11"
+      },
+      {
+        "localPositionDelta": 1.80300347096818e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 L Finger12"
+      },
+      {
+        "localPositionDelta": 2.53322411936097e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 L Finger2"
+      },
+      {
+        "localPositionDelta": 5.64317872431275e-08,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 L Finger21"
+      },
+      {
+        "localPositionDelta": 1.74606057612436e-07,
+        "localRotationDelta": 0.000690533954184502,
+        "name": "Bip001 L Finger22"
+      },
+      {
+        "localPositionDelta": 3.85175979999985e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 L Finger3"
+      },
+      {
+        "localPositionDelta": 9.71685238937425e-08,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 L Finger31"
+      },
+      {
+        "localPositionDelta": 3.8258454537754e-07,
+        "localRotationDelta": 0.000690533954184502,
+        "name": "Bip001 L Finger32"
+      },
+      {
+        "localPositionDelta": 2.60397513329735e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 L Finger4"
+      },
+      {
+        "localPositionDelta": 1.4995775643456e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 L Finger41"
+      },
+      {
+        "localPositionDelta": 9.53870227249354e-08,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 L Finger42"
+      },
+      {
+        "localPositionDelta": 5.93129954040705e-08,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 L ForeTwist"
+      },
+      {
+        "localPositionDelta": 1.64328071150521e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 L ForeTwist1"
+      },
+      {
+        "localPositionDelta": 4.0501717535335e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 Neck"
+      },
+      {
+        "localPositionDelta": 2.92843935767451e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 Head"
+      },
+      {
+        "localPositionDelta": 3.69231401009529e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bones_Hair00"
+      },
+      {
+        "localPositionDelta": 2.61926913935895e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bones_Hair02"
+      },
+      {
+        "localPositionDelta": 3.99562161135236e-08,
+        "localRotationDelta": 0.0,
+        "name": "Bones_Hair03"
+      },
+      {
+        "localPositionDelta": 1.63654760854115e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bones_Hair04"
+      },
+      {
+        "localPositionDelta": 5.8374240552439e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bones_Hair06"
+      },
+      {
+        "localPositionDelta": 2.2555077805464e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bones_Hair08"
+      },
+      {
+        "localPositionDelta": 3.09321421809727e-08,
+        "localRotationDelta": 0.0,
+        "name": "Bones_Hair10"
+      },
+      {
+        "localPositionDelta": 2.28406538127501e-08,
+        "localRotationDelta": 0.0,
+        "name": "Bones_Hair11"
+      },
+      {
+        "localPositionDelta": 4.02387854592234e-07,
+        "localRotationDelta": 0.000690533954184502,
+        "name": "Bones_Hair12"
+      },
+      {
+        "localPositionDelta": 8.51455013162195e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bones_Hair14"
+      },
+      {
+        "localPositionDelta": 2.94798525146689e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 R Clavicle"
+      },
+      {
+        "localPositionDelta": 2.50792879796791e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 R UpperArm"
+      },
+      {
+        "localPositionDelta": 2.14217280358753e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 R Forearm"
+      },
+      {
+        "localPositionDelta": 2.35902021472612e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 R Hand"
+      },
+      {
+        "localPositionDelta": 1.37356664708932e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 R Finger0"
+      },
+      {
+        "localPositionDelta": 4.05774727596508e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 R Finger01"
+      },
+      {
+        "localPositionDelta": 2.00444674192113e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 R Finger02"
+      },
+      {
+        "localPositionDelta": 2.04763935585106e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 R Finger1"
+      },
+      {
+        "localPositionDelta": 2.26440505457504e-07,
+        "localRotationDelta": 0.000690533954184502,
+        "name": "Bip001 R Finger11"
+      },
+      {
+        "localPositionDelta": 1.87376144822338e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 R Finger12"
+      },
+      {
+        "localPositionDelta": 7.24533677498584e-08,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 R Finger2"
+      },
+      {
+        "localPositionDelta": 2.38224416193589e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 R Finger21"
+      },
+      {
+        "localPositionDelta": 2.51337752388281e-07,
+        "localRotationDelta": 0.000690533954184502,
+        "name": "Bip001 R Finger22"
+      },
+      {
+        "localPositionDelta": 2.25634039452416e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 R Finger3"
+      },
+      {
+        "localPositionDelta": 3.38338509209279e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 R Finger31"
+      },
+      {
+        "localPositionDelta": 4.87027023154951e-07,
+        "localRotationDelta": 0.000690533954184502,
+        "name": "Bip001 R Finger32"
+      },
+      {
+        "localPositionDelta": 3.43627732490859e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 R Finger4"
+      },
+      {
+        "localPositionDelta": 5.45316197531065e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 R Finger41"
+      },
+      {
+        "localPositionDelta": 3.46434575249077e-07,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 R Finger42"
+      },
+      {
+        "localPositionDelta": 4.80265001101543e-08,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 R ForeTwist"
+      },
+      {
+        "localPositionDelta": 9.26797341094243e-08,
+        "localRotationDelta": 0.0,
+        "name": "Bip001 R ForeTwist1"
+      }
+    ],
+    "skinBones": 86,
+    "skinOnlyBones": [
+      "Bone_C3_04_03_Baldric_A",
+      "Bone_C3_04_03_Ribbon_F_01",
+      "Bone_C3_04_03_Ribbon_F_02",
+      "Bone_C3_04_03_Ribbon_F_03",
+      "Bone_C3_04_03_Ribbon_FL1_01",
+      "Bone_C3_04_03_Ribbon_FL2_01",
+      "Bone_C3_04_03_Baldric_B",
+      "Bone_C3_04_03_Bag_Root",
+      "Bone_C3_04_03_Bag_Ears_L_01",
+      "Bone_C3_04_03_Bag_Ears_L_02",
+      "Bone_C3_04_03_Bag_Ears_R_01",
+      "Bone_C3_04_03_Bag_Ears_R_02",
+      "Bone_C3_04_03_Bag_Ears_R_03",
+      "Bone_C3_04_03_Bag_Ribbon_01",
+      "Bone_C3_04_03_Bag_Ribbon_02",
+      "Bone_C3_04_03_Bag_Wing_L_01",
+      "Bone_C3_04_03_Bag_Wing_R_01",
+      "Bone_C3_04_03_Baldric_D",
+      "Bone_C3_04_03_Baldric_C"
+    ],
+    "sourceBones": 78,
+    "sourceScene": "res://assets/night-squire/Avatar_Fuka_C3_ND.scn"
+  },
+  "gauntlets": {
+    "sourceAppearance": "res://assets/night-squire/Avatar_Fuka_C3_ND.scn",
+    "mesh": "Weapon_Fist_F1_25_3",
+    "nativeVerticesWeightsAndBindMatricesPreserved": true,
+    "note": "CommonEmpty native Body:1 remains invisible. Full original gauntlet/hand geometry fills the equipment slot."
+  },
+  "materials": "material-profiles.json",
+  "files": [
+    {
+      "file": "1 (1).png",
+      "bytes": 54198,
+      "sha256": "637e4485ab47bba8ff3542221f265bc84e56474118052c538eba73ef7cec93f5"
+    },
+    {
+      "file": "1.png",
+      "bytes": 209001,
+      "sha256": "d0bff4da00b0660749af27bc63a57a91a26d175086073f6e9b303fd737173696"
+    },
+    {
+      "file": "Avatar_Fuka_C3_04_03.scn",
+      "bytes": 1895926,
+      "sha256": "705d0d33b73e3681f6602abf9ac158d5dedcec4736a35492e5e0f6cdfc623601"
+    },
+    {
+      "file": "Avatar_Fuka_C3_04_03_Texture_Body_Color.png",
+      "bytes": 619291,
+      "sha256": "691a926cbedb6f552e478b27148ddd92e91c6d81fc55a6e43494811f9ec4f174"
+    },
+    {
+      "file": "Avatar_Fuka_C3_04_03_Texture_Body_LightMap.png",
+      "bytes": 445412,
+      "sha256": "1ea4a4fa6f9592170830f64b09e696947e90386b005c86cbd243849267e2391c"
+    },
+    {
+      "file": "Avatar_Fuka_FaceMap.png",
+      "bytes": 35538,
+      "sha256": "b2881ef8d8561c172807a0e19c2c5eccf8adc990afef4a7151f2dba8ee2b8385"
+    },
+    {
+      "file": "Avatar_Fuka_Texture_Face_Color.png",
+      "bytes": 93189,
+      "sha256": "8e95789d461a1b3d2f51c5993121523545d7c9f521fde7b51e5054599226ab69"
+    },
+    {
+      "file": "Avatar_Fuka_Texture_Face_LightMap.png",
+      "bytes": 12110,
+      "sha256": "f63dfc02ebf52c80f107d61eea4260ea525688c6d43b596be4b14d218bdb40ad"
+    },
+    {
+      "file": "Avatar_Fuka_Texture_Hair_Color.png",
+      "bytes": 398193,
+      "sha256": "545e470d28d629c3cd07cd564bcab316508b3970655dde9578bd0a1f6759edc2"
+    },
+    {
+      "file": "Avatar_Fuka_Texture_Hair_LightMap.png",
+      "bytes": 198097,
+      "sha256": "2b3e7a1229db2eded4db0af279baedb5f1f03205e38f21c8550d95b324f570f6"
+    }
+  ],
+  "limitations": [
+    "Original Unity DynamicBone solver is not recreated; skin-specific bag/strap bones keep their native local poses and follow their original parent bones.",
+    "Only tracks naming actual skin bones are retained; absent original-armor cloth tracks are omitted rather than guessed or remapped.",
+    "Original native face atlas defaults are used; no authored face or dialogue gesture synthesis.",
+    "Gameplay uses the existing horizontal root-motion adaptation; shader math is a Godot adaptation."
+  ],
+  "nativeSecondaryEvidence": "secondary-source.json",
+  "nativeSecondaryRuntime": "Original per-skin bones and parent transforms retained. The original 8 DynamicBone components and two native colliders are documented but their Unity solver is not running in this Godot scene."
+}

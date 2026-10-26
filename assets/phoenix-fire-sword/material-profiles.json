@@ -1,0 +1,532 @@
+{
+  "schemaVersion": 1,
+  "source": "Original C4_04_01 prefab materials, read only client. Existing Godot shader adaptation.",
+  "profiles": {
+    "phoenix_fire_sword": {
+      "body": {
+        "sourceMaterial": "Avatar_Fuka_C4_04_01_Material_Body",
+        "source": {
+          "file": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a303f703da40756b.wmv",
+          "cab": "CAB-e7afa06a3cb8ffccc652ef11a899007b",
+          "pathId": "-4632234416849285230",
+          "shader": {
+            "fileId": 1,
+            "pathId": "-4359768581157484908",
+            "resolvedName": "miHoYo/miHoYo_Character/Character_Common/AvatarGS"
+          }
+        },
+        "textures": {
+          "albedo": "res://assets/phoenix-fire-sword/Avatar_Fuka_C4_04_01_Texture_Body_Color.png",
+          "lightmap": "res://assets/phoenix-fire-sword/Avatar_Fuka_C4_04_01_Texture_Body_LightMap.png"
+        },
+        "firstShadowColors": [
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.582234,
+            0.58571845,
+            0.6544118
+          ],
+          [
+            0.5958269,
+            0.5362781,
+            0.6691177
+          ],
+          [
+            0.57079107,
+            0.5177336,
+            0.61764705
+          ],
+          [
+            0.6691177,
+            0.56087804,
+            0.56087804
+          ]
+        ],
+        "secondShadowColor": [
+          0.9372549,
+          0.7647059,
+          0.78039217
+        ],
+        "outlineColors": [
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.2551903,
+            0.25642225,
+            0.43382353
+          ],
+          [
+            0.095650025,
+            0.07396194,
+            0.13235295
+          ],
+          [
+            0.19117647,
+            0.02670848,
+            0.02670848
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "useAlphaBands": true,
+        "useOutlineAlphaBands": true,
+        "specularSoft": false,
+        "backFaceUseUv2": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "specColor": [
+          1,
+          1,
+          1
+        ],
+        "specularSmooth": 0,
+        "backFaceColor": [
+          1,
+          1,
+          1
+        ],
+        "lightArea": 0.51,
+        "secondShadowArea": 0.51,
+        "shininess": 13.5,
+        "specMulti": 0.355,
+        "outlineWidth": 0.04,
+        "outlineScale": 0.01,
+        "maxOutlineZOffset": 1
+      },
+      "cloak": {
+        "sourceMaterial": "Avatar_Fuka_C4_04_01_Material_Cloak",
+        "source": {
+          "file": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a303f703da40756b.wmv",
+          "cab": "CAB-6227ae588d05c1dcec97efdfc859a388",
+          "pathId": "3025035655418617679",
+          "shader": {
+            "fileId": 3,
+            "pathId": "6627792247088014554",
+            "resolvedName": "miHoYo/miHoYo_Character/Character_Avatar/Avatar_DualFace"
+          }
+        },
+        "textures": {
+          "albedo": "res://assets/phoenix-fire-sword/Avatar_Fuka_C4_04_01_Texture_Body_Color.png",
+          "lightmap": "res://assets/phoenix-fire-sword/Avatar_Fuka_C4_04_01_Texture_Body_LightMap.png"
+        },
+        "firstShadowColors": [
+          [
+            0.5958269,
+            0.5362781,
+            0.6691177
+          ],
+          [
+            0.5958269,
+            0.5362781,
+            0.6691177
+          ],
+          [
+            0.5958269,
+            0.5362781,
+            0.6691177
+          ],
+          [
+            0.5958269,
+            0.5362781,
+            0.6691177
+          ],
+          [
+            0.5958269,
+            0.5362781,
+            0.6691177
+          ]
+        ],
+        "secondShadowColor": [
+          0.5958269,
+          0.5362781,
+          0.6691177
+        ],
+        "outlineColors": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "useAlphaBands": false,
+        "useOutlineAlphaBands": false,
+        "specularSoft": false,
+        "backFaceUseUv2": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "specColor": [
+          1,
+          1,
+          1
+        ],
+        "specularSmooth": 0.04,
+        "backFaceColor": [
+          0.5735294,
+          0.12651382,
+          0.17618226
+        ],
+        "lightArea": 0.51,
+        "secondShadowArea": 0.51,
+        "shininess": 10,
+        "specMulti": 0.5,
+        "outlineWidth": 0.04,
+        "outlineScale": 0.01,
+        "maxOutlineZOffset": 1
+      },
+      "hair": {
+        "sourceMaterial": "Avatar_Fuka_Material_Hair",
+        "source": {
+          "file": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\2a9cd0db7461adce.wmv",
+          "cab": "CAB-943f8848a9f0f5ae890fc859fb30ec73",
+          "pathId": "-6208462217947000843",
+          "shader": {
+            "fileId": 1,
+            "pathId": "84480072165628607",
+            "resolvedName": "miHoYo/miHoYo_Character/Character_Common/Avatar"
+          }
+        },
+        "textures": {
+          "albedo": "res://assets/phoenix-fire-sword/Avatar_Fuka_Texture_Hair_Color.png",
+          "lightmap": "res://assets/phoenix-fire-sword/Avatar_Fuka_Texture_Hair_LightMap.png"
+        },
+        "firstShadowColors": [
+          [
+            0.83975667,
+            0.7915225,
+            0.88235295
+          ],
+          [
+            0.83975667,
+            0.7915225,
+            0.88235295
+          ],
+          [
+            0.83975667,
+            0.7915225,
+            0.88235295
+          ],
+          [
+            0.83975667,
+            0.7915225,
+            0.88235295
+          ],
+          [
+            0.83975667,
+            0.7915225,
+            0.88235295
+          ]
+        ],
+        "secondShadowColor": [
+          0.78448284,
+          0.6819853,
+          0.875
+        ],
+        "outlineColors": [
+          [
+            0.19215688,
+            0.15294118,
+            0.2901961
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0.19215688,
+            0.15294118,
+            0.2901961
+          ],
+          [
+            0.19215688,
+            0.15294118,
+            0.2901961
+          ],
+          [
+            0.19215688,
+            0.15294118,
+            0.2901961
+          ]
+        ],
+        "useAlphaBands": false,
+        "useOutlineAlphaBands": false,
+        "specularSoft": false,
+        "backFaceUseUv2": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "specColor": [
+          1,
+          1,
+          1
+        ],
+        "specularSmooth": 0.04,
+        "backFaceColor": [
+          1,
+          1,
+          1
+        ],
+        "lightArea": 0.51,
+        "secondShadowArea": 0.51,
+        "shininess": 1,
+        "specMulti": 0.15,
+        "outlineWidth": 0.05,
+        "outlineScale": 0.01
+      },
+      "face": {
+        "sourceMaterial": "Avatar_Fuka_C0_Material_Face",
+        "source": {
+          "file": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\2a9cd0db7461adce.wmv",
+          "cab": "CAB-38d6933f2e7e294e4e0620b9247072c6",
+          "pathId": "-2502784034468111402",
+          "shader": {
+            "fileId": 1,
+            "pathId": "8679466564415281629",
+            "resolvedName": "miHoYo/miHoYo_Character/Character_Common/Face"
+          }
+        },
+        "textures": {
+          "albedo": "res://assets/phoenix-fire-sword/Avatar_Fuka_Texture_Face_Color.png",
+          "lightmap": "res://assets/phoenix-fire-sword/Avatar_Fuka_Texture_Face_LightMap.png",
+          "faceMap": "res://assets/phoenix-fire-sword/Avatar_Fuka_FaceMap.png"
+        },
+        "firstShadowColors": [
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ]
+        ],
+        "secondShadowColor": [
+          0.9372549,
+          0.7647059,
+          0.78039217
+        ],
+        "outlineColors": [
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ]
+        ],
+        "useAlphaBands": false,
+        "useOutlineAlphaBands": false,
+        "specularSoft": false,
+        "backFaceUseUv2": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "specColor": [
+          1,
+          1,
+          1
+        ],
+        "specularSmooth": 0.04,
+        "backFaceColor": [
+          1,
+          1,
+          1
+        ],
+        "outlineWidth": 0.05,
+        "outlineScale": 0.01,
+        "shadowFeather": 0.001
+      },
+      "weapon": {
+        "sourceMaterial": "Weapon_Fist_F1_25_2_Material",
+        "source": {
+          "file": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5763c013ee7717cb.wmv",
+          "cab": "CAB-bb903b8f6eb9d41162809ce7c6636822",
+          "pathId": "-986205606595911152",
+          "shader": {
+            "fileId": 1,
+            "pathId": "-2224870653762880750"
+          }
+        },
+        "textures": {
+          "albedo": "res://assets/phoenix-fire-sword/Weapon_Fist_F1_25_2.png"
+        },
+        "firstShadowColors": [
+          [
+            0.6841479,
+            0.695985,
+            0.8161765
+          ],
+          [
+            0.6841479,
+            0.695985,
+            0.8161765
+          ],
+          [
+            0.6841479,
+            0.695985,
+            0.8161765
+          ],
+          [
+            0.6841479,
+            0.695985,
+            0.8161765
+          ],
+          [
+            0.6841479,
+            0.695985,
+            0.8161765
+          ]
+        ],
+        "secondShadowColor": [
+          0.6841479,
+          0.695985,
+          0.8161765
+        ],
+        "outlineColors": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "useAlphaBands": false,
+        "useOutlineAlphaBands": false,
+        "specularSoft": false,
+        "backFaceUseUv2": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "specColor": [
+          1,
+          1,
+          1
+        ],
+        "lightArea": 0.51,
+        "shininess": 10,
+        "specMulti": 0.1
+      }
+    }
+  }
+}

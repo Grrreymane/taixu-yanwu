@@ -1,0 +1,216 @@
+{
+	"comparison": "Sign of geometric cross-product dot summed exported vertex normals, before node transform. Independent AnimeStudio FBX -> Godot ufbx versus direct parsed Mesh -> Godot scene.",
+	"failures": 0,
+	"note": "Small positive/degenerate counts already exist in original FBX. They must match, not be artificially repaired. TempleUpper is a complete-component triangle subset using corrected identical indices; aggregate temple uses corrected part meshes.",
+	"orientedPlatformParity": true,
+	"pairs": [
+		{
+			"independentFBX": {
+				"negative": 32624,
+				"positive": 0,
+				"surfaces": 6,
+				"zero": 6
+			},
+			"name": "House_All",
+			"packedScene": {
+				"negative": 32624,
+				"positive": 0,
+				"surfaces": 6,
+				"zero": 6
+			},
+			"parity": true
+		},
+		{
+			"independentFBX": {
+				"negative": 3253,
+				"positive": 755,
+				"surfaces": 2,
+				"zero": 0
+			},
+			"name": "BigTree",
+			"packedScene": {
+				"negative": 3253,
+				"positive": 755,
+				"surfaces": 2,
+				"zero": 0
+			},
+			"parity": true
+		},
+		{
+			"independentFBX": {
+				"negative": 1358,
+				"positive": 0,
+				"surfaces": 1,
+				"zero": 0
+			},
+			"name": "RockGroup",
+			"packedScene": {
+				"negative": 1358,
+				"positive": 0,
+				"surfaces": 1,
+				"zero": 0
+			},
+			"parity": true
+		},
+		{
+			"independentFBX": {
+				"negative": 982,
+				"positive": 1,
+				"surfaces": 1,
+				"zero": 0
+			},
+			"name": "StonePlatform",
+			"packedScene": {
+				"negative": 982,
+				"positive": 1,
+				"surfaces": 1,
+				"zero": 0
+			},
+			"parity": true
+		},
+		{
+			"independentFBX": {
+				"negative": 10070,
+				"positive": 534,
+				"surfaces": 1,
+				"zero": 0
+			},
+			"name": "StoneFloor",
+			"packedScene": {
+				"negative": 10070,
+				"positive": 534,
+				"surfaces": 1,
+				"zero": 0
+			},
+			"parity": true
+		},
+		{
+			"independentFBX": {
+				"negative": 919,
+				"positive": 5,
+				"surfaces": 1,
+				"zero": 0
+			},
+			"name": "FarMountain01",
+			"packedScene": {
+				"negative": 919,
+				"positive": 5,
+				"surfaces": 1,
+				"zero": 0
+			},
+			"parity": true
+		},
+		{
+			"independentFBX": {
+				"negative": 6288,
+				"positive": 6,
+				"surfaces": 2,
+				"zero": 0
+			},
+			"name": "FarLOD",
+			"packedScene": {
+				"negative": 6288,
+				"positive": 6,
+				"surfaces": 2,
+				"zero": 0
+			},
+			"parity": true
+		},
+		{
+			"independentFBX": {
+				"negative": 2753,
+				"positive": 3,
+				"surfaces": 1,
+				"zero": 0
+			},
+			"name": "Cliff01",
+			"packedScene": {
+				"negative": 2753,
+				"positive": 3,
+				"surfaces": 1,
+				"zero": 0
+			},
+			"parity": true
+		},
+		{
+			"independentFBX": {
+				"negative": 4160,
+				"positive": 4,
+				"surfaces": 1,
+				"zero": 0
+			},
+			"name": "Cliff02",
+			"packedScene": {
+				"negative": 4160,
+				"positive": 4,
+				"surfaces": 1,
+				"zero": 0
+			},
+			"parity": true
+		},
+		{
+			"independentFBX": {
+				"negative": 8040,
+				"positive": 10,
+				"surfaces": 1,
+				"zero": 0
+			},
+			"name": "Cliff03",
+			"packedScene": {
+				"negative": 8040,
+				"positive": 10,
+				"surfaces": 1,
+				"zero": 0
+			},
+			"parity": true
+		},
+		{
+			"independentFBX": {
+				"negative": 11150,
+				"positive": 27,
+				"surfaces": 5,
+				"zero": 1
+			},
+			"name": "FrontStone01",
+			"packedScene": {
+				"negative": 11150,
+				"positive": 27,
+				"surfaces": 5,
+				"zero": 1
+			},
+			"parity": true
+		},
+		{
+			"independentFBX": {
+				"negative": 14904,
+				"positive": 29,
+				"surfaces": 2,
+				"zero": 0
+			},
+			"name": "FrontStone01b",
+			"packedScene": {
+				"negative": 14904,
+				"positive": 29,
+				"surfaces": 2,
+				"zero": 0
+			},
+			"parity": true
+		},
+		{
+			"independentFBX": {
+				"negative": 5738,
+				"positive": 6,
+				"surfaces": 1,
+				"zero": 0
+			},
+			"name": "FrontStone02",
+			"packedScene": {
+				"negative": 5738,
+				"positive": 6,
+				"surfaces": 1,
+				"zero": 0
+			},
+			"parity": true
+		}
+	]
+}

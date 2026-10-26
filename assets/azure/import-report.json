@@ -1,0 +1,2666 @@
+{
+  "animations": [
+    {
+      "duration": 1.31666671624862,
+      "example_paths": [
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/ROOT",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001 Pelvis",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl"
+      ],
+      "name": "Avatar_Fuka_Ani_C5_Attack01",
+      "tracks": 228
+    },
+    {
+      "duration": 1.46666669500849,
+      "example_paths": [
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/ROOT",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001 Pelvis",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl"
+      ],
+      "name": "Avatar_Fuka_Ani_C5_Attack02",
+      "tracks": 228
+    },
+    {
+      "duration": 2.33333324828621,
+      "example_paths": [
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/ROOT",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001 Pelvis",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl"
+      ],
+      "name": "Avatar_Fuka_Ani_C5_Attack03",
+      "tracks": 228
+    },
+    {
+      "duration": 2.33333324828621,
+      "example_paths": [
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/ROOT",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001 Pelvis",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl"
+      ],
+      "name": "Avatar_Fuka_Ani_C5_Attack04",
+      "tracks": 228
+    },
+    {
+      "duration": 2.34999990079279,
+      "example_paths": [
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/ROOT",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001 Pelvis",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl"
+      ],
+      "name": "Avatar_Fuka_Ani_C5_Attack_Charge_03",
+      "tracks": 228
+    },
+    {
+      "duration": 2.34999990079279,
+      "example_paths": [
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/ROOT",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001 Pelvis",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl"
+      ],
+      "name": "Avatar_Fuka_Ani_C5_Die",
+      "tracks": 228
+    },
+    {
+      "duration": 2.34999990079279,
+      "example_paths": [
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/ROOT",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001 Pelvis",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl"
+      ],
+      "name": "Avatar_Fuka_Ani_C5_EvadeBackward",
+      "tracks": 228
+    },
+    {
+      "duration": 2.34999990079279,
+      "example_paths": [
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/ROOT",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001 Pelvis",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl"
+      ],
+      "name": "Avatar_Fuka_Ani_C5_Evadeforward",
+      "tracks": 228
+    },
+    {
+      "duration": 2.34999990079279,
+      "example_paths": [
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/ROOT",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001 Pelvis",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl"
+      ],
+      "name": "Avatar_Fuka_Ani_C5_Hit_H",
+      "tracks": 228
+    },
+    {
+      "duration": 2.34999990079279,
+      "example_paths": [
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/ROOT",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001 Pelvis",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl"
+      ],
+      "name": "Avatar_Fuka_Ani_C5_Hit_L",
+      "tracks": 228
+    },
+    {
+      "duration": 2.34999990079279,
+      "example_paths": [
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/ROOT",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001 Pelvis",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl"
+      ],
+      "name": "Avatar_Fuka_Ani_C5_Run",
+      "tracks": 228
+    },
+    {
+      "duration": 2.35020823412071,
+      "example_paths": [
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/ROOT",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001 Pelvis",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl"
+      ],
+      "name": "Avatar_Fuka_Ani_C5_StandBy",
+      "tracks": 228
+    },
+    {
+      "duration": 2.35020823412071,
+      "example_paths": [
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/ROOT",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001 Pelvis",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl"
+      ],
+      "name": "Avatar_Fuka_Ani_C5_Stun",
+      "tracks": 228
+    },
+    {
+      "duration": 3.84999985826922,
+      "example_paths": [
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001",
+        "Avatar_Fuka_C5_IN/ROOT",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Bip001 Pelvis",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl",
+        "Avatar_Fuka_C5_IN/Skeleton3D:Fuka_C5_Sickle_Main_Ctrl"
+      ],
+      "name": "Avatar_Fuka_Ani_C5_Ultra",
+      "tracks": 228
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Avatar_Fuka_C5_IN",
+      "path": "/root/Avatar_Fuka_C5_IN",
+      "position": "(0.0, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Avatar_Fuka_C5_IN",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN",
+      "position": "(0.0, 0.0, 2.19)",
+      "scale": "(1.1, 1.1, 1.1)",
+      "type": "Node3D"
+    },
+    {
+      "bone_count": 153,
+      "bones": [
+        "Bip001",
+        "Bip001 Pelvis",
+        "Bip001 L Thigh",
+        "Bip001 L Calf",
+        "Bip001 L Foot",
+        "Bip001 L Toe0",
+        "Bip001 R Thigh",
+        "Bip001 R Calf",
+        "Bip001 R Foot",
+        "Bip001 R Toe0",
+        "Bip001 Spine",
+        "Bip001 Spine1",
+        "Bip001 Spine2",
+        "Bip001 L Clavicle",
+        "Bip001 L UpperArm",
+        "Bip001 L Forearm",
+        "Bip001 L Hand",
+        "Bip001 L Finger0",
+        "Bip001 L Finger01",
+        "Bip001 L Finger02",
+        "Bip001 L Finger1",
+        "Bip001 L Finger11",
+        "Bip001 L Finger12",
+        "Bip001 L Finger2",
+        "Bip001 L Finger21",
+        "Bip001 L Finger22",
+        "Bip001 L Finger3",
+        "Bip001 L Finger31",
+        "Bip001 L Finger32",
+        "Bip001 L Finger4",
+        "Bip001 L Finger41",
+        "Bip001 L Finger42",
+        "Fuka_C5_LForearm_B_01",
+        "Fuka_C5_LForearm_B_02",
+        "Fuka_C5_LForearm_F_01",
+        "Fuka_C5_LForearm_F_02",
+        "Fuka_C5_LForearm_L_01",
+        "Fuka_C5_LForearm_L_02",
+        "Fuka_C5_LForearm_R_01",
+        "Fuka_C5_LForearm_R_02",
+        "Fuka_C5_guashi_LB_03",
+        "Fuka_C5_guashi_LB_01",
+        "Fuka_C5_guashi_LB_02",
+        "Bip001 Neck",
+        "Bip001 Head",
+        "Fuka_C5_erhuan_L_01",
+        "Fuka_C5_erhuan_L_02",
+        "Fuka_C5_erhuan_L_03",
+        "Fuka_C5_Hair_B_01",
+        "Fuka_C5_fadai_B_01",
+        "Fuka_C5_fadai_LB_01",
+        "Fuka_C5_fadai_LB_02",
+        "Fuka_C5_fadai_LB_03",
+        "Fuka_C5_fadai_LB_04",
+        "Fuka_C5_fadai_RB_01",
+        "Fuka_C5_fadai_RB_02",
+        "Fuka_C5_fadai_RB_03",
+        "Fuka_C5_fadai_RB_04",
+        "Fuka_C5_Hair_B_02",
+        "Fuka_C5_Hair_B_03",
+        "Fuka_C5_Hair_LB_01",
+        "Fuka_C5_Hair_LB_02",
+        "Fuka_C5_Hair_LB_03",
+        "Fuka_C5_Hair_RB_01",
+        "Fuka_C5_Hair_RB_02",
+        "Fuka_C5_Hair_RB_03",
+        "Fuka_C5_Hair_L_01",
+        "Fuka_C5_Hair_L_02",
+        "Fuka_C5_Hair_R_01",
+        "Fuka_C5_Hair_R_02",
+        "Bip001 R Clavicle",
+        "Bip001 R UpperArm",
+        "Bip001 R Forearm",
+        "Bip001 R Hand",
+        "Bip001 R Finger0",
+        "Bip001 R Finger01",
+        "Bip001 R Finger02",
+        "Bip001 R Finger1",
+        "Bip001 R Finger11",
+        "Bip001 R Finger12",
+        "Bip001 R Finger2",
+        "Bip001 R Finger21",
+        "Bip001 R Finger22",
+        "Bip001 R Finger3",
+        "Bip001 R Finger31",
+        "Bip001 R Finger32",
+        "Bip001 R Finger4",
+        "Bip001 R Finger41",
+        "Bip001 R Finger42",
+        "Fuka_C5_RForearm_B_01",
+        "Fuka_C5_RForearm_B_02",
+        "Fuka_C5_RForearm_F_01",
+        "Fuka_C5_RForearm_F_02",
+        "Fuka_C5_RForearm_L_01",
+        "Fuka_C5_RForearm_L_02",
+        "Fuka_C5_RForearm_R_01",
+        "Fuka_C5_RForearm_R_02",
+        "bonebreast_L00",
+        "bonebreast_R00",
+        "Fuka_C5_guashi_B_01",
+        "Fuka_C5_guashi_B_02",
+        "Fuka_C5_guashi_B_03",
+        "Fuka_C5_guashi_B_04",
+        "Fuka_C5_guashi_B_05",
+        "Fuka_C5_guashi_LA_01",
+        "Fuka_C5_pifeng_L_01",
+        "Fuka_C5_pifeng_L_02",
+        "Fuka_C5_pifeng_LA_01",
+        "Fuka_C5_pifeng_LA_02",
+        "Fuka_C5_pifeng_LA_03",
+        "Fuka_C5_pifeng_LA_04",
+        "Fuka_C5_pifeng_LB_01",
+        "Fuka_C5_pifeng_LB_02",
+        "Fuka_C5_pifeng_LB_03",
+        "Fuka_C5_pifeng_LB_04",
+        "Fuka_C5_pifeng_R_01",
+        "Fuka_C5_pifeng_RA_01",
+        "Fuka_C5_pifeng_RA_02",
+        "Fuka_C5_pifeng_RA_03",
+        "Fuka_C5_pifeng_RA_04",
+        "Fuka_C5_pifeng_RB_01",
+        "Fuka_C5_pifeng_RB_02",
+        "Fuka_C5_pifeng_RB_03",
+        "Fuka_C5_pifeng_RB_04",
+        "Fuka_C5_guashi_F_01",
+        "Fuka_C5_guashi_F_02",
+        "Fuka_C5_guashi_F_03",
+        "Fuka_C5_Skirt_B_01",
+        "Fuka_C5_Skirt_B_02",
+        "Fuka_C5_Skirt_B_03",
+        "Fuka_C5_Skirt_B_04",
+        "Fuka_C5_Skirt_B_05",
+        "Fuka_C5_Skirt_F_01",
+        "Fuka_C5_Skirt_F_02",
+        "Fuka_C5_Skirt_F_03",
+        "Fuka_C5_Skirt_L_01",
+        "Fuka_C5_Skirt_L_02",
+        "Fuka_C5_Skirt_L_03",
+        "Fuka_C5_Skirt_L_04",
+        "Fuka_C5_Skirt_L_05",
+        "Fuka_C5_Skirt_LB_01",
+        "Fuka_C5_Skirt_LB_02",
+        "Fuka_C5_Skirt_LB_03",
+        "Fuka_C5_Skirt_LB_04",
+        "Fuka_C5_Skirt_LB_05",
+        "Fuka_C5_Skirt_R_01",
+        "Fuka_C5_Skirt_R_02",
+        "Fuka_C5_Skirt_R_03",
+        "Fuka_C5_Skirt_R_04",
+        "Fuka_C5_Skirt_R_05",
+        "Fuka_C5_Skirt_RF_01",
+        "Fuka_C5_Sickle_Main_Ctrl",
+        "Dummy001"
+      ],
+      "name": "Skeleton3D",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D",
+      "position": "(0.0, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Skeleton3D"
+    },
+    {
+      "name": "Bip001 Footsteps",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps",
+      "position": "(-0.0, 0.910635, 0.024919)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Bip001 Footsteps",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Footsteps/Bip001 Footsteps",
+      "position": "(0.0, 0.0, -0.925581)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bip001 L Toe0Nub",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 L Toe0Nub",
+      "position": "(0.06546, -0.011032, 0.050166)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Bip001 L Toe0Nub",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 L Toe0Nub/Bip001 L Toe0Nub",
+      "position": "(0.070351, 0.0, 0.0)",
+      "scale": "(-1.0, -1.0, -1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bip001 R Toe0Nub",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 R Toe0Nub",
+      "position": "(-0.065462, -0.011031, 0.050163)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Bip001 R Toe0Nub",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 R Toe0Nub/Bip001 R Toe0Nub",
+      "position": "(0.070351, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bip001 L Finger0Nub",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 L Finger0Nub",
+      "position": "(0.434044, 0.907618, 0.038126)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Bip001 L Finger0Nub",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 L Finger0Nub/Bip001 L Finger0Nub",
+      "position": "(0.034261, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bip001 L Finger1Nub",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 L Finger1Nub",
+      "position": "(0.499466, 0.881041, 0.016162)",
+      "scale": "(0.999999, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Bip001 L Finger1Nub",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 L Finger1Nub/Bip001 L Finger1Nub",
+      "position": "(0.030542, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bip001 L Finger2Nub",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 L Finger2Nub",
+      "position": "(0.508217, 0.874987, -0.015416)",
+      "scale": "(0.999999, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Bip001 L Finger2Nub",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 L Finger2Nub/Bip001 L Finger2Nub",
+      "position": "(0.035632, -0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bip001 L Finger3Nub",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 L Finger3Nub",
+      "position": "(0.497798, 0.875881, -0.050517)",
+      "scale": "(0.999999, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Bip001 L Finger3Nub",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 L Finger3Nub/Bip001 L Finger3Nub",
+      "position": "(0.030542, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bip001 L Finger4Nub",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 L Finger4Nub",
+      "position": "(0.46665, 0.889218, -0.068233)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Bip001 L Finger4Nub",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 L Finger4Nub/Bip001 L Finger4Nub",
+      "position": "(0.025452, 0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_LForearm_B_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_LForearm_B_End",
+      "position": "(0.356409, 1.000854, -0.112899)",
+      "scale": "(0.999999, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_LForearm_B_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_LForearm_B_End/Fuka_C5_LForearm_B_End",
+      "position": "(0.093275, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_LForearm_F_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_LForearm_F_End",
+      "position": "(0.355211, 1.002013, 0.083688)",
+      "scale": "(0.999999, 0.999999, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_LForearm_F_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_LForearm_F_End/Fuka_C5_LForearm_F_End",
+      "position": "(0.09544, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_LForearm_L_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_LForearm_L_End",
+      "position": "(0.431385, 1.075176, -0.009072)",
+      "scale": "(1.0, 1.0, 0.999999)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_LForearm_L_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_LForearm_L_End/Fuka_C5_LForearm_L_End",
+      "position": "(0.09544, 0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_LForearm_R_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_LForearm_R_End",
+      "position": "(0.27344, 0.926975, -0.009071)",
+      "scale": "(0.999999, 1.0, 0.999999)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_LForearm_R_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_LForearm_R_End/Fuka_C5_LForearm_R_End",
+      "position": "(0.09544, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone33",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone33",
+      "position": "(0.246163, 1.143086, -0.017026)",
+      "scale": "(0.999999, 0.999999, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "bone33",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone33/bone33",
+      "position": "(0.046943, -0.003448, 0.039775)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone34",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone33/bone33/bone34",
+      "position": "(0.138767, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone35",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone33/bone33/bone34/bone35",
+      "position": "(0.09544, 0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone36",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone36",
+      "position": "(0.246163, 1.143086, -0.017026)",
+      "scale": "(0.999999, 0.999999, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "bone36",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone36/bone36",
+      "position": "(0.051335, -0.054072, -0.009507)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone37",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone36/bone36/bone37",
+      "position": "(0.135382, -0.0, -0.000001)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone38",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone36/bone36/bone37/bone38",
+      "position": "(0.09544, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone39",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone39",
+      "position": "(0.246163, 1.143086, -0.017026)",
+      "scale": "(0.999999, 0.999999, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "bone39",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone39/bone39",
+      "position": "(0.052601, -0.014642, -0.08317)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone40",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone39/bone39/bone40",
+      "position": "(0.130636, 0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone41",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone39/bone39/bone40/bone41",
+      "position": "(0.09544, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone42",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone42",
+      "position": "(0.246163, 1.143086, -0.017026)",
+      "scale": "(0.999999, 0.999999, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "bone42",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone42/bone42",
+      "position": "(0.046374, 0.049517, -0.019025)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone43",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone42/bone42/bone43",
+      "position": "(0.139412, 0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone44",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone42/bone42/bone43/bone44",
+      "position": "(0.093275, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bip001 L ForeTwist",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 L ForeTwist",
+      "position": "(0.118411, 1.274653, -0.00896)",
+      "scale": "(0.999999, 0.999999, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Bip001 L ForeTwist",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 L ForeTwist/Bip001 L ForeTwist",
+      "position": "(0.183563, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bip001 L ForeTwist1",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 L ForeTwist/Bip001 L ForeTwist/Bip001 L ForeTwist1",
+      "position": "(0.109726, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone_C5_WJ_L",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 L ForeTwist/Bip001 L ForeTwist/Bip001 L ForeTwist1/bone_C5_WJ_L",
+      "position": "(0.07713, -0.001466, 0.024488)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone_C5_WJ_L02",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 L ForeTwist/Bip001 L ForeTwist/Bip001 L ForeTwist1/bone_C5_WJ_L/bone_C5_WJ_L02",
+      "position": "(0.002945, 0.036083, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone_C2_WJ_L",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 L ForeTwist/Bip001 L ForeTwist/Bip001 L ForeTwist1/bone_C2_WJ_L",
+      "position": "(0.07713, -0.001466, 0.024488)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone_C2_WJ_L02",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 L ForeTwist/Bip001 L ForeTwist/Bip001 L ForeTwist1/bone_C2_WJ_L/bone_C2_WJ_L02",
+      "position": "(0.002945, 0.036083, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_guashi_LB_End3",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_guashi_LB_End3",
+      "position": "(0.162396, 1.047153, 0.0347)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_guashi_LB_End3",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_guashi_LB_End3/Fuka_C5_guashi_LB_End3",
+      "position": "(0.084554, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_guashi_LB_013",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_guashi_LB_013",
+      "position": "(0.118411, 1.274653, -0.00896)",
+      "scale": "(0.999999, 0.999999, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_guashi_LB_013",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_guashi_LB_013/Fuka_C5_guashi_LB_013",
+      "position": "(0.125389, -0.049807, -0.062582)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_guashi_LB_023",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_guashi_LB_013/Fuka_C5_guashi_LB_013/Fuka_C5_guashi_LB_023",
+      "position": "(0.089877, 0.000002, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_guashi_LB_End2",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_guashi_LB_013/Fuka_C5_guashi_LB_013/Fuka_C5_guashi_LB_023/Fuka_C5_guashi_LB_End2",
+      "position": "(0.084554, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bip001 HeadNub",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 HeadNub",
+      "position": "(0.000001, 1.394951, -0.011017)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Bip001 HeadNub",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 HeadNub/Bip001 HeadNub",
+      "position": "(0.192791, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_erhuan_L_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_erhuan_L_End",
+      "position": "(0.065548, 1.301934, 0.048746)",
+      "scale": "(1.0, 0.999999, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_erhuan_L_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_erhuan_L_End/Fuka_C5_erhuan_L_End",
+      "position": "(0.049721, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_fadai_LB_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_fadai_LB_End",
+      "position": "(0.055248, 1.029909, -0.40509)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_fadai_LB_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_fadai_LB_End/Fuka_C5_fadai_LB_End",
+      "position": "(0.137411, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_fadai_RB_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_fadai_RB_End",
+      "position": "(-0.056477, 1.029909, -0.40509)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_fadai_RB_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_fadai_RB_End/Fuka_C5_fadai_RB_End",
+      "position": "(0.137411, 0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_Hair_B_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_Hair_B_End",
+      "position": "(0.0, 1.262561, -0.215747)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_Hair_B_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_Hair_B_End/Fuka_C5_Hair_B_End",
+      "position": "(0.199405, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_Hair_LB_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_Hair_LB_End",
+      "position": "(0.178662, 0.739334, -0.459224)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_Hair_LB_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_Hair_LB_End/Fuka_C5_Hair_LB_End",
+      "position": "(0.15798, -0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_Hair_RB_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_Hair_RB_End",
+      "position": "(-0.166835, 0.739334, -0.459224)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_Hair_RB_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_Hair_RB_End/Fuka_C5_Hair_RB_End",
+      "position": "(0.15798, 0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_Hair_L_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_Hair_L_End",
+      "position": "(0.108093, 1.45458, -0.043222)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_Hair_L_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_Hair_L_End/Fuka_C5_Hair_L_End",
+      "position": "(0.095597, -0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_Hair_R_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_Hair_R_End",
+      "position": "(-0.11224, 1.422261, 0.002598)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_Hair_R_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_Hair_R_End/Fuka_C5_Hair_R_End",
+      "position": "(0.081997, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone01",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone01",
+      "position": "(0.000001, 1.394951, -0.011017)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "bone01",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone01/bone01",
+      "position": "(0.22399, -0.140623, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone02",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone01/bone01/bone02",
+      "position": "(0.189982, 0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone03",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone01/bone01/bone02/bone03",
+      "position": "(0.203298, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone04",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone01/bone01/bone02/bone03/bone04",
+      "position": "(0.210816, 0.010171, 0.122132)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone05",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone01/bone01/bone02/bone03/bone04/bone05",
+      "position": "(0.198282, -0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone06",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone01/bone01/bone02/bone03/bone04/bone05/bone06",
+      "position": "(0.174753, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone07",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone01/bone01/bone02/bone03/bone04/bone05/bone06/bone07",
+      "position": "(0.15798, -0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone08",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone01/bone01/bone02/bone03/bone08",
+      "position": "(0.210816, 0.010171, -0.110305)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone09",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone01/bone01/bone02/bone03/bone08/bone09",
+      "position": "(0.198282, 0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone10",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone01/bone01/bone02/bone03/bone08/bone09/bone10",
+      "position": "(0.174753, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone11",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone01/bone01/bone02/bone03/bone08/bone09/bone10/bone11",
+      "position": "(0.15798, 0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone12",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone01/bone01/bone12",
+      "position": "(0.12835, 0.047802, 0.001166)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone13",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone01/bone01/bone12/bone13",
+      "position": "(0.088546, -0.0, -0.015841)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone14",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone01/bone01/bone12/bone13/bone14",
+      "position": "(0.189718, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone15",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone01/bone01/bone12/bone13/bone14/bone15",
+      "position": "(0.127582, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone16",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone01/bone01/bone12/bone13/bone14/bone15/bone16",
+      "position": "(0.144137, 0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone17",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone01/bone01/bone12/bone13/bone14/bone15/bone16/bone17",
+      "position": "(0.137411, 0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone18",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone01/bone01/bone12/bone18",
+      "position": "(0.088459, 0.0, 0.012818)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone19",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone01/bone01/bone12/bone18/bone19",
+      "position": "(0.189718, 0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone20",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone01/bone01/bone12/bone18/bone19/bone20",
+      "position": "(0.127582, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone21",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone01/bone01/bone12/bone18/bone19/bone20/bone21",
+      "position": "(0.144137, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone22",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone01/bone01/bone12/bone18/bone19/bone20/bone21/bone22",
+      "position": "(0.137411, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone23",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone23",
+      "position": "(0.000001, 1.394951, -0.011017)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "bone23",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone23/bone23",
+      "position": "(0.1162, -0.000172, 0.08696)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone24",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone23/bone23/bone24",
+      "position": "(0.077797, 0.000002, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone25",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone23/bone23/bone24/bone25",
+      "position": "(0.095597, -0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone26",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone26",
+      "position": "(0.000001, 1.394951, -0.011017)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "bone26",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone26/bone26",
+      "position": "(0.093666, 0.020781, -0.077187)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone27",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone26/bone26/bone27",
+      "position": "(0.074362, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone28",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone26/bone26/bone27/bone28",
+      "position": "(0.081997, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone29",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone29",
+      "position": "(0.000001, 1.394951, -0.011017)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "bone29",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone29/bone29",
+      "position": "(0.014366, 0.012627, 0.064453)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone30",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone29/bone29/bone30",
+      "position": "(0.062396, -0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone31",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone29/bone29/bone30/bone31",
+      "position": "(0.053136, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone32",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone29/bone29/bone30/bone31/bone32",
+      "position": "(0.049721, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone01",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone01",
+      "position": "(0.000001, 1.394951, -0.011017)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Bone01",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone01/Bone01",
+      "position": "(0.22399, -0.140623, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone02",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone01/Bone01/Bone02",
+      "position": "(0.189982, 0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone03",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone01/Bone01/Bone02/Bone03",
+      "position": "(0.203298, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone04",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone01/Bone01/Bone02/Bone03/Bone04",
+      "position": "(0.210816, 0.010171, 0.122132)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone05",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone01/Bone01/Bone02/Bone03/Bone04/Bone05",
+      "position": "(0.198282, -0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone06",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone01/Bone01/Bone02/Bone03/Bone04/Bone05/Bone06",
+      "position": "(0.174753, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone25",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone01/Bone01/Bone02/Bone03/Bone04/Bone05/Bone06/Bone25",
+      "position": "(0.15798, 0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone08",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone01/Bone01/Bone02/Bone03/Bone08",
+      "position": "(0.210816, 0.010171, -0.110305)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone09",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone01/Bone01/Bone02/Bone03/Bone08/Bone09",
+      "position": "(0.198282, 0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone10",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone01/Bone01/Bone02/Bone03/Bone08/Bone09/Bone10",
+      "position": "(0.174753, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone11",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone01/Bone01/Bone02/Bone03/Bone08/Bone09/Bone10/Bone11",
+      "position": "(0.15798, 0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bip001 R Finger0Nub",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 R Finger0Nub",
+      "position": "(-0.434043, 0.90762, 0.038127)",
+      "scale": "(0.999999, 0.999999, 0.999999)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Bip001 R Finger0Nub",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 R Finger0Nub/Bip001 R Finger0Nub",
+      "position": "(0.034261, 0.0, 0.0)",
+      "scale": "(-1.0, -1.0, -1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bip001 R Finger1Nub",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 R Finger1Nub",
+      "position": "(-0.499467, 0.881042, 0.016164)",
+      "scale": "(0.999999, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Bip001 R Finger1Nub",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 R Finger1Nub/Bip001 R Finger1Nub",
+      "position": "(0.030542, -0.0, -0.0)",
+      "scale": "(-1.0, -1.0, -1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bip001 R Finger2Nub",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 R Finger2Nub",
+      "position": "(-0.508217, 0.874988, -0.015415)",
+      "scale": "(0.999999, 1.0, 0.999999)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Bip001 R Finger2Nub",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 R Finger2Nub/Bip001 R Finger2Nub",
+      "position": "(0.035633, 0.0, 0.0)",
+      "scale": "(-1.0, -1.0, -1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bip001 R Finger3Nub",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 R Finger3Nub",
+      "position": "(-0.497798, 0.875882, -0.050515)",
+      "scale": "(0.999999, 1.0, 0.999999)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Bip001 R Finger3Nub",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 R Finger3Nub/Bip001 R Finger3Nub",
+      "position": "(0.030542, 0.0, -0.0)",
+      "scale": "(-1.0, -1.0, -1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bip001 R Finger4Nub",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 R Finger4Nub",
+      "position": "(-0.46665, 0.889219, -0.068231)",
+      "scale": "(0.999999, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Bip001 R Finger4Nub",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 R Finger4Nub/Bip001 R Finger4Nub",
+      "position": "(0.025452, 0.0, -0.0)",
+      "scale": "(-1.0, -1.0, -1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_RForearm_B_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_RForearm_B_End",
+      "position": "(-0.356376, 1.000855, -0.112899)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_RForearm_B_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_RForearm_B_End/Fuka_C5_RForearm_B_End",
+      "position": "(0.093275, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_RForearm_F_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_RForearm_F_End",
+      "position": "(-0.355179, 1.002014, 0.083688)",
+      "scale": "(1.0, 0.999999, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_RForearm_F_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_RForearm_F_End/Fuka_C5_RForearm_F_End",
+      "position": "(0.09544, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_RForearm_L_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_RForearm_L_End",
+      "position": "(-0.273408, 0.926975, -0.009071)",
+      "scale": "(0.999999, 1.0, 0.999999)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_RForearm_L_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_RForearm_L_End/Fuka_C5_RForearm_L_End",
+      "position": "(0.09544, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_RForearm_R_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_RForearm_R_End",
+      "position": "(-0.431352, 1.075177, -0.009071)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_RForearm_R_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_RForearm_R_End/Fuka_C5_RForearm_R_End",
+      "position": "(0.09544, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone45",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone45",
+      "position": "(-0.246163, 1.143087, -0.017025)",
+      "scale": "(0.999999, 0.999999, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "bone45",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone45/bone45",
+      "position": "(0.04692, -0.003449, -0.039752)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone46",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone45/bone45/bone46",
+      "position": "(0.138767, -0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone47",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone45/bone45/bone46/bone47",
+      "position": "(0.09544, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone48",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone48",
+      "position": "(-0.246163, 1.143087, -0.017025)",
+      "scale": "(0.999999, 0.999999, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "bone48",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone48/bone48",
+      "position": "(0.046351, 0.049515, 0.019049)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone49",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone48/bone48/bone49",
+      "position": "(0.139412, -0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone50",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone48/bone48/bone49/bone50",
+      "position": "(0.093275, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone51",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone51",
+      "position": "(-0.246163, 1.143087, -0.017025)",
+      "scale": "(0.999999, 0.999999, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "bone51",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone51/bone51",
+      "position": "(0.051312, -0.054074, 0.009531)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone52",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone51/bone51/bone52",
+      "position": "(0.135382, 0.0, -0.000001)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone53",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone51/bone51/bone52/bone53",
+      "position": "(0.09544, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone54",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone54",
+      "position": "(-0.246163, 1.143087, -0.017025)",
+      "scale": "(0.999999, 0.999999, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "bone54",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone54/bone54",
+      "position": "(0.052578, -0.014643, 0.083193)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone55",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone54/bone54/bone55",
+      "position": "(0.130637, -0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone56",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone54/bone54/bone55/bone56",
+      "position": "(0.09544, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bip001 R ForeTwist",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 R ForeTwist",
+      "position": "(-0.11841, 1.274653, -0.00896)",
+      "scale": "(0.999999, 0.999999, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Bip001 R ForeTwist",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 R ForeTwist/Bip001 R ForeTwist",
+      "position": "(0.183563, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bip001 R ForeTwist1",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 R ForeTwist/Bip001 R ForeTwist/Bip001 R ForeTwist1",
+      "position": "(0.109726, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone_C5_WJ_R",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 R ForeTwist/Bip001 R ForeTwist/Bip001 R ForeTwist1/bone_C5_WJ_R",
+      "position": "(0.084296, -0.002351, -0.015687)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone_C5_WJ_R02",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 R ForeTwist/Bip001 R ForeTwist/Bip001 R ForeTwist1/bone_C5_WJ_R/bone_C5_WJ_R02",
+      "position": "(0.002943, -0.036081, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone_C2_WJ_R",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 R ForeTwist/Bip001 R ForeTwist/Bip001 R ForeTwist1/bone_C2_WJ_R",
+      "position": "(0.084296, -0.002351, -0.015687)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone_C2_WJ_R02",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 R ForeTwist/Bip001 R ForeTwist/Bip001 R ForeTwist1/bone_C2_WJ_R/bone_C2_WJ_R02",
+      "position": "(0.002943, -0.036081, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone019",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 R ForeTwist/Bip001 R ForeTwist/Bip001 R ForeTwist1/Bone019",
+      "position": "(0.090903, -0.00538, -0.029037)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone020",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 R ForeTwist/Bip001 R ForeTwist/Bip001 R ForeTwist1/Bone019/Bone020",
+      "position": "(0.044792, 0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bonebreast_L01",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bonebreast_L01",
+      "position": "(0.048435, 1.20475, 0.07129)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "bonebreast_L01",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bonebreast_L01/bonebreast_L01",
+      "position": "(0.045713, 0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bonebreast_R01",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bonebreast_R01",
+      "position": "(-0.04843, 1.20475, 0.07129)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "bonebreast_R01",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bonebreast_R01/bonebreast_R01",
+      "position": "(0.045713, -0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_guashi_B_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_guashi_B_End",
+      "position": "(-0.0, 0.860442, -0.27145)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_guashi_B_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_guashi_B_End/Fuka_C5_guashi_B_End",
+      "position": "(0.193637, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_pifeng_LA_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_pifeng_LA_End",
+      "position": "(0.48684, 0.300597, -0.398726)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_pifeng_LA_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_pifeng_LA_End/Fuka_C5_pifeng_LA_End",
+      "position": "(0.231032, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_pifeng_LB_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_pifeng_LB_End",
+      "position": "(0.207933, 0.263535, -0.455089)",
+      "scale": "(1.0, 0.999999, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_pifeng_LB_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_pifeng_LB_End/Fuka_C5_pifeng_LB_End",
+      "position": "(0.286261, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_pifeng_RA_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_pifeng_RA_End",
+      "position": "(-0.197202, 0.263535, -0.455089)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_pifeng_RA_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_pifeng_RA_End/Fuka_C5_pifeng_RA_End",
+      "position": "(0.286261, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_pifeng_RB_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_pifeng_RB_End",
+      "position": "(-0.476109, 0.300597, -0.398726)",
+      "scale": "(1.000001, 1.000001, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_pifeng_RB_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_pifeng_RB_End/Fuka_C5_pifeng_RB_End",
+      "position": "(0.231032, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone57",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone57",
+      "position": "(0.0, 1.14987, 0.051961)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "bone57",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone57/bone57",
+      "position": "(0.125995, -0.08881, -0.081823)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone58",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone57/bone57/bone58",
+      "position": "(0.233031, -0.000372, -0.061565)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone59",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone57/bone57/bone58/bone59",
+      "position": "(0.304498, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone60",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone57/bone57/bone58/bone59/bone60",
+      "position": "(0.23895, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone61",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone57/bone57/bone58/bone59/bone60/bone61",
+      "position": "(0.287917, 0.000002, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone62",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone57/bone57/bone58/bone59/bone60/bone61/bone62",
+      "position": "(0.286261, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone63",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone57/bone57/bone63",
+      "position": "(0.253032, -0.004057, 0.085666)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone64",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone57/bone57/bone63/bone64",
+      "position": "(0.322748, -0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone65",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone57/bone57/bone63/bone64/bone65",
+      "position": "(0.241922, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone66",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone57/bone57/bone63/bone64/bone65/bone66",
+      "position": "(0.252224, -0.000002, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone67",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone57/bone57/bone63/bone64/bone65/bone66/bone67",
+      "position": "(0.231032, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone68",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone68",
+      "position": "(0.0, 1.14987, 0.051961)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "bone68",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone68/bone68",
+      "position": "(0.125995, -0.08881, 0.092555)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone69",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone68/bone68/bone69",
+      "position": "(0.253031, 0.004057, 0.085667)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone70",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone68/bone68/bone69/bone70",
+      "position": "(0.322748, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone71",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone68/bone68/bone69/bone70/bone71",
+      "position": "(0.241922, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone72",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone68/bone68/bone69/bone70/bone71/bone72",
+      "position": "(0.252224, 0.000002, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone73",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone68/bone68/bone69/bone70/bone71/bone72/bone73",
+      "position": "(0.231032, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone74",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone68/bone68/bone74",
+      "position": "(0.233031, 0.000372, -0.061565)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone75",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone68/bone68/bone74/bone75",
+      "position": "(0.304498, -0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone76",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone68/bone68/bone74/bone75/bone76",
+      "position": "(0.23895, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone77",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone68/bone68/bone74/bone75/bone76/bone77",
+      "position": "(0.287917, -0.000002, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone78",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone68/bone68/bone74/bone75/bone76/bone77/bone78",
+      "position": "(0.286261, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone79",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone79",
+      "position": "(0.0, 1.14987, 0.051961)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "bone79",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone79/bone79",
+      "position": "(0.145117, -0.101476, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone80",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone79/bone79/bone80",
+      "position": "(0.142228, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone81",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone79/bone79/bone80/bone81",
+      "position": "(0.081217, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone82",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone79/bone79/bone80/bone81/bone82",
+      "position": "(0.121612, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone83",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone79/bone79/bone80/bone81/bone82/bone83",
+      "position": "(0.101906, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone84",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone79/bone79/bone80/bone81/bone82/bone83/bone84",
+      "position": "(0.193637, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone85",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone85",
+      "position": "(0.0, 1.14987, 0.051961)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "bone85",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone85/bone85",
+      "position": "(-0.009487, 0.018964, 0.099466)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone12",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone12",
+      "position": "(0.0, 1.14987, 0.051961)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Bone12",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone12/Bone12",
+      "position": "(0.125995, -0.08881, -0.081823)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone13",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone12/Bone12/Bone13",
+      "position": "(0.233031, -0.000372, -0.061565)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone14",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone12/Bone12/Bone13/Bone14",
+      "position": "(0.304498, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone24",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone12/Bone12/Bone13/Bone14/Bone24",
+      "position": "(0.23895, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone22",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone12/Bone12/Bone13/Bone14/Bone24/Bone22",
+      "position": "(0.287917, 0.000002, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone28",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone12/Bone12/Bone13/Bone14/Bone24/Bone22/Bone28",
+      "position": "(0.286261, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone17",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone12/Bone12/Bone17",
+      "position": "(0.253032, -0.004057, 0.085666)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone18",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone12/Bone12/Bone17/Bone18",
+      "position": "(0.322748, -0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone21",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone12/Bone12/Bone17/Bone18/Bone21",
+      "position": "(0.241922, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone27",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone12/Bone12/Bone17/Bone18/Bone21/Bone27",
+      "position": "(0.252224, -0.000002, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone29",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone12/Bone12/Bone17/Bone18/Bone21/Bone27/Bone29",
+      "position": "(0.231032, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone20",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone20",
+      "position": "(0.0, 1.14987, 0.051961)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Bone20",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone20/Bone20",
+      "position": "(0.125995, -0.08881, 0.092555)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone15",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone20/Bone20/Bone15",
+      "position": "(0.233031, 0.000372, -0.061565)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone07",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone20/Bone20/Bone15/Bone07",
+      "position": "(0.304498, -0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone26",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone20/Bone20/Bone15/Bone07/Bone26",
+      "position": "(0.23895, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone32",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone20/Bone20/Bone15/Bone07/Bone26/Bone32",
+      "position": "(0.287917, -0.000002, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone33",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone20/Bone20/Bone15/Bone07/Bone26/Bone32/Bone33",
+      "position": "(0.286261, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone19",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone20/Bone20/Bone19",
+      "position": "(0.253032, 0.004057, 0.085667)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone16",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone20/Bone20/Bone19/Bone16",
+      "position": "(0.322748, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone23",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone20/Bone20/Bone19/Bone16/Bone23",
+      "position": "(0.241922, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone30",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone20/Bone20/Bone19/Bone16/Bone23/Bone30",
+      "position": "(0.252224, 0.000002, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bone31",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bone20/Bone20/Bone19/Bone16/Bone23/Bone30/Bone31",
+      "position": "(0.231032, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_guashi_LB_012",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_guashi_LB_012",
+      "position": "(0.0, 1.052642, 0.050322)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_guashi_LB_012",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_guashi_LB_012/Fuka_C5_guashi_LB_012",
+      "position": "(0.083775, -0.022479, 0.159036)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_guashi_LB_022",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_guashi_LB_012/Fuka_C5_guashi_LB_012/Fuka_C5_guashi_LB_022",
+      "position": "(0.089877, 0.000002, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_guashi_LB_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_guashi_LB_012/Fuka_C5_guashi_LB_012/Fuka_C5_guashi_LB_022/Fuka_C5_guashi_LB_End",
+      "position": "(0.084554, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone86",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone86",
+      "position": "(0.0, 1.052642, 0.050322)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "bone86",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone86/bone86",
+      "position": "(0.083775, -0.022479, 0.159036)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone87",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone86/bone86/bone87",
+      "position": "(0.089877, 0.000002, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone88",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone86/bone86/bone87/bone88",
+      "position": "(0.084554, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_guashi_F_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_guashi_F_End",
+      "position": "(-0.06606, 0.839504, 0.13216)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_guashi_F_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_guashi_F_End/Fuka_C5_guashi_F_End",
+      "position": "(0.082185, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone89",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone89",
+      "position": "(0.0, 0.983679, 0.05)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "bone89",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone89/bone89",
+      "position": "(0.019977, 0.069652, -0.058718)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone90",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone89/bone89/bone90",
+      "position": "(0.094554, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone91",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone89/bone89/bone90/bone91",
+      "position": "(0.06983, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone92",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone89/bone89/bone90/bone91/bone92",
+      "position": "(0.082185, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_Skirt_B_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_Skirt_B_End",
+      "position": "(-0.000001, 0.416724, -0.220918)",
+      "scale": "(1.0, 0.999999, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_Skirt_B_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_Skirt_B_End/Fuka_C5_Skirt_B_End",
+      "position": "(0.131452, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_Skirt_F_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_Skirt_F_End",
+      "position": "(0.048388, 0.688996, 0.095501)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_Skirt_F_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_Skirt_F_End/Fuka_C5_Skirt_F_End",
+      "position": "(0.124795, -0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_Skirt_L_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_Skirt_L_End",
+      "position": "(0.194558, 0.409269, -0.059181)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_Skirt_L_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_Skirt_L_End/Fuka_C5_Skirt_L_End",
+      "position": "(0.125262, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_Skirt_LB_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_Skirt_LB_End",
+      "position": "(0.056951, 0.423142, -0.276191)",
+      "scale": "(1.000001, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_Skirt_LB_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_Skirt_LB_End/Fuka_C5_Skirt_LB_End",
+      "position": "(0.077009, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_Skirt_R_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_Skirt_R_End",
+      "position": "(-0.227824, 0.40756, -0.080824)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_Skirt_R_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_Skirt_R_End/Fuka_C5_Skirt_R_End",
+      "position": "(0.112135, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Fuka_C5_Skirt_RF_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_Skirt_RF_End",
+      "position": "(-0.076021, 0.928054, 0.097623)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Fuka_C5_Skirt_RF_End",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Fuka_C5_Skirt_RF_End/Fuka_C5_Skirt_RF_End",
+      "position": "(0.084937, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone93",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone93",
+      "position": "(-0.0, 0.910635, 0.024919)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "bone93",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone93/bone93",
+      "position": "(0.01335, 0.078949, 0.050586)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone94",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone93/bone93/bone94",
+      "position": "(0.122679, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone95",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone93/bone93/bone94/bone95",
+      "position": "(0.112503, 0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone96",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone93/bone93/bone94/bone95/bone96",
+      "position": "(0.124795, -0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone97",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone97",
+      "position": "(-0.0, 0.910635, 0.024919)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "bone97",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone97/bone97",
+      "position": "(0.037419, -0.010269, -0.126217)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone98",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone97/bone97/bone98",
+      "position": "(0.151337, 0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone99",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone97/bone97/bone98/bone99",
+      "position": "(0.118294, 0.0, 0.0)",
+      "scale": "(1.000001, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone100",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone97/bone97/bone98/bone99/bone100",
+      "position": "(0.131541, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone101",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone97/bone97/bone98/bone99/bone100/bone101",
+      "position": "(0.157055, 0.0, 0.0)",
+      "scale": "(0.999999, 0.999999, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone102",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone97/bone97/bone98/bone99/bone100/bone101/bone102",
+      "position": "(0.112135, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone103",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone103",
+      "position": "(-0.0, 0.910635, 0.024919)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "bone103",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone103/bone103",
+      "position": "(0.031155, -0.013595, 0.134073)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone104",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone103/bone103/bone104",
+      "position": "(0.144236, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone105",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone103/bone103/bone104/bone105",
+      "position": "(0.113173, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone106",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone103/bone103/bone104/bone105/bone106",
+      "position": "(0.12698, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone107",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone103/bone103/bone104/bone105/bone106/bone107",
+      "position": "(0.156411, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone108",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone103/bone103/bone104/bone105/bone106/bone107/bone108",
+      "position": "(0.125262, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone109",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone109",
+      "position": "(-0.0, 0.910635, 0.024919)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "bone109",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone109/bone109",
+      "position": "(0.031557, -0.108216, 0.057429)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone110",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone109/bone109/bone110",
+      "position": "(0.186096, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone111",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone109/bone109/bone110/bone111",
+      "position": "(0.183459, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone112",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone109/bone109/bone110/bone111/bone112",
+      "position": "(0.06457, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone113",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone109/bone109/bone110/bone111/bone112/bone113",
+      "position": "(0.119745, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone114",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone109/bone109/bone110/bone111/bone112/bone113/bone114",
+      "position": "(0.077009, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone115",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone115",
+      "position": "(-0.0, 0.910635, 0.024919)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "bone115",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone115/bone115",
+      "position": "(0.030781, -0.103557, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone116",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone115/bone115/bone116",
+      "position": "(0.149211, -0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone117",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone115/bone115/bone116/bone117",
+      "position": "(0.112062, 0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone118",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone115/bone115/bone116/bone117/bone118",
+      "position": "(0.134086, 0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone119",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone115/bone115/bone116/bone117/bone118/bone119",
+      "position": "(0.148427, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "bone120",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/bone115/bone115/bone116/bone117/bone118/bone119/bone120",
+      "position": "(0.131452, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Bip001 Prop1",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Prop1",
+      "position": "(-0.0, 0.910635, 0.024919)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "BoneAttachment3D"
+    },
+    {
+      "name": "Bip001 Prop1",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Prop1/Bip001 Prop1",
+      "position": "(-0.037822, -0.398102, 0.074157)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Dummy0012",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Bip001 Prop1/Bip001 Prop1/Dummy0012",
+      "position": "(-0.0, -0.000289, 0.7599)",
+      "scale": "(1.1161, 1.1161, 1.1161)",
+      "type": "Node3D"
+    },
+    {
+      "aabb": "[P: (-0.676119, -0.015091, -0.587929), S: (1.352238, 1.681057, 0.750979)]",
+      "name": "Body",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Body",
+      "position": "(0.0, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "skin_binds": 137,
+      "surfaces": [
+        {
+          "albedo": "res://assets/azure/Avatar_Fuka_C5_Body_Color.png",
+          "material": "Avatar_Fuka_C5_Material_Body",
+          "uv1_offset": "(0.0, 0.0, 0.0)",
+          "uv1_scale": "(1.0, 1.0, 1.0)"
+        },
+        {
+          "albedo": "res://assets/azure/Avatar_Fuka_C5_Body_Color.png",
+          "material": "Avatar_Fuka_C5_Material_Body",
+          "uv1_offset": "(0.0, 0.0, 0.0)",
+          "uv1_scale": "(1.0, 1.0, 1.0)"
+        },
+        {
+          "albedo": "res://assets/azure/Avatar_Fuka_C5_Body_Color.png",
+          "material": "Avatar_Fuka_C5_Material",
+          "uv1_offset": "(0.0, 0.0, 0.0)",
+          "uv1_scale": "(1.0, 1.0, 1.0)"
+        },
+        {
+          "albedo": "res://assets/azure/Avatar_Fuka_C5_Body_Color.png",
+          "material": "Avatar_Fuka_C5_Belt_Material_DualFace",
+          "uv1_offset": "(0.0, 0.0, 0.0)",
+          "uv1_scale": "(1.0, 1.0, 1.0)"
+        }
+      ],
+      "type": "MeshInstance3D"
+    },
+    {
+      "aabb": "[P: (-0.072054, 0.346721, -0.190498), S: (0.310532, 0.714421, 0.303659)]",
+      "name": "body_effect",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/body_effect",
+      "position": "(0.0, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "skin_binds": 18,
+      "surfaces": [
+        {
+          "albedo": "",
+          "material": "",
+          "uv1_offset": "(0.0, 0.0, 0.0)",
+          "uv1_scale": "(1.0, 1.0, 1.0)"
+        }
+      ],
+      "type": "MeshInstance3D"
+    },
+    {
+      "aabb": "[P: (0.007137, 1.456198, 0.017656), S: (0.073028, 0.076157, 0.074903)]",
+      "name": "Eye_L",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Eye_L",
+      "position": "(0.0, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "skin_binds": 1,
+      "surfaces": [
+        {
+          "albedo": "res://assets/azure/1.png",
+          "material": "Avatar_Fuka_Left_Eye",
+          "uv1_offset": "(0.0, 0.0, 0.0)",
+          "uv1_scale": "(0.25, 0.25, 1.0)"
+        }
+      ],
+      "type": "MeshInstance3D"
+    },
+    {
+      "aabb": "[P: (-0.080164, 1.456198, 0.017656), S: (0.073028, 0.076157, 0.074903)]",
+      "name": "Eye_R",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Eye_R",
+      "position": "(0.0, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "skin_binds": 1,
+      "surfaces": [
+        {
+          "albedo": "res://assets/azure/1.png",
+          "material": "Avatar_Fuka_Right_Eye",
+          "uv1_offset": "(0.0, 0.0, 0.0)",
+          "uv1_scale": "(0.25, 0.25, 1.0)"
+        }
+      ],
+      "type": "MeshInstance3D"
+    },
+    {
+      "aabb": "[P: (-0.09134, 1.394097, -0.029941), S: (0.18268, 0.191237, 0.131961)]",
+      "name": "Face",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Face",
+      "position": "(0.0, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "skin_binds": 1,
+      "surfaces": [
+        {
+          "albedo": "res://assets/azure/Avatar_Fuka_Texture_Face_Color.png",
+          "material": "Avatar_Fuka_C5_Material_Face",
+          "uv1_offset": "(0.0, 0.0, 0.0)",
+          "uv1_scale": "(1.0, 1.0, 1.0)"
+        }
+      ],
+      "type": "MeshInstance3D"
+    },
+    {
+      "aabb": "[P: (-0.319501, 0.559085, -0.550367), S: (0.645287, 1.096452, 0.661629)]",
+      "name": "Hair",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Hair",
+      "position": "(0.0, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "skin_binds": 14,
+      "surfaces": [
+        {
+          "albedo": "res://assets/azure/Avatar_Fuka_C5_Hair_Color.png",
+          "material": "Avatar_Fuka_C5_Material_Hair",
+          "uv1_offset": "(0.0, 0.0, 0.0)",
+          "uv1_scale": "(1.0, 1.0, 1.0)"
+        }
+      ],
+      "type": "MeshInstance3D"
+    },
+    {
+      "aabb": "[P: (-0.030907, 1.407277, 0.062221), S: (0.061814, 0.03262, 0.029704)]",
+      "name": "Mouth",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Mouth",
+      "position": "(0.0, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "skin_binds": 1,
+      "surfaces": [
+        {
+          "albedo": "res://assets/azure/1 (1).png",
+          "material": "Avatar_Fuka_Mouth",
+          "uv1_offset": "(0.0, 0.0, 0.0)",
+          "uv1_scale": "(0.25, 0.25, 1.0)"
+        }
+      ],
+      "type": "MeshInstance3D"
+    },
+    {
+      "aabb": "[P: (-0.670829, -0.279717, -0.670829), S: (1.341658, 0.947473, 1.341658)]",
+      "name": "Umbrella_s",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Skeleton3D/Umbrella_s",
+      "position": "(0.0, 0.0, 0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "skin_binds": 2,
+      "surfaces": [
+        {
+          "albedo": "res://assets/azure/Fuka_C5_Weapon_Color.png",
+          "material": "Avatar_Fuka_C5_Material_Umbrella",
+          "uv1_offset": "(0.0, 0.0, 0.0)",
+          "uv1_scale": "(1.0, 1.0, 1.0)"
+        }
+      ],
+      "type": "MeshInstance3D"
+    },
+    {
+      "name": "ROOT",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/ROOT",
+      "position": "(0.0, 0.0, -0.0)",
+      "scale": "(1.0, 1.0, 1.0)",
+      "type": "Node3D"
+    },
+    {
+      "name": "Hands",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/Hands",
+      "position": "(0.0, 0.0, 0.0)",
+      "scale": "(1.1, 1.1, 1.1)",
+      "type": "Node3D"
+    },
+    {
+      "name": "HeadTran",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/HeadTran",
+      "position": "(0.0, 1.568, 0.0)",
+      "scale": "(0.909091, 0.909091, 0.909091)",
+      "type": "Node3D"
+    },
+    {
+      "name": "WaistTran",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/WaistTran",
+      "position": "(0.0, 1.062, 0.0)",
+      "scale": "(0.909091, 0.909091, 0.909091)",
+      "type": "Node3D"
+    },
+    {
+      "name": "KneeTran",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/KneeTran",
+      "position": "(0.0, 0.56, 0.0)",
+      "scale": "(0.909091, 0.909091, 0.909091)",
+      "type": "Node3D"
+    },
+    {
+      "name": "FootTran",
+      "path": "/root/Avatar_Fuka_C5_IN/Avatar_Fuka_C5_IN/FootTran",
+      "position": "(0.0, 0.069, 0.0)",
+      "scale": "(0.909091, 0.909091, 0.909091)",
+      "type": "Node3D"
+    },
+    {
+      "name": "AnimationPlayer",
+      "path": "/root/Avatar_Fuka_C5_IN/AnimationPlayer",
+      "type": "AnimationPlayer"
+    }
+  ]
+}

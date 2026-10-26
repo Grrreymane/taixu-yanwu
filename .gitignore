@@ -1,0 +1,21 @@
+.godot/
+build/
+*.tmp
+tests/actor-presentation-*.png*
+tests/ultimate-camera-*.png*
+
+# Local logs, temporary editor files, and Python caches.
+*.log
+*.bak
+*.swp
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+
+# Keep local credentials and machine-specific environment settings out of Git.
+.env
+.env.*
+!.env.example
+.godot_credentials
+export_credentials.cfg

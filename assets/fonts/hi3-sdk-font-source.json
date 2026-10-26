@@ -1,0 +1,51 @@
+{
+  "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\MiHoYoSDKRes\\HttpServerResources\\font\\zh-cn.ttf",
+  "output": "../fuhua-godot\\assets\\fonts\\hi3-sdk-zh-cn.ttf",
+  "bytes": 6840180,
+  "names": [
+    [
+      1,
+      "FZLanTingHei-B-GBK-V2"
+    ],
+    [
+      2,
+      "Regular"
+    ],
+    [
+      4,
+      "FZLanTingHei-B-GBK-V2"
+    ],
+    [
+      6,
+      "FZLanTingHeiBGBKV2"
+    ],
+    [
+      1,
+      "方正兰亭粗黑_GBK"
+    ],
+    [
+      4,
+      "方正兰亭粗黑_GBK Regular"
+    ]
+  ],
+  "cmapTables": [
+    [
+      0,
+      3,
+      4
+    ],
+    [
+      3,
+      1,
+      4
+    ]
+  ],
+  "cmapDeclaredCodepoints": 22007,
+  "sampleMissing": [],
+  "provenance": "Embedded Unity Font in the dependency closure of assets/asbres/ui/menus/page/inlevel/inlevelmainpage.prefab. Byte-identical to SDK font. Filename retained to avoid breaking references.",
+  "inLevelMainPageDependencyConfirmed": true,
+  "fontAssetName": "msyhbd-Bold",
+  "battleFontExtractedFile": "../hi3-fuhua-extract\\exports\\inlevel-ui-reference\\fonts\\msyhbd-Bold.ttf",
+  "sha256": "8747eae0941c1ea7f1db938568184e20df758dffa7ee4b4a4758f81d56612b48",
+  "sdkAndBattleFontIdentical": true
+}

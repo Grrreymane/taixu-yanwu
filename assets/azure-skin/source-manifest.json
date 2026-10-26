@@ -1,0 +1,2666 @@
+{
+  "schemaVersion": 1,
+  "game": "Honkai Impact 3rd",
+  "clientVersion": "9.1.0",
+  "appearanceCode": "C5_04_02",
+  "displayName": "太虚仙忆",
+  "nameStatus": "Confirmed by rendered C5_04_02 outfit and the published Azure Empyrea outfit listing; not inferred only from the numeric suffix.",
+  "nameReference": "https://bh3.mihoyo.com/news/695/120147",
+  "character": "Fu Hua",
+  "battlesuit": "Azure Empyrea / 云墨丹心",
+  "originalAssets": [
+    {
+      "Name": "Avatar",
+      "Container": "assets/asbres/entities/avatar/fuka_c5_in/dress_fuka_c5_04_02/avatar.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a303f703da40756b.wmv",
+      "PathID": -828461044836228112,
+      "Type": "GameObject",
+      "Hash": "d6e7bb78097aa652",
+      "Offset": 53773229
+    },
+    {
+      "Name": "Avatar_Fuka_C5_04_02_ModelAvatar",
+      "Container": "assets/asbres/entities/avatar/fuka_c5_in/_dependencies/model/avatar_fuka_c5_04_02_model.fbx",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\c5808965df75be44.wmv",
+      "PathID": 2444162751148897572,
+      "Type": "Avatar",
+      "Hash": "92a79f2e453b2b8e",
+      "Offset": 3472318
+    }
+  ],
+  "sourceBundles": [
+    {
+      "path": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\2a9cd0db7461adce.wmv",
+      "bytes": 45029762,
+      "sha256": "5c2f63fc277034c86b27893f0e3ec45284691e4a8b718b4df44b164a87e2c23c"
+    },
+    {
+      "path": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5763c013ee7717cb.wmv",
+      "bytes": 52393296,
+      "sha256": "5ef63f2094ca4751bcd2cbf5ad297fbacd8ca2081cf89728a2ee8c29417a7730"
+    },
+    {
+      "path": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\5abda5c2a5f5e72d.wmv",
+      "bytes": 48118646,
+      "sha256": "e8ee982b7b998dc3059c0428bb1ec3c34ec56967bdedaa5b34879c6528fae568"
+    },
+    {
+      "path": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\68dc1517f487a11a.wmv",
+      "bytes": 26721671,
+      "sha256": "58f09580405a2b0c9a3a3b73c492f557fb0c6af3a958e5f34c95e62cfc22a7e5"
+    },
+    {
+      "path": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\71ffe098f339c887.wmv",
+      "bytes": 65817280,
+      "sha256": "1f74768fa82f095cf591f6fa2b4ad33ffafdcc2e7d074d28396f3497b6b7f6d3"
+    },
+    {
+      "path": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\7c562b6ee355f448.wmv",
+      "bytes": 38616874,
+      "sha256": "a63460e441ef5a4e3ccfb45616abb8587ea2f9ba69f7dbbc787f221dcbd52213"
+    },
+    {
+      "path": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a303f703da40756b.wmv",
+      "bytes": 54353894,
+      "sha256": "965a280df75a2b0e70be3a888aa4c41f95db12531d558fba0f261b6b3fc8529a"
+    },
+    {
+      "path": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\b89f40a17c08d4b5.wmv",
+      "bytes": 45555110,
+      "sha256": "b37fd54f35ec114f7a2cfe4cf587ffde998767622f209ab782849ed07fece128"
+    },
+    {
+      "path": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\c5808965df75be44.wmv",
+      "bytes": 61398415,
+      "sha256": "80b96108f49bcf9f098258417e521c57520e2d5e0edfbae4bc86c199348f66c0"
+    },
+    {
+      "path": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\f41d4eb7934a4c3b.wmv",
+      "bytes": 50511873,
+      "sha256": "47df4f29b16d49fc7ae58aacf3d2d7ac24aa87791644647e46371ce5e805b5ee"
+    }
+  ],
+  "dependencyReport": "../hi3-fuhua-extract\\exports\\c5-skin-04-02\\dependencies.json",
+  "dependencyCabCount": 69,
+  "ambiguousDependencyChoices": 8,
+  "missingDependencies": [],
+  "tool": "AnimeStudioUltimate through isolated reflection host (BH3 serial load, explicit GameObject pathId filter)",
+  "model": {
+    "scenePath": "res://assets/azure-skin/Avatar_Fuka_C5_04_02.scn",
+    "originalFbx": "res://assets/azure-skin/Avatar.fbx",
+    "skeletonPath": "Avatar/Skeleton3D",
+    "animationPlayerRoot": "..",
+    "bones": 122,
+    "meshCount": 7,
+    "materialSurfaceCount": 9,
+    "meshVertexCounts": {
+      "Body": 8443,
+      "Eye_L": 40,
+      "Eye_R": 40,
+      "Face": 389,
+      "Hair": 2861,
+      "Mouth": 36,
+      "Umbrella_s": 588
+    },
+    "defaultModelVertexCounts": {
+      "Body": 13319,
+      "body_effect": 150,
+      "Eye_L": 40,
+      "Eye_R": 40,
+      "Face": 389,
+      "Hair": 1972,
+      "Mouth": 36,
+      "Umbrella_s": 588
+    }
+  },
+  "animation": {
+    "embedded": true,
+    "combatClips": 14,
+    "presentationClips": [
+      "presentation/Victory",
+      "presentation/VictoryIdle"
+    ],
+    "sourceCombatModel": "res://assets/azure/Avatar_Fuka_C5_IN.fbx",
+    "sourceVictoryLibrary": "res://assets/motions/azure-victory.res",
+    "sharedBones": 55,
+    "missingBipBones": [],
+    "maximumRestPositionDifference": 7.75301577959908E-06,
+    "maximumRestRotationDifferenceRad": 0.000690533954184502,
+    "allSharedBoneParentsMatch": true,
+    "mapping": "Exact name match only, with track paths changed to Avatar/Skeleton3D:<bone>; incompatible original outfit tracks removed. No body retarget rotation baked.",
+    "newSecondaryBones": "Outfit-specific skirt, ribbons and hair stay at their original rest transforms while following animated parent bones. No claim of the original game cloth simulation.",
+    "clipAudit": "../hi3-fuhua-extract\\exports\\c5-skin-04-02\\scene-verification.json",
+    "defenseCompatibility": "All 53 body/finger bones used by current Lighter defense mapping exist; default C5 rest transforms are numerically equivalent within recorded tolerance."
+  },
+  "visual": {
+    "height": 2.85,
+    "rootBone": "Bip001",
+    "headBone": "Bip001 Head",
+    "hiddenMeshes": [
+      "umbrella_s"
+    ],
+    "textures": {
+      "bodyLightmap": "res://assets/azure-skin/Avatar_Fuka_C5_04_02_Body_LightMap.png",
+      "hairLightmap": "res://assets/azure-skin/Avatar_Fuka_C5_04_02_Hair_LightMap.png",
+      "faceColor": "res://assets/azure-skin/Avatar_Fuka_Texture_Face_Color.png",
+      "faceMask": "res://assets/azure-skin/Avatar_Fuka_FaceMap.png"
+    },
+    "hairShadowTint": [
+      0.8112024,
+      0.8185606,
+      0.9117647
+    ],
+    "faceAtlas": {
+      "scale": [
+        0.25,
+        0.25
+      ],
+      "leftEyeOffset": [
+        0.25,
+        0.75
+      ],
+      "otherOffset": [
+        0,
+        0.75
+      ]
+    },
+    "originalFaceAtlas": {
+      "scale": [
+        0.25,
+        0.25
+      ],
+      "leftEyeOffset": [
+        0.25,
+        0
+      ],
+      "otherOffset": [
+        0,
+        0
+      ]
+    },
+    "atlasExplanation": "Original Unity ST uses bottom-origin UV. The same FBX/Godot UV conversion as default C5 requires y=0.75. FBX preserves .25 tiling but loses left-eye offset. All four face meshes have different vertex ordering and a common ~0.02755m Y offset; after centroid alignment and geometric vertex matching, their UV differences are exactly zero. Face/eye/mouth PNG SHA256 values also match the existing default outfit."
+  },
+  "materialParameters": [
+    {
+      "name": "Avatar_Fuka_Left_Eye",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\2a9cd0db7461adce.wmv",
+      "cab": "CAB-296df02b44ecc4186e85c76b245a9b0f",
+      "pathId": "878048587806463636",
+      "textures": [
+        {
+          "slot": "_MainTex",
+          "name": "1",
+          "pathId": "-4602420128797745415",
+          "cab": "cab-ece954a3962922ee98a117213f4a90d1",
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\f41d4eb7934a4c3b.wmv",
+          "scale": {
+            "X": 0.25,
+            "Y": 0.25
+          },
+          "offset": {
+            "X": 0.25,
+            "Y": 0
+          }
+        }
+      ],
+      "floats": [
+        {
+          "Key": "_BloomFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_BrightnessAmount",
+          "Value": 1
+        },
+        {
+          "Key": "_ColorGrading",
+          "Value": 0
+        },
+        {
+          "Key": "_ColorTolerance",
+          "Value": 0
+        },
+        {
+          "Key": "_ContrastAmount",
+          "Value": 1
+        },
+        {
+          "Key": "_DitherAlpha",
+          "Value": 1
+        },
+        {
+          "Key": "_EmissionFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_EnableDepthBias",
+          "Value": 0
+        },
+        {
+          "Key": "_HueOffset",
+          "Value": 0
+        },
+        {
+          "Key": "_MainSettingGrp",
+          "Value": 0
+        },
+        {
+          "Key": "_OffsetFactor",
+          "Value": -2
+        },
+        {
+          "Key": "_OffsetUnits",
+          "Value": -2
+        },
+        {
+          "Key": "_ReverseHue",
+          "Value": 0
+        },
+        {
+          "Key": "_SaturateOffset",
+          "Value": 0
+        },
+        {
+          "Key": "_SaturationAmount",
+          "Value": 1
+        },
+        {
+          "Key": "_Stencil",
+          "Value": 4
+        },
+        {
+          "Key": "_UsingDitherAlpha",
+          "Value": 0
+        },
+        {
+          "Key": "_ValueOffset",
+          "Value": 0
+        },
+        {
+          "Key": "_ZDepthBias",
+          "Value": 0
+        }
+      ],
+      "colors": [
+        {
+          "Key": "_Color",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_ColorToOffset",
+          "Value": {
+            "R": 0.09411766,
+            "G": 0.427451,
+            "B": 0.6117647,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_EnvColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Avatar_Fuka_Mouth",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\2a9cd0db7461adce.wmv",
+      "cab": "CAB-18699bdcf6232f19c178522cd616fea2",
+      "pathId": "-9179134474775049061",
+      "textures": [
+        {
+          "slot": "_MainTex",
+          "name": "1",
+          "pathId": "6586540738121587177",
+          "cab": "cab-deae9842a4cfe66f61f041d9601c69c1",
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\f41d4eb7934a4c3b.wmv",
+          "scale": {
+            "X": 0.25,
+            "Y": 0.25
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          }
+        }
+      ],
+      "floats": [
+        {
+          "Key": "_BloomFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_BrightnessAmount",
+          "Value": 1
+        },
+        {
+          "Key": "_ColorGrading",
+          "Value": 0
+        },
+        {
+          "Key": "_ColorTolerance",
+          "Value": 0
+        },
+        {
+          "Key": "_ContrastAmount",
+          "Value": 1
+        },
+        {
+          "Key": "_DitherAlpha",
+          "Value": 1
+        },
+        {
+          "Key": "_EmissionFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_EnableDepthBias",
+          "Value": 0
+        },
+        {
+          "Key": "_HueOffset",
+          "Value": 0
+        },
+        {
+          "Key": "_MainSettingGrp",
+          "Value": 0
+        },
+        {
+          "Key": "_OffsetFactor",
+          "Value": -2
+        },
+        {
+          "Key": "_OffsetUnits",
+          "Value": -2
+        },
+        {
+          "Key": "_ReverseHue",
+          "Value": 0
+        },
+        {
+          "Key": "_SaturateOffset",
+          "Value": 0
+        },
+        {
+          "Key": "_SaturationAmount",
+          "Value": 1
+        },
+        {
+          "Key": "_Stencil",
+          "Value": 4
+        },
+        {
+          "Key": "_UsingDitherAlpha",
+          "Value": 0
+        },
+        {
+          "Key": "_ValueOffset",
+          "Value": 0
+        },
+        {
+          "Key": "_ZDepthBias",
+          "Value": 0
+        }
+      ],
+      "colors": [
+        {
+          "Key": "_Color",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_ColorToOffset",
+          "Value": {
+            "R": 0,
+            "G": 0,
+            "B": 0,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_EnvColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Avatar_Fuka_Right_Eye",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\2a9cd0db7461adce.wmv",
+      "cab": "CAB-339435c2cc8f633d96b9a98af5b5ea29",
+      "pathId": "-1472222139836677401",
+      "textures": [
+        {
+          "slot": "_MainTex",
+          "name": "1",
+          "pathId": "-4602420128797745415",
+          "cab": "cab-ece954a3962922ee98a117213f4a90d1",
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\f41d4eb7934a4c3b.wmv",
+          "scale": {
+            "X": 0.25,
+            "Y": 0.25
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          }
+        }
+      ],
+      "floats": [
+        {
+          "Key": "_BloomFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_BrightnessAmount",
+          "Value": 1
+        },
+        {
+          "Key": "_ColorGrading",
+          "Value": 0
+        },
+        {
+          "Key": "_ColorTolerance",
+          "Value": 0
+        },
+        {
+          "Key": "_ContrastAmount",
+          "Value": 1
+        },
+        {
+          "Key": "_DitherAlpha",
+          "Value": 1
+        },
+        {
+          "Key": "_EmissionFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_EnableDepthBias",
+          "Value": 0
+        },
+        {
+          "Key": "_HueOffset",
+          "Value": 0
+        },
+        {
+          "Key": "_MainSettingGrp",
+          "Value": 0
+        },
+        {
+          "Key": "_OffsetFactor",
+          "Value": -2
+        },
+        {
+          "Key": "_OffsetUnits",
+          "Value": -2
+        },
+        {
+          "Key": "_ReverseHue",
+          "Value": 0
+        },
+        {
+          "Key": "_SaturateOffset",
+          "Value": 0
+        },
+        {
+          "Key": "_SaturationAmount",
+          "Value": 1
+        },
+        {
+          "Key": "_Stencil",
+          "Value": 4
+        },
+        {
+          "Key": "_UsingDitherAlpha",
+          "Value": 0
+        },
+        {
+          "Key": "_ValueOffset",
+          "Value": 0
+        },
+        {
+          "Key": "_ZDepthBias",
+          "Value": 0
+        }
+      ],
+      "colors": [
+        {
+          "Key": "_Color",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_ColorToOffset",
+          "Value": {
+            "R": 0.09411766,
+            "G": 0.427451,
+            "B": 0.6117647,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_EnvColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Avatar_Fuka_C5_04_02_Material_Body",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\c5808965df75be44.wmv",
+      "cab": "CAB-e2cf2bf775b6e2fa2ff0a54c0e9b6b4c",
+      "pathId": "-8777079500315475454",
+      "textures": [
+        {
+          "slot": "_LightMapTex",
+          "name": "Avatar_Fuka_C5_04_02_Body_LightMap",
+          "pathId": "4681232811958353638",
+          "cab": "cab-d638287f0bc87c70a35f31ee1def7499",
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\b89f40a17c08d4b5.wmv",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          }
+        },
+        {
+          "slot": "_MainTex",
+          "name": "Avatar_Fuka_C5_04_02_Body_Color",
+          "pathId": "-8244918975568405017",
+          "cab": "cab-1e6cf326a0aa5d18677c8af2de6e41c3",
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\b89f40a17c08d4b5.wmv",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          }
+        }
+      ],
+      "floats": [
+        {
+          "Key": "_AlphaPosition",
+          "Value": 0
+        },
+        {
+          "Key": "_Amplitude",
+          "Value": 1
+        },
+        {
+          "Key": "_BackFaceUseUV2",
+          "Value": 1
+        },
+        {
+          "Key": "_BlockDynamic",
+          "Value": 0
+        },
+        {
+          "Key": "_BlockEmission",
+          "Value": 1
+        },
+        {
+          "Key": "_BlockSize",
+          "Value": 1
+        },
+        {
+          "Key": "_BlockYLerp",
+          "Value": 1
+        },
+        {
+          "Key": "_BloomFactor",
+          "Value": 0.6
+        },
+        {
+          "Key": "_BloomFactor2",
+          "Value": 0.6
+        },
+        {
+          "Key": "_BloomFactor3",
+          "Value": 1.25
+        },
+        {
+          "Key": "_BloomFactor4",
+          "Value": 1
+        },
+        {
+          "Key": "_BloomFactor5",
+          "Value": 1
+        },
+        {
+          "Key": "_BrightnessAmount",
+          "Value": 1
+        },
+        {
+          "Key": "_BrightnessAmount1",
+          "Value": 1
+        },
+        {
+          "Key": "_ColorGrading",
+          "Value": 0
+        },
+        {
+          "Key": "_ContrastAmount",
+          "Value": 1
+        },
+        {
+          "Key": "_ContrastAmount1",
+          "Value": 1
+        },
+        {
+          "Key": "_DisAngle",
+          "Value": 0
+        },
+        {
+          "Key": "_DisColorScale",
+          "Value": 1
+        },
+        {
+          "Key": "_DisableShadow",
+          "Value": 0
+        },
+        {
+          "Key": "_DissolveUseUV2",
+          "Value": 1
+        },
+        {
+          "Key": "_DitherAlpha",
+          "Value": 1
+        },
+        {
+          "Key": "_Edge",
+          "Value": 0.2
+        },
+        {
+          "Key": "_EmissionStr",
+          "Value": 0
+        },
+        {
+          "Key": "_FadeDistance",
+          "Value": 0.5
+        },
+        {
+          "Key": "_FadeOffset",
+          "Value": 1
+        },
+        {
+          "Key": "_Frequency",
+          "Value": 2
+        },
+        {
+          "Key": "_HRRimIntensity",
+          "Value": 0
+        },
+        {
+          "Key": "_HRRimPower",
+          "Value": 0.1
+        },
+        {
+          "Key": "_HSVMask",
+          "Value": 0
+        },
+        {
+          "Key": "_Hardness",
+          "Value": 0
+        },
+        {
+          "Key": "_LengthWaysDis",
+          "Value": 0
+        },
+        {
+          "Key": "_LengthWaysDisBlend",
+          "Value": 0
+        },
+        {
+          "Key": "_LightArea",
+          "Value": 0.51
+        },
+        {
+          "Key": "_MaskDisTexScale",
+          "Value": 1
+        },
+        {
+          "Key": "_MaskOffsetSpeed",
+          "Value": 0
+        },
+        {
+          "Key": "_MaxOutlineZOffset",
+          "Value": 1
+        },
+        {
+          "Key": "_MoreHardRimColor",
+          "Value": 0
+        },
+        {
+          "Key": "_More_Outline_Color",
+          "Value": 1
+        },
+        {
+          "Key": "_NoiseIntensity",
+          "Value": 5
+        },
+        {
+          "Key": "_OffestFactor",
+          "Value": 0
+        },
+        {
+          "Key": "_OffestUnit",
+          "Value": 0
+        },
+        {
+          "Key": "_OnlyUseMaskDis",
+          "Value": 0
+        },
+        {
+          "Key": "_Opaqueness",
+          "Value": 1
+        },
+        {
+          "Key": "_OutlineCamStart",
+          "Value": 1000
+        },
+        {
+          "Key": "_OutlineWidth",
+          "Value": 0.04
+        },
+        {
+          "Key": "_RGBias",
+          "Value": 0
+        },
+        {
+          "Key": "_RGBloomFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_RGRatio",
+          "Value": 0.5
+        },
+        {
+          "Key": "_RGScale",
+          "Value": 1
+        },
+        {
+          "Key": "_RGShininess",
+          "Value": 1
+        },
+        {
+          "Key": "_RimGlow",
+          "Value": 0
+        },
+        {
+          "Key": "_SPCubeMapBrightness",
+          "Value": 1.26
+        },
+        {
+          "Key": "_SPCubeMapIntensity",
+          "Value": 0
+        },
+        {
+          "Key": "_SPCubeMapNoiseIntensity",
+          "Value": 0
+        },
+        {
+          "Key": "_SPIntensity",
+          "Value": 0.5
+        },
+        {
+          "Key": "_SPNoiseScaler",
+          "Value": 1
+        },
+        {
+          "Key": "_SPOpaqueness",
+          "Value": 1
+        },
+        {
+          "Key": "_SPTransition",
+          "Value": 0
+        },
+        {
+          "Key": "_SPTransitionBloomFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_SPTransitionEmissionScaler",
+          "Value": 1
+        },
+        {
+          "Key": "_SaturationAmount",
+          "Value": 1
+        },
+        {
+          "Key": "_SaturationAmount1",
+          "Value": 1
+        },
+        {
+          "Key": "_Scale",
+          "Value": 0.01
+        },
+        {
+          "Key": "_SecondShadow",
+          "Value": 0.51
+        },
+        {
+          "Key": "_ShadowRampTexUsed",
+          "Value": 1
+        },
+        {
+          "Key": "_Shininess",
+          "Value": 11
+        },
+        {
+          "Key": "_Smooth",
+          "Value": 0.04
+        },
+        {
+          "Key": "_Soft",
+          "Value": 0
+        },
+        {
+          "Key": "_SpecMulti",
+          "Value": 1.95
+        },
+        {
+          "Key": "_SpecialState",
+          "Value": 0
+        },
+        {
+          "Key": "_Specular",
+          "Value": 1
+        },
+        {
+          "Key": "_Stencil",
+          "Value": 4
+        },
+        {
+          "Key": "_TintColorEdge",
+          "Value": 0
+        },
+        {
+          "Key": "_TintColorPower",
+          "Value": 1
+        },
+        {
+          "Key": "_UseBChannel",
+          "Value": 0
+        },
+        {
+          "Key": "_UsingDitherAlpha",
+          "Value": 0
+        },
+        {
+          "Key": "_VertexAlphaFactor",
+          "Value": 0
+        },
+        {
+          "Key": "_WithFog",
+          "Value": 0
+        }
+      ],
+      "colors": [
+        {
+          "Key": "_BackFaceColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_ButtomBlockColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_ButtomColor",
+          "Value": {
+            "R": 0,
+            "G": 0,
+            "B": 0,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_Color",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_DisColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_EnvColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_FirstShadowMultColor",
+          "Value": {
+            "R": 0.9372549,
+            "G": 0.7647059,
+            "B": 0.78039217,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_FirstShadowMultColor2",
+          "Value": {
+            "R": 0.72156864,
+            "G": 0.7725491,
+            "B": 0.8980393,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_FirstShadowMultColor3",
+          "Value": {
+            "R": 0.8308824,
+            "G": 0.7836923,
+            "B": 0.7331315,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_FirstShadowMultColor4",
+          "Value": {
+            "R": 0.9266988,
+            "G": 0.88532656,
+            "B": 0.9632353,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_FirstShadowMultColor5",
+          "Value": {
+            "R": 0.7086938,
+            "G": 0.73924094,
+            "B": 0.8308824,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_HRRimColor2",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_HRRimColor3",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_HRRimColor4",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_HRRimColor5",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_LightSpecColor",
+          "Value": {
+            "R": 0.882353,
+            "G": 0.86159176,
+            "B": 0.86159176,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_MaskTillingOffset",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 0,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_NoiseTillingOffset",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 0,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_OutlineColor",
+          "Value": {
+            "R": 0.5514706,
+            "G": 0.26762542,
+            "B": 0.26762542,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_OutlineColor2",
+          "Value": {
+            "R": 0.11764707,
+            "G": 0.1137255,
+            "B": 0.20392159,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_OutlineColor3",
+          "Value": {
+            "R": 0.1544118,
+            "G": 0.10279503,
+            "B": 0.037467565,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_OutlineColor4",
+          "Value": {
+            "R": 0.09948096,
+            "G": 0.09948096,
+            "B": 0.16911763,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_OutlineColor5",
+          "Value": {
+            "R": 0,
+            "G": 0.04705883,
+            "B": 0.08235294,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_RGColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_SPCubeMapColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_SPCubeMapOffset",
+          "Value": {
+            "R": 0,
+            "G": 0,
+            "B": 0,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_SPNoiseOffsetSpeed",
+          "Value": {
+            "R": 0,
+            "G": 0,
+            "B": 0,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_SPOldColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_SPOutlineColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_SPTransitionColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_SecondShadowMultColor",
+          "Value": {
+            "R": 0.665279,
+            "G": 0.71736836,
+            "B": 0.8455882,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_TintColor1",
+          "Value": {
+            "R": 1,
+            "G": 0,
+            "B": 0,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_TintColor2",
+          "Value": {
+            "R": 0,
+            "G": 1,
+            "B": 0,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_TopBlockColor",
+          "Value": {
+            "R": 0,
+            "G": 0,
+            "B": 0,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_TopColor",
+          "Value": {
+            "R": 0,
+            "G": 0,
+            "B": 0,
+            "A": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Avatar_Fuka_C5_04_02_Material_Hair",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\c5808965df75be44.wmv",
+      "cab": "CAB-f58006b9fcd5b80a8c33247f51fa41fe",
+      "pathId": "3772961155454554794",
+      "textures": [
+        {
+          "slot": "_LightMapTex",
+          "name": "Avatar_Fuka_C5_04_02_Hair_LightMap",
+          "pathId": "7036011445337823559",
+          "cab": "CAB-f58006b9fcd5b80a8c33247f51fa41fe",
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\c5808965df75be44.wmv",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          }
+        },
+        {
+          "slot": "_MainTex",
+          "name": "Avatar_Fuka_C5_04_02_Hair_Color",
+          "pathId": "-6649454762485390252",
+          "cab": "CAB-f58006b9fcd5b80a8c33247f51fa41fe",
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\c5808965df75be44.wmv",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          }
+        }
+      ],
+      "floats": [
+        {
+          "Key": "_AlphaClipThreshold",
+          "Value": 0.1
+        },
+        {
+          "Key": "_AlphaPosition",
+          "Value": 0
+        },
+        {
+          "Key": "_BloomFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_BrightnessAmount",
+          "Value": 1
+        },
+        {
+          "Key": "_BrightnessAmount1",
+          "Value": 1
+        },
+        {
+          "Key": "_ColorGrading",
+          "Value": 0
+        },
+        {
+          "Key": "_ContrastAmount",
+          "Value": 1
+        },
+        {
+          "Key": "_ContrastAmount1",
+          "Value": 1
+        },
+        {
+          "Key": "_Cull",
+          "Value": 2
+        },
+        {
+          "Key": "_DisAngle",
+          "Value": 0
+        },
+        {
+          "Key": "_DisColorScale",
+          "Value": 1
+        },
+        {
+          "Key": "_DissolveUseUV2",
+          "Value": 1
+        },
+        {
+          "Key": "_DitherAlpha",
+          "Value": 1
+        },
+        {
+          "Key": "_Edge",
+          "Value": 0.2
+        },
+        {
+          "Key": "_EmissionStr",
+          "Value": 0
+        },
+        {
+          "Key": "_FadeDistance",
+          "Value": 0.5
+        },
+        {
+          "Key": "_FadeOffset",
+          "Value": 1
+        },
+        {
+          "Key": "_HRRimIntensity",
+          "Value": 0
+        },
+        {
+          "Key": "_HRRimPower",
+          "Value": 0.1
+        },
+        {
+          "Key": "_HairEffectProgs",
+          "Value": 1
+        },
+        {
+          "Key": "_Haireff",
+          "Value": 0
+        },
+        {
+          "Key": "_LengthWaysDis",
+          "Value": 0
+        },
+        {
+          "Key": "_LengthWaysDisBlend",
+          "Value": 0
+        },
+        {
+          "Key": "_LightArea",
+          "Value": 0.51
+        },
+        {
+          "Key": "_MaskDisTexScale",
+          "Value": 1
+        },
+        {
+          "Key": "_MaskOffsetSpeed",
+          "Value": 0
+        },
+        {
+          "Key": "_MaxOutlineZOffset",
+          "Value": 1
+        },
+        {
+          "Key": "_MoreHardRimColor",
+          "Value": 0
+        },
+        {
+          "Key": "_NoiseIntensity",
+          "Value": 5
+        },
+        {
+          "Key": "_OnlyUseMaskDis",
+          "Value": 0
+        },
+        {
+          "Key": "_Opaqueness",
+          "Value": 1
+        },
+        {
+          "Key": "_OutlineCamStart",
+          "Value": 1000
+        },
+        {
+          "Key": "_OutlineLerpOffset",
+          "Value": 1.5
+        },
+        {
+          "Key": "_OutlineWidth",
+          "Value": 0.04
+        },
+        {
+          "Key": "_RGBias",
+          "Value": 0
+        },
+        {
+          "Key": "_RGBloomFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_RGRatio",
+          "Value": 0.5
+        },
+        {
+          "Key": "_RGScale",
+          "Value": 1
+        },
+        {
+          "Key": "_RGShininess",
+          "Value": 1
+        },
+        {
+          "Key": "_RimGlow",
+          "Value": 0
+        },
+        {
+          "Key": "_SPCubeMapBrightness",
+          "Value": 1.26
+        },
+        {
+          "Key": "_SPCubeMapIntensity",
+          "Value": 0
+        },
+        {
+          "Key": "_SPCubeMapNoiseIntensity",
+          "Value": 0
+        },
+        {
+          "Key": "_SPIntensity",
+          "Value": 0.5
+        },
+        {
+          "Key": "_SPNoiseScaler",
+          "Value": 1
+        },
+        {
+          "Key": "_SPOpaqueness",
+          "Value": 1
+        },
+        {
+          "Key": "_SPTransition",
+          "Value": 0
+        },
+        {
+          "Key": "_SPTransitionBloomFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_SPTransitionEmissionScaler",
+          "Value": 1
+        },
+        {
+          "Key": "_SaturationAmount",
+          "Value": 1
+        },
+        {
+          "Key": "_SaturationAmount1",
+          "Value": 1
+        },
+        {
+          "Key": "_Scale",
+          "Value": 0.01
+        },
+        {
+          "Key": "_SecondShadow",
+          "Value": 0.51
+        },
+        {
+          "Key": "_Shininess",
+          "Value": 3
+        },
+        {
+          "Key": "_Soft",
+          "Value": 0
+        },
+        {
+          "Key": "_SpecMulti",
+          "Value": 0.1
+        },
+        {
+          "Key": "_SpecialState",
+          "Value": 0
+        },
+        {
+          "Key": "_Stencil",
+          "Value": 4
+        },
+        {
+          "Key": "_TintColorEdge",
+          "Value": 0
+        },
+        {
+          "Key": "_TintColorPower",
+          "Value": 1
+        },
+        {
+          "Key": "_UseAlphaClip",
+          "Value": 0
+        },
+        {
+          "Key": "_UseLerpColor",
+          "Value": 0
+        },
+        {
+          "Key": "_UsingDitherAlpha",
+          "Value": 0
+        },
+        {
+          "Key": "_VertexAlphaFactor",
+          "Value": 0
+        },
+        {
+          "Key": "_WithFog",
+          "Value": 0
+        }
+      ],
+      "colors": [
+        {
+          "Key": "_Color",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_DisColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_EnvColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_FirstShadowMultColor",
+          "Value": {
+            "R": 0.8112024,
+            "G": 0.8185606,
+            "B": 0.9117647,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_HRRimColor2",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_HRRimColor3",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_HRRimColor4",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_HRRimColor5",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_LightSpecColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_MaskTillingOffset",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 0,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_NoiseTillingOffset",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 0,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_OutlineColor",
+          "Value": {
+            "R": 0.19215688,
+            "G": 0.15294118,
+            "B": 0.2901961,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_OutlineColor2",
+          "Value": {
+            "R": 0,
+            "G": 0,
+            "B": 0,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_RGColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_SPCubeMapColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_SPCubeMapOffset",
+          "Value": {
+            "R": 0,
+            "G": 0,
+            "B": 0,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_SPNoiseOffsetSpeed",
+          "Value": {
+            "R": 0,
+            "G": 0,
+            "B": 0,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_SPOldColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_SPOutlineColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_SPTransitionColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_SecondShadowMultColor",
+          "Value": {
+            "R": 0.72745454,
+            "G": 0.73609847,
+            "B": 0.8455882,
+            "A": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Avatar_Fuka_C5_04_02_Material_Umbrella",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\c5808965df75be44.wmv",
+      "cab": "CAB-6ad10bb387725ef568d23a8783a60a74",
+      "pathId": "807347126498191162",
+      "textures": [
+        {
+          "slot": "_MainTex",
+          "name": "Avatar_Fuka_C5_04_02_Weapon_Color",
+          "pathId": "-376773518150104569",
+          "cab": "CAB-6ad10bb387725ef568d23a8783a60a74",
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\c5808965df75be44.wmv",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          }
+        }
+      ],
+      "floats": [
+        {
+          "Key": "_AlphaClipThreshold",
+          "Value": 0.1
+        },
+        {
+          "Key": "_AlphaPosition",
+          "Value": 0
+        },
+        {
+          "Key": "_BloomFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_BrightnessAmount",
+          "Value": 1
+        },
+        {
+          "Key": "_BrightnessAmount1",
+          "Value": 1
+        },
+        {
+          "Key": "_ColorGrading",
+          "Value": 0
+        },
+        {
+          "Key": "_ContrastAmount",
+          "Value": 1
+        },
+        {
+          "Key": "_ContrastAmount1",
+          "Value": 1
+        },
+        {
+          "Key": "_Cull",
+          "Value": 2
+        },
+        {
+          "Key": "_DisAngle",
+          "Value": 0
+        },
+        {
+          "Key": "_DisColorScale",
+          "Value": 1
+        },
+        {
+          "Key": "_DissolveUseUV2",
+          "Value": 1
+        },
+        {
+          "Key": "_DitherAlpha",
+          "Value": 1
+        },
+        {
+          "Key": "_Edge",
+          "Value": 0.2
+        },
+        {
+          "Key": "_EmissionStr",
+          "Value": 0
+        },
+        {
+          "Key": "_FadeDistance",
+          "Value": 0.5
+        },
+        {
+          "Key": "_FadeOffset",
+          "Value": 1
+        },
+        {
+          "Key": "_HRRimIntensity",
+          "Value": 0
+        },
+        {
+          "Key": "_HRRimPower",
+          "Value": 0.1
+        },
+        {
+          "Key": "_HairEffectProgs",
+          "Value": 1
+        },
+        {
+          "Key": "_Haireff",
+          "Value": 0
+        },
+        {
+          "Key": "_LengthWaysDis",
+          "Value": 0
+        },
+        {
+          "Key": "_LengthWaysDisBlend",
+          "Value": 0
+        },
+        {
+          "Key": "_LightArea",
+          "Value": 0.51
+        },
+        {
+          "Key": "_MaskDisTexScale",
+          "Value": 1
+        },
+        {
+          "Key": "_MaskOffsetSpeed",
+          "Value": 0
+        },
+        {
+          "Key": "_MaxOutlineZOffset",
+          "Value": 0
+        },
+        {
+          "Key": "_MoreHardRimColor",
+          "Value": 0
+        },
+        {
+          "Key": "_NoiseIntensity",
+          "Value": 5
+        },
+        {
+          "Key": "_OnlyUseMaskDis",
+          "Value": 0
+        },
+        {
+          "Key": "_Opaqueness",
+          "Value": 1
+        },
+        {
+          "Key": "_OutlineCamStart",
+          "Value": 1000
+        },
+        {
+          "Key": "_OutlineLerpOffset",
+          "Value": 1.5
+        },
+        {
+          "Key": "_OutlineWidth",
+          "Value": 0.04
+        },
+        {
+          "Key": "_RGBias",
+          "Value": 0
+        },
+        {
+          "Key": "_RGBloomFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_RGRatio",
+          "Value": 0.5
+        },
+        {
+          "Key": "_RGScale",
+          "Value": 1
+        },
+        {
+          "Key": "_RGShininess",
+          "Value": 1
+        },
+        {
+          "Key": "_RimGlow",
+          "Value": 0
+        },
+        {
+          "Key": "_SPCubeMapBrightness",
+          "Value": 1.26
+        },
+        {
+          "Key": "_SPCubeMapIntensity",
+          "Value": 0
+        },
+        {
+          "Key": "_SPCubeMapNoiseIntensity",
+          "Value": 0
+        },
+        {
+          "Key": "_SPIntensity",
+          "Value": 0.5
+        },
+        {
+          "Key": "_SPNoiseScaler",
+          "Value": 1
+        },
+        {
+          "Key": "_SPOpaqueness",
+          "Value": 1
+        },
+        {
+          "Key": "_SPTransition",
+          "Value": 0
+        },
+        {
+          "Key": "_SPTransitionBloomFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_SPTransitionEmissionScaler",
+          "Value": 1
+        },
+        {
+          "Key": "_SaturationAmount",
+          "Value": 1
+        },
+        {
+          "Key": "_SaturationAmount1",
+          "Value": 1
+        },
+        {
+          "Key": "_Scale",
+          "Value": 0.01
+        },
+        {
+          "Key": "_SecondShadow",
+          "Value": 0.51
+        },
+        {
+          "Key": "_Shininess",
+          "Value": 0.1
+        },
+        {
+          "Key": "_Soft",
+          "Value": 0
+        },
+        {
+          "Key": "_SpecMulti",
+          "Value": 0
+        },
+        {
+          "Key": "_SpecialState",
+          "Value": 1
+        },
+        {
+          "Key": "_Stencil",
+          "Value": 128
+        },
+        {
+          "Key": "_TintColorEdge",
+          "Value": 0
+        },
+        {
+          "Key": "_TintColorPower",
+          "Value": 1
+        },
+        {
+          "Key": "_UseAlphaClip",
+          "Value": 0
+        },
+        {
+          "Key": "_UseLerpColor",
+          "Value": 0
+        },
+        {
+          "Key": "_UsingDitherAlpha",
+          "Value": 0
+        },
+        {
+          "Key": "_VertexAlphaFactor",
+          "Value": 0
+        },
+        {
+          "Key": "_WithFog",
+          "Value": 0
+        }
+      ],
+      "colors": [
+        {
+          "Key": "_Color",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_DisColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_EnvColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_FirstShadowMultColor",
+          "Value": {
+            "R": 0.6149979,
+            "G": 0.6310472,
+            "B": 0.6691177,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_HRRimColor2",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_HRRimColor3",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_HRRimColor4",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_HRRimColor5",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_LightSpecColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_MaskTillingOffset",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 0,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_NoiseTillingOffset",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 0,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_OutlineColor",
+          "Value": {
+            "R": 0.07352942,
+            "G": 0.038386684,
+            "B": 0.038386684,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_OutlineColor2",
+          "Value": {
+            "R": 0,
+            "G": 0,
+            "B": 0,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_RGColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_SPCubeMapColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_SPCubeMapOffset",
+          "Value": {
+            "R": 0,
+            "G": 0,
+            "B": 0,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_SPNoiseOffsetSpeed",
+          "Value": {
+            "R": 0,
+            "G": 0,
+            "B": 0,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_SPOldColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_SPOutlineColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_SPTransitionColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_SecondShadowMultColor",
+          "Value": {
+            "R": 0.6149979,
+            "G": 0.6310472,
+            "B": 0.6691177,
+            "A": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Avatar_Fuka_C5_04_02_Material_Face",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\c5808965df75be44.wmv",
+      "cab": "CAB-11ba1ad43b5d1cc3957ae0a1249cc51d",
+      "pathId": "4280272203404751819",
+      "textures": [
+        {
+          "slot": "_FaceMapTex",
+          "name": "Avatar_Fuka_FaceMap",
+          "pathId": "-6032198340494438252",
+          "cab": "cab-b36de49c1f3bdccae31deccee9e05a02",
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\2a9cd0db7461adce.wmv",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          }
+        },
+        {
+          "slot": "_LightMapTex",
+          "name": "Avatar_Fuka_C5_04_02_Texture_Face_LightMap",
+          "pathId": "-4160203759867828646",
+          "cab": "CAB-11ba1ad43b5d1cc3957ae0a1249cc51d",
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\c5808965df75be44.wmv",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          }
+        },
+        {
+          "slot": "_MainTex",
+          "name": "Avatar_Fuka_Texture_Face_Color",
+          "pathId": "2315068055971536748",
+          "cab": "cab-87295660e52202bb2cf2255957252542",
+          "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\2a9cd0db7461adce.wmv",
+          "scale": {
+            "X": 1,
+            "Y": 1
+          },
+          "offset": {
+            "X": 0,
+            "Y": 0
+          }
+        }
+      ],
+      "floats": [
+        {
+          "Key": "_BloomFactor",
+          "Value": 0.5
+        },
+        {
+          "Key": "_BrightnessAmount",
+          "Value": 1
+        },
+        {
+          "Key": "_ColorGrading",
+          "Value": 0
+        },
+        {
+          "Key": "_ContrastAmount",
+          "Value": 1
+        },
+        {
+          "Key": "_DitherAlpha",
+          "Value": 1
+        },
+        {
+          "Key": "_FadeDistance",
+          "Value": 0
+        },
+        {
+          "Key": "_FadeOffset",
+          "Value": 0
+        },
+        {
+          "Key": "_MaxOutlineZOffset",
+          "Value": 1
+        },
+        {
+          "Key": "_Opaqueness",
+          "Value": 1
+        },
+        {
+          "Key": "_OutlineCamStart",
+          "Value": 1000
+        },
+        {
+          "Key": "_OutlineWidth",
+          "Value": 0.05
+        },
+        {
+          "Key": "_RGBias",
+          "Value": 0
+        },
+        {
+          "Key": "_RGBloomFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_RGRatio",
+          "Value": 0.5
+        },
+        {
+          "Key": "_RGScale",
+          "Value": 1
+        },
+        {
+          "Key": "_RGShininess",
+          "Value": 1
+        },
+        {
+          "Key": "_RimGlow",
+          "Value": 0
+        },
+        {
+          "Key": "_SPCubeMapBrightness",
+          "Value": 1.26
+        },
+        {
+          "Key": "_SPCubeMapIntensity",
+          "Value": 0
+        },
+        {
+          "Key": "_SPCubeMapNoiseIntensity",
+          "Value": 0
+        },
+        {
+          "Key": "_SPIntensity",
+          "Value": 0.5
+        },
+        {
+          "Key": "_SPNoiseScaler",
+          "Value": 1
+        },
+        {
+          "Key": "_SPTransition",
+          "Value": 0
+        },
+        {
+          "Key": "_SPTransitionBloomFactor",
+          "Value": 1
+        },
+        {
+          "Key": "_SPTransitionEmissionScaler",
+          "Value": 1
+        },
+        {
+          "Key": "_SaturationAmount",
+          "Value": 1
+        },
+        {
+          "Key": "_Scale",
+          "Value": 0.01
+        },
+        {
+          "Key": "_ShadowFeather",
+          "Value": 0.001
+        },
+        {
+          "Key": "_SpecialState",
+          "Value": 0
+        },
+        {
+          "Key": "_Stencil",
+          "Value": 4
+        },
+        {
+          "Key": "_UsingDitherAlpha",
+          "Value": 0
+        },
+        {
+          "Key": "_VertexAlphaFactor",
+          "Value": 0
+        }
+      ],
+      "colors": [
+        {
+          "Key": "_Color",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_EnvColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_OutlineColor",
+          "Value": {
+            "R": 0.5514706,
+            "G": 0.26762542,
+            "B": 0.26762542,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_RGColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_SPCubeMapColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_SPCubeMapOffset",
+          "Value": {
+            "R": 0,
+            "G": 0,
+            "B": 0,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_SPNoiseOffsetSpeed",
+          "Value": {
+            "R": 0,
+            "G": 0,
+            "B": 0,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_SPOldColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 0
+          }
+        },
+        {
+          "Key": "_SPOutlineColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_SPTransitionColor",
+          "Value": {
+            "R": 1,
+            "G": 1,
+            "B": 1,
+            "A": 1
+          }
+        },
+        {
+          "Key": "_ShadowColor",
+          "Value": {
+            "R": 0.9372549,
+            "G": 0.7647059,
+            "B": 0.78039217,
+            "A": 1
+          }
+        }
+      ]
+    }
+  ],
+  "sharedFaceTextures": [
+    {
+      "file": "1.png",
+      "sameSha256AsDefault": true,
+      "sha256": "d0bff4da00b0660749af27bc63a57a91a26d175086073f6e9b303fd737173696"
+    },
+    {
+      "file": "1 (1).png",
+      "sameSha256AsDefault": true,
+      "sha256": "637e4485ab47bba8ff3542221f265bc84e56474118052c538eba73ef7cec93f5"
+    },
+    {
+      "file": "Avatar_Fuka_FaceMap.png",
+      "sameSha256AsDefault": true,
+      "sha256": "b2881ef8d8561c172807a0e19c2c5eccf8adc990afef4a7151f2dba8ee2b8385"
+    },
+    {
+      "file": "Avatar_Fuka_Texture_Face_Color.png",
+      "sameSha256AsDefault": true,
+      "sha256": "8e95789d461a1b3d2f51c5993121523545d7c9f521fde7b51e5054599226ab69"
+    }
+  ],
+  "faceUvComparison": [
+    {
+      "arrayIndexUvDifference": 0.888922035694122,
+      "centroidOffset": [
+        -7.45058059692383E-09,
+        -0.0275536775588989,
+        -0.000554051250219345
+      ],
+      "count": 40,
+      "maximumCenteredVertexPositionDifference": 4.77302592116757E-07,
+      "maximumUvDifferenceAfterCenteredVertexMatching": 0.0,
+      "mesh": "Eye_L"
+    },
+    {
+      "arrayIndexUvDifference": 0.878782689571381,
+      "centroidOffset": [
+        -1.86264514923096E-08,
+        -0.0275541543960571,
+        -0.00055406242609024
+      ],
+      "count": 40,
+      "maximumCenteredVertexPositionDifference": 2.63417803125776E-08,
+      "maximumUvDifferenceAfterCenteredVertexMatching": 0.0,
+      "mesh": "Eye_R"
+    },
+    {
+      "arrayIndexUvDifference": 0.91615241765976,
+      "centroidOffset": [
+        -1.0037587649947E-08,
+        -0.027553915977478,
+        -0.00055406242609024
+      ],
+      "count": 36,
+      "maximumCenteredVertexPositionDifference": 2.39065258256232E-07,
+      "maximumUvDifferenceAfterCenteredVertexMatching": 0.0,
+      "mesh": "Mouth"
+    },
+    {
+      "arrayIndexUvDifference": 0.968231618404388,
+      "centroidOffset": [
+        -9.76811165287472E-09,
+        -0.0275534391403198,
+        -0.000554092228412628
+      ],
+      "count": 389,
+      "maximumCenteredVertexPositionDifference": 7.17193358923396E-07,
+      "maximumUvDifferenceAfterCenteredVertexMatching": 0.0,
+      "mesh": "Face"
+    }
+  ],
+  "verification": {
+    "headlessSceneReload": true,
+    "unresolvedTrackTargets": 0,
+    "finiteKeys": 63233,
+    "sampledPoses60Fps": 2317,
+    "allNineSurfacesHaveAlbedo": true,
+    "gpuVisualReview": false,
+    "browserReview": false,
+    "reports": [
+      "../hi3-fuhua-extract\\exports\\c5-skin-04-02\\godot-probe.json",
+      "../hi3-fuhua-extract\\exports\\c5-skin-04-02\\scene-verification.json",
+      "../hi3-fuhua-extract\\exports\\c5-skin-04-02\\reload-verification.json"
+    ]
+  },
+  "outputs": [
+    {
+      "file": "1 (1).png",
+      "bytes": 54198,
+      "sha256": "637e4485ab47bba8ff3542221f265bc84e56474118052c538eba73ef7cec93f5"
+    },
+    {
+      "file": "1.png",
+      "bytes": 209001,
+      "sha256": "d0bff4da00b0660749af27bc63a57a91a26d175086073f6e9b303fd737173696"
+    },
+    {
+      "file": "Avatar.fbx",
+      "bytes": 1090928,
+      "sha256": "d13bcaa2812faf8f8669245b78d86e78b4bb6ee982c0056f13826725b5d39862"
+    },
+    {
+      "file": "Avatar_Fuka_C5_04_02.scn",
+      "bytes": 1581130,
+      "sha256": "484966b8f65facfc94e99e71c74a8790d70df938549573c16cf5bcede8c37497"
+    },
+    {
+      "file": "Avatar_Fuka_C5_04_02_Body_Color.png",
+      "bytes": 519820,
+      "sha256": "2bdef89447361aeeb206c2b6b706aa0b4e2cf027e14b3091397091a5ce698227"
+    },
+    {
+      "file": "Avatar_Fuka_C5_04_02_Body_LightMap.png",
+      "bytes": 402986,
+      "sha256": "ec8a77e0dd7804ae251ad806e5cf29b6cf25eef6d74abd99e2317678f1ce6694"
+    },
+    {
+      "file": "Avatar_Fuka_C5_04_02_Hair_Color.png",
+      "bytes": 533302,
+      "sha256": "74e5623162a9603ed9dcacbf2ca99dad7872cb879f00d2c5284c069c83dccfbc"
+    },
+    {
+      "file": "Avatar_Fuka_C5_04_02_Hair_LightMap.png",
+      "bytes": 176540,
+      "sha256": "8d1a8d6a75339c5ce7cc4e9ccc8eb1ae2aaa016fb9f3b123eeb3ec8a27b836c9"
+    },
+    {
+      "file": "Avatar_Fuka_C5_04_02_Texture_Face_LightMap.png",
+      "bytes": 38122,
+      "sha256": "f67829949772ee7faa5167839784b5bde5f0b46fc44d8a22c620714892002ebe"
+    },
+    {
+      "file": "Avatar_Fuka_C5_04_02_Weapon_Color.png",
+      "bytes": 273724,
+      "sha256": "6e8ae337b6eec36afcc1630b4b8797b526b70dabe09b52ba440d92ccab170f77"
+    },
+    {
+      "file": "Avatar_Fuka_FaceMap.png",
+      "bytes": 35538,
+      "sha256": "b2881ef8d8561c172807a0e19c2c5eccf8adc990afef4a7151f2dba8ee2b8385"
+    },
+    {
+      "file": "Avatar_Fuka_Texture_Face_Color.png",
+      "bytes": 93189,
+      "sha256": "8e95789d461a1b3d2f51c5993121523545d7c9f521fde7b51e5054599226ab69"
+    }
+  ],
+  "runtimeAdaptation": {
+    "secondaryMotion": "scripts/secondary_motion.gd",
+    "chains": 14,
+    "managedBones": 66,
+    "fixedAttachmentBones": 4,
+    "originalDynamicComponentRoots": [
+      "Hair_B_02",
+      "Ribbon_BL_01",
+      "Ribbon_BR_01",
+      "Skirt_B_02",
+      "Skirt_BL_02",
+      "Skirt_BR_02"
+    ],
+    "physicsScope": "Finite-angle spring follow, hanging correction and five animated body/leg capsules rebuilt for this outfit. Keeps all 122 native bones and original mesh inverse bind poses; only the 66 whitelisted auxiliary rotations change. Incoming authored auxiliary poses are preserved. Original cloth/collision solver not ported.",
+    "bodyClearanceVerification": "tests/skin_victory_repair_suite.gd compares 450 native idle/run/guard/heavy/ultimate frames with and without capsules. Sampled skirt/leg overlap depth falls from 94.9712 to 9.0664; body/contact bones remain identical. This is a bone-segment check, not a proof that every cloth triangle is collision-free.",
+    "facialData": "assets/motions/fuhua-face-atlas.json",
+    "facialScope": "Original eye/mouth textures with authored timing; native IN_Fuka_Winning trigger found, separate timing curves not yet ported.",
+    "gpuVisualReview": true
+  }
+}

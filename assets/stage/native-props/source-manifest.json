@@ -1,0 +1,1113 @@
+{
+  "description": "Original HI3 9.1 Taixu stage meshes and textures, adapted to Godot Compatibility. Not a complete reproduction of original stage rendering.",
+  "sources": [
+    {
+      "name": "House_All",
+      "sourceMeshPathId": "7496643844518614440",
+      "sourceGameObjectPathId": "-2574297448519981954",
+      "sourceMeshCAB": "CAB-05d6b548bfd43aba9b3c6ecaac4f29c7",
+      "sourceBlock": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\df1f10914a7f6277.wmv",
+      "invalidValues": 0,
+      "originalLocalBounds": {
+        "position": [
+          -15.3802051544189,
+          -191.259567260742,
+          -50.9936714172363
+        ],
+        "size": [
+          205.372329711914,
+          290.570739746094,
+          494.759307861328
+        ]
+      },
+      "packError": 0,
+      "packedBounds": {
+        "position": [
+          -102.686164855957,
+          0.0,
+          -247.379653930664
+        ],
+        "size": [
+          205.372329711914,
+          290.570739746094,
+          494.759307861328
+        ]
+      },
+      "pivotOffset": [
+        -87.3059616088867,
+        191.259567260742,
+        -196.385986328125
+      ],
+      "saveError": 0,
+      "scene": "res://assets/stage/native-props/House_All.scn",
+      "surfaces": [
+        {
+          "material": "Stage_TaiXu_House03_Mat",
+          "triangles": 19076,
+          "uv1": 35649,
+          "uv2": 35649,
+          "vertices": 35649
+        },
+        {
+          "material": "Stage_TaiXu_House06_Mat",
+          "triangles": 3295,
+          "uv1": 6247,
+          "uv2": 6247,
+          "vertices": 6247
+        },
+        {
+          "material": "Stage_TaiXu_House04_Mat 1",
+          "triangles": 2602,
+          "uv1": 5204,
+          "uv2": 5204,
+          "vertices": 5204
+        },
+        {
+          "material": "Stage_TaiXu_House05_Mat",
+          "triangles": 4307,
+          "uv1": 6818,
+          "uv2": 6818,
+          "vertices": 6818
+        },
+        {
+          "material": "Stage_TaiXu_House02_Mat",
+          "triangles": 2468,
+          "uv1": 4668,
+          "uv2": 4668,
+          "vertices": 4668
+        },
+        {
+          "material": "Stage_TaiXu_House01_Mat",
+          "triangles": 882,
+          "uv1": 1557,
+          "uv2": 1557,
+          "vertices": 1557
+        }
+      ],
+      "triangles": 32630,
+      "vertices": 60143,
+      "sourcePrefab": "assets/asbres/stage/stage_taixu/stage_taixu_b.prefab",
+      "sourcePrefabCAB": "CAB-a1ebc6e059dd8e96fd9a5a317740595b",
+      "originalPrefabTransform": {
+        "coordinateSystem": "Original Unity left-handed; Godot geometry mirrors X. Row-major matrix below.",
+        "chain": [
+          {
+            "name": "Stage_TaiXu_B",
+            "transformPathId": "-7159401530736020856",
+            "gameObjectPathId": "2359119425680528387",
+            "localRotation": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0,
+              "W": 1
+            },
+            "localPosition": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0
+            },
+            "localScale": {
+              "X": 1,
+              "Y": 1,
+              "Z": 1
+            }
+          },
+          {
+            "name": "House_All",
+            "transformPathId": "4275364201436123197",
+            "gameObjectPathId": "-2574297448519981954",
+            "localRotation": {
+              "X": 1.1124832e-07,
+              "Y": 0.6828373,
+              "Z": -4.729034e-15,
+              "W": 0.7305705
+            },
+            "localPosition": {
+              "X": -270.9,
+              "Y": 93.5,
+              "Z": -190.3
+            },
+            "localScale": {
+              "X": 1.1,
+              "Y": 1,
+              "Z": 1
+            }
+          }
+        ],
+        "originalWorldMatrix": [
+          [
+            0.07421308780316205,
+            1.5192901182645746e-07,
+            0.9977215753593,
+            -270.9
+          ],
+          [
+            1.6712189780757522e-07,
+            0.9999999999999752,
+            -1.625494879914416e-07,
+            93.5
+          ],
+          [
+            -1.0974937328952301,
+            1.625494750747984e-07,
+            0.06746644345739528,
+            -190.3
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "sceneSha256": "b4692b1cf697bd3af45b820c8a33c0570a305a88ae3a40ad42be1aef1e927e2f",
+      "sceneBytes": 973604,
+      "recommendedUniformScale": 0.045,
+      "originalUnityWorldAABBFromLocalBounds": {
+        "position": [
+          -335.87741745933124,
+          -97.75967114645866,
+          -210.6200715061159
+        ],
+        "size": [
+          508.87339494645664,
+          290.57085449117244,
+          258.774542869886
+        ]
+      }
+    },
+    {
+      "name": "TempleUpper",
+      "sourceMeshPathId": "7496643844518614440",
+      "sourceGameObjectPathId": "-2574297448519981954",
+      "selection": "Whole connected components (position weld precision 0.001) with original Unity local AABB x within (-180,-145), z within (189,228), minimum y > 5; long mountainside stilts/walkway components omitted; no triangles clipped or new faces generated.",
+      "selectedVertices": 2300,
+      "invalidValues": 0,
+      "originalLocalBounds": {
+        "position": [
+          150.164688110352,
+          6.85256814956665,
+          194.922882080078
+        ],
+        "size": [
+          24.5146636962891,
+          16.3724117279053,
+          27.3399810791016
+        ]
+      },
+      "packError": 0,
+      "packedBounds": {
+        "position": [
+          -12.2573394775391,
+          0.0,
+          -13.6699829101563
+        ],
+        "size": [
+          24.5146636962891,
+          16.3724117279053,
+          27.3399810791016
+        ]
+      },
+      "pivotOffset": [
+        -162.422027587891,
+        -6.85256814956665,
+        -208.592864990234
+      ],
+      "saveError": 0,
+      "scene": "res://assets/stage/native-props/TempleUpper.scn",
+      "surfaces": [
+        {
+          "material": "Stage_TaiXu_House03_Mat",
+          "triangles": 1066,
+          "uv1": 1869,
+          "uv2": 1869,
+          "vertices": 1869
+        },
+        {
+          "material": "Stage_TaiXu_House05_Mat",
+          "triangles": 64,
+          "uv1": 84,
+          "uv2": 84,
+          "vertices": 84
+        },
+        {
+          "material": "Stage_TaiXu_House02_Mat",
+          "triangles": 108,
+          "uv1": 204,
+          "uv2": 204,
+          "vertices": 204
+        },
+        {
+          "material": "Stage_TaiXu_House01_Mat",
+          "triangles": 88,
+          "uv1": 143,
+          "uv2": 143,
+          "vertices": 143
+        }
+      ],
+      "triangles": 1326,
+      "vertices": 2300,
+      "sourcePrefab": "assets/asbres/stage/stage_taixu/stage_taixu_b.prefab",
+      "sourcePrefabCAB": "CAB-a1ebc6e059dd8e96fd9a5a317740595b",
+      "originalPrefabTransform": {
+        "coordinateSystem": "Original Unity left-handed; Godot geometry mirrors X. Row-major matrix below.",
+        "chain": [
+          {
+            "name": "Stage_TaiXu_B",
+            "transformPathId": "-7159401530736020856",
+            "gameObjectPathId": "2359119425680528387",
+            "localRotation": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0,
+              "W": 1
+            },
+            "localPosition": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0
+            },
+            "localScale": {
+              "X": 1,
+              "Y": 1,
+              "Z": 1
+            }
+          },
+          {
+            "name": "House_All",
+            "transformPathId": "4275364201436123197",
+            "gameObjectPathId": "-2574297448519981954",
+            "localRotation": {
+              "X": 1.1124832e-07,
+              "Y": 0.6828373,
+              "Z": -4.729034e-15,
+              "W": 0.7305705
+            },
+            "localPosition": {
+              "X": -270.9,
+              "Y": 93.5,
+              "Z": -190.3
+            },
+            "localScale": {
+              "X": 1.1,
+              "Y": 1,
+              "Z": 1
+            }
+          }
+        ],
+        "originalWorldMatrix": [
+          [
+            0.07421308780316205,
+            1.5192901182645746e-07,
+            0.9977215753593,
+            -270.9
+          ],
+          [
+            1.6712189780757522e-07,
+            0.9999999999999752,
+            -1.625494879914416e-07,
+            93.5
+          ],
+          [
+            -1.0974937328952301,
+            1.625494750747984e-07,
+            0.06746644345739528,
+            -190.3
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "sceneSha256": "2049c99f2fe511ac2f19ad41e60810d8339441283dff882d74464de8c65f2c58",
+      "sceneBytes": 42767,
+      "recommendedUniformScale": 0.32,
+      "originalUnityWorldAABBFromLocalBounds": {
+        "position": [
+          -89.38472804941128,
+          100.35250282810709,
+          -12.34444118043237
+        ],
+        "size": [
+          29.09700036933674,
+          16.372420268941937,
+          28.74922371963791
+        ]
+      }
+    },
+    {
+      "name": "BigTree",
+      "sourceMeshPathId": "8690050547496282716",
+      "sourceGameObjectPathId": "1609581816528064840",
+      "sourceMeshCAB": "CAB-30e58a4917c919c5b2b3be22dfde6e01",
+      "sourceBlock": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\df1f10914a7f6277.wmv",
+      "invalidValues": 0,
+      "originalLocalBounds": {
+        "position": [
+          -1.98752176761627,
+          -0.150621026754379,
+          -3.90535950660706
+        ],
+        "size": [
+          25.5872974395752,
+          16.9816761016846,
+          28.7115211486816
+        ]
+      },
+      "packError": 0,
+      "packedBounds": {
+        "position": [
+          -12.7936487197876,
+          0.0,
+          -14.3557605743408
+        ],
+        "size": [
+          25.5872974395752,
+          16.9816761016846,
+          28.7115211486816
+        ]
+      },
+      "pivotOffset": [
+        -10.8061265945435,
+        0.150621026754379,
+        -10.4504013061523
+      ],
+      "saveError": 0,
+      "scene": "res://assets/stage/native-props/BigTree.scn",
+      "surfaces": [
+        {
+          "material": "Stage_TaiXu_BigTree_Tunk_Mat",
+          "triangles": 2504,
+          "uv1": 1674,
+          "uv2": 1674,
+          "vertices": 1674
+        },
+        {
+          "material": "Stage_TaiXu_BigTree_Leaf_Mat",
+          "triangles": 1504,
+          "uv1": 2141,
+          "uv2": 2141,
+          "vertices": 2141
+        }
+      ],
+      "triangles": 4008,
+      "vertices": 3815,
+      "sourcePrefab": "assets/asbres/stage/stage_taixu/stage_taixu_b.prefab",
+      "sourcePrefabCAB": "CAB-a1ebc6e059dd8e96fd9a5a317740595b",
+      "originalPrefabTransform": {
+        "coordinateSystem": "Original Unity left-handed; Godot geometry mirrors X. Row-major matrix below.",
+        "chain": [
+          {
+            "name": "Stage_TaiXu_B",
+            "transformPathId": "-7159401530736020856",
+            "gameObjectPathId": "2359119425680528387",
+            "localRotation": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0,
+              "W": 1
+            },
+            "localPosition": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0
+            },
+            "localScale": {
+              "X": 1,
+              "Y": 1,
+              "Z": 1
+            }
+          },
+          {
+            "name": "Stage_TaiXu_B02",
+            "transformPathId": "-8001111172072618646",
+            "gameObjectPathId": "-2136445548279787137",
+            "localRotation": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0,
+              "W": 1
+            },
+            "localPosition": {
+              "X": -2.61,
+              "Y": 0,
+              "Z": -10.15
+            },
+            "localScale": {
+              "X": 1,
+              "Y": 1,
+              "Z": 1
+            }
+          },
+          {
+            "name": "Stage_TaiXu_B_BigTree01",
+            "transformPathId": "437460728191381676",
+            "gameObjectPathId": "1609581816528064840",
+            "localRotation": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0,
+              "W": 1
+            },
+            "localPosition": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0
+            },
+            "localScale": {
+              "X": 1,
+              "Y": 1,
+              "Z": 1
+            }
+          }
+        ],
+        "originalWorldMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -2.61
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            -10.15
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "sceneSha256": "c8dc508e05f9c92f6f7e32ae8c8de921f8a4ef69cde66a064d6c20ac600976de",
+      "sceneBytes": 119847,
+      "recommendedUniformScale": 0.42,
+      "originalUnityWorldAABBFromLocalBounds": {
+        "position": [
+          -26.20977567195893,
+          -0.150621026754379,
+          -14.055359506607061
+        ],
+        "size": [
+          25.5872974395752,
+          16.9816761016846,
+          28.711521148681605
+        ]
+      }
+    },
+    {
+      "name": "RockGroup",
+      "sourceMeshPathId": "-1916362342776726423",
+      "sourceGameObjectPathId": "5911380300325315973",
+      "sourceMeshCAB": "CAB-30e58a4917c919c5b2b3be22dfde6e01",
+      "sourceBlock": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\df1f10914a7f6277.wmv",
+      "invalidValues": 0,
+      "originalLocalBounds": {
+        "position": [
+          -25.43408203125,
+          -1.48996198177338,
+          -81.5786819458008
+        ],
+        "size": [
+          110.616539001465,
+          17.972204208374,
+          110.764877319336
+        ]
+      },
+      "packError": 0,
+      "packedBounds": {
+        "position": [
+          -55.3082695007324,
+          0.0,
+          -55.382438659668
+        ],
+        "size": [
+          110.616539001465,
+          17.972204208374,
+          110.764877319336
+        ]
+      },
+      "pivotOffset": [
+        -29.8741874694824,
+        1.48996198177338,
+        26.1962432861328
+      ],
+      "saveError": 0,
+      "scene": "res://assets/stage/native-props/RockGroup.scn",
+      "surfaces": [
+        {
+          "material": "Stage_TaiXu_B02_Rock01_Mat",
+          "triangles": 1358,
+          "uv1": 3324,
+          "uv2": 3324,
+          "vertices": 3324
+        }
+      ],
+      "triangles": 1358,
+      "vertices": 3324,
+      "sourcePrefab": "assets/asbres/stage/stage_taixu/stage_taixu_b.prefab",
+      "sourcePrefabCAB": "CAB-a1ebc6e059dd8e96fd9a5a317740595b",
+      "originalPrefabTransform": {
+        "coordinateSystem": "Original Unity left-handed; Godot geometry mirrors X. Row-major matrix below.",
+        "chain": [
+          {
+            "name": "Stage_TaiXu_B",
+            "transformPathId": "-7159401530736020856",
+            "gameObjectPathId": "2359119425680528387",
+            "localRotation": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0,
+              "W": 1
+            },
+            "localPosition": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0
+            },
+            "localScale": {
+              "X": 1,
+              "Y": 1,
+              "Z": 1
+            }
+          },
+          {
+            "name": "Stage_TaiXu_B02",
+            "transformPathId": "-8001111172072618646",
+            "gameObjectPathId": "-2136445548279787137",
+            "localRotation": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0,
+              "W": 1
+            },
+            "localPosition": {
+              "X": -2.61,
+              "Y": 0,
+              "Z": -10.15
+            },
+            "localScale": {
+              "X": 1,
+              "Y": 1,
+              "Z": 1
+            }
+          },
+          {
+            "name": "Stage_TaiXu_B_Rock01",
+            "transformPathId": "334780646077953960",
+            "gameObjectPathId": "5911380300325315973",
+            "localRotation": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0,
+              "W": 1
+            },
+            "localPosition": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0
+            },
+            "localScale": {
+              "X": 1,
+              "Y": 1,
+              "Z": 1
+            }
+          }
+        ],
+        "originalWorldMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -2.61
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            -10.15
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "sceneSha256": "02548f0310cc7543a31e1853b72f83725959bf0252a1c4b1a02f7fb50080a353",
+      "sceneBytes": 54294,
+      "recommendedUniformScale": 0.1,
+      "originalUnityWorldAABBFromLocalBounds": {
+        "position": [
+          -87.792456970215,
+          -1.48996198177338,
+          -91.7286819458008
+        ],
+        "size": [
+          110.616539001465,
+          17.972204208374,
+          110.764877319336
+        ]
+      }
+    },
+    {
+      "name": "StonePlatform",
+      "sourceMeshPathId": "692013070674640483",
+      "sourceGameObjectPathId": "-3861645543290085795",
+      "sourceMeshCAB": "CAB-984403456d7a20a0c69d8dd2ad98a412",
+      "sourceBlock": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\85ad5986cf261b35.wmv",
+      "invalidValues": 0,
+      "originalLocalBounds": {
+        "position": [
+          -1.93651390075684,
+          -3.42544555664063,
+          -0.626699566841125
+        ],
+        "size": [
+          3.87302780151367,
+          6.85089111328125,
+          2.25976705551147
+        ]
+      },
+      "packError": 0,
+      "packedBounds": {
+        "position": [
+          -1.93651390075684,
+          0.0,
+          -1.12988352775574
+        ],
+        "size": [
+          3.87302780151367,
+          6.85089111328125,
+          2.25976705551147
+        ]
+      },
+      "pivotOffset": [
+        0.0,
+        3.42544555664063,
+        -0.503183960914612
+      ],
+      "saveError": 0,
+      "scene": "res://assets/stage/native-props/StonePlatform.scn",
+      "surfaces": [
+        {
+          "material": "Stage_TaiXu_Props05_Mat",
+          "triangles": 983,
+          "uv1": 1133,
+          "uv2": 1133,
+          "vertices": 1133
+        }
+      ],
+      "triangles": 983,
+      "vertices": 1133,
+      "sourcePrefab": "assets/asbres/stage/stage_taixu/stage_taixu_b.prefab",
+      "sourcePrefabCAB": "CAB-a1ebc6e059dd8e96fd9a5a317740595b",
+      "originalPrefabTransform": {
+        "coordinateSystem": "Original Unity left-handed; Godot geometry mirrors X. Row-major matrix below.",
+        "chain": [
+          {
+            "name": "Stage_TaiXu_B",
+            "transformPathId": "-7159401530736020856",
+            "gameObjectPathId": "2359119425680528387",
+            "localRotation": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0,
+              "W": 1
+            },
+            "localPosition": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0
+            },
+            "localScale": {
+              "X": 1,
+              "Y": 1,
+              "Z": 1
+            }
+          },
+          {
+            "name": "Stage_TaiXu_C_Platform",
+            "transformPathId": "8263483106027211048",
+            "gameObjectPathId": "-6699773965412165819",
+            "localRotation": {
+              "X": 2.1855694e-08,
+              "Y": 0,
+              "Z": 0,
+              "W": 1
+            },
+            "localPosition": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0
+            },
+            "localScale": {
+              "X": 1,
+              "Y": 1,
+              "Z": 1
+            }
+          },
+          {
+            "name": "Stage_TaiXu_C_Platform01",
+            "transformPathId": "-6149563058734823647",
+            "gameObjectPathId": "-3861645543290085795",
+            "localRotation": {
+              "X": -0.6188082,
+              "Y": -0.41212556,
+              "Z": -0.33589566,
+              "W": 0.57827604
+            },
+            "localPosition": {
+              "X": -79.24619,
+              "Y": 8.892,
+              "Z": -43.016
+            },
+            "localScale": {
+              "X": 1,
+              "Y": 1,
+              "Z": 1.03
+            }
+          }
+        ],
+        "originalWorldMatrix": [
+          [
+            0.43465325677570166,
+            0.8985341761511567,
+            -0.062762737018371,
+            -79.24619
+          ],
+          [
+            0.12157248867315065,
+            0.008501053593347137,
+            1.0223226780846646,
+            8.892001880289056
+          ],
+          [
+            0.8923546564580919,
+            -0.4388215365013243,
+            -0.10870835043351731,
+            -43.01599961131829
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "sceneSha256": "a96d1767d3aadde02814108fe805f68baa957ec0da97d1de74255d26b04a5bd5",
+      "sceneBytes": 30585,
+      "recommendedUniformScale": 1.0,
+      "originalUnityWorldAABBFromLocalBounds": {
+        "position": [
+          -83.26827776026677,
+          7.986765990238284,
+          -46.4247441631611
+        ],
+        "size": [
+          7.981013115312052,
+          2.839304529084492,
+          6.70808850697437
+        ]
+      }
+    },
+    {
+      "name": "StoneFloor",
+      "sourceMeshPathId": "7740563480433527506",
+      "sourceGameObjectPathId": "607497926569566928",
+      "sourceMeshCAB": "CAB-30e58a4917c919c5b2b3be22dfde6e01",
+      "sourceBlock": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\df1f10914a7f6277.wmv",
+      "invalidValues": 0,
+      "originalLocalBounds": {
+        "position": [
+          -33.0429191589355,
+          -0.254084467887878,
+          -88.2441940307617
+        ],
+        "size": [
+          129.6474609375,
+          13.8722829818726,
+          104.988098144531
+        ]
+      },
+      "packError": 0,
+      "packedBounds": {
+        "position": [
+          -64.82373046875,
+          0.0,
+          -52.4940490722656
+        ],
+        "size": [
+          129.6474609375,
+          13.8722829818726,
+          104.988098144531
+        ]
+      },
+      "pivotOffset": [
+        -31.7808113098145,
+        0.254084467887878,
+        35.7501449584961
+      ],
+      "saveError": 0,
+      "scene": "res://assets/stage/native-props/StoneFloor.scn",
+      "surfaces": [
+        {
+          "material": "Stage_TaiXu_B02_Floor02_Mat",
+          "triangles": 10604,
+          "uv1": 12855,
+          "uv2": 12855,
+          "vertices": 12855
+        }
+      ],
+      "triangles": 10604,
+      "vertices": 12855,
+      "sourcePrefab": "assets/asbres/stage/stage_taixu/stage_taixu_b.prefab",
+      "sourcePrefabCAB": "CAB-a1ebc6e059dd8e96fd9a5a317740595b",
+      "originalPrefabTransform": {
+        "coordinateSystem": "Original Unity left-handed; Godot geometry mirrors X. Row-major matrix below.",
+        "chain": [
+          {
+            "name": "Stage_TaiXu_B",
+            "transformPathId": "-7159401530736020856",
+            "gameObjectPathId": "2359119425680528387",
+            "localRotation": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0,
+              "W": 1
+            },
+            "localPosition": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0
+            },
+            "localScale": {
+              "X": 1,
+              "Y": 1,
+              "Z": 1
+            }
+          },
+          {
+            "name": "Stage_TaiXu_B02",
+            "transformPathId": "-8001111172072618646",
+            "gameObjectPathId": "-2136445548279787137",
+            "localRotation": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0,
+              "W": 1
+            },
+            "localPosition": {
+              "X": -2.61,
+              "Y": 0,
+              "Z": -10.15
+            },
+            "localScale": {
+              "X": 1,
+              "Y": 1,
+              "Z": 1
+            }
+          },
+          {
+            "name": "Stage_TaiXu_B_Floor02",
+            "transformPathId": "2630345083669487596",
+            "gameObjectPathId": "607497926569566928",
+            "localRotation": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0,
+              "W": 1
+            },
+            "localPosition": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0
+            },
+            "localScale": {
+              "X": 1,
+              "Y": 1,
+              "Z": 1
+            }
+          }
+        ],
+        "originalWorldMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -2.61
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            -10.15
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "sceneSha256": "69e770d93b4254e3eb8edbcba9f1193a3bad1bf79fb974034b29cc14af9336c6",
+      "sceneBytes": 338998,
+      "recommendedUniformScale": 1.0,
+      "originalUnityWorldAABBFromLocalBounds": {
+        "position": [
+          -99.21454177856451,
+          -0.254084467887878,
+          -98.39419403076171
+        ],
+        "size": [
+          129.6474609375,
+          13.8722829818726,
+          104.988098144531
+        ]
+      }
+    }
+  ],
+  "materials": "original-materials.json",
+  "validation": {
+    "finiteGeometry": true,
+    "allVerticesHaveUV1AndUV2": true,
+    "compressedScenesSaveAndReload": true,
+    "gpuVisualAcceptance": "Root GPU inspection confirmed large missing faces disappeared after winding correction; six-component backdrop accepted as a subset, not a complete source level.",
+    "originalSourceUntouched": true,
+    "faceNormalParity": {
+      "report": "winding-validation.json",
+      "independentFBXMeshes": 10,
+      "failedComparisons": 0,
+      "orientedPlatformParity": true
+    }
+  },
+  "materialAdaptation": {
+    "opaqueShader": "native_prop.gdshader",
+    "leafShader": "native_leaf.gdshader",
+    "sourceMainTex": "Exact original PNG/UV/st; not globally tinted.",
+    "sourceLightmap": "Exact _ShadowTex and original second UV set restored directly from original Mesh; FBX importer dropped this UV set.",
+    "sourceUVConversion": "X mirrored; parsed AnimeStudio m_Indices winding PRESERVED (not reversed); UV V = 1 - original V. All 10 complete mesh scenes match independently imported original FBX face/normal sign counts.",
+    "bakedApproximation": "Godot material uses main RGB times mix(1,clamp(shadow RGB * 1.8,0.25,1.3),0.7). This is an explicit reconstructed approximation; it is NOT proven original shader math.",
+    "originalUnsupported": [
+      "Matcap and GGX highlight lookup",
+      "Original scene fog/light fading",
+      "Original vertex-normal and Fresnel leaf illumination",
+      "Original occlusion/collision/navigation",
+      "Source lightmap remains original static lighting and does not react to newly placed lights."
+    ],
+    "transparency": "BigTree leaf _Cutoff=0.5, _Culling=0: double-sided alpha scissor. Opaque roof/rock _AlphaClip=0; other opaque materials _Culling=2, _ZWrite=1 when specified.",
+    "mainTextureLighting": "Main textures contain hand-authored surface/color shading; the source also uses separate _ShadowTex baked lighting. Do not describe MainTex as the full original illumination."
+  },
+  "dependencyResolution": {
+    "fileCount": 22,
+    "selectedCabs": 234,
+    "missing": [
+      "unity default resources"
+    ],
+    "ambiguousDependencies": 102,
+    "policy": "Reused existing architecture closure: same-context source preferred; duplicate CAB byte-equivalence not verified."
+  },
+  "packaging": "Original scales and local mesh orientation are preserved. Original prefab world position/rotation/scale and hierarchy retained in each source record; packaged pivot is horizontal AABB center/minimum Y for convenient placement. No automatic uniform normalization. TempleUpper is a whole-component subset; omitted tall cliff stilts, bridges, and other houses are recorded, no new geometry. PlatformOriented.scn additionally restores original prefab world rotation and scale for the platform; prefer this derivative for placement.",
+  "orientedDerivatives": [
+    {
+      "scene": "res://assets/stage/native-props/PlatformOriented.scn",
+      "source": "StonePlatform.scn",
+      "sceneBytes": 30557,
+      "sha256": "92fcd2195efb62719baf63eb6554cfe7c5ddeaacc84c58a09de3441183723e2d",
+      "rotation": "Full original prefab world basis reflected across X for Godot. Original scale (1,1,1.03) included.",
+      "placement": "Topmost vertex Y=0, center X/Z. Raw StonePlatform scene remains unchanged.",
+      "report": "platform-oriented-report.json"
+    }
+  ],
+  "mountainTemple": {
+    "scene": {
+      "path": "res://assets/stage/native-props/NativeMountainTemple.scn",
+      "bytes": 2497004,
+      "sha256": "68bb3653a668d8d8aabfc074cfe6668ff41a6f75609cc1332a1c8c3fc2695b94"
+    },
+    "sources": "mountain-temple-source.json",
+    "materials": "mountain-temple-materials.json",
+    "report": "mountain-temple-report.json",
+    "note": "Nine original stage_taixu_b components, preserving original relative placement and the previous six-component pivot. This is a stage subset, not a full level. Three appended front mountain meshes await GPU acceptance.",
+    "tangents": {
+      "scope": "NativeMountainTemple only; other production scenes unchanged.",
+      "native": "Source tangent xyz mirrored on X; stored Godot w=-source w, verified against independent FBX/ufbx samples.",
+      "generated": [
+        "House_All",
+        "FarMountain01"
+      ],
+      "generatedMethod": "Source tangent channel was null; generated MikkTSpace from preserved original topology, normals and UV1 via Godot SurfaceTool.",
+      "shaderRuntimeBinormalConvention": "Godot GLES3 scene.glsl: normalize(cross(normal,tangent)*binormal_sign), independently verified by shader task."
+    },
+    "tangentRepair": {
+      "report": "tangent-repair-validation.json",
+      "vertices": 53,
+      "changedEncodedBytes": 177,
+      "oldSha256": "0286882b97bebad14ab9daeb34541995d3aef972dbe603d150c37bbc40a45db5",
+      "newSha256": "68bb3653a668d8d8aabfc074cfe6668ff41a6f75609cc1332a1c8c3fc2695b94",
+      "backup": "../hi3-fuhua-extract\\exports\\taixu-native-props\\delivery-backups\\20261018-202217-53-tangents\\NativeMountainTemple.scn",
+      "scope": "Only 53 tangent values; all other array channels, transforms and material identities unchanged."
+    }
+  },
+  "windingCorrection": "2026-10-18: Previous direct-Mesh packaging reversed indices a second time, causing backface culling to hide original front faces. All 8 delivered scenes rebuilt with parsed winding preserved. Current SHA fields refer to corrected files.",
+  "targetedTangentUpdates": {
+    "TempleUpper": {
+      "name": "TempleUpper",
+      "oldSha256": "3c490ad843ee8615fac381752dbfae08f510bbf9a96fa86d6f5d95b2a6a585cb",
+      "newSha256": "2049c99f2fe511ac2f19ad41e60810d8339441283dff882d74464de8c65f2c58",
+      "bytes": 42767,
+      "backup": "../hi3-fuhua-extract\\exports\\taixu-native-props\\delivery-backups\\20261018-201507-TempleUpper\\TempleUpper.scn",
+      "reason": "Runtime native Matcap shader requires tangent frame. Dedicated replacement explicitly authorized by root after prior broader batch was rejected.",
+      "tangentSource": "MikkTSpace generated from original geometry/normals/UVs; original tangent channel absent.",
+      "validation": {
+        "maxNormalRequantization": 8.99873921298422e-05,
+        "name": "TempleUpper",
+        "newTangentVertices": 2300,
+        "transformsPositionsUVsIndicesMaterialNamesUnchanged": true
+      }
+    },
+    "RockGroup": {
+      "name": "RockGroup",
+      "oldSha256": "464b9ffd60a6f30b079e516d62a1142c022219a122c81dd92f2c9a3ee2eee71a",
+      "newSha256": "02548f0310cc7543a31e1853b72f83725959bf0252a1c4b1a02f7fb50080a353",
+      "bytes": 54294,
+      "backup": "../hi3-fuhua-extract\\exports\\taixu-native-props\\delivery-backups\\20261018-201510-RockGroup\\RockGroup.scn",
+      "reason": "Runtime native Matcap shader requires tangent frame. Dedicated replacement explicitly authorized by root after prior broader batch was rejected.",
+      "tangentSource": "Original Mesh tangents mirrored X; Godot w=-original w, matching independent FBX importer convention.",
+      "validation": {
+        "maxNormalRequantization": 0.0,
+        "name": "RockGroup",
+        "newTangentVertices": 3324,
+        "transformsPositionsUVsIndicesMaterialNamesUnchanged": true
+      }
+    }
+  }
+}

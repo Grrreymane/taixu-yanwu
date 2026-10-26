@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "source": "native-textures-adapted-timing",
+  "uvScale": [
+    0.25,
+    0.25
+  ],
+  "uvOrigin": "PNG top-left in current Godot shader after FBX UV conversion. These offsets are not the original Unity _MainTex offset Y.",
+  "frames": {
+    "neutral": {
+      "eyeR": [
+        0,
+        0.75
+      ],
+      "eyeL": [
+        0.25,
+        0.75
+      ],
+      "mouth": [
+        0,
+        0.75
+      ]
+    },
+    "halfBlink": {
+      "eyeR": [
+        0,
+        0.5
+      ],
+      "eyeL": [
+        0.25,
+        0.5
+      ],
+      "mouth": [
+        0,
+        0.75
+      ]
+    },
+    "closed": {
+      "eyeR": [
+        0.5,
+        0.5
+      ],
+      "eyeL": [
+        0.75,
+        0.5
+      ],
+      "mouth": [
+        0,
+        0.75
+      ]
+    },
+    "focused": {
+      "eyeR": [
+        0.5,
+        0.75
+      ],
+      "eyeL": [
+        0.75,
+        0.75
+      ],
+      "mouth": [
+        0,
+        0.75
+      ]
+    },
+    "effort": {
+      "eyeR": [
+        0.5,
+        0.75
+      ],
+      "eyeL": [
+        0.75,
+        0.75
+      ],
+      "mouth": [
+        0.25,
+        0.5
+      ]
+    },
+    "hurt": {
+      "eyeR": [
+        0.5,
+        0.5
+      ],
+      "eyeL": [
+        0.75,
+        0.5
+      ],
+      "mouth": [
+        0.5,
+        0.5
+      ]
+    },
+    "smile": {
+      "eyeR": [
+        0,
+        0.75
+      ],
+      "eyeL": [
+        0.25,
+        0.75
+      ],
+      "mouth": [
+        0.75,
+        0
+      ]
+    }
+  },
+  "blink": {
+    "closeAt": 0.04,
+    "holdUntil": 0.1,
+    "openAt": 0.18
+  },
+  "nativeTimingAvailable": false,
+  "notes": [
+    "Atlas cells are original textures; neutral/halfBlink/closed/focused eyes and effort/hurt/smile mouth cells were rendered on the C5_04_02 face and visually checked in build/screenshots/skin-expression/grid-atlas.png.",
+    "Blink timing is an authored adaptation, not extracted IN_Fuka_Winning curves.",
+    "Use each eye separately: left/right are different atlas cells. Do not apply the same offset to both eyes.",
+    "Keep mouth on neutral during ordinary blink. Do not interpolate atlas UV offsets through neighboring cells; blend sampled colors or select discrete cells."
+  ],
+  "gpuVisualReview": true
+}

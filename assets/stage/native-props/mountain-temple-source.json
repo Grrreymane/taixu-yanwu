@@ -1,0 +1,979 @@
+{
+  "objects": [
+    {
+      "name": "Stage_TaiXu_B_Far_Mountain01",
+      "gameObjectPathId": "-7485242302355047316",
+      "meshPathId": "-5259073507171445897",
+      "hierarchy": [
+        "Stage_TaiXu_B",
+        "Stage_TaiXu_B_Far_Mountain",
+        "Stage_TaiXu_B_Far_Mountain01"
+      ],
+      "vertices": 737,
+      "triangles": 924,
+      "surfaces": 1,
+      "worldBounds": {
+        "min": [
+          -360.37535,
+          -53.4316,
+          -271.58395
+        ],
+        "max": [
+          -255.27686000000003,
+          241.19365000000002,
+          -148.86246
+        ],
+        "size": [
+          105.09849,
+          294.62525000000005,
+          122.72149000000002
+        ]
+      },
+      "worldMatrix": [
+        [
+          0.01,
+          0.0,
+          0.0,
+          6.91
+        ],
+        [
+          0.0,
+          0.01,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.01,
+          0.99
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "materials": [
+        "-1834535457250407785"
+      ],
+      "packedPart": "FarMountain01",
+      "sourceMeshCAB": "CAB-66933e4ab3e53d9cfafef07d1e7ed52d",
+      "sourceBlock": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\df1f10914a7f6277.wmv"
+    },
+    {
+      "name": "Stage_TaiXu_B_FarLOD",
+      "gameObjectPathId": "-6963980527736448805",
+      "meshPathId": "-3085698708915962708",
+      "hierarchy": [
+        "Stage_TaiXu_B",
+        "Stage_TaiXu_B_FarLOD"
+      ],
+      "vertices": 11462,
+      "triangles": 6294,
+      "surfaces": 2,
+      "worldBounds": {
+        "min": [
+          -378.50732,
+          -73.99315,
+          -101.04393
+        ],
+        "max": [
+          218.58813,
+          122.823906,
+          293.7384
+        ],
+        "size": [
+          597.09545,
+          196.81705599999998,
+          394.78233
+        ]
+      },
+      "worldMatrix": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "materials": [
+        "7860719530234313606",
+        "5884347231518556330"
+      ],
+      "packedPart": "FarLOD",
+      "sourceMeshCAB": "CAB-35de22cc86f2ce6f2c14c651f1f296f1",
+      "sourceBlock": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\df1f10914a7f6277.wmv"
+    },
+    {
+      "name": "Part01",
+      "gameObjectPathId": "7005952300039328715",
+      "meshPathId": "5029979508549415585",
+      "hierarchy": [
+        "Stage_TaiXu_B",
+        "Stage_TaiXu_B01",
+        "Stone",
+        "Part01"
+      ],
+      "vertices": 1795,
+      "triangles": 2756,
+      "surfaces": 1,
+      "worldBounds": {
+        "min": [
+          -200.96627990000002,
+          -62.312354,
+          -298.3273
+        ],
+        "max": [
+          261.7368801,
+          176.11025,
+          -87.82753
+        ],
+        "size": [
+          462.70316,
+          238.422604,
+          210.49976999999998
+        ]
+      },
+      "worldMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -1.7099899
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.35
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -12.95
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "materials": [
+        "-8204178471015822215"
+      ],
+      "packedPart": "Cliff01",
+      "sourceMeshCAB": "CAB-d4a1c382e59af19e8fb6cb9f4cc49597",
+      "sourceBlock": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\df1f10914a7f6277.wmv"
+    },
+    {
+      "name": "Part02",
+      "gameObjectPathId": "-3347397314323584387",
+      "meshPathId": "-6726439965990558135",
+      "hierarchy": [
+        "Stage_TaiXu_B",
+        "Stage_TaiXu_B01",
+        "Stone",
+        "Part02"
+      ],
+      "vertices": 3056,
+      "triangles": 4164,
+      "surfaces": 1,
+      "worldBounds": {
+        "min": [
+          45.761358099999995,
+          -56.32714,
+          -237.42973999999998
+        ],
+        "max": [
+          214.46379009999998,
+          394.05563,
+          -107.04227
+        ],
+        "size": [
+          168.702432,
+          450.38277,
+          130.38746999999998
+        ]
+      },
+      "worldMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -1.7099899
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.35
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -12.95
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "materials": [
+        "7020067620711095972"
+      ],
+      "packedPart": "Cliff02",
+      "sourceMeshCAB": "CAB-d4a1c382e59af19e8fb6cb9f4cc49597",
+      "sourceBlock": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\df1f10914a7f6277.wmv"
+    },
+    {
+      "name": "Part03",
+      "gameObjectPathId": "-708962825106909439",
+      "meshPathId": "-2466799681816431704",
+      "hierarchy": [
+        "Stage_TaiXu_B",
+        "Stage_TaiXu_B01",
+        "Stone",
+        "Part03"
+      ],
+      "vertices": 6253,
+      "triangles": 8050,
+      "surfaces": 1,
+      "worldBounds": {
+        "min": [
+          -193.15511990000002,
+          -53.95715,
+          -234.80416
+        ],
+        "max": [
+          6.8104681,
+          217.73898,
+          -117.10037
+        ],
+        "size": [
+          199.96558800000003,
+          271.69613,
+          117.70379
+        ]
+      },
+      "worldMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -1.7099899
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.35
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -12.95
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "materials": [
+        "3416780136467104970"
+      ],
+      "packedPart": "Cliff03",
+      "sourceMeshCAB": "CAB-d4a1c382e59af19e8fb6cb9f4cc49597",
+      "sourceBlock": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\df1f10914a7f6277.wmv"
+    },
+    {
+      "name": "House_All",
+      "gameObjectPathId": "-2574297448519981954",
+      "meshPathId": "7496643844518614440",
+      "hierarchy": [
+        "Stage_TaiXu_B",
+        "House_All"
+      ],
+      "vertices": 60143,
+      "triangles": 32630,
+      "surfaces": 6,
+      "worldBounds": {
+        "min": [
+          -324.61919115825316,
+          -97.75956987873732,
+          -207.41484959896468
+        ],
+        "max": [
+          168.6624808209645,
+          192.8110878636623,
+          41.01191214973059
+        ],
+        "size": [
+          493.28167197921766,
+          290.5706577423996,
+          248.42676174869527
+        ]
+      },
+      "worldMatrix": [
+        [
+          0.07421308780316205,
+          1.5192901182645746e-07,
+          0.9977215753593,
+          -270.9
+        ],
+        [
+          1.6712189780757522e-07,
+          0.9999999999999752,
+          -1.625494879914416e-07,
+          93.5
+        ],
+        [
+          -1.0974937328952301,
+          1.625494750747984e-07,
+          0.06746644345739528,
+          -190.3
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "materials": [
+        "1454217034358271129",
+        "2555181434370169592",
+        "-1404131261772702058",
+        "5043592356360550586",
+        "9173468686431929035",
+        "5435711790120550570"
+      ],
+      "packedPart": "House_All",
+      "sourceMeshCAB": "CAB-05d6b548bfd43aba9b3c6ecaac4f29c7",
+      "sourceBlock": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\df1f10914a7f6277.wmv"
+    },
+    {
+      "name": "Stage_TaiXu_B_Stone01",
+      "gameObjectPathId": "8872449091341010699",
+      "rendererPathId": "-1996987845186472835",
+      "rendererType": "MeshRenderer",
+      "rendererEnabled": true,
+      "enabledByteOffset": 12,
+      "componentGameObjectPPtrMatches": true,
+      "rendererRawPrefix": "000000000B471EB97045217B01010101000001010100000001000000FFFFFFFF",
+      "meshPathId": "4131258473805913814",
+      "meshName": "Stage_TaiXu_B_Stone01",
+      "meshCAB": "CAB-30e58a4917c919c5b2b3be22dfde6e01",
+      "vertexCount": 6807,
+      "triangles": 11178,
+      "localBounds": {
+        "min": [
+          -106.098595,
+          -58.028133,
+          -65.329185
+        ],
+        "max": [
+          124.60625,
+          120.154305,
+          93.57311
+        ]
+      },
+      "subMeshes": [
+        {
+          "firstByte": 0,
+          "indexCount": 17988,
+          "topology": 0,
+          "triangleCount": 0,
+          "baseVertex": 0,
+          "firstVertex": 0,
+          "vertexCount": 3716,
+          "localAABB": {
+            "m_Center": {
+              "X": 3.3831444,
+              "Y": -10.268463,
+              "Z": 12.756462
+            },
+            "m_Extent": {
+              "X": 109.481735,
+              "Y": 47.75967,
+              "Z": 78.08565
+            }
+          }
+        },
+        {
+          "firstByte": 35976,
+          "indexCount": 3342,
+          "topology": 0,
+          "triangleCount": 0,
+          "baseVertex": 0,
+          "firstVertex": 3716,
+          "vertexCount": 712,
+          "localAABB": {
+            "m_Center": {
+              "X": -36.82534,
+              "Y": 5.7399693,
+              "Z": -27.849516
+            },
+            "m_Extent": {
+              "X": 59.07257,
+              "Y": 7.85225,
+              "Z": 31.207388
+            }
+          }
+        },
+        {
+          "firstByte": 42660,
+          "indexCount": 756,
+          "topology": 0,
+          "triangleCount": 0,
+          "baseVertex": 0,
+          "firstVertex": 4428,
+          "vertexCount": 194,
+          "localAABB": {
+            "m_Center": {
+              "X": 10.072517,
+              "Y": 14.456462,
+              "Z": 17.645887
+            },
+            "m_Extent": {
+              "X": 114.53373,
+              "Y": 22.321491,
+              "Z": 75.92722
+            }
+          }
+        },
+        {
+          "firstByte": 44172,
+          "indexCount": 6198,
+          "topology": 0,
+          "triangleCount": 0,
+          "baseVertex": 0,
+          "firstVertex": 2149,
+          "vertexCount": 3761,
+          "localAABB": {
+            "m_Center": {
+              "X": 53.347153,
+              "Y": 78.45758,
+              "Z": -16.972393
+            },
+            "m_Extent": {
+              "X": 54.5914,
+              "Y": 41.69672,
+              "Z": 37.740723
+            }
+          }
+        },
+        {
+          "firstByte": 56568,
+          "indexCount": 5250,
+          "topology": 0,
+          "triangleCount": 0,
+          "baseVertex": 0,
+          "firstVertex": 376,
+          "vertexCount": 6431,
+          "localAABB": {
+            "m_Center": {
+              "X": 32.69683,
+              "Y": 6.08826,
+              "Z": -19.36473
+            },
+            "m_Extent": {
+              "X": 15.204853,
+              "Y": 11.694099,
+              "Z": 22.163822
+            }
+          }
+        }
+      ],
+      "materials": [
+        {
+          "name": "Stage_TaiXu_B02_Stone01a02_Mat",
+          "pathId": "-4880904953038018309",
+          "cab": "CAB-6fb1debc4d2a72ff8414b63e6e37738a"
+        },
+        {
+          "name": "Stage_TaiXu_B02_Stone01a03_Mat",
+          "pathId": "-6627053835585639386",
+          "cab": "CAB-d1e991f109edd8fd344861e479b8e9e0"
+        },
+        {
+          "name": "Stage_TaiXu_B02_Grass01_Mat",
+          "pathId": "-5811391775863512397",
+          "cab": "CAB-b909d185a5f56bc98c48160004d4289a"
+        },
+        {
+          "name": "Stage_TaiXu_B02_Stone01a01_Mat",
+          "pathId": "5100685682369459013",
+          "cab": "CAB-ad367099b23aa6ca6c80962aee636740"
+        },
+        {
+          "name": "Stage_TaiXu_B02_Stone01a04_Mat",
+          "pathId": "482532738672171746",
+          "cab": "CAB-a8b2a1858ec660ae6f77dab00d1cabd2"
+        }
+      ],
+      "hierarchy": "Stage_TaiXu_B/Stage_TaiXu_B02/Stage_TaiXu_B_Stone01",
+      "originalWorldMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -2.61
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -10.15
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "activeHierarchyFlags": [
+        {
+          "name": "Stage_TaiXu_B_Stone01",
+          "active": true
+        },
+        {
+          "name": "Stage_TaiXu_B02",
+          "active": true
+        },
+        {
+          "name": "Stage_TaiXu_B",
+          "active": true
+        }
+      ],
+      "effectiveEnabledAtPrefabLoad": true,
+      "worldAABBFromLocalBounds": {
+        "min": [
+          -108.708595,
+          -58.028133,
+          -75.479185
+        ],
+        "max": [
+          121.99625,
+          120.154305,
+          83.42311
+        ],
+        "size": [
+          230.704845,
+          178.182438,
+          158.90229499999998
+        ]
+      },
+      "packedPart": "FrontStone01",
+      "worldMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -2.61
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -10.15
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sourceMeshCAB": "CAB-30e58a4917c919c5b2b3be22dfde6e01"
+    },
+    {
+      "name": "Stage_TaiXu_B_Stone01b",
+      "gameObjectPathId": "-5602247190177484490",
+      "rendererPathId": "-4906858573054123298",
+      "rendererType": "MeshRenderer",
+      "rendererEnabled": true,
+      "enabledByteOffset": 12,
+      "componentGameObjectPPtrMatches": true,
+      "rendererRawPrefix": "0000000036718ACDDCD140B201010101000001010100000001000000FFFFFFFF",
+      "meshPathId": "-5550601769307468296",
+      "meshName": "Stage_TaiXu_B_Stone01b",
+      "meshCAB": "CAB-30e58a4917c919c5b2b3be22dfde6e01",
+      "vertexCount": 9556,
+      "triangles": 14933,
+      "localBounds": {
+        "min": [
+          -189.88222,
+          -58.0527,
+          -112.69059
+        ],
+        "max": [
+          3.9402606,
+          173.25523,
+          23.057634
+        ]
+      },
+      "subMeshes": [
+        {
+          "firstByte": 0,
+          "indexCount": 39594,
+          "topology": 0,
+          "triangleCount": 0,
+          "baseVertex": 0,
+          "firstVertex": 0,
+          "vertexCount": 8445,
+          "localAABB": {
+            "m_Center": {
+              "X": -96.21235,
+              "Y": 57.601265,
+              "Z": -45.456112
+            },
+            "m_Extent": {
+              "X": 93.66987,
+              "Y": 115.65397,
+              "Z": 67.23448
+            }
+          }
+        },
+        {
+          "firstByte": 79188,
+          "indexCount": 5205,
+          "topology": 0,
+          "triangleCount": 0,
+          "baseVertex": 0,
+          "firstVertex": 3777,
+          "vertexCount": 5779,
+          "localAABB": {
+            "m_Center": {
+              "X": -57.112362,
+              "Y": 98.95405,
+              "Z": -15.401465
+            },
+            "m_Extent": {
+              "X": 61.052624,
+              "Y": 72.13331,
+              "Z": 38.4591
+            }
+          }
+        }
+      ],
+      "materials": [
+        {
+          "name": "Stage_TaiXu_B02_Stone01b02_Mat",
+          "pathId": "8396826070732308812",
+          "cab": "CAB-5f8641123d3217aa5108c04801e37a03"
+        },
+        {
+          "name": "Stage_TaiXu_B02_Stone01b01_Mat",
+          "pathId": "-4834539175505836327",
+          "cab": "CAB-4d65a556c0878f9c36abe3b6f292aaa7"
+        }
+      ],
+      "hierarchy": "Stage_TaiXu_B/Stage_TaiXu_B02/Stage_TaiXu_B_Stone01b",
+      "originalWorldMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -2.61
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -10.15
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "activeHierarchyFlags": [
+        {
+          "name": "Stage_TaiXu_B_Stone01b",
+          "active": true
+        },
+        {
+          "name": "Stage_TaiXu_B02",
+          "active": true
+        },
+        {
+          "name": "Stage_TaiXu_B",
+          "active": true
+        }
+      ],
+      "effectiveEnabledAtPrefabLoad": true,
+      "worldAABBFromLocalBounds": {
+        "min": [
+          -192.49222,
+          -58.0527,
+          -122.84059
+        ],
+        "max": [
+          1.3302606,
+          173.25523,
+          12.907634
+        ],
+        "size": [
+          193.8224806,
+          231.30793,
+          135.748224
+        ]
+      },
+      "packedPart": "FrontStone01b",
+      "worldMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -2.61
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -10.15
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sourceMeshCAB": "CAB-30e58a4917c919c5b2b3be22dfde6e01"
+    },
+    {
+      "name": "Stage_TaiXu_B_Stone02",
+      "gameObjectPathId": "-8428316815308911547",
+      "rendererPathId": "-1442531954205797897",
+      "rendererType": "MeshRenderer",
+      "rendererEnabled": true,
+      "enabledByteOffset": 12,
+      "componentGameObjectPPtrMatches": true,
+      "rendererRawPrefix": "00000000458C0FF9829A088B01010101000001010100000001000000FFFFFFFF",
+      "meshPathId": "-404159293301359844",
+      "meshName": "Stage_TaiXu_B_Stone02",
+      "meshCAB": "CAB-30e58a4917c919c5b2b3be22dfde6e01",
+      "vertexCount": 4463,
+      "triangles": 5744,
+      "localBounds": {
+        "min": [
+          -195.41945,
+          -58.03849,
+          -99.255455
+        ],
+        "max": [
+          241.20735,
+          312.87387,
+          141.48245
+        ]
+      },
+      "subMeshes": [
+        {
+          "firstByte": 0,
+          "indexCount": 17232,
+          "topology": 0,
+          "triangleCount": 0,
+          "baseVertex": 0,
+          "firstVertex": 0,
+          "vertexCount": 4463,
+          "localAABB": {
+            "m_Center": {
+              "X": 22.893951,
+              "Y": 127.417694,
+              "Z": 21.113499
+            },
+            "m_Extent": {
+              "X": 218.3134,
+              "Y": 185.45618,
+              "Z": 120.36896
+            }
+          }
+        }
+      ],
+      "materials": [
+        {
+          "name": "Stage_TaiXu_B02_Stone02_Mat",
+          "pathId": "-439180481806816035",
+          "cab": "CAB-086ca1e85b12f3db234030e03fb246fc"
+        }
+      ],
+      "hierarchy": "Stage_TaiXu_B/Stage_TaiXu_B02/Stage_TaiXu_B_Stone02",
+      "originalWorldMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -2.61
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -10.15
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "activeHierarchyFlags": [
+        {
+          "name": "Stage_TaiXu_B_Stone02",
+          "active": true
+        },
+        {
+          "name": "Stage_TaiXu_B02",
+          "active": true
+        },
+        {
+          "name": "Stage_TaiXu_B",
+          "active": true
+        }
+      ],
+      "effectiveEnabledAtPrefabLoad": true,
+      "worldAABBFromLocalBounds": {
+        "min": [
+          -198.02945000000003,
+          -58.03849,
+          -109.405455
+        ],
+        "max": [
+          238.59734999999998,
+          312.87387,
+          131.33245
+        ],
+        "size": [
+          436.6268,
+          370.91236000000004,
+          240.737905
+        ]
+      },
+      "packedPart": "FrontStone02",
+      "worldMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -2.61
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -10.15
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sourceMeshCAB": "CAB-30e58a4917c919c5b2b3be22dfde6e01"
+    }
+  ],
+  "newTextures": [
+    "textures/Stage_TaiXu_B02_Stone01_Lightmap_Tex.png",
+    "textures/Stage_TaiXu_B02_Stone01b_Lightmap_Tex.png",
+    "textures/Stage_TaiXu_B02_Stone02_Lightmap_Tex.png",
+    "textures/Stage_TaiXu_Mountain01_Tex.png",
+    "textures\\Props_Stage_TaiXu_Gradual_Tex.png",
+    "textures\\Stage_TaiXu_B01_Stone_01_Lightmap_Tex.png",
+    "textures\\Stage_TaiXu_B01_Stone_02_Lightmap_Tex.png",
+    "textures\\Stage_TaiXu_B01_Stone_03_Lightmap_Tex.png",
+    "textures\\Stage_TaiXu_B02_FarMountain01_Lightmap_Tex.png",
+    "textures\\Stage_TaiXu_Grass01_Tex.png",
+    "textures\\Stage_TaiXu_Mountain02_Tex.png"
+  ],
+  "sourcePrefab": "assets/asbres/stage/stage_taixu/stage_taixu_b.prefab",
+  "coordinateSystem": "Original Unity world matrix retained per object; Godot group uses X reflection and one common center/minimum-Y offset.",
+  "excluded": "Far_Mountain02/03 kilometre-away backdrop; FarLOD child waterfall rendering, particles and fog.",
+  "scope": "Nine original stage_taixu_b components, preserving original relative placement and the previous six-component pivot. This is a stage subset, not a full level. Three appended front mountain meshes await GPU acceptance.",
+  "scene": {
+    "path": "res://assets/stage/native-props/NativeMountainTemple.scn",
+    "bytes": 2497004,
+    "sha256": "68bb3653a668d8d8aabfc074cfe6668ff41a6f75609cc1332a1c8c3fc2695b94"
+  },
+  "validation": {
+    "windingParity": "13 original mesh pairs match independent FBX -> Godot ufbx geometric face-normal signs exactly; 0 failures",
+    "finitePositionsUV2": true,
+    "gpu": "Previous six-component group accepted by root; three appended front mountains require new GPU acceptance.",
+    "pivot": "Original six-component common offset retained unchanged; total bounds also unchanged.",
+    "tangentRepair": "53 degenerate/default-axis tangents repaired; all other array data bit-identical. See tangent-repair-validation.json. Independent runtime test pending."
+  },
+  "commonOffsetPreserved": [
+    -58.3852233886719,
+    97.7595672607422,
+    2.29440307617188
+  ]
+}

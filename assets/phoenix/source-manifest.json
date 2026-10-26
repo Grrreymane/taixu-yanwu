@@ -1,0 +1,477 @@
+{
+  "game": "Honkai Impact 3rd 9.1.0",
+  "internalArmorCode": "C4_JW",
+  "localizedName": "炽翎",
+  "sourceReadOnly": true,
+  "modelPrefab": [
+    {
+      "Name": "Avatar_Fuka_C4_JW",
+      "Container": "assets/asbres/entities/avatar/fuka_c4_jw/avatar_fuka_c4_jw.prefab",
+      "Source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a303f703da40756b.wmv",
+      "PathID": -3005414700906642340,
+      "Type": "GameObject",
+      "Hash": "57f07da4c8bec2c",
+      "Offset": 48738155
+    }
+  ],
+  "scene": "res://assets/phoenix/Avatar_Fuka_C4_JW.scn",
+  "animationPlayerRoot": "..",
+  "skeletonPath": "Avatar_Fuka_C4_JW/Skeleton3D",
+  "bones": 92,
+  "meshNodes": 6,
+  "nativeClips": [
+    {
+      "name": "Avatar_Fuka_Ani_JW_A5",
+      "stopTime": 2.0500002,
+      "maxKeyTime": 2.0666666,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_jw_a5.fbx",
+        "clipName": "Avatar_Fuka_Ani_JW_A5",
+        "sourceBlock": "5abda5c2a5f5e72d.wmv",
+        "pathId": "-153566148039189888",
+        "serializedFile": "CAB-b8f4241b0e69898eccd0bccad4f2b3f2",
+        "isIndexPreferredVariant": true,
+        "offset": 37838703
+      },
+      "eventsYaml": "\n  - time: 0.22287592\n    functionName: TriggerAudioPattern\n    data: Avatar_Fuka_JW_QTE_Roll\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.34788498\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_TeamQTE_C3:JWQTE\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.36497626\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_Ani_B_Attack\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_Victory_idle",
+      "stopTime": 2.0,
+      "maxKeyTime": 2.0666666,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_victory_idle.fbx",
+        "clipName": "Avatar_Fuka_Ani_Victory_idle",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "-3246214430739595015",
+        "serializedFile": "CAB-a722dd80d4670f62793dfd9dac43c5db",
+        "isIndexPreferredVariant": true,
+        "offset": 59096346
+      },
+      "eventsYaml": " []\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_Die",
+      "stopTime": 3.1333334,
+      "maxKeyTime": 3.2,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_die.fbx",
+        "clipName": "Avatar_Fuka_Ani_Die",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "-9090851488556395714",
+        "serializedFile": "CAB-1640496fd8565056a36870cf44d5050e",
+        "isIndexPreferredVariant": true,
+        "offset": 55677027
+      },
+      "eventsYaml": "\n  - time: 0.081466675\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_DeathSingle\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.0971333\n    functionName: TriggerAudioPattern\n    data: Avatar_FootStep_Left\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.26006666\n    functionName: TriggerAudioPattern\n    data: Avatar_FootStep_Right\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.68306667\n    functionName: TriggerAudioPattern\n    data: Avatar_Mei_Death_Drop_Knee\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 2.146333\n    functionName: TriggerAudioPattern\n    data: Avatar_Mei_Death_Drop_Body\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 2.7605948\n    functionName: DeadHandler\n    data:\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_EvadeForward",
+      "stopTime": 1.1333334,
+      "maxKeyTime": 1.1666666,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_evadeforward.fbx",
+        "clipName": "Avatar_Fuka_Ani_EvadeForward",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "1393876893542002609",
+        "serializedFile": "CAB-a7d840bdeede5da360a26bcba8c252f2",
+        "isIndexPreferredVariant": true,
+        "offset": 56398810
+      },
+      "eventsYaml": "\n  - time: 0.040799998\n    functionName: TriggerAudioPattern\n    data: Avatar_Mei_Dodge\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_Combat",
+      "stopTime": 2.0,
+      "maxKeyTime": 2.0666666,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_combat.fbx",
+        "clipName": "Avatar_Fuka_Ani_Combat",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "4199738284049731865",
+        "serializedFile": "CAB-a4bed402129a23a17551e1e41e99ae0b",
+        "isIndexPreferredVariant": true,
+        "offset": 55433018
+      },
+      "eventsYaml": " []\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_Victory",
+      "stopTime": 4.316667,
+      "maxKeyTime": 4.366667,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_victory.fbx",
+        "clipName": "Avatar_Fuka_Ani_Victory",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "9202966355963246024",
+        "serializedFile": "CAB-bc47d06263c222e88a548fe92d3f09be",
+        "isIndexPreferredVariant": true,
+        "offset": 57712820
+      },
+      "eventsYaml": "\n  - time: 0\n    functionName: TriggerFaceAnimation\n    data: Fuka_Winning\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0\n    functionName: TriggerEffectPattern\n    data: Avatar_Common_FX_End_Shadow\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.7726833\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_Victory\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_Run",
+      "stopTime": 0.6666667,
+      "maxKeyTime": 0.7,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_run.fbx",
+        "clipName": "Avatar_Fuka_Ani_Run",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-2313169151355544291",
+        "serializedFile": "CAB-1bb643eabf2f42ce944dada942deff30",
+        "isIndexPreferredVariant": true,
+        "offset": 34696149
+      },
+      "eventsYaml": "\n  - time: 0.02600721\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.030836262\n    functionName: RunOnRightFoot\n    data:\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.03535855\n    functionName: AnimEventHandler\n    data: '#Avatar/Avatar_Walk_Smoke_Right'\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.36347672\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.3690928\n    functionName: RunOnLeftFoot\n    data:\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.4053566\n    functionName: AnimEventHandler\n    data: '#Avatar/Avatar_Walk_Smoke_Left'\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_JW_A1",
+      "stopTime": 1.1666667,
+      "maxKeyTime": 1.2,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_jw_a1.fbx",
+        "clipName": "Avatar_Fuka_Ani_JW_A1",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-2918248612280081914",
+        "serializedFile": "CAB-9a242a4ed9bfc63c6f4d93dc88172bc8",
+        "isIndexPreferredVariant": true,
+        "offset": 31025434
+      },
+      "eventsYaml": "\n  - time: 0.077843055\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_CBT_Hey\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_Hit_H",
+      "stopTime": 1.5000001,
+      "maxKeyTime": 1.5666667,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_hit_h.fbx",
+        "clipName": "Avatar_Fuka_Ani_Hit_H",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-3312896931131321407",
+        "serializedFile": "CAB-70f9f9ba13b5bbbbe19cdf9915be96f1",
+        "isIndexPreferredVariant": true,
+        "offset": 29708583
+      },
+      "eventsYaml": "\n  - time: 0.036\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_Hit_H\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.05399999\n    functionName: TriggerAudioPattern\n    data: Avatar_Hit_H\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.65699995\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_Scratch\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.8414999\n    functionName: TriggerAudioPattern\n    data: Avatar_FootStep_Right\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.9254999\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_Scratch\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_JW_C2_2",
+      "stopTime": 2.3833334,
+      "maxKeyTime": 2.4,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_jw_c2_2.fbx",
+        "clipName": "Avatar_Fuka_Ani_JW_C2_2",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-3496342871035550573",
+        "serializedFile": "CAB-62ca738a368413bd6584b53026c31c66",
+        "isIndexPreferredVariant": true,
+        "offset": 31751066
+      },
+      "eventsYaml": "\n  - time: 0.1233135\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_CBT_Hia\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_EvadeBackward",
+      "stopTime": 1.0,
+      "maxKeyTime": 1.0333333,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_evadebackward.fbx",
+        "clipName": "Avatar_Fuka_Ani_EvadeBackward",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-3721986816941069971",
+        "serializedFile": "CAB-dacc886300ff3cbe83be6d2203b5ac1c",
+        "isIndexPreferredVariant": true,
+        "offset": 29533531
+      },
+      "eventsYaml": "\n  - time: 0.045\n    functionName: TriggerAudioPattern\n    data: Avatar_Mei_Dodge\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.248\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.844\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_JW_C1_1",
+      "stopTime": 1.8666668,
+      "maxKeyTime": 1.9,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_jw_c1_1.fbx",
+        "clipName": "Avatar_Fuka_Ani_JW_C1_1",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-4475858348596307210",
+        "serializedFile": "CAB-82e2a38cd30417dfdbb9442cea9c2dc6",
+        "isIndexPreferredVariant": true,
+        "offset": 31611556
+      },
+      "eventsYaml": " []\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_JW_C1_2",
+      "stopTime": 2.0666668,
+      "maxKeyTime": 2.1,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_jw_c1_2.fbx",
+        "clipName": "Avatar_Fuka_Ani_JW_C1_2",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-4938794413310885704",
+        "serializedFile": "CAB-e37df2546bda4fc72e71dc00af6bae01",
+        "isIndexPreferredVariant": true,
+        "offset": 31661781
+      },
+      "eventsYaml": "\n  - time: 0.33832836\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_Ani_B_Attack\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_Hit_L",
+      "stopTime": 0.9166667,
+      "maxKeyTime": 0.96666664,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_hit_l.fbx",
+        "clipName": "Avatar_Fuka_Ani_Hit_L",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-5891229552932393282",
+        "serializedFile": "CAB-f5e75b943acbaa48cc7ec0cca793cacc",
+        "isIndexPreferredVariant": true,
+        "offset": 30069889
+      },
+      "eventsYaml": "\n  - time: 0.021083334\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.024750002\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_Hit_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.14483334\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.30616668\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.40883335\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_JW_C2_1",
+      "stopTime": 1.8333334,
+      "maxKeyTime": 1.8666667,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_jw_c2_1.fbx",
+        "clipName": "Avatar_Fuka_Ani_JW_C2_1",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-7336180554215125539",
+        "serializedFile": "CAB-fbfa266a5198a679a76c4e48f1f196b6",
+        "isIndexPreferredVariant": true,
+        "offset": 31700979
+      },
+      "eventsYaml": "\n  - time: 0.17712152\n    functionName: TriggerAudioPattern\n    data: Avatar_Fuka_PTL_FK_Attack_C2_1\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.19167177\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_CBT_Ha\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_JW_A2",
+      "stopTime": 1.6166667,
+      "maxKeyTime": 1.6333333,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_jw_a2.fbx",
+        "clipName": "Avatar_Fuka_Ani_JW_A2",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-8772600967229220924",
+        "serializedFile": "CAB-2f5f5ac4f5a414b82f04c98619b2baff",
+        "isIndexPreferredVariant": true,
+        "offset": 31065532
+      },
+      "eventsYaml": "\n  - time: 0.113647915\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_CBT_Ha\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_JW_A3",
+      "stopTime": 2.266667,
+      "maxKeyTime": 2.3,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_jw_a3.fbx",
+        "clipName": "Avatar_Fuka_Ani_JW_A3",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "3485521745851339292",
+        "serializedFile": "CAB-00c3479602ca85b684032ecacb334b92",
+        "isIndexPreferredVariant": true,
+        "offset": 31102639
+      },
+      "eventsYaml": "\n  - time: 0.27142927\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_CBT_Hey\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_JW_Ultra",
+      "stopTime": 3.466667,
+      "maxKeyTime": 3.5,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_jw_ultra.fbx",
+        "clipName": "Avatar_Fuka_Ani_JW_Ultra",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "4417624176829988586",
+        "serializedFile": "CAB-112ed571893ecee87bd3b24cb6cad188",
+        "isIndexPreferredVariant": true,
+        "offset": 32105609
+      },
+      "eventsYaml": "\n  - time: 0.094677866\n    functionName: PushNoCollision\n    data:\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.6674666\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_Ani_B_Attack\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 2.2795517\n    functionName: PopNoCollision\n    data:\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_JW_C3_1",
+      "stopTime": 1.8166667,
+      "maxKeyTime": 1.8666667,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_jw_c3_1.fbx",
+        "clipName": "Avatar_Fuka_Ani_JW_C3_1",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "5148039405068066603",
+        "serializedFile": "CAB-0699500cbb380e71dbaea0dd0e851d8f",
+        "isIndexPreferredVariant": true,
+        "offset": 31798177
+      },
+      "eventsYaml": "\n  - time: 0.056316666\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.16201755\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_CBT_Ho\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.0772834\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.4642334\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_JW_A4",
+      "stopTime": 1.7833335,
+      "maxKeyTime": 1.8,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_jw_a4.fbx",
+        "clipName": "Avatar_Fuka_Ani_JW_A4",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "5868276869750686477",
+        "serializedFile": "CAB-6a7b7c90d66d1249af259d18b1b69b1e",
+        "isIndexPreferredVariant": true,
+        "offset": 31148512
+      },
+      "eventsYaml": "\n  - time: 0.17056715\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_CBT_Hia\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_StandBy",
+      "stopTime": 2.0,
+      "maxKeyTime": 2.0666666,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_standby.fbx",
+        "clipName": "Avatar_Fuka_Ani_StandBy",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "61859981234845613",
+        "serializedFile": "CAB-22966168fc09fa63c00df1332bef46a7",
+        "isIndexPreferredVariant": true,
+        "offset": 34778429
+      },
+      "eventsYaml": " []\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_JW_B2",
+      "stopTime": 1.6166668,
+      "maxKeyTime": 1.6666666,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_jw_b2.fbx",
+        "clipName": "Avatar_Fuka_Ani_JW_B2",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "6412682861956734227",
+        "serializedFile": "CAB-49cea4e3e4081f2ae897066295e76621",
+        "isIndexPreferredVariant": true,
+        "offset": 31346991
+      },
+      "eventsYaml": "\n  - time: 0.13344738\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_CBT_Ha\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_JW_B3",
+      "stopTime": 2.0500002,
+      "maxKeyTime": 2.1,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_jw_b3.fbx",
+        "clipName": "Avatar_Fuka_Ani_JW_B3",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "8483564711845024103",
+        "serializedFile": "CAB-6c8050ca6bcdacb939a5c0a56e828261",
+        "isIndexPreferredVariant": true,
+        "offset": 31462987
+      },
+      "eventsYaml": "\n  - time: 0.2463942\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_Ani_B_Attack\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_JW_C3_2",
+      "stopTime": 2.95,
+      "maxKeyTime": 3.0,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_jw_c3_2.fbx",
+        "clipName": "Avatar_Fuka_Ani_JW_C3_2",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "8968788331902960784",
+        "serializedFile": "CAB-cb2c89015bf0bf3386de1c918c7930d9",
+        "isIndexPreferredVariant": true,
+        "offset": 31924188
+      },
+      "eventsYaml": "\n  - time: 0.0708\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.531\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.5628804\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_CBT_Hia\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.88500005\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 1.0295501\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 2.006\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_R\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 2.4485\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Avatar_Fuka_Ani_JW_B1",
+      "stopTime": 2.25,
+      "maxKeyTime": 2.3,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_common/_dependencies/animation/avatar_fuka_ani_jw_b1.fbx",
+        "clipName": "Avatar_Fuka_Ani_JW_B1",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "9000654182935626209",
+        "serializedFile": "CAB-c66251f0f0ae65098e60889c22d58178",
+        "isIndexPreferredVariant": true,
+        "offset": 31188295
+      },
+      "eventsYaml": "\n  - time: 0.29258242\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_CBT_Hey\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    }
+  ],
+  "validation": {
+    "clips": 25,
+    "unresolvedTrackPaths": 0,
+    "finiteSamples": true,
+    "bodyMotionProof": "../hi3-fuhua-extract\\exports\\c4-jw-playable\\main-bone-motion-verification.json",
+    "renderReview": "Performed by parent agent; this extraction task is headless only."
+  },
+  "materialMap": "../hi3-fuhua-extract\\exports\\c4-jw-playable\\material-surface-map.json",
+  "files": [
+    {
+      "file": "1 (1).png",
+      "bytes": 54198,
+      "sha256": "637e4485ab47bba8ff3542221f265bc84e56474118052c538eba73ef7cec93f5"
+    },
+    {
+      "file": "1.png",
+      "bytes": 209001,
+      "sha256": "d0bff4da00b0660749af27bc63a57a91a26d175086073f6e9b303fd737173696"
+    },
+    {
+      "file": "Avatar_Fuka_C4_JW.scn",
+      "bytes": 2585301,
+      "sha256": "45d5c3dd8bbff1a77831621cd1140cec43707ec30edb5836c85605d2f2a8eb75"
+    },
+    {
+      "file": "Avatar_Fuka_C4_Texture_Body_Color.png",
+      "bytes": 939445,
+      "sha256": "65dc46a666cb4e10be9a99f155080803beb065b30c1a4e37ef98acd66ee0a4c4"
+    },
+    {
+      "file": "Avatar_Fuka_C4_Texture_Body_LightMap.png",
+      "bytes": 622579,
+      "sha256": "2516564da71dea00cc103d72d1b134a7e1ed2ca0361bf1a0f889ef57ee9a2e28"
+    },
+    {
+      "file": "Avatar_Fuka_C4_Texture_Hair_Color.png",
+      "bytes": 597419,
+      "sha256": "db1c3f1a95da95404ffa728289ec0792d8ad606fac6ec35e26722f4e9d076b92"
+    },
+    {
+      "file": "Avatar_Fuka_FaceMap.png",
+      "bytes": 35538,
+      "sha256": "b2881ef8d8561c172807a0e19c2c5eccf8adc990afef4a7151f2dba8ee2b8385"
+    },
+    {
+      "file": "Avatar_Fuka_Texture_Face_Color.png",
+      "bytes": 93189,
+      "sha256": "8e95789d461a1b3d2f51c5993121523545d7c9f521fde7b51e5054599226ab69"
+    },
+    {
+      "file": "Avatar_Fuka_Texture_Face_LightMap.png",
+      "bytes": 12110,
+      "sha256": "f63dfc02ebf52c80f107d61eea4260ea525688c6d43b596be4b14d218bdb40ad"
+    },
+    {
+      "file": "Avatar_Fuka_Texture_Hair_LightMap.png",
+      "bytes": 198097,
+      "sha256": "2b3e7a1229db2eded4db0af279baedb5f1f03205e38f21c8550d95b324f570f6"
+    }
+  ],
+  "limitations": [
+    "Original combat uses root motion and requires horizontal-gameplay adaptation, especially JW_Ultra rootY.",
+    "No original dedicated guard clip in selected C4 set. Existing defense is a separately adapted Lighter source, not native C4.",
+    "C7_GM was not shipped: source Humanoid muscle curves require a supported baker. Its intermediate static-body scene is outside the game project."
+  ],
+  "localizedNameEvidence": "Parent agent visually confirmed the exported C4_JW model in the Godot rendering review; native JW Ultra dependencies additionally reference Avatar_Fuka_C4_Texture_Pheonix_Color and avatar_fuka_jw_ultra_phoenix.prefab.",
+  "presentationAdaptations": [
+    {
+      "mesh": "Body",
+      "surface": 1,
+      "originalMaterial": "CommonEmpty",
+      "originalShader": "miHoYo/miHoYo_Special/Misc/Invisible",
+      "originalHiddenGeometry": "1473 original forearm, hand and finger vertices, primarily weighted to L/R Hand and ForeTwist1.",
+      "adaptation": "The Godot actor renders this existing surface with original C4 BodyColor, because the separately equipped gauntlet weapon is not mounted. It restores visible hands without altering geometry.",
+      "evidence": "exports/c4-jw-playable/common-empty-probe and body-surface-weight-report.json. Parent GPU comparison verified complete forearms/hands after showing this surface.",
+      "interpretation": "Original invisibility likely enables equipped gauntlet replacement; that equipment behavior is an inference."
+    }
+  ]
+}

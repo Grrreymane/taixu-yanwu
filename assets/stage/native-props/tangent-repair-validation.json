@@ -1,0 +1,1086 @@
+{
+  "allOtherArrayChannelsExactlyUnchanged": true,
+  "changedEncodedBytes": 177,
+  "changes": [
+    {
+      "method": "incident UV derivative projected onto original normal",
+      "new": [
+        0.262896478176117,
+        0.963125169277191,
+        0.0572304166853428,
+        -1.0
+      ],
+      "node": "Part01",
+      "nondegenerateFaces": 1,
+      "old": [
+        0.0,
+        1.0,
+        -1.525902189314e-05,
+        -1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 1,
+      "vertex": 973
+    },
+    {
+      "method": "incident UV derivative projected onto original normal",
+      "new": [
+        -0.883395373821259,
+        -0.117585338652134,
+        -0.453636735677719,
+        -1.0
+      ],
+      "node": "Part01",
+      "nondegenerateFaces": 1,
+      "old": [
+        0.0,
+        1.0,
+        -1.525902189314e-05,
+        -1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 1,
+      "vertex": 1607
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        -0.781725347042084,
+        -0.233607977628708,
+        0.57821524143219,
+        1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 2,
+      "old": [
+        1.0,
+        0.0,
+        -1.525902189314e-05,
+        1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 7056
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        -0.18269307911396,
+        -0.0547061040997505,
+        -0.981646835803986,
+        1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 1,
+      "old": [
+        1.0,
+        0.0,
+        -1.525902189314e-05,
+        1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 7057
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        0.781725347042084,
+        0.233607977628708,
+        -0.57821524143219,
+        1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 2,
+      "old": [
+        1.0,
+        0.0,
+        -1.525902189314e-05,
+        1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 7058
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        0.949788391590118,
+        0.283887922763824,
+        -0.131566390395164,
+        1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 1,
+      "old": [
+        1.0,
+        0.0,
+        -1.525902189314e-05,
+        1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 7059
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        0.181998640298843,
+        0.0544985421001911,
+        0.981787323951721,
+        1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 2,
+      "old": [
+        1.0,
+        0.0,
+        -1.525902189314e-05,
+        1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 7072
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        -0.181998640298843,
+        -0.0544985421001911,
+        -0.981787323951721,
+        1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 1,
+      "old": [
+        1.0,
+        0.0,
+        -1.525902189314e-05,
+        1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 7073
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        0.781382203102112,
+        0.233505353331566,
+        -0.578720271587372,
+        1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 2,
+      "old": [
+        1.0,
+        0.0,
+        -1.525902189314e-05,
+        1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 7074
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        0.949789881706238,
+        0.283888399600983,
+        -0.131554380059242,
+        1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 1,
+      "old": [
+        1.0,
+        0.0,
+        -1.525902189314e-05,
+        1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 7075
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        0.182373821735382,
+        0.0474961139261723,
+        0.982081413269043,
+        -1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 2,
+      "old": [
+        1.0,
+        0.0,
+        -4.577846266329e-05,
+        -1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 7132
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        -0.182373821735382,
+        -0.0474961139261723,
+        -0.982081413269043,
+        -1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 1,
+      "old": [
+        1.0,
+        0.0,
+        -4.577846266329e-05,
+        -1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 7133
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        0.786699652671814,
+        0.20497465133667,
+        -0.582313477993011,
+        -1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 2,
+      "old": [
+        1.0,
+        0.0,
+        -4.577846266329e-05,
+        -1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 7134
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        0.959078848361969,
+        0.249877020716667,
+        -0.133151024580002,
+        -1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 1,
+      "old": [
+        1.0,
+        0.0,
+        -4.577846266329e-05,
+        -1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 7135
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        -0.787034094333649,
+        -0.204943940043449,
+        0.581872224807739,
+        1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 2,
+      "old": [
+        1.0,
+        0.0,
+        -1.525902189314e-05,
+        1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 7148
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        -0.183702304959297,
+        -0.0478577166795731,
+        -0.981816172599792,
+        1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 1,
+      "old": [
+        1.0,
+        0.0,
+        -1.525902189314e-05,
+        1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 7149
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        0.787034094333649,
+        0.204943940043449,
+        -0.581872224807739,
+        1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 2,
+      "old": [
+        1.0,
+        0.0,
+        -1.525902189314e-05,
+        1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 7150
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        0.959130167961121,
+        0.249768957495689,
+        -0.132984101772308,
+        1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 1,
+      "old": [
+        1.0,
+        0.0,
+        -1.525902189314e-05,
+        1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 7151
+    },
+    {
+      "method": "valid incident-neighbour tangent projected onto original normal",
+      "new": [
+        0.114579789340496,
+        -9.80269310169035e-10,
+        -0.993414044380188,
+        1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 2,
+      "old": [
+        1.0,
+        0.0,
+        -4.577846266329e-05,
+        -1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 9032
+    },
+    {
+      "method": "valid incident-neighbour tangent projected onto original normal",
+      "new": [
+        0.114579796791077,
+        -9.80269310169035e-10,
+        -0.993414103984833,
+        1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 1,
+      "old": [
+        1.0,
+        0.0,
+        -4.577846266329e-05,
+        -1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 9033
+    },
+    {
+      "method": "valid incident-neighbour tangent projected onto original normal",
+      "new": [
+        -0.11454065144062,
+        -1.6906398741412e-05,
+        0.993418574333191,
+        1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 2,
+      "old": [
+        1.0,
+        0.0,
+        -1.525902189314e-05,
+        1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 9042
+    },
+    {
+      "method": "valid incident-neighbour tangent projected onto original normal",
+      "new": [
+        -0.11454065144062,
+        -1.6906398741412e-05,
+        0.993418514728546,
+        1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 1,
+      "old": [
+        1.0,
+        0.0,
+        -1.525902189314e-05,
+        1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 9043
+    },
+    {
+      "method": "valid incident-neighbour tangent projected onto original normal",
+      "new": [
+        0.11454065144062,
+        0.0,
+        -0.993418633937836,
+        -1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 2,
+      "old": [
+        1.0,
+        0.0,
+        -1.525902189314e-05,
+        1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 9328
+    },
+    {
+      "method": "valid incident-neighbour tangent projected onto original normal",
+      "new": [
+        0.11454065144062,
+        0.0,
+        -0.993418574333191,
+        -1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 1,
+      "old": [
+        1.0,
+        0.0,
+        -1.525902189314e-05,
+        1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 9329
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        -0.114579789340496,
+        1.70530214949061e-10,
+        0.993414044380188,
+        -1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 2,
+      "old": [
+        1.0,
+        0.0,
+        -4.577846266329e-05,
+        -1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 9340
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        0.114579774439335,
+        1.84979580808431e-05,
+        -0.993414044380188,
+        -1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 1,
+      "old": [
+        1.0,
+        0.0,
+        -4.577846266329e-05,
+        -1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 9341
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        0.0544287823140621,
+        0.880039513111115,
+        -0.471771150827408,
+        -1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 3,
+      "old": [
+        1.0,
+        0.0,
+        -4.577846266329e-05,
+        -1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 9342
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        -0.0544287823140621,
+        -0.880039513111115,
+        0.471771150827408,
+        -1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 3,
+      "old": [
+        1.0,
+        0.0,
+        -4.577846266329e-05,
+        -1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 9343
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        -1.67955549841281e-05,
+        -1.0,
+        -1.93718938135135e-06,
+        -1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 2,
+      "old": [
+        1.0,
+        0.0,
+        -4.577846266329e-05,
+        -1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 9344
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        -0.114579796791077,
+        -2.81173667682211e-10,
+        0.993414044380188,
+        -1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 1,
+      "old": [
+        1.0,
+        0.0,
+        -4.577846266329e-05,
+        -1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 9345
+    },
+    {
+      "method": "valid incident-neighbour tangent projected onto original normal",
+      "new": [
+        -0.520832359790802,
+        -2.09737427212531e-05,
+        0.853658974170685,
+        1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 2,
+      "old": [
+        1.0,
+        0.0,
+        -1.525902189314e-05,
+        1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 13094
+    },
+    {
+      "method": "valid incident-neighbour tangent projected onto original normal",
+      "new": [
+        -0.520832359790802,
+        -2.09737427212531e-05,
+        0.853658974170685,
+        1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 1,
+      "old": [
+        1.0,
+        0.0,
+        -1.525902189314e-05,
+        1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 13095
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        -0.331292450428009,
+        0.771657884120941,
+        0.542945146560669,
+        -1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 2,
+      "old": [
+        1.0,
+        0.0,
+        -4.577846266329e-05,
+        -1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 13104
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        0.520890891551971,
+        1.31422048070817e-05,
+        -0.853623270988464,
+        -1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 1,
+      "old": [
+        1.0,
+        0.0,
+        -4.577846266329e-05,
+        -1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 13105
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        0.520890831947327,
+        1.82526709977537e-05,
+        -0.853623270988464,
+        -1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 3,
+      "old": [
+        1.0,
+        0.0,
+        -4.577846266329e-05,
+        -1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 13106
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        -0.520890831947327,
+        -1.82526709977537e-05,
+        0.853623270988464,
+        -1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 2,
+      "old": [
+        1.0,
+        0.0,
+        -4.577846266329e-05,
+        -1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 13107
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        -0.520890891551971,
+        -3.65350861102343e-05,
+        0.853623270988464,
+        -1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 1,
+      "old": [
+        1.0,
+        0.0,
+        -4.577846266329e-05,
+        -1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 13108
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        0.520832359790802,
+        0.0,
+        -0.853658974170685,
+        1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 1,
+      "old": [
+        1.0,
+        0.0,
+        -1.525902189314e-05,
+        1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 14177
+    },
+    {
+      "method": "isolated degenerate geometry: original axis projected onto original normal",
+      "new": [
+        0.996167063713074,
+        0.0,
+        -0.0874715149402618,
+        1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 0,
+      "old": [
+        1.0,
+        0.0,
+        -1.525902189314e-05,
+        1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 18808
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        0.349232077598572,
+        5.24535289514461e-06,
+        0.937036275863647,
+        -1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 2,
+      "old": [
+        1.0,
+        0.0,
+        -4.577846266329e-05,
+        -1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 28033
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        -0.349232077598572,
+        -5.24535289514461e-06,
+        -0.937036275863647,
+        -1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 1,
+      "old": [
+        1.0,
+        0.0,
+        -4.577846266329e-05,
+        -1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 28034
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        -0.329023599624634,
+        0.335284650325775,
+        -0.882795453071594,
+        -1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 2,
+      "old": [
+        1.0,
+        0.0,
+        -4.577846266329e-05,
+        -1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 28035
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        -1.83913980436046e-05,
+        1.0,
+        6.8544472924259e-06,
+        -1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 1,
+      "old": [
+        1.0,
+        0.0,
+        -4.577846266329e-05,
+        -1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 28036
+    },
+    {
+      "method": "valid incident-neighbour tangent projected onto original normal",
+      "new": [
+        0.191171914339066,
+        3.11182496437468e-10,
+        -0.981556594371796,
+        1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 2,
+      "old": [
+        1.0,
+        0.0,
+        -4.577846266329e-05,
+        -1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 30038
+    },
+    {
+      "method": "valid incident-neighbour tangent projected onto original normal",
+      "new": [
+        0.191171914339066,
+        3.11182496437468e-10,
+        -0.98155665397644,
+        1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 1,
+      "old": [
+        1.0,
+        0.0,
+        -4.577846266329e-05,
+        -1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 30039
+    },
+    {
+      "method": "valid incident-neighbour tangent projected onto original normal",
+      "new": [
+        0.996391713619232,
+        -0.0353645980358124,
+        -0.0771549791097641,
+        1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 1,
+      "old": [
+        1.0,
+        0.0,
+        -4.577846266329e-05,
+        -1.0
+      ],
+      "surface": 1,
+      "validUVFaces": 0,
+      "vertex": 1172
+    },
+    {
+      "method": "incident UV derivative projected onto original normal",
+      "new": [
+        -0.925489962100983,
+        0.0944735035300255,
+        0.366801172494888,
+        -1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 3,
+      "old": [
+        -3.051850944757e-05,
+        0.0,
+        -1.0,
+        1.0
+      ],
+      "surface": 1,
+      "validUVFaces": 3,
+      "vertex": 4280
+    },
+    {
+      "method": "incident UV derivative projected onto original normal",
+      "new": [
+        -0.917347729206085,
+        0.158092200756073,
+        0.365348994731903,
+        -1.0
+      ],
+      "node": "House_All",
+      "nondegenerateFaces": 3,
+      "old": [
+        -3.051850944757e-05,
+        0.0,
+        -1.0,
+        1.0
+      ],
+      "surface": 1,
+      "validUVFaces": 3,
+      "vertex": 4283
+    },
+    {
+      "method": "valid incident-neighbour tangent projected onto original normal",
+      "new": [
+        0.223111271858215,
+        0.00748681696131825,
+        0.974764287471771,
+        1.0
+      ],
+      "node": "Stage_TaiXu_B_Stone01b",
+      "nondegenerateFaces": 1,
+      "old": [
+        -1.0,
+        0.0,
+        -1.525902189314e-05,
+        1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 4540
+    },
+    {
+      "method": "valid incident-neighbour tangent projected onto original normal",
+      "new": [
+        0.504014074802399,
+        0.00117783539462835,
+        0.863694608211517,
+        -1.0
+      ],
+      "node": "Stage_TaiXu_B_Stone01b",
+      "nondegenerateFaces": 1,
+      "old": [
+        -1.0,
+        0.0,
+        -1.525902189314e-05,
+        1.0
+      ],
+      "surface": 1,
+      "validUVFaces": 0,
+      "vertex": 586
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        -0.348774969577789,
+        0.935757637023926,
+        -0.0520935542881489,
+        1.0
+      ],
+      "node": "Stage_TaiXu_B_Stone02",
+      "nondegenerateFaces": 1,
+      "old": [
+        -1.0,
+        0.0,
+        -1.525902189314e-05,
+        1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 4460
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        0.342852383852005,
+        -0.932503640651703,
+        -0.113531060516834,
+        1.0
+      ],
+      "node": "Stage_TaiXu_B_Stone02",
+      "nondegenerateFaces": 1,
+      "old": [
+        -1.0,
+        0.0,
+        -1.525902189314e-05,
+        1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 4461
+    },
+    {
+      "method": "original UV-degenerate island: incident geometry edge projected onto original normal",
+      "new": [
+        0.299152761697769,
+        0.133639991283417,
+        0.944800555706024,
+        1.0
+      ],
+      "node": "Stage_TaiXu_B_Stone02",
+      "nondegenerateFaces": 1,
+      "old": [
+        -1.0,
+        0.0,
+        -1.525902189314e-05,
+        1.0
+      ],
+      "surface": 0,
+      "validUVFaces": 0,
+      "vertex": 4462
+    }
+  ],
+  "fixedVertices": 53,
+  "maxNormalTangentDotAfter": 0.0400841981172562,
+  "nodeTransformsAndMaterialNamesUnchanged": true,
+  "normalBytesUnchanged": true,
+  "onlyTangentChannelChanged": true,
+  "output": "../hi3-fuhua-extract/exports/taixu-native-props/NativeMountainTemple-tangent-fixed.scn",
+  "remainingInvalidInReviewedSurfaces": 0,
+  "saveReload": true,
+  "source": "res://assets/stage/native-props/NativeMountainTemple.scn",
+  "oldSceneSha256": "0286882b97bebad14ab9daeb34541995d3aef972dbe603d150c37bbc40a45db5",
+  "newSceneSha256": "68bb3653a668d8d8aabfc074cfe6668ff41a6f75609cc1332a1c8c3fc2695b94",
+  "backup": "../hi3-fuhua-extract\\exports\\taixu-native-props\\delivery-backups\\20261018-202217-53-tangents\\NativeMountainTemple.scn",
+  "resource": "res://assets/stage/native-props/NativeMountainTemple.scn",
+  "sourceDiagnosis": {
+    "sourceZeroTangents": 0,
+    "originalAxisTangents": 7,
+    "generatedMikkFallbackTangents": 46,
+    "verticesWithOnlyDegenerateUVFaces": 49,
+    "note": "Not zero vectors: original or generated default coordinate axes. 52 affected vertices belong to nondegenerate geometric triangles; one isolated geometric degeneracy. Repairs are import adaptation, not a claim of exact original fallback shading."
+  }
+}

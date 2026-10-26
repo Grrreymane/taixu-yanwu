@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "internalAppearanceCode": "C3_04_03",
+  "localizedName": "红叶知秋",
+  "sourceReadOnly": true,
+  "prefab": "assets/asbres/entities/avatar/fuka_c3_nd/dress_fuka_c3_04_03/avatar.prefab",
+  "rootPathId": "6480448104156695592",
+  "cab": "CAB-a1ced7325d126d70521574517d4e4fdc",
+  "appearanceIdentification": {
+    "officialAnnouncement": "https://www.sohu.com/a/499724306_632941",
+    "date": "2021-11-07",
+    "publisher": "崩坏3",
+    "visualMatch": "Native C3_04_03 body texture matches the user PMX maple-leaf coat, blue shorts, white hat and Chiyuan backpack."
+  },
+  "dynamicBoneComponents": 8,
+  "dynamicBoneColliders": 2,
+  "components": [
+    {
+      "type": "DynamicBoneForThrowSkill",
+      "pathId": "-6439939819394541606",
+      "owner": "Avatar",
+      "enabled": true,
+      "scriptPathId": "-1833451359358525944",
+      "cab": "CAB-a1ced7325d126d70521574517d4e4fdc",
+      "bytes": 304,
+      "rawSha256": "5f5921b9d7f0161e567c81eace8a0048230fc126cfc73aa3046e1d4815b59952",
+      "transformReferences": [
+        {
+          "byteOffset": 32,
+          "transformPathId": "4205192869222773197",
+          "transformName": "Bip001"
+        }
+      ],
+      "rawFile": "../hi3-fuhua-extract\\exports\\c3-skin-autumn\\secondary-source\\raw\\CAB-a1ced7325d126d70521574517d4e4fdc_-6439939819394541606_MonoBehaviour.bin"
+    },
+    {
+      "type": "DynamicBoneCollider",
+      "pathId": "-5609760153989055486",
+      "owner": "Bip001 Spine2",
+      "enabled": true,
+      "scriptPathId": "1215611293731826893",
+      "cab": "CAB-a1ced7325d126d70521574517d4e4fdc",
+      "bytes": 64,
+      "rawSha256": "d7c3e40a16101c79f7ae328f507a8324b598727ca693cde3bf7119651dca5404",
+      "transformReferences": [],
+      "rawFile": "../hi3-fuhua-extract\\exports\\c3-skin-autumn\\secondary-source\\raw\\CAB-a1ced7325d126d70521574517d4e4fdc_-5609760153989055486_MonoBehaviour.bin"
+    },
+    {
+      "type": "DynamicBone",
+      "pathId": "-3784319500001711299",
+      "owner": "Bone_C3_04_03_Baldric_A",
+      "enabled": true,
+      "scriptPathId": "8407979380618123730",
+      "cab": "CAB-a1ced7325d126d70521574517d4e4fdc",
+      "bytes": 284,
+      "rawSha256": "5c683f3b93e763fabcd9bbec6678622947f14f1bc5d5e19351c39027e12d1431",
+      "transformReferences": [
+        {
+          "byteOffset": 32,
+          "transformPathId": "-8990928674186273851",
+          "transformName": "Bone_C3_04_03_Baldric_A"
+        }
+      ],
+      "rawFile": "../hi3-fuhua-extract\\exports\\c3-skin-autumn\\secondary-source\\raw\\CAB-a1ced7325d126d70521574517d4e4fdc_-3784319500001711299_MonoBehaviour.bin"
+    },
+    {
+      "type": "DynamicBone",
+      "pathId": "-3458054058538052360",
+      "owner": "Bones_Hair00",
+      "enabled": true,
+      "scriptPathId": "8407979380618123730",
+      "cab": "CAB-a1ced7325d126d70521574517d4e4fdc",
+      "bytes": 272,
+      "rawSha256": "af6bc9d7732e04f5ec5a2a805ba57ffaf56354ad6b4b87078042a994baf9994f",
+      "transformReferences": [
+        {
+          "byteOffset": 32,
+          "transformPathId": "-4131756176541102671",
+          "transformName": "Bones_Hair00"
+        }
+      ],
+      "rawFile": "../hi3-fuhua-extract\\exports\\c3-skin-autumn\\secondary-source\\raw\\CAB-a1ced7325d126d70521574517d4e4fdc_-3458054058538052360_MonoBehaviour.bin"
+    },
+    {
+      "type": "DynamicBone",
+      "pathId": "-2021183004272973902",
+      "owner": "Bone_C3_04_03_Bag_Ears_L_01",
+      "enabled": true,
+      "scriptPathId": "8407979380618123730",
+      "cab": "CAB-a1ced7325d126d70521574517d4e4fdc",
+      "bytes": 272,
+      "rawSha256": "7c0f18a16a69d74c0113201647eaf3790f51b9f225fff7d0ab6b9e01ba359a14",
+      "transformReferences": [
+        {
+          "byteOffset": 32,
+          "transformPathId": "-2166961687138100339",
+          "transformName": "Bone_C3_04_03_Bag_Ears_L_01"
+        }
+      ],
+      "rawFile": "../hi3-fuhua-extract\\exports\\c3-skin-autumn\\secondary-source\\raw\\CAB-a1ced7325d126d70521574517d4e4fdc_-2021183004272973902_MonoBehaviour.bin"
+    },
+    {
+      "type": "DynamicBone",
+      "pathId": "-1707366413377625837",
+      "owner": "Bones_Hair08",
+      "enabled": true,
+      "scriptPathId": "8407979380618123730",
+      "cab": "CAB-a1ced7325d126d70521574517d4e4fdc",
+      "bytes": 284,
+      "rawSha256": "71eae3589e21ae78df0b11a2de6ed1a96cc526239e0c49b84f4468813535f5fa",
+      "transformReferences": [
+        {
+          "byteOffset": 32,
+          "transformPathId": "6991882308703034559",
+          "transformName": "Bones_Hair08"
+        }
+      ],
+      "rawFile": "../hi3-fuhua-extract\\exports\\c3-skin-autumn\\secondary-source\\raw\\CAB-a1ced7325d126d70521574517d4e4fdc_-1707366413377625837_MonoBehaviour.bin"
+    },
+    {
+      "type": "DynamicBone",
+      "pathId": "-886592815791049525",
+      "owner": "Bones_Hair14",
+      "enabled": true,
+      "scriptPathId": "8407979380618123730",
+      "cab": "CAB-a1ced7325d126d70521574517d4e4fdc",
+      "bytes": 272,
+      "rawSha256": "b7aa3a066ad60c56af6fb25385e7c4e7ff57999b3eefa37d87aa2e3b65256eb2",
+      "transformReferences": [
+        {
+          "byteOffset": 32,
+          "transformPathId": "1364929026597508409",
+          "transformName": "Bones_Hair14"
+        }
+      ],
+      "rawFile": "../hi3-fuhua-extract\\exports\\c3-skin-autumn\\secondary-source\\raw\\CAB-a1ced7325d126d70521574517d4e4fdc_-886592815791049525_MonoBehaviour.bin"
+    },
+    {
+      "type": "DynamicBone",
+      "pathId": "1879534575279023444",
+      "owner": "Bones_Hair02",
+      "enabled": true,
+      "scriptPathId": "8407979380618123730",
+      "cab": "CAB-a1ced7325d126d70521574517d4e4fdc",
+      "bytes": 272,
+      "rawSha256": "189973e5da553d23c1ca9db39bc1cfba060c132311d045742e9cc4072dd7d5c3",
+      "transformReferences": [
+        {
+          "byteOffset": 32,
+          "transformPathId": "8575373146283071343",
+          "transformName": "Bones_Hair02"
+        }
+      ],
+      "rawFile": "../hi3-fuhua-extract\\exports\\c3-skin-autumn\\secondary-source\\raw\\CAB-a1ced7325d126d70521574517d4e4fdc_1879534575279023444_MonoBehaviour.bin"
+    },
+    {
+      "type": "DynamicBone",
+      "pathId": "5412260139168960980",
+      "owner": "Bone_C3_04_03_Bag_Ribbon_01",
+      "enabled": true,
+      "scriptPathId": "8407979380618123730",
+      "cab": "CAB-a1ced7325d126d70521574517d4e4fdc",
+      "bytes": 272,
+      "rawSha256": "fa76ae7efafb823d15c226cb1886befe57f3a491d129d7632efccd7993aa4d14",
+      "transformReferences": [
+        {
+          "byteOffset": 32,
+          "transformPathId": "-4551385472576493567",
+          "transformName": "Bone_C3_04_03_Bag_Ribbon_01"
+        }
+      ],
+      "rawFile": "../hi3-fuhua-extract\\exports\\c3-skin-autumn\\secondary-source\\raw\\CAB-a1ced7325d126d70521574517d4e4fdc_5412260139168960980_MonoBehaviour.bin"
+    },
+    {
+      "type": "DynamicBone",
+      "pathId": "6040723698678301163",
+      "owner": "Bone_C3_04_03_Bag_Ears_R_01",
+      "enabled": true,
+      "scriptPathId": "8407979380618123730",
+      "cab": "CAB-a1ced7325d126d70521574517d4e4fdc",
+      "bytes": 272,
+      "rawSha256": "aaeaebb19840041f8608734b2d9c0ed4a2d1bd6382f2e974b31265a45cceca5a",
+      "transformReferences": [
+        {
+          "byteOffset": 32,
+          "transformPathId": "-8575862368024570099",
+          "transformName": "Bone_C3_04_03_Bag_Ears_R_01"
+        }
+      ],
+      "rawFile": "../hi3-fuhua-extract\\exports\\c3-skin-autumn\\secondary-source\\raw\\CAB-a1ced7325d126d70521574517d4e4fdc_6040723698678301163_MonoBehaviour.bin"
+    },
+    {
+      "type": "DynamicBoneCollider",
+      "pathId": "6173663915177979153",
+      "owner": "Bone_C3_04_03_Bag_Root",
+      "enabled": true,
+      "scriptPathId": "1215611293731826893",
+      "cab": "CAB-a1ced7325d126d70521574517d4e4fdc",
+      "bytes": 64,
+      "rawSha256": "28273dd3ae566c2e64f0a3ab11792034431764f9df6d09b7eb50821fdb91e3ee",
+      "transformReferences": [],
+      "rawFile": "../hi3-fuhua-extract\\exports\\c3-skin-autumn\\secondary-source\\raw\\CAB-a1ced7325d126d70521574517d4e4fdc_6173663915177979153_MonoBehaviour.bin"
+    }
+  ],
+  "validated": [
+    "Component types and owning GameObjects are resolved from original prefab references.",
+    "Each DynamicBone root Transform PPtr at byte32 resolves to its owning original bone.",
+    "Two original collision components belong to Bip001 Spine2 and Bone_C3_04_03_Bag_Root."
+  ],
+  "limits": [
+    "This original Unity build strips component field schemas; solver parameters are not inferred from unlabeled raw words.",
+    "FBX/SCN retains original bones and skin weights but does not execute Unity MonoBehaviours.",
+    "These sources do not by themselves provide native physics in Godot. The 19 outfit-specific bones remain intact; no synthetic motion is claimed as original animation."
+  ]
+}

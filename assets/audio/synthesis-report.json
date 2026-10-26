@@ -1,0 +1,80 @@
+{
+  "source": "Original procedural synthesis, not extracted game audio",
+  "version": 2,
+  "sampleRate": 44100,
+  "sounds": {
+    "swing": {
+      "seconds": 0.12498866213151927,
+      "layers": "Short cloth/air swell; no impact transient or bass tail",
+      "peak": 0.74,
+      "rmsDbFS": -14.07,
+      "clippedSamples": 0
+    },
+    "swing_heavy": {
+      "seconds": 0.18498866213151927,
+      "layers": "Broader air swell, still quieter than contact",
+      "peak": 0.74,
+      "rmsDbFS": -14.71,
+      "clippedSamples": 0
+    },
+    "hit": {
+      "seconds": 0.14498866213151929,
+      "layers": "Dry leather transient + short body impulse + filtered friction",
+      "peak": 0.74,
+      "rmsDbFS": -19.03,
+      "clippedSamples": 0
+    },
+    "hit_alt": {
+      "seconds": 0.13,
+      "layers": "Brighter palm/smack transient, shorter recovery than first punch",
+      "peak": 0.74,
+      "rmsDbFS": -20.31,
+      "clippedSamples": 0
+    },
+    "kick": {
+      "seconds": 0.19,
+      "layers": "Lower body impulse and wider contact transient than a punch",
+      "peak": 0.74,
+      "rmsDbFS": -17.26,
+      "clippedSamples": 0
+    },
+    "heavy": {
+      "seconds": 0.2849886621315193,
+      "layers": "Immediate crack + textured low body impulse; shortened tonal tail",
+      "peak": 0.74,
+      "rmsDbFS": -17.83,
+      "clippedSamples": 0
+    },
+    "block": {
+      "seconds": 0.13,
+      "layers": "Damped forearm knock and short cloth friction",
+      "peak": 0.74,
+      "rmsDbFS": -20.51,
+      "clippedSamples": 0
+    },
+    "block_heavy": {
+      "seconds": 0.19501133786848074,
+      "layers": "Heavier guard knock with additional low body layer",
+      "peak": 0.74,
+      "rmsDbFS": -20.53,
+      "clippedSamples": 0
+    },
+    "parry": {
+      "seconds": 0.23501133786848072,
+      "layers": "Immediate catch knock + delayed inharmonic release, not a UI chime",
+      "peak": 0.74,
+      "rmsDbFS": -20.73,
+      "clippedSamples": 0
+    },
+    "ultimate": {
+      "seconds": 1.05,
+      "layers": "Unchanged previous cinematic cue",
+      "peak": 0.7600000000000001,
+      "rmsDbFS": -15.39,
+      "clippedSamples": 0
+    }
+  },
+  "import": "Short combat clips use uncompressed PCM with no trimming, normalization or looping; existing ultimate import is unchanged.",
+  "routing": "Only actual hit/block/parry events select contact sounds; attack cues select air only. Stance and combo distinguish light contacts.",
+  "voicePolicy": "8 voices; free voice first, then oldest lowest priority. Air cannot replace a contact or parry. Deterministic small pitch variation; parry/ultimate pitch is fixed."
+}

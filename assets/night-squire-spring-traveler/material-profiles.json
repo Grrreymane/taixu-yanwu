@@ -1,0 +1,430 @@
+{
+  "schemaVersion": 1,
+  "source": "Exact native C3_04_01 prefab dependency material values. No source textures modified.",
+  "profiles": {
+    "night_squire_spring_traveler": {
+      "body": {
+        "sourceMaterial": "Avatar_Fuka_C3_04_01_Material_Body",
+        "source": {
+          "file": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a303f703da40756b.wmv",
+          "cab": "CAB-871732d63d84bbf78c12e801be484afb",
+          "pathId": "-7971085039239920110",
+          "shader": {
+            "fileId": 1,
+            "pathId": "-4359768581157484908",
+            "resolvedName": "miHoYo/miHoYo_Character/Character_Common/AvatarGS"
+          }
+        },
+        "textures": {
+          "albedo": "res://assets/night-squire-spring-traveler/Avatar_Fuka_C3_04_01_Texture_Body_Color.png",
+          "lightmap": "res://assets/night-squire-spring-traveler/Avatar_Fuka_C3_04_01_Texture_Body_LightMap.png"
+        },
+        "firstShadowColors": [
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.6397059,
+            0.42333478,
+            0.5621107
+          ],
+          [
+            0.5808823,
+            0.47410247,
+            0.48666483
+          ],
+          [
+            0.6390198,
+            0.6985294,
+            0.63689446
+          ],
+          [
+            0.6451161,
+            0.56736594,
+            0.7794118
+          ]
+        ],
+        "secondShadowColor": [
+          0.9372549,
+          0.7647059,
+          0.78039217
+        ],
+        "outlineColors": [
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.019031137,
+            0.048275854,
+            0.11764705
+          ],
+          [
+            0.0142733585,
+            0.02749668,
+            0.16176468
+          ],
+          [
+            0.0142733585,
+            0.02749668,
+            0.16176468
+          ],
+          [
+            0.2509804,
+            0.20000002,
+            0.3372549
+          ]
+        ],
+        "useAlphaBands": true,
+        "useOutlineAlphaBands": true,
+        "specularSoft": false,
+        "backFaceUseUv2": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "specColor": [
+          1,
+          1,
+          1
+        ],
+        "specularSmooth": 0,
+        "backFaceColor": [
+          1,
+          1,
+          1
+        ],
+        "useAlphaClip": false,
+        "alphaClipThreshold": 0.1,
+        "lightArea": 0.51,
+        "secondShadowArea": 0.51,
+        "shininess": 1.7,
+        "specMulti": 0.151,
+        "outlineWidth": 0.04,
+        "outlineScale": 0.01,
+        "maxOutlineZOffset": 1
+      },
+      "face": {
+        "sourceMaterial": "Avatar_Fuka_C0_Material_Face",
+        "source": {
+          "file": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\2a9cd0db7461adce.wmv",
+          "cab": "CAB-38d6933f2e7e294e4e0620b9247072c6",
+          "pathId": "-2502784034468111402",
+          "shader": {
+            "fileId": 1,
+            "pathId": "8679466564415281629",
+            "resolvedName": "miHoYo/miHoYo_Character/Character_Common/Face"
+          }
+        },
+        "textures": {
+          "albedo": "res://assets/night-squire-spring-traveler/Avatar_Fuka_Texture_Face_Color.png",
+          "lightmap": "res://assets/night-squire-spring-traveler/Avatar_Fuka_Texture_Face_LightMap.png",
+          "faceMap": "res://assets/night-squire-spring-traveler/Avatar_Fuka_FaceMap.png"
+        },
+        "firstShadowColors": [
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ],
+          [
+            0.9372549,
+            0.7647059,
+            0.78039217
+          ]
+        ],
+        "secondShadowColor": [
+          0.9372549,
+          0.7647059,
+          0.78039217
+        ],
+        "outlineColors": [
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ],
+          [
+            0.5514706,
+            0.26762542,
+            0.26762542
+          ]
+        ],
+        "useAlphaBands": false,
+        "useOutlineAlphaBands": false,
+        "specularSoft": false,
+        "backFaceUseUv2": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "specColor": [
+          1,
+          1,
+          1
+        ],
+        "specularSmooth": 0.04,
+        "backFaceColor": [
+          1,
+          1,
+          1
+        ],
+        "useAlphaClip": false,
+        "alphaClipThreshold": 0.1,
+        "outlineWidth": 0.05,
+        "outlineScale": 0.01,
+        "shadowFeather": 0.001
+      },
+      "hair": {
+        "sourceMaterial": "Avatar_Fuka_C3_04_01_Material_Hair",
+        "source": {
+          "file": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\c5808965df75be44.wmv",
+          "cab": "CAB-6a598f1967c3ea9c08029e9194f9c175",
+          "pathId": "-8070899514882880554",
+          "shader": {
+            "fileId": 1,
+            "pathId": "84480072165628607",
+            "resolvedName": "miHoYo/miHoYo_Character/Character_Common/Avatar"
+          }
+        },
+        "textures": {
+          "albedo": "res://assets/night-squire-spring-traveler/Avatar_Fuka_C3_04_01_Texture_Hair_Color.png",
+          "lightmap": "res://assets/night-squire-spring-traveler/Avatar_Fuka_C3_04_01_Texture_Hair_LightMap.png"
+        },
+        "firstShadowColors": [
+          [
+            0.83975667,
+            0.7915225,
+            0.88235295
+          ],
+          [
+            0.83975667,
+            0.7915225,
+            0.88235295
+          ],
+          [
+            0.83975667,
+            0.7915225,
+            0.88235295
+          ],
+          [
+            0.83975667,
+            0.7915225,
+            0.88235295
+          ],
+          [
+            0.83975667,
+            0.7915225,
+            0.88235295
+          ]
+        ],
+        "secondShadowColor": [
+          0.78448284,
+          0.6819853,
+          0.875
+        ],
+        "outlineColors": [
+          [
+            0.20058392,
+            0.21976794,
+            0.25735295
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0.20058392,
+            0.21976794,
+            0.25735295
+          ],
+          [
+            0.20058392,
+            0.21976794,
+            0.25735295
+          ],
+          [
+            0.20058392,
+            0.21976794,
+            0.25735295
+          ]
+        ],
+        "useAlphaBands": false,
+        "useOutlineAlphaBands": false,
+        "specularSoft": false,
+        "backFaceUseUv2": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "specColor": [
+          1,
+          1,
+          1
+        ],
+        "specularSmooth": 0.04,
+        "backFaceColor": [
+          1,
+          1,
+          1
+        ],
+        "useAlphaClip": false,
+        "alphaClipThreshold": 0.1,
+        "lightArea": 0.51,
+        "secondShadowArea": 0.51,
+        "shininess": 1,
+        "specMulti": 0.15,
+        "outlineWidth": 0.04,
+        "outlineScale": 0.01
+      },
+      "weapon": {
+        "sourceMaterial": "Weapon_Fist_F1_25_3_Material",
+        "source": {
+          "file": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\a2835adf81cacb8f.wmv",
+          "cab": "CAB-83e784237a18293a12abf908038d4535",
+          "pathId": "-9171855501021690090",
+          "shader": {
+            "fileId": 1,
+            "pathId": "-2224870653762880750"
+          }
+        },
+        "textures": {
+          "albedo": "res://assets/night-squire/Weapon_Fist_F1_25_3.png"
+        },
+        "firstShadowColors": [
+          [
+            0.6841479,
+            0.695985,
+            0.8161765
+          ],
+          [
+            0.6841479,
+            0.695985,
+            0.8161765
+          ],
+          [
+            0.6841479,
+            0.695985,
+            0.8161765
+          ],
+          [
+            0.6841479,
+            0.695985,
+            0.8161765
+          ],
+          [
+            0.6841479,
+            0.695985,
+            0.8161765
+          ]
+        ],
+        "secondShadowColor": [
+          0.6841479,
+          0.695985,
+          0.8161765
+        ],
+        "outlineColors": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "useAlphaBands": false,
+        "useOutlineAlphaBands": false,
+        "specularSoft": false,
+        "backFaceUseUv2": false,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "envColor": [
+          1,
+          1,
+          1
+        ],
+        "specColor": [
+          1,
+          1,
+          1
+        ],
+        "lightArea": 0.51,
+        "shininess": 10,
+        "specMulti": 0.1
+      }
+    }
+  }
+}

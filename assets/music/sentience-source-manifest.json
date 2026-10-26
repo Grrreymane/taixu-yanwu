@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "tracks": [
+    {
+      "file": "sentience_nrbl.ogg",
+      "publishedTitle": "Nrbl",
+      "stageIndex": 4,
+      "duration": 58.666666666666664,
+      "sourceGame": "Honkai Impact 3rd installed client",
+      "source": {
+        "package": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Audio\\GeneratedSoundBanks\\Windows\\AUDIO_BGM_Default.pck",
+        "kind": "media",
+        "id": 328144850,
+        "size": 2572568,
+        "offset": 532459338,
+        "languageId": 0,
+        "knownName": null,
+        "route": "BOSS_45_2",
+        "sourceSha256": "456027e3252853802ee2b475fe947f1c4719f7f8dc698672e46ea3103a28f86c",
+        "wem": "../hi3-fuhua-extract\\exports\\taixu-bgm\\sentience-candidates\\328144850.wem"
+      },
+      "sourceEvent": "BGM_SCENEENTER",
+      "sourceSwitch": {
+        "group": "GAME_STAGE_TYPE",
+        "value": "BOSS_45_2"
+      },
+      "nativeLoop": "Whole original media, Wwise Loop=0 (infinite); no separate intro",
+      "loopOffsetSeconds": 0,
+      "processing": {
+        "gainDb": -3.6970515650089126,
+        "edgeTaperMilliseconds": 4,
+        "resampled": false,
+        "rearranged": false
+      },
+      "verification": {
+        "officialPublisherPreview": "https://music.apple.com/us/album/nrbl/1552962061?i=1552964553&uo=4",
+        "fingerprint": {
+          "mediaId": 328144850,
+          "publishedTitle": "Nrbl",
+          "meanBandCosine": 0.99226,
+          "previewStartSeconds": 3.008,
+          "sourceStartSeconds": 3.008
+        },
+        "method": "24 log spectral bands / 20 seconds / 8kHz / 32ms hop; original client media vs publisher preview. Preview is not included in game assets.",
+        "bossAssociation": "Local 4.5 boss bank switch; Herrscher of Sentience fight themes. Public catalog title independently fingerprinted."
+      },
+      "output": {
+        "bytes": 1335183,
+        "sha256": "4bde77585adf455b09e122e32f9bd45faaaa0a2644b1f9054f707f972fcadf67",
+        "rmsDb": -15.710381004663287,
+        "peakDb": -2.3864678395794523
+      }
+    },
+    {
+      "file": "sentience_hard_bone.ogg",
+      "publishedTitle": "Hard Bone",
+      "stageIndex": 5,
+      "duration": 76.79997732426304,
+      "sourceGame": "Honkai Impact 3rd installed client",
+      "source": {
+        "package": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Audio\\GeneratedSoundBanks\\Windows\\AUDIO_BGM_Default.pck",
+        "kind": "media",
+        "id": 900716334,
+        "size": 2828427,
+        "offset": 1384051873,
+        "languageId": 0,
+        "knownName": null,
+        "route": "BOSS_45_1",
+        "sourceSha256": "bd69c9d8f19e3094af2673bc415b95017a96f814e932cf90b70ee6f901b90d5d",
+        "wem": "../hi3-fuhua-extract\\exports\\taixu-bgm\\sentience-candidates\\900716334.wem"
+      },
+      "sourceEvent": "BGM_SCENEENTER",
+      "sourceSwitch": {
+        "group": "GAME_STAGE_TYPE",
+        "value": "BOSS_45_1"
+      },
+      "nativeLoop": "Whole original media, Wwise Loop=0 (infinite); no separate intro",
+      "loopOffsetSeconds": 0,
+      "processing": {
+        "gainDb": -4.017729885996372,
+        "edgeTaperMilliseconds": 4,
+        "resampled": false,
+        "rearranged": false
+      },
+      "verification": {
+        "officialPublisherPreview": "https://music.apple.com/us/album/hard-bone/1552962061?i=1552965217&uo=4",
+        "fingerprint": {
+          "mediaId": 900716334,
+          "publishedTitle": "Hard Bone",
+          "meanBandCosine": 0.985253,
+          "previewStartSeconds": 3.008,
+          "sourceStartSeconds": 3.008
+        },
+        "method": "24 log spectral bands / 20 seconds / 8kHz / 32ms hop; original client media vs publisher preview. Preview is not included in game assets.",
+        "bossAssociation": "Local 4.5 boss bank switch; Herrscher of Sentience fight themes. Public catalog title independently fingerprinted."
+      },
+      "output": {
+        "bytes": 1544668,
+        "sha256": "4edddfda4f6d7581cc50c5f76fad91a4781c9748ee72625d33345e768956f06d",
+        "rmsDb": -14.92311129210627,
+        "peakDb": -2.3552024964425735
+      }
+    }
+  ]
+}

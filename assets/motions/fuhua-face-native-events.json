@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "source": "native-animation-events-only",
+  "nativeFaceTimelineAvailable": false,
+  "clips": [
+    {
+      "name": "Avatar_Fuka_Ani_C5_Victory",
+      "pathId": "5213439917471479696",
+      "cab": "CAB-d21fab9542560f9b2abe4363003801b2",
+      "source": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\7c562b6ee355f448.wmv",
+      "muscleStop": 3.7833333,
+      "sampleRate": 60,
+      "events": [
+        {
+          "time": 0.018916667,
+          "functionName": "TriggerFaceAnimation",
+          "data": "IN_Fuka_Winning",
+          "objectReferenceParameter": {
+            "fileId": 0,
+            "pathId": "0"
+          },
+          "floatParameter": 0,
+          "intParameter": 0,
+          "messageOptions": 0,
+          "hashCodeType": 0
+        }
+      ]
+    }
+  ]
+}

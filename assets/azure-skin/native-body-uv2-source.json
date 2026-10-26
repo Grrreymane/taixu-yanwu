@@ -1,0 +1,100 @@
+{
+  "resource": {
+    "path": "res://assets/azure-skin/native-body-uv2.res",
+    "bytes": 280698,
+    "sha256": "23c2e7ec1ba4da2e1df022b8c9c038c3e359e569fab28c22d569a814f0e80de6"
+  },
+  "sourceMeshPathId": "-5261068660692469134",
+  "sourceCAB": "CAB-67ba351d2f7f4aa0b00c25a4185244ea",
+  "sourceBlock": "c5808965df75be44.wmv",
+  "sourceSceneSha256": "484966b8f65facfc94e99e71c74a8790d70df938549573c16cf5bcede8c37497",
+  "topologyProof": {
+    "sourceGlobalVertices": 8883,
+    "distinctOriginalVerticesPreserved": 8883,
+    "outputSurfaceVertices": 8906,
+    "surfaces": [
+      {
+        "surface": 0,
+        "originalSourceVerticesUsed": 64,
+        "importedVertices": 64,
+        "triangles": 40,
+        "sameOriginalWinding": true,
+        "oppositeOriginalWinding": false,
+        "ambiguousImporterCandidatesWithIdenticalAllAttributes": 0,
+        "orientedTriangleMultisetExactlyPreserved": true
+      },
+      {
+        "surface": 1,
+        "originalSourceVerticesUsed": 6945,
+        "importedVertices": 6606,
+        "triangles": 7697,
+        "sameOriginalWinding": true,
+        "oppositeOriginalWinding": false,
+        "ambiguousImporterCandidatesWithIdenticalAllAttributes": 0,
+        "orientedTriangleMultisetExactlyPreserved": true
+      },
+      {
+        "surface": 2,
+        "originalSourceVerticesUsed": 1897,
+        "importedVertices": 1773,
+        "triangles": 2439,
+        "sameOriginalWinding": true,
+        "oppositeOriginalWinding": false,
+        "ambiguousImporterCandidatesWithIdenticalAllAttributes": 0,
+        "orientedTriangleMultisetExactlyPreserved": true
+      }
+    ],
+    "uv2Source": "Original full-precision native-body-uv.json uv1, mirrored V only. No rounded uv2Options used.",
+    "copySource": "Existing Godot positions/normals/tangents/colors/UV1/bone indices/weights. All multiple importer candidates have exactly identical values in all seven channels."
+  },
+  "validation": {
+    "boneIndexDifferences": 0,
+    "gpuAcceptance": "Not performed by this geometry task.",
+    "invalidVertices": 0,
+    "maxColorError": 0.0,
+    "maxNormalError": 0.000129121515783481,
+    "maxPositionError": 0.0,
+    "maxTangentComponentError": 5.84423542022705e-05,
+    "maxUV1Error": 0.0,
+    "maxUV2ErrorVersusFloat32Original": 0.0,
+    "maxWeightError": 0.0,
+    "productionActorOrSceneModified": false,
+    "resource": "res://assets/azure-skin/native-body-uv2.res",
+    "saveReload": true,
+    "skinBinding": "Unchanged: assign this ArrayMesh only; keep the existing Body MeshInstance3D.skin and skeleton path.",
+    "sourceBlendShapes": 0,
+    "sourceBodySkinBindings": 105,
+    "surfaces": [
+      {
+        "indices": 120,
+        "materialName": "Avatar_Fuka_C5_04_02_Material_Body",
+        "surface": 0,
+        "surfaceName": "Avatar_Fuka_C5_04_02_Material_Body",
+        "uv2Count": 64,
+        "vertices": 64
+      },
+      {
+        "indices": 23091,
+        "materialName": "Avatar_Fuka_C5_04_02_Material_Body",
+        "surface": 1,
+        "surfaceName": "Avatar_Fuka_C5_04_02_Material_Body",
+        "uv2Count": 6945,
+        "vertices": 6945
+      },
+      {
+        "indices": 7317,
+        "materialName": "Avatar_Fuka_C5_04_02_Material_Body",
+        "surface": 2,
+        "surfaceName": "Avatar_Fuka_C5_04_02_Material_Body",
+        "uv2Count": 1897,
+        "vertices": 1897
+      }
+    ]
+  },
+  "evidence": {
+    "native-body-uv.json": "bb87420d3621420a48452b1bb87ba217023ea15271f03bc1d3726b098245e9a1",
+    "imported-body-complete.json": "d490bf312c706458a47c4bcd2d01a407232091ce692ee0c7ff7c1c988f1089ec",
+    "body-reconstruction-data.json": "804b8a23d924e1482e82f4063209c66c760c87d1768c2034a3b6a3dc852c256f"
+  },
+  "integration": "Only replace the existing Body.mesh before material creation. Keep Body.skin, skeleton NodePath and scene transforms. Body has 0 blendshapes. No production actor/scene changed."
+}

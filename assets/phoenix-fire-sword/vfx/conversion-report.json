@@ -1,0 +1,17 @@
+{
+  "aabbPosition": [
+    -0.184400647878647,
+    -0.0311175491660833,
+    -0.299254417419434
+  ],
+  "aabbSize": [
+    0.368801295757294,
+    0.0622350797057152,
+    1.697598695755
+  ],
+  "indices": 1494,
+  "input": "Original OBJ mesh export; imported without scaling or geometry edits",
+  "resource": "res://assets/phoenix-fire-sword/vfx/UltraBlade.res",
+  "surfaces": 1,
+  "vertices": 614
+}

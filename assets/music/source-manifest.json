@@ -1,0 +1,112 @@
+{
+  "file": "battle_theme.ogg",
+  "displayName": "神社战斗 · 本机崩坏3资源",
+  "publishedTrackTitle": null,
+  "sourceGame": "Honkai Impact 3 (installed client 9.1.0)",
+  "sourcePackage": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Audio\\GeneratedSoundBanks\\Windows\\AUDIO_BGM_Default.pck",
+  "sourceMediaId": 853428962,
+  "sourceMediaByteOffset": 1319453642,
+  "sourceMediaBytes": 1798669,
+  "sourceMediaSha256": "6e5c7358e47d05147333a5a794309b4798871a5f34cd2b5306933997223a49f6",
+  "sourceBank": {
+    "name": "BK_BGM_GLOBAL",
+    "id": 1971546579,
+    "package": "AUDIO_BGM_Default_1.pck",
+    "parsedExport": "../hi3-fuhua-extract\\exports\\taixu-bgm\\1971546579_1.bnk",
+    "sha256": "9509855d8095e004ce5a5a39fd04434dbf28f7090ea5078145a40a19bdf8a9b3"
+  },
+  "sourceEvent": {
+    "name": "BGM_SCENEENTER",
+    "id": 1816222402
+  },
+  "sourceSwitch": {
+    "group": "GAME_STAGE_TYPE",
+    "groupId": 1987310767,
+    "value": "OW_SAKURA_TEMPLE_CBT",
+    "valueId": 332740971
+  },
+  "sourceObjectPath": [
+    {
+      "class": "CAkEvent",
+      "id": 1816222402
+    },
+    {
+      "class": "CAkActionPlay",
+      "id": 332330407
+    },
+    {
+      "class": "CAkSwitchCntr",
+      "id": 64173618
+    },
+    {
+      "class": "CAkSound",
+      "id": 859568959
+    },
+    {
+      "class": "VorbisSource",
+      "id": 853428962
+    }
+  ],
+  "interpretation": "The source switch explicitly names Sakura open-world temple combat. This is not identified as a Taixu or Fu Hua character theme, and no published song title is claimed.",
+  "voiceVerification": {
+    "bankRole": "combat background music; non-localized media (languageId 0), separate from character voice banks",
+    "manualListeningCompleted": false,
+    "limitation": "The event/bank mapping is verified. It does not by itself prove the absence of all vocal elements; no auditory classification is claimed."
+  },
+  "nativeLoop": {
+    "bankLoopValue": 0,
+    "meaning": "Wwise infinite loop of whole sound; wwiser emits #e",
+    "embeddedWemLoopPoints": null,
+    "hasSeparateIntro": false,
+    "sampleStart": 0,
+    "sampleEndExclusive": 1931681,
+    "sampleRate": 44100
+  },
+  "runtimeLoop": {
+    "enabled": true,
+    "loopOffsetSeconds": 0.0,
+    "durationSeconds": 43.802290249433106,
+    "frames": 1931681,
+    "sampleRate": 44100,
+    "channels": 2
+  },
+  "processing": {
+    "decoder": "vgmstream r2117, float32 output, full media once",
+    "encoder": "libsndfile / soundfile 0.14.0, Ogg Vorbis",
+    "compressionLevel": 0.6,
+    "gainDb": -3.0,
+    "edgeTaperMilliseconds": 4,
+    "description": "Original track retained; no rearrangement or resampling. A 4 ms sine edge taper on each endpoint removes the wrap click; the native total frame count is unchanged."
+  },
+  "output": {
+    "format": "OGG",
+    "subtype": "VORBIS",
+    "bytes": 728534,
+    "sha256": "7ea34440d341e05fa483da42bc74ab167afe5b6237a2ad7f76998aa4cf936c94",
+    "peak": 0.8925151824951172,
+    "rms": 0.29755157232284546,
+    "firstToLastSampleJump": [
+      0.004821936599910259,
+      0.002654440002515912
+    ]
+  },
+  "evidence": {
+    "generatedPlaybackGraph": "../hi3-fuhua-extract\\exports\\taixu-bgm\\txtp\\BGM_SCENEENTER [GAME_STAGE_TYPE=OW_SAKURA_TEMPLE_CBT].txtp",
+    "clientNameHeader": "../hi3-fuhua-extract\\exports\\taixu-bgm\\Wwise_IDs.h",
+    "packageIndex": "../hi3-fuhua-extract\\exports\\taixu-bgm\\package-index.json",
+    "decoderMetadata": "../hi3-fuhua-extract\\exports\\taixu-bgm\\853428962-metadata.json"
+  },
+  "tools": [
+    {
+      "name": "vgmstream",
+      "version": "r2117",
+      "source": "https://github.com/vgmstream/vgmstream/releases/tag/r2117"
+    },
+    {
+      "name": "wwiser",
+      "version": "v20260808",
+      "source": "https://github.com/bnnm/wwiser/releases/tag/v20260808"
+    }
+  ],
+  "sourceAccess": "Read-only local installed client; no music downloaded or uploaded."
+}

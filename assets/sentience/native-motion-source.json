@@ -1,0 +1,619 @@
+{
+  "schemaVersion": 1,
+  "asset": "res://assets/sentience/native-motions.res",
+  "animationLibraryName": "native",
+  "prefix": "native/",
+  "bytes": 11943591,
+  "sha256": "ca437b329905ea22de3a73d6c729093c6c91559233549d1dcbba92aa2397a2a4",
+  "sourceGame": "Honkai Impact 3rd local PC client 9.1.0",
+  "sourceInstall": "E:/miHoYo Launcher/games/Honkai Impact 3rd Game",
+  "sourceCharacter": "Avatar_Fuka_C6_FL / Herrscher of Sentience",
+  "sourceAvatar": {
+    "name": "Avatar_Fuka_C6_ModelAvatar",
+    "pathId": "8532184891892578582",
+    "serializedFile": "CAB-0379edf402807991f9899f5b73ed5c17",
+    "metadata": "hi3-fuhua-extract/exports/sentience-native/raw/avatar.json"
+  },
+  "nativeContent": {
+    "clips": 24,
+    "sampleRate": 60,
+    "decodedBodyBones": 47,
+    "totalRigBones": 193,
+    "allOriginalTransformAndWeaponTracksRetained": true,
+    "usesC4OrC5Animation": false,
+    "usesLighterAnimation": false
+  },
+  "reconstruction": {
+    "reasonRequired": "Existing exporter drops Animator/classID95 Humanoid muscle bindings. Its original FBX retains accessory and weapon tracks but has no core body Transform tracks.",
+    "rotation": "Evaluate original named muscle curves, native min/max/sign and Avatar PreQ/PostQ. Tangent half-angle swing plus native twist. Native HandQ/FootQ provide end-effector rotations after undoing native PostQ.",
+    "root": "Use original RootT/RootQ and original four hand/foot IK targets. Foot targets are converted from sole to ankle by the native rest-pose sole height. A rigid registration recovers the root without scaling any limb.",
+    "sourceInterpolation": "Original keyed float values and Hermite slopes, sampled at 60 Hz; durations use native m_StopTime rather than duplicated end padding.",
+    "referenceMath": "https://gitlab.com/lox9973/ShaderMotion/-/blob/master/Script/Common/HumanAxes.cs",
+    "referenceHumanoidAndGoals": "https://github.com/Unity-Technologies/UnityCsReference/blob/master/Modules/Animation/ScriptBindings/HumanPoseHandler.bindings.cs",
+    "referenceHumanoidDefinition": "https://unity.com/blog/engine-platform/mecanim-humanoids",
+    "formulaVerification": "Tangent swing and source goal rotations were checked against the independent serialized original IK endpoints. A direct angle-axis yz approximation had larger residual and was rejected.",
+    "unityEditorUsed": false,
+    "unityEditorProbe": "Installed 2021.3.4f1 reported no valid license; no activation or license bypass attempted."
+  },
+  "validation": {
+    "godotAll24BodyClipsMove": true,
+    "framesSampled": 3639,
+    "maximumBoneLengthErrorMeters": 2.5331974029541e-07,
+    "sourceEndpointWeightedMeanErrorMeters": 0.0023649340384312755,
+    "sourceEndpointMaximumErrorMeters": 0.042868973610524254,
+    "sourceEndpointWorstClip": "Victory",
+    "reports": [
+      "hi3-fuhua-extract/exports/sentience-native/godot-native-validation.json",
+      "hi3-fuhua-extract/exports/sentience-native/humanoid-bake-validation.json",
+      "hi3-fuhua-extract/exports/sentience-native/library-build-report.json"
+    ]
+  },
+  "limitations": [
+    "These are recovered original C6 authored curves, not a Unity-engine bit-identical bake. Native retarget solver, twist redistribution and optional IK solver are not reproduced byte-for-byte; endpoint residuals are quantified above.",
+    "Original forward/root motion is retained in the asset. The side-view runtime must apply common root compensation to both body and original weapon bones.",
+    "Native attack clips contain no damage/contact AnimationEvents. Runtime hit timings are side-view adaptations; Ultra_1 has the original PlayVibrate/Explode1 event at 1.6677778 seconds.",
+    "Headless verification confirms dynamic body bones and stable bone lengths; visual gameplay and weapon presentation validation belongs to the integration tests."
+  ],
+  "clips": [
+    {
+      "name": "Attack_A_01",
+      "duration": 2.3000002,
+      "frames": 139,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_c6_fl/_dependencies/animation/avatar_fuka_ani_c6_attack_a_01.fbx",
+        "clipName": "Avatar_Fuka_Ani_C6_Attack_A_01",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "-3895734489947070451",
+        "serializedFile": "CAB-35a5f0571c64495cd1d3b5f3f64ea440",
+        "isIndexPreferredVariant": true,
+        "offset": 32734656
+      },
+      "rootFitMeanMeters": 0.0009377669742166583,
+      "rootFitMaxMeters": 0.003375466048491283,
+      "endPointMaxMeters": {
+        "leftFoot": 0.003375466048491283,
+        "rightFoot": 0.003011079846093658,
+        "leftHand": 0.0021017574264809327,
+        "rightHand": 0.0022744465911383864
+      },
+      "nativeEventsYaml": " []\n"
+    },
+    {
+      "name": "Attack_A_02",
+      "duration": 2.3333335,
+      "frames": 141,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_c6_fl/_dependencies/animation/avatar_fuka_ani_c6_attack_a_02.fbx",
+        "clipName": "Avatar_Fuka_Ani_C6_Attack_A_02",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "3844156964105395826",
+        "serializedFile": "CAB-132a6357dafed95d5ae5cd6ec3a932ad",
+        "isIndexPreferredVariant": true,
+        "offset": 33325661
+      },
+      "rootFitMeanMeters": 0.0011509108261070695,
+      "rootFitMaxMeters": 0.0038111726204202627,
+      "endPointMaxMeters": {
+        "leftFoot": 0.003781602928233174,
+        "rightFoot": 0.0038111726204202627,
+        "leftHand": 0.0026010702170531095,
+        "rightHand": 0.0022461748012692797
+      },
+      "nativeEventsYaml": " []\n"
+    },
+    {
+      "name": "Attack_A_03",
+      "duration": 2.25,
+      "frames": 136,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_c6_fl/_dependencies/animation/avatar_fuka_ani_c6_attack_a_03.fbx",
+        "clipName": "Avatar_Fuka_Ani_C6_Attack_A_03",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "-2467191568694608318",
+        "serializedFile": "CAB-a55702e5de3fd1cf53db2510e774d67e",
+        "isIndexPreferredVariant": true,
+        "offset": 33652086
+      },
+      "rootFitMeanMeters": 0.0008518280800120543,
+      "rootFitMaxMeters": 0.004251926956119113,
+      "endPointMaxMeters": {
+        "leftFoot": 0.004251926956119113,
+        "rightFoot": 0.002963750442430255,
+        "leftHand": 0.0020253345837894735,
+        "rightHand": 0.0018370823345455153
+      },
+      "nativeEventsYaml": " []\n"
+    },
+    {
+      "name": "Attack_A_Charge",
+      "duration": 2.5000002,
+      "frames": 151,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_c6_fl/_dependencies/animation/avatar_fuka_ani_c6_attack_a_charge.fbx",
+        "clipName": "Avatar_Fuka_Ani_C6_Attack_A_Charge",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "3670593430771591583",
+        "serializedFile": "CAB-809913c43ddd439223a36f985a1d2664",
+        "isIndexPreferredVariant": true,
+        "offset": 34982378
+      },
+      "rootFitMeanMeters": 0.0009823278857774326,
+      "rootFitMaxMeters": 0.004205879840411875,
+      "endPointMaxMeters": {
+        "leftFoot": 0.0034009790823280846,
+        "rightFoot": 0.0028600139595511757,
+        "leftHand": 0.0025172179119868966,
+        "rightHand": 0.004205879840411875
+      },
+      "nativeEventsYaml": " []\n"
+    },
+    {
+      "name": "Attack_B_01",
+      "duration": 2.8666668,
+      "frames": 173,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_c6_fl/_dependencies/animation/avatar_fuka_ani_c6_attack_b_01.fbx",
+        "clipName": "Avatar_Fuka_Ani_C6_Attack_B_01",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "5602641699370240535",
+        "serializedFile": "CAB-e2930c48781b57d064e11dd2db61ab54",
+        "isIndexPreferredVariant": true,
+        "offset": 35924764
+      },
+      "rootFitMeanMeters": 0.0011022212826777655,
+      "rootFitMaxMeters": 0.004401388083067215,
+      "endPointMaxMeters": {
+        "leftFoot": 0.004401388083067215,
+        "rightFoot": 0.0031981570432464855,
+        "leftHand": 0.002199968315536779,
+        "rightHand": 0.0027971690433764656
+      },
+      "nativeEventsYaml": " []\n"
+    },
+    {
+      "name": "Attack_B_02",
+      "duration": 3.466667,
+      "frames": 209,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_c6_fl/_dependencies/animation/avatar_fuka_ani_c6_attack_b_02.fbx",
+        "clipName": "Avatar_Fuka_Ani_C6_Attack_B_02",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "6374508385771977255",
+        "serializedFile": "CAB-f7ed7c14db61fc40e14b6248c3fdd7e5",
+        "isIndexPreferredVariant": true,
+        "offset": 36490189
+      },
+      "rootFitMeanMeters": 0.0037348300212631936,
+      "rootFitMaxMeters": 0.028143152490355452,
+      "endPointMaxMeters": {
+        "leftFoot": 0.027237673621966413,
+        "rightFoot": 0.028143152490355452,
+        "leftHand": 0.007042251039883101,
+        "rightHand": 0.010127780637516666
+      },
+      "nativeEventsYaml": " []\n"
+    },
+    {
+      "name": "Attack_B_Charge_AS",
+      "duration": 2.9166667,
+      "frames": 176,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_c6_fl/_dependencies/animation/avatar_fuka_ani_c6_attack_b_charge_as.fbx",
+        "clipName": "Avatar_Fuka_Ani_C6_Attack_B_Charge_AS",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-1296453018225398941",
+        "serializedFile": "CAB-2f0e64392bb4ebac9a8ce6647d6d0454",
+        "isIndexPreferredVariant": true,
+        "offset": 11512651
+      },
+      "rootFitMeanMeters": 0.0014854216994293573,
+      "rootFitMaxMeters": 0.011892318141188483,
+      "endPointMaxMeters": {
+        "leftFoot": 0.005596488180718016,
+        "rightFoot": 0.011892318141188483,
+        "leftHand": 0.005273949979709365,
+        "rightHand": 0.004420966284091528
+      },
+      "nativeEventsYaml": " []\n"
+    },
+    {
+      "name": "Attack_C_01",
+      "duration": 3.6333334,
+      "frames": 219,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_c6_fl/_dependencies/animation/avatar_fuka_ani_c6_attack_c_01.fbx",
+        "clipName": "Avatar_Fuka_Ani_C6_Attack_C_01",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "5311935079028593962",
+        "serializedFile": "CAB-85f07a6ca02f0cc2c4ead16fd4f3a7d4",
+        "isIndexPreferredVariant": true,
+        "offset": 40750104
+      },
+      "rootFitMeanMeters": 0.0016796291084872743,
+      "rootFitMaxMeters": 0.016286106695460382,
+      "endPointMaxMeters": {
+        "leftFoot": 0.014666668657344985,
+        "rightFoot": 0.016286106695460382,
+        "leftHand": 0.006055188283248103,
+        "rightHand": 0.013639132551908371
+      },
+      "nativeEventsYaml": " []\n"
+    },
+    {
+      "name": "Attack_C_Charge",
+      "duration": 4.4666667,
+      "frames": 269,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_c6_fl/_dependencies/animation/avatar_fuka_ani_c6_attack_c_charge.fbx",
+        "clipName": "Avatar_Fuka_Ani_C6_Attack_C_Charge",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "-2865657176285767330",
+        "serializedFile": "CAB-d9dc2f8cc55d07faa2d309ea9a85701e",
+        "isIndexPreferredVariant": true,
+        "offset": 43226007
+      },
+      "rootFitMeanMeters": 0.0029287611272640515,
+      "rootFitMaxMeters": 0.012525269624322367,
+      "endPointMaxMeters": {
+        "leftFoot": 0.012525269624322367,
+        "rightFoot": 0.010291600172057507,
+        "leftHand": 0.006730107283003153,
+        "rightHand": 0.004773778700401586
+      },
+      "nativeEventsYaml": " []\n"
+    },
+    {
+      "name": "Die",
+      "duration": 3.0000002,
+      "frames": 181,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_c6_fl/_dependencies/animation/avatar_fuka_ani_c6_die.fbx",
+        "clipName": "Avatar_Fuka_Ani_C6_Die",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "4005330054922021195",
+        "serializedFile": "CAB-9f85ba369f46b20fd163a531101d7d6e",
+        "isIndexPreferredVariant": true,
+        "offset": 45082243
+      },
+      "rootFitMeanMeters": 0.001184626556300101,
+      "rootFitMaxMeters": 0.0035721350154357735,
+      "endPointMaxMeters": {
+        "leftFoot": 0.0035721350154357735,
+        "rightFoot": 0.0034858469663163784,
+        "leftHand": 0.002327021895915972,
+        "rightHand": 0.0025317118558664557
+      },
+      "nativeEventsYaml": "\n  - time: 2.8915977\n    functionName: DieHandler\n    data:\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "EvadeBackward",
+      "duration": 1.2666668,
+      "frames": 77,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_c6_fl/_dependencies/animation/avatar_fuka_ani_c6_evadebackward.fbx",
+        "clipName": "Avatar_Fuka_Ani_C6_EvadeBackward",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "3558939603282793248",
+        "serializedFile": "CAB-5eff728e4c1e2669fd6da576a1dfd28f",
+        "isIndexPreferredVariant": true,
+        "offset": 45933029
+      },
+      "rootFitMeanMeters": 0.004826257389435443,
+      "rootFitMaxMeters": 0.02854281267155939,
+      "endPointMaxMeters": {
+        "leftFoot": 0.02591137830449717,
+        "rightFoot": 0.02854281267155939,
+        "leftHand": 0.005374585343395189,
+        "rightHand": 0.008625562920647261
+      },
+      "nativeEventsYaml": " []\n"
+    },
+    {
+      "name": "EvadeForward",
+      "duration": 1.2500001,
+      "frames": 76,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_c6_fl/_dependencies/animation/avatar_fuka_ani_c6_evadeforward.fbx",
+        "clipName": "Avatar_Fuka_Ani_C6_EvadeForward",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "-4450240264860449172",
+        "serializedFile": "CAB-4f39c921fd43d4e8d8bb119d66a9d10d",
+        "isIndexPreferredVariant": true,
+        "offset": 46136130
+      },
+      "rootFitMeanMeters": 0.0009475727716813259,
+      "rootFitMaxMeters": 0.0037771695993810313,
+      "endPointMaxMeters": {
+        "leftFoot": 0.0037771695993810313,
+        "rightFoot": 0.00352084772244925,
+        "leftHand": 0.0022533568657959785,
+        "rightHand": 0.002305492453826846
+      },
+      "nativeEventsYaml": " []\n"
+    },
+    {
+      "name": "Hit_H",
+      "duration": 1.9166667,
+      "frames": 116,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_c6_fl/_dependencies/animation/avatar_fuka_ani_c6_hit_h.fbx",
+        "clipName": "Avatar_Fuka_Ani_C6_Hit_H",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-3835298366891457404",
+        "serializedFile": "CAB-a5127323a7c869bf722bbf7f16740aa1",
+        "isIndexPreferredVariant": true,
+        "offset": 15079197
+      },
+      "rootFitMeanMeters": 0.0009481870847202337,
+      "rootFitMaxMeters": 0.0036435280200371204,
+      "endPointMaxMeters": {
+        "leftFoot": 0.0036435280200371204,
+        "rightFoot": 0.0030267351091123242,
+        "leftHand": 0.0022362883920245586,
+        "rightHand": 0.002079899057525914
+      },
+      "nativeEventsYaml": "\n  - time: 0.006297135\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_C6_Hit_H\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Hit_L",
+      "duration": 2.0000002,
+      "frames": 121,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_c6_fl/_dependencies/animation/avatar_fuka_ani_c6_hit_l.fbx",
+        "clipName": "Avatar_Fuka_Ani_C6_Hit_L",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "6686827650505131036",
+        "serializedFile": "CAB-13a611b31833534420520606f23c9b90",
+        "isIndexPreferredVariant": true,
+        "offset": 15531850
+      },
+      "rootFitMeanMeters": 0.004823662860088833,
+      "rootFitMaxMeters": 0.0182187876750631,
+      "endPointMaxMeters": {
+        "leftFoot": 0.009511715560278664,
+        "rightFoot": 0.0182187876750631,
+        "leftHand": 0.01228953560336453,
+        "rightHand": 0.011689529781880982
+      },
+      "nativeEventsYaml": "\n  - time: 0.006570922\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_C6_Hit_L\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Idle",
+      "duration": 4.2333336,
+      "frames": 255,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_c6_fl/_dependencies/animation/avatar_fuka_ani_c6_idle.fbx",
+        "clipName": "Avatar_Fuka_Ani_C6_Idle",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-2411662101329923535",
+        "serializedFile": "CAB-f3e386b2ad640fb56654e02494699c79",
+        "isIndexPreferredVariant": true,
+        "offset": 16073118
+      },
+      "rootFitMeanMeters": 0.0013509861125510605,
+      "rootFitMaxMeters": 0.007906051276874354,
+      "endPointMaxMeters": {
+        "leftFoot": 0.007906051276874354,
+        "rightFoot": 0.007874626762354767,
+        "leftHand": 0.004051593366021444,
+        "rightHand": 0.004608174193632435
+      },
+      "nativeEventsYaml": "\n  - time: 0.04338325\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_C6_Idle\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.15689749\n    functionName: TriggerAudioPattern\n    data: Avatar_Fuka_C6_Ani_Idle_1\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.43078697\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 2.3548615\n    functionName: TriggerAudioPattern\n    data: Avatar_Fuka_C6_Ani_Idle_2\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 4.03928\n    functionName: TriggerAudioPattern\n    data: Avatar_FS_S\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Run",
+      "duration": 0.6666667,
+      "frames": 41,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_c6_fl/_dependencies/animation/avatar_fuka_ani_c6_run.fbx",
+        "clipName": "Avatar_Fuka_Ani_C6_Run",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-7664532720201593826",
+        "serializedFile": "CAB-d1d7542898c8baf402eb8739f740110a",
+        "isIndexPreferredVariant": true,
+        "offset": 18297801
+      },
+      "rootFitMeanMeters": 0.0009727708146120088,
+      "rootFitMaxMeters": 0.003893833281128936,
+      "endPointMaxMeters": {
+        "leftFoot": 0.002893044826478525,
+        "rightFoot": 0.003893833281128936,
+        "leftHand": 0.001934379156560021,
+        "rightHand": 0.0023259777606662933
+      },
+      "nativeEventsYaml": " []\n"
+    },
+    {
+      "name": "RunBS",
+      "duration": 0.8000001,
+      "frames": 49,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_c6_fl/_dependencies/animation/avatar_fuka_ani_c6_runbs.fbx",
+        "clipName": "Avatar_Fuka_Ani_C6_RunBS",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-217771054761153293",
+        "serializedFile": "CAB-3a0d27919fe2d86c504b05fc36a9ebbb",
+        "isIndexPreferredVariant": true,
+        "offset": 17817015
+      },
+      "rootFitMeanMeters": 0.005917549448581997,
+      "rootFitMaxMeters": 0.040733266846552166,
+      "endPointMaxMeters": {
+        "leftFoot": 0.040733266846552166,
+        "rightFoot": 0.035071755417677826,
+        "leftHand": 0.007534815558948416,
+        "rightHand": 0.005699264359997839
+      },
+      "nativeEventsYaml": "\n  - time: 0.017397707\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_C6_BeginToMove\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Standby",
+      "duration": 2.0,
+      "frames": 121,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_c6_fl/_dependencies/animation/avatar_fuka_ani_c6_standby.fbx",
+        "clipName": "Avatar_Fuka_Ani_C6_Standby",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "-1178237274521074503",
+        "serializedFile": "CAB-702a09b72cf1c03c533ef62c1828b8c7",
+        "isIndexPreferredVariant": true,
+        "offset": 47100028
+      },
+      "rootFitMeanMeters": 0.0011911934046722828,
+      "rootFitMaxMeters": 0.004005649639560166,
+      "endPointMaxMeters": {
+        "leftFoot": 0.004005649639560166,
+        "rightFoot": 0.0039850965653681686,
+        "leftHand": 0.0019393838203891256,
+        "rightHand": 0.0022300537713959324
+      },
+      "nativeEventsYaml": " []\n"
+    },
+    {
+      "name": "Standby_2",
+      "duration": 2.0,
+      "frames": 121,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_c6_fl/_dependencies/animation/avatar_fuka_ani_c6_standby_2.fbx",
+        "clipName": "Avatar_Fuka_Ani_C6_Standby_2",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "3088154551050717250",
+        "serializedFile": "CAB-f2db4c31518efa9630e3a8ac827f113b",
+        "isIndexPreferredVariant": true,
+        "offset": 18623681
+      },
+      "rootFitMeanMeters": 0.0006906323444997389,
+      "rootFitMaxMeters": 0.0015083830435050115,
+      "endPointMaxMeters": {
+        "leftFoot": 0.0013860045551083485,
+        "rightFoot": 0.0013981968611051045,
+        "leftHand": 0.0011778451118092947,
+        "rightHand": 0.0015083830435050115
+      },
+      "nativeEventsYaml": " []\n"
+    },
+    {
+      "name": "Stun",
+      "duration": 2.0,
+      "frames": 121,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_c6_fl/_dependencies/animation/avatar_fuka_ani_c6_stun.fbx",
+        "clipName": "Avatar_Fuka_Ani_C6_Stun",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "-8891692192276745559",
+        "serializedFile": "CAB-ed5aa7d5b92420c4aa380bd0e4f1a7dd",
+        "isIndexPreferredVariant": true,
+        "offset": 47565098
+      },
+      "rootFitMeanMeters": 0.00483396122890965,
+      "rootFitMaxMeters": 0.013526438143514556,
+      "endPointMaxMeters": {
+        "leftFoot": 0.013526438143514556,
+        "rightFoot": 0.011395912992644414,
+        "leftHand": 0.009043678874310106,
+        "rightHand": 0.007039601468761048
+      },
+      "nativeEventsYaml": " []\n"
+    },
+    {
+      "name": "Ultra_1",
+      "duration": 2.6333334,
+      "frames": 159,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_c6_fl/_dependencies/animation/avatar_fuka_ani_c6_ultra_1.fbx",
+        "clipName": "Avatar_Fuka_Ani_C6_Ultra_1",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "-2646817930442062502",
+        "serializedFile": "CAB-6dbc28c994cbb86dff0913495629b1dd",
+        "isIndexPreferredVariant": true,
+        "offset": 50344864
+      },
+      "rootFitMeanMeters": 0.003666398052441656,
+      "rootFitMaxMeters": 0.022539151939868482,
+      "endPointMaxMeters": {
+        "leftFoot": 0.011852361476196923,
+        "rightFoot": 0.022539151939868482,
+        "leftHand": 0.008287907235660615,
+        "rightHand": 0.009826252588065312
+      },
+      "nativeEventsYaml": "\n  - time: 1.6677778\n    functionName: PlayVibrate\n    data: Explode1\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Ultra_1_Attack_01",
+      "duration": 2.4166667,
+      "frames": 146,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_c6_fl/_dependencies/animation/avatar_fuka_ani_c6_ultra_1_attack_01.fbx",
+        "clipName": "Avatar_Fuka_Ani_C6_Ultra_1_Attack_01",
+        "sourceBlock": "7311b0a38108d6c3.wmv",
+        "pathId": "-8402611003948064345",
+        "serializedFile": "CAB-c05318528d7b3f326b807a3ee2a35046",
+        "isIndexPreferredVariant": true,
+        "offset": 48228672
+      },
+      "rootFitMeanMeters": 0.0018532028354750732,
+      "rootFitMaxMeters": 0.007594936115305824,
+      "endPointMaxMeters": {
+        "leftFoot": 0.007594936115305824,
+        "rightFoot": 0.005632336806280898,
+        "leftHand": 0.003411423551411579,
+        "rightHand": 0.00405372467667708
+      },
+      "nativeEventsYaml": " []\n"
+    },
+    {
+      "name": "Victory",
+      "duration": 4.3333335,
+      "frames": 261,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_c6_fl/_dependencies/animation/avatar_fuka_ani_c6_victory.fbx",
+        "clipName": "Avatar_Fuka_Ani_C6_Victory",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-3508175461975500289",
+        "serializedFile": "CAB-cf0a364f005968cfcc98276659facbb5",
+        "isIndexPreferredVariant": true,
+        "offset": 20492540
+      },
+      "rootFitMeanMeters": 0.006835019073928622,
+      "rootFitMaxMeters": 0.042868973610524254,
+      "endPointMaxMeters": {
+        "leftFoot": 0.042868973610524254,
+        "rightFoot": 0.042718313477794194,
+        "leftHand": 0.021523678861401413,
+        "rightHand": 0.026330933100235484
+      },
+      "nativeEventsYaml": "\n  - time: 0.087119095\n    functionName: TriggerAudioPattern\n    data: VO_L_Fuk_C6_Victory\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n  - time: 0.23238556\n    functionName: TriggerAudioPattern\n    data: Avatar_Kiana_C6_Ani_Victory\n    objectReferenceParameter: {fileID: 0}\n    floatParameter: 0\n    intParameter: 0\n    messageOptions: 0\n"
+    },
+    {
+      "name": "Victory_Loop",
+      "duration": 2.6666667,
+      "frames": 161,
+      "source": {
+        "sourceAssetPath": "assets/asbres/entities/avatar/fuka_c6_fl/_dependencies/animation/avatar_fuka_ani_c6_victory_loop.fbx",
+        "clipName": "Avatar_Fuka_Ani_C6_Victory_Loop",
+        "sourceBlock": "c5808965df75be44.wmv",
+        "pathId": "-4665487459298525915",
+        "serializedFile": "CAB-e6ce7fb1f2ad34ce73229616c779f825",
+        "isIndexPreferredVariant": true,
+        "offset": 22019933
+      },
+      "rootFitMeanMeters": 0.0008533345953296879,
+      "rootFitMaxMeters": 0.0027028713737735164,
+      "endPointMaxMeters": {
+        "leftFoot": 0.0016300622309035025,
+        "rightFoot": 0.001517566172274949,
+        "leftHand": 0.001511811044513035,
+        "rightHand": 0.0027028713737735164
+      },
+      "nativeEventsYaml": " []\n"
+    }
+  ],
+  "codeProvenance": {
+    "implementation": "Independent local Python/NumPy reconstruction informed by documented Avatar mathematical referentials; no wholesale HumanAxes or Unity solver source port. Full upstream notices retained for consulted open-source reference.",
+    "notices": "native-motion-notices.txt",
+    "extractionNotice": "hi3-fuhua-extract/exports/sentience-native/SOURCES-AND-LICENSES.txt",
+    "shaderMotionLicense": "MIT-style, Copyright 2020-2021 lox9973; complete LICENSE.txt reproduced",
+    "lyumaReferenceLicense": "MIT, Copyright (c) 2021 Lyuma and lox9973; complete notice reproduced",
+    "unityCsReference": "Reference-only consultation; no source implementation copied; upstream Unity Reference-Only License explicitly distinguished from MIT"
+  }
+}

@@ -1,0 +1,29 @@
+云墨外观 C5_04_02 — 独立原模型
+
+直接加载 res://assets/azure-skin/Avatar_Fuka_C5_04_02.scn。
+压缩场景自带 14 条 Avatar_Fuka_Ani_C5_* 战斗动作与 presentation/Victory、presentation/VictoryIdle。
+它已经有 AnimationPlayer（root_node 为 ..），Skeleton 路径为 Avatar/Skeleton3D。
+不要再重复添加名为 presentation 的 AnimationLibrary。
+
+纯来源 FBX 保留为 Avatar.fbx（1,090,928 字节），不含动画，不能直接替换当前 actor 的含动作场景。
+压缩 SCN 为 1,581,130 字节，直接依赖同目录 6 张主贴图；卡通 Shader 额外读取 Body/Hair LightMap 与 FaceMap。
+完整资源文件与源包 SHA256、原材质值见 source-manifest.json。
+
+原Body/Hair/Face/Eye_L/Eye_R/Mouth/Umbrella_s节点和主贴图对应已保留。
+BodyLightMap/HairLightMap必须换为本套C5_04_02图；FaceColor/FaceMap与默认云墨完全相同。
+Eye_L/R 的 1.png、Mouth 的 1 (1).png也与默认装束SHA相同。
+眼睛与嘴 scale=(0.25,0.25)，现有Godot shader使用左眼offset=(0.25,0.75)、右眼和嘴=(0,0.75)。
+原Unity记录是左眼(.25,0)、其他(0,0)；FBX转为Godot时已翻转V。导出器保留缩放却丢失左眼偏移，故仍须设置。
+按几何匹配后 Eye_L/R/Mouth/Face UV 与默认装束差值均为0，不能直接按原顶点索引比较，因为排序与统一脸部坐标偏移不同。
+
+height=2.85，rootBone=Bip001，headBone=Bip001 Head，hiddenMeshes=[umbrella_s]。
+Hair第一层阴影色=(0.8112024,0.8185606,0.9117647)，其余具体原参数见manifest。
+
+这套模型有122骨，55共同骨父级一致，所有Bip身体/手指骨齐全。
+重用原云墨身体动作时仅按同名骨映射，并删除默认服装中不存在于新模型的曲线。
+身体动画资源本身不包含新增衣发骨的曲线。运行时 scripts/secondary_motion.gd 负责14条衣发链的跟随、回摆及重力补偿，保留原动态组件前的固定发根和腰根；属于基于原骨链的重建，不是原游戏布料求解器。
+眼口原图集由 scripts/facial_motion.gd 与 assets/motions/fuhua-face-atlas.json 驱动，含眨眼、战斗表情及结算微笑。时序为项目适配，原 IN_Fuka_Winning 独立曲线尚未移植。
+现有莱特防御用到的53身体/手指骨全部存在，可继续使用已验证的防反库。
+
+Headless检查：16条动作、63,233个有限key、2,317个60fps姿态样本、0缺失目标；重载9个材质surface均有贴图。
+正式中文皮肤名已确认为太虚仙忆；主线程已核验原生GPU脸部贴合、衣发和动作，眼口对照图见 build/screenshots/skin-expression/grid-atlas.png。资源最初打包时的纯Headless核验与后续运行时适配分开记录。

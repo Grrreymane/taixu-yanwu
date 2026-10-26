@@ -1,0 +1,44 @@
+[
+  {
+    "name": "House_All",
+    "sourceMeshPathId": "7496643844518614440",
+    "sourceGameObjectPathId": "-2574297448519981954",
+    "sourceMeshCAB": "CAB-05d6b548bfd43aba9b3c6ecaac4f29c7",
+    "sourceBlock": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\df1f10914a7f6277.wmv"
+  },
+  {
+    "name": "TempleUpper",
+    "sourceMeshPathId": "7496643844518614440",
+    "sourceGameObjectPathId": "-2574297448519981954",
+    "selection": "Whole connected components (position weld precision 0.001) with original Unity local AABB x within (-180,-145), z within (189,228), minimum y > 5; long mountainside stilts/walkway components omitted; no triangles clipped or new faces generated.",
+    "selectedVertices": 2300
+  },
+  {
+    "name": "BigTree",
+    "sourceMeshPathId": "8690050547496282716",
+    "sourceGameObjectPathId": "1609581816528064840",
+    "sourceMeshCAB": "CAB-30e58a4917c919c5b2b3be22dfde6e01",
+    "sourceBlock": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\df1f10914a7f6277.wmv"
+  },
+  {
+    "name": "RockGroup",
+    "sourceMeshPathId": "-1916362342776726423",
+    "sourceGameObjectPathId": "5911380300325315973",
+    "sourceMeshCAB": "CAB-30e58a4917c919c5b2b3be22dfde6e01",
+    "sourceBlock": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\df1f10914a7f6277.wmv"
+  },
+  {
+    "name": "StonePlatform",
+    "sourceMeshPathId": "692013070674640483",
+    "sourceGameObjectPathId": "-3861645543290085795",
+    "sourceMeshCAB": "CAB-984403456d7a20a0c69d8dd2ad98a412",
+    "sourceBlock": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\85ad5986cf261b35.wmv"
+  },
+  {
+    "name": "StoneFloor",
+    "sourceMeshPathId": "7740563480433527506",
+    "sourceGameObjectPathId": "607497926569566928",
+    "sourceMeshCAB": "CAB-30e58a4917c919c5b2b3be22dfde6e01",
+    "sourceBlock": "E:\\miHoYo Launcher\\games\\Honkai Impact 3rd Game\\BH3_Data\\StreamingAssets\\Asb\\pc\\df1f10914a7f6277.wmv"
+  }
+]

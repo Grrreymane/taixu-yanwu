@@ -1,0 +1,82 @@
+Native C6 animation recovery: implementation sources and notices
+Updated 2026-10-24
+
+Implementation scope
+The Python recovery scripts were written locally for these serialized assets. No C# HumanAxes class, Unity editor reflection helper, Unity native animation solver, or UnityCsReference implementation was copied into the Godot game. They use the standard quaternion/pre-rotation/post-rotation construction described by lox9973 and Lyuma, independently expressed with Python/NumPy. The final tangent-half-angle swing, rigid source-IK root registration, foot-sole correction and original goal-rotation application are local implementations checked against the client's own animation/Avatar data. This is not a port of Unity's native solver or a claim of a byte-identical Unity bake.
+
+Formula and metadata references
+1. lox9973, ShaderMotion, Script/Common/HumanAxes.cs:
+   https://gitlab.com/lox9973/ShaderMotion/-/blob/master/Script/Common/HumanAxes.cs
+   Explains the Avatar PreQ/PostQ/sign referential and a swing-twist construction. The initial axis-angle yz approximation was evaluated, then replaced after independent native endpoint comparison. We retain its complete MIT-style license below as attribution for the mathematical reference.
+   License source: https://gitlab.com/lox9973/ShaderMotion/-/raw/master/LICENSE.txt
+2. Lyuma and lox9973, VRMChecker.cs, 2021-03-03:
+   https://gist.github.com/lyuma/523956e04335e87281b8225ce4a4f25e
+   Consulted the explanations of pre/post rotations and signs. Its editor/reflection implementation was not copied. Complete MIT notice retained below.
+3. Unity Technologies, Mecanim humanoids, 2014-05-26:
+   https://unity.com/blog/engine-platform/mecanim-humanoids
+   Documentation reference for normalized muscle ranges, body-root/center-of-mass and IK goals.
+4. Unity Technologies, HumanPoseHandler.bindings.cs:
+   https://github.com/Unity-Technologies/UnityCsReference/blob/master/Modules/Animation/ScriptBindings/HumanPoseHandler.bindings.cs
+   Read as documentation of original versus offset IK rotations and body-relative coordinates. No source functions or IK-offset constant table were copied; goal rotations and Avatar PostQ are read from local source assets. This upstream source is Unity Reference-Only License, NOT MIT:
+   https://unity.com/legal/licenses/Unity_Reference_Only_License
+5. AnimeStudioUltimate / AssetStudio:
+   https://github.com/LegionInstaller/AnimeStudioUltimate/releases/tag/v1.7.0
+   The existing local tool supplies decoded serialized objects and original accessory/weapon tracks. The recovery host extends the existing reflection exporter; the local tool's MIT notice is reproduced below. It does not implement Humanoid body conversion, which is why this independent reconstruction was necessary.
+
+The software notices below do not license the Honkai Impact 3rd model, texture, animation or other game assets. Those assets retain their original rights and are identified separately in source-manifest.json/native-motion-source.json.
+
+----- ShaderMotion LICENSE.txt (complete) -----
+Copyright 2020-2021 lox9973
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+----- VRMChecker.cs MIT notice (complete) -----
+MIT License
+
+Copyright (c) 2021 Lyuma <xn.lyuma@gmail.com> and lox9973
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+----- Local AnimeStudioUltimate LICENSE (complete) -----
+MIT License
+
+Copyright (c) 2016 Radu
+Copyright (c) 2016-2020 Perfare
+Copyright (c) 2022-2024 Razmoth
+Copyright (c) 2024-2026 Escartem
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

@@ -1,0 +1,28 @@
+{
+  "prefab": "assets/asbres/effect/avatarfuka/in/avatar_fuka_in_victory_fx.prefab",
+  "sourceReadOnly": true,
+  "evidence": "hi3-fuhua-extract/exports/c5-vfx-structure/renderer-material-links.json and godot-particle-reference.json",
+  "textures": [
+    {
+      "name": "Fx_Symbol_01",
+      "sourcePathId": "3575392085153970766",
+      "material": "Fx_Symbol_b_01_b_01",
+      "nodes": ["Avatar_Fuka_IN_Victory_FX/Fuka_C5_Vic_Dum/YM (1)", "Avatar_Fuka_IN_Victory_FX/Fuka_C5_Vic_Dum/YM (1)/YM TW"],
+      "file": "res://assets/vfx/native/Fx_Symbol_01.png",
+      "sha256": "1b45709a174432c30cee6ffb273daf989472b0e279fa2638bb34f85d63e51e1a",
+      "sourceLifetime": "YM: 6 s; YM TW: 0.4-0.6 s",
+      "meaning": "red-white feather with original RGBA, not a Taiji symbol"
+    },
+    {
+      "name": "Fx_Glow_03",
+      "sourcePathId": "-8751810285608377517",
+      "material": "Fx_Glow_03_b_01",
+      "nodes": ["Avatar_Fuka_IN_Victory_FX/Fuka_C5_Vic_Dum/YM (1)/LZ"],
+      "file": "res://assets/vfx/native/Fx_Glow_03.png",
+      "sha256": "ae6015a5a6e138cd9bd4578641ffab48e8d719c36d0e017c35110047857efd5f",
+      "sourceLifetime": "0.3-0.75 s",
+      "sourceSize": "0.05-0.15"
+    }
+  ],
+  "port": "Unmodified native textures. Godot alpha-blended cards with authored emitter positions, camera-facing orientation, and 0-3.3 s timing fitted to the shortened victory camera. Original Unity shaders, emitter geometry and timeline are not executed."
+}
