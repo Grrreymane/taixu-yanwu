@@ -1,0 +1,4082 @@
+{
+  "revision": "story-rewrite-1",
+  "source": {
+    "path": "docs/story/识境演武_剧情重写完整版.md",
+    "sha256": "1e78d2b847c4760c4979723a4f849c02299eb93fcb420227c9cfae051d38f566"
+  },
+  "counts": {
+    "scenes": 60,
+    "lines": 435,
+    "kinds": {
+      "dialogue": 417,
+      "memory": 2,
+      "narration": 15,
+      "thought": 1
+    },
+    "stageDirections": 18
+  },
+  "scenes": {
+    "A01": {
+      "title": "首次开场 · 共通部分",
+      "sourceSceneId": "A01",
+      "sourceLine": 25,
+      "lines": [
+        {
+          "id": "A01-01",
+          "speaker": "fuhua",
+          "text": "你说有个地方要给我看。就是这里？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 29
+        },
+        {
+          "id": "A01-02",
+          "speaker": "senti",
+          "text": "锵锵！怎么样？我亲手搭的。够气派吧？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 31
+        },
+        {
+          "id": "A01-03",
+          "speaker": "fuhua",
+          "text": "山门很像太虚山。不过从这里往上，原本该有一段转弯。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 33
+        },
+        {
+          "id": "A01-04",
+          "speaker": "senti",
+          "text": "我知道。我嫌绕远，给改直了。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 35
+        },
+        {
+          "id": "A01-05",
+          "speaker": "fuhua",
+          "text": "那边的树也不该长在一起。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 37
+        },
+        {
+          "id": "A01-06",
+          "speaker": "senti",
+          "text": "喂！我请你来看新地方，不是请你来查错的。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 39
+        },
+        {
+          "id": "A01-07",
+          "speaker": "fuhua",
+          "text": "抱歉。只是看着眼熟，不自觉就……",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 41
+        },
+        {
+          "id": "A01-08",
+          "speaker": "senti",
+          "text": "行行行，我懂。像是我故意的，不像的也是我故意的。这里可不是照着旧地方复原的。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 43
+        },
+        {
+          "id": "A01-09",
+          "speaker": "fuhua",
+          "text": "嗯。那这座山叫什么？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 45
+        },
+        {
+          "id": "A01-10",
+          "speaker": "senti",
+          "text": "先保密。等你从里面打出来，再给你看。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 47
+        },
+        {
+          "id": "A01-11",
+          "speaker": "fuhua",
+          "text": "打出来？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 49
+        },
+        {
+          "id": "A01-12",
+          "speaker": "narrator",
+          "text": "（山门内五道身影依次亮起，都是小识的模样。）",
+          "kind": "narration",
+          "displayName": "",
+          "sourceLine": 51
+        },
+        {
+          "id": "A01-13",
+          "speaker": "senti",
+          "text": "识境演武！前五关是我做的幻身。赢一场，就从三种强化里挑一种。怎么搭，随你高兴。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 53
+        },
+        {
+          "id": "A01-14",
+          "speaker": "fuhua",
+          "text": "这些幻身，都是按照你的招式做的？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 55
+        },
+        {
+          "id": "A01-15",
+          "speaker": "senti",
+          "text": "有的是，有的我还加了点料。放心，不会一进门就给你来个措手不及的。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 57
+        },
+        {
+          "id": "A01-16",
+          "speaker": "fuhua",
+          "text": "最后一关呢？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 59
+        },
+        {
+          "id": "A01-17",
+          "speaker": "senti",
+          "text": "本人压轴！这一关我可不让给谁。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 61
+        },
+        {
+          "id": "A01-18",
+          "speaker": "fuhua",
+          "text": "你费了这么大工夫，只是想找我过招？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 63
+        },
+        {
+          "id": "A01-19",
+          "speaker": "senti",
+          "text": "当然不止。我以后还想让其他人来玩。可场子好不好，总得找个靠得住的人先试。你看招准，又不会胡乱夸我。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 65
+        },
+        {
+          "id": "A01-20",
+          "speaker": "fuhua",
+          "text": "听起来，后一个理由更重要。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 67
+        },
+        {
+          "id": "A01-21",
+          "speaker": "senti",
+          "text": "……那你待会儿也可以试着夸一句。总不能我辛苦半天，你出来只说哪里该改。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 69
+        },
+        {
+          "id": "A01-22",
+          "speaker": "fuhua",
+          "text": "我会认真打。觉得好的地方，也会告诉你。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 71
+        },
+        {
+          "id": "A01-23",
+          "speaker": "senti",
+          "text": "这就对了！打完还有奖励。我带你去吃云吞面，店都看好了。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 73
+        },
+        {
+          "id": "A01-24",
+          "speaker": "fuhua",
+          "text": "你倒安排得周全。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 75
+        },
+        {
+          "id": "A01-25",
+          "speaker": "senti",
+          "text": "当然。今天又没什么急事，打完了，总该出去走走。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 77
+        },
+        {
+          "id": "A01-26",
+          "speaker": "narrator",
+          "text": "（符华停在被布盖住的牌匾前。）",
+          "kind": "narration",
+          "displayName": "",
+          "sourceLine": 79
+        },
+        {
+          "id": "A01-27",
+          "speaker": "fuhua",
+          "text": "这块牌匾，也是奖励的一部分？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 81
+        },
+        {
+          "id": "A01-28",
+          "speaker": "senti",
+          "text": "这可是最重要的部分。说好了，最后再揭。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 83
+        },
+        {
+          "id": "A01-29",
+          "speaker": "fuhua",
+          "text": "好。我不偷看。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 85
+        },
+        {
+          "id": "A01-30",
+          "speaker": "senti",
+          "text": "谁怕你偷看了？……算了，先定今天的规矩！",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 87
+        }
+      ],
+      "stageDirections": [
+        {
+          "beforeLine": 0,
+          "text": "场景：识境入口。山门与太虚山相似，石阶却更宽，路边有不合时令的花。演武场入口的牌匾蒙着布。",
+          "sourceLine": 27
+        }
+      ]
+    },
+    "A02": {
+      "title": "再次游玩 · 共通部分",
+      "sourceSceneId": "A02",
+      "sourceLine": 89,
+      "lines": [
+        {
+          "id": "A02-01",
+          "speaker": "senti",
+          "text": "又来了？这次我可改了不少东西，别想着照上回那套一路打通。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 91
+        },
+        {
+          "id": "A02-02",
+          "speaker": "fuhua",
+          "text": "正好。我也想试些不同的选择。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 93
+        },
+        {
+          "id": "A02-03",
+          "speaker": "senti",
+          "text": "行啊。还是五个幻身，最后由我上场。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 95
+        },
+        {
+          "id": "A02-04",
+          "speaker": "fuhua",
+          "text": "这条规矩，你倒是从不改。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 97
+        },
+        {
+          "id": "A02-05",
+          "speaker": "senti",
+          "text": "我是这儿的主人！压轴当然得是我。来，先挑今天怎么玩。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 99
+        }
+      ],
+      "stageDirections": []
+    },
+    "A03": {
+      "title": "明镜之约",
+      "sourceSceneId": "A03",
+      "sourceLine": 101,
+      "lines": [
+        {
+          "id": "A03-01",
+          "speaker": "senti",
+          "text": "选「明镜」？好。今天别只顾着出拳，看看你能接住我多少招。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 103
+        },
+        {
+          "id": "A03-02",
+          "speaker": "fuhua",
+          "text": "要我等你的破绽？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 105
+        },
+        {
+          "id": "A03-03",
+          "speaker": "senti",
+          "text": "等到了也得抓得住。你就试试。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 107
+        }
+      ],
+      "stageDirections": []
+    },
+    "A04": {
+      "title": "流转之约",
+      "sourceSceneId": "A04",
+      "sourceLine": 109,
+      "lines": [
+        {
+          "id": "A04-01",
+          "speaker": "senti",
+          "text": "「流转」啊。那可不能一直站在原地。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 111
+        },
+        {
+          "id": "A04-02",
+          "speaker": "fuhua",
+          "text": "所以你把石阶和场地都拓宽了。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 113
+        },
+        {
+          "id": "A04-03",
+          "speaker": "senti",
+          "text": "总算注意到我的用心了。尽管跑，前面那些家伙可会追。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 115
+        }
+      ],
+      "stageDirections": []
+    },
+    "A05": {
+      "title": "破阵之约",
+      "sourceSceneId": "A05",
+      "sourceLine": 117,
+      "lines": [
+        {
+          "id": "A05-01",
+          "speaker": "senti",
+          "text": "选「破阵」？今天它们守得可比上回结实。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 119
+        },
+        {
+          "id": "A05-02",
+          "speaker": "fuhua",
+          "text": "总有办法打开缺口。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 121
+        },
+        {
+          "id": "A05-03",
+          "speaker": "senti",
+          "text": "就是想听你这句。待会儿别嫌我太难缠。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 123
+        }
+      ],
+      "stageDirections": []
+    },
+    "A06": {
+      "title": "多重规矩 · 通关后解锁",
+      "sourceSceneId": "A06",
+      "sourceLine": 125,
+      "lines": [
+        {
+          "id": "A06-01",
+          "speaker": "senti",
+          "text": "嚯，一次开这么多规矩？你这是打算把我新修的地方再拆一遍？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 127
+        },
+        {
+          "id": "A06-02",
+          "speaker": "fuhua",
+          "text": "上次已经熟悉过了。今天想看看它们一起生效会怎样。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 129
+        },
+        {
+          "id": "A06-03",
+          "speaker": "senti",
+          "text": "我可不会偷偷放水。打不动了就说，输一次也没什么。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 131
+        },
+        {
+          "id": "A06-04",
+          "speaker": "fuhua",
+          "text": "你这句倒不像以前会说的话。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 133
+        },
+        {
+          "id": "A06-05",
+          "speaker": "senti",
+          "text": "哼。那是因为我知道，你肯定还会再来。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 135
+        }
+      ],
+      "stageDirections": []
+    },
+    "A07": {
+      "title": "通关后的特别重访 · 可选",
+      "sourceSceneId": "A07",
+      "sourceLine": 137,
+      "lines": [
+        {
+          "id": "A07-01",
+          "speaker": "senti",
+          "text": "你来得正好！我昨天连夜把那几个幻身又调了一轮。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 139
+        },
+        {
+          "id": "A07-02",
+          "speaker": "fuhua",
+          "text": "不是说，要先休息两天？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 141
+        },
+        {
+          "id": "A07-03",
+          "speaker": "senti",
+          "text": "原本是这么打算的。可一想到上次输的那招，就怎么也忍不住。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 143
+        },
+        {
+          "id": "A07-04",
+          "speaker": "fuhua",
+          "text": "所以你又练了？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 145
+        },
+        {
+          "id": "A07-05",
+          "speaker": "senti",
+          "text": "练了，还改了场地。别急着谢我，这回可没那么容易赢。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 147
+        },
+        {
+          "id": "A07-06",
+          "speaker": "fuhua",
+          "text": "我本来也没想轻松取胜。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 149
+        },
+        {
+          "id": "A07-07",
+          "speaker": "senti",
+          "text": "好！那先选规矩。今天谁也别留手。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 151
+        }
+      ],
+      "stageDirections": []
+    },
+    "B01": {
+      "title": "寸心如锋",
+      "sourceSceneId": "B01",
+      "sourceLine": 159,
+      "lines": [
+        {
+          "id": "B01-01",
+          "speaker": "senti",
+          "text": "这么快就挑上了？你刚才那一拳，倒是让我想起以前跟你交手的时候。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 161
+        },
+        {
+          "id": "B01-02",
+          "speaker": "fuhua",
+          "text": "哪里像？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 163
+        },
+        {
+          "id": "B01-03",
+          "speaker": "senti",
+          "text": "明明有更稳的办法，你偏能一眼找到最近的那条路。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 165
+        },
+        {
+          "id": "B01-04",
+          "speaker": "fuhua",
+          "text": "近未必容易。只是刚才那一刻，我想先试试。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 167
+        },
+        {
+          "id": "B01-05",
+          "speaker": "senti",
+          "text": "行。那就别收着，后面还有我没使出来的招呢。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 169
+        }
+      ],
+      "stageDirections": []
+    },
+    "B02": {
+      "title": "破阵之势",
+      "sourceSceneId": "B02",
+      "sourceLine": 171,
+      "lines": [
+        {
+          "id": "B02-01",
+          "speaker": "fuhua",
+          "text": "刚才那个幻身一直守着同一边，逼得太紧反而不好打。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 173
+        },
+        {
+          "id": "B02-02",
+          "speaker": "senti",
+          "text": "怎么，连你也觉得麻烦？我还怕它守不住呢。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 175
+        },
+        {
+          "id": "B02-03",
+          "speaker": "fuhua",
+          "text": "麻烦不等于没办法。它总要换气。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 177
+        },
+        {
+          "id": "B02-04",
+          "speaker": "senti",
+          "text": "……你连这个都等到了？好，算你观察仔细。下一关可别想着照搬。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 179
+        }
+      ],
+      "stageDirections": []
+    },
+    "B03": {
+      "title": "以攻代守",
+      "sourceSceneId": "B03",
+      "sourceLine": 181,
+      "lines": [
+        {
+          "id": "B03-01",
+          "speaker": "senti",
+          "text": "喂，这可是拿自己露出的空当换机会。你真选？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 183
+        },
+        {
+          "id": "B03-02",
+          "speaker": "fuhua",
+          "text": "在这里试，代价比外面小得多。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 185
+        },
+        {
+          "id": "B03-03",
+          "speaker": "senti",
+          "text": "话是这么说。可你平时不是老劝别人别这么拼吗？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 187
+        },
+        {
+          "id": "B03-04",
+          "speaker": "fuhua",
+          "text": "所以更该知道什么时候可以冒险。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 189
+        },
+        {
+          "id": "B03-05",
+          "speaker": "senti",
+          "text": "……行！这回答我喜欢。别等到了我这关，又突然变回老样子。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 191
+        }
+      ],
+      "stageDirections": []
+    },
+    "B04": {
+      "title": "三叠归元",
+      "sourceSceneId": "B04",
+      "sourceLine": 193,
+      "lines": [
+        {
+          "id": "B04-01",
+          "speaker": "senti",
+          "text": "第三下你居然没急着打出去。我还等着看你把地面砸穿呢。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 195
+        },
+        {
+          "id": "B04-02",
+          "speaker": "fuhua",
+          "text": "前两下已经够快。第三下再快，对手反倒容易猜到。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 197
+        },
+        {
+          "id": "B04-03",
+          "speaker": "senti",
+          "text": "合着你还替我留下个悬念？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 199
+        },
+        {
+          "id": "B04-04",
+          "speaker": "fuhua",
+          "text": "只是觉得，把所有力气用在同一个节奏上，有些可惜。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 201
+        },
+        {
+          "id": "B04-05",
+          "speaker": "senti",
+          "text": "有道理。等轮到我，可别怪我专挑你停顿的时候打。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 203
+        }
+      ],
+      "stageDirections": []
+    },
+    "B05": {
+      "title": "明镜止水",
+      "sourceSceneId": "B05",
+      "sourceLine": 205,
+      "lines": [
+        {
+          "id": "B05-01",
+          "speaker": "senti",
+          "text": "怎么，还没开打就想着歇口气了？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 207
+        },
+        {
+          "id": "B05-02",
+          "speaker": "fuhua",
+          "text": "刚才一直在听你说话。现在总该静一静。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 209
+        },
+        {
+          "id": "B05-03",
+          "speaker": "senti",
+          "text": "我说话有那么吵吗？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 211
+        },
+        {
+          "id": "B05-04",
+          "speaker": "fuhua",
+          "text": "没有。只是你的幻身一开口，也和你一样。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 213
+        },
+        {
+          "id": "B05-05",
+          "speaker": "senti",
+          "text": "……等等，那几只可没资格跟我比。下次得让它们少说两句。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 215
+        }
+      ],
+      "stageDirections": []
+    },
+    "B06": {
+      "title": "反照",
+      "sourceSceneId": "B06",
+      "sourceLine": 217,
+      "lines": [
+        {
+          "id": "B06-01",
+          "speaker": "senti",
+          "text": "不对啊！刚才那招我明明藏到最后了，你怎么提前转过身的？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 219
+        },
+        {
+          "id": "B06-02",
+          "speaker": "fuhua",
+          "text": "它出手前，肩膀轻轻抬了一下。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 221
+        },
+        {
+          "id": "B06-03",
+          "speaker": "senti",
+          "text": "我本人可没这个毛病。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 223
+        },
+        {
+          "id": "B06-04",
+          "speaker": "fuhua",
+          "text": "你有。只是次数不多。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 225
+        },
+        {
+          "id": "B06-05",
+          "speaker": "senti",
+          "text": "……你究竟看了我多少遍？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 227
+        },
+        {
+          "id": "B06-06",
+          "speaker": "fuhua",
+          "text": "我们打过很多次了。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 229
+        },
+        {
+          "id": "B06-07",
+          "speaker": "senti",
+          "text": "行，那最后一关我换个起手。看你还认不认得。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 231
+        }
+      ],
+      "stageDirections": []
+    },
+    "B07": {
+      "title": "守一",
+      "sourceSceneId": "B07",
+      "sourceLine": 233,
+      "lines": [
+        {
+          "id": "B07-01",
+          "speaker": "fuhua",
+          "text": "这里的风，和入口处不太一样。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 235
+        },
+        {
+          "id": "B07-02",
+          "speaker": "senti",
+          "text": "发现啦？这边的树不是摆设。我特地让风从叶子间穿过去。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 237
+        },
+        {
+          "id": "B07-03",
+          "speaker": "fuhua",
+          "text": "很安静。只是和太虚山的声音不同。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 239
+        },
+        {
+          "id": "B07-04",
+          "speaker": "senti",
+          "text": "那当然。这里又不是太虚山。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 241
+        },
+        {
+          "id": "B07-05",
+          "speaker": "narrator",
+          "text": "（小识说完，反倒先看了符华一眼。）",
+          "kind": "narration",
+          "displayName": "",
+          "sourceLine": 243
+        },
+        {
+          "id": "B07-06",
+          "speaker": "fuhua",
+          "text": "我知道。我是在说，这样也很好。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 245
+        },
+        {
+          "id": "B07-07",
+          "speaker": "senti",
+          "text": "……哦。那就好。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 247
+        }
+      ],
+      "stageDirections": []
+    },
+    "B08": {
+      "title": "生生不息",
+      "sourceSceneId": "B08",
+      "sourceLine": 249,
+      "lines": [
+        {
+          "id": "B08-01",
+          "speaker": "senti",
+          "text": "你总算肯给自己留点余地了。刚才我还怕你一路打到面馆都不肯停。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 251
+        },
+        {
+          "id": "B08-02",
+          "speaker": "fuhua",
+          "text": "说起来，你挑的店是哪一家？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 253
+        },
+        {
+          "id": "B08-03",
+          "speaker": "senti",
+          "text": "山下拐角那家。云吞面，招牌都快掉漆了，可天天有人排队。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 255
+        },
+        {
+          "id": "B08-04",
+          "speaker": "fuhua",
+          "text": "你吃过？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 257
+        },
+        {
+          "id": "B08-05",
+          "speaker": "senti",
+          "text": "……还没。上次排到一半，嫌慢走了。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 259
+        },
+        {
+          "id": "B08-06",
+          "speaker": "fuhua",
+          "text": "那今天倒可以等等。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 261
+        },
+        {
+          "id": "B08-07",
+          "speaker": "senti",
+          "text": "你先别替我安排排队！咱们能不能早点打完还两说呢。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 263
+        }
+      ],
+      "stageDirections": []
+    },
+    "B09": {
+      "title": "行云流水",
+      "sourceSceneId": "B09",
+      "sourceLine": 265,
+      "lines": [
+        {
+          "id": "B09-01",
+          "speaker": "senti",
+          "text": "刚才那套连得漂亮。就是你再往前半步，我那片瓦就没了。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 267
+        },
+        {
+          "id": "B09-02",
+          "speaker": "fuhua",
+          "text": "你不是说，坏了还能修？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 269
+        },
+        {
+          "id": "B09-03",
+          "speaker": "senti",
+          "text": "能修也不等于想天天修啊！你知道我给那排檐角挑了多久的颜色吗？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 271
+        },
+        {
+          "id": "B09-04",
+          "speaker": "fuhua",
+          "text": "不知道。不过看得出来，你很喜欢那里。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 273
+        },
+        {
+          "id": "B09-05",
+          "speaker": "senti",
+          "text": "……也还行吧。算了，真打起来不用顾着屋顶。你打得痛快比较重要。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 275
+        }
+      ],
+      "stageDirections": []
+    },
+    "B10": {
+      "title": "招随心转",
+      "sourceSceneId": "B10",
+      "sourceLine": 277,
+      "lines": [
+        {
+          "id": "B10-01",
+          "speaker": "senti",
+          "text": "刚学会一套，你又想换接法？这可不像你平时那种按部就班的练法。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 279
+        },
+        {
+          "id": "B10-02",
+          "speaker": "fuhua",
+          "text": "正因为以前没这样练过，才想多试几种。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 281
+        },
+        {
+          "id": "B10-03",
+          "speaker": "senti",
+          "text": "你这么说，我倒有点得意了。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 283
+        },
+        {
+          "id": "B10-04",
+          "speaker": "fuhua",
+          "text": "为什么？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 285
+        },
+        {
+          "id": "B10-05",
+          "speaker": "senti",
+          "text": "因为这地方是我造的啊。能让你玩出新东西，不就说明我没白忙活？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 287
+        },
+        {
+          "id": "B10-06",
+          "speaker": "fuhua",
+          "text": "确实。你做得很好。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 289
+        },
+        {
+          "id": "B10-07",
+          "speaker": "senti",
+          "text": "……夸得这么突然，我都不知道怎么接。那、那继续！",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 291
+        }
+      ],
+      "stageDirections": []
+    },
+    "B11": {
+      "title": "乘风",
+      "sourceSceneId": "B11",
+      "sourceLine": 293,
+      "lines": [
+        {
+          "id": "B11-01",
+          "speaker": "fuhua",
+          "text": "那边的石阶，明明能直通山门，你却留了一条岔路。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 295
+        },
+        {
+          "id": "B11-02",
+          "speaker": "senti",
+          "text": "那是我后来加的。直来直去多没意思，绕过去还能看见另一片林子。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 297
+        },
+        {
+          "id": "B11-03",
+          "speaker": "fuhua",
+          "text": "原来的山路，并不通向那里。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 299
+        },
+        {
+          "id": "B11-04",
+          "speaker": "senti",
+          "text": "所以才要修新的啊。老走一条路，连风景都看腻了。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 301
+        },
+        {
+          "id": "B11-05",
+          "speaker": "fuhua",
+          "text": "说得也是。打完以后，带我走那边吧。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 303
+        },
+        {
+          "id": "B11-06",
+          "speaker": "senti",
+          "text": "行，今天我带路！",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 305
+        }
+      ],
+      "stageDirections": []
+    },
+    "B12": {
+      "title": "气贯长虹",
+      "sourceSceneId": "B12",
+      "sourceLine": 307,
+      "lines": [
+        {
+          "id": "B12-01",
+          "speaker": "senti",
+          "text": "刚才你那一下差点把我幻身送到墙外。要是琪亚娜来了，估计得跟你争着试。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 309
+        },
+        {
+          "id": "B12-02",
+          "speaker": "fuhua",
+          "text": "她大概会先问，能不能把几种强化都拿上。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 311
+        },
+        {
+          "id": "B12-03",
+          "speaker": "senti",
+          "text": "想得美！每场只能挑一个，我的规矩可不是摆着看的。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 313
+        },
+        {
+          "id": "B12-04",
+          "speaker": "fuhua",
+          "text": "布洛妮娅可能会研究怎样组合最有效率。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 315
+        },
+        {
+          "id": "B12-05",
+          "speaker": "senti",
+          "text": "那更好。我正好看看有没有我自己没想到的打法。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 317
+        },
+        {
+          "id": "B12-06",
+          "speaker": "fuhua",
+          "text": "看来你真的打算邀请大家。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 319
+        },
+        {
+          "id": "B12-07",
+          "speaker": "senti",
+          "text": "当然。不过你得先把这六场打完。第一位客人还没验收呢。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 321
+        }
+      ],
+      "stageDirections": []
+    },
+    "C01": {
+      "title": "明镜止水 → 反照",
+      "sourceSceneId": "C01",
+      "sourceLine": 329,
+      "lines": [
+        {
+          "id": "C01-01",
+          "speaker": "senti",
+          "text": "先静下来，再找机会还手。你这套打法，是准备把我的招数全看完？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 331
+        },
+        {
+          "id": "C01-02",
+          "speaker": "fuhua",
+          "text": "我想知道，哪些破绽是它们真的露出来的，哪些是你故意留的。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 333
+        },
+        {
+          "id": "C01-03",
+          "speaker": "senti",
+          "text": "被你看出来可就没意思了。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 335
+        },
+        {
+          "id": "C01-04",
+          "speaker": "fuhua",
+          "text": "未必。看出来以后，能不能抓住，是另一回事。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 337
+        },
+        {
+          "id": "C01-05",
+          "speaker": "senti",
+          "text": "……说得好。那最后一关，你可要看仔细些。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 339
+        }
+      ],
+      "stageDirections": []
+    },
+    "C02": {
+      "title": "反照 → 明镜止水",
+      "sourceSceneId": "C02",
+      "sourceLine": 341,
+      "lines": [
+        {
+          "id": "C02-01",
+          "speaker": "senti",
+          "text": "刚才还逮着机会就反击，怎么现在反而收住了？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 343
+        },
+        {
+          "id": "C02-02",
+          "speaker": "fuhua",
+          "text": "太急着还手，也可能被对方牵着走。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 345
+        },
+        {
+          "id": "C02-03",
+          "speaker": "senti",
+          "text": "你是在说我那几只幻身会骗人？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 347
+        },
+        {
+          "id": "C02-04",
+          "speaker": "fuhua",
+          "text": "不是会不会。是你一定教过它们。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 349
+        },
+        {
+          "id": "C02-05",
+          "speaker": "senti",
+          "text": "嘿，你倒了解我。那你猜猜，我本人准备了多少招？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 351
+        },
+        {
+          "id": "C02-06",
+          "speaker": "fuhua",
+          "text": "我不猜。打起来再看。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 353
+        }
+      ],
+      "stageDirections": []
+    },
+    "C03": {
+      "title": "以攻代守 → 生生不息",
+      "sourceSceneId": "C03",
+      "sourceLine": 355,
+      "lines": [
+        {
+          "id": "C03-01",
+          "speaker": "senti",
+          "text": "我还当你要一路这么拼下去，结果打完立刻就开始调整。挺会算啊。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 357
+        },
+        {
+          "id": "C03-02",
+          "speaker": "fuhua",
+          "text": "刚才那样打，很尽兴。但后面还有几场。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 359
+        },
+        {
+          "id": "C03-03",
+          "speaker": "senti",
+          "text": "尽兴？这词从你嘴里说出来，我怎么听着这么新鲜。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 361
+        },
+        {
+          "id": "C03-04",
+          "speaker": "fuhua",
+          "text": "偶尔也会想，不必每一招都留退路。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 363
+        },
+        {
+          "id": "C03-05",
+          "speaker": "senti",
+          "text": "行。下回想这么打，也不用非等我搭个场子。直接叫我就好。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 365
+        }
+      ],
+      "stageDirections": []
+    },
+    "C04": {
+      "title": "生生不息 → 以攻代守",
+      "sourceSceneId": "C04",
+      "sourceLine": 367,
+      "lines": [
+        {
+          "id": "C04-01",
+          "speaker": "senti",
+          "text": "先养足精神，转头就选这么险的招。原来你是在这儿等着呢。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 369
+        },
+        {
+          "id": "C04-02",
+          "speaker": "fuhua",
+          "text": "有余力的时候试，比被逼到绝境再试好。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 371
+        },
+        {
+          "id": "C04-03",
+          "speaker": "senti",
+          "text": "有道理。说不定今天我也该换种打发。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 373
+        },
+        {
+          "id": "C04-04",
+          "speaker": "fuhua",
+          "text": "你平时还不够冒险？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 375
+        },
+        {
+          "id": "C04-05",
+          "speaker": "senti",
+          "text": "那叫艺高人胆大！不过今天，倒也可以更大胆一点。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 377
+        }
+      ],
+      "stageDirections": []
+    },
+    "C05": {
+      "title": "行云流水 → 三叠归元",
+      "sourceSceneId": "C05",
+      "sourceLine": 379,
+      "lines": [
+        {
+          "id": "C05-01",
+          "speaker": "senti",
+          "text": "你把前面那一串接上最后三击，我都替那只幻身觉得眼花。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 381
+        },
+        {
+          "id": "C05-02",
+          "speaker": "fuhua",
+          "text": "中间留一个停顿，它反而会自己靠过来。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 383
+        },
+        {
+          "id": "C05-03",
+          "speaker": "senti",
+          "text": "难怪！我还以为你那时候断招了，正想提醒你。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 385
+        },
+        {
+          "id": "C05-04",
+          "speaker": "fuhua",
+          "text": "要是换你在场，恐怕不会给我这个机会。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 387
+        },
+        {
+          "id": "C05-05",
+          "speaker": "senti",
+          "text": "那当然。不过你刚才这下不错，回头我得试试看。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 389
+        }
+      ],
+      "stageDirections": []
+    },
+    "C06": {
+      "title": "三叠归元 → 行云流水",
+      "sourceSceneId": "C06",
+      "sourceLine": 391,
+      "lines": [
+        {
+          "id": "C06-01",
+          "speaker": "senti",
+          "text": "你这是把原本该收尾的一招，又接成了开头？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 393
+        },
+        {
+          "id": "C06-02",
+          "speaker": "fuhua",
+          "text": "嗯。打过一次才发现，不一定非要在第三下结束。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 395
+        },
+        {
+          "id": "C06-03",
+          "speaker": "senti",
+          "text": "我设计的时候，还真没往这边想。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 397
+        },
+        {
+          "id": "C06-04",
+          "speaker": "fuhua",
+          "text": "招式到了不同的人手里，自然会有不同用法。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 399
+        },
+        {
+          "id": "C06-05",
+          "speaker": "senti",
+          "text": "听你这么一说，我还挺期待别人来玩。……当然，得先让我把漏洞补上。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 401
+        }
+      ],
+      "stageDirections": []
+    },
+    "C07": {
+      "title": "乘风 → 招随心转",
+      "sourceSceneId": "C07",
+      "sourceLine": 403,
+      "lines": [
+        {
+          "id": "C07-01",
+          "speaker": "senti",
+          "text": "刚才闪得那么远，我还以为你要退开，结果一转眼又跑回去了。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 405
+        },
+        {
+          "id": "C07-02",
+          "speaker": "fuhua",
+          "text": "退开不一定是为了离开。只是换个角度。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 407
+        },
+        {
+          "id": "C07-03",
+          "speaker": "senti",
+          "text": "那你倒挺喜欢我新留的岔路。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 409
+        },
+        {
+          "id": "C07-04",
+          "speaker": "fuhua",
+          "text": "喜欢。原本以为那段路没必要，现在看来，能去的地方多一些也好。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 411
+        },
+        {
+          "id": "C07-05",
+          "speaker": "senti",
+          "text": "……算你识货。那条路我可是改了好几遍。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 413
+        }
+      ],
+      "stageDirections": []
+    },
+    "C08": {
+      "title": "招随心转 → 乘风",
+      "sourceSceneId": "C08",
+      "sourceLine": 415,
+      "lines": [
+        {
+          "id": "C08-01",
+          "speaker": "senti",
+          "text": "又换？你今天是不是打算把我准备的每一种接法都拆开重装？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 417
+        },
+        {
+          "id": "C08-02",
+          "speaker": "fuhua",
+          "text": "刚才一直在想怎么接招，差点忘了脚下还有路。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 419
+        },
+        {
+          "id": "C08-03",
+          "speaker": "senti",
+          "text": "哼，我辛苦修那么大的场地，可不能白修。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 421
+        },
+        {
+          "id": "C08-04",
+          "speaker": "fuhua",
+          "text": "现在正好。原本走不通的地方，退一步就能绕过去。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 423
+        },
+        {
+          "id": "C08-05",
+          "speaker": "senti",
+          "text": "怎么样？比对着旧路线走好玩吧？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 425
+        },
+        {
+          "id": "C08-06",
+          "speaker": "fuhua",
+          "text": "嗯。这次是你说对了。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 427
+        }
+      ],
+      "stageDirections": []
+    },
+    "D01": {
+      "title": "进攻 → 守势",
+      "sourceSceneId": "D01",
+      "sourceLine": 435,
+      "lines": [
+        {
+          "id": "D01-01",
+          "speaker": "senti",
+          "text": "怎么收手了？我还以为你会一路冲到底。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 437
+        },
+        {
+          "id": "D01-02",
+          "speaker": "fuhua",
+          "text": "刚才那招很顺。不过越往后，对手越熟悉我的节奏。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 439
+        },
+        {
+          "id": "D01-03",
+          "speaker": "senti",
+          "text": "所以想等它们先露出点东西？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 441
+        },
+        {
+          "id": "D01-04",
+          "speaker": "fuhua",
+          "text": "嗯。既然有六场，不必六场都用一个打法。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 443
+        },
+        {
+          "id": "D01-05",
+          "speaker": "senti",
+          "text": "好。只要最后跟我打的时候，别光顾着等就行。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 445
+        }
+      ],
+      "stageDirections": []
+    },
+    "D02": {
+      "title": "进攻 → 流转",
+      "sourceSceneId": "D02",
+      "sourceLine": 447,
+      "lines": [
+        {
+          "id": "D02-01",
+          "speaker": "senti",
+          "text": "刚才还直冲过去，现在倒绕起圈子来了。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 449
+        },
+        {
+          "id": "D02-02",
+          "speaker": "fuhua",
+          "text": "前面试了正面突破。接下来想看看侧面会有什么变化。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 451
+        },
+        {
+          "id": "D02-03",
+          "speaker": "senti",
+          "text": "那可得小心，我让它们在岔路也布了招。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 453
+        },
+        {
+          "id": "D02-04",
+          "speaker": "fuhua",
+          "text": "你果然没有白白留那些路。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 455
+        },
+        {
+          "id": "D02-05",
+          "speaker": "senti",
+          "text": "当然。人要是只能往前冲，我修这么大的山做什么？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 457
+        }
+      ],
+      "stageDirections": []
+    },
+    "D03": {
+      "title": "守势 → 进攻",
+      "sourceSceneId": "D03",
+      "sourceLine": 459,
+      "lines": [
+        {
+          "id": "D03-01",
+          "speaker": "senti",
+          "text": "终于肯先出手了？我还以为你打算把它们每招都看一遍。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 461
+        },
+        {
+          "id": "D03-02",
+          "speaker": "fuhua",
+          "text": "已经看得差不多了。再等下去，机会也会过去。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 463
+        },
+        {
+          "id": "D03-03",
+          "speaker": "senti",
+          "text": "这话我爱听。想打就打，用不着每次都等别人先动。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 465
+        },
+        {
+          "id": "D03-04",
+          "speaker": "fuhua",
+          "text": "你是在夸我，还是在替自己说话？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 467
+        },
+        {
+          "id": "D03-05",
+          "speaker": "senti",
+          "text": "都有！不行吗？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 469
+        }
+      ],
+      "stageDirections": []
+    },
+    "D04": {
+      "title": "守势 → 流转",
+      "sourceSceneId": "D04",
+      "sourceLine": 471,
+      "lines": [
+        {
+          "id": "D04-01",
+          "speaker": "senti",
+          "text": "不站在那儿接招了？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 473
+        },
+        {
+          "id": "D04-02",
+          "speaker": "fuhua",
+          "text": "站久了，反而忘了这地方有多大。我想走动看看。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 475
+        },
+        {
+          "id": "D04-03",
+          "speaker": "senti",
+          "text": "好啊。那边的树后面也有场地，我特意没把它封起来。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 477
+        },
+        {
+          "id": "D04-04",
+          "speaker": "fuhua",
+          "text": "这样走过去，景色完全不同。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 479
+        },
+        {
+          "id": "D04-05",
+          "speaker": "senti",
+          "text": "就是嘛。别光顾着看对手，偶尔也看看我的山。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 481
+        }
+      ],
+      "stageDirections": []
+    },
+    "D05": {
+      "title": "流转 → 进攻",
+      "sourceSceneId": "D05",
+      "sourceLine": 483,
+      "lines": [
+        {
+          "id": "D05-01",
+          "speaker": "senti",
+          "text": "绕够了？这回打算从正面来？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 485
+        },
+        {
+          "id": "D05-02",
+          "speaker": "fuhua",
+          "text": "路已经看清了。接下来想试试，不再回避会怎么样。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 487
+        },
+        {
+          "id": "D05-03",
+          "speaker": "senti",
+          "text": "哈，听着像是要跟我下战书。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 489
+        },
+        {
+          "id": "D05-04",
+          "speaker": "fuhua",
+          "text": "如果你愿意这么理解。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 491
+        },
+        {
+          "id": "D05-05",
+          "speaker": "senti",
+          "text": "那我可接了。最后一场，尽管来。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 493
+        }
+      ],
+      "stageDirections": []
+    },
+    "D06": {
+      "title": "流转 → 守势",
+      "sourceSceneId": "D06",
+      "sourceLine": 495,
+      "lines": [
+        {
+          "id": "D06-01",
+          "speaker": "senti",
+          "text": "你突然站住，我还以为前面那条路不通了。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 497
+        },
+        {
+          "id": "D06-02",
+          "speaker": "fuhua",
+          "text": "不是。只是一直绕开的话，就看不出对手究竟有多快。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 499
+        },
+        {
+          "id": "D06-03",
+          "speaker": "senti",
+          "text": "想站着接我一招？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 501
+        },
+        {
+          "id": "D06-04",
+          "speaker": "fuhua",
+          "text": "如果接得住，就不用每次都退开。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 503
+        },
+        {
+          "id": "D06-05",
+          "speaker": "senti",
+          "text": "行啊。那待会儿我可不会手软。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 505
+        }
+      ],
+      "stageDirections": []
+    },
+    "J01": {
+      "title": "第三关后 · 还没修完的路",
+      "sourceSceneId": "J01",
+      "sourceLine": 511,
+      "lines": [
+        {
+          "id": "J01-01",
+          "speaker": "fuhua",
+          "text": "等一下。那边的石阶……没有尽头？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 517
+        },
+        {
+          "id": "J01-02",
+          "speaker": "senti",
+          "text": "啊，那个。还没修完。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 519
+        },
+        {
+          "id": "J01-03",
+          "speaker": "fuhua",
+          "text": "我以为你已经把整座山都建好了。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 521
+        },
+        {
+          "id": "J01-04",
+          "speaker": "senti",
+          "text": "演武场够用了。其他地方嘛，想到了再往外搭。反正这是我的识境，又不是谁规定好的一张地图。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 523
+        },
+        {
+          "id": "J01-05",
+          "speaker": "fuhua",
+          "text": "这样也不错。以后想加东西，随时都有地方。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 525
+        },
+        {
+          "id": "J01-06",
+          "speaker": "senti",
+          "text": "……我还以为你会说，路修一半不太妥当。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 527
+        },
+        {
+          "id": "J01-07",
+          "speaker": "fuhua",
+          "text": "如果这里是为了让人来玩，就不用急着把所有路都规定好。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 529
+        },
+        {
+          "id": "J01-08",
+          "speaker": "senti",
+          "text": "你倒挺会说的嘛。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 531
+        },
+        {
+          "id": "J01-09",
+          "speaker": "fuhua",
+          "text": "你不想听？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 533
+        },
+        {
+          "id": "J01-10",
+          "speaker": "senti",
+          "text": "想！我就是……没想到你会这么说。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 535
+        },
+        {
+          "id": "J01-11",
+          "speaker": "narrator",
+          "text": "（小识抬手，石阶尽头出现一盏小小的路灯。路仍旧没有延伸。）",
+          "kind": "narration",
+          "displayName": "",
+          "sourceLine": 537
+        },
+        {
+          "id": "J01-12",
+          "speaker": "senti",
+          "text": "行了，先留着。等今天打完，我再想想它该通到哪儿。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 539
+        },
+        {
+          "id": "J01-13",
+          "speaker": "fuhua",
+          "text": "那我就等着看。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 541
+        },
+        {
+          "id": "J01-14",
+          "speaker": "senti",
+          "text": "前面还有两只幻身呢。走，别让它们等急了。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 543
+        }
+      ],
+      "stageDirections": [
+        {
+          "beforeLine": 0,
+          "text": "场景：演武场边。被打散的幻身化为细碎光点。一阵风掠过，远处的布景短暂变淡，露出一段尚未延伸出去的石阶。",
+          "sourceLine": 515
+        }
+      ]
+    },
+    "E01": {
+      "title": "进攻路线 · 第六场",
+      "sourceSceneId": "E01",
+      "sourceLine": 549,
+      "lines": [
+        {
+          "id": "E01-01",
+          "speaker": "senti",
+          "text": "好了！看你一路打得那么痛快，我都快坐不住了。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 553
+        },
+        {
+          "id": "E01-02",
+          "speaker": "fuhua",
+          "text": "你不是一直在看吗？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 555
+        },
+        {
+          "id": "E01-03",
+          "speaker": "senti",
+          "text": "光看有什么意思？那几只幻身可替不了我。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 557
+        },
+        {
+          "id": "E01-04",
+          "speaker": "fuhua",
+          "text": "确实。你不会照着固定的顺序出招。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 559
+        },
+        {
+          "id": "E01-05",
+          "speaker": "senti",
+          "text": "这才像话。今天你每次都敢先走一步，那最后一步，敢不敢也先来？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 561
+        },
+        {
+          "id": "E01-06",
+          "speaker": "fuhua",
+          "text": "有何不敢。接招。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 563
+        }
+      ],
+      "stageDirections": [
+        {
+          "beforeLine": 0,
+          "text": "场景：最后一道幻身消散，小识从场边跳进演武场。",
+          "sourceLine": 551
+        }
+      ]
+    },
+    "E02": {
+      "title": "守势路线 · 第六场",
+      "sourceSceneId": "E02",
+      "sourceLine": 565,
+      "lines": [
+        {
+          "id": "E02-01",
+          "speaker": "senti",
+          "text": "前面那些招，你几乎都等到最后才还手。真有耐心。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 567
+        },
+        {
+          "id": "E02-02",
+          "speaker": "fuhua",
+          "text": "它们的破绽，有些是你特意留下的。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 569
+        },
+        {
+          "id": "E02-03",
+          "speaker": "senti",
+          "text": "被你看出来啦？可惜我本人没那么好猜。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 571
+        },
+        {
+          "id": "E02-04",
+          "speaker": "fuhua",
+          "text": "我也没打算一直等。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 573
+        },
+        {
+          "id": "E02-05",
+          "speaker": "senti",
+          "text": "哦？那好。别把我当成只会照着旧招出手的幻身。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 575
+        },
+        {
+          "id": "E02-06",
+          "speaker": "fuhua",
+          "text": "不会。现在站在这里的是你。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 577
+        }
+      ],
+      "stageDirections": []
+    },
+    "E03": {
+      "title": "流转路线 · 第六场",
+      "sourceSceneId": "E03",
+      "sourceLine": 579,
+      "lines": [
+        {
+          "id": "E03-01",
+          "speaker": "senti",
+          "text": "你把我新修的几条路都走遍了。怎么样，没白修吧？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 581
+        },
+        {
+          "id": "E03-02",
+          "speaker": "fuhua",
+          "text": "每条路都有用。有两处，我还想再走一次。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 583
+        },
+        {
+          "id": "E03-03",
+          "speaker": "senti",
+          "text": "等会儿。最后一关可轮到我带路了。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 585
+        },
+        {
+          "id": "E03-04",
+          "speaker": "fuhua",
+          "text": "那得看你追不追得上。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 587
+        },
+        {
+          "id": "E03-05",
+          "speaker": "senti",
+          "text": "嘿！会逗我了是吧？来啊！",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 589
+        }
+      ],
+      "stageDirections": []
+    },
+    "E04": {
+      "title": "兼修路线 · 第六场",
+      "sourceSceneId": "E04",
+      "sourceLine": 591,
+      "lines": [
+        {
+          "id": "E04-01",
+          "speaker": "senti",
+          "text": "你今天可真能折腾。一路换招，连我都猜不出你到底想走哪一套。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 593
+        },
+        {
+          "id": "E04-02",
+          "speaker": "fuhua",
+          "text": "每一种都有可取之处。实在没有必要现在就定下来。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 595
+        },
+        {
+          "id": "E04-03",
+          "speaker": "senti",
+          "text": "说得好！我造这个地方，也没打算只让大家练同一种招。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 597
+        },
+        {
+          "id": "E04-04",
+          "speaker": "fuhua",
+          "text": "那最后一场，我们都随意些？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 599
+        },
+        {
+          "id": "E04-05",
+          "speaker": "senti",
+          "text": "正合我意。今天谁都不用照着旧规矩来！",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 601
+        }
+      ],
+      "stageDirections": []
+    },
+    "F01": {
+      "title": "进攻路线 · 先迈一步",
+      "sourceSceneId": "F01",
+      "sourceLine": 609,
+      "lines": [
+        {
+          "id": "F01-01",
+          "speaker": "senti",
+          "text": "停！好了好了，这场你赢。最后那一下你也太干脆了吧！",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 613
+        },
+        {
+          "id": "F01-02",
+          "speaker": "fuhua",
+          "text": "你明明还有退路，却没有退。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 615
+        },
+        {
+          "id": "F01-03",
+          "speaker": "senti",
+          "text": "难得跟你打得这么痛快，我凭什么退？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 617
+        },
+        {
+          "id": "F01-04",
+          "speaker": "fuhua",
+          "text": "原来如此。我也是。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 619
+        },
+        {
+          "id": "F01-05",
+          "speaker": "senti",
+          "text": "……你今天真有点不一样。我原本还以为，你会像平时一样，处处想着怎么打才最稳。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 621
+        },
+        {
+          "id": "F01-06",
+          "speaker": "fuhua",
+          "text": "你这里没有非赢不可的理由。反倒让我想试试，先走一步是什么感觉。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 623
+        },
+        {
+          "id": "F01-07",
+          "speaker": "senti",
+          "text": "怎么样？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 625
+        },
+        {
+          "id": "F01-08",
+          "speaker": "fuhua",
+          "text": "很好。下次还想再试。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 627
+        },
+        {
+          "id": "F01-09",
+          "speaker": "senti",
+          "text": "哈！这可是你自己说的。走，带你看样东西。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 629
+        }
+      ],
+      "stageDirections": [
+        {
+          "beforeLine": 0,
+          "text": "（最后一击停在小识面前。小识后退两步，仰面坐到台阶上。）",
+          "sourceLine": 611
+        }
+      ]
+    },
+    "F02": {
+      "title": "守势路线 · 等到的是你",
+      "sourceSceneId": "F02",
+      "sourceLine": 631,
+      "lines": [
+        {
+          "id": "F02-01",
+          "speaker": "senti",
+          "text": "我服了！我藏到最后的那一下，你居然也没上当。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 635
+        },
+        {
+          "id": "F02-02",
+          "speaker": "fuhua",
+          "text": "你前面故意空了一拍。我知道后面还有变化。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 637
+        },
+        {
+          "id": "F02-03",
+          "speaker": "senti",
+          "text": "所以就一直等？不怕我趁机抢上来？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 639
+        },
+        {
+          "id": "F02-04",
+          "speaker": "fuhua",
+          "text": "如果是幻身，我不敢这样。但和你交手，我知道你不会只停在那里。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 641
+        },
+        {
+          "id": "F02-05",
+          "speaker": "senti",
+          "text": "……这话听着怎么比夸我厉害还好听。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 643
+        },
+        {
+          "id": "F02-06",
+          "speaker": "fuhua",
+          "text": "因为我确实在看你，不只是看那些招式。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 645
+        },
+        {
+          "id": "F02-07",
+          "speaker": "senti",
+          "text": "行行行！再说我可要得意了。今天的账先记着，下次我还会想新招。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 647
+        },
+        {
+          "id": "F02-08",
+          "speaker": "fuhua",
+          "text": "我等着。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 649
+        },
+        {
+          "id": "F02-09",
+          "speaker": "senti",
+          "text": "那先跟我来。我还留了个东西没给你看呢。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 651
+        }
+      ],
+      "stageDirections": [
+        {
+          "beforeLine": 0,
+          "text": "（小识的一击被化开。两人各退半步，小识先举手认输。）",
+          "sourceLine": 633
+        }
+      ]
+    },
+    "F03": {
+      "title": "流转路线 · 不必照旧走",
+      "sourceSceneId": "F03",
+      "sourceLine": 653,
+      "lines": [
+        {
+          "id": "F03-01",
+          "speaker": "senti",
+          "text": "你怎么老往我没想到的地方跑？最后那条路，我自己都没怎么用过！",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 657
+        },
+        {
+          "id": "F03-02",
+          "speaker": "fuhua",
+          "text": "是你修出来的。我只是走了一遍。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 659
+        },
+        {
+          "id": "F03-03",
+          "speaker": "senti",
+          "text": "可我原本是想让你从正面过来。那边不是更像以前的路吗？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 661
+        },
+        {
+          "id": "F03-04",
+          "speaker": "fuhua",
+          "text": "像以前的路，不代表今天还要从那里走。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 663
+        },
+        {
+          "id": "F03-05",
+          "speaker": "senti",
+          "text": "……也对。是我自己把路修岔的。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 665
+        },
+        {
+          "id": "F03-06",
+          "speaker": "fuhua",
+          "text": "而且那边的景色很好。你不是很想让人看看吗？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 667
+        },
+        {
+          "id": "F03-07",
+          "speaker": "senti",
+          "text": "当然想！那以后就别只顾着打。下次来，我带你把后山也走一遍。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 669
+        },
+        {
+          "id": "F03-08",
+          "speaker": "fuhua",
+          "text": "好。今天先把你的正事办完。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 671
+        },
+        {
+          "id": "F03-09",
+          "speaker": "senti",
+          "text": "差点忘了！牌匾还没揭呢，走！",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 673
+        }
+      ],
+      "stageDirections": [
+        {
+          "beforeLine": 0,
+          "text": "（最后一招擦肩而过。小识站在新的岔路口，回头看向符华。）",
+          "sourceLine": 655
+        }
+      ]
+    },
+    "F04": {
+      "title": "兼修路线 · 没有标准答案",
+      "sourceSceneId": "F04",
+      "sourceLine": 675,
+      "lines": [
+        {
+          "id": "F04-01",
+          "speaker": "senti",
+          "text": "好啊！你最后连自己前一招都不照着打，我还怎么猜？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 679
+        },
+        {
+          "id": "F04-02",
+          "speaker": "fuhua",
+          "text": "我本来也没预先决定。看到你转身，便换了一个办法。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 681
+        },
+        {
+          "id": "F04-03",
+          "speaker": "senti",
+          "text": "原来如此。难怪你今天每回都不一样。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 683
+        },
+        {
+          "id": "F04-04",
+          "speaker": "fuhua",
+          "text": "你给的选择够多，才有这么多变化。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 685
+        },
+        {
+          "id": "F04-05",
+          "speaker": "senti",
+          "text": "其实我一开始还有点担心。照着太虚山搭了个样子，又把好多地方改得不像。怕你看了会不高兴。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 687
+        },
+        {
+          "id": "F04-06",
+          "speaker": "fuhua",
+          "text": "为什么？这里本来就该按你的想法来。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 689
+        },
+        {
+          "id": "F04-07",
+          "speaker": "senti",
+          "text": "……你这话，比说我打得好听多了。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 691
+        },
+        {
+          "id": "F04-08",
+          "speaker": "fuhua",
+          "text": "不过你最后那一招，也打得很好。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 693
+        },
+        {
+          "id": "F04-09",
+          "speaker": "senti",
+          "text": "哈！那我就把这两句都记下。来，该看我的牌匾了。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 695
+        }
+      ],
+      "stageDirections": [
+        {
+          "beforeLine": 0,
+          "text": "（最后一轮交手中，符华临时收招变向。小识扑空，索性大笑起来。）",
+          "sourceLine": 677
+        }
+      ]
+    },
+    "G01": {
+      "title": "第 1—5 场失败 · 共通开头",
+      "sourceSceneId": "G01",
+      "sourceLine": 703,
+      "lines": [
+        {
+          "id": "G01-01",
+          "speaker": "senti",
+          "text": "停！别急着起。刚才那下可不轻。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 707
+        },
+        {
+          "id": "G01-02",
+          "speaker": "fuhua",
+          "text": "我没事。只是没想到它会接那一招。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 709
+        },
+        {
+          "id": "G01-03",
+          "speaker": "senti",
+          "text": "我就说没你想得那么简单吧。要不要先缓缓？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 711
+        }
+      ],
+      "stageDirections": [
+        {
+          "beforeLine": 0,
+          "text": "（幻身收招退开，演武场上的光稍稍暗下来。）",
+          "sourceLine": 705
+        }
+      ]
+    },
+    "G02": {
+      "title": "第 6 场失败 · 共通开头",
+      "sourceSceneId": "G02",
+      "sourceLine": 713,
+      "lines": [
+        {
+          "id": "G02-01",
+          "speaker": "senti",
+          "text": "哈！这回轮到我赢了！",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 717
+        },
+        {
+          "id": "G02-02",
+          "speaker": "fuhua",
+          "text": "打得好。最后那一下，我确实没防住。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 719
+        },
+        {
+          "id": "G02-03",
+          "speaker": "senti",
+          "text": "那当然。我又不是那几只只会照着设定走的幻身。怎么样，再来一场？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 721
+        }
+      ],
+      "stageDirections": [
+        {
+          "beforeLine": 0,
+          "text": "（小识收住最后一击，后退一步，得意地叉腰。）",
+          "sourceLine": 715
+        }
+      ]
+    },
+    "G03": {
+      "title": "进攻路线 · 失败后文",
+      "sourceSceneId": "G03",
+      "sourceLine": 723,
+      "lines": [
+        {
+          "id": "G03-01",
+          "speaker": "fuhua",
+          "text": "刚才只想着往前，没留意脚下的位置。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 725
+        },
+        {
+          "id": "G03-02",
+          "speaker": "senti",
+          "text": "要我说，冲得没错，问题是你那一下冲过头了。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 727
+        },
+        {
+          "id": "G03-03",
+          "speaker": "fuhua",
+          "text": "嗯。下次得早半步停下来。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 729
+        },
+        {
+          "id": "G03-04",
+          "speaker": "senti",
+          "text": "对嘛！可别输了就不敢出手。先喝口水，再想怎么赢回来。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 731
+        },
+        {
+          "id": "G03-05",
+          "speaker": "fuhua",
+          "text": "听起来，你比我还想再打一场。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 733
+        },
+        {
+          "id": "G03-06",
+          "speaker": "senti",
+          "text": "那是。今天的好戏还没演完呢。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 735
+        }
+      ],
+      "stageDirections": []
+    },
+    "G04": {
+      "title": "守势路线 · 失败后文",
+      "sourceSceneId": "G04",
+      "sourceLine": 737,
+      "lines": [
+        {
+          "id": "G04-01",
+          "speaker": "fuhua",
+          "text": "我以为它的招已经使完了，结果还有后手。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 739
+        },
+        {
+          "id": "G04-02",
+          "speaker": "senti",
+          "text": "谁让你只顾着等。等太久，对手可就先想好下一招了。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 741
+        },
+        {
+          "id": "G04-03",
+          "speaker": "fuhua",
+          "text": "看来不能只看破绽，也要看时机。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 743
+        },
+        {
+          "id": "G04-04",
+          "speaker": "senti",
+          "text": "这话才对。要不要我把刚才那招再演一遍？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 745
+        },
+        {
+          "id": "G04-05",
+          "speaker": "fuhua",
+          "text": "不用。我大概记住了。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 747
+        },
+        {
+          "id": "G04-06",
+          "speaker": "senti",
+          "text": "好，那等你准备好了，咱们接着来。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 749
+        }
+      ],
+      "stageDirections": []
+    },
+    "G05": {
+      "title": "流转路线 · 失败后文",
+      "sourceSceneId": "G05",
+      "sourceLine": 751,
+      "lines": [
+        {
+          "id": "G05-01",
+          "speaker": "fuhua",
+          "text": "刚才选错了落脚点。那边看着宽，其实没地方再退。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 753
+        },
+        {
+          "id": "G05-02",
+          "speaker": "senti",
+          "text": "哎，这个我倒真得记一笔。那块石头摆得有点碍事。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 755
+        },
+        {
+          "id": "G05-03",
+          "speaker": "fuhua",
+          "text": "不全是场地的问题。是我太习惯往那边走。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 757
+        },
+        {
+          "id": "G05-04",
+          "speaker": "senti",
+          "text": "那就换一条！我这儿别的没有，路还多得是。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 759
+        },
+        {
+          "id": "G05-05",
+          "speaker": "fuhua",
+          "text": "嗯。下一回走另一边。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 761
+        },
+        {
+          "id": "G05-06",
+          "speaker": "senti",
+          "text": "我可会在另一边等着哦。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 763
+        }
+      ],
+      "stageDirections": []
+    },
+    "G06": {
+      "title": "兼修路线 · 失败后文",
+      "sourceSceneId": "G06",
+      "sourceLine": 765,
+      "lines": [
+        {
+          "id": "G06-01",
+          "speaker": "fuhua",
+          "text": "刚才想换招，又临时犹豫，反倒慢了。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 767
+        },
+        {
+          "id": "G06-02",
+          "speaker": "senti",
+          "text": "招式太多的时候，就容易想着哪一个才最合适。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 769
+        },
+        {
+          "id": "G06-03",
+          "speaker": "fuhua",
+          "text": "可刚才那个瞬间，根本来不及逐个比较。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 771
+        },
+        {
+          "id": "G06-04",
+          "speaker": "senti",
+          "text": "那就先打出去再说。这里又不是只能试一次。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 773
+        },
+        {
+          "id": "G06-05",
+          "speaker": "fuhua",
+          "text": "有道理。下一局，我不必照搬这一局的选法。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 775
+        },
+        {
+          "id": "G06-06",
+          "speaker": "senti",
+          "text": "就是嘛！不然我费心准备这么多种变化干什么？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 777
+        }
+      ],
+      "stageDirections": []
+    },
+    "H01": {
+      "title": "备用过场 · 招式之外",
+      "sourceSceneId": "H01",
+      "sourceLine": 785,
+      "lines": [
+        {
+          "id": "H01-01",
+          "speaker": "fuhua",
+          "text": "仔细看，这座山和我最初以为的很不一样。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 787
+        },
+        {
+          "id": "H01-02",
+          "speaker": "senti",
+          "text": "那就对了。我只是借了个你熟悉的门口，里面都是我自己想的。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 789
+        },
+        {
+          "id": "H01-03",
+          "speaker": "fuhua",
+          "text": "难怪走起来有些陌生。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 791
+        },
+        {
+          "id": "H01-04",
+          "speaker": "senti",
+          "text": "陌生才好玩。等打完，我带你好好逛一圈。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 793
+        }
+      ],
+      "stageDirections": []
+    },
+    "H02": {
+      "title": "备用过场 · 胜负之间",
+      "sourceSceneId": "H02",
+      "sourceLine": 795,
+      "lines": [
+        {
+          "id": "H02-01",
+          "speaker": "senti",
+          "text": "还剩两场！怎么样，我搭的演武场够不够意思？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 797
+        },
+        {
+          "id": "H02-02",
+          "speaker": "fuhua",
+          "text": "比刚进来时有趣。还发现了几条想再试的路线。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 799
+        },
+        {
+          "id": "H02-03",
+          "speaker": "senti",
+          "text": "这话听着顺耳。后面的更好玩，别急着下结论。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 801
+        },
+        {
+          "id": "H02-04",
+          "speaker": "fuhua",
+          "text": "好。我留着打完再说。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 803
+        }
+      ],
+      "stageDirections": []
+    },
+    "H03": {
+      "title": "备用独立决战 · 共通开头",
+      "sourceSceneId": "H03",
+      "sourceLine": 805,
+      "lines": [
+        {
+          "id": "H03-01",
+          "speaker": "senti",
+          "text": "那几个都下去！前面的热身到此为止。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 809
+        },
+        {
+          "id": "H03-02",
+          "speaker": "fuhua",
+          "text": "终于要和你亲自交手了。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 811
+        },
+        {
+          "id": "H03-03",
+          "speaker": "senti",
+          "text": "怎么，等得不耐烦了？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 813
+        },
+        {
+          "id": "H03-04",
+          "speaker": "fuhua",
+          "text": "有一点。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 815
+        },
+        {
+          "id": "H03-05",
+          "speaker": "senti",
+          "text": "哈！好，那就让我看看你今天学会了什么。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 817
+        }
+      ],
+      "stageDirections": []
+    },
+    "H04": {
+      "title": "备用开场收尾",
+      "sourceSceneId": "H04",
+      "sourceLine": 819,
+      "lines": [
+        {
+          "id": "H04-01",
+          "speaker": "senti",
+          "text": "规矩还没想好？那就按平常的来。先打一轮，觉得哪儿有意思，再回来挑。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 821
+        }
+      ],
+      "stageDirections": []
+    },
+    "I00": {
+      "title": "牌匾之下",
+      "sourceSceneId": "I00",
+      "sourceLine": 827,
+      "lines": [
+        {
+          "id": "I00-01",
+          "speaker": "senti",
+          "text": "到了！来来来，站这边。这个角度看最好。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 832
+        },
+        {
+          "id": "I00-02",
+          "speaker": "fuhua",
+          "text": "终于肯揭开了？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 834
+        },
+        {
+          "id": "I00-03",
+          "speaker": "senti",
+          "text": "当然。今天你可是打完六场的人，总得让你第一个看见。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 836
+        },
+        {
+          "id": "I00-04",
+          "speaker": "narrator",
+          "text": "（小识扯下蒙布。牌匾上刻着四个字：「识境演武」。字写得张扬，边缘有些不太整齐。牌匾下方另挂着一块空白的小木牌。）",
+          "kind": "narration",
+          "displayName": "",
+          "sourceLine": 838
+        },
+        {
+          "id": "I00-05",
+          "speaker": "fuhua",
+          "text": "识境演武……很好听。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 840
+        },
+        {
+          "id": "I00-06",
+          "speaker": "senti",
+          "text": "是吧！我想了好些名字。什么“天下第一演武场”啊，“识律大人无敌擂台”啊……",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 842
+        },
+        {
+          "id": "I00-07",
+          "speaker": "fuhua",
+          "text": "那为什么没用？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 844
+        },
+        {
+          "id": "I00-08",
+          "speaker": "senti",
+          "text": "……念出来太长。再说，万一以后人一多，门口站着全在念我的名字，也挺费事。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 846
+        },
+        {
+          "id": "I00-09",
+          "speaker": "fuhua",
+          "text": "原来你也考虑过这些。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 848
+        },
+        {
+          "id": "I00-10",
+          "speaker": "senti",
+          "text": "少拿我打趣！你看下面那块。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 850
+        },
+        {
+          "id": "I00-11",
+          "speaker": "fuhua",
+          "text": "空白的？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 852
+        },
+        {
+          "id": "I00-12",
+          "speaker": "senti",
+          "text": "我留给第一位通关的人。原本想刻个名字，再写上一长串夸奖我的话。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 854
+        },
+        {
+          "id": "I00-13",
+          "speaker": "fuhua",
+          "text": "原本？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 856
+        },
+        {
+          "id": "I00-14",
+          "speaker": "senti",
+          "text": "后来想想，还是让来的人自己写吧。万一人家玩得不痛快，我总不能逼着她夸。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 858
+        },
+        {
+          "id": "I00-15",
+          "speaker": "fuhua",
+          "text": "小识。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 860
+        },
+        {
+          "id": "I00-16",
+          "speaker": "senti",
+          "text": "干嘛？先说好，字数不能太多，这牌子没你想得那么大。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 862
+        },
+        {
+          "id": "I00-17",
+          "speaker": "fuhua",
+          "text": "我想写——「还没打够。下次再来。」",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 864
+        },
+        {
+          "id": "I00-18",
+          "speaker": "narrator",
+          "text": "（小识怔了一下。）",
+          "kind": "narration",
+          "displayName": "",
+          "sourceLine": 866
+        },
+        {
+          "id": "I00-19",
+          "speaker": "senti",
+          "text": "就这个？不写什么招式心得、改进建议？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 868
+        },
+        {
+          "id": "I00-20",
+          "speaker": "fuhua",
+          "text": "那些我会另外告诉你。这是留给以后来玩的人的，不是吗？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 870
+        },
+        {
+          "id": "I00-21",
+          "speaker": "senti",
+          "text": "……是。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 872
+        },
+        {
+          "id": "I00-22",
+          "speaker": "fuhua",
+          "text": "那就让他们知道，这地方值得再来一次。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 874
+        },
+        {
+          "id": "I00-23",
+          "speaker": "narrator",
+          "text": "（小识背过身，在木牌上划了几下。刻好的字一笔一画亮起来。）",
+          "kind": "narration",
+          "displayName": "",
+          "sourceLine": 876
+        },
+        {
+          "id": "I00-24",
+          "speaker": "senti",
+          "text": "好了！第一位试招者，符华。留言——「还没打够。下次再来。」",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 878
+        },
+        {
+          "id": "I00-25",
+          "speaker": "fuhua",
+          "text": "最后还加了我的名字？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 880
+        },
+        {
+          "id": "I00-26",
+          "speaker": "senti",
+          "text": "那当然。第一位怎么能不留名？而且以后你想赖账也赖不掉。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 882
+        },
+        {
+          "id": "I00-27",
+          "speaker": "fuhua",
+          "text": "我既然说了，就会来。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 884
+        },
+        {
+          "id": "I00-28",
+          "speaker": "senti",
+          "text": "行。那这回，我就不怕没人来玩了。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 886
+        },
+        {
+          "id": "I00-29",
+          "speaker": "fuhua",
+          "text": "你还打算继续修那条没走完的路吗？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 888
+        },
+        {
+          "id": "I00-30",
+          "speaker": "senti",
+          "text": "当然要修。但先不急。等下回，你帮我看看往哪儿拐。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 890
+        },
+        {
+          "id": "I00-31",
+          "speaker": "fuhua",
+          "text": "好。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 892
+        },
+        {
+          "id": "I00-32",
+          "speaker": "narrator",
+          "text": "（两人走下石阶。小识回头看了一眼自己的牌匾，随即快步追上符华。）",
+          "kind": "narration",
+          "displayName": "",
+          "sourceLine": 894
+        },
+        {
+          "id": "I00-33",
+          "speaker": "senti",
+          "text": "对了！再不走，面馆真要关门了！",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 896
+        },
+        {
+          "id": "I00-34",
+          "speaker": "fuhua",
+          "text": "你不是说，今天没有急事？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 898
+        },
+        {
+          "id": "I00-35",
+          "speaker": "senti",
+          "text": "练武没急事，吃饭可不能耽误！快走！",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 900
+        }
+      ],
+      "stageDirections": [
+        {
+          "beforeLine": 0,
+          "text": "场景：识境入口。五道幻身都已散去。门前的布还盖在牌匾上，小识一路走得很快。",
+          "sourceLine": 830
+        }
+      ]
+    },
+    "I01": {
+      "title": "离开识境 · 公共开头",
+      "sourceSceneId": "I01",
+      "sourceLine": 902,
+      "lines": [
+        {
+          "id": "I01-01",
+          "speaker": "senti",
+          "text": "看，就那家。没骗你吧？招牌虽然旧，客人可不少。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 906
+        },
+        {
+          "id": "I01-02",
+          "speaker": "fuhua",
+          "text": "闻到了。汤底应该熬了很久。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 908
+        },
+        {
+          "id": "I01-03",
+          "speaker": "senti",
+          "text": "你连这个都闻得出来？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 910
+        },
+        {
+          "id": "I01-04",
+          "speaker": "fuhua",
+          "text": "大概。以前做过类似的。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 912
+        },
+        {
+          "id": "I01-05",
+          "speaker": "senti",
+          "text": "那正好，待会儿让你点评。演武场已经点评了一路，这回换个地方。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 914
+        },
+        {
+          "id": "I01-06",
+          "speaker": "fuhua",
+          "text": "你确定要听？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 916
+        },
+        {
+          "id": "I01-07",
+          "speaker": "senti",
+          "text": "……算了，先吃。评价可以边吃边说。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 918
+        },
+        {
+          "id": "I01-08",
+          "speaker": "senti",
+          "text": "两碗云吞面！一碗多加云吞。你要不要也多加？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 922
+        },
+        {
+          "id": "I01-09",
+          "speaker": "fuhua",
+          "text": "普通的就好。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 924
+        },
+        {
+          "id": "I01-10",
+          "speaker": "senti",
+          "text": "那再来一份小菜。今天我请客，不许跟我抢。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 926
+        },
+        {
+          "id": "I01-11",
+          "speaker": "fuhua",
+          "text": "好。今天就听你的。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 928
+        },
+        {
+          "id": "I01-12",
+          "speaker": "senti",
+          "text": "……你答应得这么快，我反倒有点不习惯。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 930
+        }
+      ],
+      "stageDirections": [
+        {
+          "beforeLine": 0,
+          "text": "场景：现实。天色渐暗，街灯亮起。两人沿街走向一间不大的面馆，门口的招牌有些旧。",
+          "sourceLine": 904
+        },
+        {
+          "beforeLine": 7,
+          "text": "（两人入座。小识抬手向老板示意。）",
+          "sourceLine": 920
+        }
+      ]
+    },
+    "I01-P": {
+      "title": "进攻路线 · 坐下后",
+      "sourceSceneId": "I01-P",
+      "sourceLine": 932,
+      "lines": [
+        {
+          "id": "I01-P01",
+          "speaker": "senti",
+          "text": "对了。今天最后一场，你最后那一下是早就想好的吗？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 934
+        },
+        {
+          "id": "I01-P02",
+          "speaker": "fuhua",
+          "text": "没有。看到你没退，我就想再往前试一步。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 936
+        },
+        {
+          "id": "I01-P03",
+          "speaker": "senti",
+          "text": "这要是换成平时，你八成会先停下来看看。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 938
+        },
+        {
+          "id": "I01-P04",
+          "speaker": "fuhua",
+          "text": "这里毕竟是你造的。偶尔打得痛快些，也不用顾虑太多。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 940
+        },
+        {
+          "id": "I01-P05",
+          "speaker": "senti",
+          "text": "哼，那下次我可得让你打得更痛快。至于能不能赢，就另说了。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 942
+        }
+      ],
+      "stageDirections": []
+    },
+    "I01-S": {
+      "title": "守势路线 · 坐下后",
+      "sourceSceneId": "I01-S",
+      "sourceLine": 944,
+      "lines": [
+        {
+          "id": "I01-S01",
+          "speaker": "senti",
+          "text": "我现在想起来，你最后有一下明明能追上来，怎么停了？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 946
+        },
+        {
+          "id": "I01-S02",
+          "speaker": "fuhua",
+          "text": "因为你还没打完。我想看看你接下来怎么变。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 948
+        },
+        {
+          "id": "I01-S03",
+          "speaker": "senti",
+          "text": "万一我下一招就把你打倒呢？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 950
+        },
+        {
+          "id": "I01-S04",
+          "speaker": "fuhua",
+          "text": "那就算你赢。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 952
+        },
+        {
+          "id": "I01-S05",
+          "speaker": "senti",
+          "text": "……你说得倒轻松。下次我可真不会客气。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 954
+        },
+        {
+          "id": "I01-S06",
+          "speaker": "fuhua",
+          "text": "今天你也没有客气。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 956
+        }
+      ],
+      "stageDirections": []
+    },
+    "I01-M": {
+      "title": "流转路线 · 坐下后",
+      "sourceSceneId": "I01-M",
+      "sourceLine": 958,
+      "lines": [
+        {
+          "id": "I01-M01",
+          "speaker": "senti",
+          "text": "我已经想好了！后山那条岔路，等下次可以接一座桥。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 960
+        },
+        {
+          "id": "I01-M02",
+          "speaker": "fuhua",
+          "text": "通往哪里？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 962
+        },
+        {
+          "id": "I01-M03",
+          "speaker": "senti",
+          "text": "还不知道。反正先架起来，总能想出要去的地方。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 964
+        },
+        {
+          "id": "I01-M04",
+          "speaker": "fuhua",
+          "text": "这倒很像你的做法。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 966
+        },
+        {
+          "id": "I01-M05",
+          "speaker": "senti",
+          "text": "怎么？不行啊？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 968
+        },
+        {
+          "id": "I01-M06",
+          "speaker": "fuhua",
+          "text": "没有。我很期待。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 970
+        }
+      ],
+      "stageDirections": []
+    },
+    "I01-H": {
+      "title": "兼修路线 · 坐下后",
+      "sourceSceneId": "I01-H",
+      "sourceLine": 972,
+      "lines": [
+        {
+          "id": "I01-H01",
+          "speaker": "senti",
+          "text": "今天你把几套打法混着用，我又想到两个新强化。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 974
+        },
+        {
+          "id": "I01-H02",
+          "speaker": "fuhua",
+          "text": "先别急着加。原本的组合，我们还有不少没试过。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 976
+        },
+        {
+          "id": "I01-H03",
+          "speaker": "senti",
+          "text": "那要试到什么时候？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 978
+        },
+        {
+          "id": "I01-H04",
+          "speaker": "fuhua",
+          "text": "不用一次试完。反正你还会继续改。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 980
+        },
+        {
+          "id": "I01-H05",
+          "speaker": "senti",
+          "text": "……也是。那就留几个给下次。总不能头一天把好玩的都用完。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 982
+        }
+      ],
+      "stageDirections": []
+    },
+    "I01_CONT": {
+      "title": "公共续段 · 等面",
+      "sourceSceneId": "I01",
+      "sourceLine": 984,
+      "lines": [
+        {
+          "id": "I01-13",
+          "speaker": "narrator",
+          "text": "（老板去下面。屋里传来汤勺碰到锅边的轻响。）",
+          "kind": "narration",
+          "displayName": "",
+          "sourceLine": 986
+        },
+        {
+          "id": "I01-14",
+          "speaker": "senti",
+          "text": "怎么样？现在还觉得我的演武场哪里不像太虚山吗？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 988
+        },
+        {
+          "id": "I01-15",
+          "speaker": "fuhua",
+          "text": "有很多地方都不像。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 990
+        },
+        {
+          "id": "I01-16",
+          "speaker": "senti",
+          "text": "喂！我可没问你有多少毛病！",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 992
+        },
+        {
+          "id": "I01-17",
+          "speaker": "fuhua",
+          "text": "我的意思是，那不是坏事。走在里面的时候，我渐渐觉得，它已经是另一座山了。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 994
+        },
+        {
+          "id": "I01-18",
+          "speaker": "senti",
+          "text": "……本来就是。只是门口借了个样子而已。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 996
+        },
+        {
+          "id": "I01-19",
+          "speaker": "fuhua",
+          "text": "我知道。你做得很好。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 998
+        },
+        {
+          "id": "I01-20",
+          "speaker": "senti",
+          "text": "行了行了，今天夸的够多了。我怕再听几句，待会儿连云吞都要吃不下。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 1000
+        },
+        {
+          "id": "I01-21",
+          "speaker": "fuhua",
+          "text": "那还是先吃饭。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 1002
+        },
+        {
+          "id": "I01-22",
+          "speaker": "senti",
+          "text": "对！吃饭最重要。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 1004
+        }
+      ],
+      "stageDirections": []
+    },
+    "I02": {
+      "title": "一碗云吞面 · 程立雪",
+      "sourceSceneId": "I02",
+      "sourceLine": 1006,
+      "lines": [
+        {
+          "id": "I02-01",
+          "speaker": "senti",
+          "text": "来了来了！先喝口汤。闻着就不错。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 1010
+        },
+        {
+          "id": "I02-02",
+          "speaker": "narrator",
+          "text": "（符华拿起筷子，又停下。汤里飘着一小片葱花。）",
+          "kind": "narration",
+          "displayName": "",
+          "sourceLine": 1012
+        },
+        {
+          "id": "I02-03",
+          "speaker": "fuhua_thought",
+          "text": "……有些年没闻到这样的味道了。",
+          "kind": "thought",
+          "displayName": "符华（心想）",
+          "sourceLine": 1014
+        },
+        {
+          "id": "I02-04",
+          "speaker": "lixue",
+          "text": "师父，这碗是给我的？",
+          "kind": "dialogue",
+          "displayName": "程立雪",
+          "sourceLine": 1018
+        },
+        {
+          "id": "I02-05",
+          "speaker": "fuhua",
+          "text": "嗯。小心烫。坐下吃吧。",
+          "kind": "memory",
+          "displayName": "符华（回忆）",
+          "sourceLine": 1020
+        },
+        {
+          "id": "I02-06",
+          "speaker": "lixue",
+          "text": "那您呢？",
+          "kind": "dialogue",
+          "displayName": "程立雪",
+          "sourceLine": 1022
+        },
+        {
+          "id": "I02-07",
+          "speaker": "fuhua",
+          "text": "我还有些事。你先吃。",
+          "kind": "memory",
+          "displayName": "符华（回忆）",
+          "sourceLine": 1024
+        },
+        {
+          "id": "I02-08",
+          "speaker": "lixue",
+          "text": "……我等您一起。",
+          "kind": "dialogue",
+          "displayName": "程立雪",
+          "sourceLine": 1026
+        },
+        {
+          "id": "I02-09",
+          "speaker": "senti",
+          "text": "喂？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 1030
+        },
+        {
+          "id": "I02-10",
+          "speaker": "fuhua",
+          "text": "……嗯？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 1032
+        },
+        {
+          "id": "I02-11",
+          "speaker": "senti",
+          "text": "你盯着那碗看半天了。怎么，不喜欢？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 1034
+        },
+        {
+          "id": "I02-12",
+          "speaker": "fuhua",
+          "text": "不是。只是想起以前的事。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 1036
+        },
+        {
+          "id": "I02-13",
+          "speaker": "senti",
+          "text": "跟云吞面有关？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 1038
+        },
+        {
+          "id": "I02-14",
+          "speaker": "fuhua",
+          "text": "嗯。我以前给立雪做过。她那时总忙，难得有时间坐下来好好吃一顿。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 1040
+        },
+        {
+          "id": "I02-15",
+          "speaker": "narrator",
+          "text": "（小识看看她，又低头看看自己的碗。）",
+          "kind": "narration",
+          "displayName": "",
+          "sourceLine": 1042
+        },
+        {
+          "id": "I02-16",
+          "speaker": "senti",
+          "text": "你做的应该比这家清淡吧？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 1044
+        },
+        {
+          "id": "I02-17",
+          "speaker": "fuhua",
+          "text": "是。汤没有这么浓，也没放这么多配料。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 1046
+        },
+        {
+          "id": "I02-18",
+          "speaker": "senti",
+          "text": "那她喜欢吗？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 1048
+        },
+        {
+          "id": "I02-19",
+          "speaker": "fuhua",
+          "text": "喜欢。每次都说好吃。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 1050
+        },
+        {
+          "id": "I02-20",
+          "speaker": "narrator",
+          "text": "（符华微微一笑，停了一下。）",
+          "kind": "narration",
+          "displayName": "",
+          "sourceLine": 1052
+        },
+        {
+          "id": "I02-21",
+          "speaker": "fuhua",
+          "text": "那时总觉得，往后还有很多机会，想做的话，随时都能做。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 1054
+        },
+        {
+          "id": "I02-22",
+          "speaker": "narrator",
+          "text": "（小识没有立刻接话，只把面前的小菜往符华那边推了推。）",
+          "kind": "narration",
+          "displayName": "",
+          "sourceLine": 1056
+        },
+        {
+          "id": "I02-23",
+          "speaker": "senti",
+          "text": "……先尝尝这个吧。我刚才吃了一口，还不错。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 1058
+        },
+        {
+          "id": "I02-24",
+          "speaker": "fuhua",
+          "text": "好。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 1060
+        },
+        {
+          "id": "I02-25",
+          "speaker": "senti",
+          "text": "对了，既然你会做，下次也做一碗给我尝尝？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 1064
+        },
+        {
+          "id": "I02-26",
+          "speaker": "fuhua",
+          "text": "很久没做了，可能会有些生疏。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 1066
+        },
+        {
+          "id": "I02-27",
+          "speaker": "senti",
+          "text": "那有什么。你不是最擅长练回来吗？第一碗要是不好吃，我就等第二碗。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 1068
+        },
+        {
+          "id": "I02-28",
+          "speaker": "fuhua",
+          "text": "你倒一点也不客气。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 1070
+        },
+        {
+          "id": "I02-29",
+          "speaker": "senti",
+          "text": "嘿嘿，跟你客气做什么。再说，我今天不也请你吃了吗？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 1072
+        },
+        {
+          "id": "I02-30",
+          "speaker": "fuhua",
+          "text": "也是。那就说好了。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 1074
+        },
+        {
+          "id": "I02-31",
+          "speaker": "senti",
+          "text": "说好了！不过今天这碗也得吃完。你试试云吞，我觉得馅比汤还好。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 1076
+        },
+        {
+          "id": "I02-32",
+          "speaker": "narrator",
+          "text": "（符华夹起一只云吞，细细尝了尝。）",
+          "kind": "narration",
+          "displayName": "",
+          "sourceLine": 1078
+        },
+        {
+          "id": "I02-33",
+          "speaker": "fuhua",
+          "text": "嗯。确实很好。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 1080
+        },
+        {
+          "id": "I02-34",
+          "speaker": "senti",
+          "text": "是吧！我选的地方果然没错。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 1082
+        },
+        {
+          "id": "I02-35",
+          "speaker": "fuhua",
+          "text": "谢谢你带我来。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 1084
+        },
+        {
+          "id": "I02-36",
+          "speaker": "senti",
+          "text": "一顿面而已，谢什么。倒是你，今天说了多少次“下次”，自己数过没有？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 1086
+        },
+        {
+          "id": "I02-37",
+          "speaker": "fuhua",
+          "text": "没有。不过我会记得。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 1088
+        },
+        {
+          "id": "I02-38",
+          "speaker": "senti",
+          "text": "那就好。下回先去演武场，还是先来吃面？",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 1090
+        },
+        {
+          "id": "I02-39",
+          "speaker": "fuhua",
+          "text": "你不是说，吃饱了再打会慢一些？",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 1092
+        },
+        {
+          "id": "I02-40",
+          "speaker": "senti",
+          "text": "对哦。那还是打完再来。",
+          "kind": "dialogue",
+          "displayName": "小识",
+          "sourceLine": 1094
+        },
+        {
+          "id": "I02-41",
+          "speaker": "fuhua",
+          "text": "好。听你的。",
+          "kind": "dialogue",
+          "displayName": "符华",
+          "sourceLine": 1096
+        },
+        {
+          "id": "I02-42",
+          "speaker": "narrator",
+          "text": "（小识满意地低头吃面。符华又喝了一口汤，神情平静下来。）",
+          "kind": "narration",
+          "displayName": "",
+          "sourceLine": 1098
+        }
+      ],
+      "stageDirections": [
+        {
+          "beforeLine": 0,
+          "text": "场景：面馆。老板端来两碗面。碗沿的热气模糊了对面小识的脸。",
+          "sourceLine": 1008
+        },
+        {
+          "beforeLine": 3,
+          "text": "（短暂闪回。旧时的一间厨房。炉火很小，窗外天色已深。年少的程立雪捧着一只白瓷碗。）",
+          "sourceLine": 1016
+        },
+        {
+          "beforeLine": 8,
+          "text": "（闪回很短。炉火与店里的灯光叠在一起，随后消失。符华的筷子仍停在碗边。）",
+          "sourceLine": 1028
+        },
+        {
+          "beforeLine": 24,
+          "text": "（两人安静地吃了一会儿。店里人声渐起。小识突然抬头。）",
+          "sourceLine": 1062
+        },
+        {
+          "beforeLine": 42,
+          "text": "（镜头短暂切回识境。刻着「识境演武」的牌匾下，第一位试招者的留言清晰可见——「还没打够。下次再来。」远处那条尚未修完的石阶尽头，亮着一盏灯。）",
+          "sourceLine": 1100
+        },
+        {
+          "beforeLine": 42,
+          "text": "（画面淡出。通关。）",
+          "sourceLine": 1102
+        }
+      ]
+    }
+  }
+}

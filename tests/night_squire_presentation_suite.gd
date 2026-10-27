@@ -159,31 +159,16 @@ func _effect_contract() -> void:
 func _text_rows(lines: Array) -> Array:
 	return lines.map(func(line):return [str(line.speaker),str(line.text)])
 func _approved_dialogue_contract() -> void:
-	var baseline: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://build/dialogue-editing/user-integrated.json"))
-	check(baseline.revision==Dialogue.REVISION and baseline.lineCount==188,"dialogue still uses the user's approved 188-line edition")
-	for section: Dictionary in baseline.sections:
-		var source: String=section.source
-		var parts:=source.split(".")
-		var actual: Array=[]
-		var route_ids: Array={"press":["fist"],"guard":["reflection"],"flow":["flow"],"balanced":[]}.get(parts[-1],[])
-		if parts[0] in ["card","combination","turn"]:
-			var table: Dictionary={"card":Dialogue.CARDS,"combination":Dialogue.COMBINATIONS,"turn":Dialogue.TURNS}[parts[0]]
-			actual=table[parts[1]].map(func(row):return [str(row[0]),str(row[1])])
-		elif source=="intro.first.common": actual=_text_rows(Story.lines("intro").slice(0,-1))
-		elif source=="intro.repeat.common": actual=_text_rows(Story.lines("intro",{"runNumber":2}).slice(0,-1))
-		elif source.begins_with("intro.contract."): actual=_text_rows([Story.lines("intro",{"contractId":parts[-1]})[-1]])
-		elif parts[0]=="final_exchange": actual=_text_rows(Story._final_exchange(parts[1]))
-		elif parts[0]=="victory": actual=_text_rows(Story.lines("victory",{"rewardIds":route_ids}))
-		elif parts[0]=="defeat":
-			if parts[-1]=="prefix": actual=_text_rows([Story.lines("defeat",{"stageIndex":5 if parts[1]=="boss" else 0})[0]])
-			else:
-				route_ids={"press":["fist"],"guard":["reflection"],"flow":["flow"],"balanced":[]}[parts[1]]
-				actual=_text_rows(Story.lines("defeat",{"rewardIds":route_ids}).slice(1))
-		elif source=="compatibility.final.prefix": actual=_text_rows(Story.lines("final").slice(0,2))
-		elif parts[0]=="compatibility": actual=_text_rows(Story.lines(parts[1]))
-		check(actual==_text_rows(section.lines),"user-approved dialogue is unchanged: "+str(section.id))
-		approved_line_count+=section.lines.size()
-	check(approved_line_count==188,"all approved dialogue lines were compared, not just the opening")
+	var baseline: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://scripts/data/sentience_story_scenes.json"))
+	check(baseline.revision == Dialogue.REVISION, "accepted dialogue revision matches the imported manuscript")
+	for section_id: String in baseline.scenes:
+		var section: Dictionary = baseline.scenes[section_id]
+		var actual: Array = Dialogue.scene_lines(section_id).filter(func(row): return str(row.get("kind", "")) != "direction")
+		var wanted: Array = section.lines.map(func(row): return [str(row.id), str(row.speaker), str(row.text), str(row.kind), str(row.displayName)])
+		var received: Array = actual.map(func(row): return [str(row.id), str(row.speaker), str(row.text), str(row.kind), str(row.displayName)])
+		check(received == wanted, "all source IDs, speakers and words remain unchanged: " + section_id)
+		approved_line_count += section.lines.size()
+	check(approved_line_count == int(baseline.counts.lines), "all approved manuscript rows compared, including the epilogue")
 
 func _step(world,seconds: float) -> void:
 	var elapsed:=0.0
@@ -197,6 +182,7 @@ func _main_contract() -> void:
 	world.process_mode=Node.PROCESS_MODE_DISABLED
 	world.campaign=VolatileCampaign.new()
 	world.music._player.free()
+	world.music._previous_player.free()
 	world.music.free()
 	world.music=QuietMusic.new()
 	root.add_child(world)
@@ -206,7 +192,7 @@ func _main_contract() -> void:
 	for style: String in STYLE_IDS:
 		world._action("select_style:"+style)
 		world._process(0.0)
-		check(world._roster_snapshot().styles.map(func(item):return str(item.id))==STYLE_IDS,"normal menu retains exactly all three armor choices: "+style)
+		check(world._roster_snapshot().styles.map(func(item):return str(item.id))==Roster.list_styles().map(func(item):return str(item.id)),"normal menu retains every registered armor choice: "+style)
 		check(world.fighter.styleId==style and world.game.player_profile==style and world.player._profile.combatProfile==style,"menu selection keeps model and combat identity synchronized: "+style)
 		world._action("start")
 		check(world.story.active and _text_rows(world.story.lines)==_text_rows(Story.lines("intro",world.campaign.snapshot(world.game.snapshot()))),"selected armor retains approved story on ordinary start: "+style)

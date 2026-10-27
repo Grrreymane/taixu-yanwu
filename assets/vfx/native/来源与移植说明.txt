@@ -3,7 +3,7 @@
 本目录 PNG 为本机崩坏3客户端对应 Texture2D 的解码原图，未重绘。
 source-manifest.json 保留每张图的源包、CAB、PathID、源字节和PNG SHA256。
 Sphere002-source.json 保存原始网格及 Sphere001 形变数据；Sphere002-morph.res
-由 tests/import-native-sphere.gd 转换，镜像 X、反转索引以匹配导出 OBJ。
+由 tools/asset-builders/import-native-sphere.gd 转换，镜像 X、反转索引以匹配导出 OBJ。
 scripts/native_sphere_motion.gd 的位置、旋转、缩放、形变值来自
 Fx_FukaC5_Ultra_Sphere_01，原 30fps、1.1666666 秒动画。
 

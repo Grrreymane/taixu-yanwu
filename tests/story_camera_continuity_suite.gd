@@ -1,4 +1,5 @@
 extends "res://tests/story_flow_suite.gd"
+const Dialogue = preload("res://scripts/sentience_dialogue.gd")
 ## Real Main, real dialogue actors, real camera application; no render/GPU run.
 ## Preferences, campaign records and music are isolated from the user's files.
 
@@ -28,6 +29,7 @@ func _run() -> void:
  world.process_mode=Node.PROCESS_MODE_DISABLED
  world.campaign=VolatileCampaign.new()
  world.music._player.free()
+ world.music._previous_player.free()
  world.music.free()
  world.music=QuietMusic.new()
  viewport.add_child(world)
@@ -126,7 +128,8 @@ func _all_lines(world) -> void:
  var before_native:=_pose(world.story.actors.senti)
  var default_faces:=_all_faces(world)
  var iterations:=0
- while world.story.active and iterations<30:
+ var click_budget: int=world.story.lines.size()*2+2
+ while world.story.active and iterations<click_budget:
   _frames(world,7,1.0/60.0)
   check(world.camera.transform.is_equal_approx(camera) and world.camera.fov==fov,_case_label+" source clip time does not move the dialogue camera")
   _native_contract(world)
@@ -138,7 +141,7 @@ func _all_lines(world) -> void:
     check(_face_values(actor)==default_faces[identity],_case_label+" "+identity+" source-default face has no synthetic speech or blink animation")
   _click_without_time(world)
   iterations+=1
- check(not world.story.active and iterations<30,_case_label+" all actual dialogue lines complete normally")
+ check(not world.story.active and iterations<click_budget,_case_label+" all actual dialogue lines complete normally")
  check(world.game.time==simulation and world.stage_countdown==countdown,_case_label+" dialogue clicks do not advance battle or countdown")
  check(_pose(world.story.actors.senti)!=before_native,_case_label+" fixed framing still plays the original full-body animation")
  # Open the same real scene to test focused/frozen presentation separately.
@@ -180,7 +183,7 @@ func _all_faces(world) -> Dictionary:
 
 func _native_contract(world) -> void:
  var state: Dictionary=world.story.snapshot()
- check(state.revision=="user-dialogue-1",_case_label+" approved dialogue text revision remains unchanged")
+ check(state.revision==Dialogue.REVISION,_case_label+" approved dialogue text revision remains unchanged")
  for identity: String in ["fuhua","senti"]:
   var performance: Dictionary=state.performance.get(identity,{})
   check(performance.get("mode","")=="native_full_clip",_case_label+" "+identity+" uses a full native clip")

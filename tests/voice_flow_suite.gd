@@ -136,6 +136,7 @@ func run() -> void:
 	world.process_mode = Node.PROCESS_MODE_DISABLED
 	world.campaign = VolatileCampaign.new()
 	world.music._player.free()
+	world.music._previous_player.free()
 	world.music.free()
 	world.music = MusicSpy.new()
 	world.voice.free()
@@ -178,50 +179,50 @@ func _menu_toggle_contract() -> void:
 	world.hud.close_fighter_guide()
 	check(world.voice.enabled and world.music.enabled == music_enabled, "voice restored independently before play")
 
+func _next_story_line() -> void:
+	if not world.story.revealed: world._action("story_next")
+	world._action("story_next")
+	step(0.0)
+
 func _dialogue_contract() -> void:
 	world._action("start")
-	check(world.story.active and world.voice.requests.is_empty(), "start initializes story before its first presented frame")
+	check(world.story.active and world.voice.requests.is_empty(), "start initializes story without automatic speech")
 	step(0.0)
-	check(world.voice.requests.size() == 1 and world.voice.played.size() == 1, "first story line is dispatched at its first frame")
+	check(str(world.story.lines[world.story.index].kind) == "direction", "new opening presents the authored setting before spoken dialogue")
+	check(world.voice.requests.is_empty() and world.voice.played.is_empty(), "stage directions never borrow a character voice")
 	check(world.voice.context.storyActive and world.voice.context.playerProfile == "azure_empyrea", "dialogue receives current story and armor context")
-	var first: Dictionary = world.voice.requests[-1]
-	check(first.speaker == "fuhua" and first.profile == "azure_empyrea" and first.emotion == "question", "real opening question selects Fu Hua question metadata")
-	check(world.music.voice_duck, "active voice asks music to duck without toggling it")
-	var initial_text: String = world.story.lines[0].text
+	_next_story_line()
+	var first_index: int = world.story.index
+	var initial_text: String = world.story.lines[first_index].text
+	check(str(world.story.lines[first_index].speaker) == "fuhua", "first character line keeps the source Fu Hua identity")
+	check(world.voice.requests.is_empty() and not world.music.voice_duck, "unreviewed original text stays silent and does not duck music")
 	world._action("story_next")
 	step(0.2)
-	check(world.story.revealed and world.story.index == 0 and world.voice.requests.size() == 1, "revealing full text never repeats its voice")
-	world._action("story_next")
-	step(0.0)
-	check(world.story.index == 1 and world.voice.requests.size() == 2, "next actual line dispatches one new cue")
-	check(world.voice.requests[-1].speaker == "senti" and world.voice.requests[-1].profile == "sentience", "Senti does not borrow the selected Fu Hua voice")
-	var old_requests: int = world.voice.requests.size()
-	var old_played: int = world.voice.played.size()
+	check(world.story.revealed and world.story.index == first_index and world.voice.requests.is_empty(), "revealing full text cannot fabricate a vocal prefix")
+	_next_story_line()
+	check(str(world.story.lines[world.story.index].speaker) == "senti" and world.voice.requests.is_empty(), "Senti dialogue also remains silent without a reviewed clip")
 	key(KEY_V)
-	world._action("story_next")
-	world._action("story_next")
-	step(0.0)
-	check(world.voice.requests.size() == old_requests + 1 and world.voice.played.size() == old_played, "muted new line is consumed without playback")
+	_next_story_line()
+	check(not world.voice.enabled and world.voice.requests.is_empty() and world.voice.played.is_empty(), "muted dialogue advancement does not dispatch voice")
 	key(KEY_V)
 	step(0.1)
-	check(world.voice.requests.size() == old_requests + 1 and world.voice.played.size() == old_played, "unmuting does not retroactively speak a consumed line")
+	check(world.voice.enabled and world.voice.requests.is_empty(), "unmuting never adds a missing vocal prefix retroactively")
 	world.simulate_focus(false)
-	world._action("story_next")
-	world._action("story_next")
+	_next_story_line()
 	step(0.1)
-	check(not world.voice.focused and not world.music.focused and world.voice.requests.size() == old_requests + 1, "unfocused new line is not consumed or played")
+	check(not world.voice.focused and not world.music.focused and world.voice.requests.is_empty(), "unfocused source dialogue never consumes or plays audio")
 	world.simulate_focus(true)
 	step(0.0)
-	check(world.voice.focused and world.voice.requests.size() == old_requests + 2, "new line starts when its story regains focus")
-	check(world.story.lines[0].text == initial_text, "voice routing leaves actual story text untouched")
+	check(world.voice.focused and world.voice.requests.is_empty(), "focus return preserves the no-automatic-dialogue-audio policy")
+	check(world.story.lines[first_index].text == initial_text, "voice routing leaves actual story text untouched")
 	var stops: int = world.voice.stops
 	world._action("story_skip")
-	check(not world.story.active and world.voice.stops == stops + 1 and not world.voice.playing, "skip stops old dialogue immediately")
+	check(not world.story.active and world.voice.stops == stops + 1 and not world.voice.playing, "skip explicitly stops any old dialogue channel")
 	step(0.0)
-	check(not world.music.voice_duck, "music returns from duck after dialogue stops")
+	check(not world.music.voice_duck, "music is not ducked after dialogue stops")
 	world._begin_story("intro")
 	step(0.0)
-	check(world.voice.requests[-1].lineKey != first.lineKey, "restarting the same dialogue yields a fresh audio key")
+	check(world.voice.requests.is_empty(), "reopening a scene does not assign a voice to stage directions")
 	world._action("menu")
 	check(world.campaign.phase == "menu" and not world.story.active and not world.voice.playing, "returning to menu clears story and active voice")
 	var clear_count: int = world.voice.clears.size()
@@ -231,15 +232,10 @@ func _dialogue_contract() -> void:
 	world._action("select_appearance:autumn_leaves")
 	world._action("start")
 	step(0.0)
-	# A repeat run opens with Senti; advance through actual dialogue to the
-	# first Fu Hua line instead of assuming the first-run speaker ordering.
-	while world.story.active and str(world.story.lines[world.story.index].speaker) != "fuhua":
-		if not world.story.revealed: world._action("story_next")
-		world._action("story_next")
-		step(0.0)
-	check(world.voice.requests[-1].profile == "night_squire", "Autumn Leaves shares White Night dialogue identity")
+	while world.story.active and str(world.story.lines[world.story.index].speaker) != "fuhua": _next_story_line()
+	check(world.story.active and world.voice.context.playerProfile == "night_squire" and world.voice.requests.is_empty(), "Autumn Leaves preserves Fu Hua identity without automatic vocal prefixes")
 	world._action("menu")
-	observations.append({"dialogueRequests":world.voice.requests.size(), "playedDialogueRequests":world.voice.played.size(), "revealsDoNotRepeat":true, "silenceDoesNotReplayOldLine":true})
+	observations.append({"dialogueRequests":world.voice.requests.size(), "playedDialogueRequests":world.voice.played.size(), "policy":"reviewed_exact_line_only", "silenceDoesNotReplayOldLine":true})
 
 func _combat_contract() -> void:
 	world._action("practice")
@@ -296,29 +292,13 @@ func _combat_contract() -> void:
 	observations.append({"incomingHit":hit.data, "hitstopVoiceDelta":0.05, "resetClears":world.voice.clears.duplicate()})
 
 func _approved_text_contract() -> void:
-	var baseline: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://build/dialogue-editing/user-integrated.json"))
-	check(baseline.revision == Dialogue.REVISION and baseline.lineCount == 188, "voice integration uses the accepted dialogue revision")
-	for section: Dictionary in baseline.sections:
-		var source: String = section.source
-		var parts := source.split(".")
-		var actual: Array = []
-		var route_ids: Array = {"press":["fist"], "guard":["reflection"], "flow":["flow"], "balanced":[]}.get(parts[-1], [])
-		if parts[0] in ["card", "combination", "turn"]:
-			var table: Dictionary = {"card":Dialogue.CARDS, "combination":Dialogue.COMBINATIONS, "turn":Dialogue.TURNS}[parts[0]]
-			actual = Story._rows(table[parts[1]])
-		elif source == "intro.first.common": actual = Story.lines("intro").slice(0, -1)
-		elif source == "intro.repeat.common": actual = Story.lines("intro", {"runNumber":2}).slice(0, -1)
-		elif source.begins_with("intro.contract."): actual = [Story.lines("intro", {"contractId":parts[-1]})[-1]]
-		elif parts[0] == "final_exchange": actual = Story._final_exchange(parts[1])
-		elif parts[0] == "victory": actual = Story.lines("victory", {"rewardIds":route_ids})
-		elif parts[0] == "defeat":
-			if parts[-1] == "prefix": actual = [Story.lines("defeat", {"stageIndex":5 if parts[1] == "boss" else 0})[0]]
-			else:
-				route_ids = {"press":["fist"], "guard":["reflection"], "flow":["flow"], "balanced":[]}[parts[1]]
-				actual = Story.lines("defeat", {"rewardIds":route_ids}).slice(1)
-		elif source == "compatibility.final.prefix": actual = Story.lines("final").slice(0, 2)
-		elif parts[0] == "compatibility": actual = Story.lines(parts[1])
-		var wanted: Array = section.lines.map(func(row: Dictionary): return [str(row.speaker), str(row.text)])
-		check(actual.map(func(row: Dictionary): return [str(row.speaker), str(row.text)]) == wanted, "accepted text remains unchanged: " + str(section.id))
+	var baseline: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://scripts/data/sentience_story_scenes.json"))
+	check(baseline.revision == Dialogue.REVISION, "accepted dialogue revision matches the imported manuscript")
+	for section_id: String in baseline.scenes:
+		var section: Dictionary = baseline.scenes[section_id]
+		var actual: Array = Dialogue.scene_lines(section_id).filter(func(row): return str(row.get("kind", "")) != "direction")
+		var wanted: Array = section.lines.map(func(row): return [str(row.id), str(row.speaker), str(row.text), str(row.kind), str(row.displayName)])
+		var received: Array = actual.map(func(row): return [str(row.id), str(row.speaker), str(row.text), str(row.kind), str(row.displayName)])
+		check(received == wanted, "all source IDs, speakers and words remain unchanged: " + section_id)
 		approved_count += section.lines.size()
-	check(approved_count == 188, "all 188 accepted lines verified after real Main flow")
+	check(approved_count == int(baseline.counts.lines), "every manuscript row verified after real Main flow")

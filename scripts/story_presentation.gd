@@ -5,6 +5,7 @@ const Actor = preload("res://scripts/actor.gd")
 const SentienceProfile = preload("res://scripts/sentience_profile.gd")
 const Story = preload("res://scripts/sentience_story.gd")
 const DialoguePerformance = preload("res://scripts/dialogue_performance.gd")
+const StoryBackdrop = preload("res://scripts/story_backdrop.gd")
 const FONT = preload("res://assets/fonts/hi3-sdk-zh-cn.ttf")
 var active := false
 var scene_id := ""
@@ -26,6 +27,9 @@ var _text := Label.new()
 var _progress := Label.new()
 var _next := Button.new()
 var _skip := Button.new()
+var _backdrop := StoryBackdrop.new()
+var _location_title := Label.new()
+var _location := "mountain"
 var _last_size := Vector2.ZERO
 var focused := true
 var _performance = DialoguePerformance.new()
@@ -35,6 +39,13 @@ func _ready() -> void:
 	add_child(_canvas)
 	_canvas.add_child(_ui)
 	_ui.mouse_filter=Control.MOUSE_FILTER_STOP
+	_ui.add_child(_backdrop)
+	_ui.add_child(_location_title)
+	_location_title.mouse_filter=Control.MOUSE_FILTER_IGNORE
+	_location_title.add_theme_font_override("font",FONT)
+	_location_title.add_theme_font_size_override("font_size",30)
+	_location_title.add_theme_color_override("font_color",Color("e8d6ae"))
+	_location_title.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	var top:=ColorRect.new()
 	top.name="TopShade"
 	top.color=Color(0.025,0.035,0.07,0.88)
@@ -58,6 +69,7 @@ func _ready() -> void:
 		label.add_theme_font_override("font",FONT)
 		label.add_theme_color_override("font_color",Color("f1ecf4"))
 	_chapter.add_theme_font_size_override("font_size",21)
+	_chapter.text_overrun_behavior=TextServer.OVERRUN_TRIM_ELLIPSIS
 	_speaker.add_theme_font_size_override("font_size",24)
 	_speaker.add_theme_color_override("font_color",Color("efb8d4"))
 	_text.add_theme_font_size_override("font_size",26)
@@ -126,12 +138,26 @@ func _refresh_line() -> void:
 	line_time=0.0
 	revealed=false
 	var line: Dictionary=lines[index]
-	_speaker.text="识之律者" if line.get("speaker","")=="senti" else "符华"
-	_speaker.add_theme_color_override("font_color",Color("efb8d4") if line.get("speaker","")=="senti" else Color("9adaed"))
+	var identity := str(line.get("speaker",""))
+	var kind := str(line.get("kind","dialogue"))
+	var default_name := str({"senti":"识之律者","fuhua":"符华","fuhua_thought":"符华（心想）","lixue":"程立雪","narrator":"旁白"}.get(identity,"旁白"))
+	_speaker.text=str(line.get("displayName",default_name))
+	if _speaker.text.is_empty(): _speaker.text=default_name
+	var tint := Color("efb8d4") if identity=="senti" else Color("9adaed")
+	if kind in ["narration","direction"]: tint=Color("c4c2bb")
+	elif identity=="lixue" or kind=="memory": tint=Color("e0c89b")
+	elif identity=="fuhua_thought": tint=Color("b1b8d5")
+	_speaker.add_theme_color_override("font_color",tint)
 	_text.text=str(line.get("text",""))
 	_text.visible_characters=0
-	var chapter_title:=str(meta.get("title","一场切磋"))
+	_text.add_theme_color_override("font_color",Color("d1cbc1") if kind in ["narration","direction"] else Color("f1ecf4"))
+	var chapter_title:=str(line.get("sceneTitle",meta.get("title","一场切磋")))
 	_chapter.text="识境演武  /  "+("小识与老古董" if chapter_title=="识境演武" else chapter_title)
+	_location=_line_location(line)
+	_backdrop.set_location(_location)
+	_location_title.text=str({"street":"暮色 · 街边","noodle_shop":"一碗云吞面","memory":"旧时 · 炉火","mountain":""}.get(_location,""))
+	_location_title.visible=_location!="mountain"
+	for actor in actors.values(): actor.visible=_location=="mountain"
 	_progress.text="%02d / %02d   ·   点击对话继续" % [index+1,lines.size()]
 	_next.text="继续  ENTER" if index<lines.size()-1 else "继续旅程  ENTER"
 	if scene_id=="reward":
@@ -140,6 +166,23 @@ func _refresh_line() -> void:
 			_next.text="与小识交手  ENTER" if bool(decision.get("finalChoice",false)) else "继续演武  ENTER"
 	elif scene_id=="victory" and index==lines.size()-1: _next.text="查看结算  ENTER"
 	elif scene_id=="defeat" and index==lines.size()-1: _next.text="查看战况  ENTER"
+	_layout()
+
+func _line_location(line: Dictionary) -> String:
+	var authored := str(line.get("presentationLocation",""))
+	if not authored.is_empty(): return authored
+	var source := str(line.get("sourceSceneId",""))
+	if source=="I02":
+		var kind := str(line.get("kind",""))
+		var identity := str(line.get("speaker",""))
+		if kind=="memory" or identity=="lixue" or str(line.get("text","")).begins_with("（短暂闪回"): return "memory"
+		if str(line.get("text","")).begins_with("（镜头短暂切回识境"): return "mountain"
+		return "noodle_shop"
+	if source.begins_with("I01"):
+		var id := str(line.get("lineId",line.get("id","")))
+		if source=="I01" and id.begins_with("I01-") and id.trim_prefix("I01-").is_valid_int() and int(id.trim_prefix("I01-"))<8: return "street"
+		return "noodle_shop"
+	return "mountain"
 
 func advance() -> void:
 	if not active: return
@@ -200,6 +243,8 @@ func snapshot() -> Dictionary:
 	var line: Dictionary=lines[index] if active and index<lines.size() else {}
 	return {"active":active,"scene":scene_id,"index":index,"total":lines.size(),"time":clock,"lineTime":line_time,
 		"speaker":line.get("speaker",""),"text":line.get("text",""),"revealed":revealed,"title":meta.get("title",""),"actors":actors.size(),"focused":focused,
+		"lineId":line.get("lineId",line.get("id","")),"sourceSceneId":line.get("sourceSceneId",""),"kind":line.get("kind","dialogue"),"displayName":_speaker.text,"location":_location,
+		"textHeight":_text.size.y,"textLineCount":_text.get_line_count(),"fontSize":_text.get_theme_font_size("font_size"),"textWidth":_text.size.x,
 		"choice":decision.duplicate(true),"branchId":str(decision.get("branchId","")),"revision":meta.get("revision",""),"performance":_performance.snapshot()}
 
 func _layout() -> void:
@@ -209,18 +254,26 @@ func _layout() -> void:
 	_ui.size=_last_size/factor
 	var w: float=_ui.size.x
 	var h: float=_ui.size.y
+	_backdrop.size=Vector2(w,h)
+	_location_title.position=Vector2(40,110)
+	_location_title.size=Vector2(w-80,45)
 	_ui.get_node("TopShade").size=Vector2(w,70)
 	_chapter.position=Vector2(40,22)
 	_chapter.size=Vector2(w-320,40)
 	_skip.position=Vector2(w-224,15)
 	_skip.size=Vector2(185,41)
-	_dialog.position=Vector2(40,h-226)
-	_dialog.size=Vector2(w-80,204)
+	var text_width := w-150.0
+	var measured_width := FONT.get_string_size(_text.text,HORIZONTAL_ALIGNMENT_LEFT,-1,26).x
+	var rows := ceili(measured_width/maxf(text_width,1.0))+1
+	var text_height := maxf(88.0,float(rows)*34.0)
+	var panel_height := text_height+116.0
+	_dialog.position=Vector2(40,h-panel_height-22)
+	_dialog.size=Vector2(w-80,panel_height)
 	_speaker.position=Vector2(30,15)
 	_speaker.size=Vector2(400,34)
 	_text.position=Vector2(30,60)
-	_text.size=Vector2(w-150,88)
-	_progress.position=Vector2(30,166)
+	_text.size=Vector2(text_width,text_height)
+	_progress.position=Vector2(30,panel_height-38)
 	_progress.size=Vector2(420,22)
 	_next.position=Vector2(w-269,h-68)
 	_next.size=Vector2(195,35)

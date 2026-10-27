@@ -1,0 +1,16 @@
+{
+  "type": "generated-story-backgrounds",
+  "method": "built-in image_gen",
+  "date": "2026-10-26",
+  "note": "New still backgrounds for the user's manuscript; not extracted or claimed to be original Honkai Impact 3 art. No character animation or likeness is generated.",
+  "assets": [
+    {
+      "path": "res://assets/story/noodle-shop.png",
+      "prompt": "Use case: illustration-story. Asset type: widescreen 16:9 visual-novel game background, no characters. A small lived-in Chinese wonton noodle shop at dusk, viewed from a seated guest at a wooden table. Two freshly served porcelain bowls of thin noodles and wontons with delicate steam, a small side dish, two pairs of chopsticks resting on holders, warm amber hanging light, old woodwork, blue evening visible through a window. High-quality hand-painted anime game background, restrained natural colors, delicate linework and soft light, believable perspective and lovingly observed textures, quiet intimate everyday atmosphere. Main table and bowls in the central middle third; bottom 28 percent should be low-detail dark table surface because a dialogue box overlays it; top 10 percent clear for game chapter bar. No people, no text, no typography, no logos, no UI, no dramatic fantasy effects. Not a photograph and not a flat vector graphic."
+    },
+    {
+      "path": "res://assets/story/memory-kitchen.png",
+      "prompt": "Use case: illustration-story. Asset type: widescreen 16:9 visual-novel memory background, no characters. A modest old Chinese kitchen at night in a martial arts household, quiet and empty: a single white porcelain bowl of wontons on a plain worn wooden table, faint steam, a small low charcoal stove flame in the background, dark wooden window with deep blue night outside, very sparse ordinary utensils. High-quality hand-painted anime game background, delicate linework, soft dim firelight and cool moonlight, slightly desaturated warm gray palette, intimate restrained memory, no tragedy spectacle. Bowl in the central middle third; bottom 28 percent simple dark tabletop or shadow for dialogue overlay, top 10 percent clear for chapter UI. No people, no portraits, no text, no logos, no modern electrical appliances, no UI, not photorealistic, not a flat vector graphic."
+    }
+  ]
+}

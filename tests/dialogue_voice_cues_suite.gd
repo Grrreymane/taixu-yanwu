@@ -97,41 +97,21 @@ func _once_per_line_contract() -> void:
 	state.active = true
 	check(not tracker.next(state).is_empty(), "return to same chapter after close can play again")
 
-func _actual_rows(section: Dictionary) -> Array:
-	var source: String = str(section.source)
-	var parts := source.split(".")
-	var route_ids: Array = {"press":["fist"], "guard":["reflection"], "flow":["flow"], "balanced":[]}.get(parts[-1], [])
-	if parts[0] in ["card", "combination", "turn"]:
-		var table: Dictionary = {"card":Dialogue.CARDS, "combination":Dialogue.COMBINATIONS, "turn":Dialogue.TURNS}[parts[0]]
-		return Story._rows(table[parts[1]])
-	if source == "intro.first.common": return Story.lines("intro").slice(0, -1)
-	if source == "intro.repeat.common": return Story.lines("intro", {"runNumber":2}).slice(0, -1)
-	if source.begins_with("intro.contract."): return [Story.lines("intro", {"contractId":parts[-1]})[-1]]
-	if parts[0] == "final_exchange": return Story._final_exchange(parts[1])
-	if parts[0] == "victory": return Story.lines("victory", {"rewardIds":route_ids})
-	if parts[0] == "defeat":
-		if parts[-1] == "prefix": return [Story.lines("defeat", {"stageIndex":5 if parts[1] == "boss" else 0})[0]]
-		route_ids = {"press":["fist"], "guard":["reflection"], "flow":["flow"], "balanced":[]}[parts[1]]
-		return Story.lines("defeat", {"rewardIds":route_ids}).slice(1)
-	if source == "compatibility.final.prefix": return Story.lines("final").slice(0, 2)
-	if parts[0] == "compatibility": return Story.lines(parts[1])
-	return []
-
 func _approved_text_contract() -> void:
-	var baseline: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://build/dialogue-editing/user-integrated.json"))
-	check(baseline.revision == Dialogue.REVISION and baseline.lineCount == 188, "accepted dialogue revision remains user-dialogue-1")
+	var baseline: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://scripts/data/sentience_story_scenes.json"))
+	check(baseline.revision == Dialogue.REVISION, "accepted dialogue revision matches the imported manuscript")
 	var tracker := Cues.new()
-	var seen_keys: Dictionary = {}
-	for section: Dictionary in baseline.sections:
-		var actual := _actual_rows(section)
-		var actual_text: Array = actual.map(func(row: Dictionary): return [str(row.speaker), str(row.text)])
-		var approved_text: Array = section.lines.map(func(row: Dictionary): return [str(row.speaker), str(row.text)])
-		check(actual_text == approved_text, "approved speakers and text unchanged: " + str(section.id))
+	for section_id: String in baseline.scenes:
+		var section: Dictionary = baseline.scenes[section_id]
+		var actual: Array = Dialogue.scene_lines(section_id).filter(func(row): return str(row.get("kind", "")) != "direction")
+		var wanted: Array = section.lines.map(func(row): return [str(row.id), str(row.speaker), str(row.text), str(row.kind), str(row.displayName)])
+		var received: Array = actual.map(func(row): return [str(row.id), str(row.speaker), str(row.text), str(row.kind), str(row.displayName)])
+		check(received == wanted, "all source IDs, speakers and words remain unchanged: " + section_id)
 		tracker.reset()
 		for index in actual.size():
 			var line: Dictionary = actual[index].duplicate(true)
 			var before := line.duplicate(true)
-			line.merge({"active":true, "scene":str(section.id), "index":index, "time":float(index), "revision":Dialogue.REVISION})
+			line.merge({"active":true, "scene":section_id, "index":index, "time":float(index), "revision":Dialogue.REVISION})
 			var cue: Dictionary = tracker.next(line)
 			check(cue.is_empty(), "approved text does not receive an automatic vocal prefix")
 			check(actual[index] == before, "automatic silence preserves exact approved text")
@@ -140,4 +120,4 @@ func _approved_text_contract() -> void:
 				check(styled.is_empty(), "all armor variants remain silent without explicit review")
 			check(tracker.next(line).is_empty(), "approved line can be polled again without replay")
 			approved_count += 1
-	check(approved_count == 188, "all 188 approved lines checked")
+	check(approved_count == int(baseline.counts.lines), "every approved manuscript row checked")

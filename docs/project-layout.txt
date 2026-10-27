@@ -1,0 +1,61 @@
+太虚演武 · 项目目录说明
+
+当前项目
+  fuhua-godot 是可独立运行的 Godot 项目，也是 GitHub 仓库根目录。
+  project.godot：编辑器入口。
+  启动网页试玩.cmd / start-web.ps1：启动本地网页。
+  重新导出网页.cmd / build-web.ps1：导入资源并重新生成网页版。
+
+游戏文件
+  scripts/：游戏运行脚本，包括战斗、关卡、角色与剧情。
+  shaders/：角色、场景与特效着色器。
+  assets/：已经接入游戏的角色、骨架、动作、贴图、声音和场景。
+  main.tscn：主场景。
+  server.mjs / web-shell.html：本地服务与网页外壳。
+  资源原路径和 .uid / .import 元数据保留，避免破坏模型、材质与动作引用。
+
+剧情文稿
+  docs/story/识境演武_剧情重写完整版.md：本轮用户提供的新版原稿。
+  docs/story/archive/：此前的对白修改稿与自然对白润色版。
+  docs/story/archive/workspace-copies/：整理前放在工作区根目录的原稿快照，包含两份旧稿与新版重写稿原件。
+  docs/dialogue-reference-notes.txt：早期对白参考与接入记录。
+  新旧原稿内容不改写；若修改剧情，请从当前稿开始，旧稿保留作对照。
+
+验证与开发工具
+  tests/*_suite.gd：游戏规则、资源完整性和表现行为测试，原有入口保留。
+  tests/model-normalization-baseline.json：模型尺寸测试基准输入，保留在测试目录。
+  tests/browser/*.cjs：浏览器实际操作检查，输出统一写入 build/。
+  tests/probes/：模型几何、动作姿态、镜头和原资产审计的诊断探针。
+  tools/diagnostics/：从运行目录分离出来的独立角色、眼睛、UI、特效检查。
+  tools/asset-builders/：音效生成和原球体特效资源转换工具，会写入指定 assets 文件。
+  tools/story/：剧情稿导入工具；import_story.py --check 可核对正文与生成数据。
+
+生成文件（本地保留，不提交 Git）
+  .godot/：Godot 自动生成的导入缓存与编辑器状态。
+  build/web/：可运行的网页成品。
+  build/reports/：测试与审计结果。
+  build/screenshots/：实机、探针和回归截图。
+  build/screenshots/legacy-captures/：原来散落在 tests/ 的旧截图及对应导入记录。
+  build/logs/legacy-captures/：原来散落在 tests/ 的旧截图日志。
+  build/reports/project-file-moves.json：此次整理的移动清单与原文件 SHA-256。
+
+工作区外层（<PROJECT_PARENT>）
+  启动符华-Godot网页试玩.cmd：保留原双击入口。
+  项目入口.txt：工作区导航。
+  hi3-fuhua-extract/、zzz-animation-extract/：原素材提取与处理记录。
+  tools/：本机编辑器、导出模板及提取辅助工具。
+  fuhua-demo/：迁移 Godot 前的旧版工程。
+  演示视频/：以前输出的演示片段。
+  各原模型目录及 Blender-miHoYo-Shaders-main/：保留原位，避免破坏提取脚本中的来源路径。
+
+常用命令（在仓库根目录执行）
+  Godot --headless --path . --script res://tests/combat_suite.gd
+  node tests/browser/wardrobe-grid-browser.cjs
+  Godot --headless --path . --script res://tests/probes/shadow_knight_arm_geometry_probe.gd
+  Godot --headless --path . --script res://tools/diagnostics/actor_check.gd
+
+Godot 命令需替换成已安装编辑器的命令或完整路径。
+部分原素材审计依赖本机提取目录；浏览器测试仍使用开发机已有 Playwright 路径。
+
+assets/story/：面馆与回忆静帧，source.json 保存内置图像生成方式及完整提示词。
+docs/archive/README-wardrobe-grid-1.md：归档的旧开发说明。

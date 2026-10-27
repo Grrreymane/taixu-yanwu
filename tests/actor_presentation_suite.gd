@@ -322,7 +322,8 @@ func _capture(hits: bool) -> void:
 	await process_frame
 	await process_frame
 	await RenderingServer.frame_post_draw
-	var path := "res://tests/actor-presentation-" + ("hits" if hits else "guard") + ".png"
+	DirAccess.make_dir_recursive_absolute("res://build/screenshots/actor-presentation")
+	var path := "res://build/screenshots/actor-presentation/actor-presentation-" + ("hits" if hits else "guard") + ".png"
 	var result := root.get_texture().get_image().save_png(path)
 	print("CAPTURE ", path, " result=", result)
 	stage.queue_free()

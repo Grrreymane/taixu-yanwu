@@ -48,6 +48,9 @@ func _pose(actor) -> Array:
 func _record(world) -> Dictionary:
  return {"totals":world.campaign.totals.duplicate(true),"stats":world.game.stats.duplicate(true),"saves":world.campaign.saves,"completions":world.campaign.completed_runs,"boons":world.campaign.boons.duplicate(),"best":world.campaign.best_score}
 func _finish(world,win: bool=true) -> void:
+ # Do not inflict a test hit before the normal pre-fight boss entrance ends.
+ if world.boss_entrance.pending and not world.story.active: world._process(0.01)
+ if world.boss_entrance.active: world._action("boss_skip")
  world.stage_countdown=0.0
  world.game.set_training(true)
  if win:
@@ -72,6 +75,7 @@ func _run() -> void:
   world.process_mode=Node.PROCESS_MODE_DISABLED
   world.campaign=VolatileCampaign.new()
   world.music._player.free()
+  world.music._previous_player.free()
   world.music.free()
   world.music=QuietMusic.new()
   root.add_child(world)
@@ -135,6 +139,7 @@ func _opening(world) -> void:
 
 func _full_trial(world) -> void:
  var plays: int=world.victory.plays
+ var saves_before: int=world.campaign.saves
  for stage in 6:
   check(world.campaign.stage_index==stage and not world.story.active,"fight starts at expected stage after story completion")
   _finish(world)
@@ -153,7 +158,7 @@ func _full_trial(world) -> void:
    check(_record(world)==saved,"story cannot lose, duplicate or replace the chosen reward")
    if stage==1:
     var advances:=0
-    while world.story.active and advances<12:
+    while world.story.active and advances<world.story.lines.size()*2+2:
      world._action("story_next")
      advances+=1
     check(not world.story.active and advances==world.story.lines.size()*2,"natural reveal/next sequence finishes once with no extra input")
@@ -167,7 +172,7 @@ func _full_trial(world) -> void:
    _frames(world,10)
    check(_record(world)==committed and world.story.active,"ended combat cannot commit score again while characters speak")
    world._action("story_skip")
-   check(world.victory.visible and world.victory.plays==plays+1 and world.campaign.saves==1,"skip begins exactly one MVP presentation after one progress save")
+   check(world.victory.visible and world.victory.plays==plays+1 and world.campaign.saves==saves_before+1,"skip begins exactly one MVP presentation after one additional progress save")
    _frames(world,12)
    world._action("story_skip")
    check(_record(world)==committed and world.victory.plays==plays+1,"late repeated skip cannot replay or rescore the victory")

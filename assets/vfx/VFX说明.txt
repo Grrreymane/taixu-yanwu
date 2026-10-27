@@ -23,5 +23,5 @@ telegraphColor=amber对应金色提示，red对应红色提示。
 资源上限与clear有独立检查；Compatibility原生GPU已验证shader编译。
 最终WebGL画面与整体战斗节奏仍由主工程网页验收。
 
-检查：Godot --headless --path 工程 --script res://assets/vfx/effects_check.gd
+检查：Godot --headless --path 工程 --script res://tools/diagnostics/effects_check.gd
 加 -- --render 可生成八种shader形状与粒子的校验图。

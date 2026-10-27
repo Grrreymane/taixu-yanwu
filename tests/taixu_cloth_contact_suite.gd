@@ -1,4 +1,4 @@
-extends "res://tests/skin_menu_triangle_audit.gd"
+extends "res://tests/probes/skin_menu_triangle_audit.gd"
 ## Skin real triangles on CPU: the bug was the original trousers penetrating
 ## the front coat panel, not a bone-tip/capsule overlap or an outline effect.
 var failures:Array[String]=[]

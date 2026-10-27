@@ -1,158 +1,86 @@
 extends RefCounted
-## Original fan scenes: naming the trial, a promised outing, and who will see it.
-## A history branch selects a whole exchange; it never tacks on a stock retort.
-const REVISION := "user-dialogue-1"
-const CARDS := {
- "fist":[
-  ["senti","哟，挑了这招？不行不行，「寸心」听着太像你的招式了，我得给它换个名字。","question"],
-  ["fuhua","你想换成什么？","question"],
-  ["senti","还没想好。反正得够响亮！最好人家刚听到名字，还没反应过来，就已经倒下了。","confident"],
-  ["fuhua","那名字还是短一点好。","calm"],
-  ["senti","对啊！……等等，你别光提意见，倒是帮我想一个呀，老古董。","confident"]],
- "iron":[
-  ["fuhua","这些幻身的防守各有特点。你都和它们交过手？","question"],
-  ["senti","那当然！不亲自试试，我怎么知道好不好打？你不会以为我随手捏几个出来就完事了吧？","confident"],
-  ["fuhua","难怪。刚才我挑招式的时候，你一直盯着看。","calm"],
-  ["senti","嘿，被你发现了。那就别客气，能破它们的架势就尽管破！我正想看看效果呢。","confident"]],
- "risk":[
-  ["senti","真要选这个？先说好啊，打人是更疼了，可你自己也没那么扛揍了。","serious"],
-  ["fuhua","我知道。我想看看，如果把更多余力放在进攻上，会有什么不同。","calm"],
-  ["senti","你平时跟人交手，也敢这么来？","question"],
-  ["fuhua","当然不会。但这里有你在，我可以放心试试。","calm"],
-  ["senti","……那倒是。行啊，来让我开开眼！","confident"]],
- "finisher":[
-  ["senti","连这招都挑了？啧，下次非得叫老古董二号来。就咱们两个，打得再漂亮也没人喝彩啊。","calm"],
-  ["fuhua","你是想让她记录招式？","question"],
-  ["senti","记什么招式！我是说观众，观众！这么精彩的场面，只有你一个人看，多浪费。","confident"],
-  ["fuhua","她应该会喜欢。出去以后，我们问问她吧。","calm"],
-  ["senti","好！等下次我赢了，就让她好好讲讲我的英勇事迹！","confident"]],
- "reflection":[
-  ["fuhua","这招能让我边防守边调息。那你呢？一直维持幻境，不累吗？","question"],
-  ["senti","这点小事能累着我？你还是先顾好自己吧，别打到最后，连跟我交手的力气都没了。","confident"],
-  ["fuhua","好。不过你要是想休息，随时可以说。今天不赶时间。","calm"],
-  ["senti","知道啦。我要是累了肯定会说。现在嘛……先让我看你打完这场！","calm"]],
- "riposte":[
-  ["fuhua","这些幻身都长得和你一样。换作不熟悉你的人，恐怕连最后一个是不是本尊都认不出来。","calm"],
-  ["senti","认不出来又怎样？先打得过再说！我可没打算让人靠认脸过关。","confident"],
-  ["fuhua","可万一你赢了，对方却以为赢的是幻身呢？","question"],
-  ["senti","……等等，那可不行！最后一场的是我，货真价实的我！这必须说清楚！","serious"]],
- "calm":[
-  ["fuhua","这里的风，也是你做出来的？","question"],
-  ["senti","怎么，吹着不像真的？","question"],
-  ["fuhua","很舒服。刚才安静下来，才注意到。等打完了，能不能让我在这里多待一会儿？","calm"],
-  ["senti","当然行。不过到时候得跟我走，可别凭着记忆乱认路。这儿又不是你以前那个太虚山。","confident"]],
- "breath":[
-  ["senti","哎，趁你休息，问你件事。出去以后想去哪儿？","question"],
-  ["fuhua","还没决定。你有安排？","question"],
-  ["senti","当然！找个热闹点的地方，吃顿好的，再四处逛逛。山看得还不够多吗？这次换点新鲜的。","confident"],
-  ["fuhua","好，听你的。今天我不安排了。","calm"],
-  ["senti","说好了啊！你先歇着，我琢磨琢磨去哪家。","confident"]],
- "flow":[
-  ["senti","这是想多放几次大招啊？尽管来！打坏了什么，我再变回来就是。","confident"],
-  ["fuhua","那我就放心了。平时练习还要顾着四周，像这样的地方，确实难得。","calm"],
-  ["senti","怎么，你还想带别人来？行啊！不过进了我的地盘，就得守我的规矩。","confident"],
-  ["fuhua","当然。我会先告诉大家，这里是谁的心血。","calm"],
-  ["senti","光说名字哪够！……算了，到时候我亲自介绍！","serious"]],
- "swift":[
-  ["senti","还想接着使这招？看来你今天也打上瘾了嘛。","teasing"],
-  ["fuhua","有几处衔接和我预想的不太一样。我想再试几次。","calm"],
-  ["senti","好啊。那以后我想找你切磋，就说新琢磨了几招。你是不是准会来？","question"],
-  ["fuhua","不用找借口。你想切磋，直接来找我就好。有空的话，我会陪你。","calm"],
-  ["senti","……这可是你说的啊！我记下了。","calm"]],
- "windstep":[
-  ["fuhua","这里比我记忆中的庭院宽敞。你没有完全照着太虚山布置？","question"],
-  ["senti","废话，照搬有什么意思？既然是我的演武场，当然得按我的想法来！","confident"],
-  ["fuhua","景色很熟悉，走起来却不太一样。打完之后，我想仔细看看。","calm"],
-  ["senti","行啊，我带你逛！不过先把眼前这场打完，我还等着呢。","confident"]],
- "reservoir":[
-  ["senti","这招也看上了？说起来，我还真想知道，换个人进来会怎么选。","question"],
-  ["fuhua","那以后找朋友们来试试吧。让她们亲自体验，比听我讲有意思。","calm"],
-  ["senti","来可以！不过别一进门就围着我问个不停啊。先打一轮，有问题打完再说！","serious"],
-  ["fuhua","怕她们问倒你？","question"],
-  ["senti","谁怕了！我是怕你们一聊起来就没完没了，正事全忘了！","confident"]]
-}
+## Verbatim imported manuscript. Scene selection belongs to SentienceStory.
+const REVISION := "story-rewrite-1"
+const DATA_PATH := "res://scripts/data/sentience_story_scenes.json"
+const CARD_SCENES := {
+ "fist":"B01","iron":"B02","risk":"B03","finisher":"B04",
+ "reflection":"B05","riposte":"B06","calm":"B07","breath":"B08",
+ "flow":"B09","swift":"B10","windstep":"B11","reservoir":"B12"}
+const COMBINATION_SCENES := {
+ "riposte":"C01","reflection":"C02","breath":"C03","risk":"C04",
+ "finisher":"C05","flow":"C06","swift":"C07","windstep":"C08"}
+const TURN_SCENES := {
+ "press_guard":"D01","press_flow":"D02","guard_press":"D03",
+ "guard_flow":"D04","flow_press":"D05","flow_guard":"D06"}
+static var _catalog: Dictionary = {}
 
-const COMBINATIONS := {
- "riposte":[
-  ["senti","先顾着调息，现在又想着反击？你倒是一点亏都不肯吃。","question"],
-  ["fuhua","总不能一直挨打，让你一个人尽兴。不过先说好，打完六场就结束，不许临时加赛。","calm"],
-  ["senti","知道啦！我还惦记着出去玩呢，谁要一直耗在这儿啊。","calm"],
-  ["fuhua","那好。这一场，我就专心陪你打。","calm"]],
- "reflection":[
-  ["senti","刚才还一门心思想着反击，这会儿终于舍得给自己留点余地了？","question"],
-  ["fuhua","总要留些力气。要是轮到你时我已经打不动了，你也会扫兴吧？","calm"],
-  ["senti","那倒是。我可不想赢了以后，还得跟前面那几个幻身分功劳。","serious"],
-  ["fuhua","放心。和你交手的那一场，我会认真打。","calm"]],
- "breath":[
-  ["senti","哎？刚才还舍了防守换威力，现在又选这招补回来。你是不是早就算好了？","question"],
-  ["fuhua","没有，只是觉得现在用得上。既然你把它放在这里，总不会不让我选吧？","calm"],
-  ["senti","谁说不让了！我就是好奇嘛。能想办法补回来，总比硬撑强。","confident"],
-  ["fuhua","嗯。那我先调整一下，待会儿继续。","calm"]],
- "risk":[
-  ["senti","前脚刚把状态养好，后脚又拿去拼伤害？老古董，你今天还真敢打啊。","question"],
-  ["fuhua","难得有这样一个地方。有你看着，我也想试些平常不会用的打法。","calm"],
-  ["senti","尽管试！不过等轮到我，可别指望我手下留情。","serious"],
-  ["fuhua","我正是想见识你的真本事。","calm"]],
- "finisher":[
-  ["senti","先挑攒气快的，再挑第三击也能回气的……你这是来切磋，还是想在这儿开武术表演啊？","teasing"],
-  ["fuhua","要是表演的话，观众似乎少了些。","calm"],
-  ["senti","就是说啊！早知道把老古董二号叫来。省得她天天听故事，这次让她看看真的！","confident"],
-  ["fuhua","下次叫她吧。今天先把我们的六场打完。","calm"]],
- "flow":[
-  ["fuhua","第三击能积蓄气力，再配上这一招……这两种效果，你原本就打算让人搭配使用？","question"],
-  ["senti","当然啦！不过我没想到，你这么快就发现了。本来还想找机会给你露一手呢。","calm"],
-  ["fuhua","那现在也不迟。我很期待。","calm"],
-  ["senti","……你答应得这么干脆，倒叫我不知道说什么了。行！那今天就让你看个够！","confident"]],
- "swift":[
-  ["senti","闪开了还能立刻接着打……老古董，跟你交手真是一刻也闲不下来！","calm"],
-  ["fuhua","你觉得麻烦？","question"],
-  ["senti","谁说麻烦了？我是想，下回有人来挑战，得先叫她们看看你怎么打。省得说我出的题太难。","confident"],
-  ["fuhua","可以。不过别忘了，你自己也要上场。","calm"],
-  ["senti","那还用说？最后的压轴当然得是我！","confident"]],
- "windstep":[
-  ["fuhua","闪避之后可以更快接招。难怪你把庭院留得这么宽。","calm"],
-  ["senti","这下明白了？总不能打着打着，连往哪儿躲都得问你吧。","confident"],
-  ["fuhua","也是。这里毕竟是你的地方。","calm"],
-  ["senti","知道就好！等打完再带你逛逛，有几个地方保准让你认不出来。","confident"]]
-}
+static func catalog() -> Dictionary:
+ if _catalog.is_empty():
+  var parsed: Variant=JSON.parse_string(FileAccess.get_file_as_string(DATA_PATH))
+  if parsed is Dictionary and parsed.get("revision","")==REVISION and parsed.get("scenes",{}) is Dictionary:
+   _catalog=parsed
+  else:
+   push_error("The approved story manuscript data is missing or invalid: "+DATA_PATH)
+ return _catalog.duplicate(true)
 
-# Switching emphasis moves the conversation to a different shared concern.
-# These scenes use only known choices, never pretend to know how a fight ended.
-const TURNS := {
- "press_guard":[
-  ["senti","你慢慢挑，我算算……打完下山，应该还赶得上吃饭。","calm"],
-  ["fuhua","不用急。吃过饭，我还想找个地方坐坐。","calm"],
-  ["senti","先说好！可不能拿一壶茶就把晚饭打发了。我连吃什么都想好了。","serious"],
-  ["fuhua","我说的是吃完饭以后，再一起坐一会儿。","calm"],
-  ["senti","……嗨，你早说嘛！行，不过得先陪我把那条街逛完。","confident"]],
- "press_flow":[
-  ["fuhua","以后要是有人问起这些招式，我该怎么介绍？","question"],
-  ["senti","就说是我专门为这场演武设计的！还有场地、幻身、规矩，一样都不能漏啊。","confident"],
-  ["fuhua","好。不过真有人来，还是你亲自介绍更合适。","calm"],
-  ["senti","怎么，嫌我讲得啰嗦？","question"],
-  ["fuhua","不是。看你讲这些的时候那么高兴，我不想抢你的话。","calm"]],
- "guard_press":[
-  ["senti","我决定了！以后这场演武，就叫「识之律者亲传」！怎么样，够气派吧？","confident"],
-  ["fuhua","场地是你布置的没错。但这些拳法的来历，还是要讲清楚。","calm"],
-  ["senti","哎呀，谁说拳法了？我是说这一整套！幻身、场地、规矩，哪样不是我弄的？","serious"],
-  ["fuhua","这样啊。那叫「识之律者演武」，怎么样？","calm"],
-  ["senti","唔……还行吧。不过总觉得差了点气势。容我再想想！","calm"]],
- "guard_flow":[
-  ["senti","哎，等出去了，今天去哪儿能不能听我的？","question"],
-  ["fuhua","好啊。你想去哪里？","question"],
-  ["senti","先卖个关子！反正有好吃的、好玩的，不用爬山，也不用陪你盯着石头看半天。","confident"],
-  ["fuhua","好。那今天我就跟着你走。","calm"],
-  ["senti","……真的？说话算数啊！待会儿可不许反悔。","confident"]],
- "flow_press":[
-  ["senti","我想到了！下次有人来看演武，就先让她们看你打。","confident"],
-  ["fuhua","为什么？","question"],
-  ["senti","我要是先上，她们肯定说我仗着幻境占便宜。你先打，她们总没话说了吧？","confident"],
-  ["fuhua","可以。但到时候，你也不能只讲自己赢的那几场。","calm"],
-  ["senti","……行行行！让她们亲眼看，我们当场分胜负，这总行了吧？","serious"]],
- "flow_guard":[
-  ["fuhua","等切磋结束，能带我在庭院里走走吗？我想再仔细看看。","question"],
-  ["senti","你不是已经看过了吗？","question"],
-  ["fuhua","刚才只顾着留意怎么进退。现在想来，很多地方都和记忆中不一样。","calm"],
-  ["senti","那当然！我又不是照着你的记忆一笔一画抄的。……行，等会儿带你看。","confident"],
-  ["fuhua","好。我也想听听你是怎么想到这些布置的。","calm"]]
-}
+static func _scenes() -> Dictionary:
+ if _catalog.is_empty(): catalog()
+ return _catalog.get("scenes",{})
+
+static func _location(scene_id: String, source_index: int) -> String:
+ if scene_id=="I01": return "street" if source_index<7 else "noodle_shop"
+ if scene_id.begins_with("I01"): return "noodle_shop"
+ if scene_id=="I02":
+  if source_index>=42: return "mountain"
+  if source_index>=3 and source_index<8: return "memory"
+  return "noodle_shop"
+ return "mountain"
+
+static func _decorate(source: Dictionary, scene_id: String, scene: Dictionary, source_index: int) -> Dictionary:
+ var line:=source.duplicate(true)
+ line["lineId"]=str(source.id)
+ line["sourceSceneId"]=scene_id
+ line["manuscriptSceneId"]=str(scene.get("sourceSceneId",scene_id))
+ line["sceneTitle"]=str(scene.get("title",scene_id))
+ line["presentationLocation"]=_location(scene_id,source_index)
+ line["audible"]=str(line.kind)=="dialogue" and str(line.speaker) in ["fuhua","senti"]
+ line["mood"]="calm"
+ line["expression"]="calm"
+ line["pose"]="idle"
+ line["portrait"]=str(line.speaker) if bool(line.audible) else ""
+ return line
+
+static func scene_lines(scene_id: String) -> Array:
+ var scenes:=_scenes()
+ if not scenes.has(scene_id): return []
+ var scene: Dictionary=scenes[scene_id]
+ var source_lines: Array=scene.get("lines",[])
+ var directions: Array=scene.get("stageDirections",[])
+ var result: Array=[]
+ for source_index: int in range(source_lines.size()+1):
+  for direction_index: int in directions.size():
+   var direction: Dictionary=directions[direction_index]
+   if int(direction.beforeLine)!=source_index: continue
+   var direction_line: Dictionary={"id":"%s-direction-%02d"%[scene_id,direction_index+1],
+    "speaker":"narrator","kind":"direction","displayName":"旁白",
+    "text":str(direction.text),"sourceLine":int(direction.sourceLine)}
+   result.append(_decorate(direction_line,scene_id,scene,source_index))
+  if source_index<source_lines.size(): result.append(_decorate(source_lines[source_index],scene_id,scene,source_index))
+ return result
+
+static func scene_title(scene_id: String) -> String:
+ return str(_scenes().get(scene_id,{}).get("title",scene_id))
+
+# Compatibility for inspection tools. Gameplay retains IDs and directions.
+static func _legacy_table(mapping: Dictionary) -> Dictionary:
+ var result: Dictionary={}
+ for key: String in mapping:
+  var rows: Array=[]
+  for line: Dictionary in scene_lines(str(mapping[key])):
+   if str(line.kind)=="dialogue": rows.append([line.speaker,line.text,line.mood])
+  result[key]=rows
+ return result
+
+static var CARDS: Dictionary = _legacy_table(CARD_SCENES)
+static var COMBINATIONS: Dictionary = _legacy_table(COMBINATION_SCENES)
+static var TURNS: Dictionary = _legacy_table(TURN_SCENES)

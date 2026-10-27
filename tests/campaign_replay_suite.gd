@@ -35,7 +35,7 @@ func _run() -> void:
  _story()
  _persistence()
  check(completed==["contracts","runs","rewards","retry","story","persistence"],"all six independent sections completed")
- check(evidence.runs.size()==36 and evidence.rewardEffects.size()==12 and evidence.storyCases==36,"all intended run, reward and dialogue cases executed")
+ check(evidence.runs.size()==36 and evidence.rewardEffects.size()==12 and evidence.storyCases==6*Story.SCENES.size(),"all intended run, reward and dialogue cases executed")
  check(recorder.errors.is_empty(),"no engine or nested script errors")
  var report: Dictionary={"suite":"campaign_replay","checks":checks,"passed":failures.is_empty(),"failures":failures,"errors":recorder.errors,"completed":completed,"evidence":evidence}
  DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path("res://build/reports"))
@@ -100,7 +100,7 @@ func _full_runs() -> void:
     campaign.encounter()
     campaign.finish(state)
     if qualified: goals+=1
-    check(is_equal_approx(campaign.carry.hp,80.0 if qualified else 72.0),"achievement grants HP only when won and goal achieved")
+    check(is_equal_approx(campaign.carry.hp,74.0 if qualified else 66.0),"six-HP clear supply adds eight more HP only when the goal is achieved")
     check(is_equal_approx(campaign.carry.energy,50.0 if qualified else 40.0),"achievement grants SP only when won and goal achieved")
     check(campaign.last_achievement.is_empty()!=qualified,"achievement notice agrees with actual award")
     var phase: String=campaign.phase
@@ -178,21 +178,21 @@ func _retry_and_practice() -> void:
 func _story() -> void:
  for route: String in Campaign.CONTRACTS:
   for run in [1,2]:
-   var context: Dictionary={"contractId":route,"runNumber":run,"runSeed":run}
+   var context: Dictionary={"contractId":route,"runNumber":run,"runSeed":run,"rewardIds":["fist"],"stageIndex":1}
    for scene: String in Story.SCENES:
     var lines: Array=Story.lines(scene,context)
-    check(lines.size()>=2 and lines.size()<=4,"each short scene has two to four lines")
+    check(lines.size()>=2,"each story sequence contains all approved manuscript lines")
     check(lines==Story.lines(scene,context),"story replay is deterministic")
     var actors: Dictionary={}
     for line: Dictionary in lines:
-     check(line.speaker in ["senti","fuhua"] and not str(line.text).is_empty() and line.text.length()<100,"dialogue uses supported portraits and concise actual text")
+     check(line.speaker in ["senti","fuhua","narrator","fuhua_thought","lixue"] and not str(line.text).is_empty(),"dialogue, inner thoughts and memory retain their authored speakers")
      check(line.mood in ["confident","tease","calm","serious","surprised"] and line.pose=="idle","dialogue presentation hints remain within supported safe poses")
      actors[line.speaker]=true
-    check(actors.size()==2 and Story.metadata(scene).skippable,"every scene is a skippable two-character exchange")
+    check(actors.has("fuhua") and actors.has("senti") and Story.metadata(scene).skippable,"every scene is skippable and includes the main pair")
     evidence.storyCases+=1
  check(Story.lines("missing").is_empty(),"unknown scene produces no blocking placeholder")
  check(Story.lines("intro",{"runNumber":1})!=Story.lines("intro",{"runNumber":2}),"repeat opening acknowledges another attempt")
- check(Story.lines("stage_2",{"contractId":"mirror"})!=Story.lines("stage_2",{"contractId":"flow"}),"midpoint banter responds to selected rule")
+ check(Story.lines("stage_2",{"contractId":"mirror"})==Story.lines("stage_2",{"contractId":"flow"}),"approved spare scene does not invent contract-dependent wording")
  completed.append("story")
 
 func _persistence() -> void:
@@ -215,6 +215,7 @@ func _persistence() -> void:
  loaded.contract_wins={"mirror":1,"flow":1,"breaker":1}
  loaded.unlocked_titles=["识境来客","三境皆通"]
  loaded.selected_contract="breaker"
+ loaded.selected_contract_ids.assign(["breaker"])
  loaded._save_record()
  var replay:=Campaign.new()
  check(replay.best_score==4321 and replay.completed_runs==3 and replay.contract_wins.size()==3 and replay.selected_contract=="breaker","expanded progress roundtrips with the old best score")

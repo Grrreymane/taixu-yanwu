@@ -44,14 +44,15 @@ func _signature(lines: Array) -> String:
  return "|".join(text)
 func _valid_text(scene: String,context: Dictionary) -> Array:
  var lines: Array=story_source.lines(scene,context)
- check(lines.size()>=2 and lines.size()<=7,"complete short scene has two to seven lines: "+scene)
+ check(lines.size()>=2,"approved scene sequence contains its complete dialogue: "+scene)
  var speakers: Dictionary={}
  for line: Dictionary in lines:
   var text:=str(line.get("text","")).strip_edges()
-  check(not text.is_empty() and text.length()<=130 and line.get("speaker","") in ["senti","fuhua"],"branch emits readable Chinese text for a real character")
+  check(not text.is_empty() and line.get("speaker","") in ["senti","fuhua","narrator","fuhua_thought","lixue"],"branch preserves a supported speaker or authored narration")
+  check(not str(line.get("lineId","")).is_empty() and not str(line.get("sourceSceneId","")).is_empty(),"every displayed line retains manuscript identity")
   check(not "{reward" in text and not "undefined" in text and not "TODO" in text,"branch never exposes an unresolved placeholder")
   speakers[str(line.get("speaker",""))]=true
- check(speakers.size()==2,"branch retains the two-character exchange")
+ check(speakers.has("fuhua") and speakers.has("senti"),"branch retains the two-character exchange alongside authored narration")
  check(lines==story_source.lines(scene,context),"same reward history replays exactly the same dialogue")
  sampled_texts+=1
  return lines
@@ -180,6 +181,7 @@ func _reward_main_flow() -> void:
  world.process_mode=Node.PROCESS_MODE_DISABLED
  world.campaign=VolatileCampaign.new()
  world.music._player.free()
+ world.music._previous_player.free()
  world.music.free()
  world.music=QuietMusic.new()
  root.add_child(world)
@@ -214,12 +216,12 @@ func _reward_main_flow() -> void:
   if index%2==0: world._action("story_skip")
   else:
    var advances:=0
-   while world.story.active and advances<14:
+   while world.story.active and advances<world.story.lines.size()*2+2:
     world._action("story_next")
     advances+=1
    check(advances==world.story.lines.size()*2,"normal reveal/next consumes exactly one reward scene")
   _frames(world,1)
-  check(not world.story.active and world.campaign.reward_ids==history and world.stage_countdown<countdown,"skip/next returns directly to battle with no old stage or final scene queued")
+  check(not world.story.active and world.campaign.reward_ids==history and (world.stage_countdown<countdown or world.boss_entrance.active),"skip/next returns to the next fight or its original boss entrance without another story")
   if index==4: check(choice.get("finalChoice",false) and world.campaign.stage_index==5,"last reward includes the final-choice decision instead of adding a second preboss scene")
   evidence.mainRewards.append({"history":history.duplicate(),"branch":choice.get("branchId",""),"latest":choice.get("latestId",""),"stage":world.campaign.stage_index})
  # Finish, replay/skip and defeat/retry must all retain the same build once.
