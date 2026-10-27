@@ -2,15 +2,45 @@
   "type": "generated-story-backgrounds",
   "method": "built-in image_gen",
   "date": "2026-10-26",
-  "note": "New still backgrounds for the user's manuscript; not extracted or claimed to be original Honkai Impact 3 art. No character animation or likeness is generated.",
+  "revision": "story-anime-2",
+  "note": "Original generated stills for the user's manuscript, redrawn against official Cooking with Valkyries animation references. These are not extracted Honkai Impact 3 backgrounds. No generated characters or modified native animation.",
+  "style": "Thin drawn contours, simplified painted materials, deliberate broad shadow shapes, restrained gradients; remove photographic woodgrain, surface noise, lens depth of field and PBR lighting.",
+  "references": [
+    {
+      "title": "Cooking with Valkyries Spring Festival Special",
+      "publisher": "Honkai Impact 3rd",
+      "url": "https://www.youtube.com/watch?v=w-5VVhmSC8Q",
+      "localReference": "build/references/anime-style/official-spring-frame2.jpg",
+      "use": "Style reference only: clean indoor color blocks, simplified painted furniture, restrained shading."
+    },
+    {
+      "title": "Cooking with Valkyries EP5: Noodles of Hope",
+      "publisher": "Honkai Impact 3rd",
+      "url": "https://www.youtube.com/watch?v=k3rYgBz5Pso",
+      "localReference": "build/references/anime-style/official-noodles-frame2.jpg",
+      "use": "Style reference only: illustrated food, clear contours and designed highlights."
+    }
+  ],
   "assets": [
     {
       "path": "res://assets/story/noodle-shop.png",
-      "prompt": "Use case: illustration-story. Asset type: widescreen 16:9 visual-novel game background, no characters. A small lived-in Chinese wonton noodle shop at dusk, viewed from a seated guest at a wooden table. Two freshly served porcelain bowls of thin noodles and wontons with delicate steam, a small side dish, two pairs of chopsticks resting on holders, warm amber hanging light, old woodwork, blue evening visible through a window. High-quality hand-painted anime game background, restrained natural colors, delicate linework and soft light, believable perspective and lovingly observed textures, quiet intimate everyday atmosphere. Main table and bowls in the central middle third; bottom 28 percent should be low-detail dark table surface because a dialogue box overlays it; top 10 percent clear for game chapter bar. No people, no text, no typography, no logos, no UI, no dramatic fantasy effects. Not a photograph and not a flat vector graphic."
+      "mode": "style-transfer",
+      "inputRoles": [
+        "Previous background: composition and object arrangement only",
+        "Official spring animation still: style only",
+        "Official noodle animation still: style only"
+      ],
+      "prompt": "Use case: style-transfer.\nAsset type: final 16:9 full-bleed game story background, 2D anime.\nInput roles: Image 1 is the existing background EDIT TARGET and provides only the scene, objects and general arrangement. Images 2 and 3 are official Honkai Impact 3 Cooking with Valkyries STYLE REFERENCES. They are NOT subjects to be inserted.\nPrimary request: Reconstruct image 1 completely as a hand-drawn anime animation background matching the visual language of images 2 and 3. It must immediately read as a frame from a polished 2D anime, with thin confident colored contour lines, hand-drawn geometry, broad restrained color shapes, simple deliberate two- or three-value shadows, smooth painted gradients only where useful. Render food as illustrated shapes and drawn strands, porcelain highlights as simple designed shapes, wood as smooth painted brown planes with only a few drawn lines. Remove EVERY photographic surface and microtexture. This is a full redraw, not a filter over the original.\nPalette: clean warm cream, ochre and muted rose interiors balanced with blue/lavender shadows; no heavy muddy amber/sepia grade. Keep both foreground and background painted and clearly structured.\nComposition: same widescreen scene and perspective as image 1; focal bowl(s) must stay within y=40-65 percent. Bottom 28 percent is simple tabletop underneath a future dialogue panel. Full bleed art, no letterbox bars.\nConstraints: NO characters, no people, no words, no lettering, no watermarks, no interface, no logos. Do not copy characters, packaging, furnishings or black video borders from the anime references.\nAvoid: photography, photorealism, PBR, 3D render, woodgrain microtexture, roughness noise, glassy reflections, volumetric light, lens bokeh, depth of field, cinematic HDR, grain, blurry texture filters. Do not reduce to generic vector icons.\nScene: A cozy little Chinese wonton noodle shop at dusk, empty of patrons. Exactly TWO porcelain bowls of wonton noodles on the table for Fu Hua and Sentience; small side dish and two pairs of chopsticks. Draw thin white steam ribbons. Warm hanging lamps, simple wooden counters and furniture, window on the right revealing a softly painted blue evening street. Friendly everyday anime episode atmosphere; food looks appealing through drawing and controlled shapes, not glossy photography."
     },
     {
       "path": "res://assets/story/memory-kitchen.png",
-      "prompt": "Use case: illustration-story. Asset type: widescreen 16:9 visual-novel memory background, no characters. A modest old Chinese kitchen at night in a martial arts household, quiet and empty: a single white porcelain bowl of wontons on a plain worn wooden table, faint steam, a small low charcoal stove flame in the background, dark wooden window with deep blue night outside, very sparse ordinary utensils. High-quality hand-painted anime game background, delicate linework, soft dim firelight and cool moonlight, slightly desaturated warm gray palette, intimate restrained memory, no tragedy spectacle. Bowl in the central middle third; bottom 28 percent simple dark tabletop or shadow for dialogue overlay, top 10 percent clear for chapter UI. No people, no portraits, no text, no logos, no modern electrical appliances, no UI, not photorealistic, not a flat vector graphic."
+      "mode": "style-transfer",
+      "inputRoles": [
+        "Previous background: composition and object arrangement only",
+        "Official spring animation still: style only",
+        "Official noodle animation still: style only"
+      ],
+      "prompt": "Use case: style-transfer.\nAsset type: final 16:9 full-bleed game story background, 2D anime.\nInput roles: Image 1 is the existing background EDIT TARGET and provides only the scene, objects and general arrangement. Images 2 and 3 are official Honkai Impact 3 Cooking with Valkyries STYLE REFERENCES. They are NOT subjects to be inserted.\nPrimary request: Reconstruct image 1 completely as a hand-drawn anime animation background matching the visual language of images 2 and 3. It must immediately read as a frame from a polished 2D anime, with thin confident colored contour lines, hand-drawn geometry, broad restrained color shapes, simple deliberate two- or three-value shadows, smooth painted gradients only where useful. Render food as illustrated shapes and drawn strands, porcelain highlights as simple designed shapes, wood as smooth painted brown planes with only a few drawn lines. Remove EVERY photographic surface and microtexture. This is a full redraw, not a filter over the original.\nPalette: clean warm cream, ochre and muted rose interiors balanced with blue/lavender shadows; no heavy muddy amber/sepia grade. Keep both foreground and background painted and clearly structured.\nComposition: same widescreen scene and perspective as image 1; focal bowl(s) must stay within y=40-65 percent. Bottom 28 percent is simple tabletop underneath a future dialogue panel. Full bleed art, no letterbox bars.\nConstraints: NO characters, no people, no words, no lettering, no watermarks, no interface, no logos. Do not copy characters, packaging, furnishings or black video borders from the anime references.\nAvoid: photography, photorealism, PBR, 3D render, woodgrain microtexture, roughness noise, glassy reflections, volumetric light, lens bokeh, depth of field, cinematic HDR, grain, blurry texture filters. Do not reduce to generic vector icons.\nScene: A quiet modest old Chinese kitchen at night for Fu Hua's memory of Cheng Lixue. Exactly ONE white porcelain bowl of steaming wontons centered on the wooden table. Small low stove fire at left, simple dark blue night window at right, a few ordinary utensils and bamboo steamer. Calm tender memory; clear painted cool blues with restrained warm light, visibly drawn flame and steam. Do not make the kitchen decrepit or gritty: simplify the walls and table into clean anime painted forms."
     }
   ]
 }
