@@ -2,6 +2,12 @@
 const {chromium}=require('<LOCAL_USER>/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const source=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../../scripts/data/sentience_story_scenes.json'),'utf8'));
+const introOnly=process.argv.includes('--intro-only');
+const introText=[...source.scenes.A01.lines.map(line=>({id:line.id,text:line.text})),...source.scenes.A01.stageDirections.map((line,index)=>({id:`A01-direction-${String(index+1).padStart(2,'0')}`,text:line.text}))];
+const longestIntro=introText.reduce((a,b)=>a.text.length>b.text.length?a:b).id;
+const sourceLine=line=>line.lineId.includes('-direction-')
+ ? source.scenes[line.sourceSceneId].stageDirections[Number(line.lineId.split('-direction-')[1])-1]
+ : source.scenes[line.sourceSceneId].lines.find(row=>row.id===line.lineId);
 const out=path.resolve(__dirname,'../../build/screenshots/story-rewrite-web');fs.mkdirSync(out,{recursive:true});
 const report={passed:false,errors:[],checks:[],seenScenes:[],scenes:[]};
 const save=()=>fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(report,null,2));
@@ -12,7 +18,7 @@ try{
  const state=()=>p.evaluate(()=>structuredClone(window.__godotState));
  const action=(name,value)=>p.evaluate(({name,value})=>window.__godotAction(name,value),{name,value});
  const wait=(fn,arg=null)=>p.waitForFunction(fn,arg,{timeout:180000});
- await p.goto('http://127.0.0.1:4187/?v=story-rewrite-1');await wait(()=>window.__godotState?.ready);
+ await p.goto('http://127.0.0.1:4187/?v='+encodeURIComponent(source.revision));await wait(()=>window.__godotState?.ready);
  await action('start');await wait(()=>window.__godotState.story.active);await p.waitForTimeout(100);
  const shot=async name=>p.screenshot({path:path.join(out,name+'.png')});
  let firstCamera=null,openingLines=0;
@@ -20,25 +26,27 @@ try{
   const s=await state(),line=s.story,scene=source.scenes[line.sourceSceneId];
   if(!line.active)break;
   assert.equal(line.revision,source.revision);assert.ok(scene);
-  if(!line.lineId.includes('-direction-'))assert.equal(line.text,scene.lines.find(l=>l.id===line.lineId).text);
+  assert.equal(line.text,sourceLine(line).text);
   const camera=s.cinematic.position;if(!firstCamera)firstCamera=camera;else assert.ok(camera.every((x,i)=>Math.abs(x-firstCamera[i])<.00001),'dialogue camera is fixed across clicks');
   if(!line.revealed){await action('story_next');await wait(index=>window.__godotState.story.index===index&&window.__godotState.story.revealed,line.index)}
   if(line.lineId==='A01-02')await shot('opening');
-  if(line.lineId==='A01-12'){assert.equal(line.displayName,'旁白');await shot('narration')}
-  if(line.lineId==='A01-19'){
+  if(line.kind==='direction'){assert.equal(line.displayName,'旁白');if(line.lineId==='A01-direction-01')await shot('narration')}
+  else assert.equal(line.displayName,sourceLine(line).displayName);
+  if(line.lineId===longestIntro){
    for(const [width,height] of [[960,540],[360,800],[1440,900]]){await p.setViewportSize({width,height});await p.waitForTimeout(80);const text=(await state()).story;assert.ok(text.textLineCount*text.fontSize<=text.textHeight+1);await shot('text-'+width)}
   }
   await action('story_next');await wait(index=>!window.__godotState.story.active||window.__godotState.story.index!==index,line.index);openingLines++;
  }
  report.checks.push('Full opening matches the manuscript, labels narration, fits three viewports and never moves the dialogue camera');
  report.scenes.push({kind:'intro',lines:openingLines});save();
+ if(introOnly){assert.deepEqual(report.errors,[]);report.passed=true;report.scope='opening';save();console.log('STORY_V3_BROWSER_OPENING_PASS');return}
  const begin=Date.now();let rewards=0,retries=0,handled='';
  while(Date.now()-begin<300000){
   const s=await state(),c=s.campaign,player=s.player;
   if(s.story.active){
    const key=s.story.scene+':'+s.story.sourceSceneId+':'+s.story.lineId;
    if(!report.seenScenes.includes(s.story.sourceSceneId))report.seenScenes.push(s.story.sourceSceneId);
-   if(key!==handled){handled=key;const scene=source.scenes[s.story.sourceSceneId];assert.ok(scene);if(!s.story.lineId.includes('-direction-'))assert.equal(s.story.text,scene.lines.find(l=>l.id===s.story.lineId).text)}
+   if(key!==handled){handled=key;assert.ok(source.scenes[s.story.sourceSceneId]);assert.equal(s.story.text,sourceLine(s.story).text)}
    if(s.story.sourceSceneId==='J01'&&s.story.lineId==='J01-10'){
     if(!s.story.revealed)await action('story_next');await p.waitForTimeout(30);await shot('midpoint');
     report.checks.push('Third earned upgrade reaches the new midpoint in the exported browser build');break;

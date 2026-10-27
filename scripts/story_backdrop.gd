@@ -19,9 +19,18 @@ func _ready() -> void:
 
 func _draw() -> void:
 	if location == "mountain": return
-	if location in ["noodle_shop","memory"]:
+	if location in ["noodle_shop_waiting","noodle_shop","memory"]:
 		var texture: Texture2D=MEMORY_KITCHEN if location=="memory" else NOODLE_SHOP
 		var image_size:=Vector2(texture.get_size())
+		if location=="noodle_shop_waiting":
+			# The same restaurant, framed above the foreground bowls until served.
+			var crop:=Rect2(Vector2.ZERO,Vector2(image_size.x,image_size.y*0.42))
+			var crop_scale:=maxf(size.x/crop.size.x,size.y/crop.size.y)
+			var visible_size:=size/crop_scale
+			crop.position+=(crop.size-visible_size)*0.5
+			crop.size=visible_size
+			draw_texture_rect_region(texture,Rect2(Vector2.ZERO,size),crop)
+			return
 		var cover:=maxf(size.x/image_size.x,size.y/image_size.y)
 		var destination:=image_size*cover
 		draw_texture_rect(texture,Rect2((size-destination)*0.5,destination),false)

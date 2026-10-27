@@ -12,6 +12,7 @@ var evidence: Dictionary={"routeSequences":{},"midpoint":[],"epilogue":[],"revis
 
 func _run() -> void:
  OS.add_logger(recorder)
+ _source_fidelity()
  _routing()
  if not "--text-only" in OS.get_cmdline_user_args(): await _main_flow()
  check(recorder.errors.is_empty(),"no engine or script errors during story integration")
@@ -21,6 +22,42 @@ func _run() -> void:
  OS.remove_logger(recorder)
  print(JSON.stringify({"suite":"story_rewrite","checks":checks,"passed":failures.is_empty(),"failures":failures,"errors":recorder.errors.size()}))
  quit(0 if failures.is_empty() else 1)
+
+func _source_fidelity() -> void:
+ var source: Dictionary=JSON.parse_string(FileAccess.get_file_as_string(Dialogue.DATA_PATH))
+ check(source.revision==Dialogue.REVISION,"runtime revision matches the approved v3 manuscript")
+ var total_lines:=0
+ var total_directions:=0
+ var all_ids: Dictionary={}
+ for scene_id: String in source.scenes:
+  var scene: Dictionary=source.scenes[scene_id]
+  var displayed:=Dialogue.scene_lines(scene_id)
+  var expected_ids: Array[String]=[]
+  for source_index: int in range(scene.lines.size()+1):
+   for direction_index: int in scene.stageDirections.size():
+    var direction: Dictionary=scene.stageDirections[direction_index]
+    if int(direction.beforeLine)!=source_index: continue
+    var id: String="%s-direction-%02d"%[scene_id,direction_index+1]
+    expected_ids.append(id)
+    var line: Dictionary=displayed[expected_ids.size()-1]
+    check(str(line.text)==str(direction.text) and int(line.sourceLine)==int(direction.sourceLine),id+" preserves the authored direction exactly")
+    check(line.kind=="direction" and not line.audible,id+" remains unvoiced stage narration")
+    total_directions+=1
+   if source_index<scene.lines.size():
+    var original: Dictionary=scene.lines[source_index]
+    expected_ids.append(str(original.id))
+    var line: Dictionary=displayed[expected_ids.size()-1]
+    for field: String in ["id","text","speaker","kind","displayName","sourceLine"]:
+     check(line[field]==original[field],str(original.id)+" preserves source "+field)
+    total_lines+=1
+  check(displayed.size()==expected_ids.size(),scene_id+" contains exactly the authored lines and directions")
+  check(displayed.map(func(line: Dictionary): return str(line.lineId))==expected_ids,scene_id+" preserves direction placement and manuscript order")
+  for line: Dictionary in displayed:
+   check(not all_ids.has(line.lineId),str(line.lineId)+" is unique across all scenes")
+   all_ids[line.lineId]=true
+ check(total_lines==int(source.counts.lines),"every imported numbered line is playable")
+ check(total_directions==int(source.counts.stageDirections),"every imported stage direction is playable")
+ evidence.source={"revision":source.revision,"lines":total_lines,"directions":total_directions,"scenes":source.scenes.size()}
 
 func _routing() -> void:
  check(Story.scene_ids("intro",{"runNumber":1})==["A01","A03"],"first visit starts with A01 and the selected single rule")
@@ -63,16 +100,21 @@ func _routing() -> void:
   check(Story.scene_ids("defeat",context)==["G01","G%02d"%[index+3]],"phantom defeat has its separate prefix")
   evidence.routeSequences[route]=expected
   index+=1
+ var street_ids: Array[String]=["I01-direction-01","I01-01","I01-02","I01-03","I01-04","I01-05"]
+ for scene_id: String in ["I01","I01-P","I01-S","I01-M","I01-H","I01_CONT"]:
+  for line: Dictionary in Dialogue.scene_lines(scene_id):
+   var expected: String="street" if line.lineId in street_ids else "noodle_shop_waiting"
+   check(line.presentationLocation==expected,str(line.lineId)+" moves indoors only at seating and does not serve the noodles early")
  var memory:=Dialogue.scene_lines("I02")
- var shown_ids: Dictionary={}
+ var flashback_ids: Array[String]=["I02-direction-03","I02-02","I02-direction-04"]
  for line: Dictionary in memory:
-  check(not shown_ids.has(line.id),"authored lines and inserted directions have unique IDs")
-  shown_ids[line.id]=true
-  if line.id in ["I02-04","I02-05","I02-06","I02-07","I02-08"]:
-   check(line.presentationLocation=="memory" and not line.audible,"Lixue memory cannot use live character speech or ordinary stage presentation")
-  if line.id=="I02-09": check(line.presentationLocation=="noodle_shop" and line.speaker=="senti","the flashback returns to the present restaurant")
-  if line.id=="I02-03": check(line.speaker=="fuhua_thought" and not line.audible,"internal monologue remains separate from spoken dialogue")
- check(memory[-2].kind=="direction" and memory[-1].kind=="direction" and memory[-2].presentationLocation=="mountain","the unnumbered closing return and fade are retained")
+  var expected: String="memory" if line.lineId in flashback_ids else "noodle_shop"
+  check(line.presentationLocation==expected,str(line.lineId)+" switches settings at the exact authored direction")
+  if line.lineId in flashback_ids: check(not line.audible,"memory never borrows either live character's voice")
+  if line.lineId=="I02-02": check(line.kind=="memory" and line.speaker=="lixue" and line.displayName=="程立雪（回忆）","Lixue retains her authored memory identity")
+  if line.lineId=="I02-03": check(line.speaker=="senti" and line.kind=="dialogue" and line.audible,"the present-day prompt is spoken by Senti")
+  if line.lineId=="I02-04": check(line.speaker=="fuhua" and line.audible,"Fu Hua replies in the present rather than the old flashback range")
+ check(memory[-1].kind=="direction" and memory[-1].presentationLocation=="noodle_shop","the closing fade stays at the restaurant window")
  check(Story.lines("unknown").is_empty(),"unknown scene cannot start a blocking placeholder")
 
 func _main_flow() -> void:
@@ -125,7 +167,7 @@ func _main_flow() -> void:
  var won:=_record(world)
  var all_lines: Array=world.story.lines.duplicate(true)
  evidence.epilogue=all_lines.map(func(line: Dictionary):return line.lineId)
- check(evidence.epilogue.has("I02-04") and evidence.epilogue.has("I02-42"),"real victory includes Lixue and the end of the restaurant scene")
+ check(evidence.epilogue.has("I02-02") and evidence.epilogue.has("I02-27"),"real victory includes Lixue and the end of the v3 restaurant scene")
  var plays: int=world.victory.plays
  var advances:=0
  while world.story.active and advances<all_lines.size()*2+2:

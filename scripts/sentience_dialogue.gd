@@ -1,6 +1,6 @@
 extends RefCounted
 ## Verbatim imported manuscript. Scene selection belongs to SentienceStory.
-const REVISION := "story-rewrite-1"
+const REVISION := "story-voice-v3"
 const DATA_PATH := "res://scripts/data/sentience_story_scenes.json"
 const CARD_SCENES := {
  "fist":"B01","iron":"B02","risk":"B03","finisher":"B04",
@@ -27,22 +27,32 @@ static func _scenes() -> Dictionary:
  if _catalog.is_empty(): catalog()
  return _catalog.get("scenes",{})
 
-static func _location(scene_id: String, source_index: int) -> String:
- if scene_id=="I01": return "street" if source_index<7 else "noodle_shop"
- if scene_id.begins_with("I01"): return "noodle_shop"
- if scene_id=="I02":
-  if source_index>=42: return "mountain"
-  if source_index>=3 and source_index<8: return "memory"
-  return "noodle_shop"
+static func initial_location(scene_id: String) -> String:
+ if scene_id=="I01": return "street"
+ if scene_id.begins_with("I01"): return "noodle_shop_waiting"
+ if scene_id=="I02": return "noodle_shop"
  return "mountain"
 
-static func _decorate(source: Dictionary, scene_id: String, scene: Dictionary, source_index: int) -> Dictionary:
+static func _location(source: Dictionary, scene_id: String, previous: String) -> String:
+ # Directions sharing beforeLine are separate beats: stop at the table, then
+ # flash back; remember the old kitchen, then return to the present table.
+ var kind:=str(source.get("kind","dialogue"))
+ var text:=str(source.get("text",""))
+ if scene_id=="I01" and kind=="direction" and text.begins_with("两人在靠窗的桌边坐下"):
+  return "noodle_shop_waiting"
+ if scene_id=="I02":
+  if kind=="direction" and text.begins_with("短暂闪回："): return "memory"
+  if kind=="direction" and text.begins_with("回到现实。"): return "noodle_shop"
+  if kind=="memory": return "memory"
+ return previous
+
+static func _decorate(source: Dictionary, scene_id: String, scene: Dictionary, location: String) -> Dictionary:
  var line:=source.duplicate(true)
  line["lineId"]=str(source.id)
  line["sourceSceneId"]=scene_id
  line["manuscriptSceneId"]=str(scene.get("sourceSceneId",scene_id))
  line["sceneTitle"]=str(scene.get("title",scene_id))
- line["presentationLocation"]=_location(scene_id,source_index)
+ line["presentationLocation"]=location
  line["audible"]=str(line.kind)=="dialogue" and str(line.speaker) in ["fuhua","senti"]
  line["mood"]="calm"
  line["expression"]="calm"
@@ -57,6 +67,7 @@ static func scene_lines(scene_id: String) -> Array:
  var source_lines: Array=scene.get("lines",[])
  var directions: Array=scene.get("stageDirections",[])
  var result: Array=[]
+ var location:=initial_location(scene_id)
  for source_index: int in range(source_lines.size()+1):
   for direction_index: int in directions.size():
    var direction: Dictionary=directions[direction_index]
@@ -64,8 +75,11 @@ static func scene_lines(scene_id: String) -> Array:
    var direction_line: Dictionary={"id":"%s-direction-%02d"%[scene_id,direction_index+1],
     "speaker":"narrator","kind":"direction","displayName":"旁白",
     "text":str(direction.text),"sourceLine":int(direction.sourceLine)}
-   result.append(_decorate(direction_line,scene_id,scene,source_index))
-  if source_index<source_lines.size(): result.append(_decorate(source_lines[source_index],scene_id,scene,source_index))
+   location=_location(direction_line,scene_id,location)
+   result.append(_decorate(direction_line,scene_id,scene,location))
+  if source_index<source_lines.size():
+   location=_location(source_lines[source_index],scene_id,location)
+   result.append(_decorate(source_lines[source_index],scene_id,scene,location))
  return result
 
 static func scene_title(scene_id: String) -> String:

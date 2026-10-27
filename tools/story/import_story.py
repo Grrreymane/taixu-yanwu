@@ -19,9 +19,9 @@ import re
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-SOURCE_PATH = PROJECT_ROOT / "docs" / "story" / "识境演武_剧情重写完整版.md"
+SOURCE_PATH = PROJECT_ROOT / "docs" / "story" / "识境演武_角色语气重写_v3.md"
 OUTPUT_PATH = PROJECT_ROOT / "scripts" / "data" / "sentience_story_scenes.json"
-REVISION = "story-rewrite-1"
+REVISION = "story-voice-v3"
 SCENE_HEADER = re.compile(r"^#{2,3}\s+【([A-J]\d{2}(?:-[PSMH])?)｜(.+)】\s*$")
 NUMBERED_ROW = re.compile(r"^([A-J]\d{2}-(?:[PSMH])?\d{2})\s+(.+?)\s*$")
 SPEAKERS = {
@@ -30,7 +30,10 @@ SPEAKERS = {
     "符华（心想）": ("fuhua_thought", "thought"),
     "符华（回忆）": ("fuhua", "memory"),
     "程立雪": ("lixue", "dialogue"),
+    "程立雪（回忆）": ("lixue", "memory"),
 }
+# This italic source note describes editing, not an event shown to the player.
+EDITORIAL_NOTES = {"若与 E 段相连，删除 E 的重复入场镜头即可。"}
 
 
 def _unbold(text: str) -> str:
@@ -95,9 +98,12 @@ def parse_source(source_bytes: bytes, source_path: str) -> dict:
                 "sourceLine": source_line,
             })
             continue
-        if scene is not None and value.startswith("**"):
-            plain = _unbold(value)
-            if plain.startswith("场景：") or (plain.startswith("（") and plain.endswith("）")):
+        if scene is not None and value.startswith("*") and value.endswith("*"):
+            is_italic = not value.startswith("**")
+            plain = value[1:-1] if is_italic else _unbold(value)
+            if plain in EDITORIAL_NOTES:
+                continue
+            if is_italic or plain.startswith("场景：") or (plain.startswith("（") and plain.endswith("）")):
                 scene["stageDirections"].append({
                     "beforeLine": len(scene["lines"]),
                     "text": plain,

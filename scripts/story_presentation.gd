@@ -4,6 +4,7 @@ signal finished
 const Actor = preload("res://scripts/actor.gd")
 const SentienceProfile = preload("res://scripts/sentience_profile.gd")
 const Story = preload("res://scripts/sentience_story.gd")
+const Dialogue = preload("res://scripts/sentience_dialogue.gd")
 const DialoguePerformance = preload("res://scripts/dialogue_performance.gd")
 const StoryBackdrop = preload("res://scripts/story_backdrop.gd")
 const FONT = preload("res://assets/fonts/hi3-sdk-zh-cn.ttf")
@@ -155,7 +156,7 @@ func _refresh_line() -> void:
 	_chapter.text="识境演武  /  "+("小识与老古董" if chapter_title=="识境演武" else chapter_title)
 	_location=_line_location(line)
 	_backdrop.set_location(_location)
-	_location_title.text=str({"street":"暮色 · 街边","noodle_shop":"一碗云吞面","memory":"旧时 · 炉火","mountain":""}.get(_location,""))
+	_location_title.text=str({"street":"暮色 · 街边","noodle_shop_waiting":"窗边 · 等面","noodle_shop":"一碗云吞面","memory":"旧时 · 炉火","mountain":""}.get(_location,""))
 	_location_title.visible=_location!="mountain"
 	for actor in actors.values(): actor.visible=_location=="mountain"
 	_progress.text="%02d / %02d   ·   点击对话继续" % [index+1,lines.size()]
@@ -172,17 +173,10 @@ func _line_location(line: Dictionary) -> String:
 	var authored := str(line.get("presentationLocation",""))
 	if not authored.is_empty(): return authored
 	var source := str(line.get("sourceSceneId",""))
-	if source=="I02":
-		var kind := str(line.get("kind",""))
-		var identity := str(line.get("speaker",""))
-		if kind=="memory" or identity=="lixue" or str(line.get("text","")).begins_with("（短暂闪回"): return "memory"
-		if str(line.get("text","")).begins_with("（镜头短暂切回识境"): return "mountain"
-		return "noodle_shop"
-	if source.begins_with("I01"):
-		var id := str(line.get("lineId",line.get("id","")))
-		if source=="I01" and id.begins_with("I01-") and id.trim_prefix("I01-").is_valid_int() and int(id.trim_prefix("I01-"))<8: return "street"
-		return "noodle_shop"
-	return "mountain"
+	var id:=str(line.get("lineId",line.get("id","")))
+	for authored_line: Dictionary in Dialogue.scene_lines(source):
+		if str(authored_line.lineId)==id: return str(authored_line.presentationLocation)
+	return Dialogue.initial_location(source)
 
 func advance() -> void:
 	if not active: return

@@ -37,10 +37,11 @@ func _run() -> void:
 				check(float(data.textLineCount)*height<=float(data.textHeight)+1.0,label+" fits all wrapped lines")
 				check(presentation._dialog.position.y>=70.0,label+" stays below chapter header")
 				check(presentation._backdrop.visible==(str(data.location)!="mountain"),label+" has the matching setting")
+				check(str(data.location)==str(line.presentationLocation),label+" uses the authored direction's exact setting")
 				for actor in presentation.actors.values():
 					check(actor.visible==(str(data.location)=="mountain"),label+" does not stage a diner conversation in the arena")
 				if line.speaker=="lixue":
-					check(data.location=="memory" and data.displayName=="程立雪",label+" keeps Cheng Lixue in the remembered scene")
+					check(data.location=="memory" and data.displayName=="程立雪（回忆）" and not line.audible,label+" keeps Cheng Lixue in the remembered scene")
 				elif line.speaker=="fuhua_thought":
 					check("心想" in str(data.displayName),label+" labels internal thought")
 				var old_clock:=presentation.clock
