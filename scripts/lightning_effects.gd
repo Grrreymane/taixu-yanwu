@@ -42,6 +42,15 @@ func setup(owner: Node3D) -> void:
 			if not texture_path.ends_with(".png"): continue
 			if ResourceLoader.exists(texture_path): host.native_textures[profile+":"+role] = load(texture_path)
 	if ResourceLoader.exists(SWORD_PATH): _sword_mesh = load(SWORD_PATH)
+	# Fx_Lightning_02 is an original four-row RGB bolt atlas (opaque alpha).
+	# Keep fine lightning for small attacks; Q needs these broad broken strokes.
+	# Evidence: assets/shadow-knight/vfx/source-manifest.json and
+	# original-material-colors.json (Fx_Lightning_02_b_01). Fog deliberately
+	# shares this NL artwork for its adapted shockwave; this is not an FK prefab.
+	var bolt_path := "res://assets/shadow-knight/vfx/Fx_Lightning_02.png"
+	if ResourceLoader.exists(bolt_path):
+		for profile_name: String in ["shadow_knight","blood_moon","hawk_of_the_fog"]:
+			host.native_textures[profile_name+":ultimateBolt"]=load(bolt_path)
 	_sword_shader = Shader.new()
 	_sword_shader.code = SWORD_SHADER
 
@@ -77,9 +86,11 @@ func _stamp(data: Dictionary, texture_role: String, origin: Vector3, size: Vecto
 	settings.instant = settings.get("instant",true)
 	settings.grow = settings.get("grow",0.85)
 	settings.facing = host._facing(data)
+	settings.energy_core = (role.begins_with("ultimate_") or role.begins_with("eclipse_")) and texture_role in ["trail","lightning","ultimateBolt"]
 	# Lightning coverage is explicit in each map: SFX_Lightning_501 has native
 	# alpha; opaque-alpha additive artwork such as FK Particle507 needs luminance.
 	settings.mask = int(maps.get(p,{}).get("lightningMask",1)) if p != "hawk_of_the_fog" and texture_role == "lightning" else 1 if texture_role == "particle" else 0
+	if texture_role=="ultimateBolt": settings.mask=1
 	if p == "hawk_of_the_fog" and texture_role == "lightning":
 		settings.uv = Vector4(1.0,0.31,0.0,0.34) # one ray cell, not all three
 	if p == "hawk_of_the_fog" and texture_role == "burstTrail":
@@ -144,19 +155,46 @@ func ultimate(data: Dictionary) -> void:
 	_ring(data,x,2.5,life,"ultimate_charge",{"grow":1.0,"instant":false,"fade_in":0.13,"fade_start":0.92,"follow_id":host._source_id(data),"color":color(data,0.42)})
 	for i in 3:
 		_stamp(data,"glow",Vector3(x-0.4+0.4*i,0.25+0.22*i,-0.3),Vector2.ONE*0.32,life,"ultimate_charge",{"instant":false,"delay":0.06*i,"velocity":Vector3(0,0.7,0),"color":color(data,0.5)})
+	# Paired source trails wind around the lower torso; the face and the native
+	# raised leg remain readable in the closer take. No impact before combat's cue.
+	for side: float in [-1.0,1.0]:
+		_stamp(data,"trail",Vector3(x,0.75,-0.30),Vector2(1.75,0.44),life,"ultimate_coil",{"arc":true,"instant":false,"fade_in":0.06,"fade_start":0.88,"grow":1.15,"orbit":Vector3(0.60,0.27,0.32),"orbit_phase":0.0 if side<0.0 else PI,"orbit_speed":5.0,"velocity":Vector3(0,0.70,0),"angle":side*0.6,"spin_speed":-3.0,"color":color(data,0.8)})
+		if not fog:
+			_stamp(data,"lightning",Vector3(x+side*0.60,1.15,-0.4),Vector2(0.65,2.0),0.46,"eclipse_charge_arc",{"delay":0.62,"angle":side*0.24,"color":color(data,0.68)})
 	host._sound("ultimate")
 
 func ultimate_impact(data: Dictionary) -> void:
 	var x := float(data.get("x",_x(data)))
 	var fog := profile(data) == "hawk_of_the_fog"
+	_impact_crown(data,x,fog)
 	_ring(data,x,5.0 if fog else 5.6,0.56,"ultimate_release")
+	_ring(data,x,6.4 if fog else 7.0,0.46,"ultimate_pressure",{"delay":0.06,"grow":0.2,"color":color(data,0.5)})
 	_stamp(data,"impact",Vector3(x,0.48,0.34),Vector2(2.1,1.7),0.29,"ultimate_ground_hit",{"grow":0.3,"color":color(data,0.9)})
 	for side in [-1.0,1.0]:
 		_stamp(data,"lightning",Vector3(x+side*1.05,0.85,-0.12),Vector2(2.65,0.86),0.37,"ultimate_ground_lightning",{"angle":side*0.12,"grow":0.7})
+		_stamp(data,"lightning",Vector3(x+side*0.75,0.50,0.25),Vector2(2.8,0.44),0.24,"ultimate_running_arc",{"angle":side*0.10,"grow":0.45,"velocity":Vector3(side*3.8,0,0),"color":Color(0.84,0.93,1.0,0.88) if profile(data)!="blood_moon" else Color(1.0,0.77,0.55,0.88)})
+		_stamp(data,"trail",Vector3(x+side*0.65,0.65,-0.3),Vector2(2.5,1.1),0.40,"ultimate_shock_arc",{"arc":true,"angle":side*0.50,"spin_speed":side*2.8,"grow":0.35,"color":color(data,0.78)})
 		_stamp(data,"smoke",Vector3(x+side*0.75,0.38,-0.24),Vector2(2.5,0.7),0.64,"ultimate_smoke",{"color":Color(0.51,0.57,0.68,0.28),"velocity":Vector3(side*0.6,0.2,0),"rgb":true})
 	if fog: _stamp(data,"burstTrail",Vector3(x,0.95,-0.14),Vector2(2.1,2.6),0.45,"ultimate_updraft",{"color":color(data,0.58)})
 	else: _stamp(data,"lightning",Vector3(x,1.45,-0.35),Vector2(2.0,2.8),0.32,"eclipse_lightning",{"angle":PI/2.0})
+	if not fog:
+		# Several brief native bolts at different depths read as a release, not a
+		# single almost-invisible thin strip smeared across the floor.
+		for index: int in 3:
+			var side: float=-1.0 if index%2==0 else 1.0
+			_stamp(data,"lightning",Vector3(x+side*(0.45+0.35*index),1.25,-0.32-index*0.04),Vector2(2.1,3.2),0.34,"eclipse_release_bolt",{"delay":0.045*index,"angle":side*0.22,"grow":0.72,"color":color(data,0.95)})
 	host._sound("heavy")
+
+func _impact_crown(data: Dictionary,x: float,fog: bool) -> void:
+	# A local energy core and a low crown of coarse source bolts carry the hit;
+	# pinprick sparks only accent it. The crown's center is transparent, leaving
+	# the crouching player's head and the standing enemy's face readable.
+	_stamp(data,"glow",Vector3(x,0.20,-0.32),Vector2(2.4,0.72),0.24,"ultimate_core",{"instant":true,"grow":0.95,"fade_start":0.32,"color":Color(0.86,0.96,1,0.9) if profile(data)!="blood_moon" else Color(1,0.80,0.62,0.9)})
+	for side: float in [-1.0,1.0]:
+		var row: float=0.0 if side<0.0 else 0.5
+		_stamp(data,"ultimateBolt",Vector3(x+side*1.1,0.50,0.52),Vector2(3.4,0.66),0.34,"ultimate_bolt_front",{"uv":Vector4(1,0.25,0,row),"instant":true,"grow":0.95,"angle":side*0.10,"velocity":Vector3(side*2.8,0.0,0),"fade_start":0.55,"color":color(data,0.96)})
+		_stamp(data,"ultimateBolt",Vector3(x+side*1.30,0.95,-0.3),Vector2(2.4,0.9),0.42,"ultimate_bolt_crown",{"uv":Vector4(1,0.25,0,row+0.25),"instant":true,"grow":0.92,"angle":side*1.02,"velocity":Vector3(side*0.4,0.25,0),"fade_start":0.62,"color":color(data,0.92)})
+	_stamp(data,"ultimateBolt",Vector3(x,0.55,-0.40),Vector2(5.4,2.25),0.42,"ultimate_bolt_arc",{"uv":Vector4(1,0.25,0,0.25),"arc":true,"instant":true,"grow":0.9,"angle":0.4,"spin_speed":1.0,"fade_start":0.58,"color":color(data,0.95)})
 
 func event(data: Dictionary) -> void:
 	match str(data.get("type","")):

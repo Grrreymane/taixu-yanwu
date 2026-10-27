@@ -11,6 +11,9 @@ static func weapon_for(who: Dictionary, round_index: int) -> String:
 		# A separate fifth turn owns the burst; it never consumes a sword turn.
 		var cycle := 5 if int(who.get("phase", 1)) == 2 else 4
 		var turn := posmod(maxi(0, round_index-1), cycle)
+		var authored_cycle: Array=who.get("weaponCycle",[])
+		if authored_cycle.size()==4 and authored_cycle.all(func(weapon): return weapon in WEAPONS):
+			return "burst" if turn==4 else str(authored_cycle[turn])
 		return ["sword", "spear", "sword", "chain", "burst"][turn]
 	var offset := 1 if who.get("type", "") == "duelist" else 2 if who.get("type", "") == "guardian" else 0
 	return WEAPONS[posmod(maxi(0, round_index - 1) + offset, WEAPONS.size())]

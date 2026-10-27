@@ -37,15 +37,21 @@ func _run() -> void:
 						var t := duration*frame_index/48.0
 						var shot := Camera.sample(t,focus,profile)
 						_check(shot.position.is_finite() and shot.target.is_finite() and is_finite(shot.fov) and is_finite(shot.roll),profile+" finite camera")
-						_check(shot.position.z>4.0 and shot.fov>=32.0 and shot.fov<=40.0,profile+" controlled viewing side and lens")
+						_check(shot.position.z>=3.5 and shot.fov>=31.0 and shot.fov<=40.0,profile+" controlled viewing side and lens")
 						_check(shot==Camera.sample(t,focus,profile),profile+" pause deterministic")
-						for point in [Vector3(x,2.85,0),Vector3(x,.05,0),Vector3(x+facing*1.3,1.4,0)]:
+						var points: Array=[Vector3(x,2.85,0),Vector3(x,.05,0),Vector3(x+facing*1.3,1.4,0)]
+						if shot.get("composition","full")=="portrait": points=[Vector3(x,2.85,0),Vector3(x,1.45,0)]
+						for point in points:
 							var projected := _project(shot,point,aspect)
 							_check(absf(projected.x)<.98 and absf(projected.y)<.98,profile+" player and contact stay framed")
-					for boundary in [0.12,0.20,0.30,0.94,impact,impact+.18,impact+.28,Camera.return_at(profile),duration]:
+					for boundary in [0.07,0.10,0.20,0.30,0.94,impact+.18,impact+.28,Camera.return_at(profile),duration]:
 						var before := Camera.sample(boundary-.00001,focus,profile)
 						var after := Camera.sample(boundary+.00001,focus,profile)
 						_check(before.position.distance_to(after.position)<.003 and absf(before.fov-after.fov)<.003,profile+" continuous shot boundary")
+					for boundary in Camera.cuts(profile):
+						var before:=Camera.sample(boundary-.00001,focus,profile)
+						var after:=Camera.sample(boundary+.00001,focus,profile)
+						_check(before.position.distance_to(after.position)>.4 and after.composition=="full",profile+" deliberate native-action cut has a distinct readable angle")
 		var guide := Guide.for_style(profile)
 		var config: Dictionary = Shadow.STYLE if profile=="shadow_knight" else Fog.STYLE
 		_check(guide.styleId==profile and guide.name==config.name,profile+" independent player guide")

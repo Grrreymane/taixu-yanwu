@@ -54,6 +54,7 @@ var _ai_gap := 0.8
 var _ai_cursor := 0
 var _legacy_mode := true
 var _pressure_level := 1
+var _encounter_rule: Dictionary = {}
 var _rng := RandomNumberGenerator.new()
 var player_profile := "azure_empyrea"
 const INPUT_BUFFER_WINDOW := 0.12
@@ -123,6 +124,7 @@ func reset() -> void:
  _ai_cursor=0
  _legacy_mode=true
  _pressure_level=1
+ _encounter_rule.clear()
  _rng.seed=3103
  _emit("reset")
 
@@ -142,6 +144,9 @@ func start_encounter(config: Dictionary, carry: Dictionary={}) -> void:
  reset()
  _legacy_mode=false
  _pressure_level=clampi(int(config.get("pressureLevel",1)),0,4)
+ _encounter_rule=config.get("encounterRule",{}).duplicate(true)
+ _encounter_rule.attackIntervalScale=clampf(float(_encounter_rule.get("attackIntervalScale",1.0)),0.70,1.30)
+ _encounter_rule.turnGapScale=clampf(float(_encounter_rule.get("turnGapScale",1.0)),0.70,1.30)
  training=bool(config.get("training",false))
  player.maxHp=maxf(1.0,float(carry.get("maxHp",120.0)))
  player.hp=clampf(float(carry.get("hp",player.maxHp)),0.0,player.maxHp)
@@ -178,6 +183,9 @@ func start_encounter(config: Dictionary, carry: Dictionary={}) -> void:
   foe.speed=clampf(float(spec.get("speed",base_speed)),0.5,4.0)
   foe.aiCooldown=0.65-0.08*_pressure_level+i*0.18
   foe.weaponLock=str(spec.get("weaponLock",""))
+  foe.tactic=str(spec.get("tactic",""))
+  if foe.tactic not in ["press","guard","flank","range"]: foe.tactic=""
+  foe.weaponCycle=spec.get("weaponCycle",[]).duplicate()
   foe.weapon=SentienceCombat.weapon_for(foe,1)
   foe.pressureHits=0
   foe.pressureUntil=-1.0
@@ -186,7 +194,7 @@ func start_encounter(config: Dictionary, carry: Dictionary={}) -> void:
   foe.adaptiveCounter=false
   foe.punishUntil=-1.0
   enemies.append(foe)
- _ai_gap=0.38-0.08*_pressure_level
+ _ai_gap=_turn_gap(0.38-0.08*_pressure_level)
  _separate_spawns()
  _refresh_target()
  # The countdown freezes simulation, so spawn facing must already be valid
@@ -473,6 +481,7 @@ func _advance_fighter(who: Dictionary,dt: float) -> void:
      who.aiCooldown=float(attack.get("recovery",1.0))+_rng.randf()*0.25 if _legacy_mode else 0.38-0.06*_pressure_level+float(attack.get("recovery",0.85))*0.35+_rng.randf()*0.12
      if who.boss and not _legacy_mode:
       who.aiCooldown=maxf(0.12,0.26-0.045*_pressure_level+float(attack.get("recovery",0.85))*0.18+_rng.randf()*0.06)
+     if not _legacy_mode: who.aiCooldown=_enemy_recovery(who,float(who.aiCooldown))
      if _legacy_mode: _ai_gap=maxf(_ai_gap,0.5)
  elif who.state=="dodge":
   var window: float=0.27 if who.side=="player" else 0.18
@@ -666,7 +675,7 @@ func _sentience_attack(who: Dictionary,kind: String,index: int,phase_entry: bool
  who.attack.contactOutcome=""
  who.stateDuration=who.attack.duration
  if phase_entry: who.phaseCounterPending=false
- _ai_gap=maxf(_ai_gap,0.55)
+ _ai_gap=maxf(_ai_gap,_turn_gap(0.55))
  if previous_weapon!=weapon:
   _emit("weaponChange",{"side":"enemy","sourceId":who.id,"targetId":player.id,"x":who.x,"facing":who.facing,"weapon":weapon,"label":who.attack.label})
  _emit("attack",{"side":"enemy","sourceId":who.id,"targetId":player.id,"x":who.x,"facing":who.facing,
@@ -948,17 +957,28 @@ func _encounter_ai(dt: float) -> void:
   for other in enemies:
    if other.id!=foe.id and other.hp>0.0 and (other.x-player.x)*(foe.x-player.x)>0.0 and absf(other.x-player.x)<absf(foe.x-player.x): rank+=1
   var preferred: float=2.45 if SentienceCombat.weapon_for(foe,int(foe.aiRound)+1)=="spear" else 1.25 if foe.boss else 1.45
+  var tactic: String=str(foe.get("tactic",""))
+  if tactic=="range": preferred=3.15 if SentienceCombat.weapon_for(foe,int(foe.aiRound)+1)=="spear" else 2.0
+  elif tactic=="press": preferred=1.18
+  elif tactic=="guard": preferred=1.70
   var spacing: float=preferred+rank*0.94
+  var speed_scale: float=1.12 if tactic=="press" else 1.08 if tactic=="flank" else 1.0
   if absf(foe.x-player.x)>spacing+0.05:
    if foe.state!="move": _state(foe,"move")
-   _move(foe,foe.facing*foe.speed*dt)
+   _move(foe,foe.facing*foe.speed*speed_scale*dt)
+  elif tactic=="range" and rank==0 and foe.aiCooldown>0.12 and absf(foe.x-player.x)<1.75 and time>=float(foe.get("punishUntil",-1.0)):
+   # The spear carrier creates space only during recovery. Collision still
+   # preserves lane order; it cannot teleport through a body or evade a punish.
+   if foe.state!="move": _state(foe,"move")
+   _move(foe,-foe.facing*foe.speed*0.75*dt)
   elif foe.state=="move": _state(foe,"idle")
  # The next warning may begin during a completed final strike's recovery.
  # Never overlap live contacts or cut in under an unfinished native chain.
  if active_attacks>=2 or _ai_gap>0.0 or player.state in ["stagger","dead"]: return
  for foe in enemies:
   if foe.hp<=0.0 or foe.state!="attack": continue
-  if int(foe.attack.get("nativeNext",-1))>=0 or foe.stateTime<float(foe.attack.windup)+float(foe.attack.active)+0.10: return
+  var handoff: float=0.28*float(_encounter_rule.turnGapScale) if _encounter_rule.has("id") else 0.10
+  if int(foe.attack.get("nativeNext",-1))>=0 or foe.stateTime<float(foe.attack.windup)+float(foe.attack.active)+handoff: return
  for offset in enemies.size():
   var index: int=(_ai_cursor+offset)%enemies.size()
   var foe: Dictionary=enemies[index]
@@ -972,17 +992,19 @@ func _encounter_ai(dt: float) -> void:
    _begin_phase_counter(foe)
    break
   foe.aiRound+=1
-  if foe.type=="guardian" and not foe.counterPending and foe.aiRound%3==1:
+  var tactical_guard: bool=foe.aiRound%2==1 if str(foe.get("tactic",""))=="guard" else foe.type=="guardian" and foe.aiRound%3==1
+  if foe.boss and str(foe.get("tactic",""))=="guard": tactical_guard=foe.aiRound%4==2
+  if tactical_guard and next_weapon!="burst" and not foe.counterPending:
    _state(foe,"guard",0.85)
    foe.parryUntil=-1.0
-   foe.aiCooldown=1.0
-   _ai_gap=0.45
+   foe.aiCooldown=_enemy_recovery(foe,1.0)
+   _ai_gap=_turn_gap(0.45)
    _emit("enemyGuard",{"side":"enemy","sourceId":foe.id,"x":foe.x})
   elif foe.type=="duelist" and not foe.counterPending and foe.aiRound%3==1:
    foe.counterPending=true
    foe.dodgeDirection=-foe.facing
    _state(foe,"dodge",0.34)
-   _ai_gap=0.45
+   _ai_gap=_turn_gap(0.45)
    _emit("dodge",{"side":"enemy","sourceId":foe.id,"x":foe.x,"direction":foe.dodgeDirection})
   else:
    var heavy: bool=foe.type=="guardian" or (foe.boss and (foe.phase==2 or foe.aiRound%3==0)) or (foe.type=="striker" and foe.aiRound%4==0)
@@ -990,6 +1012,14 @@ func _encounter_ai(dt: float) -> void:
    # heavy flag otherwise replaces every sword opening with a chain attack.
    _attack(foe,"light" if foe.get("style","")=="sentience" else "heavy" if heavy else "light")
   break
+
+func _turn_gap(seconds: float) -> float:
+ return seconds*float(_encounter_rule.get("turnGapScale",1.0))
+
+func _enemy_recovery(foe: Dictionary,seconds: float) -> float:
+ var tactic: String=str(foe.get("tactic",""))
+ var scale: float=0.82 if tactic=="press" else 0.90 if tactic=="flank" else 1.08 if tactic=="range" else 1.0
+ return maxf(0.12,seconds*float(_encounter_rule.get("attackIntervalScale",1.0))*scale)
 
 func _try_pressure_escape(foe: Dictionary) -> bool:
  if _legacy_mode or training or foe.hp<=0.0 or not bool(foe.get("escapePending",false)): return false

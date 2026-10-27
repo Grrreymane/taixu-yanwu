@@ -32,8 +32,14 @@ func run()->void:
     bottom=minf(bottom,point.y);top=maxf(top,point.y)
     var projected:Vector3=view*point
     var extent:float=absf(projected.y)/maxf(.001,-projected.z*tan(deg_to_rad(float(framing.fov)*.5)))
-    if extent>max_projection:
+    if framing.get("composition","full")!="portrait" and extent>max_projection:
      max_projection=extent;worst_time=time
+   if framing.get("composition","full")=="portrait":
+    for bone_name:String in ["Bip001 Head","Bip001 Spine2"]:
+     var bone:int=actor.skeleton.find_bone(bone_name)
+     var subject:Vector3=view*(actor.skeleton.global_transform*actor.skeleton.get_bone_global_pose(bone).origin)
+     var portrait_extent:float=absf(subject.y)/maxf(.001,-subject.z*tan(deg_to_rad(float(framing.fov)*.5)))
+     check(portrait_extent<.9,"eclipse insert keeps the original face and torso visible "+skin)
    highest=maxf(highest,top)
    check(top<4.6 and bottom<1.4,"Moon body remains in the combat-stage vertical range %s %.3f"%[skin,time])
   check(max_projection<.98,"native eclipse wings and full body fit the cinematic for "+skin)

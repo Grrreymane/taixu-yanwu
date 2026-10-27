@@ -18,6 +18,7 @@ const BattleCamera=preload("res://scripts/battle_camera.gd")
 const EnemyHealthDisplay=preload("res://scripts/enemy_health_display.gd")
 const KnockoutPresentation=preload("res://scripts/knockout_presentation.gd")
 const CombatAccent=preload("res://scripts/combat_accent.gd")
+const UltimateFocus=preload("res://scripts/ultimate_focus.gd")
 const FighterRoster=preload("res://scripts/fighter_roster.gd")
 const SentienceProfile=preload("res://scripts/sentience_profile.gd")
 const VictoryPresentation=preload("res://scripts/victory_presentation.gd")
@@ -48,6 +49,7 @@ var voice=CharacterVoice.new()
 var dialogue_voice=DialogueVoiceCues.new()
 var camera:=Camera3D.new()
 var combat_accent=CombatAccent.new()
+var ultimate_focus=UltimateFocus.new()
 var knockout=KnockoutPresentation.new()
 var knockout_started:=false
 var knockout_pending:=false
@@ -97,6 +99,7 @@ func _ready() -> void:
  camera.look_at(Vector3(0,1.4,0))
  camera.current=true
  add_child(combat_accent)
+ add_child(ultimate_focus)
  add_child(knockout)
  hud=HUD.new()
  add_child(hud)
@@ -706,8 +709,14 @@ func _process(delta: float) -> void:
  sentience_effects.tick(fx_dt)
  combat_accent.tick(fx_dt)
  _camera(dt,visual_dt,ult_time)
+ if ult_time>=0.0 and str(cinematic_frame.get("composition","full"))=="portrait" and not story.active and not boss_entrance.active:
+  # The opening cut-in belongs to the performer. Close opponents used to
+  # fill half the frame as a cropped torso; restore them at the action cut.
+  for actor in enemy_nodes.values(): actor.visible=false
+  sentience_effects.visible=false
  if knockout.active: camera.fov-=float(ko_frame.cameraPulse)*2.4
  combat_accent.present(camera,campaign.phase=="fight" and ult_time<0.0 and not story.active and not boss_entrance.active and not knockout.active)
+ ultimate_focus.present(camera,game.player_profile,ult_time,cinematic_player_x,cinematic_target_x,campaign.phase=="fight" and not story.active and not boss_entrance.active)
  var state: Dictionary=game.snapshot()
  state.ready=ready_to_play
  state.fps=Engine.get_frames_per_second()
@@ -754,9 +763,11 @@ func _process(delta: float) -> void:
   state.vfx.sentience=sentience_effects.snapshot()
   state.feel={"player":player_pose,"enemy":enemy_pose,"cameraKick":shake,"cameraPosition":[camera.position.x,camera.position.y,camera.position.z],"fxDelta":fx_dt,"simDelta":sim_delta}
   state.feel.accent=combat_accent.snapshot()
+  state.feel.ultimateFocus=ultimate_focus.snapshot()
   state.feelFrames=feel_frames
   var return_at: float=LightningCamera.return_at(game.player_profile) if game.player_profile in ["shadow_knight","hawk_of_the_fog"] else NightSquireCamera.RETURN_AT if game.player_profile=="night_squire" else FenghuangCamera.RETURN_AT if game.player_profile=="fenghuang" else UltimateCamera.RETURN_AT
   state.cinematic={"active":ult_time>=0.0,"returning":(ult_time>=return_at) or cinematic_return_time<0.28,"shot":cinematic_frame.get("shot","battle"),"fov":camera.fov,"roll":camera_roll,"position":[camera.position.x,camera.position.y,camera.position.z],"target":[menu_target.x,menu_target.y,menu_target.z],"facing":cinematic_facing}
+  state.cinematic.composition=cinematic_frame.get("composition","full")
   state.engine="Godot "+Engine.get_version_info().string
   JavaScriptBridge.eval("window.__godotState="+JSON.stringify(state)+";",true)
 

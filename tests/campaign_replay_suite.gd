@@ -94,14 +94,17 @@ func _full_runs() -> void:
    campaign.begin_trial(route,seed_value)
    var picked: Array=[]
    var goals:=0
+   var encounter_goals:=0
    for stage in 6:
     var qualified: bool=(stage+seed_value)%2==0
     var state:=_state(campaign,qualified)
+    var earned_encounter: bool=bool(campaign.encounter_objective(state.stats,true).get("awarded",false))
+    if earned_encounter: encounter_goals+=1
     campaign.encounter()
     campaign.finish(state)
     if qualified: goals+=1
     check(is_equal_approx(campaign.carry.hp,74.0 if qualified else 66.0),"six-HP clear supply adds eight more HP only when the goal is achieved")
-    check(is_equal_approx(campaign.carry.energy,50.0 if qualified else 40.0),"achievement grants SP only when won and goal achieved")
+    check(is_equal_approx(campaign.carry.energy,(50.0 if qualified else 40.0)+(8.0 if earned_encounter else 0.0)),"contract and encounter rewards add exactly their earned SP")
     check(campaign.last_achievement.is_empty()!=qualified,"achievement notice agrees with actual award")
     var phase: String=campaign.phase
     var totals: Dictionary=campaign.totals.duplicate(true)
@@ -122,7 +125,7 @@ func _full_runs() -> void:
    check(campaign.phase=="cleared" and campaign.stage_index==5 and campaign.completed_runs==1,"one six-fight run increments completion once")
    check(campaign.reward_ids.size()==5 and campaign.boons.size()==5,"five distinct build techniques survive to the result")
    check(campaign.saves==1 and campaign.best_score>0,"clear commits score and progress once")
-   check(campaign.achievements.size()==goals and campaign.totals.achievementScore==100*goals,"goal score is exactly one award per successful encounter")
+   check(campaign.achievements.size()==goals and campaign.encounter_achievements.size()==encounter_goals and campaign.totals.achievementScore==100*goals+75*encounter_goals,"goal scores award each contract and encounter objective once")
    check(campaign.contract_wins.get(route,0)==1 and campaign.unlocked_titles.size()==2,"first clear unlocks base and path titles without locking content")
    check(snapshot.stats.score==campaign.best_score,"result score includes goal bonuses without double-counting current combat")
    evidence.runs.append({"route":route,"seed":seed_value,"rewards":campaign.reward_ids.duplicate(),"achievements":goals,"score":snapshot.stats.score})

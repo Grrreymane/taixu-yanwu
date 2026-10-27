@@ -203,6 +203,8 @@ var _stage_panel := SlantPanel.new()
 var _stage_title: Label
 var _stage_objective: Label
 var _stage_boons: Label
+var _stage_rule: Label
+var _stage_goal: Label
 var _stage_marks: Array[ColorRect] = []
 var _stage_banner := SlantPanel.new()
 var _banner_title: Label
@@ -1003,15 +1005,22 @@ func _build_campaign() -> void:
 	_place(_stage_title,14,7,280,27)
 	_stage_objective = _label(_stage_panel,"击败识律幻身",12,Color("c1dbe9"))
 	_place(_stage_objective,14,37,280,24)
+	_stage_rule = _label(_stage_panel,"",12,Color("dbcee5"))
+	_stage_rule.mouse_filter = Control.MOUSE_FILTER_PASS
+	_stage_rule.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+	_place(_stage_rule,14,60,270,21)
 	for index in range(6):
 		var mark := ColorRect.new()
 		mark.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		_stage_panel.add_child(mark)
-		_place(mark,15+float(index)*43.0,73,36,4)
+		_place(mark,15+float(index)*43.0,87,36,4)
 		_stage_marks.append(mark)
 	_stage_boons = _label(_stage_panel,"",11,Color("86cce6"))
 	_stage_boons.mouse_filter = Control.MOUSE_FILTER_PASS
-	_place(_stage_boons,14,84,270,20)
+	_place(_stage_boons,14,97,270,20)
+	_stage_goal = _label(_stage_panel,"",11,Color("d6dbc7"))
+	_stage_goal.mouse_filter = Control.MOUSE_FILTER_PASS
+	_place(_stage_goal,14,120,270,20)
 	_stage_banner.tint = Color(0.035,0.11,0.18,0.91)
 	_stage_banner.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_ui.add_child(_stage_banner)
@@ -1020,7 +1029,8 @@ func _build_campaign() -> void:
 	_place(_banner_title,18,6,524,34)
 	_banner_detail = _label(_stage_banner,"",13,Color("aed9ed"))
 	_banner_detail.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_place(_banner_detail,18,43,524,25)
+	_banner_detail.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	_place(_banner_detail,18,43,524,48)
 	_stage_banner.hide()
 	_build_rewards()
 	_build_results()
@@ -1250,7 +1260,7 @@ func _layout() -> void:
 	_place(_pause_button, w - 130, 27, 100, 39)
 	_place(_mode_button, w - 170, 79, 140, 33)
 	_place(_enemy_panel, (w - 500) * 0.5, 29, 500, 65)
-	_place(_stage_panel,26,24,300,111)
+	_place(_stage_panel,26,24,300,150)
 	_place(_player_panel, 36, h - 154, 290, 120)
 	_place(_left, 38, h - 248, 72, 72)
 	_place(_right, 124, h - 248, 72, 72)
@@ -1305,7 +1315,7 @@ func _layout() -> void:
 	_place(_cinematic_bottom,0,h-70,w,70)
 	_place(_ultimate_title,42,h-65,420,40)
 	_place(_ultimate_tag,44,h-27,420,18)
-	_place(_stage_banner,(w-560)*0.5,108,560,76)
+	_place(_stage_banner,(w-560)*0.5,108,560,100)
 	_reward_overlay.size = _ui.size
 	var reward_scale: float = minf(1.0,(w-50.0)/1000.0)
 	_reward_group.scale = Vector2.ONE * reward_scale
@@ -1521,6 +1531,8 @@ func _update_campaign(ultimate: bool) -> void:
 	var best_score: int = int(_campaign.get("bestScore",0))
 	_menu_hint.text = "最佳 %s / %d 分" % [str(_campaign.get("bestRank","")),best_score] if best_score > 0 else "短篇试炼   /   键鼠 · 触屏"
 	_stage_panel.visible = _started and _phase == "fight"
+	_stage_rule.visible = _campaign_mode == "trial"
+	_stage_goal.visible = _campaign_mode == "trial"
 	if _campaign_mode == "trial":
 		_stage_title.text = "%02d / %02d  %s" % [stage+1,total,region]
 		_stage_objective.text = "击败识之律者" if stage==total-1 else "击破幻身   剩余 %d / %d" % [int(_campaign.get("enemiesRemaining",1)),int(_campaign.get("totalEnemies",1))]
@@ -1535,6 +1547,14 @@ func _update_campaign(ultimate: bool) -> void:
 		else:
 			_stage_boons.text = "%s %d/%d%s" % [str(objective.get("title","小识的考验")),int(objective.get("progress",0)),int(objective.get("target",1))," 已达成" if objective.get("complete",false) else ""]
 		_stage_boons.tooltip_text = str(objective.get("title", "")) + "\n" + str(objective.get("bonus", ""))
+		var encounter_rule: Dictionary = _campaign.get("encounterRule",{})
+		_stage_rule.text = "%s · %s" % [str(_campaign.get("arrangementTitle","")),str(encounter_rule.get("title",""))]
+		_stage_rule.tooltip_text = str(encounter_rule.get("description",""))
+		var extra_goal: Dictionary = _campaign.get("encounterObjective",{})
+		var goal_label: String = {"deflect":"极限防御", "evade":"成功闪避", "combo":"连击", "swift":"限时获胜", "untouched":"少受伤获胜"}.get(str(extra_goal.get("id","")),"加试")
+		_stage_goal.text = "加试 · %s %s%s" % [goal_label,str(extra_goal.get("progressLabel",""))," ✓" if bool(extra_goal.get("complete",false)) else ""]
+		_stage_goal.tooltip_text = str(extra_goal.get("description",""))+"\n"+str(extra_goal.get("bonus",""))
+		_stage_goal.add_theme_color_override("font_color",Color("b7dea6") if bool(extra_goal.get("complete",false)) else Color("a2acb5") if bool(extra_goal.get("failed",false)) else Color("d6dbc7"))
 	else:
 		_stage_title.text = "自由对练"
 		_stage_objective.text = "练习连击、格挡与闪避"
@@ -1561,6 +1581,10 @@ func _update_campaign(ultimate: bool) -> void:
 			_reward_subtitle.text = "选好这一招，听听小识怎么说。" + str(_campaign.get("supply",""))
 			var achievement: Dictionary=_campaign.get("lastAchievement",{})
 			if not achievement.is_empty(): _reward_subtitle.text="考验达成，额外补给已领取。选好下一招，听听小识怎么说。"
+			var extra_achievement: Dictionary=_campaign.get("lastEncounterAchievement",{})
+			if not extra_achievement.is_empty():
+				_reward_subtitle.text="%s达成 · 加试补给 8 SP / 75 分。选择下一项强化。" % str(extra_achievement.get("title","加试"))
+				if not achievement.is_empty(): _reward_subtitle.text="约定与加试均达成 · 补给 8 HP / 18 SP，额外 175 分。"
 			for index in range(_reward_buttons.size()):
 				var present: bool = index < rewards.size()
 				_reward_buttons[index].release_focus()
@@ -1591,6 +1615,8 @@ func _update_campaign(ultimate: bool) -> void:
 			_result_values[index].text = values[index]
 		_result_boons.text = "本轮强化：" + " / ".join(boons) if not boons.is_empty() else ("自由对练 · 继续磨炼出手与防御时机" if practice else "本轮未获得强化")
 		if not practice:
+			var extra_count: int=_campaign.get("encounterAchievements",[]).size()
+			if extra_count>0: _result_boons.text+="\n本轮加试：%d / 6 达成" % extra_count
 			var titles: Array=_campaign.get("unlockedTitles",[])
 			if not titles.is_empty(): _result_boons.text+="\n识境称号："+" / ".join(PackedStringArray(titles))
 		_result_boons.tooltip_text = _result_boons.text

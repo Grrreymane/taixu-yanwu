@@ -54,6 +54,11 @@ func _ready() -> void:
 	for key: String in NIGHT_FILES:
 		var path: String="res://assets/vfx/night-squire-native/"+str(NIGHT_FILES[key])+".png"
 		if ResourceLoader.exists(path): native_textures[key]=load(path)
+	# These original C4_Dress01 end-burst dependencies were already exported
+	# alongside the sword mesh. Their atlas/alpha are shared flame artwork.
+	for entry: Array in [["phoenix_flame","Fire_1"],["phoenix_explosion","explosionpoint1"]]:
+		var path: String="res://assets/phoenix-fire-sword/vfx/"+str(entry[1])+".png"
+		if ResourceLoader.exists(path): native_textures[str(entry[0])]=load(path)
 	native_sphere=load("res://assets/vfx/native/Sphere002-morph.res")
 	lightning.setup(self)
 	for key: String in SOUND_LEVELS:
@@ -290,6 +295,7 @@ func _stamp(key: String, origin: Vector3, size: Vector2, color: Color, life: flo
 	mat.set_shader_parameter("tint",color)
 	mat.set_shader_parameter("mask_mode",int(settings.get("mask",0)))
 	mat.set_shader_parameter("source_rgb",bool(settings.get("rgb",false)))
+	mat.set_shader_parameter("energy_core",bool(settings.get("energy_core",false)))
 	mat.set_shader_parameter("flip_x",not bool(settings.get("arc",false)) and float(settings.get("facing",1.0))<0.0)
 	mat.set_shader_parameter("uv_transform",settings.get("uv",Vector4(1,1,0,0)))
 	mat.set_shader_parameter("uv_velocity",settings.get("uv_velocity",Vector2.ZERO))
@@ -419,10 +425,19 @@ func _native_ultimate(data: Dictionary) -> void:
 	var x: float=float(data.get("x",0.0))
 	var target_x: float=float(data.get("targetX",x+1.0))
 	var mid: float=(x+target_x)*0.5
+	var facing: float=_facing(data)
 	_sound("ultimate")
 	# The actual C5 landscape and mountain layers replace the training set during the cinematic.
 	_stamp("landscape",Vector3(mid,3.6,-7.0),Vector2(60,24),Color.WHITE,3.42,{"rgb":true,"grow":1.0,"fade_in":0.01,"fade_start":0.99,"priority":-20})
 	_stamp("mountains",Vector3(mid,1.2,-2.8),Vector2(24,6),Color.WHITE,3.38,{"rgb":true,"grow":1.0,"fade_in":0.08,"fade_start":0.95,"priority":-10})
+	# Reuse the C5 brush/taiji source art in a spatial gathering composition.
+	# The emitter paths are authored for this arena; the sphere still uses the
+	# extracted mesh, morph and original motion curves below.
+	_stamp("taiji",Vector3(x,0.065,0),Vector2.ONE*4.8,Color(1,1,1,0.78),1.75,{"rgb":true,"ground":true,"delay":0.20,"grow":0.3,"spin_speed":-0.65*facing,"fade_start":0.8,"role":"ink_seal"})
+	for layer: int in 3:
+		var phase: float=float(layer)*TAU/3.0
+		_stamp("brush",Vector3(x,3.45,-0.42),Vector2(2.5,0.75),Color(BLACK,0.76),1.35,{"arc":true,"delay":0.26+layer*0.10,"grow":0.5,"angle":phase,"spin_speed":-2.0*facing,"orbit":Vector3(0.60,0.24,0.38),"orbit_phase":phase,"orbit_speed":2.6*facing,"fade_start":0.74,"dissolve":true,"role":"ink_gather"})
+		_stamp("fluid",Vector3(x-facing*(1.15+layer*0.22),0.5+layer*0.32,-0.35),Vector2(1.9,0.40),Color(BLACK,0.68),0.72,{"delay":0.35+layer*0.22,"uv":Vector4(1,0.5,0,0),"facing":facing,"angle":facing*0.72,"velocity":Vector3(facing*0.8,1.8,0),"grow":0.35,"dissolve":true,"role":"ink_lift"})
 	# Prefab-local stages: 0.25 s opening, 1.65 s Sphere_Ani,
 	# 1.85 s End and 2.5 s ground impact. Space is fitted to the side-view arena.
 	_native_sphere(Vector3(x,3.55,-0.32),Vector3(x,3.75,-0.32),0.10,1.55,0.72,false)
@@ -433,6 +448,7 @@ func _native_ultimate(data: Dictionary) -> void:
 		_stamp("brush",Vector3(mid,0.3+float(i%2)*0.35,-0.4),Vector2(4.1,1.45),Color(BLACK,0.6),0.7,{"arc":true,"delay":delay,"angle":float(i)*1.9,"spin_speed":-1.7,"grow":0.3,"dissolve":true})
 		_stamp("brush",Vector3(x,3.6,-0.35),Vector2(2.7,1.8),Color(PAPER,0.65),0.7,{"arc":true,"delay":delay,"angle":float(i)*2.1,"spin_speed":2.0,"grow":0.3})
 	_stamp("fluid",Vector3(target_x,2.15,-0.1),Vector2(3.0,1.0),Color(BLACK,0.6),0.6,{"uv":Vector4(1,0.5,0,0),"delay":1.85,"angle":PI/2.0,"grow":0.7,"dissolve":true})
+	_stamp("brush",Vector3(target_x,2.3,-0.5),Vector2(3.7,2.5),Color(BLACK,0.7),0.60,{"arc":true,"delay":1.72,"angle":0.7,"spin_speed":-4.2*facing,"grow":0.50,"dissolve":true,"role":"ink_release"})
 	_stamp("impact",Vector3(target_x,0.08,0),Vector2.ONE*6.6,BLACK,0.65,{"delay":2.5,"ground":true,"grow":0.25,"dissolve":true})
 	_stamp("drops",Vector3(target_x,0.65,-0.10),Vector2(5.2,2.2),BLACK,0.6,{"delay":2.63,"grow":0.3,"dissolve":true})
 
@@ -757,6 +773,14 @@ func _night_activation(data: Dictionary) -> void:
 	var x:=float(data.get("x",0.0))
 	_sound("ultimate")
 	_stamp("night_ring",Vector3(x,0.05,0),Vector2.ONE*2.4,Color(0.90,0.78,0.55,0.72),1.30,{"ground":true,"grow":1.25,"fade_in":0.12,"fade_start":0.80,"style":"night_squire","role":"burst_ready","annulus":true})
+	# ND is a power-up, so the native trails spiral toward the fighter rather
+	# than pretending to strike the untouched enemy during the activation.
+	for index: int in 4:
+		var phase: float=float(index)*TAU/4.0
+		_stamp("night_burst_trail",Vector3(x,0.80,-0.20),Vector2(1.35,0.32),Color(1.0,0.54,0.20,0.72),1.03,{"delay":0.16+index*0.05,"arc":true,"orbit":Vector3(0.62,0.25,0.46),"orbit_phase":phase,"orbit_speed":4.0,"velocity":Vector3(0,0.62,0),"angle":phase,"spin_speed":3.2,"grow":1.20,"fade_start":0.82,"style":"night_squire","role":"burst_gather"})
+	for side: float in [-1.0,1.0]:
+		_stamp("night_burst_trail",Vector3(x+side*0.42,0.95,-0.25),Vector2(0.36,2.1),Color(1.0,0.56,0.20,0.70),0.43,{"delay":1.03,"velocity":Vector3(side*0.30,0.35,0),"grow":0.35,"style":"night_squire","role":"burst_flare"})
+		_stamp("night_smoke",Vector3(x+side*0.30,0.16,0.1),Vector2(1.5,0.5),Color(0.80,0.85,0.91,0.45),0.55,{"delay":1.03,"velocity":Vector3(side*1.8,0.05,0),"grow":0.5,"style":"night_squire","role":"burst_pressure"})
 	for index in 5:
 		var side:float=-1.0 if index%2==0 else 1.0
 		_stamp("night_rays",Vector3(x+side*0.25,0.55+float(index)*0.27,0.25),Vector2.ONE*0.10,Color(1.0,0.65,0.32,0.85),0.50,{"delay":0.25+float(index)*0.11,"velocity":Vector3(0,0.65,0),"grow":0.4,"style":"night_squire","role":"burst_ready"})
@@ -830,6 +854,10 @@ func tick(delta: float) -> void:
 				mat.set_shader_parameter("opacity",minf(1.0,SPHERE_MOTION.sample(SPHERE_MOTION.ALPHA,source_time)*2.0)*(1.0-smoothstep(0.75,1.0,source_time)))
 		elif str(item.mode) == "native":
 			var age: float=maxf(0.0,float(item.time))
+			if settings.has("atlas_grid"):
+				var grid: Vector2=settings.atlas_grid
+				var frame: int=mini(int(grid.x*grid.y)-1,int(p*float(settings.get("atlas_frames",grid.x*grid.y))))
+				mat.set_shader_parameter("uv_transform",Vector4(1.0/grid.x,1.0/grid.y,float(frame%int(grid.x))/grid.x,float(frame/int(grid.x))/grid.y))
 			var fade_in: float=maxf(0.005,float(settings.get("fade_in",0.025)))
 			var fade_start: float=float(settings.get("fade_start",0.52))
 			var alpha: float=(1.0 if bool(settings.get("instant",false)) else smoothstep(0.0,fade_in,age))*(1.0-smoothstep(fade_start,1.0,p))
@@ -840,6 +868,10 @@ func tick(delta: float) -> void:
 			node.scale=item.base_scale*lerpf(start,1.0,1.0-pow(1.0-p,3.0))
 			var velocity: Vector3=settings.get("velocity",Vector3.ZERO)
 			node.position=Vector3(item.origin)+velocity*age
+			if settings.has("orbit"):
+				var radii: Vector3=settings.orbit
+				var phase: float=float(settings.get("orbit_phase",0.0))+age*float(settings.get("orbit_speed",2.0))
+				node.position+=Vector3(cos(phase)*radii.x,sin(phase)*radii.y,sin(phase)*radii.z)
 			if not follow.is_empty() and _fighters.has(follow):
 				node.position.x=float(_fighters[follow].get("x",node.position.x))+float(settings.get("follow_offset",0.0))
 			var spin: float=float(settings.get("spin_speed",0.0))*age
@@ -899,12 +931,18 @@ func _fire_ring(x: float, diameter: float, life: float, delay: float = 0.0) -> v
 		_fire_card(3,Vector3(x,0.045,0),Vector2(diameter,diameter*0.72),Color(FLAME,0.66),life,settings)
 
 func _fire_wings(origin: Vector3, facing: float, scale_factor: float, life: float, delay: float = 0.0) -> void:
-	# Six tapered feather strokes leave the middle/face open, behind the body.
+	# Native flame atlas cells replace the old six smooth procedural wedges.
+	# Distinct trailing feathers leave the middle/face open, behind the body.
 	for side: float in [-1.0,1.0]:
 		for index: int in 3:
 			var spread: float = (0.60+float(index)*0.29)*scale_factor
 			var position: Vector3 = origin+Vector3(side*spread,(0.36+float(index)*0.28)*scale_factor,0)
-			_fire_card(6,position,Vector2((1.35-float(index)*0.12)*scale_factor,0.85*scale_factor),EMBER if index==2 else FLAME,life,{"angle":side*(0.60+float(index)*0.16),"delay":delay,"grow":0.42,"velocity":Vector3(side*0.18,0.32,0),"role":"phoenix_feather","secondary":FIRE_LIGHT})
+			var options: Dictionary={"angle":side*(0.60+float(index)*0.16),"delay":delay+index*0.035,"grow":0.42,"velocity":Vector3(side*0.18,0.32,0),"role":"phoenix_feather","facing":side,"uv":Vector4(0.5,0.5,float(index%2)*0.5,float(index/2)*0.5),"fade_start":0.72}
+			options.energy_core=true
+			if native_textures.has("phoenix_fist"):
+				_fire_stamp("phoenix_fist",position,Vector2((1.65-float(index)*0.14)*scale_factor,0.62*scale_factor),Color(1.0,0.40 if index==2 else 0.64,0.13,0.82),life,options)
+			else:
+				_fire_card(6,position,Vector2((1.35-float(index)*0.12)*scale_factor,0.85*scale_factor),EMBER if index==2 else FLAME,life,options)
 	_fire_card(6,origin+Vector3(0,0.16,0.02),Vector2(0.74*scale_factor,0.15*scale_factor),FIRE_LIGHT,life*0.72,{"angle":PI*0.5+0.12*facing,"delay":delay,"grow":0.65,"role":"phoenix_core"})
 
 func _fire_sweep(data: Dictionary, switching: bool = false) -> void:
@@ -962,7 +1000,21 @@ func _fire_impact(data: Dictionary) -> void:
 	if not cinematic: _compact_last_particles(0.28 if strong else 0.18,2.5 if strong else 1.8,1.2)
 	if strong: _fire_ring(origin.x,4.2 if final else 2.2,0.46 if final else 0.32)
 	if final: _fire_wings(Vector3(origin.x,0.85,-0.45),facing,1.55,0.58)
+	if cinematic: _fire_landing(origin.x,facing,final)
 	_sound("heavy" if cinematic else _hit_sound(data))
+
+func _fire_landing(x: float,facing: float,final: bool) -> void:
+	# The actual hit event owns the explosion, including the very first frame.
+	# Ordinary hit sparks remain compact; Q gets a distinct original fire atlas
+	# silhouette and outward jets below the standing enemy's face.
+	var strength: float=1.22 if final else 1.0
+	_fire_stamp("phoenix_explosion",Vector3(x,0.30,-0.34),Vector2(2.45,1.25)*strength,Color(1.0,0.72,0.33,0.76),0.24,{"instant":true,"grow":0.85,"fade_start":0.30,"role":"ultimate_flame_core"})
+	for index: int in 5:
+		var side: float=float(index-2)
+		var height: float=0.80 if index==2 else 1.15
+		_fire_stamp("phoenix_flame",Vector3(x+side*0.48,height*0.45,-0.38),Vector2(1.25,height)*strength,Color(1.0,0.92,0.80,0.94),0.52+absf(side)*0.035,{"instant":true,"grow":0.88,"uv":Vector4(0.25,0.25,0,0),"atlas_grid":Vector2(4,4),"atlas_frames":16,"angle":-side*0.18,"velocity":Vector3(side*0.60,0.52,0),"fade_start":0.80,"role":"ultimate_flame_plume"})
+	for side: float in [-1.0,1.0]:
+		_fire_stamp("phoenix_fist",Vector3(x+side*0.75,0.42,0.45),Vector2(3.4,0.68)*strength,Color(1.0,0.76,0.25,0.93),0.33,{"uv":Vector4(0.5,0.5,0,0),"instant":true,"grow":0.95,"facing":-side,"angle":side*0.11,"energy_core":true,"velocity":Vector3(side*2.8,0.1,0),"fade_start":0.50,"role":"ultimate_flame_outburst"})
 
 func _fire_dodge(x: float, direction: float) -> void:
 	_fire_card(6,Vector3(x-direction*0.45,0.65,-0.12),Vector2(1.45,0.20),Color(FLAME,0.62),0.22,{"facing":direction,"velocity":Vector3(-direction*0.45,0.1,0),"role":"fire_dodge"})
@@ -977,6 +1029,9 @@ func _fire_ultimate(data: Dictionary) -> void:
 	_fire_wings(Vector3(x,1.80,-0.42),facing,1.18,1.12,0.35)
 	_fire_wings(Vector3(x,1.70,-0.48),facing,1.72,1.05,0.95)
 	_fire_ring(x,3.9,0.70,1.15)
+	for side: float in [-1.0,1.0]:
+		_fire_stamp("phoenix_arc",Vector3(x+side*0.50,0.85,-0.38),Vector2(2.0,0.6),Color(1.0,0.67,0.24,0.84),0.75,{"uv":Vector4(1,0.25,0,0.5),"arc":true,"delay":0.40,"orbit":Vector3(0.48,0.30,0.28),"orbit_phase":0.0 if side<0.0 else PI,"orbit_speed":3.6*facing,"velocity":Vector3(0,0.8,0),"spin_speed":-2.3*facing,"grow":0.55,"role":"fire_gather"})
+		_fire_stamp("phoenix_fist",Vector3(x+side*0.4,1.8,-0.35),Vector2(3.1,0.7),Color(1,0.71,0.28,0.85),0.33,{"uv":Vector4(0.5,0.5,0,0),"delay":1.72,"angle":-side*0.25,"facing":facing,"velocity":Vector3((target_x-x)/0.38,-0.4,0),"grow":0.55,"role":"fire_native_launch"})
 	_fire_card(6,Vector3(x,1.55,-0.25),Vector2(1.75,0.28),FLAME,0.46,{"delay":1.72,"velocity":Vector3((target_x-x)/0.38,0.0,0.0),"facing":facing,"role":"fire_launch"})
 	_fire_wings(Vector3(target_x,0.60,-0.48),facing,1.3,0.57,2.23)
 	_fire_particles(Vector3(target_x,0.75,-0.15),18,facing,true,true,2.32)

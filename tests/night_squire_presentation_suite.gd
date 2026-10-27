@@ -78,15 +78,19 @@ func _camera_contract() -> void:
 				check(final.position.is_equal_approx(battle.position) and final.target.is_equal_approx(battle.target) and is_equal_approx(final.fov,battle.fov) and is_equal_approx(final.roll,battle.roll),"Q returns to supplied battle framing within float precision %s"%str([aspect,facing,x]))
 				for at: float in [0.0,0.1,0.2,0.55,1.05,1.3,Camera.DURATION]:
 					var frame: Dictionary=Camera.sample(at,focus)
-					check(frame.position.is_finite() and frame.target.is_finite() and is_finite(frame.fov) and is_finite(frame.roll) and frame.position.z>=4.8 and frame.fov>=34.0 and frame.fov<=36.5,"finite front-side framing %s"%str([aspect,facing,x,at]))
+					check(frame.position.is_finite() and frame.target.is_finite() and is_finite(frame.fov) and is_finite(frame.roll) and frame.position.z>=3.5 and frame.fov>=31.0 and frame.fov<=38.0,"finite front-side framing %s"%str([aspect,facing,x,at]))
 					check(frame==Camera.sample(at,focus),"paused Q framing is deterministic %s"%str([aspect,facing,x,at]))
 					var head:=_project(frame,Vector3(x,2.85,0.0),aspect)
-					var feet:=_project(frame,Vector3(x,0.05,0.0),aspect)
-					check(absf(head.x)<0.98 and absf(head.y)<0.98 and absf(feet.x)<0.98 and absf(feet.y)<0.98,"head and feet remain in framing %s"%str([aspect,facing,x,at]))
-				for boundary: float in [0.20,Camera.RETURN_AT,Camera.DURATION]:
+					var lower:=_project(frame,Vector3(x,1.4 if frame.get("composition", "full")=="portrait" else 0.05,0.0),aspect)
+					check(absf(head.x)<0.98 and absf(head.y)<0.98 and absf(lower.x)<0.98 and absf(lower.y)<0.98,"portrait frames torso and head; release frames the complete body %s"%str([aspect,facing,x,at]))
+				for boundary: float in [0.10,Camera.RETURN_AT,Camera.DURATION]:
 					var before: Dictionary=Camera.sample(boundary-0.00001,focus)
 					var after: Dictionary=Camera.sample(boundary+0.00001,focus)
 					check(before.position.distance_to(after.position)<0.002 and absf(before.fov-after.fov)<0.002,"camera joins remain continuous %s"%str([aspect,facing,x,boundary]))
+				for boundary: float in Camera.CUTS:
+					var before:=Camera.sample(boundary-0.00001,focus)
+					var after:=Camera.sample(boundary+0.00001,focus)
+					check(before.position.distance_to(after.position)>0.5 and after.composition=="full","burst release uses a deliberate wider cut")
 	for at: float in [0.0,0.1,0.55,1.3,Camera.DURATION]:
 		var right: Dictionary=Camera.sample(at,{"playerX":-0.7,"facing":1.0,"aspect":1.6,"entry":{},"battle":BattleCamera.frame(-0.7,[0.6],1.6)})
 		var left: Dictionary=Camera.sample(at,{"playerX":0.7,"facing":-1.0,"aspect":1.6,"entry":{},"battle":BattleCamera.frame(0.7,[-0.6],1.6)})
@@ -116,7 +120,11 @@ func _effect_contract() -> void:
 	check(fx.snapshot().textureKeys==["night_trail"] and _no_ink(fx),"E releases its native C3 trail at the actual first leg contact")
 	fx.clear()
 	fx.handle_event(_event("ultimate"))
-	check(fx.active.size()==6 and _no_ink(fx),"Q activation uses only C3 floor light and five rising lights, with no C5 ink")
+	check(fx.active.size()<=24 and _no_ink(fx),"Q activation uses bounded C3 layers without C5 ink")
+	var roles: Array=[]
+	for item: Dictionary in fx.active:
+		if not roles.has(item.settings.get("role","")): roles.append(item.settings.get("role",""))
+	check(roles.has("burst_gather") and roles.has("burst_flare") and roles.has("burst_pressure"),"Q gathers, flares and releases floor pressure using original C3 art")
 	check(fx.active.all(func(item):return not bool(item.settings.get("contact",false))),"Q's non-damaging activation cannot fabricate hit flashes")
 	var frozen: Dictionary=fx.snapshot()
 	fx.tick(0.0)

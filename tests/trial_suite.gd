@@ -145,7 +145,7 @@ func _run_trial(policy: String) -> Dictionary:
   var remaining_energy: float=game.player.energy
   campaign.finish(game.snapshot())
   var bonus_hp: float=campaign.last_achievement.get("bonusHp",0.0)
-  var bonus_sp: float=campaign.last_achievement.get("bonusSp",0.0)
+  var bonus_sp: float=campaign.last_achievement.get("bonusSp",0.0)+campaign.last_encounter_achievement.get("bonusSp",0.0)
   check(is_equal_approx(campaign.carry.hp,minf(game.player.maxHp,remaining_hp+Campaign.CLEAR_HEAL+bonus_hp)),"clear restores base HP plus earned contract supply within maximum")
   check(is_equal_approx(campaign.carry.energy,minf(100.0,remaining_energy+20.0+bonus_sp)),"clear carries SP plus base and earned contract supply")
   if stage<campaign.stages.size()-1:

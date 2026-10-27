@@ -9,6 +9,7 @@ class FlameProbe extends "res://scripts/effects.gd":
 	func _ready() -> void:
 		rng.seed = 3103
 		_quad.size = Vector2.ONE
+		lightning.setup(self)
 	func _sound(key: String) -> void:
 		heard.append(key)
 
@@ -159,7 +160,9 @@ func _native_texture_contract() -> void:
 		check(arc.mat.get_shader_parameter("mask_mode")==0 and arc.base_scale.y<0.5 and arc.node.position.z<0.0,"native kick uses original alpha and a narrow arc behind the body")
 		fx.clear()
 	fx.handle_event(_event("ultimate"))
-	check(fx.active.size()<=30 and fx.snapshot().fireNativeCount==1,"Q replaces its first floor ring without adding excess cards")
+	check(fx.active.size()<=36 and fx.snapshot().fireNativeCount>=1,"Q uses bounded native C4 layers")
+	check(_roles(fx,"phoenix_feather").all(func(item: Dictionary):return item.mode=="native" and item.texture=="phoenix_fist"),"Q wing feathers use original atlas cells rather than smooth placeholder wedges")
+	check(_roles(fx,"fire_gather").size()==2 and _roles(fx,"fire_native_launch").size()==2,"Q distinguishes gathering and forward release")
 	for ring: Dictionary in _roles(fx,"ground_flame"):
 		check(ring.mode=="native" and ring.texture=="phoenix_ring" and ring.settings.ground and ring.mat.get_shader_parameter("mask_mode")==0,"Q floor ring uses the original hollow ring alpha")
 	var ring_texture: Texture2D=fx.native_textures.phoenix_ring
@@ -185,7 +188,10 @@ func _camera_contract() -> void:
 			for boundary: float in [0.22,0.75,1.65,2.10,2.25,2.45,2.82,2.97,3.15]:
 				var before: Dictionary = Camera.sample(boundary-0.000001,focus)
 				var after: Dictionary = Camera.sample(boundary+0.000001,focus)
-				check(Vector3(before.position).distance_to(Vector3(after.position))<0.001 and absf(float(before.fov)-float(after.fov))<0.001, "camera shot joins are continuous %.2f / %.2f / %.0f" % [boundary,aspect,side])
+				if Camera.CUTS.has(boundary):
+					check(Vector3(before.position).distance_to(Vector3(after.position))>0.3 and after.composition=="full","native impact makes a deliberate full-body angle cut")
+				else:
+					check(Vector3(before.position).distance_to(Vector3(after.position))<0.001 and absf(float(before.fov)-float(after.fov))<0.001, "camera shot joins are continuous %.2f / %.2f / %.0f" % [boundary,aspect,side])
 	for at: float in [0.2,0.55,1.5,2.17,2.89,3.5]:
 		var right: Dictionary = Camera.sample(at,{"playerX":-0.7,"targetX":0.65,"facing":1})
 		var left: Dictionary = Camera.sample(at,{"playerX":0.7,"targetX":-0.65,"facing":-1})
@@ -197,4 +203,4 @@ func _camera_contract() -> void:
 		var focus := {"playerX":edge,"targetX":edge-signf(edge)*1.4,"facing":-signf(edge),"aspect":16.0/9.0}
 		for at: float in [0.22,1.5,2.1,2.82]:
 			var frame: Dictionary = Camera.sample(at,focus)
-			check(frame.position.z>=4.9 and absf(float(frame.target.x)-edge)<1.5, "arena-edge camera stays clear of actors and near the fight %.2f / %.2f" % [edge,at])
+			check(frame.position.z>=3.5 and absf(float(frame.target.x)-edge)<1.5, "arena-edge camera stays clear of actors and near the fight %.2f / %.2f" % [edge,at])

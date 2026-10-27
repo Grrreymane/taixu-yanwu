@@ -1,12 +1,14 @@
 extends RefCounted
 
+const EncounterVariants=preload("res://scripts/encounter_variants.gd")
+
 const SAVE_PATH := "user://taixu_record.cfg"
 const CLEAR_HEAL := 6.0
 const REGIONS := ["晨岚台", "竹影庭", "赤霄坛"]
 const CONTRACTS := {
- "mirror":{"id":"mirror","title":"明镜之约","description":"极限防御后的追击伤害提高 20%。识律幻身偏重正面压制。","rule":"防反追击伤害 +20%","objective":"完成 2 次极限防御","stat":"parries","target":2.0,"reward":"riposte"},
- "flow":{"id":"flow","title":"流转之约","description":"成功闪避攻击，立即缩短 E 冷却 1 秒。追袭幻身更常出现。","rule":"成功闪避使 E 冷却减少 1 秒","objective":"成功闪避 2 次攻击","stat":"dodges","target":2.0,"reward":"windstep"},
- "breaker":{"id":"breaker","title":"破阵之约","description":"架势伤害提高 20%。更多守御幻身，需要重击打开破绽。","rule":"架势伤害 +20%","objective":"打出 6 连击","stat":"maxCombo","target":6.0,"reward":"finisher"}
+ "mirror":{"id":"mirror","title":"明镜之约","description":"极限防御后的追击伤害提高 20%。完成约定可获额外补给。","rule":"防反追击伤害 +20%","objective":"完成 2 次极限防御","stat":"parries","target":2.0,"reward":"riposte"},
+ "flow":{"id":"flow","title":"流转之约","description":"成功闪避攻击，立即缩短 E 冷却 1 秒。完成约定可获额外补给。","rule":"成功闪避使 E 冷却减少 1 秒","objective":"成功闪避 2 次攻击","stat":"dodges","target":2.0,"reward":"windstep"},
+ "breaker":{"id":"breaker","title":"破阵之约","description":"架势伤害提高 20%。完成约定可获额外补给。","rule":"架势伤害 +20%","objective":"打出 6 连击","stat":"maxCombo","target":6.0,"reward":"finisher"}
 }
 const REWARDS := {
  "fist":{"id":"fist","title":"寸心如锋","description":"所有攻击伤害提高 16%。"},
@@ -45,6 +47,9 @@ var unlocked_titles: Array[String] = []
 var reward_ids: Array[String] = []
 var achievements: Array[Dictionary] = []
 var last_achievement: Dictionary = {}
+var encounter_achievements: Array[Dictionary] = []
+var last_encounter_achievement: Dictionary = {}
+var last_encounter_stats: Dictionary = {}
 
 func _init() -> void:
  _load_record()
@@ -60,6 +65,9 @@ func _reset_run() -> void:
  reward_ids.clear()
  achievements.clear()
  last_achievement={}
+ encounter_achievements.clear()
+ last_encounter_achievement={}
+ last_encounter_stats={}
  reward_options.clear()
  totals={"kills":0,"parries":0,"dodges":0,"maxCombo":0,"damageTaken":0.0,"damageDealt":0.0,"elapsed":0.0,"retries":0,"achievementScore":0}
  last_stats={}
@@ -133,6 +141,9 @@ func encounter() -> Dictionary:
 func finish(state: Dictionary) -> void:
  if phase!="fight": return
  var live: Dictionary=state.get("stats",{})
+ last_encounter_stats=live.duplicate(true)
+ last_achievement={}
+ last_encounter_achievement={}
  last_stats=_combined_stats(live)
  if mode=="practice":
   phase="cleared" if state.get("winner","")=="player" else "failed"
@@ -145,7 +156,6 @@ func finish(state: Dictionary) -> void:
  carry.hp=minf(float(player.get("maxHp",120.0)),float(player.get("hp",0.0))+CLEAR_HEAL)
  carry.maxHp=float(player.get("maxHp",120.0))
  carry.energy=minf(100.0,float(player.get("energy",0.0))+20.0)
- last_achievement={}
  var goal:=objective(live,true)
  if bool(goal.complete):
   last_achievement={"id":"%s_%d"%["+".join(selected_contract_ids),stage_index],"title":"诸约皆成" if selected_contract_ids.size()>1 else "契约达成 · "+str(CONTRACTS[selected_contract].title),"description":"额外恢复 8 HP 与 10 SP，结算加 100 分。","bonusHp":8.0,"bonusSp":10.0,"score":100}
@@ -153,6 +163,12 @@ func finish(state: Dictionary) -> void:
   carry.hp=minf(carry.maxHp,carry.hp+8.0)
   carry.energy=minf(100.0,carry.energy+10.0)
   totals.achievementScore=int(totals.get("achievementScore",0))+100
+ var encounter_goal:=encounter_objective(live,true)
+ if bool(encounter_goal.get("awarded",false)):
+  last_encounter_achievement={"id":"encounter_%d_%s"%[stage_index,encounter_goal.id],"title":"挑战达成 · "+str(encounter_goal.title),"description":"额外获得 8 SP，结算加 75 分。","bonusHp":0.0,"bonusSp":8.0,"score":75}
+  encounter_achievements.append(last_encounter_achievement.duplicate(true))
+  carry.energy=minf(100.0,carry.energy+8.0)
+  totals.achievementScore=int(totals.get("achievementScore",0))+75
  if stage_index>=stages.size()-1:
   phase="cleared"
   var result: Dictionary=_scored(totals)
@@ -240,6 +256,7 @@ func retry() -> bool:
  phase="fight"
  last_stats={}
  last_achievement={}
+ last_encounter_achievement={}
  return true
 
 func _combined_stats(live: Dictionary) -> Dictionary:
@@ -281,6 +298,10 @@ func contract_options() -> Array:
  for id: String in CONTRACTS: result.append(CONTRACTS[id].duplicate(true))
  return result
 
+func encounter_objective(live: Dictionary={},won: bool=false) -> Dictionary:
+ if mode!="trial" or stages.is_empty(): return {}
+ return EncounterVariants.objective(stages[stage_index].get("encounterChallenge",{}),live,won)
+
 func snapshot(state: Dictionary) -> Dictionary:
  var stage: Dictionary=stages[stage_index]
  var alive:=0
@@ -288,7 +309,7 @@ func snapshot(state: Dictionary) -> Dictionary:
  for foe in foes:
   if float(foe.get("hp",0))>0: alive+=1
  var current: Dictionary=_combined_stats(state.get("stats",{})) if phase=="fight" else (last_stats if phase=="failed" or mode=="practice" else totals)
- return {"mode":mode,"phase":phase,"stageIndex":stage_index,"stageTotal":stages.size(),"title":stage.title if mode=="trial" else "自由对练","region":REGIONS[stage.regionIndex] if mode=="trial" else "晨岚台","regionIndex":stage.regionIndex if mode=="trial" else 0,"brief":stage.brief if mode=="trial" else "与识之律者切磋，T 切换木人模式。","enemiesRemaining":alive,"totalEnemies":foes.size(),"rewards":reward_options.duplicate(true),"stats":_scored(current),"boons":boons.duplicate(),"bestScore":best_score,"bestRank":best_rank,"supply":"过关补给：恢复 %d HP 与 20 SP"%int(CLEAR_HEAL),"contracts":contract_options(),"contract":CONTRACTS[selected_contract].duplicate(true),"contractId":selected_contract,"selectedContractIds":selected_contract_ids.duplicate(),"contractsUnlocked":completed_runs>0,"challengeLevel":challenge_level(),"challengeDescription":challenge_description(),"runSeed":run_seed,"runNumber":run_number,"completedRuns":completed_runs,"contractWins":contract_wins.duplicate(true),"unlockedTitles":unlocked_titles.duplicate(),"objective":objective(state.get("stats",{})) if mode=="trial" else {},"lastAchievement":last_achievement.duplicate(true),"achievements":achievements.duplicate(true),"rewardIds":reward_ids.duplicate()}
+ return {"mode":mode,"phase":phase,"stageIndex":stage_index,"stageTotal":stages.size(),"title":stage.title if mode=="trial" else "自由对练","region":REGIONS[stage.regionIndex] if mode=="trial" else "晨岚台","regionIndex":stage.regionIndex if mode=="trial" else 0,"brief":stage.brief if mode=="trial" else "与识之律者切磋，T 切换木人模式。","enemiesRemaining":alive,"totalEnemies":foes.size(),"rewards":reward_options.duplicate(true),"stats":_scored(current),"boons":boons.duplicate(),"bestScore":best_score,"bestRank":best_rank,"supply":"过关补给：恢复 %d HP 与 20 SP"%int(CLEAR_HEAL),"contracts":contract_options(),"contract":CONTRACTS[selected_contract].duplicate(true),"contractId":selected_contract,"selectedContractIds":selected_contract_ids.duplicate(),"contractsUnlocked":completed_runs>0,"challengeLevel":challenge_level(),"challengeDescription":challenge_description(),"runSeed":run_seed,"runNumber":run_number,"completedRuns":completed_runs,"contractWins":contract_wins.duplicate(true),"unlockedTitles":unlocked_titles.duplicate(),"objective":objective(state.get("stats",{})) if mode=="trial" else {},"lastAchievement":last_achievement.duplicate(true),"achievements":achievements.duplicate(true),"rewardIds":reward_ids.duplicate(),"encounterRule":stage.get("encounterRule",{}).duplicate(true) if mode=="trial" else {},"arrangementTitle":stage.get("arrangementTitle","") if mode=="trial" else "","encounterObjective":encounter_objective(state.get("stats",last_encounter_stats if phase in ["reward","cleared","failed"] else {}),phase in ["reward","cleared"]),"lastEncounterAchievement":last_encounter_achievement.duplicate(true),"encounterAchievements":encounter_achievements.duplicate(true)}
 
 func _load_record() -> void:
  var file:=ConfigFile.new()
@@ -353,30 +374,10 @@ func _make_stages(varied: bool=false) -> Array:
     foe.damageScale=float(foe.damageScale)*(1.0+0.10*challenge_level())
   _assign_weapon_roles(result[index],index,0)
  if not varied: return result
- var random:=RandomNumberGenerator.new()
- random.seed=run_seed
- var aliases: Dictionary={"striker":"迅击","guardian":"守御","duelist":"追袭"}
- var families: Array=["striker","guardian","duelist"]
- var alternatives: Array=[["初探","问招"],["夹击","错影"],["守门","试锋"],["逐影","回身"],["双锋","照心"]]
- for index in result.size():
-  var stage: Dictionary=result[index]
-  stage.variant=random.randi_range(0,1)
+ EncounterVariants.apply(result,run_seed)
+ for stage: Dictionary in result:
   stage.contract=selected_contract
   stage.contracts=selected_contract_ids.duplicate()
-  var favored: String={"mirror":"striker","flow":"duelist","breaker":"guardian"}[selected_contract_ids[index%selected_contract_ids.size()]]
-  if index<5:
-   stage.title="第%s试 · %s"%[["一","二","三","四","五"][index],alternatives[index][stage.variant]]
-   for foe_index in stage.enemies.size():
-    var foe: Dictionary=stage.enemies[foe_index]
-    # Keep the opening readable and the existing six-stage health budget.
-    foe.type="striker" if index==0 else favored if foe_index==0 else families[random.randi_range(0,2)]
-    foe.name="识律幻身 · "+str(aliases[foe.type])
-   stage.brief=challenge_description() if selected_contract_ids.size()>1 else str(CONTRACTS[selected_contract].rule)+"。"+str(CONTRACTS[selected_contract].objective)+"可获额外补给。"
-  # The same seed always reproduces the arrangement; retry never rerolls it.
-  if random.randi_range(0,1)==1:
-   stage.playerX=-float(stage.playerX)
-   for foe: Dictionary in stage.enemies: foe.x=-float(foe.x)
-  _assign_weapon_roles(stage,index,int(stage.variant))
  return result
 
 func _assign_weapon_roles(stage: Dictionary,index: int,variant: int) -> void:
