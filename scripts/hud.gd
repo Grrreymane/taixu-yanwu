@@ -152,6 +152,7 @@ var _menu_detail: Label
 var _menu_start: Button
 var _menu_restart: Button
 var _menu_practice: Button
+var _menu_new_trial: Button
 var _menu_hint: Label
 var _menu_back: Button
 var _music_button: Button
@@ -205,6 +206,7 @@ var _stage_objective: Label
 var _stage_boons: Label
 var _stage_rule: Label
 var _stage_goal: Label
+var _run_timer: Label
 var _stage_marks: Array[ColorRect] = []
 var _stage_banner := SlantPanel.new()
 var _banner_title: Label
@@ -229,6 +231,7 @@ var _result_values: Array[Label] = []
 var _result_tag: Label
 var _result_title: Label
 var _result_detail: Label
+var _result_record: Label
 var _result_again: Button
 var _result_secondary: Button
 var _result_replay: Button
@@ -475,7 +478,16 @@ func _build_menu() -> void:
 	_menu_practice = _rect_button(_menu,"与识之律者切磋")
 	_place(_menu_practice,26,319,286,37)
 	_menu_practice.pressed.connect(func(): _request_action("practice"))
+	_menu_new_trial = _rect_button(_menu,"开始新试炼")
+	_menu_new_trial.name = "NewTrial"
+	_menu_new_trial.add_theme_font_size_override("font_size",16)
+	_menu_new_trial.tooltip_text = "开始新一轮会替换当前未完成试炼的存档；已解锁内容和通关纪录保留。"
+	_menu_new_trial.pressed.connect(func():
+		if _phase == "menu" and _ready_to_play and not _started and not _paused:
+			_request_action("trial"))
+	_menu_new_trial.hide()
 	_menu_hint = _label(_menu, "短篇试炼   /   键鼠 · 触屏", 13, Color("9ebfd2"))
+	_menu_hint.mouse_filter = Control.MOUSE_FILTER_PASS
 	_place(_menu_hint, 28, 373, 285, 25)
 	_menu_back = _rect_button(_menu,"返回主页")
 	_menu_back.add_theme_font_size_override("font_size",13)
@@ -645,6 +657,14 @@ func presentation_snapshot() -> Dictionary:
 		"guideEntryRect":_rect_values(_viewport_pixel_rect(_menu_guide)),
 		"guideCloseRect":_rect_values(_viewport_pixel_rect(_guide_close)),
 		"voiceToggleRect":_rect_values(_viewport_pixel_rect(_voice_button)),
+		"continueVisible":_menu_mode == "intro" and bool(_campaign.get("resume",{}).get("available",false)),
+		"continueRect":_rect_values(_viewport_pixel_rect(_menu_start)),
+		"newTrialRect":_rect_values(_viewport_pixel_rect(_menu_new_trial)),
+		"newTrialVisible":_menu_new_trial.is_visible_in_tree(),
+		"menuPrimaryText":_menu_start.text,"saveText":_menu_hint.text,
+		"runTimerText":_run_timer.text,"runTimerVisible":_run_timer.is_visible_in_tree(),
+		"runTimerRect":_rect_values(_viewport_pixel_rect(_run_timer)),
+		"resultTimeText":_result_values[4].text,"recordText":_result_record.text,
 		"guidePanelRect":_rect_values(_viewport_pixel_rect(_guide_panel)),
 		"viewportSize":[pixels.size.x, pixels.size.y],
 		"primaryHealthVisible":_enemy_panel.is_visible_in_tree(), "primaryHealthId":str(_health_display.get("primaryId", "")),
@@ -1021,6 +1041,11 @@ func _build_campaign() -> void:
 	_stage_goal = _label(_stage_panel,"",11,Color("d6dbc7"))
 	_stage_goal.mouse_filter = Control.MOUSE_FILTER_PASS
 	_place(_stage_goal,14,120,270,20)
+	_run_timer = _label(_stage_panel,"通关计时  00:00.00",18,WHITE)
+	_run_timer.name = "RunTimer"
+	_run_timer.mouse_filter = Control.MOUSE_FILTER_PASS
+	_run_timer.tooltip_text = "累计战斗用时。暂停、剧情、选强化和开场倒计时不计时；重试保留已用时间。"
+	_place(_run_timer,14,146,270,27)
 	_stage_banner.tint = Color(0.035,0.11,0.18,0.91)
 	_stage_banner.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_ui.add_child(_stage_banner)
@@ -1116,6 +1141,10 @@ func _build_results() -> void:
 	_result_score = _label(_result_panel,"00000 分",37,WHITE)
 	_result_score.add_theme_font_override("font",_number_font)
 	_place(_result_score,222,174,296,53)
+	_result_record = _label(_result_panel,"",15,BLUE)
+	_result_record.name = "LocalTimeRecord"
+	_result_record.mouse_filter = Control.MOUSE_FILTER_PASS
+	_place(_result_record,222,222,296,25)
 	var divider := ColorRect.new()
 	divider.color = Color(BLUE,0.22)
 	divider.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -1243,6 +1272,8 @@ func _menu_primary() -> void:
 		_request_action("practice")
 	elif _phase == "cleared" or _ended:
 		_request_action("restart")
+	elif _phase == "menu" and bool(_campaign.get("resume",{}).get("available",false)):
+		_request_action("continue")
 	else:
 		_request_action("start")
 
@@ -1260,7 +1291,7 @@ func _layout() -> void:
 	_place(_pause_button, w - 130, 27, 100, 39)
 	_place(_mode_button, w - 170, 79, 140, 33)
 	_place(_enemy_panel, (w - 500) * 0.5, 29, 500, 65)
-	_place(_stage_panel,26,24,300,150)
+	_place(_stage_panel,26,24,300,180 if _campaign_mode == "trial" else 150)
 	_place(_player_panel, 36, h - 154, 290, 120)
 	_place(_left, 38, h - 248, 72, 72)
 	_place(_right, 124, h - 248, 72, 72)
@@ -1300,6 +1331,10 @@ func _layout() -> void:
 		_place(_appearance_choices[index], (index % appearance_columns)*(appearance_width+8.0), 278.0+(index / appearance_columns)*44.0, appearance_width, 36)
 	_place(_menu_start, 26, start_y if selecting else 250, inner_width, 50 if selecting else 55)
 	_place(_menu_practice, 26, start_y+62.0 if selecting else 319, inner_width, 37)
+	if _menu_new_trial.visible:
+		var half_width: float = (inner_width-10.0)*0.5
+		_place(_menu_new_trial,26,start_y+62.0 if selecting else 319,half_width,37)
+		_place(_menu_practice,36+half_width,start_y+62.0 if selecting else 319,half_width,37)
 	var guide_entry: bool = _menu_mode == "intro" and not _ko_active
 	_menu_guide.visible = guide_entry
 	_menu_guide.disabled = not _ready_to_play
@@ -1307,7 +1342,7 @@ func _layout() -> void:
 	_place(_music_button, 26, start_y+113.0 if selecting else 416, small_width if guide_entry else 139, 33)
 	_place(_voice_button, 144 if selecting else (122 if guide_entry else 173), start_y+113.0 if selecting else 416, small_width if guide_entry else 139, 33)
 	_place(_menu_guide, 262 if selecting else 218, start_y+113.0 if selecting else 416, 108 if selecting else 94, 33)
-	_place(_menu_hint, 28, start_y+158.0 if selecting else 373, inner_width, 25)
+	_place(_menu_hint, 28, start_y+153.0 if selecting else 364, inner_width, 43)
 	# Leave the enlarged battle silhouettes clear below the status strip.
 	_place(_notice, (w - 620) * 0.5, maxf(112.0, h * 0.145), 620, 55)
 	_cinematic.size = _ui.size
@@ -1352,6 +1387,7 @@ func _set_menu(mode: String, winner: String) -> void:
 	_menu_practice.visible = mode == "intro"
 	_menu_hint.visible = mode == "intro"
 	_menu_back.visible = mode in ["pause","failed","practice_end"]
+	_menu_new_trial.visible = mode == "intro" and bool(_campaign.get("resume",{}).get("available",false))
 	if mode != "intro":
 		_roster_group.hide()
 	if mode == "intro":
@@ -1485,6 +1521,7 @@ func update_status(data: Dictionary) -> void:
 	else:
 		_set_menu("", "")
 	_update_roster(data)
+	_update_run_record_ui()
 	_update_contracts()
 	_update_fighter_guide()
 	if _ko_active:
@@ -1522,14 +1559,50 @@ func _boon_names() -> PackedStringArray:
 		names.append(str(boon))
 	return names
 
+static func format_run_time(milliseconds: int) -> String:
+	var centiseconds: int = maxi(0,milliseconds)/10
+	return "%02d:%02d.%02d" % [centiseconds/6000,(centiseconds/100)%60,centiseconds%100]
+
+func _update_run_record_ui() -> void:
+	_run_timer.visible = _campaign_mode == "trial"
+	_run_timer.text = "通关计时  " + format_run_time(int(_campaign.get("runTimeMs",0)))
+	if _menu_mode != "intro": return
+	var resume: Dictionary = _campaign.get("resume",{})
+	var available: bool = bool(resume.get("available",false))
+	if _menu_new_trial.visible != available:
+		_menu_new_trial.visible = available
+		_layout()
+	_menu_new_trial.disabled = not _ready_to_play
+	_menu_practice.text = "自由对练" if available else "与识之律者切磋"
+	_menu_practice.add_theme_font_size_override("font_size",16 if available else 20)
+	_menu_start.add_theme_font_size_override("font_size",19 if available else 21)
+	_menu_start.text = ("继续试炼 · 第%02d战  ENTER" % (int(resume.get("stageIndex",0))+1) if available else "开始试炼  ENTER") if _ready_to_play else "资源载入中…"
+	var resuming_reward: bool = str(resume.get("phase","")) == "reward"
+	_menu_start.tooltip_text = ("继续选择原有强化，不重复发放通关补给。" if resuming_reward else "从本关开场继续，保留本轮装甲、强化与累计用时。") if available else "开始六场识境试炼。"
+	var save_line := "本地自动保存"
+	if available: save_line = "本地已保存 · 继续选择强化" if resuming_reward else "本地已保存 · 本关开场继续"
+	var save_status: String = str(_campaign.get("saveStatus","ready"))
+	match save_status:
+		"saved":
+			if not available: save_line = "本地已保存"
+		"recovered": save_line = "已恢复本地备份 · " + ("继续选择强化" if resuming_reward else "本关开场继续") if available else "已恢复本地备份"
+		"unavailable": save_line = "本地保存不可用 · 关闭后可能丢失"
+		"damaged": save_line = "旧存档损坏 · 新试炼可重新保存"
+		"incompatible": save_line = "存档版本较新 · 当前版本无法续玩"
+	_menu_hint.add_theme_color_override("font_color",Color("f0b88d") if save_status in ["unavailable","damaged","incompatible"] else Color("9ebfd2"))
+	var best_ms: int = int(_campaign.get("bestTimeMs",0))
+	var best_text: String = "最快 " + format_run_time(best_ms) if best_ms > 0 else "最快纪录  —"
+	_menu_hint.text = save_line + "\n" + best_text
+	_menu_hint.tooltip_text = "进度保存在当前浏览器。暂停、剧情、选强化不计时，失败重试保留用时。" + ("\n存档用时 " + format_run_time(int(resume.get("runTimeMs",0))) if available else "")
+	var best_score: int = int(_campaign.get("bestScore",0))
+	if best_score > 0: _menu_hint.tooltip_text += "\n最佳评级 %s / %d 分" % [str(_campaign.get("bestRank","")),best_score]
+
 func _update_campaign(ultimate: bool) -> void:
 	var stage: int = int(_campaign.get("stageIndex",0))
 	var total: int = maxi(1,int(_campaign.get("stageTotal",6)))
 	var region: String = str(_campaign.get("region","太虚试炼"))
 	var title: String = str(_campaign.get("title",region))
 	var boons: PackedStringArray = _boon_names()
-	var best_score: int = int(_campaign.get("bestScore",0))
-	_menu_hint.text = "最佳 %s / %d 分" % [str(_campaign.get("bestRank","")),best_score] if best_score > 0 else "短篇试炼   /   键鼠 · 触屏"
 	_stage_panel.visible = _started and _phase == "fight"
 	_stage_rule.visible = _campaign_mode == "trial"
 	_stage_goal.visible = _campaign_mode == "trial"
@@ -1609,8 +1682,13 @@ func _update_campaign(ultimate: bool) -> void:
 		var stats: Dictionary = _campaign.get("stats",{})
 		_result_rank.text = str(stats.get("rank","A"))
 		_result_score.text = "%05d 分" % int(stats.get("score",0))
-		var elapsed: int = maxi(0,int(stats.get("elapsed",0)))
-		var values: Array[String] = [str(int(stats.get("kills",0))),str(int(stats.get("parries",0))),str(int(stats.get("maxCombo",0))),str(roundi(float(stats.get("damageTaken",0)))),"%02d:%02d" % [elapsed/60,elapsed%60],str(boons.size())]
+		var elapsed_ms: int = maxi(0,int(float(stats.get("elapsed",0))*1000.0)) if practice else maxi(0,int(_campaign.get("runTimeMs",0)))
+		var values: Array[String] = [str(int(stats.get("kills",0))),str(int(stats.get("parries",0))),str(int(stats.get("maxCombo",0))),str(roundi(float(stats.get("damageTaken",0)))),format_run_time(elapsed_ms),str(boons.size())]
+		var best_ms: int = int(_campaign.get("bestTimeMs",0))
+		_result_record.text = "本地新纪录！ " + format_run_time(best_ms) if bool(_campaign.get("newTimeRecord",false)) else ("本地最快  " + format_run_time(best_ms) if best_ms>0 else "本地最快  —")
+		_result_record.visible = not practice
+		_result_record.add_theme_color_override("font_color",ORANGE if bool(_campaign.get("newTimeRecord",false)) else BLUE)
+		_result_record.tooltip_text = "累计战斗计时，不含暂停、剧情和选卡；重试和续玩的已用时间保留。"
 		for index in range(_result_values.size()):
 			_result_values[index].text = values[index]
 		_result_boons.text = "本轮强化：" + " / ".join(boons) if not boons.is_empty() else ("自由对练 · 继续磨炼出手与防御时机" if practice else "本轮未获得强化")

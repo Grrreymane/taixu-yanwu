@@ -1,6 +1,10 @@
 extends RefCounted
 
 const EncounterVariants=preload("res://scripts/encounter_variants.gd")
+const LocalSave=preload("res://scripts/local_save.gd")
+const FighterRoster=preload("res://scripts/fighter_roster.gd")
+const RUN_RULES_VERSION := "trial-2026-10-27"
+const TIMING_RULE := "active-combat-real-time-v1"
 
 const SAVE_PATH := "user://taixu_record.cfg"
 const CLEAR_HEAL := 6.0
@@ -50,6 +54,18 @@ var last_achievement: Dictionary = {}
 var encounter_achievements: Array[Dictionary] = []
 var last_encounter_achievement: Dictionary = {}
 var last_encounter_stats: Dictionary = {}
+var run_time := 0.0
+var run_resumes := 0
+var run_fighter: Dictionary = {}
+var run_id := ""
+var best_time_ms := 0
+var new_time_record := false
+var recent_runs: Array[Dictionary] = []
+var resume_data: Dictionary = {}
+var save_status := "ready"
+var _local_save := LocalSave.new()
+# Volatile test campaigns override _load_record; they never enable disk writes.
+var persistence_enabled := false
 
 func _init() -> void:
  _load_record()
@@ -58,6 +74,11 @@ func _init() -> void:
  stages = _make_stages()
 
 func _reset_run() -> void:
+ run_time=0.0
+ run_resumes=0
+ run_fighter={}
+ run_id=""
+ new_time_record=false
  stage_index=0
  carry={"hp":120.0,"maxHp":120.0,"energy":100.0,"damageMultiplier":1.0,"energyGain":1.0,"postureMultiplier":1.0,"skillCooldownScale":1.0,"parryHeal":0.0,"riposteBonus":0.0,"dodgeRefund":0.0,"finisherEnergy":0.0}
  checkpoint=carry.duplicate(true)
@@ -114,6 +135,8 @@ func begin_trial(contract_id: String="", seed: int=-1) -> void:
   random.randomize()
   run_seed=int(random.randi() & 0x7fffffff)
  else: run_seed=seed
+ run_id="%d-%d-%d"%[int(Time.get_unix_time_from_system()*1000.0),run_seed,run_number]
+ resume_data={}
  for id: String in selected_contract_ids:
   match id:
    "mirror": carry.riposteBonus=0.20
@@ -184,6 +207,8 @@ func finish(state: Dictionary) -> void:
    if not title in unlocked_titles: unlocked_titles.append(title)
   if selected_contract_ids.size()==3 and not "诸约皆成" in unlocked_titles: unlocked_titles.append("诸约皆成")
   if contract_wins.size()==3 and not "三境皆通" in unlocked_titles: unlocked_titles.append("三境皆通")
+  _record_clear(result)
+  resume_data={}
   _save_record()
  else:
   phase="reward"
@@ -302,6 +327,169 @@ func encounter_objective(live: Dictionary={},won: bool=false) -> Dictionary:
  if mode!="trial" or stages.is_empty(): return {}
  return EncounterVariants.objective(stages[stage_index].get("encounterChallenge",{}),live,won)
 
+func tick_run(delta: float) -> void:
+ # Main supplies real active-combat time, including hit stop and ultimates.
+ # Menus, dialogue, countdowns, pause and hidden tabs never call this method.
+ if mode=="trial" and phase=="fight" and is_finite(delta) and delta>0.0:
+  run_time+=delta
+
+func save_checkpoint(fighter_choice: Dictionary={}) -> bool:
+ if mode=="trial":
+  if phase in ["fight","reward","failed"]:
+   if _valid_fighter(fighter_choice): run_fighter=fighter_choice.duplicate(true)
+   if not _valid_fighter(run_fighter): return false
+   var choices: Array[String]=[]
+   for item: Dictionary in reward_options: choices.append(str(item.id))
+   resume_data={"rulesVersion":RUN_RULES_VERSION,"timingRule":TIMING_RULE,"runId":run_id,"phase":phase,"stageIndex":stage_index,"seed":run_seed,"runNumber":run_number,"contracts":selected_contract_ids.duplicate(),"rewardIds":reward_ids.duplicate(),"rewardChoices":choices,"carry":carry.duplicate(true),"checkpoint":checkpoint.duplicate(true),"totals":totals.duplicate(true),"lastStats":last_stats.duplicate(true),"lastEncounterStats":last_encounter_stats.duplicate(true),"achievements":achievements.duplicate(true),"encounterAchievements":encounter_achievements.duplicate(true),"lastAchievement":last_achievement.duplicate(true),"lastEncounterAchievement":last_encounter_achievement.duplicate(true),"elapsedMs":roundi(run_time*1000.0),"resumes":run_resumes,"fighter":run_fighter.duplicate(true)}
+  elif phase=="cleared": resume_data={}
+ if persistence_enabled: _save_record()
+ return not persistence_enabled or save_status in ["saved","ready","recovered"]
+
+func has_resume() -> bool:
+ return not resume_data.is_empty() and _valid_resume(resume_data)
+
+func resume_summary() -> Dictionary:
+ if not has_resume(): return {"available":false}
+ var index:=int(resume_data.stageIndex)
+ return {"available":true,"stageIndex":index,"stageTotal":6,"phase":str(resume_data.phase),"runTimeMs":int(resume_data.elapsedMs),"fighter":resume_data.fighter.duplicate(true),"retries":int(resume_data.totals.get("retries",0)),"resumes":int(resume_data.resumes)}
+
+func resume_trial() -> Dictionary:
+ if phase!="menu" or not has_resume(): return {}
+ var data:=resume_data.duplicate(true)
+ _reset_run()
+ mode="trial"
+ phase=str(data.phase)
+ stage_index=int(data.stageIndex)
+ run_seed=int(data.seed)
+ run_number=int(data.runNumber)
+ run_id=str(data.runId)
+ selected_contract_ids.assign(data.contracts)
+ selected_contract=selected_contract_ids[0]
+ reward_ids.assign(data.rewardIds)
+ for id: String in reward_ids: boons.append(str(REWARDS[id].title))
+ for id: String in data.rewardChoices: reward_options.append(REWARDS[id].duplicate(true))
+ carry=data.carry.duplicate(true)
+ checkpoint=data.checkpoint.duplicate(true)
+ totals=data.totals.duplicate(true)
+ last_stats=data.lastStats.duplicate(true)
+ last_encounter_stats=data.lastEncounterStats.duplicate(true)
+ achievements.assign(data.achievements)
+ encounter_achievements.assign(data.encounterAchievements)
+ last_achievement=data.lastAchievement.duplicate(true)
+ last_encounter_achievement=data.lastEncounterAchievement.duplicate(true)
+ run_time=float(data.elapsedMs)/1000.0
+ run_resumes=int(data.resumes)+1
+ run_fighter=data.fighter.duplicate(true)
+ stages=_make_stages(true)
+ if phase=="failed": retry()
+ elif phase=="fight": carry=checkpoint.duplicate(true)
+ save_checkpoint(run_fighter)
+ return {"fighter":run_fighter.duplicate(true),"phase":phase}
+
+func _record_clear(result: Dictionary) -> void:
+ var elapsed_ms:=roundi(run_time*1000.0)
+ if elapsed_ms<=0: return # Legacy scores do not fabricate a timed clear.
+ new_time_record=best_time_ms==0 or elapsed_ms<best_time_ms
+ if new_time_record: best_time_ms=elapsed_ms
+ var entry: Dictionary={"runId":run_id,"rulesVersion":RUN_RULES_VERSION,"timingRule":TIMING_RULE,"completedAt":int(Time.get_unix_time_from_system()),"elapsedMs":elapsed_ms,"characterId":str(run_fighter.get("characterId","fuhua")),"styleId":str(run_fighter.get("styleId","azure_empyrea")),"appearanceId":str(run_fighter.get("appearanceId","default")),"seed":run_seed,"contracts":selected_contract_ids.duplicate(),"rewardIds":reward_ids.duplicate(),"retries":int(totals.get("retries",0)),"resumes":run_resumes,"score":int(result.score),"rank":str(result.rank),"source":"local"}
+ recent_runs.push_front(entry)
+ if recent_runs.size()>20: recent_runs.resize(20)
+
+func _save_payload() -> Dictionary:
+ return {"record":{"bestScore":best_score,"bestRank":best_rank,"bestTimeMs":best_time_ms},"progress":{"completedRuns":completed_runs,"contractWins":contract_wins.duplicate(true),"titles":unlocked_titles.duplicate(),"contracts":selected_contract_ids.duplicate()},"recentRuns":recent_runs.duplicate(true),"resume":resume_data.duplicate(true)}
+
+static func _number(value: Variant,maximum: float=1.0e12) -> bool:
+ return (value is int or value is float) and is_finite(float(value)) and float(value)>=0.0 and float(value)<=maximum
+
+static func _integer(value: Variant,maximum: float=1.0e12) -> bool:
+ return _number(value,maximum) and float(value)==floorf(float(value))
+
+static func _text(value: Variant,maximum: int=120) -> bool:
+ return value is String and value.length()>0 and value.length()<=maximum
+
+static func _known_ids(value: Variant,known: Dictionary,maximum: int) -> bool:
+ if not value is Array or value.size()>maximum: return false
+ var seen: Dictionary={}
+ for id: Variant in value:
+  if not id is String or not known.has(id) or seen.has(id): return false
+  seen[id]=true
+ return true
+
+static func _valid_fighter(value: Variant) -> bool:
+ if not value is Dictionary: return false
+ for key: String in ["characterId","styleId","appearanceId"]:
+  if not _text(value.get(key),80): return false
+ var character: Dictionary=FighterRoster.CHARACTERS.get(value.characterId,{})
+ var style: Dictionary=FighterRoster.STYLES.get(value.styleId,{})
+ var appearance: Dictionary=FighterRoster.APPEARANCES.get(value.styleId,{}).get(value.appearanceId,{})
+ return bool(character.get("playable",false)) and value.styleId in character.get("styles",[]) and bool(style.get("playable",false)) and style.get("characterId")==value.characterId and value.appearanceId in style.get("appearances",[]) and bool(appearance.get("playable",false)) and appearance.get("styleId")==value.styleId
+
+static func _numeric_dictionary(value: Variant) -> bool:
+ if not value is Dictionary or value.size()>32: return false
+ for key: Variant in value:
+  if not key is String or not _number(value[key]): return false
+ return true
+
+static func _valid_carry(value: Variant) -> bool:
+ if not _numeric_dictionary(value): return false
+ for key: String in ["hp","maxHp","energy","damageMultiplier","energyGain","postureMultiplier","skillCooldownScale","parryHeal","riposteBonus","dodgeRefund","finisherEnergy"]:
+  if not value.has(key): return false
+ return float(value.maxHp)>=1.0 and float(value.hp)<=float(value.maxHp) and float(value.energy)<=100.0
+
+static func _dictionaries(value: Variant,maximum: int=12) -> bool:
+ if not value is Array or value.size()>maximum: return false
+ for item: Variant in value:
+  if not item is Dictionary: return false
+ return true
+
+static func _valid_resume(value: Variant) -> bool:
+ if not value is Dictionary: return false
+ if value.is_empty(): return true
+ if value.get("rulesVersion")!=RUN_RULES_VERSION or value.get("timingRule")!=TIMING_RULE: return false
+ if not _text(value.get("runId")) or not value.get("phase") in ["fight","reward","failed"]: return false
+ if not _integer(value.get("stageIndex"),5) or not _integer(value.get("seed"),2147483647) or not _integer(value.get("runNumber")): return false
+ if not _integer(value.get("elapsedMs"),604800000) or not _integer(value.get("resumes")): return false
+ if not _known_ids(value.get("contracts"),CONTRACTS,3) or value.contracts.is_empty(): return false
+ if not _known_ids(value.get("rewardIds"),REWARDS,5) or value.rewardIds.size()!=int(value.stageIndex): return false
+ if not _known_ids(value.get("rewardChoices"),REWARDS,3): return false
+ if value.phase=="reward":
+  if int(value.stageIndex)>=5 or value.rewardChoices.size()!=3: return false
+  for id: String in value.rewardChoices:
+   if id in value.rewardIds: return false
+ elif not value.rewardChoices.is_empty(): return false
+ if not _valid_carry(value.get("carry")) or not _valid_carry(value.get("checkpoint")) or not _valid_fighter(value.get("fighter")): return false
+ for key: String in ["totals","lastStats","lastEncounterStats"]:
+  if not _numeric_dictionary(value.get(key)): return false
+ if not value.totals.has("retries"): return false
+ for key: String in ["achievements","encounterAchievements"]:
+  if not _dictionaries(value.get(key),6): return false
+ for key: String in ["lastAchievement","lastEncounterAchievement"]:
+  if not value.get(key) is Dictionary: return false
+ return true
+
+static func _valid_payload(data: Dictionary) -> bool:
+ if not data.get("record") is Dictionary or not data.get("progress") is Dictionary: return false
+ var record: Dictionary=data.record
+ var progress: Dictionary=data.progress
+ if not _integer(record.get("bestScore")) or not _integer(record.get("bestTimeMs"),604800000) or not record.get("bestRank") in ["—","S","A","B","C"]: return false
+ if not _integer(progress.get("completedRuns")) or not _numeric_dictionary(progress.get("contractWins")): return false
+ if not progress.get("titles") is Array or progress.titles.size()>64: return false
+ for title: Variant in progress.titles:
+  if not _text(title): return false
+ if not _known_ids(progress.get("contracts"),CONTRACTS,3) or progress.contracts.is_empty(): return false
+ return _valid_history(data.get("recentRuns")) and _valid_resume(data.get("resume"))
+
+static func _valid_history(entries: Variant) -> bool:
+ if not _dictionaries(entries,20): return false
+ for entry: Dictionary in entries:
+  if not _text(entry.get("runId")) or not _integer(entry.get("elapsedMs"),604800000) or int(entry.elapsedMs)<=0: return false
+  for key: String in ["completedAt","seed","retries","resumes","score"]:
+   if not _integer(entry.get(key)): return false
+  for key: String in ["characterId","styleId","appearanceId","rulesVersion","timingRule","rank","source"]:
+   if not _text(entry.get(key)): return false
+  if not _known_ids(entry.get("contracts"),CONTRACTS,3) or not _known_ids(entry.get("rewardIds"),REWARDS,5): return false
+ return true
+
 func snapshot(state: Dictionary) -> Dictionary:
  var stage: Dictionary=stages[stage_index]
  var alive:=0
@@ -309,13 +497,21 @@ func snapshot(state: Dictionary) -> Dictionary:
  for foe in foes:
   if float(foe.get("hp",0))>0: alive+=1
  var current: Dictionary=_combined_stats(state.get("stats",{})) if phase=="fight" else (last_stats if phase=="failed" or mode=="practice" else totals)
- return {"mode":mode,"phase":phase,"stageIndex":stage_index,"stageTotal":stages.size(),"title":stage.title if mode=="trial" else "自由对练","region":REGIONS[stage.regionIndex] if mode=="trial" else "晨岚台","regionIndex":stage.regionIndex if mode=="trial" else 0,"brief":stage.brief if mode=="trial" else "与识之律者切磋，T 切换木人模式。","enemiesRemaining":alive,"totalEnemies":foes.size(),"rewards":reward_options.duplicate(true),"stats":_scored(current),"boons":boons.duplicate(),"bestScore":best_score,"bestRank":best_rank,"supply":"过关补给：恢复 %d HP 与 20 SP"%int(CLEAR_HEAL),"contracts":contract_options(),"contract":CONTRACTS[selected_contract].duplicate(true),"contractId":selected_contract,"selectedContractIds":selected_contract_ids.duplicate(),"contractsUnlocked":completed_runs>0,"challengeLevel":challenge_level(),"challengeDescription":challenge_description(),"runSeed":run_seed,"runNumber":run_number,"completedRuns":completed_runs,"contractWins":contract_wins.duplicate(true),"unlockedTitles":unlocked_titles.duplicate(),"objective":objective(state.get("stats",{})) if mode=="trial" else {},"lastAchievement":last_achievement.duplicate(true),"achievements":achievements.duplicate(true),"rewardIds":reward_ids.duplicate(),"encounterRule":stage.get("encounterRule",{}).duplicate(true) if mode=="trial" else {},"arrangementTitle":stage.get("arrangementTitle","") if mode=="trial" else "","encounterObjective":encounter_objective(state.get("stats",last_encounter_stats if phase in ["reward","cleared","failed"] else {}),phase in ["reward","cleared"]),"lastEncounterAchievement":last_encounter_achievement.duplicate(true),"encounterAchievements":encounter_achievements.duplicate(true)}
+ var result: Dictionary={"mode":mode,"phase":phase,"stageIndex":stage_index,"stageTotal":stages.size(),"title":stage.title if mode=="trial" else "自由对练","region":REGIONS[stage.regionIndex] if mode=="trial" else "晨岚台","regionIndex":stage.regionIndex if mode=="trial" else 0,"brief":stage.brief if mode=="trial" else "与识之律者切磋，T 切换木人模式。","enemiesRemaining":alive,"totalEnemies":foes.size(),"rewards":reward_options.duplicate(true),"stats":_scored(current),"boons":boons.duplicate(),"bestScore":best_score,"bestRank":best_rank,"supply":"过关补给：恢复 %d HP 与 20 SP"%int(CLEAR_HEAL),"contracts":contract_options(),"contract":CONTRACTS[selected_contract].duplicate(true),"contractId":selected_contract,"selectedContractIds":selected_contract_ids.duplicate(),"contractsUnlocked":completed_runs>0,"challengeLevel":challenge_level(),"challengeDescription":challenge_description(),"runSeed":run_seed,"runNumber":run_number,"completedRuns":completed_runs,"contractWins":contract_wins.duplicate(true),"unlockedTitles":unlocked_titles.duplicate(),"objective":objective(state.get("stats",{})) if mode=="trial" else {},"lastAchievement":last_achievement.duplicate(true),"achievements":achievements.duplicate(true),"rewardIds":reward_ids.duplicate(),"encounterRule":stage.get("encounterRule",{}).duplicate(true) if mode=="trial" else {},"arrangementTitle":stage.get("arrangementTitle","") if mode=="trial" else "","encounterObjective":encounter_objective(state.get("stats",last_encounter_stats if phase in ["reward","cleared","failed"] else {}),phase in ["reward","cleared"]),"lastEncounterAchievement":last_encounter_achievement.duplicate(true),"encounterAchievements":encounter_achievements.duplicate(true)}
+
+ result.merge({"runTimeMs":roundi(run_time*1000.0),"bestTimeMs":best_time_ms,"newTimeRecord":new_time_record,"runResumes":run_resumes,"recentRuns":recent_runs.duplicate(true),"resume":resume_summary(),"saveStatus":save_status})
+ return result
 
 func _load_record() -> void:
+ persistence_enabled=true
  var file:=ConfigFile.new()
  if file.load(SAVE_PATH)==OK:
   best_score=maxi(0,int(file.get_value("record","score",0)))
   best_rank=str(file.get_value("record","rank","—"))
+  var old_time: Variant=file.get_value("record","best_time_ms",0)
+  if _integer(old_time,604800000): best_time_ms=int(old_time)
+  var old_history: Variant=file.get_value("record","recent_runs",[])
+  if _valid_history(old_history): recent_runs.assign(old_history)
   completed_runs=maxi(0,int(file.get_value("progress","completed_runs",0)))
   var wins=file.get_value("progress","contract_wins",{})
   if wins is Dictionary:
@@ -337,17 +533,51 @@ func _load_record() -> void:
     selected_contract_ids=valid
     selected_contract=valid[0]
 
+ var payload:=_local_save.load_payload(_valid_payload)
+ save_status=_local_save.status
+ if not payload.is_empty():
+  # The legacy file may be newer if a browser write failed, or if the JSON
+  # primary was damaged and we recovered an older backup. Never lose unlocks.
+  if int(payload.record.bestScore)>=best_score:
+   best_score=int(payload.record.bestScore)
+   best_rank=str(payload.record.bestRank)
+  var saved_time:=int(payload.record.bestTimeMs)
+  if saved_time>0 and (best_time_ms==0 or saved_time<best_time_ms): best_time_ms=saved_time
+  completed_runs=maxi(completed_runs,int(payload.progress.completedRuns))
+  for id: String in CONTRACTS:
+   var wins:=maxi(int(contract_wins.get(id,0)),int(payload.progress.contractWins.get(id,0)))
+   if wins>0: contract_wins[id]=wins
+  for title: String in payload.progress.titles:
+   if not title in unlocked_titles: unlocked_titles.append(title)
+  selected_contract_ids.assign(payload.progress.contracts)
+  selected_contract=selected_contract_ids[0]
+  for entry: Dictionary in payload.recentRuns:
+   var exists:=false
+   for previous: Dictionary in recent_runs:
+    if str(previous.runId)==str(entry.runId): exists=true; break
+   if not exists: recent_runs.append(entry.duplicate(true))
+  recent_runs.sort_custom(func(a: Dictionary,b: Dictionary) -> bool: return int(a.completedAt)>int(b.completedAt))
+  if recent_runs.size()>20: recent_runs.resize(20)
+  resume_data=payload.resume.duplicate(true)
+  for entry: Dictionary in recent_runs:
+   if str(entry.runId)==str(resume_data.get("runId","")): resume_data={}; break
+
 func _save_record() -> void:
+ if _local_save.status=="incompatible": save_status="incompatible"; return
  var file:=ConfigFile.new()
  file.load(SAVE_PATH) # Preserve older or future unrelated sections.
  file.set_value("record","score",best_score)
  file.set_value("record","rank",best_rank)
+ file.set_value("record","best_time_ms",best_time_ms)
+ file.set_value("record","recent_runs",recent_runs)
  file.set_value("progress","completed_runs",completed_runs)
  file.set_value("progress","contract_wins",contract_wins)
  file.set_value("progress","titles",unlocked_titles)
  file.set_value("progress","contract",selected_contract)
  file.set_value("progress","contracts",selected_contract_ids)
  file.save(SAVE_PATH)
+ _local_save.write_payload(_save_payload())
+ save_status=_local_save.status
 
 func _foe(id: String,type: String,title: String,hp: float,x: float,tint: String,elite: bool=false) -> Dictionary:
  return {"id":id,"type":type,"name":title,"characterId":"herrscher_of_sentience","style":"sentience","hp":hp,"x":x,"tint":tint,"elite":elite,"boss":type=="boss","damageScale":0.85 if id=="gate" else 1.0}

@@ -63,6 +63,8 @@ var end_time:=0.0
 var end_delay:=1.15
 var stage_countdown:=0.0
 var telemetry_time:=0.0
+var autosave_time:=0.0
+var application_focused:=true
 var events: Array=[]
 var js_callback
 var menu_target:=Vector3(0.5,1.45,0)
@@ -132,11 +134,15 @@ func _init_bridge() -> void:
  var browser=JavaScriptBridge.get_interface("window")
  browser.__godotAction=js_callback
  JavaScriptBridge.eval("window.__godotReady=true; document.title='太虚演武 · 识境演武';")
+ JavaScriptBridge.eval("window.addEventListener('pagehide',function(){if(window.__godotAction)window.__godotAction('save_local');}); document.addEventListener('visibilitychange',function(){if(window.__godotAction)window.__godotAction(document.hidden?'background':'foreground');});",true)
 
 func _js_action(arguments: Array) -> void:
  if arguments.is_empty(): return
  var command: String=str(arguments[0])
- if command=="move" and arguments.size()>1: touch_move=clampf(float(arguments[1]),-1.0,1.0)
+ if command=="save_local": _save_local_progress()
+ elif command=="background": _notification(NOTIFICATION_APPLICATION_FOCUS_OUT)
+ elif command=="foreground": _notification(NOTIFICATION_APPLICATION_FOCUS_IN)
+ elif command=="move" and arguments.size()>1: touch_move=clampf(float(arguments[1]),-1.0,1.0)
  elif command=="guard_held" and arguments.size()>1: touch_guard=bool(arguments[1])
  else: _action(command)
 
@@ -174,6 +180,7 @@ func _input(event: InputEvent) -> void:
   var command: String=actions[event.physical_keycode]
   if event.physical_keycode==KEY_ENTER:
    if victory.playing(): command="victory_skip"
+   elif campaign.phase=="menu" and campaign.has_resume(): command="continue"
    elif campaign.phase=="failed": command="retry"
    elif campaign.phase=="cleared": command="practice" if campaign.mode=="practice" else "restart"
    elif game.paused: command="pause"
@@ -250,6 +257,7 @@ func _action(command: String) -> void:
   _clear_inputs()
   return
  if command=="menu":
+  _save_local_progress()
   stage_countdown=0.0
   _clear_inputs()
   story.reset()
@@ -258,6 +266,27 @@ func _action(command: String) -> void:
   character_preview.reset()
   _sync_actors()
   arena.set_region(0)
+  return
+ if command=="continue":
+  if campaign.phase!="menu": return
+  var resumed: Dictionary=campaign.resume_trial()
+  if resumed.is_empty():
+   hud.notify_text("未找到可继续的试炼")
+   return
+  var saved_fighter: Dictionary=resumed.get("fighter",{})
+  _select_fighter(str(saved_fighter.get("styleId",FighterRoster.DEFAULT_STYLE)),str(saved_fighter.get("appearanceId",FighterRoster.DEFAULT_APPEARANCE)))
+  story.reset()
+  _begin_encounter(false)
+  if campaign.phase=="reward":
+   # A claimed clear resumes at its original card choice, never as another win.
+   stage_countdown=0.0
+   game.ended=true
+   game.winner="player"
+   for foe: Dictionary in game.enemies:
+    foe.hp=0.0
+    foe.state="dead"
+   effects.clear()
+   sentience_effects.clear()
   return
  if command in ["start","restart","practice","trial"]:
   if command=="start" and campaign.phase!="menu": return
@@ -309,6 +338,17 @@ func _begin_encounter(with_story: bool=true) -> void:
  if campaign.mode=="trial" and campaign.stage_index==campaign.stages.size()-1:
   boss_entrance.queue_entrance()
  if with_story and campaign.stage_index==0: _begin_story("intro")
+ _save_local_progress()
+
+func _save_local_progress() -> void:
+ if not ready_to_play or campaign.mode!="trial" or campaign.phase=="menu": return
+ campaign.save_checkpoint({"characterId":str(fighter.characterId),"styleId":str(fighter.styleId),"appearanceId":str(fighter.appearanceId)})
+ autosave_time=0.0
+
+func _run_clock_active() -> bool:
+ # Count real combat time, including hit-stop and ultimates, until the final
+ # contact. Story, opening shots, menus, focus loss and KO/results are excluded.
+ return application_focused and campaign.mode=="trial" and campaign.phase=="fight" and game.started and not game.paused and not game.ended and not story.active and not boss_entrance.active and not boss_entrance.pending and stage_countdown<=0.0 and not knockout_started
 
 func _begin_boss_entrance() -> void:
  _clear_inputs()
@@ -549,6 +589,7 @@ func _event(data: Dictionary) -> void:
  elif kind=="pause":
   # Focus loss can suspend the web frame loop before the next _process call.
   music.set_context(campaign.phase,game.paused,not game.ultimate.is_empty())
+  if game.paused: _save_local_progress()
  elif kind=="enemyDown":
   var count:=0
   for foe: Dictionary in game.enemies:
@@ -617,6 +658,10 @@ func _begin_victory() -> void:
 func _process(delta: float) -> void:
  if not ready_to_play: return
  var dt: float=minf(delta,0.05)
+ if _run_clock_active():
+  campaign.tick_run(delta)
+  autosave_time+=delta
+  if autosave_time>=2.0: _save_local_progress()
  var movement: float=touch_move
  if Input.is_physical_key_pressed(KEY_A) or Input.is_physical_key_pressed(KEY_LEFT): movement-=1.0
  if Input.is_physical_key_pressed(KEY_D) or Input.is_physical_key_pressed(KEY_RIGHT): movement+=1.0
@@ -645,6 +690,7 @@ func _process(delta: float) -> void:
   end_time+=0.0 if finish_freeze else visual_dt
   if end_time>=end_delay and not knockout.active and not knockout_paused and knockout.focused:
    campaign.finish(game.snapshot())
+   _save_local_progress()
    _clear_inputs()
    if campaign.phase=="cleared" and game.winner=="player":
     if campaign.mode=="trial": _begin_story("victory","victory")
@@ -724,6 +770,7 @@ func _process(delta: float) -> void:
  state.healthDisplay=health_display
  state.ko=ko_frame
  state.campaign=campaign.snapshot(state)
+ state.campaign.clockRunning=_run_clock_active()
  state.campaign.storyRoute=str(story.decision.get("routeTitle",""))
  state.fighter=FighterRoster.presentation_identity(str(fighter.characterId),str(fighter.styleId),str(fighter.appearanceId))
  state.roster=_roster_snapshot()
@@ -876,11 +923,14 @@ func _camera(_dt: float,visual_dt: float,ult_time: float) -> void:
 
 func _notification(what: int) -> void:
  if what==NOTIFICATION_APPLICATION_FOCUS_OUT:
+  application_focused=false
+  _save_local_progress()
   if is_instance_valid(knockout): knockout.set_focused(false)
   boss_entrance.focused=false
   victory.set_focused(false)
   if is_instance_valid(story): story.focused=false
  elif what==NOTIFICATION_APPLICATION_FOCUS_IN:
+  application_focused=true
   if is_instance_valid(knockout): knockout.set_focused(true)
   boss_entrance.focused=true
   victory.set_focused(true)
@@ -894,4 +944,5 @@ func _notification(what: int) -> void:
  if what==NOTIFICATION_APPLICATION_FOCUS_OUT and ready_to_play and game.started and campaign.phase=="fight" and not story.active and not boss_entrance.active and not game.paused and not game.ended and not knockout.active:
   game.action("pause")
   _clear_inputs()
+ if what==NOTIFICATION_WM_CLOSE_REQUEST: _save_local_progress()
 

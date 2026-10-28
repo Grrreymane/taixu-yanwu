@@ -45,6 +45,8 @@ func run() -> void:
 				for foe:Dictionary in world.campaign.stages[stage_index].enemies:foe.x*=-1.0
 			world._begin_encounter(false)
 			check(world.game.time==0.0,"spawn orientation is prepared before any simulation tick")
+			if world.game.enemies.size()==1:
+				check(world.game.player.x<0.0 and world.game.enemy.x>0.0,"actual single-enemy wave opens with the player left even when its formation is mirrored")
 			for foe:Dictionary in world.game.enemies:
 				check(int(foe.facing)==(1 if foe.x<=world.game.player.x else -1),"each spawned phantom faces the player immediately")
 			await process_frame
@@ -69,6 +71,7 @@ func run() -> void:
 	world.campaign.stage_index=5
 	world._begin_encounter(false)
 	world._process(0.0)
+	check(world.game.player.x<0.0 and world.game.enemy.x>0.0,"final boss enters opposite a player spawning on the left")
 	check(world.boss_entrance.active,"final boss still uses its dedicated entrance")
 	world.boss_entrance.time=3.2
 	world._process(0.0)

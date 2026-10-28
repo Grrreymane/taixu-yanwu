@@ -195,6 +195,7 @@ func start_encounter(config: Dictionary, carry: Dictionary={}) -> void:
   foe.punishUntil=-1.0
   enemies.append(foe)
  _ai_gap=_turn_gap(0.38-0.08*_pressure_level)
+ _orient_duel_spawn()
  _separate_spawns()
  _refresh_target()
  # The countdown freezes simulation, so spawn facing must already be valid
@@ -1062,6 +1063,15 @@ func _move(who: Dictionary,amount: float) -> void:
   if other.id==who.id: continue
   next=minf(next,other.x-GAP) if who.x<=other.x else maxf(next,other.x+GAP)
  who.x=clampf(next,-LIMIT,LIMIT)
+
+func _orient_duel_spawn() -> void:
+ # Seeded formations may be mirrored, but a one-on-one opening always puts
+ # the player on the left. Preserve its intended spacing; normal movement
+ # and multi-enemy flanking formations remain unrestricted after spawning.
+ if enemies.size()!=1: return
+ var distance:=clampf(absf(float(enemies[0].x)-float(player.x)),GAP,LIMIT*2.0)
+ player.x=-distance*0.5
+ enemies[0].x=distance*0.5
 
 func _separate_spawns() -> void:
  var ordered: Array[Dictionary]=[player]
