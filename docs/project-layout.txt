@@ -39,7 +39,7 @@
   build/logs/legacy-captures/：原来散落在 tests/ 的旧截图日志。
   build/reports/project-file-moves.json：此次整理的移动清单与原文件 SHA-256。
 
-工作区外层（<PROJECT_PARENT>）
+工作区外层（项目父目录）
   启动符华-Godot网页试玩.cmd：保留原双击入口。
   项目入口.txt：工作区导航。
   hi3-fuhua-extract/、zzz-animation-extract/：原素材提取与处理记录。

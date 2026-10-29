@@ -1,5 +1,5 @@
 'use strict';
-const {chromium}=require('<LOCAL_USER>/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const {chromium}=require('./playwright-runtime.cjs');
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const source=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../../scripts/data/sentience_story_scenes.json'),'utf8'));
 const introOnly=process.argv.includes('--intro-only');

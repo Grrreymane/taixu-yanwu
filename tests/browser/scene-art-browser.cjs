@@ -2,7 +2,7 @@
 
 // Real-input scene QA: progress through the trial to all three regions.
 // No state mutation, stage skipping, or user-facing debug controls.
-const { chromium } = require('<LOCAL_USER>/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const { chromium } = require('./playwright-runtime.cjs');
 const fs = require('node:fs');
 const path = require('node:path');
 const assert = require('node:assert/strict');

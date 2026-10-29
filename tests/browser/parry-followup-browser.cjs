@@ -3,7 +3,7 @@
 // Real enemy attacks, keyboard L and the same action bridge used by the UI.
 // __godotState is read-only. Only this test's observer state is written.
 // Run after exporting the matching parryFollowup/riposteReadyAt implementation.
-const { chromium } = require('<LOCAL_USER>/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const { chromium } = require('./playwright-runtime.cjs');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');

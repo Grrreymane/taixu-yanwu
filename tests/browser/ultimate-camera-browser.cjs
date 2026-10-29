@@ -2,7 +2,7 @@
 
 // Browser coverage for the authored ultimate camera. Every gameplay operation
 // uses normal keys or the existing UI bridge; camera/game telemetry is read-only.
-const { chromium } = require('<LOCAL_USER>/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const { chromium } = require('./playwright-runtime.cjs');
 const fs = require('node:fs');
 const path = require('node:path');
 const assert = require('node:assert/strict');

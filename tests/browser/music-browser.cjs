@@ -2,7 +2,7 @@
 
 // Normal keys, HUD actions and a second blank tab only. Audio probes observe
 // the existing Web Audio output; they never replace the game's audio engine.
-const { chromium } = require('<LOCAL_USER>/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const { chromium } = require('./playwright-runtime.cjs');
 const fs = require('node:fs');
 const path = require('node:path');
 const assert = require('node:assert/strict');

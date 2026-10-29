@@ -3,7 +3,7 @@
 // Run only after the matching web export is ready. All writes to the game are
 // ordinary UI/keyboard actions; telemetry is read-only. A fresh browser context
 // keeps trial records in a disposable profile, never the user's browser save.
-const { chromium } = require('<LOCAL_USER>/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const { chromium } = require('./playwright-runtime.cjs');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');

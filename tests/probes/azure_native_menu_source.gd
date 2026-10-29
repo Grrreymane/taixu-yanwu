@@ -1,5 +1,5 @@
 extends SceneTree
-const SOURCE="../hi3-fuhua-extract/exports/c5-menu-original/original/FBX/a303f703da40756b/-8681997045896087424/Avatar_Fuka_C5_IN.fbx"
+var SOURCE=ProjectSettings.globalize_path("res://../hi3-fuhua-extract/exports/c5-menu-original/original/FBX/a303f703da40756b/-8681997045896087424/Avatar_Fuka_C5_IN.fbx")
 const Roster=preload("res://scripts/fighter_roster.gd")
 func _find(node:Node,kind:String) -> Node:
 	if node.is_class(kind):return node

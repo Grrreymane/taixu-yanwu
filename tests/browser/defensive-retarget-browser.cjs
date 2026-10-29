@@ -1,7 +1,7 @@
 'use strict';
 
 // Only ordinary keyboard/HUD inputs. Retarget poses, combat and clocks are read-only.
-const { chromium } = require('<LOCAL_USER>/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const { chromium } = require('./playwright-runtime.cjs');
 const fs = require('node:fs');
 const path = require('node:path');
 const assert = require('node:assert/strict');

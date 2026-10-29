@@ -1,5 +1,5 @@
 extends SceneTree
-const BASE="../hi3-fuhua-extract/exports/c2-arm-repair/"
+var BASE=ProjectSettings.globalize_path("res://../hi3-fuhua-extract/exports/c2-arm-repair/")
 var checks=0
 var failures=[]
 func _initialize():call_deferred("_run")

@@ -2,7 +2,7 @@
 
 // Normal keyboard / UI-bridge inputs only. Game state and per-frame telemetry
 // are observed, never rewritten. Run after the matching web export is ready.
-const { chromium } = require('<LOCAL_USER>/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const { chromium } = require('./playwright-runtime.cjs');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');

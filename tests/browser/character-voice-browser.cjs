@@ -1,6 +1,6 @@
 'use strict';
 // Ordinary user controls + passive Web Audio probes. No combat state edits.
-const {chromium}=require('<LOCAL_USER>/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const {chromium}=require('./playwright-runtime.cjs');
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const out=path.resolve(__dirname,'../../build/screenshots/character-voice-web');fs.mkdirSync(out,{recursive:true});
 const report={passed:false,checks:[],errors:[],samples:{},shots:[],input:'Fresh browser; real keys/clicks and ordinary game action bridge, no state edits'};

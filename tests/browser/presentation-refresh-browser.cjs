@@ -4,7 +4,7 @@
 // A disposable browser context uses ordinary keyboard/UI action inputs.
 // __godotState is read-only; no debug flags, injected victories, training mode,
 // storage edits, clock changes, or state mutation are used to finish the run.
-const { chromium } = require('<LOCAL_USER>/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const { chromium } = require('./playwright-runtime.cjs');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');

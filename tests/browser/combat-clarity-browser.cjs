@@ -1,7 +1,7 @@
 'use strict';
 // Real input acceptance. Fresh storage; no debug actions, training, state
 // mutations, damage/HP injection or time manipulation are used to clear fights.
-const {chromium}=require('<LOCAL_USER>/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const {chromium}=require('./playwright-runtime.cjs');
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const uiOnly=process.argv.includes('--ui-only');
 const out=path.resolve(__dirname,'../../build/screenshots/'+(uiOnly?'combat-clarity-web-ui':'combat-clarity-web'));fs.mkdirSync(out,{recursive:true});

@@ -19,3 +19,4 @@ Thumbs.db
 !.env.example
 .godot_credentials
 export_credentials.cfg
+node_modules/

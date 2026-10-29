@@ -1,6 +1,6 @@
 'use strict';
 // Exercise exported resources through the normal menu and player action bridge.
-const {chromium}=require('<LOCAL_USER>/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const {chromium}=require('./playwright-runtime.cjs');
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const out=path.resolve(__dirname,'../../build/screenshots/skin-expression-web');
 fs.mkdirSync(out,{recursive:true});

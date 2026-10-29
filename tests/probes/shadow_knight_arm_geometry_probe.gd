@@ -8,7 +8,7 @@ func _run():
  var before="--before" in OS.get_cmdline_user_args()
  for appearance in ["default","blood_moon"]:
   var config=Roster.resolve("fuhua","shadow_knight",appearance)
-  if before:config.actor.modelPath="../hi3-fuhua-extract/exports/c2-arm-repair/godot-stage/assets/"+("shadow-knight/Avatar_Fuka_C2_NL.scn" if appearance=="default" else "shadow-knight-blood-moon/Avatar_Fuka_C2_04_01.scn")
+  if before:config.actor.modelPath=ProjectSettings.globalize_path("res://../hi3-fuhua-extract/exports/c2-arm-repair/godot-stage/assets/")+("shadow-knight/Avatar_Fuka_C2_NL.scn" if appearance=="default" else "shadow-knight-blood-moon/Avatar_Fuka_C2_04_01.scn")
   var actor=Actor.new();root.add_child(actor);actor.setup(false,config)
   var skel=actor.skeleton
   for burst in [false,true]:

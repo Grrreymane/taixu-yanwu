@@ -1,7 +1,7 @@
 'use strict';
 // Browser acceptance uses only existing menu/combat actions. The telemetry is
 // read-only; no HP, SP, animation time, stage or random seed is patched.
-const {chromium}=require('<LOCAL_USER>/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const {chromium}=require('./playwright-runtime.cjs');
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const out=path.resolve(__dirname,'../../build/screenshots/ultimate-refresh-web');
 fs.mkdirSync(out,{recursive:true});

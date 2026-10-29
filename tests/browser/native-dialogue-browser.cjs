@@ -3,7 +3,7 @@
 // Run after the matching export, with no competing Godot/browser GPU process.
 // A disposable context receives ordinary UI actions, pointer clicks and keys.
 // __godotState is read-only: no clock, actor, storage or campaign-state injection.
-const { chromium } = require('<LOCAL_USER>/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const { chromium } = require('./playwright-runtime.cjs');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');

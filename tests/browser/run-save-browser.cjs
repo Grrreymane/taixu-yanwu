@@ -1,7 +1,7 @@
 'use strict';
 // A fresh, non-persistent browser context is intentional: these checks never
 // open the user's browser profile or modify a real player's local save.
-const {chromium}=require('<LOCAL_USER>/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const {chromium}=require('./playwright-runtime.cjs');
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const out=path.resolve(__dirname,'../../build/screenshots/run-save');
 fs.mkdirSync(out,{recursive:true});

@@ -2,6 +2,8 @@
 
 Godot 4.7.2 制作的 2.5D 横版格斗同人游戏，可在浏览器运行。当前包含六场「识境演武」试炼、强化构筑、分支剧情，以及与识之律者的自由对练。
 
+本项目为非官方同人作品，与米哈游无隶属或官方认可关系。原游戏资源、项目制作内容及第三方参考分别列于 [来源与致谢](CREDITS.md)；权利范围见 [LICENSE](LICENSE)。仓库公开不代表第三方游戏资源获得了新的使用许可。
+
 ## 文件入口
 
 | 要做的事 | 位置 |
@@ -117,6 +119,6 @@ node tests/browser/story-rewrite-browser.cjs
 node tests/browser/run-save-browser.cjs
 ```
 
-浏览器检查使用开发机现有 Playwright 路径；换环境时需调整脚本依赖位置。部分原资产审计需要本机提取备份，它们不属于普通运行依赖。
+浏览器检查可通过 `npm install --no-save playwright` 安装依赖，默认使用本机 Microsoft Edge。也可设置 `PLAYWRIGHT_MODULE` 指向已有 Playwright 模块目录；已有 Codex 运行环境会自动按当前用户目录查找。无需修改测试脚本中的个人路径。部分原资产审计使用工程父目录下的 `hi3-fuhua-extract/` 提取备份，它们不属于普通运行依赖。
 
 `.godot/`、`build/`、日志和缓存不提交 Git。工作区外层的旧工程、原模型、提取记录、编辑器与演示视频保留原位，目录导航见工作区的 `项目入口.txt`。

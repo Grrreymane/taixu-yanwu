@@ -3,7 +3,7 @@
 // Run only after the current Godot web build is exported and served on 4187.
 // Every gameplay operation is a normal key or the existing UI action bridge.
 // The probe reads snapshots; it never changes a fighter, timer, or VFX instance.
-const { chromium } = require('<LOCAL_USER>/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const { chromium } = require('./playwright-runtime.cjs');
 const fs = require('node:fs');
 const path = require('node:path');
 const assert = require('node:assert/strict');

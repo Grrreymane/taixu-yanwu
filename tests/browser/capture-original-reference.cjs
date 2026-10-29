@@ -1,6 +1,6 @@
 'use strict';
 // Read-only research captures. No account, form submission or game automation.
-const {chromium}=require('<LOCAL_USER>/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const {chromium}=require('./playwright-runtime.cjs');
 const fs=require('node:fs'),path=require('node:path');
 const out=path.resolve(__dirname,'../../build/references/original');
 fs.mkdirSync(out,{recursive:true});

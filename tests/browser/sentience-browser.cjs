@@ -1,4 +1,4 @@
-const {chromium}=require('<LOCAL_USER>/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const {chromium}=require('./playwright-runtime.cjs');
 const fs=require('node:fs');const path=require('node:path');const assert=require('node:assert/strict');
 const manuscript=require('../../scripts/data/sentience_story_scenes.json');
 const sceneSize=id=>manuscript.scenes[id].lines.length+manuscript.scenes[id].stageDirections.length;
