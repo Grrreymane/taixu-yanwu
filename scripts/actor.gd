@@ -853,6 +853,11 @@ func _rotate_bone_toward(index: int, current: Vector3, desired: Vector3) -> void
 		target_basis = skeleton.get_bone_global_pose(parent).basis.orthonormalized().inverse() * target_basis
 	skeleton.set_bone_pose_rotation(index, target_basis.orthonormalized().get_rotation_quaternion())
 
+func motion_snapshot() -> Dictionary:
+	# Per-frame contact trace: avoid inspecting every cloth bone for diagnostics.
+	return {"motion":current_motion,"sourceTime":source_time,"defenseTime":_defense_time,
+		"defensePhase":_defense_phase,"defenseWeight":_defense_weight}
+
 func presentation_snapshot() -> Dictionary:
 	return {"motion": current_motion, "sourceTime": source_time, "guardWeight": _guard_weight,
 		"modelPath":str(_profile.get("modelPath","")),"deathDuration":death_duration(),"adaptationSource":_profile.get("adaptationSource",{}),"weapon":_weapon_kind,"chainExtentScale":_chain_extent_scale,"story":_story_active,

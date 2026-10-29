@@ -955,7 +955,7 @@ func _update_roster(data: Dictionary) -> void:
 	_fighter_identity = data.get("fighter", {})
 	var styles: Array = _roster.get("styles", [])
 	var appearances: Array = _roster.get("appearances", [])
-	var signature := JSON.stringify([styles, appearances])
+	var signature := str(_roster.get("characterId", "")) + ":" + str(_roster.get("styleId", ""))
 	if signature != _roster_signature:
 		_roster_signature = signature
 		var armor_signature := JSON.stringify(styles)
@@ -1473,12 +1473,18 @@ func update_status(data: Dictionary) -> void:
 	if str(enemy.get("style",""))=="sentience":
 		_enemy_tag.text=SentienceCombat.LABELS.get(str(enemy.get("weapon","sword")),"识之律者")
 	var dusk_region: bool = int(_campaign.get("regionIndex",0)) == 2
-	_enemy_name.add_theme_color_override("font_color",Color("fff2db") if dusk_region else INK)
-	_enemy_tag.add_theme_color_override("font_color",Color("d3e9f1") if dusk_region else Color("527286"))
+	var name_color: Color = Color("fff2db") if dusk_region else INK
+	var tag_color: Color = Color("d3e9f1") if dusk_region else Color("527286")
+	if _enemy_name.get_theme_color("font_color") != name_color:
+		_enemy_name.add_theme_color_override("font_color", name_color)
+	if _enemy_tag.get_theme_color("font_color") != tag_color:
+		_enemy_tag.add_theme_color_override("font_color", tag_color)
 	if bool(data.get("training",false)) and _campaign_mode == "practice":
 		_enemy_tag.text = "木人练习"
-	_enemy_hp.tint = ORANGE if boss else (Color("ff915e") if elite else Color("ef7653"))
-	_enemy_hp.queue_redraw()
+	var health_tint: Color = ORANGE if boss else (Color("ff915e") if elite else Color("ef7653"))
+	if _enemy_hp.tint != health_tint:
+		_enemy_hp.tint = health_tint
+		_enemy_hp.queue_redraw()
 	var in_fight: bool = _phase == "fight"
 	_battle.visible = _started and in_fight and not ultimate and not showing_victory and not _ko_active
 	_enemy_panel.visible = not enemy.is_empty() and not _ko_active

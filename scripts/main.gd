@@ -63,6 +63,10 @@ var end_time:=0.0
 var end_delay:=1.15
 var stage_countdown:=0.0
 var telemetry_time:=0.0
+var ui_time:=0.0
+var ui_phase_key:=""
+var roster_cache_key:=""
+var roster_cache: Dictionary={}
 var autosave_time:=0.0
 var application_focused:=true
 var events: Array=[]
@@ -451,13 +455,19 @@ func _save_fighter_choice() -> void:
   JavaScriptBridge.eval("try{localStorage.setItem('taixu.fighter',"+JSON.stringify(encoded)+");}catch(e){}",true)
 
 func _roster_snapshot() -> Dictionary:
+ var key: String=str(fighter.characterId)+":"+str(fighter.styleId)+":"+str(fighter.appearanceId)
+ if key==roster_cache_key and not roster_cache.is_empty():
+  roster_cache.canSelect=campaign.phase=="menu"
+  return roster_cache
+ roster_cache_key=key
  var styles: Array=[]
  var appearances: Array=[]
  for entry: Dictionary in FighterRoster.list_styles(str(fighter.characterId)):
   styles.append({"id":entry.id,"name":entry.name,"description":entry.description,"portraitPath":entry.get("portraitPath",""),"roleTag":entry.get("roleTag","")})
  for entry: Dictionary in FighterRoster.list_appearances(str(fighter.characterId),str(fighter.styleId)):
   appearances.append({"id":entry.id,"name":entry.name})
- return {"canSelect":campaign.phase=="menu","characterId":fighter.characterId,"styleId":fighter.styleId,"appearanceId":fighter.appearanceId,"styles":styles,"appearances":appearances}
+ roster_cache={"canSelect":campaign.phase=="menu","characterId":fighter.characterId,"styleId":fighter.styleId,"appearanceId":fighter.appearanceId,"styles":styles,"appearances":appearances}
+ return roster_cache
 
 func _sync_actors() -> void:
  for node in enemy_nodes.values():
@@ -763,6 +773,33 @@ func _process(delta: float) -> void:
  if knockout.active: camera.fov-=float(ko_frame.cameraPulse)*2.4
  combat_accent.present(camera,campaign.phase=="fight" and ult_time<0.0 and not story.active and not boss_entrance.active and not knockout.active)
  ultimate_focus.present(camera,game.player_profile,ult_time,cinematic_player_x,cinematic_target_x,campaign.phase=="fight" and not story.active and not boss_entrance.active)
+ voice.set_context(_voice_context())
+ var spoken_line: Dictionary=story.snapshot()
+ if story.active and story.index<story.lines.size(): spoken_line.mood=story.lines[story.index].get("mood","")
+ var voice_cue: Dictionary=dialogue_voice.next(spoken_line,game.player_profile)
+ if not voice_cue.is_empty(): voice.play_dialogue(voice_cue)
+ # Hit-stop and cinematic slow motion never chop or pitch-shift the actor's
+ # voice. Only deliberate pause / focus loss suspends its playback cursor.
+ voice.tick(dt)
+ var voice_state: Dictionary=voice.snapshot()
+ if music.has_method("set_voice_duck"): music.set_voice_duck(bool(voice_state.get("playing",false)))
+ if music.has_method("set_encounter"): music.set_encounter(campaign.mode,campaign.stage_index,campaign.phase)
+ music.set_context("menu" if story.active else campaign.phase,game.paused or knockout_paused or (victory.visible and victory.paused),ult_time>=0.0)
+ music.tick(dt)
+ var player_pose: Dictionary=player.motion_snapshot()
+ var enemy_pose: Dictionary={}
+ var focused_enemy: Node3D=enemy_nodes.get(str(game.enemy.id),null)
+ if is_instance_valid(focused_enemy): enemy_pose=focused_enemy.motion_snapshot()
+ feel_frames.append({"frame":Engine.get_process_frames(),"simTime":game.time,"simDelta":sim_delta,"fxDelta":fx_dt,"hitStop":game.hit_stop,"playerMotion":player_pose.get("motion",""),"playerSourceTime":player_pose.get("sourceTime",0.0),"playerDefenseTime":player_pose.get("defenseTime",0.0),"playerDefensePhase":player_pose.get("defensePhase","none"),"playerDefenseWeight":player_pose.get("defenseWeight",0.0),"enemyMotion":enemy_pose.get("motion",""),"enemySourceTime":enemy_pose.get("sourceTime",0.0),"playerX":game.player.x,"enemyX":game.enemy.x,"cameraKick":shake})
+ if feel_frames.size()>60: feel_frames.pop_front()
+ telemetry_time+=dt
+ # HUD work is independent of combat, contact tracing, animation and audio.
+ # Phase changes refresh immediately; stable screens need at most 30 Hz.
+ ui_time+=dt
+ var phase_key: String=campaign.phase+str(game.paused)+str(story.active)+str(boss_entrance.active)+str(knockout.active)+str(victory.visible)
+ if ui_time<1.0/30.0 and phase_key==ui_phase_key: return
+ ui_time=fmod(ui_time,1.0/30.0)
+ ui_phase_key=phase_key
  var state: Dictionary=game.snapshot()
  state.ready=ready_to_play
  state.fps=Engine.get_frames_per_second()
@@ -776,35 +813,18 @@ func _process(delta: float) -> void:
  state.roster=_roster_snapshot()
  state.characterPreview=character_preview.snapshot()
  state.victory=victory.snapshot()
- state.story=story.snapshot()
+ state.story=spoken_line
  state.bossEntrance=boss_entrance.snapshot()
  state.victory.shot=cinematic_frame.get("shot","battle")
- voice.set_context(_voice_context())
- var spoken_line: Dictionary=state.story.duplicate()
- if story.active and story.index<story.lines.size(): spoken_line.mood=story.lines[story.index].get("mood","")
- var voice_cue: Dictionary=dialogue_voice.next(spoken_line,game.player_profile)
- if not voice_cue.is_empty(): voice.play_dialogue(voice_cue)
- # Hit-stop and cinematic slow motion never chop or pitch-shift the actor's
- # voice. Only deliberate pause / focus loss suspends its playback cursor.
- voice.tick(dt)
- state.voice=voice.snapshot()
- if music.has_method("set_voice_duck"): music.set_voice_duck(bool(state.voice.get("playing",false)))
- if music.has_method("set_encounter"): music.set_encounter(campaign.mode,campaign.stage_index,campaign.phase)
- music.set_context("menu" if story.active else campaign.phase,game.paused or knockout_paused or (victory.visible and victory.paused),ult_time>=0.0)
- music.tick(dt)
+ state.voice=voice_state
  state.music=music.snapshot()
  hud.update_status(state)
  hud.visible=not story.active and not boss_entrance.active
- state.ui=hud.presentation_snapshot()
- var player_pose: Dictionary=player.presentation_snapshot()
- var enemy_pose: Dictionary={}
- var focused_enemy: Node3D=enemy_nodes.get(str(game.enemy.id),null)
- if is_instance_valid(focused_enemy): enemy_pose=focused_enemy.presentation_snapshot()
- feel_frames.append({"frame":Engine.get_process_frames(),"simTime":game.time,"simDelta":sim_delta,"fxDelta":fx_dt,"hitStop":game.hit_stop,"playerMotion":player_pose.get("motion",""),"playerSourceTime":player_pose.get("sourceTime",0.0),"playerDefenseTime":player_pose.get("defenseTime",0.0),"playerDefensePhase":player_pose.get("defensePhase","none"),"playerDefenseWeight":player_pose.get("defenseWeight",0.0),"enemyMotion":enemy_pose.get("motion",""),"enemySourceTime":enemy_pose.get("sourceTime",0.0),"playerX":game.player.x,"enemyX":game.enemy.x,"cameraKick":shake})
- if feel_frames.size()>60: feel_frames.pop_front()
- telemetry_time+=dt
  if OS.has_feature("web") and telemetry_time>0.10:
   telemetry_time=0.0
+  player_pose=player.presentation_snapshot()
+  if is_instance_valid(focused_enemy): enemy_pose=focused_enemy.presentation_snapshot()
+  state.ui=hud.presentation_snapshot()
   state.events=events
   state.vfx=effects.snapshot()
   state.vfx.sentience=sentience_effects.snapshot()
