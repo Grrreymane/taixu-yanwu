@@ -128,3 +128,11 @@ node tests/browser/run-save-browser.cjs
 浏览器检查可通过 `npm install --no-save playwright` 安装依赖，默认使用本机 Microsoft Edge。也可设置 `PLAYWRIGHT_MODULE` 指向已有 Playwright 模块目录；已有 Codex 运行环境会自动按当前用户目录查找。无需修改测试脚本中的个人路径。部分原资产审计使用工程父目录下的 `hi3-fuhua-extract/` 提取备份，它们不属于普通运行依赖。
 
 `.godot/`、`build/`、日志和缓存不提交 Git。工作区外层的旧工程、原模型、提取记录、编辑器与演示视频保留原位，目录导航见工作区的 `项目入口.txt`。
+
+## AIWanna 通关榜
+
+在 [AIWanna](https://www.aiwanna.games/games/game-3ae8aa2793124454) 内新开试炼，完整打完六关后自动提交累计战斗用时（毫秒，越短越好）。失败重试时间累计，剧情、选强化和暂停不计时。所有装甲与规矩共榜。续档、自由对练和站外独立试玩不上榜；平台单局凭证须在开局后两小时内结算。
+
+首页及结算后点击“通关榜”查看前十与个人最佳；网络失败可重试提交，不影响本地存档。当前为客户端报分的休闲榜，不能视为经过服务端验算的竞技成绩。
+
+接入使用原生浏览器消息握手和 REST，令牌只保存在内存。协议检查：`node tests/web/leaderboard-client.cjs`（使用模拟接口，不写真实榜单）。

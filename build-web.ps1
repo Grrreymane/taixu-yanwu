@@ -64,6 +64,9 @@ try{
  if($null -ne $originalPreset){[IO.File]::WriteAllBytes($presetPath,$originalPreset)}
 }
 Copy-Item -LiteralPath (Join-Path $projectRoot 'assets\fonts\loading-ui.woff2') -Destination (Join-Path $webRoot 'loading-ui.woff2') -Force
+foreach($name in @('leaderboard.js','leaderboard.css')){
+ Copy-Item -LiteralPath (Join-Path $projectRoot ('web\'+$name)) -Destination (Join-Path $webRoot $name) -Force
+}
 foreach($asset in Get-ChildItem -LiteralPath $webRoot -File){
  if($asset.Extension -in '.wasm','.pck','.js'){
   $inputStream=[IO.File]::OpenRead($asset.FullName)

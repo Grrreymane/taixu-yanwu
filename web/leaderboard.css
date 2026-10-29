@@ -1,0 +1,4 @@
+#ranking-open{position:fixed;top:12px;right:14px;z-index:20;background:#193b50;color:#fff;border:1px solid #55c6e6;border-radius:4px;padding:9px 18px;font:16px sans-serif;cursor:pointer}
+#ranking-open[hidden]{display:none}
+#ranking-panel{color:#e7f5ff;background:#163244;border:1px solid #59c6e5;border-radius:8px;width:min(560px,85vw);max-height:80vh;overflow:auto;padding:24px;font:16px/1.6 sans-serif}
+#ranking-panel::backdrop{background:#0009}#ranking-panel h2{margin-top:0}#ranking-panel ol{padding-left:24px}#ranking-panel button{padding:8px 16px;margin:8px 8px 0 0;border:0;border-radius:3px;cursor:pointer;background:#ffb84c;color:#153247}#ranking-panel [role=status]{color:#ffce7c}#ranking-panel p{white-space:normal}

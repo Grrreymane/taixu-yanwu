@@ -140,6 +140,10 @@ func _init_bridge() -> void:
  JavaScriptBridge.eval("window.__godotReady=true; document.title='太虚演武 · 识境演武';")
  JavaScriptBridge.eval("window.addEventListener('pagehide',function(){if(window.__godotAction)window.__godotAction('save_local');}); document.addEventListener('visibilitychange',function(){if(window.__godotAction)window.__godotAction(document.hidden?'background':'foreground');});",true)
 
+func _ranking(method: String, values: Array = []) -> void:
+ if OS.has_feature("web"):
+  JavaScriptBridge.eval("if(window.TaixuLeaderboard)window.TaixuLeaderboard."+method+"(..."+JSON.stringify(values)+");",true)
+
 func _js_action(arguments: Array) -> void:
  if arguments.is_empty(): return
  var command: String=str(arguments[0])
@@ -261,6 +265,7 @@ func _action(command: String) -> void:
   _clear_inputs()
   return
  if command=="menu":
+  _ranking("cancel")
   _save_local_progress()
   stage_countdown=0.0
   _clear_inputs()
@@ -277,6 +282,7 @@ func _action(command: String) -> void:
   if resumed.is_empty():
    hud.notify_text("未找到可继续的试炼")
    return
+  _ranking("cancel")
   var saved_fighter: Dictionary=resumed.get("fighter",{})
   _select_fighter(str(saved_fighter.get("styleId",FighterRoster.DEFAULT_STYLE)),str(saved_fighter.get("appearanceId",FighterRoster.DEFAULT_APPEARANCE)))
   story.reset()
@@ -298,6 +304,7 @@ func _action(command: String) -> void:
   if command=="practice" or (command=="restart" and campaign.mode=="practice"):
    var preserve_training: bool=campaign.mode=="practice" and campaign.phase!="menu"
    stage_countdown=0.0
+   _ranking("cancel")
    campaign.begin_practice()
    story.reset()
    if not preserve_training: game.set_training(false)
@@ -309,6 +316,7 @@ func _action(command: String) -> void:
    _sync_actors()
   else:
    campaign.begin_trial()
+   _ranking("begin",[campaign.run_id])
    _begin_encounter()
   return
  if command=="retry":
@@ -703,7 +711,9 @@ func _process(delta: float) -> void:
    _save_local_progress()
    _clear_inputs()
    if campaign.phase=="cleared" and game.winner=="player":
-    if campaign.mode=="trial": _begin_story("victory","victory")
+    if campaign.mode=="trial":
+     _ranking("finish",[campaign.run_id,roundi(campaign.run_time*1000.0)])
+     _begin_story("victory","victory")
     else: _begin_victory()
    elif campaign.phase=="failed" and campaign.mode=="trial": _begin_story("defeat")
  story.tick(dt)
@@ -824,6 +834,7 @@ func _process(delta: float) -> void:
   telemetry_time=0.0
   player_pose=player.presentation_snapshot()
   if is_instance_valid(focused_enemy): enemy_pose=focused_enemy.presentation_snapshot()
+  _ranking("sync",[campaign.phase,story.active or boss_entrance.active or victory.playing()])
   state.ui=hud.presentation_snapshot()
   state.events=events
   state.vfx=effects.snapshot()

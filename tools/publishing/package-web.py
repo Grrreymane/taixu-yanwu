@@ -7,7 +7,7 @@ import tarfile
 
 root = Path(__file__).resolve().parents[2]
 web = root / 'build' / 'web'
-required = ['index.html', 'index.js', 'index.pck', 'index.wasm', 'index.wasm.gz', 'loading-ui.woff2']
+required = ['index.html', 'index.js', 'index.pck', 'index.wasm', 'index.wasm.gz', 'loading-ui.woff2', 'leaderboard.js', 'leaderboard.css']
 for name in required:
     if not (web / name).is_file():
         raise SystemExit('Missing export: ' + name)
