@@ -121,6 +121,25 @@ body {
 		<script>
 const GODOT_CONFIG = $GODOT_CONFIG;
 const GODOT_THREADS_ENABLED = $GODOT_THREADS_ENABLED;
+// Pages does not negotiate gzip sidecars. Limit interception to this WASM.
+// Streaming decompression preserves streaming compilation and original bytes.
+const originalFetch = window.fetch.bind(window);
+const wasmURL = new URL(GODOT_CONFIG.executable + '.wasm', document.baseURI).href;
+if (typeof DecompressionStream !== 'undefined') {
+ window.fetch = async function (input, init) {
+  const url = new URL(input instanceof Request ? input.url : input, document.baseURI).href;
+  if (url !== wasmURL) return originalFetch(input, init);
+  try {
+   const packed = await originalFetch(wasmURL + '.gz', init);
+   if (!packed.ok || !packed.body) throw new Error('Compressed engine unavailable');
+   const stream = packed.headers.get('Content-Encoding') === 'gzip'
+    ? packed.body : packed.body.pipeThrough(new DecompressionStream('gzip'));
+   return new Response(stream, {headers: {'Content-Type': 'application/wasm'}});
+  } catch (_) {
+   return originalFetch(input, init);
+  }
+ };
+}
 const engine = new Engine(GODOT_CONFIG);
 
 (function () {
@@ -218,6 +237,7 @@ const engine = new Engine(GODOT_CONFIG);
 				}
 			},
 		}).then(() => {
+			window.fetch = originalFetch;
 			setStatusMode('hidden');
 		}, displayFailureNotice);
 	}
