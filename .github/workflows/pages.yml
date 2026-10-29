@@ -1,0 +1,41 @@
+name: Publish playable web game
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Release containing site.tar.gz
+        required: true
+        type: string
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Download tested web export
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.release_tag }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          gh release download "$RELEASE_TAG" --repo "$REPOSITORY" --pattern site.tar.gz
+          mkdir _site
+          tar -xzf site.tar.gz -C _site
+          test -s _site/index.html
+          test -s _site/index.pck
+          test -s _site/index.wasm
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
