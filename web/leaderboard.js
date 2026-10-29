@@ -64,7 +64,8 @@
     throw new Error('排行榜连接失败，可稍后重试');
   }
   function cancel(reason='本次为续档或自由对练，不提交排行榜') {
-    if (current && current.score===null) current.cancelled=true;
+    if (current && current.score!==null) return; // Keep the receipt or retryable completed run when leaving results.
+    if (current) current.cancelled=true;
     current=null; status(standalone ? '请在 AIWanna 内游玩以参与排行榜' : reason);
   }
   function begin(id) {
