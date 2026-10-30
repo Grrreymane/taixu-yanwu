@@ -22,7 +22,7 @@ const SOUND_PRIORITY := {"swing":1,"swing_heavy":1,"hit":2,"hit_alt":2,"kick":2,
 const SOUND_PITCHES := {"hit":[1.0,0.975,1.025],"hit_alt":[1.0,1.022,0.98],"kick":[1.0,0.98,1.015],"heavy":[1.0,0.985,1.012],"block":[1.0,1.025,0.98],"block_heavy":[1.0,0.985],"swing":[1.0,1.03,0.98]}
 const NATIVE_FILES := {"brush":"Fx_Line_54","curl":"Fx_Line_55","drops":"Fx_Line_56","splashes":"Fx_Nature_44","impact":"Fx_Nature_47","taiji":"Fx_Symbol_09","fluid":"SFX_Fluid_304","mountains":"SFX_Nature_626_Cloud","landscape":"SFX_Icon_304","noise":"SFX_Noise_311","smoke":"SFX_Smoke_301","trail":"SFX_Trail_311","swirl":"SFX_Noise_316","victory_feather":"Fx_Symbol_01","victory_glow":"Fx_Glow_03"}
 const PHOENIX_FILES := {"phoenix_fist":"SmokeTrail_02","phoenix_arc":"SFX_Ray_503","phoenix_ring":"Bonus Shield-2"}
-const NIGHT_FILES := {"night_trail":"trail_2_new","night_burst_trail":"trail_3_new","night_spark":"Spark_3","night_ring":"Circle explosion-2","night_rays":"Optical Radiation","night_glow":"Seele_Glow_505","night_circle":"circle","night_smoke":"SFX_Smoke_503"}
+const NIGHT_FILES := {"night_highlight":"highlight","night_trail":"trail_2_new","night_burst_trail":"trail_3_new","night_spark":"Spark_3","night_ring":"Circle explosion-2","night_rays":"Optical Radiation","night_glow":"Seele_Glow_505","night_circle":"circle","night_smoke":"SFX_Smoke_503"}
 var active: Array[Dictionary] = []
 var rng := RandomNumberGenerator.new()
 var audio_players: Array[AudioStreamPlayer] = []
@@ -42,8 +42,11 @@ var native_sphere: Mesh
 var _arc_shape: ArrayMesh
 var _ring_shape: ArrayMesh
 var lightning := LIGHTNING_EFFECTS.new()
+var native_phoenix := preload("res://scripts/native_phoenix.gd").new()
+var native_burst := preload("res://scripts/native_burst_emitters.gd").new()
 
 func _ready() -> void:
+	add_child(native_phoenix)
 	rng.seed = 3103
 	_quad.size = Vector2.ONE
 	for key: String in NATIVE_FILES:
@@ -61,6 +64,7 @@ func _ready() -> void:
 		if ResourceLoader.exists(path): native_textures[str(entry[0])]=load(path)
 	native_sphere=load("res://assets/vfx/native/Sphere002-morph.res")
 	lightning.setup(self)
+	native_burst.setup(self)
 	for key: String in SOUND_LEVELS:
 		var path: String = "res://assets/audio/" + key + ".wav"
 		if ResourceLoader.exists(path): sounds[key] = load(path)
@@ -102,6 +106,8 @@ func snapshot() -> Dictionary:
 	return result
 
 func clear() -> void:
+	native_phoenix.clear()
+	native_burst.clear()
 	for item: Dictionary in active:
 		if is_instance_valid(item.node): item.node.queue_free()
 	active.clear()
@@ -772,18 +778,10 @@ func _night_dash(data: Dictionary) -> void:
 func _night_activation(data: Dictionary) -> void:
 	var x:=float(data.get("x",0.0))
 	_sound("ultimate")
-	_stamp("night_ring",Vector3(x,0.05,0),Vector2.ONE*2.4,Color(0.90,0.78,0.55,0.72),1.30,{"ground":true,"grow":1.25,"fade_in":0.12,"fade_start":0.80,"style":"night_squire","role":"burst_ready","annulus":true})
-	# ND is a power-up, so the native trails spiral toward the fighter rather
-	# than pretending to strike the untouched enemy during the activation.
-	for index: int in 4:
-		var phase: float=float(index)*TAU/4.0
-		_stamp("night_burst_trail",Vector3(x,0.80,-0.20),Vector2(1.35,0.32),Color(1.0,0.54,0.20,0.72),1.03,{"delay":0.16+index*0.05,"arc":true,"orbit":Vector3(0.62,0.25,0.46),"orbit_phase":phase,"orbit_speed":4.0,"velocity":Vector3(0,0.62,0),"angle":phase,"spin_speed":3.2,"grow":1.20,"fade_start":0.82,"style":"night_squire","role":"burst_gather"})
-	for side: float in [-1.0,1.0]:
-		_stamp("night_burst_trail",Vector3(x+side*0.42,0.95,-0.25),Vector2(0.36,2.1),Color(1.0,0.56,0.20,0.70),0.43,{"delay":1.03,"velocity":Vector3(side*0.30,0.35,0),"grow":0.35,"style":"night_squire","role":"burst_flare"})
-		_stamp("night_smoke",Vector3(x+side*0.30,0.16,0.1),Vector2(1.5,0.5),Color(0.80,0.85,0.91,0.45),0.55,{"delay":1.03,"velocity":Vector3(side*1.8,0.05,0),"grow":0.5,"style":"night_squire","role":"burst_pressure"})
-	for index in 5:
-		var side:float=-1.0 if index%2==0 else 1.0
-		_stamp("night_rays",Vector3(x+side*0.25,0.55+float(index)*0.27,0.25),Vector2.ONE*0.10,Color(1.0,0.65,0.32,0.85),0.50,{"delay":0.25+float(index)*0.11,"velocity":Vector3(0,0.65,0),"grow":0.4,"style":"night_squire","role":"burst_ready"})
+	var source: Array=JSON.parse_string(FileAccess.get_file_as_string("res://assets/vfx/native-burst/night-activation.json"))
+	for row: Dictionary in source:
+		var c: Dictionary=row.color
+		_stamp(str(row.textureKey),Vector3(x,1.15,-0.15),Vector2.ONE*float(row.size),Color(c.r,c.g,c.b,c.a),float(row.life),{"delay":float(row.delay),"instant":true,"grow":1.0,"billboard":true,"follow_id":_source_id(data),"style":"night_squire","role":"native_burst_activation","nativeNode":row.node})
 
 func _tick_cues(_delta: float) -> void:
 	for index: int in range(_cues.size() - 1, -1, -1):
@@ -808,6 +806,8 @@ func _tick_cues(_delta: float) -> void:
 
 func tick(delta: float) -> void:
 	if delta <= 0.0: return
+	native_phoenix.tick(delta)
+	native_burst.tick(delta)
 	_sound_clock += delta
 	_tick_cues(delta)
 	for i: int in range(active.size() - 1, -1, -1):
@@ -866,6 +866,8 @@ func tick(delta: float) -> void:
 			mat.set_shader_parameter("dissolve",lerpf(-0.15,0.8,smoothstep(0.32,1.0,p)))
 			var start: float=float(settings.get("grow",0.75))
 			node.scale=item.base_scale*lerpf(start,1.0,1.0-pow(1.0-p,3.0))
+			if settings.has("native_size"):
+				node.scale=item.base_scale*maxf(0.001,native_burst.curve_at(settings.native_size,p))
 			var velocity: Vector3=settings.get("velocity",Vector3.ZERO)
 			node.position=Vector3(item.origin)+velocity*age
 			if settings.has("orbit"):
@@ -1024,10 +1026,9 @@ func _fire_ultimate(data: Dictionary) -> void:
 	var target_x: float = float(data.get("targetX",x+1.0))
 	var facing: float = _facing(data)
 	_sound("ultimate")
+	native_phoenix.begin(data)
 	_fire_ring(x,2.2,0.55)
 	_fire_particles(Vector3(x,1.5,0.1),14,facing,false,true)
-	_fire_wings(Vector3(x,1.80,-0.42),facing,1.18,1.12,0.35)
-	_fire_wings(Vector3(x,1.70,-0.48),facing,1.72,1.05,0.95)
 	_fire_ring(x,3.9,0.70,1.15)
 	for side: float in [-1.0,1.0]:
 		_fire_stamp("phoenix_arc",Vector3(x+side*0.50,0.85,-0.38),Vector2(2.0,0.6),Color(1.0,0.67,0.24,0.84),0.75,{"uv":Vector4(1,0.25,0,0.5),"arc":true,"delay":0.40,"orbit":Vector3(0.48,0.30,0.28),"orbit_phase":0.0 if side<0.0 else PI,"orbit_speed":3.6*facing,"velocity":Vector3(0,0.8,0),"spin_speed":-2.3*facing,"grow":0.55,"role":"fire_gather"})

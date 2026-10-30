@@ -1,0 +1,10 @@
+{
+  "source": "Honkai Impact 3rd 9.1.0",
+  "prefab": "assets/asbres/effect/avatarfuka/jw/avatar_fuka_jw_ultra_phoenix.prefab",
+  "meshPathId": "824913073192179208",
+  "animation": "Avatar_Fuka_Ani_JW_Ultra_Phoenix",
+  "duration": 1.9166667,
+  "texturePathId": "3907598433996188955",
+  "textureSHA256": "0d0affad6e723304b8393c2937d25018376105c3a84361d500236c79c4fbde12",
+  "adaptation": "Original mesh, skeleton and animation; complete-instance position and uniform scale adapted for side-view arena. Unshaded source-color material is a compatibility approximation, not original Unity shader. Native bone tracks are not edited."
+}

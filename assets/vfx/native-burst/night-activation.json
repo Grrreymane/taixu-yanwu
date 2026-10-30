@@ -1,0 +1,67 @@
+[
+  {
+    "node": "Avatar_Fuka_ND_Ultra_CostSP/Smoke01_1 (15)",
+    "textureKey": "night_smoke",
+    "delay": 0.5,
+    "life": 0.5,
+    "size": 2.200000047683716,
+    "color": {
+      "r": 0.595588207244873,
+      "g": 0.6151115894317627,
+      "b": 1.0,
+      "a": 0.421999990940094
+    }
+  },
+  {
+    "node": "Avatar_Fuka_ND_Ultra_CostSP/Spot_3 (2)",
+    "textureKey": "night_rays",
+    "delay": 0.4000000059604645,
+    "life": 0.5,
+    "size": 1.5,
+    "color": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    }
+  },
+  {
+    "node": "Avatar_Fuka_ND_Ultra_CostSP/dot (1)",
+    "textureKey": "night_glow",
+    "delay": 0.5,
+    "life": 0.10000000149011612,
+    "size": 5.0,
+    "color": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 0.42100000381469727
+    }
+  },
+  {
+    "node": "Avatar_Fuka_ND_Ultra_CostSP/highlight (1)",
+    "textureKey": "night_highlight",
+    "delay": 0.5,
+    "life": 0.20000000298023224,
+    "size": 5.0,
+    "color": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 0.49803921580314636
+    }
+  },
+  {
+    "node": "Avatar_Fuka_ND_Ultra_CostSP/Spot_3 (1)",
+    "textureKey": "night_rays",
+    "delay": 0.0,
+    "life": 0.5,
+    "size": 3.0,
+    "color": {
+      "r": 0.0,
+      "g": 0.21379303932189941,
+      "b": 1.0,
+      "a": 1.0
+    }
+  }
+]
