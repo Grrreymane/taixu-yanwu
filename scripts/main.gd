@@ -334,6 +334,8 @@ func _action(command: String) -> void:
  if stage_countdown>0.0 and command!="pause": return
  if command=="training":
   if campaign.mode=="practice": game.set_training(not game.training)
+ elif command=="practice_infinite_hp":
+  if campaign.mode=="practice": game.set_infinite_hp(not game.infinite_hp)
  else: game.action(command)
 
 func _begin_encounter(with_story: bool=true) -> void:

@@ -16,6 +16,7 @@ func clear() -> void: credits.clear()
 func value(curve: Dictionary) -> float:
 	return random.randf_range(float(curve.minScalar),float(curve.scalar)) if int(curve.minMaxState)==3 else float(curve.scalar)
 static func curve_at(curve: Dictionary, t: float) -> float:
+	if int(curve.get("minMaxState",0)) in [0,3]:return float(curve.get("scalar",1.0))
 	var keys: Array=curve.get("maxCurve",{}).get("m_Curve",[])
 	if keys.is_empty():return float(curve.get("scalar",1.0))
 	if t<=float(keys[0].time):return float(keys[0].value)*float(curve.scalar)
@@ -34,7 +35,7 @@ func tick(delta: float) -> void:
 		credits.clear()
 		return
 	# Blood Moon has a distinct native follow prefab, not the blue NL emitter.
-	if str(fighter.get("appearanceId",""))=="blood_moon":return
+	if host.remaining_native.variant(fighter)=="blood":return
 	for row: Dictionary in catalog.get(style,[]):
 		var count:=float(credits.get(row.node,0.0))+float(row.rate)*delta
 		var emit:=mini(8,floori(count))

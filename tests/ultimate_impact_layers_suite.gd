@@ -32,21 +32,23 @@ func run()->void:
 				game.update(STEP)
 				fx.update_fighters(game.player,game.enemies)
 				fx.tick(game.time-previous)
-				var core:Array=fx.active.filter(func(item):return item.settings.get("role","") in ["ultimate_flame_core","ultimate_core"])
+				var core:Array=fx.active.filter(func(item):return item.settings.get("role","") in ["ultimate_flame_core","ultimate_core"] or str(item.settings.get("nativeNode","")).contains("Attack_C2_3_Ultra_Ground/"))
 				if game.enemy.hp==initial_hp:
 					check(core.is_empty(),style+" no impact before damage")
 				elif not saw_hit:
 					saw_hit=true
-					check(core.size()==1 and core[0].node.visible and core[0].mat.get_shader_parameter("opacity")>.8,style+" core is visible on first actual hit frame")
+					check(not core.is_empty() and core[0].node.visible and core[0].mat.get_shader_parameter("opacity")>.8,style+" source impact is visible on first actual hit frame")
 					var roles:Array=fx.active.map(func(item):return item.settings.get("role",""))
 					if style=="fenghuang":
 						check(roles.has("ultimate_flame_plume") and roles.has("ultimate_flame_outburst"),"fire impact has original flame silhouette and directional release")
-					else:
+					elif style=="shadow_knight":
 						var bolts:Array=fx.active.filter(func(item):return item.settings.get("role","")=="ultimate_bolt_front")
 						check(bolts.size()==2,"lightning hit releases paired coarse bolts")
 						for bolt:Dictionary in bolts:
 							check(bolt.mat.get_shader_parameter("mask_mode")==1,"opaque-alpha black-backed lightning atlas uses luminance, not alpha")
 							check(bolt.mat.get_shader_parameter("uv_transform").y==.25,"one lightning row is drawn per ribbon")
+					else:
+						check(core.any(func(item):return item.node.mesh is ArrayMesh),"fog release uses the source shockwave/smoke geometry")
 					var state:Dictionary=fx.snapshot()
 					var poses:Array=fx.active.map(func(item):return item.node.transform)
 					fx.tick(0)

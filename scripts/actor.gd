@@ -1049,7 +1049,9 @@ func _update_face_vectors() -> void:
 func flash() -> void:
 	_flash_remaining = 0.12
 
-func set_enemy_style(tint: Color, boss: bool=false) -> void:
-	scale=Vector3.ONE*(1.10 if boss else 1.0)
+func set_enemy_style(tint: Color, _boss: bool=false) -> void:
+	# Boss status changes combat behaviour, not the character's body proportions.
+	# The native skinned neutral pose already supplies the common display height.
+	scale=Vector3.ONE
 	for material in materials:
 		material.set_shader_parameter("ghost_tint",tint)

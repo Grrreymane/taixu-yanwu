@@ -2,6 +2,7 @@ extends Node3D
 ## Native C5 ink textures use alpha blending; procedural cards remain for enemy warnings.
 const CARD_SHADER := preload("res://shaders/vfx_card.gdshader")
 const NATIVE_SHADER := preload("res://shaders/native_ink.gdshader")
+const ENERGY_SHADER := preload("res://shaders/native_energy.gdshader")
 const SPHERE_SHADER := preload("res://shaders/native_ink_sphere.gdshader")
 const SPHERE_MOTION := preload("res://scripts/native_sphere_motion.gd")
 const PARTICLE_SHADER := preload("res://shaders/vfx_particles.gdshader")
@@ -44,6 +45,7 @@ var _ring_shape: ArrayMesh
 var lightning := LIGHTNING_EFFECTS.new()
 var native_phoenix := preload("res://scripts/native_phoenix.gd").new()
 var native_burst := preload("res://scripts/native_burst_emitters.gd").new()
+var remaining_native := preload("res://scripts/remaining_native_effects.gd").new()
 
 func _ready() -> void:
 	add_child(native_phoenix)
@@ -65,6 +67,7 @@ func _ready() -> void:
 	native_sphere=load("res://assets/vfx/native/Sphere002-morph.res")
 	lightning.setup(self)
 	native_burst.setup(self)
+	remaining_native.setup(self)
 	for key: String in SOUND_LEVELS:
 		var path: String = "res://assets/audio/" + key + ".wav"
 		if ResourceLoader.exists(path): sounds[key] = load(path)
@@ -108,6 +111,7 @@ func snapshot() -> Dictionary:
 func clear() -> void:
 	native_phoenix.clear()
 	native_burst.clear()
+	remaining_native.clear()
 	for item: Dictionary in active:
 		if is_instance_valid(item.node): item.node.queue_free()
 	active.clear()
@@ -296,7 +300,7 @@ func _stamp(key: String, origin: Vector3, size: Vector2, color: Color, life: flo
 	node.extra_cull_margin = 10.0
 	node.position = origin
 	var mat := ShaderMaterial.new()
-	mat.shader = NATIVE_SHADER
+	mat.shader = ENERGY_SHADER if bool(settings.get("additive",false)) else NATIVE_SHADER
 	mat.set_shader_parameter("source_texture",native_textures[key])
 	mat.set_shader_parameter("tint",color)
 	mat.set_shader_parameter("mask_mode",int(settings.get("mask",0)))
@@ -711,7 +715,8 @@ func handle_event(data: Dictionary) -> void:
 				_particles(Vector3(x, 1.35, 0.4), GOLD, 24, facing, true, false, true)
 				_shock(x, 1.5, GOLD, 0.4)
 		"ultimate":
-			if lightning.supported(data): lightning.event(data)
+			if remaining_native.event(data): pass
+			elif lightning.supported(data): lightning.event(data)
 			elif _player_night(data): _night_activation(data)
 			elif _player_fire(data): _fire_ultimate(data)
 			else: _native_ultimate(data)
@@ -720,7 +725,8 @@ func handle_event(data: Dictionary) -> void:
 			elif _player_night(data):
 				_stamp("night_ring",Vector3(x,0.06,0),Vector2.ONE*2.8,Color(1.0,0.56,0.28,0.8),0.36,{"ground":true,"grow":0.25,"instant":true,"style":"night_squire","role":"burst_release","annulus":true})
 		"ultimateImpact":
-			if lightning.supported(data): lightning.event(data)
+			if remaining_native.event(data): pass
+			elif lightning.supported(data): lightning.event(data)
 			else: lightning.sword_field(data)
 		"lightningDischarge", "fogCharge", "Fogcharge":
 			if lightning.supported(data): lightning.event(data)
@@ -808,6 +814,7 @@ func tick(delta: float) -> void:
 	if delta <= 0.0: return
 	native_phoenix.tick(delta)
 	native_burst.tick(delta)
+	remaining_native.tick(delta)
 	_sound_clock += delta
 	_tick_cues(delta)
 	for i: int in range(active.size() - 1, -1, -1):
@@ -884,6 +891,8 @@ func tick(delta: float) -> void:
 				if view_camera != null:
 					node.look_at(view_camera.global_position,Vector3.UP,true)
 					node.rotate_object_local(Vector3.FORWARD,float(settings.get("angle",0.0))+spin)
+			if settings.has("source_module"):
+				remaining_native.present_particle(item,p)
 		else:
 			mat.set_shader_parameter("progress", p * 0.45 + 0.05 if bool(settings.get("charge", false)) else p)
 			mat.set_shader_parameter("opacity", 1.0)

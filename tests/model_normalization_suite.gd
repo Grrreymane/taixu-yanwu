@@ -92,7 +92,9 @@ func run() -> void:
 		var pelvis: Vector3=actor.skeleton.global_transform*actor.skeleton.get_bone_global_pose(actor._root_bone).origin
 		check(absf(pelvis.x)<0.00001 and absf(pelvis.z)<0.00001,label+" sampled pelvis remains centered on the gameplay origin")
 		var telemetry: Dictionary=actor.presentation_snapshot().normalization
-		check(telemetry.reference=="native_neutral_skinned" and telemetry.vertices>0 and telemetry.height>1.0,label+" reports the actual original neutral reference")
+		# C2 exports use centimetres; the reference can be 0.0178 before the
+		# existing scene unit conversion. Verify final height, not import units.
+		check(telemetry.reference=="native_neutral_skinned" and telemetry.vertices>0 and telemetry.height>0.0 and absf(float(telemetry.height)*float(telemetry.scale)-float(actor._visual.height))<0.00003,label+" reports the actual original neutral reference")
 		var retained: Array[Transform3D]=[]
 		for bone in actor.skeleton.get_bone_count():
 			retained.append(actor.skeleton.get_bone_pose(bone))
@@ -100,6 +102,11 @@ func run() -> void:
 		var neutral_world:=_world_bounds(actor)
 		check(absf(neutral_world.size.y-float(actor._visual.height))<0.00003,label+" actual neutral skinned vertex height is the configured 2.85")
 		check(absf(neutral_world.position.y)<0.00003,label+" actual neutral feet remain grounded")
+		if label=="sentience/default":
+			actor.set_enemy_style(Color.WHITE,true)
+			var boss_bounds:=_world_bounds(actor)
+			check(absf(boss_bounds.size.y-neutral_world.size.y)<0.00003 and actor.scale==Vector3.ONE,"sparring/final boss designation never enlarges Sentience")
+			actor.set_enemy_style(Color.WHITE,false)
 		for bone in retained.size():actor.skeleton.set_bone_pose(bone,retained[bone])
 		if label in ["azure_empyrea/default","azure_empyrea/taixu_memory","fenghuang/default","sentience/default"]:
 			var old: Dictionary=baseline[label]

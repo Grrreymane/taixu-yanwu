@@ -1,0 +1,41 @@
+Original HI3 FK / NL Dress01 ultimate resources
+
+Copyright: miHoYo / HoYoverse. These are game assets, not original artwork
+made for this fan project. See the repository's existing asset notices.
+
+emitters.json contains 32 emitter rows recovered from these source prefabs:
+- Avatar_Fuka_FK_Ultra_CostSP (6)
+- Avatar_Fuka_FK_Attack_C2_3_Ultra (2)
+- Avatar_Fuka_FK_Attack_C2_3_Ultra_Ground (13)
+- Avatar_Fuka_FK_Ultra_Follow_QYHY (4)
+- Avatar_Fuka_NL_Attack_UltraThunder_Dress01 (3)
+- Avatar_Fuka_NL_Ultra_Follow_Dress01 (4)
+
+Textures are copied without repainting. Each row records its texture SHA-256,
+source node, material properties, native transform chain, and decoded Unity
+Initial/Shape/Emission/Size/Color/UV/Velocity modules. The module readers checked
+curve key ordering, finite values and enum ranges before export.
+
+meshes.json contains 12 original meshes with vertices, UVs and triangle indices.
+Mesh references were resolved against the renderer's serialized-file externals,
+not guessed from texture names. FLAR 90 (1) instead refers to Unity's built-in
+quad (path ID 10210). Particle renderer modes and lengths are retained.
+
+Playback adaptation in scripts/remaining_native_effects.gd:
+- Convert Unity's handedness and UV origin for Godot.
+- Spawn at this game's confirmed ultimate-impact cue; use source start delays.
+- Keep source particle lifetimes, emission rates, size/colour curves and atlases.
+- Use original mesh geometry for mesh particles; align stretched billboards.
+- Use arena conversion 0.45 for release effects and 1.0 for follow effects.
+- Follow-player effects use the current fighter position. FK release aura also
+  lasts through the short side-view ultimate, independent of its charge meter.
+- Cap each emitter's per-frame work and share the existing 112-layer budget.
+
+This is a Web Compatibility renderer port, not Unity shader bytecode playback.
+HDR bloom, screen distortion, trails, full mesh vertex-stream/custom-data
+shaders and dynamic native physics are not reproduced. RGB-channel tinting and
+alpha/additive blending approximate the original materials in this renderer.
+
+Checks: tests/native_ultimate_resources_suite.gd,
+tests/ultimate_impact_layers_suite.gd,
+tests/browser/native-ultimate-resources-browser.cjs.

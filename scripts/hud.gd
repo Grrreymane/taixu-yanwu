@@ -193,6 +193,7 @@ var _fighter_identity: Dictionary = {}
 var _roster_signature := ""
 var _armor_signature := ""
 var _mode_button: Button
+var _infinite_hp_button: Button
 var _pause_button: Button
 var _instruction: Label
 var _cinematic := Control.new()
@@ -373,6 +374,11 @@ func _build_battle() -> void:
 	_mode_button = _rect_button(_battle, "实战对练  T")
 	_mode_button.add_theme_font_size_override("font_size", 14)
 	_mode_button.pressed.connect(func(): _request_action("training"))
+	_infinite_hp_button = _rect_button(_battle, "双方无限血量：关")
+	_infinite_hp_button.name = "PracticeInfiniteHealth"
+	_infinite_hp_button.add_theme_font_size_override("font_size", 14)
+	_infinite_hp_button.tooltip_text = "开启后双方恢复满血且不再扣血，仍保留攻击、受击与防反。"
+	_infinite_hp_button.pressed.connect(func(): _request_action("practice_infinite_hp"))
 	_battle.add_child(_enemy_panel)
 	_enemy_panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_enemy_name = _label(_enemy_panel, "识之律者", 21, INK)
@@ -657,6 +663,9 @@ func presentation_snapshot() -> Dictionary:
 		"guideEntryRect":_rect_values(_viewport_pixel_rect(_menu_guide)),
 		"guideCloseRect":_rect_values(_viewport_pixel_rect(_guide_close)),
 		"voiceToggleRect":_rect_values(_viewport_pixel_rect(_voice_button)),
+		"infiniteHpRect":_rect_values(_viewport_pixel_rect(_infinite_hp_button)),
+		"infiniteHpVisible":_infinite_hp_button.is_visible_in_tree(),
+		"resultButtons":_result_button_rects(),
 		"continueVisible":_menu_mode == "intro" and bool(_campaign.get("resume",{}).get("available",false)),
 		"continueRect":_rect_values(_viewport_pixel_rect(_menu_start)),
 		"newTrialRect":_rect_values(_viewport_pixel_rect(_menu_new_trial)),
@@ -676,6 +685,12 @@ func _choice_rects(buttons: Array[Button]) -> Array:
 	var result: Array = []
 	for button: Button in buttons:
 		result.append({"id":str(button.get_meta("selection_id", "")), "rect":_rect_values(_viewport_pixel_rect(button)), "selected":bool(button.get_meta("selected", button.button_pressed))})
+	return result
+
+func _result_button_rects() -> Dictionary:
+	var result: Dictionary={}
+	for child in _result_panel.get_children():
+		if child is Button: result[str(child.name)]={"rect":_rect_values(_viewport_pixel_rect(child)),"visible":child.is_visible_in_tree()}
 	return result
 
 func handle_modal_input(event: InputEvent) -> bool:
@@ -1290,6 +1305,7 @@ func _layout() -> void:
 	_place(_brand, 32, 25, 230, 31)
 	_place(_pause_button, w - 130, 27, 100, 39)
 	_place(_mode_button, w - 170, 79, 140, 33)
+	_place(_infinite_hp_button, w - 202, 119, 172, 33)
 	_place(_enemy_panel, (w - 500) * 0.5, 29, 500, 65)
 	_place(_stage_panel,26,24,300,180 if _campaign_mode == "trial" else 150)
 	_place(_player_panel, 36, h - 154, 290, 120)
@@ -1460,11 +1476,14 @@ func update_status(data: Dictionary) -> void:
 	_enemy_hp.set_amount(float(enemy.get("hp", 100.0))/enemy_max_hp*100.0)
 	_enemy_posture.set_amount(float(enemy.get("posture", 0.0)))
 	_hp_text.text = "HP  %03d / %03d" % [roundi(hp),roundi(max_hp)]
+	if bool(data.get("infiniteHp",false)): _hp_text.text = "HP  无限"
 	_sp_text.text = "SP %03d" % roundi(energy)
 	var combo: int = int(data.get("combo", 0))
 	_combo.text = "%02d  连击" % combo if combo > 1 else ""
 	_mode_button.text = "木人练习  T" if bool(data.get("training", false)) else "实战对练  T"
 	_mode_button.visible = _campaign_mode == "practice" and _phase == "fight"
+	_infinite_hp_button.visible = _mode_button.visible
+	_infinite_hp_button.text = "双方无限血量：" + ("开" if bool(data.get("infiniteHp",false)) else "关")
 	var enemy_kind: String = str(enemy.get("type",""))
 	var boss: bool = bool(enemy.get("boss",false)) or enemy_kind == "boss"
 	var elite: bool = bool(enemy.get("elite",false)) or enemy_kind == "elite"
@@ -1481,6 +1500,7 @@ func update_status(data: Dictionary) -> void:
 		_enemy_tag.add_theme_color_override("font_color", tag_color)
 	if bool(data.get("training",false)) and _campaign_mode == "practice":
 		_enemy_tag.text = "木人练习"
+	if bool(data.get("infiniteHp",false)): _enemy_tag.text += " · 无限血量"
 	var health_tint: Color = ORANGE if boss else (Color("ff915e") if elite else Color("ef7653"))
 	if _enemy_hp.tint != health_tint:
 		_enemy_hp.tint = health_tint
@@ -1511,6 +1531,7 @@ func update_status(data: Dictionary) -> void:
 	_left.set_enabled(can_act)
 	_right.set_enabled(can_act)
 	_mode_button.disabled = _paused or _ended or ultimate
+	_infinite_hp_button.disabled = _mode_button.disabled
 	_pause_button.disabled = _ended
 	_update_campaign(ultimate)
 	_update_victory(data)
@@ -1557,7 +1578,8 @@ func _update_victory(data: Dictionary) -> void:
 	_victory_overlay.set_meta("presentation_shot",str(_victory.get("shot","")))
 	_stage_banner.hide()
 	_reward_overlay.hide()
-	_result_overlay.visible = not playing and not presentation_paused
+	# _update_campaign owns result visibility. Hiding and re-showing the
+	# practice results each tick cancels a Button's pressed state before release.
 
 func _boon_names() -> PackedStringArray:
 	var names := PackedStringArray()
@@ -1649,7 +1671,7 @@ func _update_campaign(ultimate: bool) -> void:
 		_banner_detail.text = str(_campaign.get("brief","击破识律幻身，向下一站前进")) if _campaign_mode == "trial" else "切磋对手 · 识之律者"
 	_stage_banner.visible = _phase == "fight" and not _paused and not ultimate and _banner_time > 0.0
 	_reward_overlay.visible = _phase == "reward" and not _paused
-	_result_overlay.visible = _phase == "cleared" and _campaign_mode == "trial" and not _paused and not bool(_victory.get("playing",false))
+	_result_overlay.visible = _phase == "cleared" and (_campaign_mode == "trial" or bool(_victory.get("visible",false))) and not _paused and not bool(_victory.get("playing",false))
 	if _phase == "reward":
 		var rewards: Array = _campaign.get("rewards",[])
 		var signature: String = JSON.stringify(rewards)

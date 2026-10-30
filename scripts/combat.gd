@@ -41,6 +41,8 @@ var paused := false
 var ended := false
 var winner := ""
 var training := false
+var infinite_hp := false
+var _sparring := false
 var hit_stop := 0.0
 var ultimate: Dictionary = {}
 var combo_count := 0
@@ -123,6 +125,8 @@ func reset() -> void:
  _ai_gap=0.8
  _ai_cursor=0
  _legacy_mode=true
+ _sparring=false
+ infinite_hp=false
  _pressure_level=1
  _encounter_rule.clear()
  _rng.seed=3103
@@ -138,7 +142,26 @@ func start_sparring() -> void:
  # The visible opponent is the real Sentience, including her second phase;
  # use the same weapon/turn scheduler as the boss rather than the old dummy AI.
  var dummy:=training
+ var keep_infinite:=infinite_hp
  start_encounter({"playerX":-1.65,"pressureLevel":1,"training":dummy,"enemies":[{"id":"sparring_sentience","type":"boss","boss":true,"name":"识之律者","hp":180.0,"x":1.65,"damageScale":1.0}]},{"hp":120.0,"maxHp":120.0,"energy":100.0})
+ _sparring=true
+ set_infinite_hp(keep_infinite)
+
+func set_infinite_hp(enabled: bool) -> void:
+ if not _sparring or ended: return
+ infinite_hp=enabled
+ if enabled:
+  player.hp=player.maxHp
+  for foe in enemies:
+   foe.hp=foe.maxHp
+   foe.practiceDamage=0.0
+ _emit("practiceHealth",{"enabled":infinite_hp})
+
+func _take_health(fighter: Dictionary, damage: float) -> void:
+ # Only health changes are suppressed. Contacts, stun, posture, hit-stop and
+ # damage statistics still run so an active opponent can be practised against.
+ if not infinite_hp: fighter.hp=maxf(0.0,float(fighter.hp)-damage)
+ elif fighter.side=="enemy": fighter.practiceDamage=float(fighter.get("practiceDamage",0.0))+damage
 
 func start_encounter(config: Dictionary, carry: Dictionary={}) -> void:
  reset()
@@ -750,12 +773,12 @@ func _receive(attacker: Dictionary,defender: Dictionary,attack: Dictionary) -> v
  # last strike's recovery remains completely open to ordinary attacks.
  var armor_window: bool=defender.state=="attack" and (defender.stateTime<float(defender.attack.get("windup",0.0)) or (bool(defender.attack.get("pressureChain",false)) and int(defender.attack.get("nativeNext",-1))>=0))
  var armored: bool=armor_window and defender.attack.get("armored",false) and attack.name!="ability" and not (attack.name=="heavy" and defender.attack.get("heavyBreaksArmor",false))
- defender.hp-=damage
+ _take_health(defender,damage)
  if attacker.side=="player" and attacker.style=="shadow_knight" and float(attacker.eclipseRemaining)>0.0:
   attacker.lightningHits+=1
   if int(attacker.lightningHits)%3==0:
    var discharge:=minf(defender.hp,8.0*float(attacker.damageMultiplier))
-   defender.hp-=discharge
+   _take_health(defender,discharge)
    damage+=discharge
    _emit("lightningDischarge",{"sourceId":attacker.id,"targetId":defender.id,"x":defender.x,"damage":discharge})
  if attacker.side=="player" and attacker.style=="hawk_of_the_fog" and not bool(attack.get("fogChargePaid",false)) and (attack.name=="ability" or (attack.name=="light" and int(attack.comboIndex)==2)):
@@ -872,7 +895,7 @@ func _advance_ultimate(dt: float) -> void:
    var base_damage: float=(30.0 if final else 10.0) if player_profile=="fenghuang" else (18.0 if final else 6.0)
    if LightningCombat.supported(player_profile): base_damage=LightningCombat.ultimate_damage(player_profile,index)
    var damage: float=minf(foe.hp,base_damage*player.damageMultiplier)
-   foe.hp-=damage
+   _take_health(foe,damage)
    stats.damageDealt+=damage
    foe.lastContact=time
    foe.stateTime=0.0
@@ -1130,7 +1153,8 @@ func _mark_down(foe: Dictionary) -> void:
  _emit("enemyDown",{"side":"enemy","sourceId":player.id,"targetId":foe.id,"id":foe.id,"x":foe.x,"name":foe.name,"boss":foe.boss})
 
 func _check_boss_phase(foe: Dictionary) -> void:
- if not foe.boss or foe.phase!=1 or foe.hp<=0.0 or foe.hp>foe.maxHp*0.5: return
+ var phase_health: float=float(foe.hp)-float(foe.get("practiceDamage",0.0)) if infinite_hp else float(foe.hp)
+ if not foe.boss or foe.phase!=1 or foe.hp<=0.0 or phase_health>foe.maxHp*0.5: return
  foe.phase=2
  if training: return
  foe.posture=minf(foe.posture,20.0)
@@ -1168,7 +1192,7 @@ func _check_end() -> void:
  _emit("end",{"winner":winner})
 
 func snapshot() -> Dictionary:
- return {"player":player.duplicate(true),"enemy":enemy.duplicate(true),"enemies":enemies.duplicate(true),"enemyId":enemy.id,"time":time,"started":started,"paused":paused,"ended":ended,"winner":winner,"training":training,"ultimate":not ultimate.is_empty(),"ultimateTime":ultimate.get("time",-1.0),"combo":combo_count,"hitStop":hit_stop,"stats":stats.duplicate(true)}
+ return {"player":player.duplicate(true),"enemy":enemy.duplicate(true),"enemies":enemies.duplicate(true),"enemyId":enemy.id,"time":time,"started":started,"paused":paused,"ended":ended,"winner":winner,"training":training,"infiniteHp":infinite_hp,"ultimate":not ultimate.is_empty(),"ultimateTime":ultimate.get("time",-1.0),"combo":combo_count,"hitStop":hit_stop,"stats":stats.duplicate(true)}
 
 func _emit(kind: String,data: Dictionary={}) -> void:
  var output: Dictionary=data.duplicate()

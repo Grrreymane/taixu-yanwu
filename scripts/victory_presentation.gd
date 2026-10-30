@@ -32,12 +32,12 @@ func skip() -> void:
 		paused = false
 
 func toggle_pause() -> void:
-	if visible:
+	if playing():
 		paused = not paused
 
 func set_focused(value: bool) -> void:
 	focused = value
-	if visible and not value:
+	if playing() and not value:
 		paused = true
 
 func snapshot() -> Dictionary:
