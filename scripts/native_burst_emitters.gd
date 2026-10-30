@@ -34,8 +34,8 @@ func tick(delta: float) -> void:
 	if remaining<=0.0 or float(fighter.get("hp",0.0))<=0.0:
 		credits.clear()
 		return
-	# Blood Moon has a distinct native follow prefab, not the blue NL emitter.
-	if host.remaining_native.variant(fighter)=="blood":return
+	# NL and Dress01 now use their complete native follow modules.
+	if host.remaining_native.variant(fighter) in ["blood","shadow"]:return
 	for row: Dictionary in catalog.get(style,[]):
 		var count:=float(credits.get(row.node,0.0))+float(row.rate)*delta
 		var emit:=mini(8,floori(count))

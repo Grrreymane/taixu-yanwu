@@ -25,7 +25,7 @@ static func sample(profile: String, time: float) -> Dictionary:
 	if time < 0.0 or time >= duration: envelope = 0.0
 	var release_pulse := maxf(0.0, 1.0 - (time - release) / 0.32) if time >= release else 0.0
 	var final_pulse := maxf(0.0, 1.0 - (time - finish) / 0.22) if time >= finish else 0.0
-	var accent: Color = {"azure_empyrea":Color("b5dce4"), "fenghuang":Color("ffc47c"), "night_squire":Color("ffe0a6"), "shadow_knight":Color("cba1fa"), "hawk_of_the_fog":Color("a6e5ff")}.get(profile, Color("b5dce4"))
+	var accent: Color = {"azure_empyrea":Color("b5dce4"), "fenghuang":Color("ffc47c"), "night_squire":Color("a6ddff"), "shadow_knight":Color("94d7ff"), "hawk_of_the_fog":Color("ffc46b")}.get(profile, Color("b5dce4"))
 	return {"active":envelope > 0.001, "weight":envelope, "pulse":maxf(release_pulse, final_pulse), "ink":profile == "azure_empyrea", "accent":accent, "released":time >= release, "duration":duration}
 
 func present(camera: Camera3D, profile: String, time: float, player_x: float, target_x: float, enabled: bool) -> void:

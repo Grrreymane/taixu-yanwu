@@ -26,6 +26,13 @@ environment/defaults/default_clear_color=Color(0.63, 0.78, 0.86, 1)
 [physics]
 common/physics_ticks_per_second=120
 
+[shader_globals]
+
+stage_exposure={
+"type": "float",
+"value": 1.0
+}
+
 [gui]
 theme/custom="res://assets/fonts/game_theme.tres"
 

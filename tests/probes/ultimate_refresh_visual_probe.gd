@@ -39,6 +39,7 @@ func run() -> void:
 	for profile: String in profiles:
 		world._action("menu")
 		world._action("select_style:"+profile)
+		world._action("select_appearance:default")
 		world._action("practice")
 		world.game.set_training(true)
 		world.game.player.x=-0.65
@@ -53,6 +54,7 @@ func run() -> void:
 			await shot(profile+"-"+str(roundi(keyframe*100)))
 			previous=keyframe
 		step(4.2-previous)
+		assert(is_equal_approx(world.arena._ultimate_exposure,1.0),"The courtyard must recover after every ultimate")
 	world._action("menu")
 	world.campaign.begin_trial("mirror",142)
 	world.campaign.stage_index=3

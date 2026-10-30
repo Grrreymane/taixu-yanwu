@@ -1,4 +1,5 @@
 shader_type spatial;
+global uniform float stage_exposure;
 render_mode diffuse_lambert, specular_disabled;
 
 uniform vec4 base_color : source_color = vec4(0.55,0.58,0.57,1.0);
@@ -43,6 +44,6 @@ void fragment() {
 		texel=mix(vec3(0.60),texel,texture_contrast);
 		color*=mix(vec3(1.0),texel*1.5,0.55);
 	}
-	ALBEDO=color*COLOR.rgb;
+	ALBEDO=color*COLOR.rgb*stage_exposure;
 	ROUGHNESS=0.95;
 }

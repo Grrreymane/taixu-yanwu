@@ -1,4 +1,5 @@
 shader_type spatial;
+global uniform float stage_exposure;
 render_mode unshaded, cull_back;
 
 // Recovered local BH3 9.1 basic baked-light equations:
@@ -105,5 +106,5 @@ void fragment() {
  if (!OUTPUT_IS_SRGB) {
   color = native_prop_srgb_to_linear(color);
  }
- ALBEDO = color;
+ ALBEDO = color * stage_exposure;
 }

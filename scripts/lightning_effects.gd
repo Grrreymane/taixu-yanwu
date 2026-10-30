@@ -69,10 +69,10 @@ func profile(data: Dictionary) -> String:
 
 func color(data: Dictionary, alpha: float = 0.88) -> Color:
 	# NL native UltraThunder startColor: (0,.671,1); Dress01 red max(1,.245,.176).
-	# FK palette remains an explicit adaptation, not a recovered particle color.
+	# Ordinary FK accents match the recovered AF01 ultimate's warm palette.
 	match profile(data):
 		"blood_moon": return Color(1.0,0.245,0.176,alpha)
-		"hawk_of_the_fog": return Color(0.66,0.80,1.0,alpha)
+		"hawk_of_the_fog": return Color(1.0,0.68,0.18,alpha)
 	return Color(0.0,0.671,1.0,alpha)
 
 func _stamp(data: Dictionary, texture_role: String, origin: Vector3, size: Vector2, life: float, role: String, options: Dictionary = {}) -> Dictionary:
@@ -87,6 +87,11 @@ func _stamp(data: Dictionary, texture_role: String, origin: Vector3, size: Vecto
 	settings.grow = settings.get("grow",0.85)
 	settings.facing = host._facing(data)
 	settings.energy_core = (role.begins_with("ultimate_") or role.begins_with("eclipse_")) and texture_role in ["trail","lightning","ultimateBolt"]
+	if p=="shadow_knight":
+		# Native NL materials: circle/additive/4; Effect_lighting_new_3/additive/15;
+		# yuanqidan1/alpha/3; Spark_3/alpha/8. Placement remains arena-adapted.
+		if texture_role in ["ring","lightning"]:settings.additive=true
+		settings.source_gain={"ring":4.0,"lightning":15.0,"trail":3.0,"impact":8.0}.get(texture_role,1.0)
 	# Lightning coverage is explicit in each map: SFX_Lightning_501 has native
 	# alpha; opaque-alpha additive artwork such as FK Particle507 needs luminance.
 	settings.mask = int(maps.get(p,{}).get("lightningMask",1)) if p != "hawk_of_the_fog" and texture_role == "lightning" else 1 if texture_role == "particle" else 0

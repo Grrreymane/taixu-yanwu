@@ -36,7 +36,7 @@ static func sample(time: float, focus: Dictionary, profile: String) -> Dictionar
 	if shadow:
 		rise = Blend._fit(Blend._shot(Vector3(middle+facing*1.65,2.05,8.2),Vector3(middle,2.10,0),40.0,-1.5*facing,prefix+"rise"),aspect)
 	var apex := Blend._fit(Blend._shot(Vector3(middle-facing*0.25,3.10,8.1),Vector3(middle,2.0,0),40.0,1.1*facing,prefix+"apex"),aspect)
-	var strike := Blend._fit(Blend._shot(Vector3(middle+facing*0.75,1.10,6.8),Vector3(middle,1.44,0),39.0,1.5*facing,prefix+"impact"),aspect)
+	var strike := Blend._fit(Blend._shot(Vector3(middle+facing*0.75,1.50,9.4),Vector3(middle,1.65,0),43.0,1.5*facing,prefix+"impact"),aspect)
 	if shadow:
 		strike = Blend._fit(Blend._shot(Vector3(middle-facing*0.5,1.65,8.3),Vector3(middle,2.05,0),40.0,1.5*facing,prefix+"impact"),aspect)
 	var settle := Blend._fit(Blend._shot(Vector3(middle+facing*0.15,1.8,6.7),Vector3(middle,1.55,0),37.5,0.0,prefix+"settle"),aspect)

@@ -1,41 +1,47 @@
-Original HI3 FK / NL Dress01 ultimate resources
+Original HI3 FK Artifact / NL Dress01 ultimate resources
 
-Copyright: miHoYo / HoYoverse. These are game assets, not original artwork
-made for this fan project. See the repository's existing asset notices.
+Copyright: miHoYo / HoYoverse. See the repository's existing asset notices.
+Textures and meshes are original game artwork, not repainted substitutes.
 
-emitters.json contains 32 emitter rows recovered from these source prefabs:
-- Avatar_Fuka_FK_Ultra_CostSP (6)
-- Avatar_Fuka_FK_Attack_C2_3_Ultra (2)
-- Avatar_Fuka_FK_Attack_C2_3_Ultra_Ground (13)
-- Avatar_Fuka_FK_Ultra_Follow_QYHY (4)
-- Avatar_Fuka_NL_Attack_UltraThunder_Dress01 (3)
-- Avatar_Fuka_NL_Ultra_Follow_Dress01 (4)
+Active catalog: 34 emitter rows, 14 source meshes.
+- Avatar_Fuka_FK_AF01_Ultra: 23 rendered layers, augmented Hawk of the Fog.
+- Avatar_Fuka_NL_Attack_UltraThunder_Dress01: 3 layers.
+- Avatar_Fuka_NL_Ultra_Follow_Dress01: 4 layers.
+- Avatar_Fuka_NL_Attack_UltraThunder: 1 layer.
+- Avatar_Fuka_NL_Ultra_Follow: 3 layers.
+NL UltraThunder is a secondary arc emitter, not the complete transformation.
+Its source-texture shockwave composition remains, with corrected original
+circle/lightning additive and trail/impact alpha emission material values.
 
-Textures are copied without repainting. Each row records its texture SHA-256,
-source node, material properties, native transform chain, and decoded Unity
-Initial/Shape/Emission/Size/Color/UV/Velocity modules. The module readers checked
-curve key ordering, finite values and enum ranges before export.
+FK base-suit C2_3_Ultra and QYHY follow were previously assigned to AF01.
+They have been removed from the active catalog: they belong to a different suit.
+AF01's .6-second source impact is aligned to the visible landing clip's
+.4701334 contact by a .1298666 cue offset, preserving relative emitter delays.
+Reference: official Hawk of the Fog tutorial at
+https://bh3.mihoyo.com/gl/character/detail/1119
 
-meshes.json contains 12 original meshes with vertices, UVs and triangle indices.
-Mesh references were resolved against the renderer's serialized-file externals,
-not guessed from texture names. FLAR 90 (1) instead refers to Unity's built-in
-quad (path ID 10210). Particle renderer modes and lengths are retained.
+Rows record texture hashes, original material values, source shader identity
+and hash, emitter modules, transform chains, and renderer mesh references.
+Mesh arrays retain original vertices, UVs, indices, available colors/normals.
+Renderer mesh PPtrs account for variable vertex-stream length (344/348 bytes).
+The trail meshes are Fuka_trail01, not generic quads. Built-in ID 10210 is a quad.
 
-Playback adaptation in scripts/remaining_native_effects.gd:
-- Convert Unity's handedness and UV origin for Godot.
-- Spawn at this game's confirmed ultimate-impact cue; use source start delays.
-- Keep source particle lifetimes, emission rates, size/colour curves and atlases.
-- Use original mesh geometry for mesh particles; align stretched billboards.
-- Use arena conversion 0.45 for release effects and 1.0 for follow effects.
-- Follow-player effects use the current fighter position. FK release aura also
-  lasts through the short side-view ultimate, independent of its charge meter.
-- Cap each emitter's per-frame work and share the existing 112-layer budget.
+Material fixes are based on original shader metadata and DXBC inspection:
+- Particle_Channel_Mix_New and Layer1/Channel Mix interpolate colors with R/G;
+  their coverage channel is B. These channels are not summed as colored light.
+- Legacy particle material tint is multiplied by two; .5 is the neutral value.
+- Retain _EmissionScaler, alpha/additive families, texture scrolling and mask.
+- Keep vertex alpha, separate-axis size curves, angular velocity, velocity-over-
+  lifetime, and texture-sheet frames. Pause uses the simulation clock throughout.
 
-This is a Web Compatibility renderer port, not Unity shader bytecode playback.
-HDR bloom, screen distortion, trails, full mesh vertex-stream/custom-data
-shaders and dynamic native physics are not reproduced. RGB-channel tinting and
-alpha/additive blending approximate the original materials in this renderer.
+Web adaptation: release scale .85, follow scale 1.0; explicit local texture halos
+replace screen HDR bloom. Scene-only dimming leaves characters readable. The
+fog camera pulls back for its native circular burst. Shared live-layer cap:112.
+DLCSmoke now retains its original _DisTexture and threshold; lifetime supplies
+the missing custom-stream dissolve bias, with an explicit Web cone-edge feather.
+This is not a complete Unity renderer: distortion, native trail simulation,
+DLCSmoke custom vertex streams and full custom-data shading still differ.
 
-Checks: tests/native_ultimate_resources_suite.gd,
-tests/ultimate_impact_layers_suite.gd,
-tests/browser/native-ultimate-resources-browser.cjs.
+Rebuild from local exports with tools/import_native_ultimates.py
+ --source-root <exports directory> --suit fog (or shadow), then
+ tools/prepare_native_effect_materials.py --source-root <exports directory>.

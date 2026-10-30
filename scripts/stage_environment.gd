@@ -22,6 +22,23 @@ var _sun: DirectionalLight3D
 var _mats: Dictionary = {}
 var _animated: Array[ShaderMaterial] = []
 var _mist_materials: Array[ShaderMaterial] = []
+var _ultimate_exposure:=1.0
+
+func set_ultimate_focus(profile: String,time: float) -> void:
+	var frame: Dictionary=preload("res://scripts/ultimate_focus.gd").sample(profile,time)
+	var floor_value: float={"hawk_of_the_fog":0.18,"shadow_knight":0.21,"fenghuang":0.28,"night_squire":0.42}.get(profile,1.0)
+	var exposure:=lerpf(1.0,floor_value,float(frame.weight))
+	if is_equal_approx(exposure,_ultimate_exposure):return
+	_ultimate_exposure=exposure
+	RenderingServer.global_shader_parameter_set("stage_exposure",exposure)
+	# Darken scenery only. Character shaders and particle artwork keep their
+	# original values, as in the official FK ultimate demonstration.
+	_sky_material.sky_energy_multiplier=exposure
+	_sky_material.ground_energy_multiplier=exposure
+	_environment.fog_light_color=Color(PALETTES[maxi(_region,0)].mist)*exposure
+
+func _exit_tree() -> void:
+	RenderingServer.global_shader_parameter_set("stage_exposure",1.0)
 
 func _ready() -> void:
 	name = "TaixuCourtyard"

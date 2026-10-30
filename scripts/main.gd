@@ -733,6 +733,7 @@ func _process(delta: float) -> void:
  var ult_time: float=game.ultimate.get("time",-1.0)
  var health_display: Dictionary=EnemyHealthDisplay.plan(game.enemies)
  arena.set_ink_cinematic(ult_time>=0.0 and game.player_profile=="azure_empyrea")
+ arena.set_ultimate_focus(game.player_profile,ult_time)
  var actor_delta: float=visual_dt if stage_countdown>0.0 or not game.started or game.ended else sim_delta
  if finish_freeze or ko_scale==0.0: actor_delta=0.0
  if victory.visible:

@@ -305,6 +305,7 @@ func _stamp(key: String, origin: Vector3, size: Vector2, color: Color, life: flo
 	mat.set_shader_parameter("tint",color)
 	mat.set_shader_parameter("mask_mode",int(settings.get("mask",0)))
 	mat.set_shader_parameter("source_rgb",bool(settings.get("rgb",false)))
+	mat.set_shader_parameter("source_gain",float(settings.get("source_gain",1.0)))
 	mat.set_shader_parameter("energy_core",bool(settings.get("energy_core",false)))
 	mat.set_shader_parameter("flip_x",not bool(settings.get("arc",false)) and float(settings.get("facing",1.0))<0.0)
 	mat.set_shader_parameter("uv_transform",settings.get("uv",Vector4(1,1,0,0)))
@@ -923,6 +924,10 @@ func _fire_stamp(key: String, origin: Vector3, size: Vector2, color: Color, life
 	options.style="fenghuang"
 	options.mask=0 # All selected C4 sources have meaningful original alpha.
 	options.rgb=true
+	# Recovered JW materials: SmokeTrail_02 / Bonus Shield-2 are additive;
+	# Firelight_1_new_03 uses alpha blending with native emission scaler 10.
+	if key in ["phoenix_fist","phoenix_ring"]:options.additive=true
+	options.source_gain={"phoenix_fist":2.0,"phoenix_ring":3.5,"phoenix_arc":10.0}.get(key,1.0)
 	return _stamp(key,origin,size,color,life,options)
 
 func _fire_particles(origin: Vector3, count: int, facing: float, strong: bool = false, radial: bool = false, delay: float = 0.0) -> void:
