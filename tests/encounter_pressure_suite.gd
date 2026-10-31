@@ -61,7 +61,7 @@ func _campaign() -> void:
       if other.id!=foe.id and (foe.x-stage.playerX)*(other.x-stage.playerX)>0 and absf(foe.x-stage.playerX)>absf(other.x-stage.playerX):
        check(foe.weaponLock=="spear","rear escorts receive usable native long reach")
    check(total_hp==1000 and counts==[1,2,2,3,2,1],"encounter variety does not inflate original HP or enemy counts")
-   check(campaign.stages[0].pressureLevel==0 and campaign.stages[5].pressureLevel==2,"pressure grows after introductory stages")
+   check(campaign.stages[0].pressureLevel==0 and campaign.stages[5].pressureLevel==3,"pressure grows after introductory stages")
    var offered:Array=campaign._roll_rewards()
    check(offered==campaign._roll_rewards(),"reward order is deterministic for retry")
    var favored:String=campaign.CONTRACTS[contract].reward

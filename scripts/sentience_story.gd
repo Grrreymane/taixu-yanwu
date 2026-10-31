@@ -3,13 +3,14 @@ extends RefCounted
 ## No source-game dialogue or native story timeline is claimed here.
 const SCENES := ["intro","reward","stage_2","stage_4","final","victory","defeat"]
 const REWARD_GROUPS := {
- "press":["fist","iron","risk","finisher"],
- "guard":["reflection","riposte","calm","breath"],
- "flow":["flow","swift","windstep","reservoir"]}
+ "press":["fist","iron","risk","finisher","chainflow","crack"],
+ "guard":["reflection","riposte","calm","breath","focus","sustain"],
+ "flow":["flow","swift","windstep","reservoir","crosswind","afterglow"]}
 const REWARD_TITLES := {
  "fist":"寸心如锋","iron":"破阵之势","risk":"以攻代守","finisher":"三叠归元",
  "reflection":"明镜止水","riposte":"反照","calm":"守一","breath":"生生不息",
- "flow":"行云流水","swift":"招随心转","windstep":"乘风","reservoir":"气贯长虹"}
+ "flow":"行云流水","swift":"招随心转","windstep":"乘风","reservoir":"气贯长虹",
+ "crosswind":"乘隙而入","chainflow":"百川归海","afterglow":"余焰不息","crack":"摧锋","focus":"借势回锋","sustain":"决胜气"}
 const ROUTE_TITLES := {"press":"破阵之路","guard":"守心之路","flow":"流转之路","balanced":"融会之路"}
 const COMBOS := {
  "mirror_answer":["reflection","riposte"],
@@ -94,12 +95,11 @@ static func _route_scene(prefix: String,route: String,first: int=1) -> String:
  return "%s%02d"%[prefix,first+int({"press":0,"guard":1,"flow":2,"balanced":3}.get(route,3))]
 
 static func _reward_scene_id(choice: Dictionary) -> String:
- if not Dialogue.CARD_SCENES.has(choice.latestId): return ""
  if not str(choice.comboId).is_empty(): return str(Dialogue.COMBINATION_SCENES[choice.latestId])
  var turn_key: String=str(choice.previousGroup)+"_"+str(choice.latestGroup)
  if choice.turned and Dialogue.TURN_SCENES.has(turn_key) and not _turn_was_shown(choice,turn_key):
   return str(Dialogue.TURN_SCENES[turn_key])
- return str(Dialogue.CARD_SCENES[choice.latestId])
+ return str(Dialogue.CARD_SCENES.get(choice.latestId,""))
 
 static func _contract_scene(context: Dictionary) -> String:
  var selected: Array[String]=[]
@@ -125,8 +125,8 @@ static func scene_ids(scene_id: String,context: Dictionary={}) -> Array[String]:
   "intro": return [_opening_scene(context),_contract_scene(context)]
   "reward":
    var reaction:=_reward_scene_id(choice)
-   if reaction.is_empty(): return []
-   var result: Array[String]=[reaction]
+   var result: Array[String]=[]
+   if not reaction.is_empty(): result.append(reaction)
    if int(choice.stageIndex)==3 and int(choice.choiceCount)==3: result.append("J01")
    if bool(choice.finalChoice): result.append(_route_scene("E",route))
    return result

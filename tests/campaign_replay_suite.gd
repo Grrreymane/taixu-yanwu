@@ -35,7 +35,7 @@ func _run() -> void:
  _story()
  _persistence()
  check(completed==["contracts","runs","rewards","retry","story","persistence"],"all six independent sections completed")
- check(evidence.runs.size()==36 and evidence.rewardEffects.size()==12 and evidence.storyCases==6*Story.SCENES.size(),"all intended run, reward and dialogue cases executed")
+ check(evidence.runs.size()==36 and evidence.rewardEffects.size()==Campaign.REWARDS.size() and evidence.storyCases==6*Story.SCENES.size(),"all intended run, reward and dialogue cases executed")
  check(recorder.errors.is_empty(),"no engine or nested script errors")
  var report: Dictionary={"suite":"campaign_replay","checks":checks,"passed":failures.is_empty(),"failures":failures,"errors":recorder.errors,"completed":completed,"evidence":evidence}
  DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path("res://build/reports"))
@@ -138,9 +138,9 @@ func _rewards() -> void:
   campaign.phase="reward"
   campaign.reward_options=[Campaign.REWARDS[id].duplicate(true)]
   campaign.carry.hp=40.0
-  var before: Dictionary=campaign.carry.duplicate(true)
+  var before: Dictionary=campaign.combat_carry()
   check(campaign.choose_reward(0),"all advertised cards have an accepted implementation "+id)
-  check(campaign.carry!=before,"every card changes usable combat carry "+id)
+  check(campaign.combat_carry()!=before,"every card changes usable combat carry "+id)
   match id:
    "riposte": check(is_equal_approx(campaign.carry.riposteBonus,0.50),"riposte card adds to contract instead of replacing it")
    "windstep": check(is_equal_approx(campaign.carry.dodgeRefund,1.5),"dodge card supplies actual cooldown refund")

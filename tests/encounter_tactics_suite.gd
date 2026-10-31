@@ -12,6 +12,9 @@ func check(value: bool, label: String) -> void:
 func fixture(tactic: String, interval: float=1.0) -> RefCounted:
 	var game := Combat.new()
 	game.start_encounter({"playerX":0.0,"encounterRule":{"attackIntervalScale":interval,"turnGapScale":1.0},"enemies":[{"id":"probe","x":1.5,"hp":10000,"type":"striker","tactic":tactic,"weaponLock":"spear" if tactic=="range" else "sword"}]},{"hp":10000,"maxHp":10000})
+	# Duel placement centers the pair; spacing probes specify their own close range.
+	game.player.x=0.0
+	game.enemy.x=1.5
 	return game
 
 func _initialize() -> void:

@@ -218,6 +218,9 @@ var _reward_group := Control.new()
 var _reward_title: Label
 var _reward_subtitle: Label
 var _reward_boons: Label
+var _reward_next: Label
+var _reward_reroll: Button
+var _reward_builds: Array[Label] = []
 var _reward_buttons: Array[Button] = []
 var _reward_names: Array[Label] = []
 var _reward_descriptions: Array[Label] = []
@@ -1090,7 +1093,7 @@ func _build_rewards() -> void:
 		var button := _rect_button(_reward_group,"")
 		button.name = "RewardChoice%d" % index
 		button.focus_mode = Control.FOCUS_ALL
-		_place(button,10+float(index)*335.0,116,310,282)
+		_place(button,10+float(index)*335.0,108,310,330)
 		for state in ["normal","hover","pressed","disabled","focus"]:
 			var style := StyleBoxFlat.new()
 			style.bg_color = Color("173748")
@@ -1113,12 +1116,16 @@ func _build_rewards() -> void:
 		_place(number,25,20,260,25)
 		var title := _label(button,"",25,WHITE)
 		title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		_place(title,25,60,260,64)
+		_place(title,25,52,260,48)
 		var description := _label(button,"",16,Color("c5deeb"))
 		description.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		_place(description,25,133,260,85)
+		_place(description,25,110,260,78)
+		var build := _label(button,"",14,Color("a8cddd"))
+		build.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		_place(build,25,197,260,80)
+		_reward_builds.append(build)
 		var choose := _label(button,"选择强化  %d" % (index+1),16,BLUE)
-		_place(choose,25,237,260,28)
+		_place(choose,25,287,260,28)
 		button.pressed.connect(_choose_reward.bind(index))
 		_reward_buttons.append(button)
 		_reward_names.append(title)
@@ -1126,7 +1133,17 @@ func _build_rewards() -> void:
 	_reward_boons = _label(_reward_group,"",13,Color("9bbfd3"))
 	_reward_boons.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_reward_boons.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	_place(_reward_boons,35,424,930,64)
+	_place(_reward_boons,35,451,930,60)
+	_reward_next = _label(_reward_group,"",14,Color("c5deeb"))
+	_reward_next.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_reward_next.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	_place(_reward_next,40,516,920,50)
+	_reward_reroll = _rect_button(_reward_group,"换一组")
+	_reward_reroll.name = "RerollRewards"
+	_place(_reward_reroll,345,580,310,42)
+	_reward_reroll.pressed.connect(func():
+		if not _ko_active and not _paused and not _guide_open and not _reward_locked and _phase=="reward":
+			_request_action("reroll_rewards"))
 
 func _build_results() -> void:
 	# The left half remains transparent so the winner shares the result screen.
@@ -1368,9 +1385,9 @@ func _layout() -> void:
 	_place(_ultimate_tag,44,h-27,420,18)
 	_place(_stage_banner,(w-560)*0.5,108,560,100)
 	_reward_overlay.size = _ui.size
-	var reward_scale: float = minf(1.0,(w-50.0)/1000.0)
+	var reward_scale: float = minf(1.0,minf((w-50.0)/1000.0,(h-30.0)/636.0))
 	_reward_group.scale = Vector2.ONE * reward_scale
-	_place(_reward_group,(w-1000.0*reward_scale)*0.5,(h-490.0*reward_scale)*0.5,1000,490)
+	_place(_reward_group,(w-1000.0*reward_scale)*0.5,(h-636.0*reward_scale)*0.5,1000,636)
 	_result_overlay.size = _ui.size
 	var result_scale: float = minf(1.0,minf((w-60.0)/560.0,(h-120.0)/570.0))
 	_result_panel.scale = Vector2.ONE * result_scale
@@ -1674,14 +1691,14 @@ func _update_campaign(ultimate: bool) -> void:
 	_result_overlay.visible = _phase == "cleared" and (_campaign_mode == "trial" or bool(_victory.get("visible",false))) and not _paused and not bool(_victory.get("playing",false))
 	if _phase == "reward":
 		var rewards: Array = _campaign.get("rewards",[])
-		var signature: String = JSON.stringify(rewards)
+		var signature: String = JSON.stringify([rewards,_campaign.get("rerollsRemaining",0)])
 		if signature != _reward_signature or _previous_phase != "reward":
 			_reward_signature = signature
 			_reward_locked = false
 			_reward_title.text = "第 %02d 战完成" % (stage+1)
-			_reward_subtitle.text = "选好这一招，听听小识怎么说。" + str(_campaign.get("supply",""))
+			_reward_subtitle.text = "选择一项强化，继续下一战。" + str(_campaign.get("supply",""))
 			var achievement: Dictionary=_campaign.get("lastAchievement",{})
-			if not achievement.is_empty(): _reward_subtitle.text="考验达成，额外补给已领取。选好下一招，听听小识怎么说。"
+			if not achievement.is_empty(): _reward_subtitle.text="考验达成，额外补给已领取。选择一项强化，继续下一战。"
 			var extra_achievement: Dictionary=_campaign.get("lastEncounterAchievement",{})
 			if not extra_achievement.is_empty():
 				_reward_subtitle.text="%s达成 · 加试补给 8 SP / 75 分。选择下一项强化。" % str(extra_achievement.get("title","加试"))
@@ -1695,7 +1712,15 @@ func _update_campaign(ultimate: bool) -> void:
 					var reward: Dictionary = rewards[index]
 					_reward_names[index].text = str(reward.get("title","强化"))
 					_reward_descriptions[index].text = str(reward.get("description",""))
+					_reward_builds[index].text = str(reward.get("buildPreview",""))
 			_reward_boons.text = "已获强化：" + " / ".join(boons) if not boons.is_empty() else "每次领悟，都会影响接下来的战斗"
+			var build_summary: String=str(_campaign.get("buildSummary",""))
+			if not build_summary.is_empty(): _reward_boons.text+="\n"+build_summary
+			_reward_next.text="下一战 · "+str(_campaign.get("nextEncounter",""))
+			_reward_next.visible=not str(_campaign.get("nextEncounter","")).is_empty()
+			var remaining: int=int(_campaign.get("rerollsRemaining",0))
+			_reward_reroll.text="换一组 · 本轮剩余 %d 次"%remaining
+			_reward_reroll.disabled=remaining<=0
 	else:
 		_reward_locked = false
 	if _phase == "cleared" or bool(_victory.get("visible",false)):

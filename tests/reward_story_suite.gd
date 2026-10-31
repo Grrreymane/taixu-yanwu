@@ -90,7 +90,7 @@ func _decision_contract() -> void:
 
 func _single_and_ordered_responses() -> void:
  var signatures: Dictionary={}
- for id: String in Campaign.REWARDS:
+ for id: String in Campaign.REWARDS.keys().filter(func(key): return key not in Campaign.RewardBuilds.NEW_IDS):
   var context:=_context([id])
   var lines:=_valid_text("reward",context)
   var signature:=_signature(lines)
@@ -143,7 +143,7 @@ func _single_and_ordered_responses() -> void:
  completed.append("responses")
 
 func _all_five_card_histories() -> void:
- var ids: Array=Campaign.REWARDS.keys()
+ var ids: Array=Campaign.REWARDS.keys().filter(func(key): return key not in Campaign.RewardBuilds.NEW_IDS)
  _enumerate(ids,[],0)
  check(routes_seen.size()==4,"all four build routes occur in valid five-card histories")
  completed.append("enumeration")

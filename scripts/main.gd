@@ -323,6 +323,9 @@ func _action(command: String) -> void:
   if campaign.mode=="practice": _action("practice")
   elif campaign.retry(): _begin_encounter(false)
   return
+ if command=="reroll_rewards":
+  if campaign.reroll_rewards(): _save_local_progress()
+  return
  if command.begins_with("reward_"):
   if campaign.choose_reward(int(command.trim_prefix("reward_"))):
    # Commit the chosen technique once, then let both characters respond to
@@ -341,7 +344,7 @@ func _action(command: String) -> void:
 func _begin_encounter(with_story: bool=true) -> void:
  _clear_inputs()
  var config: Dictionary=campaign.encounter()
- game.start_encounter(config,campaign.carry)
+ game.start_encounter(config,campaign.combat_carry())
  stage_countdown=2.1
  _sync_actors()
  var region: int=int(config.regionIndex)

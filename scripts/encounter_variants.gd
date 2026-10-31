@@ -81,6 +81,35 @@ static func _arrange(stage: Dictionary,index: int,pattern: int) -> void:
   foe.name="识律幻身 · "+str(NAMES[foe.tactic])
   foe.speed=2.55 if foe.tactic in ["press","flank"] else 1.85 if foe.tactic=="range" else 1.45
 
+static func add_mastery(stages: Array,seed_value: int,challenge: int) -> void:
+ # Separate seed stream preserves the established formations and old saves.
+ var random:=RandomNumberGenerator.new()
+ random.seed=seed_value+99371
+ var traits: Array=["brace","pursuit","linked"]
+ var names: Dictionary={"brace":"坚守：蓄势招式需用 K / E 或防反打断","pursuit":"追身：连打后会闪身反击，留意黄光","linked":"连锋：枪与链刃会接第二段，别急着抢招"}
+ var previous: String=""
+ for index in stages.size():
+  var stage: Dictionary=stages[index]
+  stage.pressureLevel=mini(4,[0,1,1,2,3,3][index]+challenge)
+  if index<2: continue
+  var pool:=traits.duplicate()
+  pool.erase(previous)
+  var combat_trait: String=pool[random.randi_range(0,pool.size()-1)]
+  previous=combat_trait
+  var elite_slot:=0
+  for slot in stage.enemies.size():
+   var foe: Dictionary=stage.enemies[slot]
+   if bool(foe.elite) or bool(foe.boss):
+    foe.combatTrait="boss" if bool(foe.boss) else combat_trait if elite_slot==0 else traits[(traits.find(combat_trait)+1)%traits.size()]
+    elite_slot+=1
+    # Damage increases gradually; every native warning and punish is retained.
+    foe.damageScale=float(foe.damageScale)*[1.0,1.0,1.10,1.15,1.20,1.20][index]
+  var detail: String="小识交替蓄势与连段；黄光用 K / E 或防反打断，半血入梦需闪避。" if index==5 else str(names[combat_trait])+"。"
+  if elite_slot>1: detail+="另一幻身擅长%s。"%str(names[traits[(traits.find(combat_trait)+1)%traits.size()]]).split("：")[0]
+  stage.mastery=combat_trait if index!=5 else "boss"
+  stage.encounterRule.description+=" "+detail
+  stage.brief=stage.arrangementTitle+"。"+detail
+
 static func _challenge(index: int,choice: int) -> Dictionary:
  var goal: Dictionary
  match choice:

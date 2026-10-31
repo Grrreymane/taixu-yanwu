@@ -180,8 +180,10 @@ func start_encounter(config: Dictionary, carry: Dictionary={}) -> void:
  player.skillCooldownScale=clampf(float(carry.get("skillCooldownScale",1.0)),0.2,3.0)
  player.skillCooldownMax=_base_skill_cooldown()*player.skillCooldownScale
  player.parryHeal=clampf(float(carry.get("parryHeal",0.0)),0.0,player.maxHp)
- for key in ["riposteBonus","dodgeRefund","finisherEnergy"]:
+ for key in ["riposteBonus","dodgeRefund","finisherEnergy","dodgeStrike","finisherRefund","afterglowBonus","breakBonus","riposteRefund","killHeal","killEnergy","parryEnergy","dodgeEnergy","finisherPosture","ultimateRefund"]:
   player[key]=maxf(0.0,float(carry.get(key,0.0)))
+ player.dodgeStrikeUntil=-1.0
+ player.afterglowUntil=-1.0
  enemies.clear()
  var used_ids: Dictionary={"player":true}
  var definitions: Array=config.get("enemies",[])
@@ -209,6 +211,8 @@ func start_encounter(config: Dictionary, carry: Dictionary={}) -> void:
   foe.tactic=str(spec.get("tactic",""))
   if foe.tactic not in ["press","guard","flank","range"]: foe.tactic=""
   foe.weaponCycle=spec.get("weaponCycle",[]).duplicate()
+  foe.combatTrait=str(spec.get("combatTrait",""))
+  foe.blockedLights=0
   foe.weapon=SentienceCombat.weapon_for(foe,1)
   foe.pressureHits=0
   foe.pressureUntil=-1.0
@@ -568,6 +572,8 @@ func _attack(who: Dictionary,kind: String,index: int=0,phase_entry: bool=false,c
    who.attack.windup=0.50
    who.attack.duration=0.88
   who.attack.parryFollowup=parry_followup
+  who.attack.dodgeStrikeBonus=float(who.get("dodgeStrike",0.0)) if time<float(who.get("dodgeStrikeUntil",-1.0)) else 0.0
+  who.dodgeStrikeUntil=-1.0
   who.attack.followupTarget=followup_target
   who.attack.followupReach=followup_reach
   who.attack.counterLink=str(who.attack.get("motion","")).begins_with("counter_")
@@ -678,6 +684,9 @@ func _night_attack(kind:String,index:int,burst:bool) -> Dictionary:
 func _sentience_attack(who: Dictionary,kind: String,index: int,phase_entry: bool) -> void:
  var counter_chain: bool=index>0 and bool(who.attack.get("pressureChain",false))
  var adaptive_counter: bool=counter_chain or (bool(who.get("adaptiveCounter",false)) and index==0 and not phase_entry)
+ var combat_trait: String=str(who.get("combatTrait",""))
+ if index==0 and not phase_entry and time>=float(who.get("punishUntil",-1.0)) and not training:
+  adaptive_counter=adaptive_counter or (combat_trait=="brace" and int(who.aiRound)%2==1) or (combat_trait=="boss" and int(who.aiRound)%(2 if who.phase==2 else 3)==1)
  var previous_weapon: String=str(who.get("weapon","sword"))
  var round_index: int=_ai_round if _legacy_mode else int(who.aiRound)
  var weapon: String=previous_weapon if index>0 else SentienceCombat.weapon_for(who,round_index)
@@ -689,10 +698,11 @@ func _sentience_attack(who: Dictionary,kind: String,index: int,phase_entry: bool
  who.weapon=weapon
  who.combo=index
  who.attack=SentienceCombat.attack(weapon,index,who.boss,who.phase,phase_entry)
+ if combat_trait=="linked" and index==0 and weapon in ["spear","chain"]: who.attack.nativeNext=1
  if adaptive_counter:
   # A complete source strike with an explicit amber warning. Only its
   # startup resists repeated J; K, E, a parry or posture break still stop it.
-  who.attack=SentienceCombat.pressure_counter(who.attack,who.boss,counter_chain)
+  who.attack=SentienceCombat.pressure_counter(who.attack,who.boss or combat_trait=="linked",counter_chain)
   who.adaptiveCounter=false
  who.attack.damage*=who.damageScale
  who.attack.hasHit=false
@@ -718,6 +728,8 @@ func _receive(attacker: Dictionary,defender: Dictionary,attack: Dictionary) -> v
   if defender.side=="player":
    stats.dodges+=1
    defender.skillCooldown=maxf(0.0,defender.skillCooldown-float(defender.get("dodgeRefund",0.0)))
+   defender.energy=minf(100.0,defender.energy+float(defender.get("dodgeEnergy",0.0)))
+   if float(defender.get("dodgeStrike",0.0))>0.0: defender.dodgeStrikeUntil=time+4.0
   _emit("evade",{"side":defender.side,"sourceId":attacker.id,"targetId":defender.id,"x":defender.x,"direction":defender.dodgeDirection})
   return
  defender.lastContact=time
@@ -741,6 +753,7 @@ func _receive(attacker: Dictionary,defender: Dictionary,attack: Dictionary) -> v
     _clear_buffer()
     stats.parries+=1
     defender.hp=minf(defender.maxHp,defender.hp+defender.parryHeal)
+    defender.energy=minf(100.0,defender.energy+float(defender.get("parryEnergy",0.0)))
     defender.riposteUntil=time+RIPOSTE_WINDOW
     defender.riposteReadyAt=time+PARRY_HANDOFF
     defender.riposteAt=time
@@ -763,10 +776,21 @@ func _receive(attacker: Dictionary,defender: Dictionary,attack: Dictionary) -> v
    hit_stop=0.07 if attack.name in ["heavy","ability"] else 0.05
    _emit("block",{"side":defender.side,"targetSide":defender.side,"sourceId":attacker.id,"targetId":defender.id,"x":defender.x,"contactX":contact_x,"contactHeight":attack.get("contactHeight",1.3),"facing":force_direction,"hitStop":hit_stop,"heavy":attack.name in ["heavy","ability"],"name":attack.name,"skill":attack.name=="ability"})
    if defender.posture>=100.0: _break_posture(defender)
+   elif defender.side=="enemy" and not str(defender.get("combatTrait","")).is_empty() and attack.name=="light":
+    defender.blockedLights=int(defender.get("blockedLights",0))+1
+    if defender.blockedLights>=2:
+     defender.counterPending=true
+     defender.adaptiveCounter=true
+     defender.aiCooldown=0.0
    return
  var riposte_bonus: float=1.0+float(attacker.get("riposteBonus",0.0)) if attacker.side=="player" and bool(attack.get("parryFollowup",false)) else 1.0
  var resistance: float=0.8 if defender.side=="player" and float(defender.get("eclipseRemaining",0.0))>0.0 else 1.0
- var damage: float=minf(defender.hp,attack.damage*(attacker.damageMultiplier if attacker.side=="player" else 1.0)*riposte_bonus*resistance)
+ var build_bonus:=1.0
+ if attacker.side=="player":
+  build_bonus+=float(attack.get("dodgeStrikeBonus",0.0))
+  if time<float(attacker.get("afterglowUntil",-1.0)): build_bonus+=float(attacker.get("afterglowBonus",0.0))
+  if time<float(defender.get("breakExposedUntil",-1.0)): build_bonus+=float(attacker.get("breakBonus",0.0))
+ var damage: float=minf(defender.hp,attack.damage*(attacker.damageMultiplier if attacker.side=="player" else 1.0)*riposte_bonus*resistance*build_bonus)
  attack.contactOutcome="hit"
  # A boss's announced retaliation owns its native chain until the final
  # contact. K/E, perfect defense and posture breaks still interrupt it; the
@@ -792,12 +816,17 @@ func _receive(attacker: Dictionary,defender: Dictionary,attack: Dictionary) -> v
  var light_into_counter: bool=armored and attack.name=="light" and bool(defender.attack.get("counter",false))
  defender.posture=minf(100.0,defender.posture+(posture_damage if attack.name=="ability" or (armored and not light_into_counter) else 5.0))
  _gain_energy(attacker,7.0)
+ if attacker.side=="player" and bool(attack.get("parryFollowup",false)) and not bool(attack.get("riposteRefundPaid",false)):
+  attacker.skillCooldown=maxf(0.0,attacker.skillCooldown-float(attacker.get("riposteRefund",0.0)))
+  attack.riposteRefundPaid=true
  if attacker.side=="player" and attacker.get("style","")=="night_squire" and attack.name=="ability" and not bool(attack.get("nightFocusPaid",false)):
   attacker.nightFocus=attacker.nightFocusMax
   attack.nightFocusPaid=true
   _emit("nightFocus",{"sourceId":attacker.id,"targetId":defender.id,"x":attacker.x,"charges":attacker.nightFocus})
  if attacker.side=="player" and attack.name=="light" and int(attack.comboIndex)==2 and not bool(attack.get("finisherPaid",false)):
   _gain_energy(attacker,float(attacker.get("finisherEnergy",0.0)))
+  attacker.skillCooldown=maxf(0.0,attacker.skillCooldown-float(attacker.get("finisherRefund",0.0)))
+  defender.posture=minf(100.0,defender.posture+float(attacker.get("finisherPosture",0.0)))
   if attacker.get("style","")=="night_squire":
    attacker.skillCooldown=maxf(0.0,float(attacker.skillCooldown)-0.65)
    _gain_energy(attacker,3.0)
@@ -807,7 +836,8 @@ func _receive(attacker: Dictionary,defender: Dictionary,attack: Dictionary) -> v
   if time>float(defender.get("pressureUntil",-1.0)): defender.pressureHits=0
   defender.pressureHits=int(defender.get("pressureHits",0))+1
   defender.pressureUntil=time+2.3
-  if (defender.elite or defender.boss) and defender.pressureHits>=(3 if defender.boss else 4) and time>=float(defender.get("escapeReadyAt",0.0)) and time>=float(defender.get("punishUntil",-1.0)):
+  var threshold: int=2 if str(defender.get("combatTrait","")) in ["pursuit","boss"] else 3 if defender.boss else 4
+  if (defender.elite or defender.boss) and defender.pressureHits>=threshold and time>=float(defender.get("escapeReadyAt",0.0)) and time>=float(defender.get("punishUntil",-1.0)):
    defender.escapePending=true
   if defender.state=="attack" and defender.attack.get("counter",false) and not armored:
    defender.escapePending=false
@@ -846,6 +876,7 @@ func _break_posture(who: Dictionary) -> void:
  who.punishUntil=time+1.4
  _state(who,"stagger",1.4)
  if who.side=="enemy" and not _legacy_mode:
+  who.breakExposedUntil=time+4.0
   _gain_energy(player,8.0)
   player.skillCooldown=maxf(0.0,player.skillCooldown-0.7)
  _emit("guardBreak",{"side":who.side,"sourceId":player.id if who.side=="enemy" else enemy.id,"targetId":who.id,"x":who.x,"facing":-who.facing})
@@ -925,6 +956,7 @@ func _advance_ultimate(dt: float) -> void:
   _ai_cooldown=0.85
   _ai_gap=0.85 if _legacy_mode else 0.25
   _refresh_target()
+  _finish_build_ultimate()
   _emit("ultimateEnd")
   _check_end()
 
@@ -950,7 +982,13 @@ func _advance_night_activation(dt:float) -> void:
  player.nightFocus=player.nightFocusMax
  player.skillCooldown=0.0
  _emit("burstBegin",{"sourceId":player.id,"x":player.x,"duration":NIGHT_BURST_DURATION,"charges":player.nightFocus})
+ _finish_build_ultimate()
  _emit("ultimateEnd",{"sourceId":player.id,"burst":true})
+
+func _finish_build_ultimate() -> void:
+ player.afterglowUntil=time+6.0
+ # Set refunds are fixed SP, not multiplied by the hit-energy stat.
+ player.energy=minf(100.0,player.energy+float(player.get("ultimateRefund",0.0)))
 
 func _ai(dt: float) -> void:
  if not enemy.state in ["idle","move"]: return
@@ -1052,7 +1090,7 @@ func _try_pressure_escape(foe: Dictionary) -> bool:
  # or the reward for a successful deflection / posture break.
  foe.escapePending=false
  foe.pressureHits=0
- foe.escapeReadyAt=time+(2.2 if foe.boss else 3.0)
+ foe.escapeReadyAt=time+(1.6 if str(foe.get("combatTrait","")) in ["pursuit","boss"] else 2.2 if foe.boss else 3.0)
  foe.counterPending=true
  foe.adaptiveCounter=true
  foe.aiCooldown=0.05
@@ -1149,6 +1187,8 @@ func _mark_down(foe: Dictionary) -> void:
  _ai_gap=maxf(_ai_gap,0.8 if _legacy_mode else 0.22)
  if not _legacy_mode:
   _gain_energy(player,6.0)
+  player.hp=minf(player.maxHp,player.hp+float(player.get("killHeal",0.0)))
+  player.energy=minf(100.0,player.energy+float(player.get("killEnergy",0.0)))
   player.skillCooldown=maxf(0.0,player.skillCooldown-0.35)
  _emit("enemyDown",{"side":"enemy","sourceId":player.id,"targetId":foe.id,"id":foe.id,"x":foe.x,"name":foe.name,"boss":foe.boss})
 
