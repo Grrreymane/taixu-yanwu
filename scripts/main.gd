@@ -127,6 +127,13 @@ func _ready() -> void:
  player=Actor.new()
  add_child(player)
  player.setup(false,fighter)
+ if OS.has_feature("web"):
+  var warmup=preload("res://scripts/render_warmup.gd").new()
+  add_child(warmup)
+  warmup.prepare(camera,effects)
+  for frame in 3: await RenderingServer.frame_post_draw
+  warmup.queue_free()
+  await get_tree().process_frame
  ready_to_play=true
  hud.set_ready(true)
  _init_bridge()

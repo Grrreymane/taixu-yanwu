@@ -238,7 +238,10 @@ const engine = new Engine(GODOT_CONFIG);
 					statusProgress.removeAttribute('max');
 				}
 			},
-		}).then(() => {
+		}).then(async () => {
+			// Keep the cover over the real viewport until first-use effect
+			// shaders have been rendered; downloading a shader is not compiling it.
+			while (!window.__godotReady) await new Promise(requestAnimationFrame);
 			window.fetch = originalFetch;
 			setStatusMode('hidden');
 		}, displayFailureNotice);
