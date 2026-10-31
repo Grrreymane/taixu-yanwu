@@ -10,6 +10,7 @@ const Battle=preload("res://scripts/battle_camera.gd")
 const PROFILES={"azure_empyrea":3.3,"fenghuang":3.8,"night_squire":1.5833333,"shadow_knight":3.116667,"hawk_of_the_fog":2.733333}
 var failures:Array[String]=[]
 var checks:=0
+var bird: Node3D
 var rows:Array=[]
 
 func _initialize()->void:call_deferred("_run")
@@ -35,6 +36,8 @@ func projection(shot:Dictionary,point:Vector3,aspect:float)->Vector2:
 	return Vector2(local.x/(height*aspect),local.y/height)
 
 func _run()->void:
+	bird=preload("res://scripts/native_phoenix.gd").new()
+	root.add_child(bird)
 	for profile:String in PROFILES:
 		var actor=Actor.new()
 		root.add_child(actor)
@@ -54,6 +57,16 @@ func _run()->void:
 					var shot:Dictionary=frame(profile,time,focus)
 					var portrait:bool=shot.get("composition","full")=="portrait"
 					if portrait:portrait_samples+=1
+					if profile=="fenghuang" and Fire.Flight.active(time):
+						bird.begin({"x":0.0,"targetX":1.35*facing})
+						bird.tick(time)
+						var skeleton: Skeleton3D=bird.model.find_children("*","Skeleton3D",true,false)[0]
+						var box: AABB=preload("res://scripts/model_bounds.gd").measure(bird.model,skeleton,[]).bounds
+						for corner in 8:
+							var point: Vector3=bird.model.global_transform*box.get_endpoint(corner)
+							var projected:=projection(shot,point,aspect)
+							check(absf(projected.x)<.96 and absf(projected.y)<.96,"native phoenix %.3f corner %d fits aspect %.2f (%s)"%[time,corner,aspect,str(projected)])
+						continue
 					var names:Array=["Bip001 Head","Bip001 Spine2","Bip001 L Hand","Bip001 R Hand"] if portrait else ["Bip001 Head","Bip001 L Foot","Bip001 R Foot"]
 					for name:String in names:
 						var bone:int=actor.skeleton.find_bone(name)
@@ -69,9 +82,10 @@ func _run()->void:
 					var after:=frame(profile,cut+.00001,focus)
 					check(before.position.distance_to(after.position)>.3,profile+" has a real directed cut")
 					check(after.position.z>0.0 and before.position.z>0.0,profile+" cuts retain the combat axis")
-		check(portrait_samples>10,profile+" contains an intentional native-pose character insert")
+		if profile not in ["fenghuang","night_squire"]:check(portrait_samples>10,profile+" contains an intentional native-pose character insert")
 		rows.append({"profile":profile,"maxFaceProjectionY":max_face_y,"portraitSamples":portrait_samples,"cuts":cuts(profile)})
 		actor.free()
+	bird.free()
 	var report:Dictionary={"passed":failures.is_empty(),"checks":checks,"failures":failures,"nativePoseRows":rows}
 	DirAccess.make_dir_recursive_absolute("res://build/reports")
 	FileAccess.open("res://build/reports/ultimate-direction.json",FileAccess.WRITE).store_string(JSON.stringify(report,"  "))

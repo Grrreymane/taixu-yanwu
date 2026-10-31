@@ -1,5 +1,5 @@
 extends RefCounted
-## Source FK AF01 and NL/Dress01 modules, retimed at our combat cue boundaries.
+## Source FK AF01, NL/Dress01 and ND modules at combat cue boundaries.
 ## Original emitter modules and mesh geometry; screen distortion is omitted.
 const Curves=preload("res://scripts/native_burst_emitters.gd")
 var host: Node3D
@@ -43,6 +43,7 @@ func variant(data: Dictionary) -> String:
 	var style:=str(data.get("style",fighter.get("style","")))
 	if data.has("appearanceId"):appearance=str(data.appearanceId)
 	if style=="hawk_of_the_fog":return "fog"
+	if style=="night_squire":return "night"
 	if style=="shadow_knight" and appearance=="blood_moon":return "blood"
 	if style=="shadow_knight":return "shadow"
 	return ""
@@ -57,7 +58,7 @@ func start(group: String, data: Dictionary, follow: bool=false, clock_offset: fl
 	emitters.sort_custom(func(a,b):return int(a.priority)>int(b.priority))
 func event(data: Dictionary) -> bool:
 	var profile:=variant(data)
-	if profile.is_empty():return false
+	if profile.is_empty() or profile=="night":return false
 	match str(data.type):
 		"ultimate":
 			if profile=="fog":
@@ -100,7 +101,8 @@ func tick(delta: float) -> void:
 	if delta<=0.0:return
 	var fighter: Dictionary=host._fighters.get("player",{})
 	var profile:=variant(fighter)
-	var active: bool=float(fighter.get("hp",0.0))>0.0 and profile in ["blood","shadow"] and float(fighter.get("eclipseRemaining",0.0))>0.0
+	var remaining: float=float(fighter.get("nightBurstRemaining",0.0)) if profile=="night" else float(fighter.get("eclipseRemaining",0.0))
+	var active: bool=float(fighter.get("hp",0.0))>0.0 and profile in ["blood","shadow","night"] and remaining>0.0
 	if not active:profile=""
 	if profile!=follow_style:
 		emitters=emitters.filter(func(e):return not e.follow)
@@ -163,6 +165,10 @@ func spawn(e: Dictionary,fighter: Dictionary) -> void:
 	var source_scale:=native_transform.basis.get_scale().abs()
 	# Uniform arena conversion, retaining source relative scale and timing.
 	var unit: float=0.85 if not e.follow else 1.0
+	var night: bool=str(row.node).begins_with("Avatar_Fuka_ND_Ultra_")
+	if night:
+		unit=float(host.player_attachment.get("unit",1.5968492))
+		if e.follow:position=host.player_attachment.get("chest",Vector3(x,2.05,0))
 	var basis:=native_transform.basis.orthonormalized()
 	var facing:=float(e.data.get("facing",fighter.get("facing",1.0)))
 	var facing_basis:=Basis(Vector3.UP,-facing*PI*0.5)
@@ -177,6 +183,10 @@ func spawn(e: Dictionary,fighter: Dictionary) -> void:
 	var velocity:=facing_basis*basis*direction*sample(init.startSpeed)*unit
 	var settings: Dictionary={"style":e.data.get("style",fighter.get("style","")),"role":"source_ultimate_follow" if e.follow else "source_ultimate","nativeNode":row.node,"source_module":d,"source_tint":color,"billboard":mode in [0,1],"ground":ground,"rgb":true,"additive":row.get("blend","alpha")=="add","instant":true,"grow":1.0,"velocity":velocity,"angle":sample(init.startRotation),"source_renderer":renderer,"source_basis":facing_basis*basis,"motion_basis":facing_basis*basis,"source_unit":unit,"source_random":rng.randf(),"source_elapsed":0.0,"source_rotation":Vector3.ZERO,"source_motion":Vector3.ZERO}
 	if e.follow:settings.merge({"follow_id":"player","follow_offset":position.x-x})
+	if night and e.follow:
+		settings.erase("follow_id")
+		settings.body_attachment=true
+		settings.attachment_offset=position-Vector3(host.player_attachment.get("chest",Vector3(x,2.05,0)))
 	var item: Dictionary=host._stamp(row.node,position,Vector2(size*maxf(source_scale.x,0.01),size*maxf(source_scale.y,0.01)),color,maxf(0.02,sample(init.startLifetime)),settings)
 	if item.is_empty():return
 	item.mat.set_shader_parameter("source_gain",1.0 if row.get("propMesh",false) else 2.0*float(row.emissionScale))

@@ -740,7 +740,7 @@ func _process(delta: float) -> void:
   player.animate_victory(victory.time)
  else:
   player.animate_fighter(pf,actor_delta,visual_time,ult_time)
- player.visible=not story.active and (not boss_entrance.active or boss_entrance.time>=BossEntrance.RETURN_AT)
+ player.visible=not story.active and (not boss_entrance.active or boss_entrance.time>=BossEntrance.RETURN_AT) and not (game.player_profile=="fenghuang" and FenghuangCamera.Flight.active(ult_time))
  for source in game.enemies:
   var id: String=str(source.id)
   if not enemy_nodes.has(id): continue
@@ -766,6 +766,7 @@ func _process(delta: float) -> void:
   marker.fill.position.x=(ratio-1.0)*0.39
  arena.update_arena(visual_dt,visual_time)
  effects.update_fighters(game.player,game.enemies)
+ effects.player_attachment=player.effect_attachment()
  sentience_effects.update_fighters(game.player,game.enemies)
  effects.visible=not story.active
  sentience_effects.visible=not story.active
@@ -778,7 +779,7 @@ func _process(delta: float) -> void:
  sentience_effects.tick(fx_dt)
  combat_accent.tick(fx_dt)
  _camera(dt,visual_dt,ult_time)
- if ult_time>=0.0 and str(cinematic_frame.get("composition","full"))=="portrait" and not story.active and not boss_entrance.active:
+ if ult_time>=0.0 and str(cinematic_frame.get("composition","full")) in ["portrait","transformation"] and not story.active and not boss_entrance.active:
   # The opening cut-in belongs to the performer. Close opponents used to
   # fill half the frame as a cropped torso; restore them at the action cut.
   for actor in enemy_nodes.values(): actor.visible=false
@@ -849,6 +850,8 @@ func _process(delta: float) -> void:
   var return_at: float=LightningCamera.return_at(game.player_profile) if game.player_profile in ["shadow_knight","hawk_of_the_fog"] else NightSquireCamera.RETURN_AT if game.player_profile=="night_squire" else FenghuangCamera.RETURN_AT if game.player_profile=="fenghuang" else UltimateCamera.RETURN_AT
   state.cinematic={"active":ult_time>=0.0,"returning":(ult_time>=return_at) or cinematic_return_time<0.28,"shot":cinematic_frame.get("shot","battle"),"fov":camera.fov,"roll":camera_roll,"position":[camera.position.x,camera.position.y,camera.position.z],"target":[menu_target.x,menu_target.y,menu_target.z],"facing":cinematic_facing}
   state.cinematic.composition=cinematic_frame.get("composition","full")
+  state.cinematic.performerVisible=player.visible
+  state.cinematic.phoenixVisible=effects.native_phoenix.visible
   state.engine="Godot "+Engine.get_version_info().string
   JavaScriptBridge.eval("window.__godotState="+JSON.stringify(state)+";",true)
 

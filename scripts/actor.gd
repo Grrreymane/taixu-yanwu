@@ -620,6 +620,11 @@ func _motion_key(f: Dictionary) -> String:
 		return "dodgeBack"
 	return state if _motions.has(state) else "idle"
 
+func effect_attachment() -> Dictionary:
+	# Read the animated native skeleton. No procedural bone offsets.
+	var chest:=skeleton.find_bone("Bip001 Spine2")
+	return {"chest":skeleton.global_transform*skeleton.get_bone_global_pose(chest).origin,"unit":float(_normalization.get("scale",1.0))}
+
 func _sample_time(key: String, f: Dictionary, clock: float) -> float:
 	var motion: Dictionary = _motions[key]
 	var end_time := float(motion["end"])

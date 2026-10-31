@@ -1,0 +1,20 @@
+Original JW bird: miHoYo / HoYoverse artwork and skeletal animation.
+Reference: official Phoenix demonstration
+https://bh3.mihoyo.com/gl/character/detail/41
+
+Sequence: human preparation, transformation, ascent, wings, dive, human landing.
+The performer is hidden only during the bird phase (0.30 to 2.10 seconds).
+Both visibility and the bird use combat's clock, including pause and hit-stop.
+The first damage contact is still 2.10; the second impact is still 2.82.
+
+flight.json is sampled from the original scene by tools/bake_phoenix_flight.gd.
+It contains original root positions and actual skinned-geometry bounds at 60 Hz.
+These lightweight samples frame the bird; no per-frame vertex scan is required.
+The old implementation canceled all root movement and kept the bird at y=2.2.
+The current implementation retains the authored ascent, dive and all bone poses.
+
+Side-view adaptation: uniform bird scale .65, source .10–1.916667 fits the
+0.30–2.10 combat interval, forward depth is compressed into the duel lane.
+The bird emerges and lands at the caster instead of sliding toward the opponent.
+Camera cuts follow the demonstration's sequence but are rebuilt for our arena
+and viewport; they are NOT imported Unity camera curves or a 1:1 camera port.

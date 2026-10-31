@@ -1,14 +1,22 @@
-Original HI3 FK Artifact / NL Dress01 ultimate resources
+Original HI3 FK Artifact / NL Dress01 / ND ultimate resources
 
 Copyright: miHoYo / HoYoverse. See the repository's existing asset notices.
 Textures and meshes are original game artwork, not repainted substitutes.
 
-Active catalog: 34 emitter rows, 14 source meshes.
+Active catalog: 42 emitter rows, 16 source meshes.
 - Avatar_Fuka_FK_AF01_Ultra: 23 rendered layers, augmented Hawk of the Fog.
 - Avatar_Fuka_NL_Attack_UltraThunder_Dress01: 3 layers.
 - Avatar_Fuka_NL_Ultra_Follow_Dress01: 4 layers.
 - Avatar_Fuka_NL_Attack_UltraThunder: 1 layer.
 - Avatar_Fuka_NL_Ultra_Follow: 3 layers.
+- Avatar_Fuka_ND_Ultra_CostSP: 7 rendered layers, including wave04_new smoke.
+- Avatar_Fuka_ND_Ultra_Follow: original Plane006 mesh aura. Its three billboard
+  emitters remain in native-burst/source-emitters.json and are not duplicated.
+ND uses the actor's native model scale. Follow effects attach to animated Spine2;
+the activation prefab retains its source ground-relative positions and scale.
+The former single smoke card discarded wave04_new's rotation and 4.76346 scale.
+Reference: official Night Squire tutorial at
+https://bh3.mihoyo.com/gl/character/detail/40
 NL UltraThunder is a secondary arc emitter, not the complete transformation.
 Its source-texture shockwave composition remains, with corrected original
 circle/lightning additive and trail/impact alpha emission material values.
@@ -34,7 +42,7 @@ Material fixes are based on original shader metadata and DXBC inspection:
 - Keep vertex alpha, separate-axis size curves, angular velocity, velocity-over-
   lifetime, and texture-sheet frames. Pause uses the simulation clock throughout.
 
-Web adaptation: release scale .85, follow scale 1.0; explicit local texture halos
+Web adaptation: FK/NL release scale .85, follow scale 1.0; explicit local texture halos
 replace screen HDR bloom. Scene-only dimming leaves characters readable. The
 fog camera pulls back for its native circular burst. Shared live-layer cap:112.
 DLCSmoke now retains its original _DisTexture and threshold; lifetime supplies
@@ -43,5 +51,7 @@ This is not a complete Unity renderer: distortion, native trail simulation,
 DLCSmoke custom vertex streams and full custom-data shading still differ.
 
 Rebuild from local exports with tools/import_native_ultimates.py
- --source-root <exports directory> --suit fog (or shadow), then
+ --source-root <exports directory> --suit fog (or shadow / night), then
  tools/prepare_native_effect_materials.py --source-root <exports directory>.
+ND billboard attachments/materials: tools/import_night_attachments.py
+ --source-root <exports directory>.

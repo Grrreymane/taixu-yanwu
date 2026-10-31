@@ -34,6 +34,7 @@ var _last_sounds: Dictionary = {}
 var _sound_variants: Dictionary = {}
 var palette := Color(0.12, 0.72, 0.83, 0.9)
 var _fighters: Dictionary = {}
+var player_attachment: Dictionary = {}
 var _cues: Array[Dictionary] = []
 var _dodge_steps: Dictionary = {}
 var _particle_meshes: Dictionary = {}
@@ -783,12 +784,10 @@ func _night_dash(data: Dictionary) -> void:
 	_stamp("night_smoke",Vector3(x-direction*0.35,0.65,0.22),Vector2(1.4,0.7),Color(0.77,0.87,0.95,0.38),0.20,{"facing":direction,"grow":0.65,"style":"night_squire","role":"step"})
 
 func _night_activation(data: Dictionary) -> void:
-	var x:=float(data.get("x",0.0))
 	_sound("ultimate")
-	var source: Array=JSON.parse_string(FileAccess.get_file_as_string("res://assets/vfx/native-burst/night-activation.json"))
-	for row: Dictionary in source:
-		var c: Dictionary=row.color
-		_stamp(str(row.textureKey),Vector3(x,1.15,-0.15),Vector2.ONE*float(row.size),Color(c.r,c.g,c.b,c.a),float(row.life),{"delay":float(row.delay),"instant":true,"grow":1.0,"billboard":true,"follow_id":_source_id(data),"style":"night_squire","role":"native_burst_activation","nativeNode":row.node})
+	# ND's smoke is a vertical mesh, not a billboard. Its native transform,
+	# nonuniform scale and color/size curves belong to the original emitter.
+	remaining_native.start("night_activation",data)
 
 func _tick_cues(_delta: float) -> void:
 	for index: int in range(_cues.size() - 1, -1, -1):
@@ -813,7 +812,9 @@ func _tick_cues(_delta: float) -> void:
 
 func tick(delta: float) -> void:
 	if delta <= 0.0: return
-	native_phoenix.tick(delta)
+	var performer: Dictionary=_fighters.get("player",{})
+	var phoenix_clock: float=float(performer.get("stateTime",-1.0)) if performer.get("style","")=="fenghuang" and performer.get("state","")=="ultimate" else -1.0
+	native_phoenix.tick(delta,phoenix_clock)
 	native_burst.tick(delta)
 	remaining_native.tick(delta)
 	_sound_clock += delta
@@ -876,6 +877,12 @@ func tick(delta: float) -> void:
 			node.scale=item.base_scale*lerpf(start,1.0,1.0-pow(1.0-p,3.0))
 			if settings.has("native_size"):
 				node.scale=item.base_scale*maxf(0.001,native_burst.curve_at(settings.native_size,p))
+			if settings.get("native_color",{}).get("enabled",false):
+				var gradient: Dictionary=settings.native_color.gradient.maxGradient
+				var rgb: Color=remaining_native.gradient(gradient,p)
+				var source_alpha: Color=remaining_native.gradient(gradient,p,true)
+				mat.set_shader_parameter("tint",Color(settings.native_tint)*Color(rgb.r,rgb.g,rgb.b,source_alpha.a))
+				mat.set_shader_parameter("opacity",1.0)
 			var velocity: Vector3=settings.get("velocity",Vector3.ZERO)
 			node.position=Vector3(item.origin)+velocity*age
 			if settings.has("orbit"):
@@ -884,6 +891,8 @@ func tick(delta: float) -> void:
 				node.position+=Vector3(cos(phase)*radii.x,sin(phase)*radii.y,sin(phase)*radii.z)
 			if not follow.is_empty() and _fighters.has(follow):
 				node.position.x=float(_fighters[follow].get("x",node.position.x))+float(settings.get("follow_offset",0.0))
+			if settings.get("body_attachment",false) and player_attachment.has("chest"):
+				node.position=Vector3(player_attachment.chest)+Vector3(settings.attachment_offset)+velocity*age
 			var spin: float=float(settings.get("spin_speed",0.0))*age
 			if bool(settings.get("ground",false)): node.rotation.y=float(settings.get("angle",0.0))+spin
 			else: node.rotation.z=float(settings.get("angle",0.0))+spin
@@ -1048,7 +1057,6 @@ func _fire_ultimate(data: Dictionary) -> void:
 		_fire_stamp("phoenix_arc",Vector3(x+side*0.50,0.85,-0.38),Vector2(2.0,0.6),Color(1.0,0.67,0.24,0.84),0.75,{"uv":Vector4(1,0.25,0,0.5),"arc":true,"delay":0.40,"orbit":Vector3(0.48,0.30,0.28),"orbit_phase":0.0 if side<0.0 else PI,"orbit_speed":3.6*facing,"velocity":Vector3(0,0.8,0),"spin_speed":-2.3*facing,"grow":0.55,"role":"fire_gather"})
 		_fire_stamp("phoenix_fist",Vector3(x+side*0.4,1.8,-0.35),Vector2(3.1,0.7),Color(1,0.71,0.28,0.85),0.33,{"uv":Vector4(0.5,0.5,0,0),"delay":1.72,"angle":-side*0.25,"facing":facing,"velocity":Vector3((target_x-x)/0.38,-0.4,0),"grow":0.55,"role":"fire_native_launch"})
 	_fire_card(6,Vector3(x,1.55,-0.25),Vector2(1.75,0.28),FLAME,0.46,{"delay":1.72,"velocity":Vector3((target_x-x)/0.38,0.0,0.0),"facing":facing,"role":"fire_launch"})
-	_fire_wings(Vector3(target_x,0.60,-0.48),facing,1.3,0.57,2.23)
 	_fire_particles(Vector3(target_x,0.75,-0.15),18,facing,true,true,2.32)
 	# The two actual impact bursts are created by ultHit at 2.10 / 2.82; no
 	# decorative timer may create damage-like flashes ahead of those events.

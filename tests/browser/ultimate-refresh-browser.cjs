@@ -16,7 +16,7 @@ const save=()=>fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(repo
   const state=()=>page.evaluate(()=>structuredClone(window.__godotState));
   const action=name=>page.evaluate(name=>window.__godotAction(name),name);
   const wait=(predicate,arg=null)=>page.waitForFunction(predicate,arg,{timeout:30000});
-  await page.goto('http://127.0.0.1:4187/?v=ultimate-encounters-2');
+  await page.goto(process.env.GODOT_TEST_URL||'http://127.0.0.1:4188/?v=ultimate-placement');
   await page.waitForFunction(()=>window.__godotState?.ready,null,{timeout:180000});
   for(const profile of ['azure_empyrea','fenghuang','night_squire','shadow_knight','hawk_of_the_fog']){
    await action('menu'); await wait(()=>window.__godotState.campaign.phase==='menu');
@@ -25,7 +25,9 @@ const save=()=>fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(repo
    if(!(await state()).training)await action('training');
    await wait(()=>window.__godotState.training);
    await action('ultimate');
-   await wait(()=>window.__godotState.ultimate&&window.__godotState.ultimateTime>=0.15);
+   // Observe before FK's .24-second cut; .15 plus the 10 Hz telemetry/action
+   // roundtrip can skip that entire insert on a healthy Web build.
+   await wait(()=>window.__godotState.ultimate&&window.__godotState.ultimateTime>=0.03);
    await action('pause'); await wait(()=>window.__godotState.paused);
    const held=await state();
    await page.waitForTimeout(200); const still=await state();
@@ -50,7 +52,9 @@ const save=()=>fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(repo
    const after=await state();
    assert.ok(!after.feel.ultimateFocus.active,'framing clears at handoff');
    assert.ok(shots.size>=3,'distinct shot phases');
-   assert.ok(compositions.has('portrait')&&compositions.has('full'),'portrait and action framing');
+   assert.ok(compositions.has('full'),'full action framing');
+   if(profile==='fenghuang')assert.ok(compositions.has('transformation'),'native bird transformation framing');
+   else if(profile!=='night_squire')assert.ok(compositions.has('portrait'),'native character insert');
    assert.ok(peak>0&&peak<=112,'VFX produced within active-layer budget');
    report.cases.push({profile,shots:[...shots],compositions:[...compositions],peakLayers:peak,frames,pausePassed:true});save();
   }

@@ -51,10 +51,26 @@ func tick(delta: float) -> void:
 				offset=Vector3(random.randf_range(-0.5,0.5)*float(s.x),random.randf_range(-0.5,0.5)*float(s.y),random.randf_range(-0.5,0.5)*float(s.z))
 			var c: Dictionary=row.color.maxColor
 			var tint:=Color(float(c.r),float(c.g),float(c.b),float(c.a))
+			if int(row.color.minMaxState)==2:
+				var lo: Dictionary=row.color.minColor
+				tint=Color(lo.r,lo.g,lo.b,lo.a).lerp(tint,random.randf())
+			var material_tint: Dictionary=row.material.tint
+			tint*=Color(material_tint.R,material_tint.G,material_tint.B,material_tint.A)*2.0
 			var speed:=value(row.speed)
-			var velocity:=direction*speed if int(shape.type)==0 else Vector3.UP*speed
+			var velocity:=direction*speed if int(shape.type)==0 else Vector3.BACK*speed
 			var life:=value(row.lifetime)
 			var size:=value(row.size)
-			var settings: Dictionary={"style":style,"role":"native_burst_follow","billboard":true,"rgb":true,"grow":0.1,"fade_in":0.04,"fade_start":0.65,"velocity":velocity,"follow_id":"player","follow_offset":offset.x,"nativeNode":row.node}
+			var unit:=float(host.player_attachment.get("unit",1.5968492))
+			var q: Dictionary=row.rotation
+			var source_basis:=Basis(Quaternion(q.x,q.y,q.z,q.w))
+			var s: Dictionary=row.scale
+			# ScalingMode=Shape: transform scaling affects the emission volume,
+			# not the billboard dimensions. Convert source units with the actor.
+			offset=source_basis*(offset*Vector3(s.x,s.y,s.z))*unit
+			velocity=source_basis*velocity*unit
+			var chest: Vector3=host.player_attachment.get("chest",Vector3(float(fighter.x),2.05,0))
+			var settings: Dictionary={"style":style,"role":"native_burst_follow","billboard":true,"rgb":true,"grow":1.0,"fade_in":0.025,"fade_start":0.65,"velocity":velocity,"body_attachment":true,"attachment_offset":offset,"nativeNode":row.node,"native_tint":tint,"native_color":row.colorModule}
 			if row.get("sizeModule",{}).get("enabled",false):settings.native_size=row.sizeModule.curve
-			host._stamp(row.node,Vector3(float(fighter.x),1.1,0.0)+offset,Vector2.ONE*size,tint,life,settings)
+			settings.source_gain=float(row.material.gain)
+			settings.additive=bool(row.material.additive)
+			host._stamp(row.node,chest+offset,Vector2.ONE*size*unit,tint,life,settings)

@@ -3,6 +3,7 @@ extends CanvasLayer
 ## animation: pausing, hit-stop and tab suspension preserve the same image.
 const SHADER = preload("res://shaders/ultimate_focus.gdshader")
 const Lightning = preload("res://scripts/lightning_combat.gd")
+const PhoenixFlight = preload("res://scripts/phoenix_flight.gd")
 var _panel := ColorRect.new()
 var _material := ShaderMaterial.new()
 var _frame: Dictionary = {}
@@ -37,7 +38,9 @@ func present(camera: Camera3D, profile: String, time: float, player_x: float, ta
 	# open center keeps facial features and the native impact silhouette clear.
 	var focus_x := target_x if _frame.released and profile != "night_squire" else player_x
 	var focus_height := 1.65 if _frame.released else 2.2
-	var center := camera.unproject_position(Vector3(focus_x, focus_height, 0.0)) / viewport_size
+	var world_focus:=Vector3(focus_x,focus_height,0.0)
+	if profile=="fenghuang" and PhoenixFlight.active(time):world_focus=PhoenixFlight.sample(time,player_x).center
+	var center := camera.unproject_position(world_focus) / viewport_size
 	_material.set_shader_parameter("center", center.clamp(Vector2(0.15,0.2), Vector2(0.85,0.8)))
 	_material.set_shader_parameter("aspect", viewport_size.x / maxf(1.0,viewport_size.y))
 	_material.set_shader_parameter("weight", _frame.weight)

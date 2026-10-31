@@ -3,11 +3,11 @@ import argparse,os,json,struct,hashlib,shutil,re
 from pathlib import Path
 parser=argparse.ArgumentParser()
 parser.add_argument('--source-root',type=Path,required=True)
-parser.add_argument('--suit',choices=['fog','shadow'],default='fog')
+parser.add_argument('--suit',choices=['fog','shadow','night'],default='fog')
 args=parser.parse_args()
-r=args.source_root.resolve()/('fk-artifact-native-vfx' if args.suit=='fog' else 'c2-native-vfx')
-material_dir='original' if args.suit=='fog' else 'original-full'
-prefixes={'fog_release':'Avatar_Fuka_FK_AF01_Ultra/'} if args.suit=='fog' else {'shadow_impact':'Avatar_Fuka_NL_Attack_UltraThunder/','shadow_follow':'Avatar_Fuka_NL_Ultra_Follow/'}
+r=args.source_root.resolve()/({'fog':'fk-artifact-native-vfx','shadow':'c2-native-vfx','night':'c3-native-vfx'}[args.suit])
+material_dir='original-full' if args.suit=='shadow' else 'original'
+prefixes={'fog_release':'Avatar_Fuka_FK_AF01_Ultra/'} if args.suit=='fog' else {'night_activation':'Avatar_Fuka_ND_Ultra_CostSP/','night_follow':'Avatar_Fuka_ND_Ultra_Follow/'} if args.suit=='night' else {'shadow_impact':'Avatar_Fuka_NL_Attack_UltraThunder/','shadow_follow':'Avatar_Fuka_NL_Ultra_Follow/'}
 os.chdir(Path(__file__).resolve().parents[1])
 dest=Path('assets/vfx/remaining-native')
 def read(path):return json.loads(path.read_text(encoding='utf8'))
@@ -17,16 +17,19 @@ links={x['node']:x for x in read(r/'structure/renderer-material-links.json')};ma
 meshes={(x['cab'].lower(),int(x['pathId'])):x for x in read(r/'geometry/geometry.json') if x['kind']=='Mesh'}
 catalog=read(dest/'emitters.json');meshout=read(dest/'meshes.json');groups={key:[] for key in prefixes}
 def copy_texture(slot):
- t=textures[slot['texture']['name']];raw=Path(t['files'][0]['path']).read_bytes();sha=hashlib.sha256(raw).hexdigest();path=dest/(('af01_' if args.suit=='fog' else 'nl_')+sha[:12]+'.png');path.write_bytes(raw);return 'res://'+path.as_posix(),sha
+ t=textures[slot['texture']['name']];raw=Path(t['files'][0]['path']).read_bytes();sha=hashlib.sha256(raw).hexdigest();path=dest/({'fog':'af01_','shadow':'nl_','night':'nd_'}[args.suit]+sha[:12]+'.png');path.write_bytes(raw);return 'res://'+path.as_posix(),sha
 for x in initial:
  group=next((key for key,prefix in prefixes.items() if x['node'].startswith(prefix)),None)
  if not group:continue
  material=next((materials[m['material']] for m in x['materials'] if any(s['slot'] in ['_MainTex','_MainSmokeTexture'] and s['texture'] for s in materials[m['material']]['textureSlots'])),None)
  if not material:continue
  main=next(s for s in material['textureSlots'] if s['slot'] in ['_MainTex','_MainSmokeTexture'] and s['texture'])
- texture,sha=copy_texture(main)
  d=modules[x['particlePathId']];l=links[x['node']];ob=objects[(l['cab'].lower(),int(l['rendererPathId']))];b=(r/'structure'/ob['rawFile']).read_bytes();ext=files[ob['cab'].lower()]['externals'];mc=struct.unpack_from('<i',b,64)[0];o=120+12*mc
  mode=struct.unpack_from('<H',b,o)[0];assert mode in range(5)
+ # The three ND follow billboards use the lightweight body-attachment path.
+ # Add its omitted native mesh layer here without emitting those twice.
+ if group=='night_follow' and mode!=4:continue
+ texture,sha=copy_texture(main)
  renderer={'mode':mode,'alignment':struct.unpack_from('<i',b,o+32)[0],'lengthScale':struct.unpack_from('<f',b,o+20)[0],'velocityScale':struct.unpack_from('<f',b,o+16)[0],'meshes':[]}
  if mode==4:
   for i in range(len(b)-68,len(b)-20,12):

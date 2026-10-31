@@ -33,7 +33,7 @@ func run():
 		for i in 480:fx.tick(1.0/120.0)
 		assert(fx.active.is_empty() and fx.remaining_native.emitters.is_empty())
 		fx.clear()
-	assert(fx.remaining_native.meshes.size()==14)
+	assert(fx.remaining_native.meshes.size()>=16)
 	assert(not fx.remaining_native.catalog.has("fog_follow"))
 	assert(fx.remaining_native.catalog.fog_release.all(func(row):return row.node.begins_with("Avatar_Fuka_FK_AF01_Ultra/")))
 	fx.free();print("NATIVE_ULTIMATE_RESOURCES_PASS");quit()

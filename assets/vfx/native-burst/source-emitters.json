@@ -302,11 +302,11 @@
           }
         }
       },
-      "position": [
-        0,
-        0,
-        0
-      ],
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
       "sizeModule": {
         "enabled": true,
         "curve": {
@@ -555,6 +555,37 @@
             "m_NumColorKeys": 2,
             "m_NumAlphaKeys": 2
           }
+        }
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "material": {
+        "gain": 9,
+        "tint": {
+          "R": 0.49803922,
+          "G": 0.49803922,
+          "B": 0.49803922,
+          "A": 0.49803922
+        },
+        "additive": false,
+        "textureST": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "sourceShader": {
+          "name": "miHoYo/miHoYo_Effects/Effect_Particles/Layer1/Alpha Blended",
+          "sha256": "3df65fb4fe63f61a937c22fd3028de0b68d8aed17ecb1194595530066cb91da5"
         }
       }
     },
@@ -860,11 +891,11 @@
           }
         }
       },
-      "position": [
-        0,
-        0,
-        0
-      ],
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
       "sizeModule": {
         "enabled": true,
         "curve": {
@@ -1143,6 +1174,37 @@
             "m_NumColorKeys": 2,
             "m_NumAlphaKeys": 2
           }
+        }
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "material": {
+        "gain": 1,
+        "tint": {
+          "R": 1,
+          "G": 1,
+          "B": 1,
+          "A": 1
+        },
+        "additive": true,
+        "textureST": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "sourceShader": {
+          "name": "miHoYo/miHoYo_Effects/Effect_Particles/Layer1/Additive",
+          "sha256": "7e09431476ca528690df03331e921ec32f0155922264ee7138b155901b86a690"
         }
       }
     },
@@ -1448,11 +1510,11 @@
           }
         }
       },
-      "position": [
-        0,
-        0,
-        0
-      ],
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
       "sizeModule": {
         "enabled": true,
         "curve": {
@@ -1701,6 +1763,37 @@
             "m_NumColorKeys": 2,
             "m_NumAlphaKeys": 2
           }
+        }
+      },
+      "rotation": {
+        "x": -1,
+        "y": 0,
+        "z": 0,
+        "w": -8.940697e-08
+      },
+      "scale": {
+        "x": 1,
+        "y": 2,
+        "z": 1
+      },
+      "material": {
+        "gain": 9,
+        "tint": {
+          "R": 0.49803922,
+          "G": 0.49803922,
+          "B": 0.49803922,
+          "A": 0.49803922
+        },
+        "additive": false,
+        "textureST": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "sourceShader": {
+          "name": "miHoYo/miHoYo_Effects/Effect_Particles/Layer1/Alpha Blended",
+          "sha256": "3df65fb4fe63f61a937c22fd3028de0b68d8aed17ecb1194595530066cb91da5"
         }
       }
     }
