@@ -523,15 +523,29 @@ func _create_marker(actor: Node3D,foe: Dictionary) -> Dictionary:
  title.modulate=_enemy_tint(foe).lightened(0.20)
  title.outline_size=3
  title.outline_modulate=Color("182d3f")
- title.position.y=0.16
+ title.position.y=0.33
  title.no_depth_test=true
  holder.add_child(title)
- var background:=_marker_quad(Color("162f42"),Vector2(0.78,0.045))
+ var frame:=_marker_quad(Color("08151f"),Vector2(1.12,0.13))
+ holder.add_child(frame)
+ var background:=_marker_quad(Color("3e2932"),Vector2(1.04,0.075))
+ background.position.z=0.005
  holder.add_child(background)
- var fill:=_marker_quad(_enemy_tint(foe),Vector2(0.78,0.045))
+ var fill:=_marker_quad(Color("ef7653"),Vector2(1.04,0.075))
  fill.position.z=0.01
  holder.add_child(fill)
- return {"holder":holder,"fill":fill,"title":title}
+ var health:=Label3D.new()
+ health.font=_bar_font
+ health.font_size=32
+ health.pixel_size=0.0045
+ health.billboard=BaseMaterial3D.BILLBOARD_ENABLED
+ health.modulate=Color("f4fbff")
+ health.outline_size=5
+ health.outline_modulate=Color("08151f")
+ health.position.y=0.15
+ health.no_depth_test=true
+ holder.add_child(health)
+ return {"holder":holder,"fill":fill,"title":title,"health":health}
 
 func _marker_quad(color: Color,size: Vector2) -> MeshInstance3D:
  var item:=MeshInstance3D.new()
@@ -542,6 +556,9 @@ func _marker_quad(color: Color,size: Vector2) -> MeshInstance3D:
  material.albedo_color=color
  material.shading_mode=BaseMaterial3D.SHADING_MODE_UNSHADED
  material.billboard_mode=BaseMaterial3D.BILLBOARD_ENABLED
+ # Preserve the HP fill's X scale when facing the camera. Without this,
+ # damage only shifts a full-width quad left instead of shrinking the bar.
+ material.billboard_keep_scale=true
  material.no_depth_test=true
  item.material_override=material
  return item
@@ -763,10 +780,12 @@ func _process(delta: float) -> void:
   var marker: Dictionary=enemy_markers[id]
   marker.holder.visible=id in health_display.overheadIds and campaign.phase=="fight" and not game.paused and not story.active and not boss_entrance.active and not knockout.active and ult_time<0.0
   marker.title.visible=(id==str(game.enemy.id) or bool(foe.get("boss",false))) and game.time>2.3
-  marker.holder.position=Vector3(foe.x,3.20 if foe.get("boss",false) else 2.98,0.3)
+  marker.holder.position=Vector3(foe.x,3.35 if foe.get("boss",false) else 3.15,0.3)
   var ratio: float=clampf(float(foe.hp)/maxf(float(foe.maxHp),1.0),0,1)
   marker.fill.scale.x=maxf(0.001,ratio)
-  marker.fill.position.x=(ratio-1.0)*0.39
+  marker.fill.position.x=(ratio-1.0)*0.52
+  var health_text: String="HP %d / %d"%[ceili(foe.hp),ceili(foe.maxHp)]
+  if marker.health.text!=health_text: marker.health.text=health_text
  arena.update_arena(visual_dt,visual_time)
  effects.update_fighters(game.player,game.enemies)
  effects.player_attachment=player.effect_attachment()

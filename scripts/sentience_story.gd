@@ -1,5 +1,5 @@
 extends RefCounted
-## Approved manuscript. Routes use earned choices; revisit uses a stable run seed.
+## Compact local manuscript. Routes use earned choices; revisits use a stable seed.
 ## No source-game dialogue or native story timeline is claimed here.
 const SCENES := ["intro","reward","stage_2","stage_4","final","victory","defeat"]
 const REWARD_GROUPS := {
@@ -78,7 +78,7 @@ static func metadata(scene_id: String,context: Dictionary={}) -> Dictionary:
  var titles: Dictionary={"intro":"识境演武","stage_2":"招式之外","stage_4":"胜负之间","midpoint":"还没修完的路","final":"这次是本体","victory":"下次再来","defeat":"胜负未定"}
  var title: String=str(REWARD_TITLES.get(choice.latestId,"下一招")) if scene_id=="reward" else str(titles.get(scene_id,"识境演武"))
  return {"id":scene_id,"title":title,"subtitle":"小识与老古董" if scene_id=="intro" else str(choice.routeTitle),
-  "skippable":true,"source":"user-authored-manuscript","revision":Dialogue.REVISION,
+  "skippable":true,"source":"edited-local-manuscript","revision":Dialogue.REVISION,
   "routeId":choice.routeId,"branchId":choice.branchId,"sourceSceneIds":scene_ids(scene_id,context)}
 
 static func _turn_was_shown(choice: Dictionary,turn_key: String) -> bool:
@@ -127,7 +127,6 @@ static func scene_ids(scene_id: String,context: Dictionary={}) -> Array[String]:
    var reaction:=_reward_scene_id(choice)
    var result: Array[String]=[]
    if not reaction.is_empty(): result.append(reaction)
-   if int(choice.stageIndex)==3 and int(choice.choiceCount)==3: result.append("J01")
    if bool(choice.finalChoice): result.append(_route_scene("E",route))
    return result
   "midpoint": return ["J01"]
@@ -135,8 +134,7 @@ static func scene_ids(scene_id: String,context: Dictionary={}) -> Array[String]:
   "stage_4": return ["H02"]
   "final": return ["H03",_route_scene("E",route)]
   "victory":
-   var branch: String=str({"press":"P","guard":"S","flow":"M","balanced":"H"}.get(route,"H"))
-   return [_route_scene("F",route),"I00","I01","I01-"+branch,"I01_CONT","I02"]
+   return [_route_scene("F",route),"I00","I01","I02"]
   "defeat": return ["G02" if int(choice.stageIndex)>=5 else "G01",_route_scene("G",route,3)]
  return []
 

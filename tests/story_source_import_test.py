@@ -35,8 +35,8 @@ class StorySourceImportTests(unittest.TestCase):
                 self.assertNotIn(match[1], source_rows)
                 source_rows[match[1]] = match[2]
         rows = [row for scene in self.scenes.values() for row in scene["lines"]]
-        self.assertEqual(len(self.scenes), 60)
-        self.assertEqual(len(rows), 367)
+        self.assertEqual(len(self.scenes), 66)
+        self.assertEqual(len(rows), 131)
         self.assertEqual({row["id"] for row in rows}, set(source_rows))
         for row in rows:
             with self.subTest(line=row["id"]):
@@ -45,20 +45,20 @@ class StorySourceImportTests(unittest.TestCase):
                 self.assertEqual(reconstructed, original)
 
     def test_shared_epilogue_halves_do_not_overwrite_each_other(self):
-        self.assertEqual([row["id"] for row in self.scenes["I01"]["lines"]], [f"I01-{n:02d}" for n in range(1, 13)])
-        self.assertEqual([row["id"] for row in self.scenes["I01_CONT"]["lines"]], [f"I01-{n:02d}" for n in range(13, 20)])
+        self.assertEqual([row["id"] for row in self.scenes["I01"]["lines"]], [f"I01-{n:02d}" for n in range(1, 3)])
+        self.assertEqual([row["id"] for row in self.scenes["I01_CONT"]["lines"]], [f"I01-{n:02d}" for n in range(3, 4)])
         for route in "PSMH":
             self.assertTrue(self.scenes[f"I01-{route}"]["lines"])
             self.assertTrue(all(row["id"].startswith(f"I01-{route}") for row in self.scenes[f"I01-{route}"]["lines"]))
 
     def test_revised_memory_has_correct_speaker_and_returns_to_conversation(self):
         rows = {row["id"]: row for row in self.scenes["I02"]["lines"]}
-        self.assertEqual(rows["I02-02"]["speaker"], "lixue")
-        self.assertEqual(rows["I02-02"]["kind"], "memory")
-        self.assertEqual(rows["I02-02"]["displayName"], "程立雪（回忆）")
-        self.assertEqual(rows["I02-03"]["speaker"], "senti")
-        self.assertEqual(rows["I02-03"]["kind"], "dialogue")
-        self.assertEqual(len(rows), 27)
+        self.assertEqual(rows["I02-01"]["speaker"], "fuhua_thought")
+        self.assertEqual(rows["I02-01"]["kind"], "thought")
+        self.assertEqual(rows["I02-01"]["displayName"], "符华（心想）")
+        self.assertEqual(rows["I02-02"]["speaker"], "senti")
+        self.assertEqual(rows["I02-02"]["kind"], "dialogue")
+        self.assertEqual(len(rows), 7)
 
     def test_unnumbered_stage_directions_keep_their_positions(self):
         for scene in self.scenes.values():
@@ -69,11 +69,11 @@ class StorySourceImportTests(unittest.TestCase):
                     self.assertLessEqual(direction["beforeLine"], len(scene["lines"]))
                     preceding = sum(row["sourceLine"] < direction["sourceLine"] for row in scene["lines"])
                     self.assertEqual(direction["beforeLine"], preceding)
-        self.assertEqual(sum(len(scene["stageDirections"]) for scene in self.scenes.values()), 34)
+        self.assertEqual(sum(len(scene["stageDirections"]) for scene in self.scenes.values()), 2)
         flashback = self.scenes["I02"]["stageDirections"]
-        self.assertTrue(any(item["beforeLine"] == 1 and item["text"].startswith("短暂闪回") for item in flashback))
-        self.assertTrue(any(item["beforeLine"] == 2 and item["text"].startswith("回到现实") for item in flashback))
-        self.assertTrue(any(item["beforeLine"] == 27 and "淡出" in item["text"] for item in flashback))
+        self.assertTrue(any(item["beforeLine"] == 0 and item["text"].startswith("短暂闪回") for item in flashback))
+        self.assertTrue(any(item["beforeLine"] == 1 and item["text"].startswith("回到现实") for item in flashback))
+        self.assertTrue(any("立雪" in row["text"] for row in self.scenes["I02"]["lines"]))
         self.assertEqual([item["sourceLine"] for item in flashback], sorted(item["sourceLine"] for item in flashback))
 
     def test_editorial_notes_and_preamble_stay_out_of_the_game(self):

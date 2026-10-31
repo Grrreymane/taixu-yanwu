@@ -3,7 +3,7 @@ const Presentation = preload("res://scripts/story_presentation.gd")
 const Roster = preload("res://scripts/fighter_roster.gd")
 const Dialogue = preload("res://scripts/sentience_dialogue.gd")
 const Arena = preload("res://scripts/arena.gd")
-const OUTPUT := "res://build/screenshots/story-v3"
+const OUTPUT := "res://build/screenshots/story-compact"
 
 func _initialize() -> void:
 	call_deferred("_run")
@@ -20,7 +20,7 @@ func _run() -> void:
 	world.add_child(camera)
 	camera.current=true
 	presentation.begin("intro",{"runNumber":1},Roster.resolve("fuhua","azure_empyrea","default"))
-	for sample: Array in [["A01","A01-direction-01","opening-direction"],["A01","A01-02","opening"],["J01","J01-10","midpoint"],["I00","I00-17","signboard"],["I01","I01-01","street"],["I01","I01-direction-02","seated"],["I01_CONT","I01-13","waiting"],["I02","I02-direction-01","noodles-served"],["I02","I02-direction-02","paused-at-table"],["I02","I02-direction-03","flashback-direction"],["I02","I02-02","memory"],["I02","I02-direction-04","memory-direction"],["I02","I02-direction-05","return-to-present"],["I02","I02-03","present"],["I02","I02-27","ending"]]:
+	for sample: Array in [["A01","A01-01","opening"],["B13","B13-01","new-dodge-reward"],["B17","B17-01","new-parry-reward"],["I01","I01-01","noodle-shop"],["I02","I02-01","memory"],["I02","I02-02","return-to-present"],["I02","I02-07","ending"]]:
 		presentation.lines=Dialogue.scene_lines(str(sample[0]))
 		var found:=false
 		for index: int in presentation.lines.size():

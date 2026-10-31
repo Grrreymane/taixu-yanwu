@@ -25,7 +25,7 @@ func _run() -> void:
 
 func _source_fidelity() -> void:
  var source: Dictionary=JSON.parse_string(FileAccess.get_file_as_string(Dialogue.DATA_PATH))
- check(source.revision==Dialogue.REVISION,"runtime revision matches the approved v3 manuscript")
+ check(source.revision==Dialogue.REVISION,"runtime revision matches the compact local manuscript")
  var total_lines:=0
  var total_directions:=0
  var all_ids: Dictionary={}
@@ -81,40 +81,38 @@ func _routing() -> void:
  check(evidence.revisits==20,"special revisits occupy one fifth of the stable seed range")
  for triple: Array in [["reflection","riposte","C01"],["riposte","reflection","C02"],["risk","breath","C03"],["breath","risk","C04"],["flow","finisher","C05"],["finisher","flow","C06"],["windstep","swift","C07"],["swift","windstep","C08"]]:
   check(Story.scene_ids("reward",{"rewardIds":triple.slice(0,2)})==[triple[2]],"ordered pair resolves to its exact combination scene")
- check(Story.scene_ids("reward",{"rewardIds":["reflection","fist","riposte"]})==["C01","J01"],"nonadjacent combination takes priority, followed by mandatory third-clear midpoint")
+ check(Story.scene_ids("reward",{"rewardIds":["reflection","fist","riposte"]})==["C01"],"nonadjacent combination stays a single short exchange")
  check(Story.scene_ids("reward",{"rewardIds":["fist","calm","iron","breath"]})==["B08"],"already played turn is not repeated")
  check(Story.scene_ids("reward",{"rewardIds":["risk","breath","fist","calm"]})==["D01"],"combination did not consume an unseen turn")
  for count: int in range(1,6):
   var history: Array=["fist","calm","flow","iron","reflection"].slice(0,count)
   var sequence:=Story.scene_ids("reward",{"rewardIds":history,"stageIndex":count})
-  check(sequence.has("J01")== (count==3),"midpoint occurs at precisely the third paid reward")
+  check(not sequence.has("J01"),"optional midpoint is not appended to reward dialogue")
   check(str(sequence[-1]).begins_with("E")== (count==5),"final duel scene occurs only after the fifth reward")
  var index:=0
  for route: String in ROUTES:
   var context: Dictionary={"rewardIds":ROUTES[route],"stageIndex":5}
-  var letter: String=["P","S","M","H"][index]
-  var expected: Array[String]=["F%02d"%[index+1],"I00","I01","I01-"+letter,"I01_CONT","I02"]
+  var expected: Array[String]=["F%02d"%[index+1],"I00","I01","I02"]
   check(Story.scene_ids("victory",context)==expected,"victory joins only its own route and the complete common epilogue")
   check(Story.scene_ids("defeat",context)==["G02","G%02d"%[index+3]],"final defeat never enters the victory epilogue")
   context.stageIndex=3
   check(Story.scene_ids("defeat",context)==["G01","G%02d"%[index+3]],"phantom defeat has its separate prefix")
   evidence.routeSequences[route]=expected
   index+=1
- var street_ids: Array[String]=["I01-direction-01","I01-01","I01-02","I01-03","I01-04","I01-05"]
  for scene_id: String in ["I01","I01-P","I01-S","I01-M","I01-H","I01_CONT"]:
   for line: Dictionary in Dialogue.scene_lines(scene_id):
-   var expected: String="street" if line.lineId in street_ids else "noodle_shop_waiting"
+   var expected: String="noodle_shop_waiting"
    check(line.presentationLocation==expected,str(line.lineId)+" moves indoors only at seating and does not serve the noodles early")
  var memory:=Dialogue.scene_lines("I02")
- var flashback_ids: Array[String]=["I02-direction-03","I02-02","I02-direction-04"]
+ var flashback_ids: Array[String]=["I02-direction-01","I02-01"]
  for line: Dictionary in memory:
   var expected: String="memory" if line.lineId in flashback_ids else "noodle_shop"
   check(line.presentationLocation==expected,str(line.lineId)+" switches settings at the exact authored direction")
   if line.lineId in flashback_ids: check(not line.audible,"memory never borrows either live character's voice")
-  if line.lineId=="I02-02": check(line.kind=="memory" and line.speaker=="lixue" and line.displayName=="程立雪（回忆）","Lixue retains her authored memory identity")
-  if line.lineId=="I02-03": check(line.speaker=="senti" and line.kind=="dialogue" and line.audible,"the present-day prompt is spoken by Senti")
-  if line.lineId=="I02-04": check(line.speaker=="fuhua" and line.audible,"Fu Hua replies in the present rather than the old flashback range")
- check(memory[-1].kind=="direction" and memory[-1].presentationLocation=="noodle_shop","the closing fade stays at the restaurant window")
+  if line.lineId=="I02-01": check(line.kind=="thought" and line.speaker=="fuhua_thought" and line.text.contains("立雪"),"Fu Hua remembers Lixue silently")
+  if line.lineId=="I02-02": check(line.speaker=="senti" and line.kind=="dialogue" and line.audible,"the present-day prompt is spoken by Senti")
+  if line.lineId=="I02-03": check(line.speaker=="fuhua" and line.audible,"Fu Hua replies in the present rather than the old flashback range")
+ check(memory[-1].speaker=="fuhua" and memory[-1].presentationLocation=="noodle_shop","the short ending returns to the present restaurant")
  check(Story.lines("unknown").is_empty(),"unknown scene cannot start a blocking placeholder")
 
 func _main_flow() -> void:
@@ -142,7 +140,7 @@ func _main_flow() -> void:
   var midpoint_count:=0
   for line: Dictionary in transcript:
    if line.sourceSceneId=="J01": midpoint_count+=1
-  check((midpoint_count>0)==(step==2),"real campaign reaches J01 exactly after third victory")
+  check(midpoint_count==0 and transcript.size()==(4 if step==4 else 2),"each reward stays two lines, with a separate two-line boss handoff at the end")
   if step==2: evidence.midpoint=transcript.map(func(line: Dictionary):return line.lineId)
   var before:=_record(world)
   var countdown: float=world.stage_countdown
@@ -156,7 +154,7 @@ func _main_flow() -> void:
    while world.story.active and advances<transcript.size()*2+2:
     world._action("story_next")
     advances+=1
-   check(not world.story.active,"third-reward scene plus midpoint finishes naturally as one continuation")
+   check(not world.story.active,"short reward scene finishes naturally as one continuation")
    _finish(world,false)
    world._action("story_skip")
    world._action("retry")
@@ -167,7 +165,7 @@ func _main_flow() -> void:
  var won:=_record(world)
  var all_lines: Array=world.story.lines.duplicate(true)
  evidence.epilogue=all_lines.map(func(line: Dictionary):return line.lineId)
- check(evidence.epilogue.has("I02-02") and evidence.epilogue.has("I02-27"),"real victory includes Lixue and the end of the v3 restaurant scene")
+ check(evidence.epilogue.has("I02-01") and evidence.epilogue.has("I02-07") and all_lines.size()==15,"real victory retains the memory and ends after fifteen entries including transitions")
  var plays: int=world.victory.plays
  var advances:=0
  while world.story.active and advances<all_lines.size()*2+2:

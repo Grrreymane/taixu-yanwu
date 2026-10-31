@@ -22,7 +22,7 @@ func _run() -> void:
    _all_five_card_histories()
    await _reward_main_flow()
  check(completed==(["decision","responses"] if text_only else ["decision","responses","enumeration","main"]),"all intended reward-story validation sections reached completion")
- check(evidence.singleRewards.size()==12 and (text_only or (enumerated==95040 and evidence.mainRewards.size()==5)),"required histories, twelve cards and real reward transactions executed")
+ check(evidence.singleRewards.size()==18 and (text_only or (enumerated==95040 and evidence.mainRewards.size()==5)),"required histories, eighteen cards and real reward transactions executed")
  check(recorder.errors.is_empty(),"no hidden engine or script errors")
  var report: Dictionary={"suite":"reward_story","mode":"text_only" if text_only else "full","checks":checks,"passed":failures.is_empty(),"failures":failures,"errors":recorder.errors,"warnings":recorder.warnings,"completed":completed,"enumeratedHistories":enumerated,"sampledTextScenes":sampled_texts,"routeCoverage":routes_seen,"branchCoverage":branches_seen,"evidence":evidence}
  DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path("res://build/reports"))
@@ -90,17 +90,17 @@ func _decision_contract() -> void:
 
 func _single_and_ordered_responses() -> void:
  var signatures: Dictionary={}
- for id: String in Campaign.REWARDS.keys().filter(func(key): return key not in Campaign.RewardBuilds.NEW_IDS):
+ for id: String in Campaign.REWARDS:
   var context:=_context([id])
   var lines:=_valid_text("reward",context)
   var signature:=_signature(lines)
-  check(not signatures.has(signature),"each of twelve immediate reward reactions is independently written: "+id)
+  check(not signatures.has(signature),"each of eighteen immediate reward reactions is independently written: "+id)
   signatures[signature]=id
   var first_pair:=_signature(lines.slice(0,2))
   var decision: Dictionary=story_source.decision(context)
   check(decision.latestId==id and decision.rewardId==id and decision.choiceCount==1 and not str(decision.branchId).is_empty(),"immediate scene is keyed to the actually selected card")
   evidence.singleRewards.append({"id":id,"branch":decision.branchId,"firstPair":first_pair,"text":signature})
- check(evidence.singleRewards.map(func(item: Dictionary): return item.firstPair).reduce(func(unique: Dictionary,text: String): unique[text]=true; return unique,{}).size()==12,"the first two lines themselves distinguish every card, rather than only changing a branch label")
+ check(evidence.singleRewards.map(func(item: Dictionary): return item.firstPair).reduce(func(unique: Dictionary,text: String): unique[text]=true; return unique,{}).size()==18,"the first two lines themselves distinguish every card, rather than only changing a branch label")
  # A second press->guard turn must not negotiate the same outing again.
  var remembered:=_valid_text("reward",_context(["fist","calm","iron","breath"]))
  check(remembered==story_source.lines("reward",_context(["breath"])),"repeated turn returns to the new card's own scene instead of forgetting an earlier agreement")

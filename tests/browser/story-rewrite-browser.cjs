@@ -18,7 +18,7 @@ try{
  const state=()=>p.evaluate(()=>structuredClone(window.__godotState));
  const action=(name,value)=>p.evaluate(({name,value})=>window.__godotAction(name,value),{name,value});
  const wait=(fn,arg=null)=>p.waitForFunction(fn,arg,{timeout:180000});
- await p.goto('http://127.0.0.1:4187/?v='+encodeURIComponent(source.revision));await wait(()=>window.__godotState?.ready);
+ await p.goto(process.env.GODOT_TEST_URL||'http://127.0.0.1:4188/?v='+encodeURIComponent(source.revision));await wait(()=>window.__godotState?.ready);
  await action('start');await wait(()=>window.__godotState.story.active);await p.waitForTimeout(100);
  const shot=async name=>p.screenshot({path:path.join(out,name+'.png')});
  let firstCamera=null,openingLines=0;
@@ -39,7 +39,7 @@ try{
  }
  report.checks.push('Full opening matches the manuscript, labels narration, fits three viewports and never moves the dialogue camera');
  report.scenes.push({kind:'intro',lines:openingLines});save();
- if(introOnly){assert.deepEqual(report.errors,[]);report.passed=true;report.scope='opening';save();console.log('STORY_V3_BROWSER_OPENING_PASS');return}
+ if(introOnly){assert.deepEqual(report.errors,[]);report.passed=true;report.scope='opening';save();console.log('STORY_COMPACT_BROWSER_OPENING_PASS');return}
  const begin=Date.now();let rewards=0,retries=0,handled='';
  while(Date.now()-begin<300000){
   const s=await state(),c=s.campaign,player=s.player;
@@ -47,9 +47,9 @@ try{
    const key=s.story.scene+':'+s.story.sourceSceneId+':'+s.story.lineId;
    if(!report.seenScenes.includes(s.story.sourceSceneId))report.seenScenes.push(s.story.sourceSceneId);
    if(key!==handled){handled=key;assert.ok(source.scenes[s.story.sourceSceneId]);assert.equal(s.story.text,sourceLine(s.story).text)}
-   if(s.story.sourceSceneId==='J01'&&s.story.lineId==='J01-10'){
-    if(!s.story.revealed)await action('story_next');await p.waitForTimeout(30);await shot('midpoint');
-    report.checks.push('Third earned upgrade reaches the new midpoint in the exported browser build');break;
+   if(s.story.scene==='reward'&&s.story.choice.choiceCount===3){
+    if(!s.story.revealed)await action('story_next');await p.waitForTimeout(30);await shot('third-reward');assert.equal(s.story.total,2);report.thirdReward=true;
+    report.checks.push('Third earned upgrade stays a two-line exchange in the exported browser build');break;
    }
    if(s.story.scene==='defeat'){
     await action('story_skip');if(retries++>=2)throw new Error('Trial bot exhausted retries');await action('retry');continue;
@@ -65,6 +65,9 @@ try{
   }
   if(c.phase==='failed'){if(retries++>=2)throw new Error('Trial bot exhausted retries');await action('retry');continue}
   if(s.paused){await p.keyboard.press('Escape');continue}
+  if(c.stageIndex===1&&!s.ended&&!s.ultimate&&s.stageCountdown===0&&!report.groupHealth){
+   await shot('group-health');report.groupHealth=s.healthDisplay;
+  }
   if(s.ended||s.ultimate||s.stageCountdown>0){await p.waitForTimeout(60);continue}
   const live=s.enemies.filter(e=>e.hp>0),nearest=live.reduce((best,e)=>!best||Math.abs(e.x-player.x)<Math.abs(best.x-player.x)?e:best,null);
   if(!nearest){await p.waitForTimeout(60);continue}
@@ -78,6 +81,6 @@ try{
   await p.evaluate(({move,guard,command})=>{__godotAction('move',move);__godotAction('guard_held',guard);if(command)__godotAction(command)},{move,guard,command});
   await p.waitForTimeout(50);
  }
- assert.ok(report.seenScenes.includes('J01'),'earned third-stage midpoint reached');assert.deepEqual(report.errors,[]);
+ assert.ok(report.thirdReward,'earned third reward reached');assert.ok(!report.seenScenes.includes('J01'),'no unwanted midpoint appended');assert.deepEqual(report.errors,[]);
  report.passed=true;report.retries=retries;save();console.log('STORY_REWRITE_BROWSER_PASS');
 }finally{save();await browser.close()}})().catch(e=>{report.failure=e.stack;save();console.error(e);process.exitCode=1});

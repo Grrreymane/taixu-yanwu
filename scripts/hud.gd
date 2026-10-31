@@ -136,6 +136,7 @@ var _enemy_name: Label
 var _enemy_tag: Label
 var _enemy_hp := Gauge.new()
 var _enemy_posture := Gauge.new()
+var _enemy_resources: Label
 var _player_hp := Gauge.new()
 var _player_sp := Gauge.new()
 var _player_posture := Gauge.new()
@@ -395,6 +396,8 @@ func _build_battle() -> void:
 	_enemy_posture.tint = ORANGE
 	_enemy_panel.add_child(_enemy_posture)
 	_place(_enemy_posture, 0, 57, 500, 4)
+	_enemy_resources = _label(_enemy_panel,"",12,Color("527286"))
+	_place(_enemy_resources,0,64,500,22)
 	_battle.add_child(_player_panel)
 	_player_panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	var player_back := SlantPanel.new()
@@ -1323,7 +1326,7 @@ func _layout() -> void:
 	_place(_pause_button, w - 130, 27, 100, 39)
 	_place(_mode_button, w - 170, 79, 140, 33)
 	_place(_infinite_hp_button, w - 202, 119, 172, 33)
-	_place(_enemy_panel, (w - 500) * 0.5, 29, 500, 65)
+	_place(_enemy_panel, (w - 500) * 0.5, 29, 500, 88)
 	_place(_stage_panel,26,24,300,180 if _campaign_mode == "trial" else 150)
 	_place(_player_panel, 36, h - 154, 290, 120)
 	_place(_left, 38, h - 248, 72, 72)
@@ -1492,6 +1495,8 @@ func update_status(data: Dictionary) -> void:
 	_player_posture.set_amount(float(player.get("posture", 0.0)))
 	_enemy_hp.set_amount(float(enemy.get("hp", 100.0))/enemy_max_hp*100.0)
 	_enemy_posture.set_amount(float(enemy.get("posture", 0.0)))
+	_enemy_resources.text = "HP %d / %d   ·   架势 %d / 100" % [ceili(float(enemy.get("hp",0.0))),ceili(enemy_max_hp),roundi(float(enemy.get("posture",0.0)))]
+	if bool(data.get("infiniteHp",false)): _enemy_resources.text = "HP 无限   ·   架势 %d / 100" % roundi(float(enemy.get("posture",0.0)))
 	_hp_text.text = "HP  %03d / %03d" % [roundi(hp),roundi(max_hp)]
 	if bool(data.get("infiniteHp",false)): _hp_text.text = "HP  无限"
 	_sp_text.text = "SP %03d" % roundi(energy)
@@ -1515,10 +1520,11 @@ func update_status(data: Dictionary) -> void:
 		_enemy_name.add_theme_color_override("font_color", name_color)
 	if _enemy_tag.get_theme_color("font_color") != tag_color:
 		_enemy_tag.add_theme_color_override("font_color", tag_color)
+		_enemy_resources.add_theme_color_override("font_color",tag_color)
 	if bool(data.get("training",false)) and _campaign_mode == "practice":
 		_enemy_tag.text = "木人练习"
 	if bool(data.get("infiniteHp",false)): _enemy_tag.text += " · 无限血量"
-	var health_tint: Color = ORANGE if boss else (Color("ff915e") if elite else Color("ef7653"))
+	var health_tint: Color = Color("ef7653")
 	if _enemy_hp.tint != health_tint:
 		_enemy_hp.tint = health_tint
 		_enemy_hp.queue_redraw()

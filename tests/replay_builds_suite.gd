@@ -204,7 +204,7 @@ func _story() -> void:
  for id: String in Builds.NEW_IDS:
   var decision:=Story.decision({"rewardIds":["fist","flow",id],"stageIndex":3})
   check(decision.choiceCount==3 and decision.latestId==id,"new choice contributes to story route")
-  check("J01" in Story.scene_ids("reward",{"rewardIds":["fist","flow",id],"stageIndex":3}),"new card cannot skip approved midpoint")
+  check(Story.lines("reward",{"rewardIds":[id],"stageIndex":1}).size()==2,"new card has its own two-line exchange")
   check(not Story.lines("victory",{"rewardIds":[id]}).is_empty(),"new card retains authored ending")
 
 func _hud() -> void:

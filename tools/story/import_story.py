@@ -19,9 +19,9 @@ import re
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-SOURCE_PATH = PROJECT_ROOT / "docs" / "story" / "识境演武_角色语气重写_v3.md"
+SOURCE_PATH = PROJECT_ROOT / "docs" / "story" / "识境演武_精简对白.md"
 OUTPUT_PATH = PROJECT_ROOT / "scripts" / "data" / "sentience_story_scenes.json"
-REVISION = "story-voice-v3"
+REVISION = "story-compact-1"
 SCENE_HEADER = re.compile(r"^#{2,3}\s+【([A-J]\d{2}(?:-[PSMH])?)｜(.+)】\s*$")
 NUMBERED_ROW = re.compile(r"^([A-J]\d{2}-(?:[PSMH])?\d{2})\s+(.+?)\s*$")
 SPEAKERS = {

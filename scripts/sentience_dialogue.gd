@@ -1,11 +1,12 @@
 extends RefCounted
-## Verbatim imported manuscript. Scene selection belongs to SentienceStory.
-const REVISION := "story-voice-v3"
+## Verbatim import of the edited local manuscript. Routing belongs to SentienceStory.
+const REVISION := "story-compact-1"
 const DATA_PATH := "res://scripts/data/sentience_story_scenes.json"
 const CARD_SCENES := {
  "fist":"B01","iron":"B02","risk":"B03","finisher":"B04",
  "reflection":"B05","riposte":"B06","calm":"B07","breath":"B08",
- "flow":"B09","swift":"B10","windstep":"B11","reservoir":"B12"}
+ "flow":"B09","swift":"B10","windstep":"B11","reservoir":"B12",
+ "crosswind":"B13","chainflow":"B14","afterglow":"B15","crack":"B16","focus":"B17","sustain":"B18"}
 const COMBINATION_SCENES := {
  "riposte":"C01","reflection":"C02","breath":"C03","risk":"C04",
  "finisher":"C05","flow":"C06","swift":"C07","windstep":"C08"}
@@ -28,7 +29,6 @@ static func _scenes() -> Dictionary:
  return _catalog.get("scenes",{})
 
 static func initial_location(scene_id: String) -> String:
- if scene_id=="I01": return "street"
  if scene_id.begins_with("I01"): return "noodle_shop_waiting"
  if scene_id=="I02": return "noodle_shop"
  return "mountain"

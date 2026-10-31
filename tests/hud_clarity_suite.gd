@@ -139,11 +139,13 @@ func _run() -> void:
 	state.enemies = [{"id":"single", "hp":65.0, "maxHp":130.0, "name":"单人对手"}]
 	hud.update_status(state)
 	_check(hud._enemy_panel.visible and hud._enemy_name.text == "单人对手" and is_equal_approx(hud._enemy_hp.value, 50.0), "single opponent uses its correct main health bar")
+	_check(hud._enemy_resources.text=="HP 65 / 130   ·   架势 0 / 100", "HP and posture have distinct visible labels")
 	state.enemies = [{"id":"minion", "hp":80.0, "maxHp":80.0, "name":"幻身"}, {"id":"boss", "hp":120.0, "maxHp":200.0, "name":"识之律者", "boss":true}]
 	state.enemy = state.enemies[0]
 	state.healthDisplay = HealthDisplay.plan(state.enemies)
 	hud.update_status(state)
 	_check(hud._enemy_panel.visible and hud._enemy_name.text == "识之律者" and is_equal_approx(hud._enemy_hp.value, 60.0), "boss main HP stays correct while current target is a minion")
+	_check(hud._enemy_hp.tint==Color("ef7653") and hud._enemy_posture.tint==HUD.ORANGE, "boss health and posture retain distinct colors")
 	_check(hud.presentation_snapshot().primaryHealthId == "boss" and hud.presentation_snapshot().primaryHealthVisible, "readonly snapshot identifies the actual visible boss bar")
 	for phase in ["fight", "reward", "menu", "failed"]:
 		state.campaign.phase = phase

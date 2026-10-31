@@ -15,7 +15,8 @@
   资源原路径和 .uid / .import 元数据保留，避免破坏模型、材质与动作引用。
 
 剧情文稿
-  docs/story/识境演武_角色语气重写_v3.md：当前使用的用户原稿，按原文导入。
+  docs/story/识境演武_精简对白.md：当前精简稿，包含十八项强化对白，按稿件导入。
+  docs/story/识境演武_角色语气重写_v3.md：前一版长稿，保留备查。
   docs/story/archive/：此前的完整重写稿、对白修改稿与自然对白润色版。
   docs/story/archive/workspace-copies/：整理前放在工作区根目录的原稿快照，包含两份旧稿与新版重写稿原件。
   docs/dialogue-reference-notes.txt：早期对白参考与接入记录。
