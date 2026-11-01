@@ -31,6 +31,8 @@ var game=Combat.new()
 var campaign=Campaign.new()
 var fighter: Dictionary=FighterRoster.resolve()
 var appearance_choices: Dictionary={}
+const ACTOR_CACHE_LIMIT:=4 # At most five loaded player appearances including the active actor.
+var actor_cache: Dictionary={}
 const FIGHTER_SETTINGS := "user://fighter-preferences.cfg"
 var victory=VictoryPresentation.new()
 var story=StoryPresentation.new()
@@ -415,17 +417,30 @@ func _select_fighter(style_id: String,appearance_id: String) -> void:
  if next.is_empty(): return
  if next.styleId==fighter.styleId and next.appearanceId==fighter.appearanceId: return
  voice.clear()
- var replacement=Actor.new()
- replacement.visible=false
- add_child(replacement)
- replacement.setup(false,next)
+ var next_key:=str(next.styleId)+":"+str(next.appearanceId)
+ var replacement: Node3D=actor_cache.get(next_key)
+ actor_cache.erase(next_key)
+ if not is_instance_valid(replacement):
+  replacement=Actor.new()
+  replacement.visible=false
+  add_child(replacement)
+  replacement.setup(false,next)
+ else:
+  replacement.reset_presentation()
+  replacement._set_native_form(false)
  if not replacement.ready_for_combat:
   replacement.queue_free()
   hud.notify_text("角色载入失败，请重新选择")
   return
  appearance_choices[str(fighter.styleId)]=str(fighter.appearanceId)
  player.visible=false
- player.queue_free()
+ var previous_key:=str(fighter.styleId)+":"+str(fighter.appearanceId)
+ actor_cache.erase(previous_key)
+ actor_cache[previous_key]=player
+ while actor_cache.size()>ACTOR_CACHE_LIMIT:
+  var oldest: String=actor_cache.keys()[0]
+  actor_cache[oldest].queue_free()
+  actor_cache.erase(oldest)
  player=replacement
  player.visible=true
  fighter=next
@@ -533,13 +548,14 @@ func _create_marker(actor: Node3D,foe: Dictionary) -> Dictionary:
  title.position.y=0.33
  title.no_depth_test=true
  holder.add_child(title)
- var frame:=_marker_quad(Color("08151f"),Vector2(1.12,0.13))
- holder.add_child(frame)
- var background:=_marker_quad(Color("3e2932"),Vector2(1.04,0.075))
- background.position.z=0.005
- holder.add_child(background)
- var fill:=_marker_quad(Color("ef7653"),Vector2(1.04,0.075))
- fill.position.z=0.01
+ var fill:=MeshInstance3D.new()
+ var shape:=QuadMesh.new()
+ shape.size=Vector2(1.12,0.13)
+ fill.mesh=shape
+ fill.cast_shadow=GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+ var health_material:=ShaderMaterial.new()
+ health_material.shader=preload("res://shaders/enemy_health.gdshader")
+ fill.material_override=health_material
  holder.add_child(fill)
  var health:=Label3D.new()
  health.font=_bar_font
@@ -553,22 +569,6 @@ func _create_marker(actor: Node3D,foe: Dictionary) -> Dictionary:
  health.no_depth_test=true
  holder.add_child(health)
  return {"holder":holder,"fill":fill,"title":title,"health":health}
-
-func _marker_quad(color: Color,size: Vector2) -> MeshInstance3D:
- var item:=MeshInstance3D.new()
- var shape:=QuadMesh.new()
- shape.size=size
- item.mesh=shape
- var material:=StandardMaterial3D.new()
- material.albedo_color=color
- material.shading_mode=BaseMaterial3D.SHADING_MODE_UNSHADED
- material.billboard_mode=BaseMaterial3D.BILLBOARD_ENABLED
- # Preserve the HP fill's X scale when facing the camera. Without this,
- # damage only shifts a full-width quad left instead of shrinking the bar.
- material.billboard_keep_scale=true
- material.no_depth_test=true
- item.material_override=material
- return item
 
 func _event(data: Dictionary) -> void:
  data.appearanceId=str(fighter.get("appearanceId","default"))
@@ -789,8 +789,7 @@ func _process(delta: float) -> void:
   marker.title.visible=(id==str(game.enemy.id) or bool(foe.get("boss",false))) and game.time>2.3
   marker.holder.position=Vector3(foe.x,3.35 if foe.get("boss",false) else 3.15,0.3)
   var ratio: float=clampf(float(foe.hp)/maxf(float(foe.maxHp),1.0),0,1)
-  marker.fill.scale.x=maxf(0.001,ratio)
-  marker.fill.position.x=(ratio-1.0)*0.52
+  marker.fill.material_override.set_shader_parameter("health_ratio",ratio)
   var health_text: String="HP %d / %d"%[ceili(foe.hp),ceili(foe.maxHp)]
   if marker.health.text!=health_text: marker.health.text=health_text
  arena.update_arena(visual_dt,visual_time)

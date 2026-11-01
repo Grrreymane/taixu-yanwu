@@ -18,8 +18,7 @@ func run() -> void:
   var marker: Dictionary=world.enemy_markers[foe.id]
   assert(marker.holder.visible)
   assert(marker.health.text=="HP %d / %d"%[ceili(foe.hp),ceili(foe.maxHp)])
-  assert(is_equal_approx(marker.fill.scale.x,foe.hp/foe.maxHp))
-  assert(marker.fill.material_override.billboard_keep_scale)
+  assert(is_equal_approx(marker.fill.material_override.get_shader_parameter("health_ratio"),foe.hp/foe.maxHp))
  assert(not world.hud._enemy_panel.visible)
  await shot("health-group")
  root.size=Vector2i(960,540)

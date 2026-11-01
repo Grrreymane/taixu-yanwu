@@ -114,6 +114,8 @@ cd taixu-yanwu
 
 网页在加载遮罩下预先绘制战斗特效、凤凰骨骼模型和镜头叠加层，避免首次出招时才编译着色器。预热使用实际游戏视口，结束后移除全部样本，不改变战斗时间、伤害或特效预算。这个处理针对 Compatibility 的首次编译停顿；角色首次切换的资源载入和低性能设备的持续渲染开销仍需单独衡量。参见 [Godot 的编译卡顿说明](https://docs.godotengine.org/en/stable/tutorials/performance/pipeline_compilations.html)。
 
+装甲选择保留最近使用的四套非当前外观，回切时复用完整模型、骨骼、材质和动作资源，并清除上一轮的受击、表情和爆发状态。超过上限按最近使用顺序释放，避免浏览全部皮肤后一直占用内存。材质检查直接读取网格格式标记，避免为了查找第二套 UV 而复制整份顶点数据；完全隐藏的辅助表面不再使用光照计算，加载阶段也预热隐藏材质和迅羽的半透明材质。不降低可见贴图、模型、阴影或特效质量。多敌人的头顶血条由一个表面同时绘制边框、底色和剩余生命，避免独立底板盖住填充条。
+
 网页导出到 `build/web/`，通过本地 HTTP 服务访问 <http://127.0.0.1:4187/>，不要直接双击 `index.html`。跨平台可运行 `node server.mjs`。当前服务仅监听本机。
 
 ## 验证
@@ -132,9 +134,14 @@ Godot --headless --path . --script tests/run_save_hud_suite.gd
 node tests/browser/story-rewrite-browser.cjs
 node tests/browser/run-save-browser.cjs
 node tests/browser/frame-pacing-browser.cjs sample
+Godot --headless --path . --script tests/actor_cache_suite.gd
+Godot --path . --script tests/probes/group_health_pixels.gd
+node tests/browser/armor-switch-performance.cjs sample
 ```
 
 帧时间检查分别记录首次/再次大招与近身连打的均值、最慢帧、P95/P99 和阻塞的 WebGL 调用，结果写入 `build/frame-pacing-sample.json`。使用新浏览器上下文，支持 `GODOT_TEST_URL`、`PERF_STYLES`（逗号分隔装甲 ID）、`PERF_WIDTH`、`PERF_HEIGHT`、`PERF_DPR`。测量时不要同时运行其他渲染测试；不同硬件上的结果不能直接比较。
+
+装甲切换检查记录首次和再次选择的耗时、最慢帧及 WebGL 阻塞，支持 `GODOT_TEST_URL`，结果写入 `build/armor-switch-sample.json`。血条检查需要实际图形渲染，比较两种分辨率、多个站位和重复刷怪后的 36 个填充比例与真实生命值；报告和截图存入 `build/`。
 
 浏览器检查可通过 `npm install --no-save playwright` 安装依赖，默认使用本机 Microsoft Edge。也可设置 `PLAYWRIGHT_MODULE` 指向已有 Playwright 模块目录；已有 Codex 运行环境会自动按当前用户目录查找。无需修改测试脚本中的个人路径。部分原资产审计使用工程父目录下的 `hi3-fuhua-extract/` 提取备份，它们不属于普通运行依赖。
 

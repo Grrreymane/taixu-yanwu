@@ -100,7 +100,7 @@ func _run() -> void:
 		_finish()
 		return
 	var world = _new_world()
-	_check(world._roster_snapshot().styles.map(func(style): return str(style.id)) == ["azure_empyrea", "fenghuang", "night_squire"], "the normal menu exposes exactly Azure Empyrea, Phoenix and Night Squire")
+	_check(world._roster_snapshot().styles.map(func(style): return str(style.id)) == Roster.list_styles().map(func(style): return str(style.id)), "the normal menu exposes the complete playable armor catalog")
 	_check(_identity(world) == ["fuhua", "azure_empyrea", "default"], "a clean isolated install starts with the catalog default")
 	_check(world._roster_snapshot().canSelect, "menu exposes selection availability")
 	var default_vertices := _body_vertex_count(world.player)
@@ -109,12 +109,12 @@ func _run() -> void:
 	var old_actor = world.player
 	var old_instance: int = old_actor.get_instance_id()
 	world._action("select_appearance:taixu_memory")
-	_check(world.player.get_instance_id() != old_instance and old_actor.is_queued_for_deletion() and not old_actor.visible, "menu skin selection replaces and hides the old actor immediately")
+	_check(world.player.get_instance_id() != old_instance and not old_actor.is_queued_for_deletion() and not old_actor.visible, "menu skin selection replaces and hides the old actor immediately")
 	_check(world.player._profile.modelPath == skin.actor.modelPath and _body_vertex_count(world.player) != default_vertices, "selection loads genuinely different body geometry")
 	_check(_identity(world) == ["fuhua", "azure_empyrea", "taixu_memory"], "the selected skin becomes the active runtime identity")
 	await process_frame
 	await process_frame
-	_check(not is_instance_valid(old_actor), "the previous actor is actually freed after the queued deletion")
+	_check(is_instance_valid(old_actor) and world.actor_cache.values().has(old_actor), "the previous actor remains available in the bounded reuse cache")
 	var skin_instance: int = world.player.get_instance_id()
 	world._action("select_appearance:taixu_memory")
 	_check(world.player.get_instance_id() == skin_instance, "reselecting the same skin does not reload the actor")
@@ -196,7 +196,7 @@ func _style_switches(world) -> void:
 	_check(is_equal_approx(world.game.player.skillCooldownMax, FenghuangCombat.SWITCH_COOLDOWN), "Fenghuang's E cooldown is taken from its own combat profile")
 	await process_frame
 	await process_frame
-	_check(not is_instance_valid(previous_actor), "switching styles frees the previous skin actor")
+	_check(is_instance_valid(previous_actor) and not previous_actor.visible and world.actor_cache.values().has(previous_actor), "switching styles retains the previous skin without drawing it")
 	world._action("practice")
 	world._action("ability")
 	_check(world.game.player.stance == "kick" and is_equal_approx(world.game.player.skillCooldown, FenghuangCombat.SWITCH_COOLDOWN), "Fenghuang E activates its real stance switch and cooldown")

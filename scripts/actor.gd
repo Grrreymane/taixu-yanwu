@@ -93,6 +93,21 @@ var _chain_bones: Array[int] = []
 var _chain_anchor := -1
 var _chain_extent_scale := 1.0
 
+static func alpha_shader() -> Shader:
+	if _alpha_shader == null:
+		_alpha_shader = Shader.new()
+		_alpha_shader.code = CHARACTER_SHADER.code.replace("uniform float flash_amount", "uniform float native_opacity = 0.473;\nuniform float flash_amount").replace("ALBEDO = mix(color, vec3(0.93, 0.98, 1.0), paper_flash);", "ALBEDO = mix(color, vec3(0.93, 0.98, 1.0), paper_flash);\n ALPHA = base.a * native_opacity;")
+	return _alpha_shader
+
+static func hidden_material() -> StandardMaterial3D:
+	# These native helper surfaces must never be visible. Lighting on a
+	# zero-alpha PBR material needlessly compiles expensive WebGL variants.
+	var hidden := StandardMaterial3D.new()
+	hidden.shading_mode=BaseMaterial3D.SHADING_MODE_UNSHADED
+	hidden.transparency=BaseMaterial3D.TRANSPARENCY_ALPHA
+	hidden.albedo_color=Color(0,0,0,0)
+	return hidden
+
 func setup(ghost: bool = false, selection: Dictionary = {}) -> void:
 	if ready_for_combat:
 		return
@@ -237,10 +252,7 @@ func _make_material(mesh_node: MeshInstance3D, surface_index: int) -> Material:
 	var node_name := str(mesh_node.name).to_lower()
 	var slot_key := node_name+":"+str(surface_index)
 	if slot_key in _visual.get("hiddenSurfaces",[]):
-		var hidden := StandardMaterial3D.new()
-		hidden.transparency=BaseMaterial3D.TRANSPARENCY_ALPHA
-		hidden.albedo_color=Color(0,0,0,0)
-		return hidden
+		return hidden_material()
 	var slot_kind := str(_visual.get("surfaceKinds",{}).get(slot_key,""))
 	var alpha_slot := str(_visual.get("surfaceNativeRoles",{}).get(slot_key,"")) == "alpha"
 	var mat := ShaderMaterial.new()
@@ -248,10 +260,7 @@ func _make_material(mesh_node: MeshInstance3D, surface_index: int) -> Material:
 	if alpha_slot:
 		# The original C1_05_01 Alpha material uses partial transparency on
 		# exactly two surfaces. Keep the other body surfaces opaque.
-		if _alpha_shader == null:
-			_alpha_shader = Shader.new()
-			_alpha_shader.code = CHARACTER_SHADER.code.replace("uniform float flash_amount", "uniform float native_opacity = 0.473;\nuniform float flash_amount").replace("ALBEDO = mix(color, vec3(0.93, 0.98, 1.0), paper_flash);", "ALBEDO = mix(color, vec3(0.93, 0.98, 1.0), paper_flash);\n ALPHA = base.a * native_opacity;")
-		mat.shader = _alpha_shader
+		mat.shader = alpha_shader()
 	mat.resource_local_to_scene = true
 	var texture: Texture2D = original.albedo_texture if original != null else null
 	if texture==null and _visual.textures.has("bodyColor"):
@@ -295,8 +304,9 @@ func _make_material(mesh_node: MeshInstance3D, surface_index: int) -> Material:
 		outline.set_shader_parameter("outline_color", Color(0.08, 0.16, 0.23) if is_ghost else Color(0.22, 0.18, 0.30))
 		mat.next_pass = outline
 	if kind < 3:
-		var arrays := mesh_node.mesh.surface_get_arrays(surface_index)
-		var has_uv2: bool = arrays[Mesh.ARRAY_TEX_UV2] != null and arrays[Mesh.ARRAY_TEX_UV2].size() > 0
+		# Checking one format bit avoids copying/readback of every vertex, bone,
+		# weight and UV buffer just to find whether a second UV channel exists.
+		var has_uv2: bool = (mesh_node.mesh.surface_get_format(surface_index) & Mesh.ARRAY_FORMAT_TEX_UV2) != 0
 		NativeMaterials.apply(mat, mat.next_pass as ShaderMaterial, str(_visual.get("nativeMaterialProfile", "")),
 			str(_visual.get("surfaceNativeRoles",{}).get(slot_key,["body", "hair", "face"][kind])), has_uv2,
 			str(_visual.get("nativeMaterialCatalog", NativeMaterials.CATALOG)))

@@ -15,7 +15,7 @@ const save=()=>fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(repo
   const click=async r=>page.mouse.click(r[0]+r[2]/2,r[1]+r[3]/2);
   const style=async id=>{const s=await read();await click(s.ui.armorChoiceRects.find(x=>x.id===id).rect);await wait(id=>window.__godotState.fighter.styleId===id,id)};
   const skin=async id=>{const s=await read();await click(s.ui.appearanceChoiceRects.find(x=>x.id===id).rect);await wait(id=>window.__godotState.fighter.appearanceId===id,id);await page.waitForTimeout(350)};
-  await page.goto('http://127.0.0.1:4187/?v=wardrobe-grid-1');await wait(()=>window.__godotState?.ready,null,180000);
+  await page.goto(process.env.GODOT_TEST_URL||'http://127.0.0.1:4188/?v=wardrobe-grid-1');await wait(()=>window.__godotState?.ready,null,180000);
   const initial=await read();assert.equal(initial.roster.styles.length,5);
   assert.equal(new Set(initial.ui.armorChoiceRects.map(x=>Math.round(x.rect[1]))).size,2);
   for(const c of initial.ui.armorChoiceRects){assert.ok(c.rect[0]>=0&&c.rect[0]+c.rect[2]<=1440&&c.rect[1]+c.rect[3]<=900);await style(c.id)}

@@ -13,6 +13,12 @@ func prepare(camera: Camera3D,effects: Node3D) -> void:
  var quad:=QuadMesh.new();quad.size=Vector2.ONE
  for shader: Shader in [effects.CARD_SHADER,effects.NATIVE_SHADER,effects.ENERGY_SHADER]:
   _sample(quad,shader)
+ _sample(quad,preload("res://shaders/enemy_health.gdshader"))
+ # Warm the same inexpensive material used to hide native helper surfaces.
+ var hidden_sample:=_sample(quad,effects.NATIVE_SHADER)
+ hidden_sample.material_override=preload("res://scripts/actor.gd").hidden_material()
+ # Fog's native outfit includes partially transparent toon surfaces.
+ _sample(quad,preload("res://scripts/actor.gd").alpha_shader())
  _sample(effects._particle_mesh(12),effects.PARTICLE_SHADER)
  var sphere:=_sample(effects.native_sphere,effects.SPHERE_SHADER)
  if sphere.mesh.get_blend_shape_count()>0:sphere.set_blend_shape_value(0,0.25)
