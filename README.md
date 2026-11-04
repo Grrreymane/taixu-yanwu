@@ -116,6 +116,8 @@ cd taixu-yanwu
 
 装甲选择保留最近使用的四套非当前外观，回切时复用完整模型、骨骼、材质和动作资源，并清除上一轮的受击、表情和爆发状态。超过上限按最近使用顺序释放，避免浏览全部皮肤后一直占用内存。材质检查直接读取网格格式标记，避免为了查找第二套 UV 而复制整份顶点数据；完全隐藏的辅助表面不再使用光照计算，加载阶段也预热隐藏材质和迅羽的半透明材质。不降低可见贴图、模型、阴影或特效质量。多敌人的头顶血条由一个表面同时绘制边框、底色和剩余生命，避免独立底板盖住填充条。
 
+战斗动作每帧只采样一次原版轨道；`seek(..., true)` 已立即更新姿势，后面无需再 `advance(0)`，参见 [AnimationPlayer 文档](https://docs.godotengine.org/en/stable/classes/class_animationplayer.html#class-animationplayer-method-seek)。面部光照只更新使用它的脸部材质，受击闪光、主光方向和眼口贴图在值改变时更新。倒地演出结束且已隐藏的敌人停止骨骼采样。原版粒子的颜色键预先解析，双曲线直接读取两组原始键；保持曲线、颜色、数量、生命周期和贴图不变。这些改动不降低渲染分辨率、阴影质量或动画更新频率。
+
 网页导出到 `build/web/`，通过本地 HTTP 服务访问 <http://127.0.0.1:4187/>，不要直接双击 `index.html`。跨平台可运行 `node server.mjs`。当前服务仅监听本机。
 
 ## 验证
@@ -137,11 +139,17 @@ node tests/browser/frame-pacing-browser.cjs sample
 Godot --headless --path . --script tests/actor_cache_suite.gd
 Godot --path . --script tests/probes/group_health_pixels.gd
 node tests/browser/armor-switch-performance.cjs sample
+Godot --headless --path . --script tests/native_particle_sampling_suite.gd
+Godot --headless --path . --script tests/expired_enemy_update_suite.gd
+Godot --headless --path . --script tests/probes/combat_load_probe.gd -- sample
+node tests/browser/group-frame-pacing-browser.cjs sample
 ```
 
 帧时间检查分别记录首次/再次大招与近身连打的均值、最慢帧、P95/P99 和阻塞的 WebGL 调用，结果写入 `build/frame-pacing-sample.json`。使用新浏览器上下文，支持 `GODOT_TEST_URL`、`PERF_STYLES`（逗号分隔装甲 ID）、`PERF_WIDTH`、`PERF_HEIGHT`、`PERF_DPR`。测量时不要同时运行其他渲染测试；不同硬件上的结果不能直接比较。
 
 装甲切换检查记录首次和再次选择的耗时、最慢帧及 WebGL 阻塞，支持 `GODOT_TEST_URL`，结果写入 `build/armor-switch-sample.json`。血条检查需要实际图形渲染，比较两种分辨率、多个站位和重复刷怪后的 36 个填充比例与真实生命值；报告和截图存入 `build/`。
+
+战斗压力检查可设置 `PERF_CPU_RATE=4`，通过浏览器减慢 CPU 执行以放大瓶颈；该模式是人工压力条件，不代表某台手机的实际帧率。群战脚本通过普通操作打到第四关，记录单敌、多敌和大招的帧时间。`combat_load_probe.gd` 在隔离存档的确定性场景中采集五套装甲、三个敌人的处理耗时、骨骼和特效数量；改动前后可用 `python tests/compare_combat_evidence.py build/combat-evidence-before.json build/combat-evidence-after.json` 比较行为与姿势。
 
 浏览器检查可通过 `npm install --no-save playwright` 安装依赖，默认使用本机 Microsoft Edge。也可设置 `PLAYWRIGHT_MODULE` 指向已有 Playwright 模块目录；已有 Codex 运行环境会自动按当前用户目录查找。无需修改测试脚本中的个人路径。部分原资产审计使用工程父目录下的 `hi3-fuhua-extract/` 提取备份，它们不属于普通运行依赖。
 

@@ -5,7 +5,8 @@ const label=process.argv[2]||'sample';
 const width=Number(process.env.PERF_WIDTH||1440),height=Number(process.env.PERF_HEIGHT||900);
 (async()=>{
  const browser=await chromium.launch({channel:'msedge',headless:true,args:['--enable-webgl','--ignore-gpu-blocklist']});
- const report={label,width,height,errors:[],runs:[]};
+ const cpuRate=Number(process.env.PERF_CPU_RATE||1);
+ const report={label,width,height,cpuRate,errors:[],runs:[]};
  try{
   const page=await browser.newPage({viewport:{width,height},deviceScaleFactor:Number(process.env.PERF_DPR||1)});
   await page.addInitScript(()=>{
@@ -19,6 +20,7 @@ const width=Number(process.env.PERF_WIDTH||1440),height=Number(process.env.PERF_
   page.on('console',m=>{if(m.type()==='error')report.errors.push(m.text())});
   await page.goto(process.env.GODOT_TEST_URL||'http://127.0.0.1:4188/?v=frame-audit');
   await page.waitForFunction(()=>window.__godotState?.ready,null,{timeout:180000});
+  if(cpuRate>1){const cdp=await page.context().newCDPSession(page);await cdp.send('Emulation.setCPUThrottlingRate',{rate:cpuRate})}
   report.renderer=await page.evaluate(()=>{const c=document.querySelector('canvas'),gl=c.getContext('webgl2'),ex=gl?.getExtension('WEBGL_debug_renderer_info');return {width:c.width,height:c.height,dpr:devicePixelRatio,renderer:ex?gl.getParameter(ex.UNMASKED_RENDERER_WEBGL):'unknown'}});
   await page.evaluate(()=>{
    window.frameAudit={phase:'idle',frames:[],tasks:[]};
@@ -30,6 +32,7 @@ const width=Number(process.env.PERF_WIDTH||1440),height=Number(process.env.PERF_
   const action=(name,value)=>page.evaluate(({name,value})=>__godotAction(name,value),{name,value});
   const phase=x=>page.evaluate(x=>window.frameAudit.phase=x,x);
   for(const style of (process.env.PERF_STYLES||'azure_empyrea,night_squire,shadow_knight').split(',')){
+   console.log('FRAME_AUDIT '+label+' '+style+' CPUx'+cpuRate);
    await phase(style+':setup');await action('menu');
    await page.waitForFunction(()=>__godotState.campaign.phase==='menu');
    await action('select_style:'+style);await page.waitForFunction(style=>__godotState.player.style===style,style);

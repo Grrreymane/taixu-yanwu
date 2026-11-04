@@ -9,15 +9,16 @@ func setup(owner: Node3D) -> void:
 	host=owner
 	random.seed=3103
 	catalog=JSON.parse_string(FileAccess.get_file_as_string("res://assets/vfx/native-burst/source-emitters.json"))
+	preload("res://scripts/native_gradient.gd").prepare(catalog)
 	for style: String in catalog:
 		for row: Dictionary in catalog[style]:
 			host.native_textures[row.node]=load(row.texture)
 func clear() -> void: credits.clear()
 func value(curve: Dictionary) -> float:
 	return random.randf_range(float(curve.minScalar),float(curve.scalar)) if int(curve.minMaxState)==3 else float(curve.scalar)
-static func curve_at(curve: Dictionary, t: float) -> float:
+static func curve_at(curve: Dictionary, t: float, minimum:bool=false) -> float:
 	if int(curve.get("minMaxState",0)) in [0,3]:return float(curve.get("scalar",1.0))
-	var keys: Array=curve.get("maxCurve",{}).get("m_Curve",[])
+	var keys: Array=curve.get("minCurve" if minimum else "maxCurve",{}).get("m_Curve",[])
 	if keys.is_empty():return float(curve.get("scalar",1.0))
 	if t<=float(keys[0].time):return float(keys[0].value)*float(curve.scalar)
 	for i: int in range(1,keys.size()):

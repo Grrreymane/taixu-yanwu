@@ -17,6 +17,7 @@ func register_material(mesh_name: String, material: ShaderMaterial) -> void:
 	var role := "mouth" if "mouth" in lower else "eyeL" if "eye_l" in lower else "eyeR"
 	if not _materials.has(role): _materials[role] = []
 	_materials[role].append(material)
+	_offsets.erase(role)
 
 func setup(path: String) -> bool:
 	if path.is_empty() or not FileAccess.file_exists(path): return false
@@ -93,10 +94,10 @@ func _apply(frame: String, mouth_frame: String = "") -> void:
 	if not _enabled: return
 	_frame = frame if _frames.has(frame) else "neutral"
 	var selected: Dictionary = _frames[_frame]
-	_offsets.clear()
 	for role: String in _materials:
 		var offset: Array = selected.get(role, _frames.neutral[role])
 		if role == "mouth" and _frames.has(mouth_frame): offset = _frames[mouth_frame].get(role, offset)
+		if _offsets.get(role,[])==offset:continue
 		_offsets[role] = offset.duplicate()
 		for material: ShaderMaterial in _materials[role]:
 			material.set_shader_parameter("uv_offset", Vector2(float(offset[0]), float(offset[1])))

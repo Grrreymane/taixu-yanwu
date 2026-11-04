@@ -748,7 +748,8 @@ func _process(delta: float) -> void:
  story.tick(dt)
  boss_entrance.tick(dt,game.paused)
  victory.tick(dt)
- var pf: Dictionary=game.player.duplicate(true)
+ # Presentation changes only top-level fields; nested combat data is read-only.
+ var pf: Dictionary=game.player.duplicate()
  if campaign.phase=="menu":
   pf.x=1.9
   pf.facing=1
@@ -772,7 +773,7 @@ func _process(delta: float) -> void:
   var id: String=str(source.id)
   if not enemy_nodes.has(id): continue
   var actor: Node3D=enemy_nodes[id]
-  var foe: Dictionary=source.duplicate(true)
+  var foe: Dictionary=source.duplicate()
   if stage_countdown>0.0:
    foe.state="idle"
    foe.stateTime=2.1-stage_countdown
@@ -782,7 +783,10 @@ func _process(delta: float) -> void:
    death_times[id]=float(death_times.get(id,0.0))+actor_delta
    foe.stateTime=death_times[id]
    foe.state="dead"
-  actor.animate_fighter(foe,(dt if not game.paused and boss_entrance.focused else 0.0) if boss_actor else actor_delta,boss_entrance.time if boss_actor else visual_time,ult_time)
+  # Once the original death take has disappeared, stop resampling its rig.
+  # Keep simulation, death timers and the remaining live enemies unchanged.
+  if foe.hp>0 or float(foe.stateTime)<actor.death_duration():
+   actor.animate_fighter(foe,(dt if not game.paused and boss_entrance.focused else 0.0) if boss_actor else actor_delta,boss_entrance.time if boss_actor else visual_time,ult_time)
   actor.visible=campaign.phase!="menu" and not victory.visible and not story.active and (foe.hp>0 or float(foe.stateTime)<actor.death_duration())
   var marker: Dictionary=enemy_markers[id]
   marker.holder.visible=id in health_display.overheadIds and campaign.phase=="fight" and not game.paused and not story.active and not boss_entrance.active and not knockout.active and ult_time<0.0
@@ -851,7 +855,7 @@ func _process(delta: float) -> void:
  state.campaign=campaign.snapshot(state)
  state.campaign.clockRunning=_run_clock_active()
  state.campaign.storyRoute=str(story.decision.get("routeTitle",""))
- state.fighter=FighterRoster.presentation_identity(str(fighter.characterId),str(fighter.styleId),str(fighter.appearanceId))
+ state.fighter=FighterRoster.presentation_from_selection(fighter)
  state.roster=_roster_snapshot()
  state.characterPreview=character_preview.snapshot()
  state.victory=victory.snapshot()

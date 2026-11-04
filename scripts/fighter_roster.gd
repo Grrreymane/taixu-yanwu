@@ -324,6 +324,11 @@ static func actor_config(character_id: String = DEFAULT_CHARACTER, style_id: Str
 
 static func presentation_identity(character_id: String = DEFAULT_CHARACTER, style_id: String = "", appearance_id: String = "") -> Dictionary:
 	var selection := resolve(character_id, style_id, appearance_id)
+	return presentation_from_selection(selection)
+
+static func presentation_from_selection(selection:Dictionary) -> Dictionary:
+	# Main already holds a validated selection. HUD refreshes need its labels,
+	# not another deep copy of every motion and native material configuration.
 	if selection.is_empty():
 		return {}
 	return {

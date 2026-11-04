@@ -21,6 +21,9 @@ var model: Node3D
 var animation_player: AnimationPlayer
 var skeleton: Skeleton3D
 var materials: Array[ShaderMaterial] = []
+var _face_materials: Array[ShaderMaterial] = []
+var _last_material_flash:float=-1.0
+var _last_key_direction:=Vector3.INF
 var is_ghost := false
 var current_motion := ""
 var source_time := 0.0
@@ -328,6 +331,8 @@ func _make_material(mesh_node: MeshInstance3D, surface_index: int) -> Material:
 		for parameter in ["albedo_texture","uv_scale","uv_offset"]:
 			mat.next_pass.set_shader_parameter(parameter,mat.get_shader_parameter(parameter))
 	materials.append(mat)
+	# Head-space light vectors are read only by the face branch of the shader.
+	if int(mat.get_shader_parameter("material_kind"))==2: _face_materials.append(mat)
 	return mat
 
 func _set_native_form(burst: bool) -> void:
@@ -416,8 +421,9 @@ func animate_fighter(f: Dictionary, delta: float, game_time: float, ult_time: fl
 	# rather than rewinding the native hit motion when its duration grows.
 	source_time = maxf(source_time, sampled_time) if key == "stagger" and not changed else sampled_time
 	_restore_source_pose()
+	# seek(..., true) already samples the animation immediately. Advancing
+	# again at zero delta repeats every native track on every fighter.
 	animation_player.seek(source_time, true)
-	animation_player.advance(0.0)
 	_update_weapon_visibility(f, key)
 	if not _previous_pose.is_empty() and _transition_time < _transition_length:
 		_blend_source_pose()
@@ -469,9 +475,8 @@ func animate_fighter(f: Dictionary, delta: float, game_time: float, ult_time: fl
 		"duration":float(f.get("attack", {}).get("duration", f.get("stateDuration", 1.0))),
 		"combatProfile":_profile.get("combatProfile", "")})
 	_flash_remaining = maxf(0.0, _flash_remaining - step)
-	for mat in materials:
-		mat.set_shader_parameter("flash_amount", clampf(_flash_remaining / 0.12, 0.0, 1.0))
-		mat.set_shader_parameter("key_direction", Vector3(facing * 0.45, 0.72, 0.56))
+	_set_material_flash(clampf(_flash_remaining / 0.12, 0.0, 1.0))
+	_set_key_direction(Vector3(facing * 0.45, 0.72, 0.56))
 	_update_face_vectors()
 
 func _restore_source_pose() -> void:
@@ -997,9 +1002,8 @@ func animate_victory(time: float) -> void:
 	if _secondary_enabled:
 		_secondary.update(step, {"state":key, "facing":1.0, "x":0.0})
 	_facial.animate_victory(native_time, str(_profile.get("combatProfile", "")))
-	for mat in materials:
-		mat.set_shader_parameter("flash_amount",0.0)
-		mat.set_shader_parameter("key_direction",Vector3(0.32,0.72,0.61))
+	_set_material_flash(0.0)
+	_set_key_direction(Vector3(0.32,0.72,0.61))
 	_update_face_vectors()
 
 func reset_presentation() -> void:
@@ -1044,9 +1048,18 @@ func reset_presentation() -> void:
 	animation_player.play(_prefix + str(_motions.idle.clip))
 	animation_player.seek(0.0, true)
 	animation_player.advance(0.0)
-	for mat in materials:
-		mat.set_shader_parameter("flash_amount", 0.0)
+	_set_material_flash(0.0)
 	_update_face_vectors()
+
+func _set_material_flash(value:float) -> void:
+	if value==_last_material_flash:return
+	_last_material_flash=value
+	for mat in materials:mat.set_shader_parameter("flash_amount",value)
+
+func _set_key_direction(value:Vector3) -> void:
+	if value==_last_key_direction:return
+	_last_key_direction=value
+	for mat in materials:mat.set_shader_parameter("key_direction",value)
 
 func _update_face_vectors() -> void:
 	if skeleton == null or _head_bone < 0:
@@ -1056,7 +1069,7 @@ func _update_face_vectors() -> void:
 	var forward := (world_basis * head_delta * Vector3.FORWARD * -1.0).normalized()
 	var right := (world_basis * head_delta * Vector3.RIGHT).normalized()
 	var up := (world_basis * head_delta * Vector3.UP).normalized()
-	for mat in materials:
+	for mat in _face_materials:
 		mat.set_shader_parameter("face_forward", forward)
 		mat.set_shader_parameter("face_right", right)
 		mat.set_shader_parameter("face_up", up)

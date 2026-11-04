@@ -2,6 +2,7 @@ extends RefCounted
 ## Source FK AF01, NL/Dress01 and ND modules at combat cue boundaries.
 ## Original emitter modules and mesh geometry; screen distortion is omitted.
 const Curves=preload("res://scripts/native_burst_emitters.gd")
+const NativeGradient=preload("res://scripts/native_gradient.gd")
 var host: Node3D
 var catalog: Dictionary={}
 var meshes: Dictionary={}
@@ -12,6 +13,7 @@ var rng:=RandomNumberGenerator.new()
 func setup(owner: Node3D) -> void:
 	host=owner;rng.seed=3103
 	catalog=JSON.parse_string(FileAccess.get_file_as_string("res://assets/vfx/remaining-native/emitters.json"))
+	NativeGradient.prepare(catalog)
 	var source_meshes: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://assets/vfx/remaining-native/meshes.json"))
 	for key: String in source_meshes:
 		var data: Dictionary=source_meshes[key]
@@ -80,23 +82,10 @@ static func curve_value(curve: Dictionary,p: float,random_value: float) -> float
 	var mode:=int(curve.get("minMaxState",0))
 	if mode==3:return lerpf(float(curve.minScalar),float(curve.scalar),random_value)
 	if mode!=2:return Curves.curve_at(curve,p)
-	var minimum:=curve.duplicate()
-	minimum.minMaxState=1;minimum.maxCurve=curve.minCurve
-	return lerpf(Curves.curve_at(minimum,p),Curves.curve_at(curve,p),random_value)
+	# Sample both authored curves directly; particles need this every frame.
+	return lerpf(Curves.curve_at(curve,p,true),Curves.curve_at(curve,p),random_value)
 func gradient(g: Dictionary,p: float,alpha: bool=false) -> Color:
-	var count:=int(g.get("m_NumAlphaKeys" if alpha else "m_NumColorKeys",0))
-	if count==0:return Color.WHITE
-	var prefix: String="atime" if alpha else "ctime"
-	var previous:=0
-	for i in count:
-		var time:=float(g.get(prefix+str(i),0))/65535.0
-		if time>=p or i==count-1:
-			var a: Dictionary=g["key"+str(previous)];var b: Dictionary=g["key"+str(i)]
-			var start_time:=float(g.get(prefix+str(previous),0))/65535.0
-			var u:=clampf((p-start_time)/maxf(time-start_time,0.0001),0,1)
-			return Color(a.r,a.g,a.b,a.a).lerp(Color(b.r,b.g,b.b,b.a),u)
-		previous=i
-	return Color.WHITE
+	return NativeGradient.sample(g,p,alpha)
 func tick(delta: float) -> void:
 	if delta<=0.0:return
 	var fighter: Dictionary=host._fighters.get("player",{})
