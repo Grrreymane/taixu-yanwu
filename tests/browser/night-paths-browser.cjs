@@ -71,8 +71,9 @@ const out='build/screenshots/night-paths-web';fs.mkdirSync(out,{recursive:true})
    await action('menu');await wait(()=>__godotState.campaign.phase==='menu');
   }
   await action('select_style:azure_empyrea');await action('trial');
-  await wait(()=>__godotState.story.active);
-  assert.equal((await state()).nightCoreChoice,false);assert.equal((await state()).player.nightCore,'');
+  await wait(()=>__godotState.nightCoreChoice);
+  await p.keyboard.press('1');await wait(()=>__godotState.story.active);
+  assert.equal((await state()).nightCoreChoice,false);assert.equal((await state()).player.armorCore,'az_balance');assert.equal((await state()).player.nightCore,'');
   assert.deepEqual(report.errors,[]);report.passed=true;
  }finally{fs.writeFileSync(out+'/report.json',JSON.stringify(report,null,2));await browser.close()}
  console.log('NIGHT_PATHS_BROWSER_PASS');

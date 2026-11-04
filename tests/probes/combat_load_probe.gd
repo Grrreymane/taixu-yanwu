@@ -37,15 +37,16 @@ func run() -> void:
  var label:="sample"
  if not OS.get_cmdline_user_args().is_empty():label=OS.get_cmdline_user_args()[0]
  var core:String=OS.get_cmdline_user_args()[1] if OS.get_cmdline_user_args().size()>1 else ""
- assert(core.is_empty() or preload("res://scripts/night_paths.gd").CORES.has(core))
+ var armor_paths=preload("res://scripts/armor_paths.gd")
+ assert(core.is_empty() or preload("res://scripts/night_paths.gd").CORES.has(core) or armor_paths.CORES.has(core))
  var report:Array=[];var evidence:Array=[]
- for style:String in (["night_squire"] if not core.is_empty() else ["azure_empyrea","fenghuang","night_squire","shadow_knight","hawk_of_the_fog"]):
+ for style:String in ([armor_paths.CORES[core].style if armor_paths.CORES.has(core) else "night_squire"] if not core.is_empty() else ["azure_empyrea","fenghuang","night_squire","shadow_knight","hawk_of_the_fog"]):
   world=ProbeMain.new();world.process_mode=Node.PROCESS_MODE_DISABLED
   world.campaign=VolatileCampaign.new();world.game=TimedCombat.new();root.add_child(world)
   world._action("select_style:"+style)
   world.effects.free();world.effects=TimedEffects.new();world.add_child(world.effects);world.effects.sounds.clear()
   world.campaign.begin_trial("mirror",105,world.FighterRoster.presentation_from_selection(world.fighter),core)
-  if not core.is_empty():world.campaign.reward_ids.assign(preload("res://scripts/night_paths.gd").CORES[core].rewards)
+  if not core.is_empty():world.campaign.reward_ids.assign(armor_paths.CORES[core].rewards if armor_paths.CORES.has(core) else preload("res://scripts/night_paths.gd").CORES[core].rewards)
   world.campaign.stage_index=3;world._begin_encounter(false)
   world.stage_countdown=0;world.game.player.x=-0.6
   world.player.free();world.player=TimedActor.new();world.add_child(world.player);world.player.setup(false,world.fighter)

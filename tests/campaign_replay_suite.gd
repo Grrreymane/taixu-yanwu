@@ -136,6 +136,9 @@ func _rewards() -> void:
   var campaign:=VolatileCampaign.new()
   if Campaign.NightPaths.REWARDS.has(id):
    campaign.begin_trial("mirror",4,{"characterId":"fuhua","styleId":"night_squire","appearanceId":"default"},str(Campaign.NightPaths.REWARDS[id].core))
+  elif Campaign.ArmorPaths.REWARDS.has(id):
+   var core:String=Campaign.ArmorPaths.REWARDS[id].core
+   campaign.begin_trial("mirror",4,{"characterId":"fuhua","styleId":Campaign.ArmorPaths.CORES[core].style,"appearanceId":"default"},core)
   else:campaign.begin_trial("mirror",4)
   campaign.phase="reward"
   campaign.reward_options=[Campaign.REWARDS[id].duplicate(true)]

@@ -169,9 +169,10 @@ func _js_action(arguments: Array) -> void:
 
 func _input(event: InputEvent) -> void:
  if night_picker.visible:
+  if night_picker.has_details():return
   if event is InputEventKey and event.pressed and not event.echo:
    if event.physical_keycode==KEY_ESCAPE:_action("menu")
-   elif event.physical_keycode in [KEY_1,KEY_2,KEY_3]:_action("night_core:"+str(Combat.NightPaths.CORES.keys()[event.physical_keycode-KEY_1]))
+   elif event.physical_keycode in [KEY_1,KEY_2,KEY_3]:_action("night_core:"+str(night_picker.core_ids[event.physical_keycode-KEY_1]))
   return
  if campaign.phase!="menu" or story.active or (is_instance_valid(hud) and hud.is_guide_open()):
   character_preview.cancel()
@@ -223,7 +224,7 @@ func _action(command: String) -> void:
  if night_picker.visible:
   if command.begins_with("night_core:"):
    var core_id:String=command.trim_prefix("night_core:")
-   if Combat.NightPaths.CORES.has(core_id):
+   if Combat.ArmorPaths.valid(str(fighter.styleId),core_id):
     night_picker.hide()
     _start_trial(core_id)
    return
@@ -342,10 +343,8 @@ func _action(command: String) -> void:
    effects.set_palette(REGION_COLORS[0])
    _sync_actors()
   else:
-   if str(fighter.styleId)=="night_squire":
-    game.paused=true
-    night_picker.open(_bar_font)
-   else:_start_trial()
+   game.paused=true
+   night_picker.open(_bar_font,str(fighter.styleId))
   return
  if command=="retry":
   if campaign.mode=="practice": _action("practice")
@@ -878,6 +877,8 @@ func _process(delta: float) -> void:
  state.healthDisplay=health_display
  state.ko=ko_frame
  state.nightCoreChoice=night_picker.visible
+ state.coreOptions=Combat.ArmorPaths.options(str(fighter.styleId)) if night_picker.visible else []
+ state.coreBasics=Combat.ArmorPaths.BASICS.get(str(fighter.styleId),"") if night_picker.visible else ""
  state.campaign=campaign.snapshot(state)
  state.campaign.clockRunning=_run_clock_active()
  state.campaign.storyRoute=str(story.decision.get("routeTitle",""))
@@ -911,7 +912,7 @@ func _process(delta: float) -> void:
   state.cinematic.performerVisible=player.visible
   state.cinematic.phoenixVisible=effects.native_phoenix.visible
   state.engine="Godot "+Engine.get_version_info().string
-  JavaScriptBridge.eval("window.__godotState="+JSON.stringify(state)+";",true)
+  JavaScriptBridge.eval("window.__godotState="+JSON.stringify(state)+";window.updateBattleChoices?.(window.__godotState);",true)
 
 func _voice_context() -> Dictionary:
  var boss_id:=""

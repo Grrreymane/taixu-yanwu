@@ -93,7 +93,7 @@ func _single_and_ordered_responses() -> void:
  for id: String in Campaign.REWARDS:
   # The eighteen manuscript reactions remain unchanged. Night-specific cards
   # participate in routes but have no invented dialogue; covered in night_paths_suite.
-  if Campaign.NightPaths.REWARDS.has(id):continue
+  if Campaign.NightPaths.REWARDS.has(id) or Campaign.ArmorPaths.REWARDS.has(id):continue
   var context:=_context([id])
   var lines:=_valid_text("reward",context)
   var signature:=_signature(lines)
@@ -146,7 +146,7 @@ func _single_and_ordered_responses() -> void:
  completed.append("responses")
 
 func _all_five_card_histories() -> void:
- var ids: Array=Campaign.REWARDS.keys().filter(func(key): return key not in Campaign.RewardBuilds.NEW_IDS and not Campaign.NightPaths.REWARDS.has(key))
+ var ids: Array=Campaign.REWARDS.keys().filter(func(key): return key not in Campaign.RewardBuilds.NEW_IDS and not Campaign.NightPaths.REWARDS.has(key) and not Campaign.ArmorPaths.REWARDS.has(key))
  _enumerate(ids,[],0)
  check(routes_seen.size()==4,"all four build routes occur in valid five-card histories")
  completed.append("enumeration")
@@ -189,6 +189,7 @@ func _reward_main_flow() -> void:
  world.music=QuietMusic.new()
  root.add_child(world)
  world._action("start")
+ world._action("night_core:az_balance")
  check(world.story.active and world.story.scene_id=="intro","fresh run starts only its intro before a choice is made")
  world._action("story_skip")
  var history: Array=[]
@@ -238,6 +239,7 @@ func _reward_main_flow() -> void:
  check(_record(world)==won and world.campaign.saves==1 and world.victory.visible,"skipping build ending cannot pay rewards or save score twice")
  world._action("menu")
  world._action("start")
+ world._action("night_core:az_balance")
  check(world.campaign.reward_ids.is_empty() and world.story.snapshot().get("choice",{}).get("choiceCount",-1)==0,"new opening forgets the previous run's build and reaction")
  world._action("story_skip")
  _finish(world)
@@ -252,6 +254,7 @@ func _reward_main_flow() -> void:
  check(not world.story.active and world.campaign.reward_ids==loss_history and world.campaign.stage_index==1,"retry preserves learned build without replaying its already-paid reward scene")
  world._action("menu")
  world._action("start")
+ world._action("night_core:az_balance")
  world._action("story_skip")
  _finish(world)
  world.campaign.reward_options=[Campaign.REWARDS.iron.duplicate(true)]

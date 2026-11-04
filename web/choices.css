@@ -1,0 +1,27 @@
+/* Same hierarchy as the native cards; DOM controls expose names to assistive tech. */
+#battle-choices{position:fixed;inset:0;z-index:30;display:grid;place-items:center;padding:24px;box-sizing:border-box;background:#081522;font-family:Battle,'Microsoft YaHei',sans-serif;overflow:auto;touch-action:pan-y;color:#fff}
+#battle-choices[hidden]{display:none}
+.bc-panel{width:min(1100px,100%)}
+.bc-title{margin:0 0 40px;text-align:center;font-size:clamp(25px,2.6vw,36px);font-weight:400}
+.bc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.bc-card{position:relative;min-width:0}
+.bc-select{width:100%;height:330px;padding:30px 26px 26px;border:1px solid #6593af;border-radius:12px;background:#152d40;color:#fff;text-align:left;display:flex;flex-direction:column;cursor:pointer;font:inherit;transition:background .1s,border-color .1s}
+.bc-select:hover{background:#23465e;border-color:#b8e9ff}
+.bc-select:active{background:#0d2334}
+.bc-select:disabled{cursor:default;opacity:.65}
+.bc-name{font-size:28px;line-height:1.3;font-weight:400;margin:0 0 25px}
+.bc-effect{font-size:20px;line-height:1.65;color:#e1edf5}
+.bc-action{margin-top:auto;padding-top:24px;font-size:16px;color:#b8d9eb}
+.bc-info{position:absolute;bottom:22px;right:22px;width:36px;height:36px;border:1px solid #62849b;background:#102334;color:#daedff;border-radius:50%;font:20px Georgia,serif;cursor:pointer}
+.bc-footer{display:flex;justify-content:center;margin-top:30px;gap:20px}
+.bc-secondary{padding:11px 32px;border:1px solid #658aa1;background:#112a3d;color:#deeff9;border-radius:6px;font:18px Battle,'Microsoft YaHei',sans-serif;cursor:pointer}
+.bc-secondary:disabled{opacity:.45;cursor:default}
+#battle-choices button:focus-visible,#battle-choice-info button:focus-visible{outline:3px solid #fff;outline-offset:4px}
+#battle-choice-info{box-sizing:border-box;width:min(540px,calc(100% - 36px));border:1px solid #94bbd4;border-radius:12px;padding:30px;background:#10283c;color:#e1edf5;font:19px/1.7 Battle,'Microsoft YaHei',sans-serif}
+#battle-choice-info::backdrop{background:#0009}
+#battle-choice-info h2{font-size:26px;color:#fff;margin:0 0 20px}
+#battle-choice-info p{white-space:pre-line;margin-bottom:26px}
+.bc-tooltip{position:absolute;z-index:2;bottom:66px;right:8px;width:min(310px,85vw);box-sizing:border-box;padding:16px 18px;background:#091e30;border:1px solid #9cc7e0;border-radius:6px;color:#e1edf5;font-size:16px;line-height:1.65;white-space:pre-line;box-shadow:0 8px 30px #0008;pointer-events:none}
+.bc-tooltip[hidden]{display:none}
+@media(max-width:760px){#battle-choices{padding:20px 16px}.bc-title{margin-bottom:24px}.bc-grid{grid-template-columns:1fr;gap:14px}.bc-select{height:auto;min-height:170px;padding:20px 24px}.bc-name{font-size:24px;margin-bottom:10px}.bc-effect{font-size:18px}.bc-action{padding-top:17px}.bc-footer{margin-top:20px}}
+@media(max-height:570px) and (min-width:761px){#battle-choices{padding:16px}.bc-title{margin-bottom:18px}.bc-select{height:270px;padding:22px}.bc-name{font-size:24px;margin-bottom:15px}.bc-effect{font-size:18px}.bc-footer{margin-top:18px}}

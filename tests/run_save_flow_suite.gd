@@ -17,6 +17,7 @@ func _run() -> void:
  world.music=QuietMusic.new()
  root.add_child(world)
  world._action("start")
+ if world.night_picker.visible:world._action("night_core:az_balance")
  _frames(world,4,0.4)
  check(world.campaign.run_time==0.0,"intro never consumes clear time")
  world._action("story_skip")

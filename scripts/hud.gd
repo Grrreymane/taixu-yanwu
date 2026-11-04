@@ -9,6 +9,9 @@ const INK := Color("163244")
 const BLUE := Color("37bce6")
 const ORANGE := Color("ffae43")
 const WHITE := Color("f4fbff")
+const ArmorPaths=preload("res://scripts/armor_paths.gd")
+const ArmorMechanics=preload("res://scripts/armor_mechanics.gd")
+const ChoiceCard=preload("res://scripts/choice_card.gd")
 const NightPaths=preload("res://scripts/night_paths.gd")
 const SentienceCombat = preload("res://scripts/sentience_combat.gd")
 const FighterGuide = preload("res://scripts/fighter_guide.gd")
@@ -217,6 +220,8 @@ var _banner_detail: Label
 var _banner_time := 0.0
 var _reward_overlay := Control.new()
 var _reward_group := Control.new()
+var _reward_info:Button
+var _reward_detail:AcceptDialog
 var _reward_title: Label
 var _reward_subtitle: Label
 var _reward_boons: Label
@@ -415,8 +420,9 @@ func _build_battle() -> void:
 	_place(_battlesuit, 76, 12, 126, 24)
 	_battlesuit.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
 	_stance_label = _label(_player_panel, "", 14, ORANGE)
+	_stance_label.mouse_filter=Control.MOUSE_FILTER_PASS
 	_stance_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
-	_place(_stance_label, 205, 12, 69, 24)
+	_place(_stance_label, 130, 40, 136, 24)
 	_stance_label.hide()
 	_hp_text = _label(_player_panel, "HP  100 / 100", 13, WHITE)
 	_place(_hp_text, 0, 40, 220, 24)
@@ -701,6 +707,9 @@ func _result_button_rects() -> Dictionary:
 	return result
 
 func handle_modal_input(event: InputEvent) -> bool:
+	if is_instance_valid(_reward_detail) and _reward_detail.visible:return true
+	for card in _reward_buttons:
+		if card.detail.visible:return true
 	if not _guide_open:
 		return false
 	if event is InputEventKey:
@@ -1020,7 +1029,7 @@ func _update_roster(data: Dictionary) -> void:
 		var path_hint:=NightPaths.hint(player,float(data.get("time",0.0)))
 		if not path_hint.is_empty():
 			_stance_label.tooltip_text=path_hint
-			_instruction.text+="  ·  "+path_hint
+
 	elif str(_fighter_identity.get("styleId", "")) == "shadow_knight":
 		_ultimate_tag.text = "ULTIMATE / SHADOW KNIGHT"
 		_stance_label.visible = true
@@ -1032,6 +1041,13 @@ func _update_roster(data: Dictionary) -> void:
 		_stance_label.visible = true
 		_stance_label.text = "雷闪 %d/3" % clampi(int(player.get("fogCharges",0)),0,3)
 		_stance_label.tooltip_text = "E 或 J 第三段命中积攒雷闪；K 消耗全部层数强化重击。"
+
+	var core:String=str(player.get("armorCore",""))
+	if not core.is_empty():
+		_stance_label.visible=true
+		_stance_label.text=ArmorPaths.readout(player,float(data.get("time",0.0)))
+		_stance_label.tooltip_text=str(ArmorPaths.CORES[core].title)+"\n"+str(ArmorPaths.CORES[core].description)+"\n"+str(ArmorPaths.BASICS[player.style])
+		_stance_label.accessibility_name=_stance_label.text
 
 func _overlay(parent: Control) -> void:
 	parent.mouse_filter = Control.MOUSE_FILTER_STOP
@@ -1088,70 +1104,44 @@ func _build_campaign() -> void:
 
 func _build_rewards() -> void:
 	_overlay(_reward_overlay)
-	_reward_overlay.name = "RewardSelection"
-	_reward_group.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_reward_overlay.name="RewardSelection"
+	_reward_group.mouse_filter=Control.MOUSE_FILTER_IGNORE
 	_reward_overlay.add_child(_reward_group)
-	_reward_title = _label(_reward_group,"领悟新招",35,WHITE)
-	_reward_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_place(_reward_title,0,0,1000,55)
-	_reward_subtitle = _label(_reward_group,"选择一项强化，继续下一战",16,Color("c0dceb"))
-	_reward_subtitle.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_place(_reward_subtitle,0,58,1000,31)
-	for index in range(3):
-		var button := _rect_button(_reward_group,"")
-		button.name = "RewardChoice%d" % index
-		button.focus_mode = Control.FOCUS_ALL
-		_place(button,10+float(index)*335.0,108,310,330)
-		for state in ["normal","hover","pressed","disabled","focus"]:
-			var style := StyleBoxFlat.new()
-			style.bg_color = Color("173748")
-			style.corner_radius_bottom_right = 22
-			style.border_width_left = 3
-			style.border_width_top = 2
-			style.border_color = BLUE
-			if state == "hover":
-				style.bg_color = Color("23556c")
-			elif state == "pressed":
-				style.bg_color = Color("123043")
-			elif state == "disabled":
-				style.bg_color = Color("20313c")
-			elif state == "focus":
-				style.bg_color = Color.TRANSPARENT
-				style.border_color = WHITE
-				style.set_border_width_all(2)
-			button.add_theme_stylebox_override(state,style)
-		var number := _label(button,"强化 0%d" % (index+1),13,BLUE)
-		_place(number,25,20,260,25)
-		var title := _label(button,"",25,WHITE)
-		title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		_place(title,25,52,260,48)
-		var description := _label(button,"",16,Color("c5deeb"))
-		description.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		_place(description,25,110,260,78)
-		var build := _label(button,"",14,Color("a8cddd"))
-		build.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		_place(build,25,197,260,80)
-		_reward_builds.append(build)
-		var choose := _label(button,"选择强化  %d" % (index+1),16,BLUE)
-		_place(choose,25,287,260,28)
-		button.pressed.connect(_choose_reward.bind(index))
-		_reward_buttons.append(button)
-		_reward_names.append(title)
-		_reward_descriptions.append(description)
-	_reward_boons = _label(_reward_group,"",13,Color("9bbfd3"))
-	_reward_boons.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_reward_boons.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	_place(_reward_boons,35,451,930,60)
-	_reward_next = _label(_reward_group,"",14,Color("c5deeb"))
-	_reward_next.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_reward_next.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	_place(_reward_next,40,516,920,50)
-	_reward_reroll = _rect_button(_reward_group,"换一组")
-	_reward_reroll.name = "RerollRewards"
-	_place(_reward_reroll,345,580,310,42)
+	_reward_title=_label(_reward_group,"选择强化",34,WHITE)
+	_reward_title.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+	_place(_reward_title,0,0,1000,50)
+	_reward_subtitle=_label(_reward_group,"",16,BLUE)
+	_reward_subtitle.hide()
+	for index in 3:
+		var card=ChoiceCard.new()
+		card.name="RewardChoice%d"%index
+		_reward_group.add_child(card)
+		_place(card,index*338,86,324,300)
+		card.pressed.connect(_choose_reward.bind(index))
+		_reward_buttons.append(card)
+		_reward_names.append(card.heading)
+		_reward_descriptions.append(card.effect)
+		var extra:=Label.new()
+		extra.hide();card.add_child(extra);_reward_builds.append(extra)
+	_reward_boons=_label(_reward_group,"",14,BLUE)
+	_reward_boons.hide()
+	_reward_next=_label(_reward_group,"",14,BLUE)
+	_reward_next.hide()
+	_reward_reroll=_rect_button(_reward_group,"换一组（2）")
+	_reward_reroll.name="RerollRewards"
+	_place(_reward_reroll,370,423,260,44)
 	_reward_reroll.pressed.connect(func():
 		if not _ko_active and not _paused and not _guide_open and not _reward_locked and _phase=="reward":
 			_request_action("reroll_rewards"))
+	_reward_info=_rect_button(_reward_group,"i")
+	_reward_info.accessibility_name="查看已获强化、补给和下一战"
+	_place(_reward_info,650,423,44,44)
+	_reward_detail=AcceptDialog.new()
+	_reward_detail.title="本轮强化与下一战"
+	_reward_detail.ok_button_text="关闭"
+	_reward_detail.dialog_autowrap=true
+	_reward_group.add_child(_reward_detail)
+	_reward_info.pressed.connect(func():_reward_detail.popup_centered(Vector2i(600,340)))
 
 func _build_results() -> void:
 	# The left half remains transparent so the winner shares the result screen.
@@ -1393,9 +1383,9 @@ func _layout() -> void:
 	_place(_ultimate_tag,44,h-27,420,18)
 	_place(_stage_banner,(w-560)*0.5,108,560,100)
 	_reward_overlay.size = _ui.size
-	var reward_scale: float = minf(1.0,minf((w-50.0)/1000.0,(h-30.0)/636.0))
+	var reward_scale: float = minf(1.0,minf((w-50.0)/1000.0,(h-30.0)/490.0))
 	_reward_group.scale = Vector2.ONE * reward_scale
-	_place(_reward_group,(w-1000.0*reward_scale)*0.5,(h-636.0*reward_scale)*0.5,1000,636)
+	_place(_reward_group,(w-1000.0*reward_scale)*0.5,(h-490.0*reward_scale)*0.5,1000,490)
 	_result_overlay.size = _ui.size
 	var result_scale: float = minf(1.0,minf((w-60.0)/560.0,(h-120.0)/570.0))
 	_result_panel.scale = Vector2.ONE * result_scale
@@ -1495,6 +1485,7 @@ func update_status(data: Dictionary) -> void:
 	var max_hp: float = maxf(1.0,float(player.get("maxHp",100.0)))
 	var enemy_max_hp: float = maxf(1.0,float(enemy.get("maxHp",100.0)))
 	var energy: float = float(player.get("energy", 0.0))
+	_skills.ultimate.hint.text="Q · SP %d"%int(ArmorMechanics.ultimate_cost(player,float(data.get("time",0.0))))
 	_player_hp.set_amount(hp/max_hp*100.0)
 	_player_sp.set_amount(energy)
 	_player_posture.set_amount(float(player.get("posture", 0.0)))
@@ -1529,6 +1520,10 @@ func update_status(data: Dictionary) -> void:
 	if bool(data.get("training",false)) and _campaign_mode == "practice":
 		_enemy_tag.text = "木人练习"
 	if bool(data.get("infiniteHp",false)): _enemy_tag.text += " · 无限血量"
+	var ink_left:float=float(enemy.get("inkUntil",-1.0))-float(data.get("time",0.0))
+	var fire_left:float=float(enemy.get("lihuoUntil",-1.0))-float(data.get("time",0.0))
+	if ink_left>0.0:_enemy_tag.text+=" · 三阴 %ds"%ceili(ink_left)
+	elif fire_left>0.0:_enemy_tag.text+=" · 离火 %ds"%ceili(fire_left)
 	var health_tint: Color = Color("ef7653")
 	if _enemy_hp.tint != health_tint:
 		_enemy_hp.tint = health_tint
@@ -1545,6 +1540,7 @@ func update_status(data: Dictionary) -> void:
 	_brand.visible = not ultimate and not _started and not showing_victory and not (_menu_mode == "intro" and _roster_group.visible)
 	var cooldown: float = maxf(0.0,float(player.get("skillCooldown",0.0)))
 	var night_link:bool=str(player.get("nightCore",""))!="" and (float(data.get("time",0.0))<float(player.get("nightChaseUntil",-1.0)) or (float(data.get("time",0.0))<float(player.get("nightFlowUntil",-1.0)) and not player.get("nightFlowUsed",false)))
+	night_link=night_link or ArmorMechanics.ability_ready(player,float(data.get("time",0.0)))
 	if cooldown <= 0.0:
 		_cooldown_max = 1.0
 	else:
@@ -1553,11 +1549,11 @@ func update_status(data: Dictionary) -> void:
 	_skills.ability.set_cooldown(0.0 if night_link else cooldown/cooldown_duration)
 	_skills.ability.hint.text = "E / %.1fs" % cooldown if cooldown > 0.05 else "E"
 	if night_link:
-		_skills.ability.hint.text="E / 接招"
+		_skills.ability.hint.text="E / 分支" if str(player.get("style",""))=="azure_empyrea" else "E / 接招"
 	var can_act: bool = not bool(data.get("nightCoreChoice",false)) and not _ko_active and not _guide_open and _started and in_fight and not _paused and not _ended and not ultimate and not showing_victory and float(data.get("stageCountdown",0.0))<=0.0
 	for action in _skills:
 		var skill: SkillButton = _skills[action]
-		var available: bool = (action != "ultimate" or energy >= 100.0) and (action != "ability" or cooldown <= 0.01 or night_link)
+		var available: bool = (action != "ultimate" or energy >= ArmorMechanics.ultimate_cost(player,float(data.get("time",0.0)))) and (action != "ability" or cooldown <= 0.01 or night_link)
 		skill.set_enabled(can_act and available)
 	_left.set_enabled(can_act)
 	_right.set_enabled(can_act)
@@ -1709,31 +1705,24 @@ func _update_campaign(ultimate: bool) -> void:
 		if signature != _reward_signature or _previous_phase != "reward":
 			_reward_signature = signature
 			_reward_locked = false
-			_reward_title.text = "第 %02d 战完成" % (stage+1)
-			_reward_subtitle.text = "选择一项强化，继续下一战。" + str(_campaign.get("supply",""))
-			var achievement: Dictionary=_campaign.get("lastAchievement",{})
-			if not achievement.is_empty(): _reward_subtitle.text="考验达成，额外补给已领取。选择一项强化，继续下一战。"
-			var extra_achievement: Dictionary=_campaign.get("lastEncounterAchievement",{})
-			if not extra_achievement.is_empty():
-				_reward_subtitle.text="%s达成 · 加试补给 8 SP / 75 分。选择下一项强化。" % str(extra_achievement.get("title","加试"))
-				if not achievement.is_empty(): _reward_subtitle.text="约定与加试均达成 · 补给 8 HP / 18 SP，额外 175 分。"
-			for index in range(_reward_buttons.size()):
-				var present: bool = index < rewards.size()
-				_reward_buttons[index].release_focus()
-				_reward_buttons[index].visible = present
-				_reward_buttons[index].disabled = not present
+			_reward_title.text="选择强化"
+			for index in _reward_buttons.size():
+				var present:bool=index<rewards.size()
+				_reward_buttons[index].visible=present
+				_reward_buttons[index].disabled=not present
 				if present:
-					var reward: Dictionary = rewards[index]
-					_reward_names[index].text = str(reward.get("title","强化"))
-					_reward_descriptions[index].text = str(reward.get("description",""))
-					_reward_builds[index].text = str(reward.get("buildPreview",""))
-			_reward_boons.text = "已获强化：" + " / ".join(boons) if not boons.is_empty() else "每次领悟，都会影响接下来的战斗"
-			var build_summary: String=str(_campaign.get("buildSummary",""))
-			if not build_summary.is_empty(): _reward_boons.text+="\n"+build_summary
-			_reward_next.text="下一战 · "+str(_campaign.get("nextEncounter",""))
-			_reward_next.visible=not str(_campaign.get("nextEncounter","")).is_empty()
-			var remaining: int=int(_campaign.get("rerollsRemaining",0))
-			_reward_reroll.text="换一组 · 本轮剩余 %d 次"%remaining
+					var reward:Dictionary=rewards[index]
+					var extra:String=str(reward.get("buildPreview",""))
+					_reward_buttons[index].set_choice(str(reward.title),str(reward.description),extra,index,"选取并继续")
+					_reward_builds[index].text=extra
+			_reward_boons.text=" / ".join(boons)
+			_reward_next.text=str(_campaign.get("nextEncounter",""))
+			_reward_detail.dialog_text="已获强化："+(_reward_boons.text if not boons.is_empty() else "无")+"\n\n"+str(_campaign.get("buildSummary",""))+"\n\n"+str(_campaign.get("supply",""))+"\n\n下一战："+_reward_next.text
+			_reward_info.tooltip_text=_reward_detail.dialog_text
+			var remaining:int=int(_campaign.get("rerollsRemaining",0))
+			_reward_reroll.text="换一组（%d）"%remaining
+			_reward_reroll.accessibility_name="更换三项强化，剩余 %d 次"%remaining
+			_reward_reroll.tooltip_text="更换全部三项。本轮剩余 %d 次。"%remaining
 			_reward_reroll.disabled=remaining<=0
 	else:
 		_reward_locked = false

@@ -101,6 +101,7 @@ func _run() -> void:
 func _opening(world) -> void:
  world._action("contract:flow")
  world._action("start")
+ if world.night_picker.visible:world._action("night_core:az_balance")
  check(world.story.active and world.story.scene_id=="intro" and world.story.actors.size()==2,"new trial starts a real two-model opening scene")
  scenes.append("intro")
  check(world.campaign.selected_contract=="flow" and world.game.player.dodgeRefund==1.0,"menu contract reaches actual battle before story begins")
@@ -181,6 +182,7 @@ func _full_trial(world) -> void:
 func _failure_and_menu(world) -> void:
  world._action("menu")
  world._action("start")
+ if world.night_picker.visible:world._action("night_core:az_balance")
  world._action("story_skip")
  var plays: int=world.victory.plays
  _finish(world,false)
@@ -197,6 +199,7 @@ func _failure_and_menu(world) -> void:
  completed.append("failure")
  world._action("menu")
  world._action("start")
+ if world.night_picker.visible:world._action("night_core:az_balance")
  check(world.story.active,"fresh run permits its opening again")
  world.touch_move=-1.0
  world.touch_guard=true

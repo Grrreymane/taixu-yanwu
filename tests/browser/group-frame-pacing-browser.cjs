@@ -18,6 +18,8 @@ const label=process.argv[2]||'sample',cpuRate=Number(process.env.PERF_CPU_RATE||
   });
   const action=(name,value)=>p.evaluate(({name,value})=>__godotAction(name,value),{name,value});
   await action('start');let retries=0,previousUltimate=false;
+  await p.waitForFunction(()=>__godotState.nightCoreChoice);
+  await action('night_core:az_balance');
   const begin=Date.now();
   while(Date.now()-begin<300000){
    const s=await p.evaluate(()=>window.__godotState),c=s.campaign,player=s.player;

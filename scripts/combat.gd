@@ -2,6 +2,8 @@ extends RefCounted
 
 signal event(data: Dictionary)
 const NightPaths=preload("res://scripts/night_paths.gd")
+const ArmorPaths=preload("res://scripts/armor_paths.gd")
+const ArmorMechanics=preload("res://scripts/armor_mechanics.gd")
 const FenghuangCombat = preload("res://scripts/fenghuang_combat.gd")
 const SentienceCombat = preload("res://scripts/sentience_combat.gd")
 const LightningCombat = preload("res://scripts/lightning_combat.gd")
@@ -96,6 +98,7 @@ func _configure_player() -> void:
  player.dodgeRefund=0.0
  player.finisherEnergy=0.0
  NightPaths.setup(player,"",[])
+ ArmorPaths.setup(player,"",[])
 
 func _base_skill_cooldown() -> float:
  if LightningCombat.supported(player_profile): return LightningCombat.cooldown(player_profile)
@@ -185,6 +188,7 @@ func start_encounter(config: Dictionary, carry: Dictionary={}) -> void:
  for key in ["riposteBonus","dodgeRefund","finisherEnergy","dodgeStrike","finisherRefund","afterglowBonus","breakBonus","riposteRefund","killHeal","killEnergy","parryEnergy","dodgeEnergy","finisherPosture","ultimateRefund"]:
   player[key]=maxf(0.0,float(carry.get(key,0.0)))
  NightPaths.setup(player,str(carry.get("nightCore","")),carry.get("nightPerkIds",[]))
+ ArmorPaths.setup(player,str(carry.get("armorCore","")),carry.get("armorPerkIds",[]))
  player.dodgeStrikeUntil=-1.0
  player.afterglowUntil=-1.0
  enemies.clear()
@@ -278,7 +282,7 @@ func action(command: String) -> bool:
    player.queuedCombo=true
    return true
   # Defense can cancel recovery, but never the attack's committed startup.
-  if (command in ["guard","dodge"] or (command=="ability" and player_profile in ["fenghuang","night_squire","shadow_knight","hawk_of_the_fog"] and player.skillCooldown<=0.0)) and _can_defend(player):
+  if (command in ["guard","dodge"] or (command=="ability" and ((player_profile in ["fenghuang","night_squire","shadow_knight","hawk_of_the_fog"] and player.skillCooldown<=0.0) or ArmorMechanics.ability_ready(player,time)))) and _can_defend(player):
    if command=="dodge" and time<player.nextDodgeAt: return false
    _state(player,"idle")
   else: return _try_buffer(command)
@@ -288,7 +292,7 @@ func action(command: String) -> bool:
   _attack(player,command)
   return true
  if command=="ability":
-  if player.skillCooldown>0.0: return false
+  if player.skillCooldown>0.0 and not ArmorMechanics.ability_ready(player,time): return false
   player.skillCooldown=player.skillCooldownMax
   if player_profile=="fenghuang":
    player.stance="kick" if player.stance=="punch" else "punch"
@@ -309,7 +313,7 @@ func action(command: String) -> bool:
   _state(player,"dodge",0.40)
   _emit("dodge",{"side":"player","sourceId":player.id,"x":player.x,"direction":player.dodgeDirection})
   return true
- if command=="ultimate" and player.energy>=100.0 and not (player_profile=="night_squire" and player.nightBurstRemaining>0.0):
+ if command=="ultimate" and player.energy>=ArmorMechanics.ultimate_cost(player,time) and not (player_profile=="night_squire" and player.nightBurstRemaining>0.0):
   _begin_ultimate()
   return true
  return false
@@ -332,8 +336,8 @@ func _clear_riposte() -> void:
 
 func _queue_riposte(command: String) -> bool:
  if command=="ultimate" and player_profile=="night_squire" and player.nightBurstRemaining>0.0: return false
- if command=="ultimate" and player.energy<100.0: return false
- if command=="ability" and player.skillCooldown>0.0: return false
+ if command=="ultimate" and player.energy<ArmorMechanics.ultimate_cost(player,time): return false
+ if command=="ability" and player.skillCooldown>0.0 and not ArmorMechanics.ability_ready(player,time): return false
  if command=="dodge" and player.nextDodgeAt>time: return false
  _buffered_action=command
  _buffer_until=maxf(time,float(player.riposteReadyAt))+INPUT_BUFFER_WINDOW+1.0/120.0
@@ -346,8 +350,8 @@ func _try_buffer(command: String) -> bool:
  var remaining: float=float(player.stateDuration)-float(player.stateTime)
  if remaining<0.0 or remaining>INPUT_BUFFER_WINDOW: return false
  if player.state=="attack" and player.stateTime<player.attack.windup+player.attack.active: return false
- if command=="ultimate" and player.energy<100.0: return false
- if command=="ability" and player.skillCooldown>remaining: return false
+ if command=="ultimate" and player.energy<ArmorMechanics.ultimate_cost(player,time): return false
+ if command=="ability" and player.skillCooldown>remaining and not ArmorMechanics.ability_ready(player,time): return false
  if command=="dodge" and player.nextDodgeAt>time+remaining: return false
  _buffered_action=command
  _buffer_until=time+INPUT_BUFFER_WINDOW+1.0/120.0
@@ -392,7 +396,9 @@ func _step(dt: float,movement: float,guard: bool) -> void:
  player.skillCooldown=maxf(0.0,player.skillCooldown-dt)
  if player.eclipseRemaining>0.0:
   player.eclipseRemaining=maxf(0.0,float(player.eclipseRemaining)-dt)
-  if player.eclipseRemaining==0.0: _emit("burstEnd",{"sourceId":player.id,"x":player.x})
+  if player.eclipseRemaining==0.0:
+   ArmorMechanics.eclipse_end(self)
+   _emit("burstEnd",{"sourceId":player.id,"x":player.x})
  if player_profile=="night_squire" and player.nightBurstRemaining>0.0:
   player.nightBurstRemaining=maxf(0.0,float(player.nightBurstRemaining)-dt)
   if player.nightBurstRemaining==0.0: _emit("burstEnd",{"sourceId":player.id,"x":player.x})
@@ -648,6 +654,7 @@ func _attack(who: Dictionary,kind: String,index: int=0,phase_entry: bool=false,c
  who.attack.unblockable=false
  who.attack.armored=false
  who.attack.phaseTransition=phase_entry
+ if who.side=="player":ArmorMechanics.prepare(self,who.attack)
  if who.side=="player" and player.get("nightCore","")=="counter" and parry_followup and kind=="heavy":
   who.attack.push=1.55
   who.attack.nightImpact=true
@@ -754,6 +761,7 @@ func _receive(attacker: Dictionary,defender: Dictionary,attack: Dictionary) -> v
  if defender.state=="dodge" and defender.stateTime<=0.23:
   attack.contactOutcome="evade"
   if defender.side=="player":
+   ArmorMechanics.evaded(self)
    stats.dodges+=1
    defender.skillCooldown=maxf(0.0,defender.skillCooldown-float(defender.get("dodgeRefund",0.0)))
    defender.energy=minf(100.0,defender.energy+float(defender.get("dodgeEnergy",0.0)))
@@ -771,8 +779,9 @@ func _receive(attacker: Dictionary,defender: Dictionary,attack: Dictionary) -> v
  if force_direction==0.0: force_direction=float(attacker.facing)
  var contact_x: float=float(defender.x)-force_direction*0.22
  var posture_damage: float=attack.postureDamage*(attacker.postureMultiplier if attacker.side=="player" else 1.0)
+ var unblockable:bool=bool(attack.get("unblockable",false)) or (attacker.side=="player" and ArmorMechanics.bypass(attacker,defender,attack,time))
  if defender.state=="guard":
-  if defender.parryUntil>=time and not bool(attack.get("unblockable",false)):
+  if defender.parryUntil>=time and not unblockable:
    attack.contactOutcome="parry"
    defender.posture=maxf(0.0,defender.posture-18.0)
    _gain_energy(defender,12.0)
@@ -802,7 +811,7 @@ func _receive(attacker: Dictionary,defender: Dictionary,attack: Dictionary) -> v
    _emit("parry",{"side":defender.side,"targetSide":attacker.side,"sourceId":defender.id,"targetId":attacker.id,"x":(defender.x+attacker.x)*0.5,"contactX":contact_x,"facing":-force_direction,"hitStop":hit_stop})
    if attacker.posture>=100.0: _break_posture(attacker)
    return
-  elif not attack.get("unblockable",false):
+  elif not unblockable:
    attack.contactOutcome="block"
    defender.posture=minf(100.0,defender.posture+posture_damage)
    _gain_energy(defender,2.0)
@@ -825,7 +834,9 @@ func _receive(attacker: Dictionary,defender: Dictionary,attack: Dictionary) -> v
   build_bonus+=float(attack.get("dodgeStrikeBonus",0.0))
   if time<float(attacker.get("afterglowUntil",-1.0)): build_bonus+=float(attacker.get("afterglowBonus",0.0))
   if time<float(defender.get("breakExposedUntil",-1.0)): build_bonus+=float(attacker.get("breakBonus",0.0))
- var damage: float=minf(defender.hp,attack.damage*(attacker.damageMultiplier if attacker.side=="player" else 1.0)*riposte_bonus*resistance*build_bonus)
+ var armor_bonus:float=ArmorMechanics.contact(self,attack,defender) if attacker.side=="player" else 0.0
+ var armor_posture:float=ArmorMechanics.posture(attacker,defender,attack,time) if attacker.side=="player" else 0.0
+ var damage: float=minf(defender.hp,(attack.damage+armor_bonus)*(attacker.damageMultiplier if attacker.side=="player" else 1.0)*riposte_bonus*resistance*build_bonus)
  attack.contactOutcome="hit"
  # A boss's announced retaliation owns its native chain until the final
  # contact. K/E, perfect defense and posture breaks still interrupt it; the
@@ -833,7 +844,7 @@ func _receive(attacker: Dictionary,defender: Dictionary,attack: Dictionary) -> v
  var armor_window: bool=defender.state=="attack" and (defender.stateTime<float(defender.attack.get("windup",0.0)) or (bool(defender.attack.get("pressureChain",false)) and int(defender.attack.get("nativeNext",-1))>=0))
  var armored: bool=armor_window and defender.attack.get("armored",false) and attack.name!="ability" and not (attack.name=="heavy" and defender.attack.get("heavyBreaksArmor",false))
  _take_health(defender,damage)
- if attacker.side=="player" and attacker.style=="shadow_knight" and float(attacker.eclipseRemaining)>0.0:
+ if attacker.side=="player" and attacker.style=="shadow_knight" and float(attacker.eclipseRemaining)>0.0 and not (attacker.get("armorCore","")=="mo_discharge" and time<float(attacker.armorState.conductUntil)):
   attacker.lightningHits+=1
   if int(attacker.lightningHits)%3==0:
    var discharge:=minf(defender.hp,8.0*float(attacker.damageMultiplier))
@@ -849,7 +860,7 @@ func _receive(attacker: Dictionary,defender: Dictionary,attack: Dictionary) -> v
  # ordinary hit. K/E retain their full opening tools; light hits keep the
  # normal five points and full health damage throughout the retaliation.
  var light_into_counter: bool=armored and attack.name=="light" and bool(defender.attack.get("counter",false))
- defender.posture=minf(100.0,defender.posture+(posture_damage if attack.name=="ability" or (armored and not light_into_counter) else 5.0))
+ defender.posture=minf(100.0,defender.posture+armor_posture+(posture_damage if attack.name=="ability" or attack.get("eclipseCrack",false) or (armored and not light_into_counter) else 5.0))
  _gain_energy(attacker,7.0)
  if attacker.side=="player" and bool(attack.get("parryFollowup",false)) and not bool(attack.get("riposteRefundPaid",false)):
   attacker.skillCooldown=maxf(0.0,attacker.skillCooldown-float(attacker.get("riposteRefund",0.0)))
@@ -913,6 +924,7 @@ func _combo_hit() -> void:
  stats.maxCombo=maxi(stats.maxCombo,combo_count)
 
 func _break_posture(who: Dictionary) -> void:
+ if who.side=="enemy":ArmorMechanics.broken(self,who)
  who.posture=20.0
  who.escapePending=false
  who.pressureHits=0
@@ -928,7 +940,8 @@ func _begin_ultimate() -> void:
  if player_profile=="night_squire":
   _begin_night_burst()
   return
- player.energy=0.0
+ player.energy=maxf(0.0,float(player.energy)-ArmorMechanics.ultimate_cost(player,time))
+ ArmorMechanics.ultimate_begin(self)
  _refresh_target()
  player.facing=1 if player.x<=enemy.x else -1
  # Moving by collision preserves the order of every fighter on the one-dimensional lane.
@@ -968,7 +981,7 @@ func _advance_ultimate(dt: float) -> void:
    if foe.hp<=0.0 or not str(foe.id) in ultimate.targets: continue
    var base_damage: float=(30.0 if final else 10.0) if player_profile=="fenghuang" else (18.0 if final else 6.0)
    if LightningCombat.supported(player_profile): base_damage=LightningCombat.ultimate_damage(player_profile,index)
-   var damage: float=minf(foe.hp,base_damage*player.damageMultiplier)
+   var damage: float=minf(foe.hp,base_damage*player.damageMultiplier*ArmorMechanics.ultimate_multiplier(player,foe,time))
    _take_health(foe,damage)
    stats.damageDealt+=damage
    foe.lastContact=time
@@ -1000,6 +1013,7 @@ func _advance_ultimate(dt: float) -> void:
   _ai_gap=0.85 if _legacy_mode else 0.25
   _refresh_target()
   _finish_build_ultimate()
+  ArmorMechanics.ultimate_end(self)
   _emit("ultimateEnd")
   _check_end()
 

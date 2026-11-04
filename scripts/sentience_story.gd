@@ -3,10 +3,35 @@ extends RefCounted
 ## No source-game dialogue or native story timeline is claimed here.
 const SCENES := ["intro","reward","stage_2","stage_4","final","victory","defeat"]
 const REWARD_GROUPS := {
- "press":["fist","iron","risk","finisher","chainflow","crack","night_open","night_finish"],
+ "press":["az_fracture","az_spread","mo_open","mo_follow","fo_shatter","fo_relay","ph_spread","ph_fuel","fist","iron","risk","finisher","chainflow","crack","night_open","night_finish"],
  "guard":["reflection","riposte","calm","breath","focus","sustain","night_shock","night_chase"],
- "flow":["flow","swift","windstep","reservoir","crosswind","afterglow","night_turn","night_step"]}
+ "flow":["az_echo","az_bind","az_cycle","az_return","ph_refill","ph_rekindle","ph_reserve","ph_wings","mo_long","mo_return","mo_arc","mo_charge","fo_step","fo_breath","fo_window","fo_return","flow","swift","windstep","reservoir","crosswind","afterglow","night_turn","night_step"]}
 const REWARD_TITLES := {
+ "az_echo":"阴阳回环",
+ "az_bind":"墨阵留形",
+ "az_cycle":"阳生不息",
+ "az_return":"归元养气",
+ "az_fracture":"寸阴断势",
+ "az_spread":"墨痕相染",
+ "ph_refill":"余火归心",
+ "ph_rekindle":"转式生焰",
+ "ph_spread":"离火燎原",
+ "ph_fuel":"薪火相续",
+ "ph_reserve":"丹心留火",
+ "ph_wings":"赤羽归息",
+ "mo_long":"长夜未央",
+ "mo_return":"退月回流",
+ "mo_arc":"雷鸣相逐",
+ "mo_charge":"重拳引雷",
+ "mo_open":"裂空回响",
+ "mo_follow":"崩拳追月",
+ "fo_step":"游雷无隙",
+ "fo_breath":"回风聚雷",
+ "fo_shatter":"霹雳破壁",
+ "fo_relay":"群雷归流",
+ "fo_window":"惊雷留隙",
+ "fo_return":"千龙回身",
+
  "night_shock":"隔山打牛","night_chase":"追身寸劲","night_turn":"回身破守","night_step":"踏风连步","night_open":"寸劲开门","night_finish":"拳脚相续",
  "fist":"寸心如锋","iron":"破阵之势","risk":"以攻代守","finisher":"三叠归元",
  "reflection":"明镜止水","riposte":"反照","calm":"守一","breath":"生生不息",
