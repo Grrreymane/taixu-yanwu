@@ -36,13 +36,17 @@ func pose(actor:Node3D) -> Array:
 func run() -> void:
  var label:="sample"
  if not OS.get_cmdline_user_args().is_empty():label=OS.get_cmdline_user_args()[0]
+ var core:String=OS.get_cmdline_user_args()[1] if OS.get_cmdline_user_args().size()>1 else ""
+ assert(core.is_empty() or preload("res://scripts/night_paths.gd").CORES.has(core))
  var report:Array=[];var evidence:Array=[]
- for style:String in ["azure_empyrea","fenghuang","night_squire","shadow_knight","hawk_of_the_fog"]:
+ for style:String in (["night_squire"] if not core.is_empty() else ["azure_empyrea","fenghuang","night_squire","shadow_knight","hawk_of_the_fog"]):
   world=ProbeMain.new();world.process_mode=Node.PROCESS_MODE_DISABLED
   world.campaign=VolatileCampaign.new();world.game=TimedCombat.new();root.add_child(world)
   world._action("select_style:"+style)
   world.effects.free();world.effects=TimedEffects.new();world.add_child(world.effects);world.effects.sounds.clear()
-  world.campaign.begin_trial("mirror",105);world.campaign.stage_index=3;world._begin_encounter(false)
+  world.campaign.begin_trial("mirror",105,world.FighterRoster.presentation_from_selection(world.fighter),core)
+  if not core.is_empty():world.campaign.reward_ids.assign(preload("res://scripts/night_paths.gd").CORES[core].rewards)
+  world.campaign.stage_index=3;world._begin_encounter(false)
   world.stage_countdown=0;world.game.player.x=-0.6
   world.player.free();world.player=TimedActor.new();world.add_child(world.player);world.player.setup(false,world.fighter)
   world.game.player.hp=10000.0;world.game.player.maxHp=10000.0
@@ -80,4 +84,6 @@ func run() -> void:
   world.free();world=null;actors.clear();await process_frame
  FileAccess.open("res://build/combat-load-"+label+".json",FileAccess.WRITE).store_string(JSON.stringify(report))
  FileAccess.open("res://build/combat-evidence-"+label+".json",FileAccess.WRITE).store_string(JSON.stringify(evidence))
+ await process_frame
+ await RenderingServer.frame_post_draw
  print("COMBAT_LOAD_PROBE_COMPLETE");quit()

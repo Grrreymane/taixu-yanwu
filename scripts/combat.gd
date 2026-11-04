@@ -1,6 +1,7 @@
 extends RefCounted
 
 signal event(data: Dictionary)
+const NightPaths=preload("res://scripts/night_paths.gd")
 const FenghuangCombat = preload("res://scripts/fenghuang_combat.gd")
 const SentienceCombat = preload("res://scripts/sentience_combat.gd")
 const LightningCombat = preload("res://scripts/lightning_combat.gd")
@@ -94,6 +95,7 @@ func _configure_player() -> void:
  player.riposteBonus=0.0
  player.dodgeRefund=0.0
  player.finisherEnergy=0.0
+ NightPaths.setup(player,"",[])
 
 func _base_skill_cooldown() -> float:
  if LightningCombat.supported(player_profile): return LightningCombat.cooldown(player_profile)
@@ -182,6 +184,7 @@ func start_encounter(config: Dictionary, carry: Dictionary={}) -> void:
  player.parryHeal=clampf(float(carry.get("parryHeal",0.0)),0.0,player.maxHp)
  for key in ["riposteBonus","dodgeRefund","finisherEnergy","dodgeStrike","finisherRefund","afterglowBonus","breakBonus","riposteRefund","killHeal","killEnergy","parryEnergy","dodgeEnergy","finisherPosture","ultimateRefund"]:
   player[key]=maxf(0.0,float(carry.get(key,0.0)))
+ NightPaths.setup(player,str(carry.get("nightCore","")),carry.get("nightPerkIds",[]))
  player.dodgeStrikeUntil=-1.0
  player.afterglowUntil=-1.0
  enemies.clear()
@@ -211,6 +214,7 @@ func start_encounter(config: Dictionary, carry: Dictionary={}) -> void:
   foe.tactic=str(spec.get("tactic",""))
   if foe.tactic not in ["press","guard","flank","range"]: foe.tactic=""
   foe.weaponCycle=spec.get("weaponCycle",[]).duplicate()
+  foe.bossPattern=str(spec.get("bossPattern","")) if foe.boss else ""
   foe.combatTrait=str(spec.get("combatTrait",""))
   foe.blockedLights=0
   foe.weapon=SentienceCombat.weapon_for(foe,1)
@@ -261,9 +265,12 @@ func action(command: String) -> bool:
  # follow-through. Inputs are remembered without replacing that pose.
  if _has_riposte() and player.state in ["idle","move","guard"] and (hit_stop>0.0 or time<float(player.riposteReadyAt)) and command in ["light","heavy","ability","ultimate","dodge"]:
   return _queue_riposte(command)
+ if _night_action(command):return true
+ var dodge_index:int=mini(int(player.combo)+1,2) if player.state=="attack" and player.attack.get("name","")=="light" and player.attack.get("contactOutcome","") in ["hit","block"] else 1
+ if player.get("nightCore","")=="dodge" and player.state!="attack" and time<float(player.nightResumeUntil):dodge_index=int(player.nightResume)
  if player.state=="attack":
   var light_chain: bool=player.attack.get("name","")=="light" or bool(player.attack.get("counterLink",false))
-  if light_chain and command=="heavy":
+  if light_chain and command=="heavy" and (not player.attack.get("nightFlow",false) or NightPaths.has(player,"night_finish")):
    player.queuedHeavy=true
    player.queuedCombo=false
    return true
@@ -296,6 +303,7 @@ func action(command: String) -> bool:
   return true
  if command=="dodge":
   if time<player.nextDodgeAt: return false
+  player.nightDodgeIndex=dodge_index
   player.dodgeDirection=_last_move if _last_move!=0.0 else -player.facing
   player.nextDodgeAt=time+0.72
   _state(player,"dodge",0.40)
@@ -389,7 +397,9 @@ func _step(dt: float,movement: float,guard: bool) -> void:
   player.nightBurstRemaining=maxf(0.0,float(player.nightBurstRemaining)-dt)
   if player.nightBurstRemaining==0.0: _emit("burstEnd",{"sourceId":player.id,"x":player.x})
  combo_time=maxf(0.0,combo_time-dt)
- if combo_time==0.0: combo_count=0
+ if combo_time==0.0:
+  combo_count=0
+  player.nightFlowUsed=false
  if not ultimate.is_empty():
   _advance_ultimate(dt)
   return
@@ -435,6 +445,7 @@ func _advance_impulse(who: Dictionary,dt: float) -> void:
  var impulse: float=float(who.get("pushRemaining",0.0))
  if absf(impulse)>0.001:
   var displacement: float=impulse*(1.0-exp(-dt*20.0))
+  if who.has("nightBump"):_night_bump(who,displacement)
   _move(who,displacement)
   who.pushRemaining=impulse-displacement
  else: who.pushRemaining=0.0
@@ -487,8 +498,10 @@ func _advance_fighter(who: Dictionary,dt: float) -> void:
      _receive(who,target,attack)
      if who.state!="attack" or ended: break
   if who.state!="attack" or ended: return
+  if who.side=="player" and who.get("nightQueuedAbility",false) and _can_defend(who) and _night_action("ability"):return
   var connected: bool=str(attack.get("contactOutcome","")) in ["hit","block"]
   var link_at: float=maxf(float(attack.windup)+float(attack.active),float(attack.windup)+0.11)
+  if attack.get("nightFlow",false):link_at=float(attack.hitWindows[-1])+float(attack.active)+0.04
   var linkable: bool=attack.name=="light" or bool(attack.get("counterLink",false))
   var can_link: bool=who.side=="player" and linkable and connected and who.stateTime>=link_at and (who.queuedCombo or who.queuedHeavy)
   var native_next: int=int(attack.get("nativeNext",-1))
@@ -501,7 +514,7 @@ func _advance_fighter(who: Dictionary,dt: float) -> void:
     _attack(who,"heavy",0,false,bool(attack.get("counterLink",false)) and attack.get("contactOutcome","")=="hit")
    elif who.queuedCombo and linkable and who.combo<2:
     var confirmed: bool=who.side=="player" and str(attack.get("contactOutcome",""))=="hit"
-    _attack(who,"light",who.combo+1,false,confirmed)
+    _attack(who,"light",(1 if NightPaths.has(who,"night_finish") else 0) if attack.get("nightFlow",false) else who.combo+1,false,confirmed)
    else:
     _state(who,"idle")
     if who.side=="enemy":
@@ -511,6 +524,14 @@ func _advance_fighter(who: Dictionary,dt: float) -> void:
       who.aiCooldown=maxf(0.12,0.26-0.045*_pressure_level+float(attack.get("recovery",0.85))*0.18+_rng.randf()*0.06)
      if not _legacy_mode: who.aiCooldown=_enemy_recovery(who,float(who.aiCooldown))
      if _legacy_mode: _ai_gap=maxf(_ai_gap,0.5)
+     if who.get("bossPattern","")=="spear" and attack.get("weapon","")=="spear" and not connected:
+      who.punishUntil=time+0.85
+      who.aiCooldown=maxf(who.aiCooldown,0.85)
+     elif who.get("bossPattern","")=="sword" and attack.get("weapon","")=="sword":
+      _state(who,"dodge",0.34)
+      who.dodgeDirection=-who.facing
+      who.aiCooldown=maxf(who.aiCooldown,0.50)
+      _emit("dodge",{"side":"enemy","sourceId":who.id,"x":who.x,"direction":who.dodgeDirection})
  elif who.state=="dodge":
   var window: float=0.27 if who.side=="player" else 0.18
   var speed: float=6.4 if who.side=="player" else 2.8
@@ -627,6 +648,11 @@ func _attack(who: Dictionary,kind: String,index: int=0,phase_entry: bool=false,c
  who.attack.unblockable=false
  who.attack.armored=false
  who.attack.phaseTransition=phase_entry
+ if who.side=="player" and player.get("nightCore","")=="counter" and parry_followup and kind=="heavy":
+  who.attack.push=1.55
+  who.attack.nightImpact=true
+  who.attack.followupAdvance=0.65
+  who.attack.followupAdvanceLeft=0.65
  if who.side=="enemy":
   var extra: float=0.22 if kind=="heavy" else 0.12
   who.attack.damage=(12.0 if kind=="heavy" else 7.0)*who.damageScale
@@ -699,6 +725,8 @@ func _sentience_attack(who: Dictionary,kind: String,index: int,phase_entry: bool
  who.combo=index
  who.attack=SentienceCombat.attack(weapon,index,who.boss,who.phase,phase_entry)
  if combat_trait=="linked" and index==0 and weapon in ["spear","chain"]: who.attack.nativeNext=1
+ if who.get("bossPattern","")=="spear" and weapon=="spear" and who.phase==1:who.attack.nativeNext=-1
+ if who.get("bossPattern","")=="chain" and weapon=="chain" and index==0:who.attack.nativeNext=1
  if adaptive_counter:
   # A complete source strike with an explicit amber warning. Only its
   # startup resists repeated J; K, E, a parry or posture break still stop it.
@@ -730,6 +758,12 @@ func _receive(attacker: Dictionary,defender: Dictionary,attack: Dictionary) -> v
    defender.skillCooldown=maxf(0.0,defender.skillCooldown-float(defender.get("dodgeRefund",0.0)))
    defender.energy=minf(100.0,defender.energy+float(defender.get("dodgeEnergy",0.0)))
    if float(defender.get("dodgeStrike",0.0))>0.0: defender.dodgeStrikeUntil=time+4.0
+   if defender.get("nightCore","")=="dodge":
+    defender.nightResume=int(defender.get("nightDodgeIndex",1))
+    defender.nightResumeUntil=time+(2.4 if NightPaths.has(defender,"night_step") else 1.6)
+    if NightPaths.has(defender,"night_step") and time>=float(defender.nightStepReadyAt):
+     defender.nextDodgeAt=time
+     defender.nightStepReadyAt=time+2.0
   _emit("evade",{"side":defender.side,"sourceId":attacker.id,"targetId":defender.id,"x":defender.x,"direction":defender.dodgeDirection})
   return
  defender.lastContact=time
@@ -775,6 +809,7 @@ func _receive(attacker: Dictionary,defender: Dictionary,attack: Dictionary) -> v
    defender.pushRemaining=force_direction*attack.push*0.35
    hit_stop=0.07 if attack.name in ["heavy","ability"] else 0.05
    _emit("block",{"side":defender.side,"targetSide":defender.side,"sourceId":attacker.id,"targetId":defender.id,"x":defender.x,"contactX":contact_x,"contactHeight":attack.get("contactHeight",1.3),"facing":force_direction,"hitStop":hit_stop,"heavy":attack.name in ["heavy","ability"],"name":attack.name,"skill":attack.name=="ability"})
+   if attacker.side=="player" and attack.get("nightFlow",false) and NightPaths.has(attacker,"night_open") and int(attack.get("hitIndex",0))>=2:defender.posture=100.0
    if defender.posture>=100.0: _break_posture(defender)
    elif defender.side=="enemy" and not str(defender.get("combatTrait","")).is_empty() and attack.name=="light":
     defender.blockedLights=int(defender.get("blockedLights",0))+1
@@ -830,6 +865,9 @@ func _receive(attacker: Dictionary,defender: Dictionary,attack: Dictionary) -> v
   if attacker.get("style","")=="night_squire":
    attacker.skillCooldown=maxf(0.0,float(attacker.skillCooldown)-0.65)
    _gain_energy(attacker,3.0)
+  if attacker.get("nightCore","")=="chain" and not attacker.nightFlowUsed:
+   attacker.nightFlowUntil=time+1.2
+   _emit("nightTechnique",{"label":"三连命中 · E 连势"})
   attack.finisherPaid=true
  _gain_energy(defender,4.0)
  if attacker.side=="player" and defender.side=="enemy" and not _legacy_mode and not training:
@@ -843,6 +881,11 @@ func _receive(attacker: Dictionary,defender: Dictionary,attack: Dictionary) -> v
    defender.escapePending=false
    defender.punishUntil=time+0.85
  if not armored: defender.pushRemaining=force_direction*attack.push
+ if attacker.side=="player" and attack.get("nightImpact",false) and not armored:
+  defender.nightBump={"until":time+1.0,"direction":force_direction,"remaining":2 if NightPaths.has(attacker,"night_shock") else 1}
+  if NightPaths.has(attacker,"night_chase"):
+   attacker.nightChaseUntil=time+1.6
+   _emit("nightTechnique",{"label":"防反命中 · E 追身"})
  if defender.hp<=0.0 or not armored: _state(defender,"dead" if defender.hp<=0.0 else "stagger",maxf(float(attack.stun),float(defender.get("punishUntil",-1.0))-time) if defender.side=="enemy" else attack.stun)
  var heavy: bool=attack.name in ["heavy","ability"] or attack.comboIndex==2
  var contact_stop: float=0.12 if attack.name=="ability" else 0.11 if attack.name=="heavy" else 0.095 if attack.comboIndex==2 else 0.07 if attack.comboIndex==1 else 0.06
@@ -1023,8 +1066,10 @@ func _encounter_ai(dt: float) -> void:
   if tactic=="range": preferred=3.15 if SentienceCombat.weapon_for(foe,int(foe.aiRound)+1)=="spear" else 2.0
   elif tactic=="press": preferred=1.18
   elif tactic=="guard": preferred=1.70
+  if foe.get("bossPattern","")=="spear":preferred=3.05
   var spacing: float=preferred+rank*0.94
   var speed_scale: float=1.12 if tactic=="press" else 1.08 if tactic=="flank" else 1.0
+  if foe.get("bossPattern","")=="spear" and time<float(foe.get("punishUntil",-1.0)):continue
   if absf(foe.x-player.x)>spacing+0.05:
    if foe.state!="move": _state(foe,"move")
    _move(foe,foe.facing*foe.speed*speed_scale*dt)
@@ -1107,6 +1152,12 @@ func _try_pressure_escape(foe: Dictionary) -> bool:
 func _state(who: Dictionary,state: String,duration: float=0.0) -> void:
  if who.side=="player" and state in ["attack","stagger","dead","dodge","ultimate"]: _clear_buffer()
  if who.side=="player" and state in ["stagger","dead","dodge","ultimate"]: _clear_riposte()
+ if who.side=="player":
+  who.nightQueuedAbility=false
+  if state in ["stagger","dead","ultimate"]:
+   who.nightResumeUntil=-1.0
+   who.nightFlowUntil=-1.0
+   who.nightChaseUntil=-1.0
  who.parryOpening=-1.0
  who.state=state
  who.stateTime=0.0
@@ -1255,3 +1306,55 @@ func _emit(kind: String,data: Dictionary={}) -> void:
   output.hitIndex=int(source.get("attack",{}).get("hitIndex",0))
  if source.side=="enemy": output.weapon=data.get("weapon",source.get("weapon","sword"))
  event.emit(output)
+
+func _night_action(command:String) -> bool:
+ if player.get("nightCore","").is_empty():return false
+ if command=="ability":
+  var flow:bool=time<float(player.nightFlowUntil) and not player.nightFlowUsed
+  var chase:bool=time<float(player.nightChaseUntil)
+  if not flow and not chase:return false
+  if player.state=="attack" and not _can_defend(player):
+   player.nightQueuedAbility=true
+   return true
+  if player.state not in ["idle","move","guard","attack"]:return false
+  player.nightFlowUntil=-1.0
+  player.nightChaseUntil=-1.0
+  if flow:player.nightFlowUsed=true
+  player.skillCooldown=maxf(player.skillCooldown,player.skillCooldownMax)
+  _refresh_target()
+  _attack(player,"ability")
+  player.attack.nightFlow=flow
+  if flow:player.attack.counterLink=true
+  if chase:
+   player.attack.followupTarget=enemy.id
+   player.attack.followupAdvance=minf(1.6,maxf(0.0,absf(enemy.x-player.x)-player.attack.range+0.25))
+   player.attack.followupAdvanceLeft=player.attack.followupAdvance
+  _emit("ability",{"side":"player","sourceId":player.id,"targetId":enemy.id,"x":player.x,"facing":player.facing,"range":player.attack.range,"windup":player.attack.windup})
+  return true
+ if player.state in ["idle","move","guard"] and time<float(player.nightResumeUntil) and (command=="light" or (command=="heavy" and NightPaths.has(player,"night_turn"))):
+  var index:int=clampi(int(player.nightResume),0,2)
+  player.nightResumeUntil=-1.0
+  _refresh_target()
+  _attack(player,command,index if command=="light" else 0)
+  if command=="heavy":player.attack.unblockable=true
+  _emit("nightTechnique",{"label":"回身破守" if command=="heavy" else "闪避续招"})
+  return true
+ return false
+
+func _night_bump(who:Dictionary,displacement:float) -> void:
+ var bump:Dictionary=who.nightBump
+ if time>=float(bump.until) or absf(displacement)<0.001:
+  who.erase("nightBump")
+  return
+ var direction:float=bump.direction
+ for target:Dictionary in enemies:
+  if target.id==who.id or target.hp<=0.0:continue
+  var gap:float=(float(target.x)-float(who.x))*direction
+  if gap<0.0 or gap>GAP+absf(displacement)+0.03:continue
+  who.erase("nightBump")
+  var impact:Dictionary={"name":"heavy","comboIndex":0,"damage":6.0,"postureDamage":20.0,"push":0.8,"stun":0.48,"unblockable":false,"nightCollision":true}
+  _receive(player,target,impact)
+  if impact.get("contactOutcome","")=="hit" and int(bump.remaining)>1:
+   target.nightBump={"until":time+0.8,"direction":direction,"remaining":int(bump.remaining)-1}
+  _emit("nightTechnique",{"label":"碰撞破阵"})
+  return

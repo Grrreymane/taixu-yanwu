@@ -4,6 +4,8 @@ const EncounterVariants=preload("res://scripts/encounter_variants.gd")
 const LocalSave=preload("res://scripts/local_save.gd")
 const FighterRoster=preload("res://scripts/fighter_roster.gd")
 const RewardBuilds=preload("res://scripts/reward_builds.gd")
+const NightPaths=preload("res://scripts/night_paths.gd")
+const NIGHT_RULES_VERSION := "trial-2026-11-03-night-paths"
 const RUN_RULES_VERSION := "trial-2026-10-31-builds"
 const LEGACY_RULES_VERSION := "trial-2026-10-27"
 const REROLLS_PER_RUN := 2
@@ -18,6 +20,12 @@ const CONTRACTS := {
  "breaker":{"id":"breaker","title":"破阵之约","description":"架势伤害提高 20%。完成约定可获额外补给。","rule":"架势伤害 +20%","objective":"打出 6 连击","stat":"maxCombo","target":6.0,"reward":"finisher"}
 }
 const REWARDS := {
+ "night_shock":NightPaths.REWARDS.night_shock,
+ "night_chase":NightPaths.REWARDS.night_chase,
+ "night_turn":NightPaths.REWARDS.night_turn,
+ "night_step":NightPaths.REWARDS.night_step,
+ "night_open":NightPaths.REWARDS.night_open,
+ "night_finish":NightPaths.REWARDS.night_finish,
  "fist":{"id":"fist","title":"寸心如锋","description":"所有攻击伤害提高 16%。"},
  "flow":{"id":"flow","title":"行云流水","description":"命中获得的 SP 提高 25%，更快释放必杀。"},
  "breath":{"id":"breath","title":"生生不息","description":"生命上限增加 20，立即恢复 35 HP。"},
@@ -72,6 +80,7 @@ var new_time_record := false
 var recent_runs: Array[Dictionary] = []
 var resume_data: Dictionary = {}
 var save_status := "ready"
+var night_core := ""
 var run_rules_version := RUN_RULES_VERSION
 var rerolls_used := 0
 var stage_rerolls := 0
@@ -87,6 +96,7 @@ func _init() -> void:
 
 func _reset_run() -> void:
  run_rules_version=RUN_RULES_VERSION
+ night_core=""
  rerolls_used=0
  stage_rerolls=0
  run_time=0.0
@@ -135,13 +145,17 @@ func challenge_description() -> String:
  if extra==0: return "通关一次后，可同时接受多条规矩。" if completed_runs==0 else "可同时接受多条规矩，也可全部挑战。"
  return "同时接受 %d 条：敌人伤害 +%d%%，追击更紧；须完成全部约定才有额外补给。"%[selected_contract_ids.size(),extra*10]
 
-func begin_trial(contract_id: String="", seed: int=-1) -> void:
+func begin_trial(contract_id: String="", seed: int=-1, fighter_choice:Dictionary={}, core_id:String="") -> void:
  if CONTRACTS.has(contract_id):
   selected_contract=contract_id
   selected_contract_ids.assign([contract_id])
  if completed_runs<=0: selected_contract_ids.assign([selected_contract])
  selected_contract=selected_contract_ids[0]
  _reset_run()
+ if _valid_fighter(fighter_choice): run_fighter=fighter_choice.duplicate(true)
+ if str(run_fighter.get("styleId",""))=="night_squire" and NightPaths.CORES.has(core_id):
+  night_core=core_id
+  run_rules_version=NIGHT_RULES_VERSION
  carry.energy=60.0
  carry.finisherEnergy=3.0
  run_number+=1
@@ -237,6 +251,7 @@ func _roll_rewards() -> Array:
  var previous: Array=[]
  for reward: Dictionary in reward_options: previous.append(str(reward.id))
  for id: String in REWARDS:
+  if NightPaths.REWARDS.has(id) and (run_rules_version!=NIGHT_RULES_VERSION or NightPaths.REWARDS[id].core!=night_core): continue
   if id not in reward_ids and (stage_rerolls==0 or id not in previous): available.append(id)
  _shuffle(available,random)
  var selected: Array=[]
@@ -264,6 +279,12 @@ func _roll_rewards() -> Array:
  for id: String in available:
   if selected.size()>=3: break
   if id not in selected: selected.append(id)
+ # Always offer an unclaimed compatible technique when one is available.
+ if run_rules_version==NIGHT_RULES_VERSION:
+  for id:String in available:
+   if NightPaths.REWARDS.has(id):
+    if id not in selected:selected[0]=id
+    break
  _shuffle(selected,random)
  var result: Array=[]
  for id: String in selected: result.append(REWARDS[id].duplicate(true))
@@ -277,19 +298,23 @@ func _shuffle(items: Array,random: RandomNumberGenerator) -> void:
   items[other]=item
 
 func reroll_rewards() -> bool:
- if phase!="reward" or run_rules_version!=RUN_RULES_VERSION or rerolls_used>=REROLLS_PER_RUN: return false
+ if phase!="reward" or run_rules_version not in [RUN_RULES_VERSION,NIGHT_RULES_VERSION] or rerolls_used>=REROLLS_PER_RUN: return false
  rerolls_used+=1
  stage_rerolls+=1
  reward_options=_roll_rewards()
  return true
 
 func combat_carry() -> Dictionary:
- return RewardBuilds.carry(carry,reward_ids) if run_rules_version==RUN_RULES_VERSION and mode=="trial" else carry.duplicate(true)
+ var result:Dictionary=RewardBuilds.carry(carry,reward_ids) if run_rules_version in [RUN_RULES_VERSION,NIGHT_RULES_VERSION] and mode=="trial" else carry.duplicate(true)
+ if run_rules_version==NIGHT_RULES_VERSION and mode=="trial":
+  result.nightCore=night_core
+  result.nightPerkIds=reward_ids.duplicate()
+ return result
 
 func _legacy_rewards() -> Array:
  var available: Array=[]
  for key: String in REWARDS:
-  if not key in reward_ids and key not in RewardBuilds.NEW_IDS: available.append(key)
+  if not key in reward_ids and key not in RewardBuilds.NEW_IDS and not NightPaths.REWARDS.has(key): available.append(key)
  var random:=RandomNumberGenerator.new()
  random.seed=run_seed+stage_index*7919+101
  for index in range(available.size()-1,0,-1):
@@ -315,6 +340,7 @@ func choose_reward(index: int) -> bool:
  if phase!="reward" or index<0 or index>=reward_options.size(): return false
  var reward: Dictionary=reward_options[index]
  if not REWARDS.has(str(reward.get("id",""))) or str(reward.id) in reward_ids: return false
+ if NightPaths.REWARDS.has(str(reward.id)) and (run_rules_version!=NIGHT_RULES_VERSION or NightPaths.REWARDS[str(reward.id)].core!=night_core):return false
  match str(reward.id):
   "fist": carry.damageMultiplier*=1.16
   "flow": carry.energyGain*=1.25
@@ -413,7 +439,7 @@ func save_checkpoint(fighter_choice: Dictionary={}) -> bool:
    if not _valid_fighter(run_fighter): return false
    var choices: Array[String]=[]
    for item: Dictionary in reward_options: choices.append(str(item.id))
-   resume_data={"rulesVersion":run_rules_version,"timingRule":TIMING_RULE,"runId":run_id,"phase":phase,"stageIndex":stage_index,"seed":run_seed,"runNumber":run_number,"contracts":selected_contract_ids.duplicate(),"rewardIds":reward_ids.duplicate(),"rewardChoices":choices,"carry":carry.duplicate(true),"checkpoint":checkpoint.duplicate(true),"totals":totals.duplicate(true),"lastStats":last_stats.duplicate(true),"lastEncounterStats":last_encounter_stats.duplicate(true),"achievements":achievements.duplicate(true),"encounterAchievements":encounter_achievements.duplicate(true),"lastAchievement":last_achievement.duplicate(true),"lastEncounterAchievement":last_encounter_achievement.duplicate(true),"elapsedMs":roundi(run_time*1000.0),"resumes":run_resumes,"fighter":run_fighter.duplicate(true),"rerollsUsed":rerolls_used,"stageRerolls":stage_rerolls}
+   resume_data={"rulesVersion":run_rules_version,"nightCore":night_core,"timingRule":TIMING_RULE,"runId":run_id,"phase":phase,"stageIndex":stage_index,"seed":run_seed,"runNumber":run_number,"contracts":selected_contract_ids.duplicate(),"rewardIds":reward_ids.duplicate(),"rewardChoices":choices,"carry":carry.duplicate(true),"checkpoint":checkpoint.duplicate(true),"totals":totals.duplicate(true),"lastStats":last_stats.duplicate(true),"lastEncounterStats":last_encounter_stats.duplicate(true),"achievements":achievements.duplicate(true),"encounterAchievements":encounter_achievements.duplicate(true),"lastAchievement":last_achievement.duplicate(true),"lastEncounterAchievement":last_encounter_achievement.duplicate(true),"elapsedMs":roundi(run_time*1000.0),"resumes":run_resumes,"fighter":run_fighter.duplicate(true),"rerollsUsed":rerolls_used,"stageRerolls":stage_rerolls}
   elif phase=="cleared": resume_data={}
  if persistence_enabled: _save_record()
  return not persistence_enabled or save_status in ["saved","ready","recovered"]
@@ -431,6 +457,7 @@ func resume_trial() -> Dictionary:
  var data:=resume_data.duplicate(true)
  _reset_run()
  run_rules_version=str(data.rulesVersion)
+ night_core=str(data.get("nightCore",""))
  rerolls_used=int(data.get("rerollsUsed",0))
  stage_rerolls=int(data.get("stageRerolls",0))
  mode="trial"
@@ -467,7 +494,7 @@ func _record_clear(result: Dictionary) -> void:
  if elapsed_ms<=0: return # Legacy scores do not fabricate a timed clear.
  new_time_record=best_time_ms==0 or elapsed_ms<best_time_ms
  if new_time_record: best_time_ms=elapsed_ms
- var entry: Dictionary={"runId":run_id,"rulesVersion":run_rules_version,"timingRule":TIMING_RULE,"completedAt":int(Time.get_unix_time_from_system()),"elapsedMs":elapsed_ms,"characterId":str(run_fighter.get("characterId","fuhua")),"styleId":str(run_fighter.get("styleId","azure_empyrea")),"appearanceId":str(run_fighter.get("appearanceId","default")),"seed":run_seed,"contracts":selected_contract_ids.duplicate(),"rewardIds":reward_ids.duplicate(),"retries":int(totals.get("retries",0)),"resumes":run_resumes,"score":int(result.score),"rank":str(result.rank),"source":"local"}
+ var entry: Dictionary={"runId":run_id,"rulesVersion":run_rules_version,"nightCore":night_core,"timingRule":TIMING_RULE,"completedAt":int(Time.get_unix_time_from_system()),"elapsedMs":elapsed_ms,"characterId":str(run_fighter.get("characterId","fuhua")),"styleId":str(run_fighter.get("styleId","azure_empyrea")),"appearanceId":str(run_fighter.get("appearanceId","default")),"seed":run_seed,"contracts":selected_contract_ids.duplicate(),"rewardIds":reward_ids.duplicate(),"retries":int(totals.get("retries",0)),"resumes":run_resumes,"score":int(result.score),"rank":str(result.rank),"source":"local"}
  recent_runs.push_front(entry)
  if recent_runs.size()>20: recent_runs.resize(20)
 
@@ -521,7 +548,7 @@ static func _dictionaries(value: Variant,maximum: int=12) -> bool:
 static func _valid_resume(value: Variant) -> bool:
  if not value is Dictionary: return false
  if value.is_empty(): return true
- if value.get("rulesVersion") not in [RUN_RULES_VERSION,LEGACY_RULES_VERSION] or value.get("timingRule")!=TIMING_RULE: return false
+ if value.get("rulesVersion") not in [RUN_RULES_VERSION,NIGHT_RULES_VERSION,LEGACY_RULES_VERSION] or value.get("timingRule")!=TIMING_RULE: return false
  if not _integer(value.get("rerollsUsed",0),REROLLS_PER_RUN) or not _integer(value.get("stageRerolls",0),REROLLS_PER_RUN): return false
  if int(value.get("stageRerolls",0))>int(value.get("rerollsUsed",0)): return false
  if not _text(value.get("runId")) or not value.get("phase") in ["fight","reward","failed"]: return false
@@ -536,6 +563,10 @@ static func _valid_resume(value: Variant) -> bool:
    if id in value.rewardIds: return false
  elif not value.rewardChoices.is_empty(): return false
  if not _valid_carry(value.get("carry")) or not _valid_carry(value.get("checkpoint")) or not _valid_fighter(value.get("fighter")): return false
+ if value.get("rulesVersion")==NIGHT_RULES_VERSION:
+  if not NightPaths.CORES.has(str(value.get("nightCore",""))) or value.fighter.styleId!="night_squire":return false
+ for id:Variant in value.rewardIds+value.rewardChoices:
+  if NightPaths.REWARDS.has(str(id)) and (value.get("rulesVersion")!=NIGHT_RULES_VERSION or NightPaths.REWARDS[str(id)].core!=str(value.get("nightCore",""))):return false
  for key: String in ["totals","lastStats","lastEncounterStats"]:
   if not _numeric_dictionary(value.get(key)): return false
  if not value.totals.has("retries"): return false
@@ -577,13 +608,17 @@ func snapshot(state: Dictionary) -> Dictionary:
  var current: Dictionary=_combined_stats(state.get("stats",{})) if phase=="fight" else (last_stats if phase=="failed" or mode=="practice" else totals)
  var result: Dictionary={"mode":mode,"phase":phase,"stageIndex":stage_index,"stageTotal":stages.size(),"title":stage.title if mode=="trial" else "自由对练","region":REGIONS[stage.regionIndex] if mode=="trial" else "晨岚台","regionIndex":stage.regionIndex if mode=="trial" else 0,"brief":stage.brief if mode=="trial" else "与识之律者切磋，T 切换木人模式。","enemiesRemaining":alive,"totalEnemies":foes.size(),"rewards":reward_options.duplicate(true),"stats":_scored(current),"boons":boons.duplicate(),"bestScore":best_score,"bestRank":best_rank,"supply":"过关补给：恢复 %d HP 与 20 SP"%int(CLEAR_HEAL),"contracts":contract_options(),"contract":CONTRACTS[selected_contract].duplicate(true),"contractId":selected_contract,"selectedContractIds":selected_contract_ids.duplicate(),"contractsUnlocked":completed_runs>0,"challengeLevel":challenge_level(),"challengeDescription":challenge_description(),"runSeed":run_seed,"runNumber":run_number,"completedRuns":completed_runs,"contractWins":contract_wins.duplicate(true),"unlockedTitles":unlocked_titles.duplicate(),"objective":objective(state.get("stats",{})) if mode=="trial" else {},"lastAchievement":last_achievement.duplicate(true),"achievements":achievements.duplicate(true),"rewardIds":reward_ids.duplicate(),"encounterRule":stage.get("encounterRule",{}).duplicate(true) if mode=="trial" else {},"arrangementTitle":stage.get("arrangementTitle","") if mode=="trial" else "","encounterObjective":encounter_objective(state.get("stats",last_encounter_stats if phase in ["reward","cleared","failed"] else {}),phase in ["reward","cleared"]),"lastEncounterAchievement":last_encounter_achievement.duplicate(true),"encounterAchievements":encounter_achievements.duplicate(true)}
 
- if run_rules_version==RUN_RULES_VERSION and mode=="trial":
-  for reward: Dictionary in result.rewards: reward.buildPreview=RewardBuilds.preview(reward_ids,str(reward.id))
+ if run_rules_version in [RUN_RULES_VERSION,NIGHT_RULES_VERSION] and mode=="trial":
+  for reward: Dictionary in result.rewards:
+   reward.buildPreview=("白夜专属 · "+str(NightPaths.CORES[night_core].title)+"\n"+str(NightPaths.CORES[night_core].hint)) if NightPaths.REWARDS.has(str(reward.id)) else RewardBuilds.preview(reward_ids,str(reward.id))
   result.buildSummary=RewardBuilds.summary(reward_ids)
   result.rerollsRemaining=maxi(0,REROLLS_PER_RUN-rerolls_used)
   result.nextEncounter=stages[stage_index+1].brief if stage_index<stages.size()-1 else ""
  else:
   result.rerollsRemaining=0
+ result.nightCore=night_core
+ result.nightCoreTitle=NightPaths.CORES[night_core].title if NightPaths.CORES.has(night_core) else ""
+ if not night_core.is_empty():result.buildSummary=str(result.nightCoreTitle)+"  /  "+str(result.get("buildSummary",""))
  result.rulesVersion=run_rules_version
  result.merge({"runTimeMs":roundi(run_time*1000.0),"bestTimeMs":best_time_ms,"newTimeRecord":new_time_record,"runResumes":run_resumes,"recentRuns":recent_runs.duplicate(true),"resume":resume_summary(),"saveStatus":save_status})
  return result
@@ -691,7 +726,8 @@ func _make_stages(varied: bool=false) -> Array:
   _assign_weapon_roles(result[index],index,0)
  if not varied: return result
  EncounterVariants.apply(result,run_seed)
- if run_rules_version==RUN_RULES_VERSION: EncounterVariants.add_mastery(result,run_seed,challenge_level())
+ if run_rules_version in [RUN_RULES_VERSION,NIGHT_RULES_VERSION]: EncounterVariants.add_mastery(result,run_seed,challenge_level())
+ if run_rules_version==NIGHT_RULES_VERSION:NightPaths.configure_boss(result,run_seed)
  for stage: Dictionary in result:
   stage.contract=selected_contract
   stage.contracts=selected_contract_ids.duplicate()

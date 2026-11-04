@@ -120,11 +120,11 @@ func _ensure_actors(selection: Dictionary) -> void:
 
 func begin(key: String, context: Dictionary, selection: Dictionary) -> void:
 	lines=Story.lines(key,context)
+	decision=Story.decision(context)
 	if lines.is_empty(): return
 	_ensure_actors(selection)
 	scene_id=key
 	meta=Story.metadata(key,context)
-	decision=Story.decision(context)
 	index=0
 	clock=0.0
 	line_time=0.0

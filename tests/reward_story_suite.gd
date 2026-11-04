@@ -91,6 +91,9 @@ func _decision_contract() -> void:
 func _single_and_ordered_responses() -> void:
  var signatures: Dictionary={}
  for id: String in Campaign.REWARDS:
+  # The eighteen manuscript reactions remain unchanged. Night-specific cards
+  # participate in routes but have no invented dialogue; covered in night_paths_suite.
+  if Campaign.NightPaths.REWARDS.has(id):continue
   var context:=_context([id])
   var lines:=_valid_text("reward",context)
   var signature:=_signature(lines)
@@ -143,7 +146,7 @@ func _single_and_ordered_responses() -> void:
  completed.append("responses")
 
 func _all_five_card_histories() -> void:
- var ids: Array=Campaign.REWARDS.keys().filter(func(key): return key not in Campaign.RewardBuilds.NEW_IDS)
+ var ids: Array=Campaign.REWARDS.keys().filter(func(key): return key not in Campaign.RewardBuilds.NEW_IDS and not Campaign.NightPaths.REWARDS.has(key))
  _enumerate(ids,[],0)
  check(routes_seen.size()==4,"all four build routes occur in valid five-card histories")
  completed.append("enumeration")

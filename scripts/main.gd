@@ -27,6 +27,7 @@ const BossEntrance=preload("res://scripts/boss_entrance.gd")
 const CharacterPreview=preload("res://scripts/character_preview.gd")
 const REGION_COLORS := [Color("48c6ef"),Color("69dbb6"),Color("f5b05f")]
 
+var night_picker=preload("res://scripts/night_core_picker.gd").new()
 var game=Combat.new()
 var campaign=Campaign.new()
 var fighter: Dictionary=FighterRoster.resolve()
@@ -112,6 +113,9 @@ func _ready() -> void:
  hud=HUD.new()
  add_child(hud)
  hud.action_requested.connect(_action)
+ add_child(night_picker)
+ night_picker.chosen.connect(func(id:String):_action("night_core:"+id))
+ night_picker.cancelled.connect(func():_action("menu"))
  hud.move_changed.connect(func(value: float): touch_move=value)
  hud.guard_changed.connect(func(value: bool): touch_guard=value)
  add_child(story)
@@ -164,6 +168,11 @@ func _js_action(arguments: Array) -> void:
  else: _action(command)
 
 func _input(event: InputEvent) -> void:
+ if night_picker.visible:
+  if event is InputEventKey and event.pressed and not event.echo:
+   if event.physical_keycode==KEY_ESCAPE:_action("menu")
+   elif event.physical_keycode in [KEY_1,KEY_2,KEY_3]:_action("night_core:"+str(Combat.NightPaths.CORES.keys()[event.physical_keycode-KEY_1]))
+  return
  if campaign.phase!="menu" or story.active or (is_instance_valid(hud) and hud.is_guide_open()):
   character_preview.cancel()
  if ready_to_play and campaign.phase=="menu" and not story.active and is_instance_valid(hud) and not hud.is_guide_open():
@@ -211,6 +220,15 @@ func _clear_inputs() -> void:
 
 func _action(command: String) -> void:
  if not ready_to_play: return
+ if night_picker.visible:
+  if command.begins_with("night_core:"):
+   var core_id:String=command.trim_prefix("night_core:")
+   if Combat.NightPaths.CORES.has(core_id):
+    night_picker.hide()
+    _start_trial(core_id)
+   return
+  if command=="menu":night_picker.hide()
+  elif command not in ["music","voice"]:return
  if command=="voice":
   voice.toggle()
   return
@@ -324,9 +342,10 @@ func _action(command: String) -> void:
    effects.set_palette(REGION_COLORS[0])
    _sync_actors()
   else:
-   campaign.begin_trial()
-   _ranking("begin",[campaign.run_id])
-   _begin_encounter()
+   if str(fighter.styleId)=="night_squire":
+    game.paused=true
+    night_picker.open(_bar_font)
+   else:_start_trial()
   return
  if command=="retry":
   if campaign.mode=="practice": _action("practice")
@@ -349,6 +368,11 @@ func _action(command: String) -> void:
  elif command=="practice_infinite_hp":
   if campaign.mode=="practice": game.set_infinite_hp(not game.infinite_hp)
  else: game.action(command)
+
+func _start_trial(core_id:String="") -> void:
+ campaign.begin_trial("",-1,FighterRoster.presentation_from_selection(fighter),core_id)
+ _ranking("begin",[campaign.run_id])
+ _begin_encounter()
 
 func _begin_encounter(with_story: bool=true) -> void:
  _clear_inputs()
@@ -657,10 +681,11 @@ func _event(data: Dictionary) -> void:
   end_delay=0.0
  if not is_instance_valid(hud): return
  if kind=="parry":
-  hud.notify_text("极限防御 · J 追击" if data.get("side","")=="player" else "极限防御")
+  hud.notify_text("极限防御 · K 破阵" if game.player.get("nightCore","")=="counter" and data.get("side","")=="player" else "极限防御 · J 追击" if data.get("side","")=="player" else "极限防御")
  elif kind=="stanceChange":
   hud.notify_text("腿式 · 远击破势" if data.get("stance","")=="kick" else "拳式 · 近身快攻")
- elif kind=="evade": hud.notify_text("极限闪避")
+ elif kind=="evade": hud.notify_text("极限闪避 · J 续招" if game.player.get("nightCore","")=="dodge" else "极限闪避")
+ elif kind=="nightTechnique":hud.notify_text(str(data.get("label","")))
  elif kind=="guardBreak":
   hud.notify_text("架势击破")
   _camera_impact(0.085,float(data.get("facing",game.player.facing)),0.22)
@@ -852,6 +877,7 @@ func _process(delta: float) -> void:
  state.stageCountdown=stage_countdown
  state.healthDisplay=health_display
  state.ko=ko_frame
+ state.nightCoreChoice=night_picker.visible
  state.campaign=campaign.snapshot(state)
  state.campaign.clockRunning=_run_clock_active()
  state.campaign.storyRoute=str(story.decision.get("routeTitle",""))
@@ -865,7 +891,7 @@ func _process(delta: float) -> void:
  state.voice=voice_state
  state.music=music.snapshot()
  hud.update_status(state)
- hud.visible=not story.active and not boss_entrance.active
+ hud.visible=not story.active and not boss_entrance.active and not night_picker.visible
  if OS.has_feature("web") and telemetry_time>0.10:
   telemetry_time=0.0
   player_pose=player.presentation_snapshot()

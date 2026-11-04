@@ -9,6 +9,7 @@ const INK := Color("163244")
 const BLUE := Color("37bce6")
 const ORANGE := Color("ffae43")
 const WHITE := Color("f4fbff")
+const NightPaths=preload("res://scripts/night_paths.gd")
 const SentienceCombat = preload("res://scripts/sentience_combat.gd")
 const FighterGuide = preload("res://scripts/fighter_guide.gd")
 const EnemyHealthDisplay = preload("res://scripts/enemy_health_display.gd")
@@ -1016,6 +1017,10 @@ func _update_roster(data: Dictionary) -> void:
 		_stance_label.visible = true
 		var burst:=float(player.get("nightBurstRemaining",0.0))
 		_stance_label.text = "爆发 %.1fs" % burst if burst>0.0 else "烈波 %d / 3" % int(player.get("nightFocus",0))
+		var path_hint:=NightPaths.hint(player,float(data.get("time",0.0)))
+		if not path_hint.is_empty():
+			_stance_label.tooltip_text=path_hint
+			_instruction.text+="  ·  "+path_hint
 	elif str(_fighter_identity.get("styleId", "")) == "shadow_knight":
 		_ultimate_tag.text = "ULTIMATE / SHADOW KNIGHT"
 		_stance_label.visible = true
@@ -1539,17 +1544,20 @@ func update_status(data: Dictionary) -> void:
 	_notice.visible = in_fight and not ultimate and not _paused and _banner_time < 0.3 and not showing_victory
 	_brand.visible = not ultimate and not _started and not showing_victory and not (_menu_mode == "intro" and _roster_group.visible)
 	var cooldown: float = maxf(0.0,float(player.get("skillCooldown",0.0)))
+	var night_link:bool=str(player.get("nightCore",""))!="" and (float(data.get("time",0.0))<float(player.get("nightChaseUntil",-1.0)) or (float(data.get("time",0.0))<float(player.get("nightFlowUntil",-1.0)) and not player.get("nightFlowUsed",false)))
 	if cooldown <= 0.0:
 		_cooldown_max = 1.0
 	else:
 		_cooldown_max = maxf(_cooldown_max,cooldown)
 	var cooldown_duration: float = maxf(0.01,float(player.get("skillCooldownMax",_cooldown_max)))
-	_skills.ability.set_cooldown(cooldown/cooldown_duration)
+	_skills.ability.set_cooldown(0.0 if night_link else cooldown/cooldown_duration)
 	_skills.ability.hint.text = "E / %.1fs" % cooldown if cooldown > 0.05 else "E"
-	var can_act: bool = not _ko_active and not _guide_open and _started and in_fight and not _paused and not _ended and not ultimate and not showing_victory and float(data.get("stageCountdown",0.0))<=0.0
+	if night_link:
+		_skills.ability.hint.text="E / 接招"
+	var can_act: bool = not bool(data.get("nightCoreChoice",false)) and not _ko_active and not _guide_open and _started and in_fight and not _paused and not _ended and not ultimate and not showing_victory and float(data.get("stageCountdown",0.0))<=0.0
 	for action in _skills:
 		var skill: SkillButton = _skills[action]
-		var available: bool = (action != "ultimate" or energy >= 100.0) and (action != "ability" or cooldown <= 0.01)
+		var available: bool = (action != "ultimate" or energy >= 100.0) and (action != "ability" or cooldown <= 0.01 or night_link)
 		skill.set_enabled(can_act and available)
 	_left.set_enabled(can_act)
 	_right.set_enabled(can_act)

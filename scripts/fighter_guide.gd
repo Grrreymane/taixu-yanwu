@@ -65,7 +65,7 @@ static func for_style(style_id: String) -> Dictionary:
 					{"key":"Q", "title":"天极之拳", "body":"开启爆发，强化拳脚连段，补满 3 层烈波并重置 E 冷却。起式后接连击持续进攻。", "detail":"消耗 100 SP · 爆发持续 %.0f 秒" % Combat.NIGHT_BURST_DURATION}
 				],
 				"chain":"L 极限防御  →  E 连环腿  →  J  →  J  →  K",
-				"tip":"E 还在冷却时，防反后直接接 J。想更快再用连环腿，就打完 J 的第三段；Q 起式结束后也可接 E。"
+				"tip":"新试炼先选核心：防反 K 撞开后排、成功闪避后 J 续招，或 J 三连命中接 E 再接 J。每条路线有两项专属强化；原有试炼沿用原规则。"
 			}
 		_:
 			result = {

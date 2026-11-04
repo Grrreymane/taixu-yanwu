@@ -134,7 +134,9 @@ func _full_runs() -> void:
 func _rewards() -> void:
  for id: String in Campaign.REWARDS:
   var campaign:=VolatileCampaign.new()
-  campaign.begin_trial("mirror",4)
+  if Campaign.NightPaths.REWARDS.has(id):
+   campaign.begin_trial("mirror",4,{"characterId":"fuhua","styleId":"night_squire","appearanceId":"default"},str(Campaign.NightPaths.REWARDS[id].core))
+  else:campaign.begin_trial("mirror",4)
   campaign.phase="reward"
   campaign.reward_options=[Campaign.REWARDS[id].duplicate(true)]
   campaign.carry.hp=40.0

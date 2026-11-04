@@ -3,10 +3,11 @@ extends RefCounted
 ## No source-game dialogue or native story timeline is claimed here.
 const SCENES := ["intro","reward","stage_2","stage_4","final","victory","defeat"]
 const REWARD_GROUPS := {
- "press":["fist","iron","risk","finisher","chainflow","crack"],
- "guard":["reflection","riposte","calm","breath","focus","sustain"],
- "flow":["flow","swift","windstep","reservoir","crosswind","afterglow"]}
+ "press":["fist","iron","risk","finisher","chainflow","crack","night_open","night_finish"],
+ "guard":["reflection","riposte","calm","breath","focus","sustain","night_shock","night_chase"],
+ "flow":["flow","swift","windstep","reservoir","crosswind","afterglow","night_turn","night_step"]}
 const REWARD_TITLES := {
+ "night_shock":"隔山打牛","night_chase":"追身寸劲","night_turn":"回身破守","night_step":"踏风连步","night_open":"寸劲开门","night_finish":"拳脚相续",
  "fist":"寸心如锋","iron":"破阵之势","risk":"以攻代守","finisher":"三叠归元",
  "reflection":"明镜止水","riposte":"反照","calm":"守一","breath":"生生不息",
  "flow":"行云流水","swift":"招随心转","windstep":"乘风","reservoir":"气贯长虹",
