@@ -67,6 +67,7 @@ const out='build/screenshots/practice-controls-web';fs.mkdirSync(out,{recursive:
    await apply();await wait(pattern=>__godotState.enemy.bossPattern===pattern,pattern);
    assert.equal((await state()).player.nightCore,'counter');assert.ok((await state()).player.nightPerks.night_chase);
    assert.ok((await state()).infiniteEnergy&&(await state()).infiniteHp);
+   if(pattern==='spear')await wait(()=>__godotState.enemy.aiRound>=3);
    const started=Date.now(),trace=[];let seen=false,parried=false;
    while(Date.now()-started<22000){
     const s=await state(),enemy=s.enemy;

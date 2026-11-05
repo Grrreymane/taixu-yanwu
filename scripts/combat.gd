@@ -1099,7 +1099,9 @@ func _encounter_ai(dt: float) -> void:
   if tactic=="range": preferred=3.15 if SentienceCombat.weapon_for(foe,int(foe.aiRound)+1)=="spear" else 2.0
   elif tactic=="press": preferred=1.18
   elif tactic=="guard": preferred=1.70
-  if foe.get("bossPattern","")=="spear":preferred=3.05
+  # A spear pattern still alternates weapons. Holding spear spacing on its
+  # following sword turn leaves it permanently outside the sword's reach.
+  if foe.get("bossPattern","")=="spear":preferred=3.05 if SentienceCombat.weapon_for(foe,int(foe.aiRound)+1)=="spear" else 1.75
   var spacing: float=preferred+rank*0.94
   var speed_scale: float=1.12 if tactic=="press" else 1.08 if tactic=="flank" else 1.0
   if foe.get("bossPattern","")=="spear" and time<float(foe.get("punishUntil",-1.0)):continue

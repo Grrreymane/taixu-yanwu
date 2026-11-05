@@ -66,6 +66,15 @@ func _patterns() -> void:
     signature_seen=g.enemy.attack.weapon==pattern
     break
   _check(signature_seen,"AI initiates selected pattern: "+pattern)
+  var openings:Array=[str(g.enemy.attack.weapon)] if signature_seen else []
+  var turn:int=int(g.enemy.aiRound)
+  for i in 3600:
+   g.update(1.0/120.0)
+   if int(g.enemy.aiRound)!=turn and g.enemy.state=="attack":
+    turn=int(g.enemy.aiRound);openings.append(str(g.enemy.attack.weapon))
+   if openings.size()>=5:break
+  _check(openings.size()>=5,"AI finishes a full weapon cycle and repeats without stalling: "+pattern)
+  if openings.size()>=5:_check(openings.slice(0,4)==Night.BOSS[pattern].cycle and openings[4]==pattern,"actual weapon cycle matches chosen pattern")
   g.set_training(true);g.enemy.aiRound=1;g.enemy.phase=1
   g._sentience_attack(g.enemy,"light",1 if pattern=="sword" else 0,false)
   if pattern=="sword":
