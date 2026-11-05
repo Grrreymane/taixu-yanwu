@@ -244,6 +244,9 @@ func _action(command: String) -> void:
   elif command.begins_with("practice_perk:"):
    practice_builds.toggle(command.trim_prefix("practice_perk:"))
    _refresh_practice_build()
+  elif command.begins_with("practice_enemy:"):
+   practice_builds.choose_enemy(command.trim_prefix("practice_enemy:"))
+   _refresh_practice_build()
   elif command=="practice_build_apply":
    practice_builds.commit()
    _save_fighter_choice()
@@ -266,7 +269,13 @@ func _action(command: String) -> void:
    practice_builds.begin(str(fighter.styleId))
    _refresh_practice_build()
   return
- if command.begins_with("practice_core:") or command.begins_with("practice_perk:") or command in ["practice_build_apply","practice_build_cancel"]:return
+ if command.begins_with("practice_core:") or command.begins_with("practice_perk:") or command.begins_with("practice_enemy:") or command in ["practice_build_apply","practice_build_cancel"]:return
+ if command=="practice_infinite_energy":
+  if campaign.mode=="practice" and campaign.phase in ["fight","cleared","failed"] and not night_picker.visible:
+   practice_builds.infinite_energy=not practice_builds.infinite_energy
+   game.set_infinite_energy(practice_builds.infinite_energy)
+   _save_fighter_choice()
+  return
  if night_picker.visible:
   if command.begins_with("night_core:"):
    var core_id:String=command.trim_prefix("night_core:")
@@ -421,7 +430,8 @@ func _start_practice() -> void:
  campaign.begin_practice()
  story.reset()
  if not preserve_training:game.set_training(false)
- game.start_sparring()
+ game.start_sparring(practice_builds.enemy_pattern)
+ game.set_infinite_energy(practice_builds.infinite_energy)
  practice_builds.apply(game.player,str(fighter.styleId))
  game.paused=not application_focused
  game.enemy.name="识之律者"
@@ -549,6 +559,7 @@ func _load_fighter_choice() -> void:
   skin_id=str(config.get_value("fighter","appearance",skin_id))
   remembered=config.get_value("fighter","appearances",{})
   practice_builds.restore(config.get_value("practice","builds",{}))
+  practice_builds.restore_settings(config.get_value("practice","settings",{}))
  if OS.has_feature("web"):
   var saved: Variant=JavaScriptBridge.eval("(function(){try{return localStorage.getItem('taixu.fighter');}catch(e){return null;}})()",true)
   if saved is String:
@@ -558,6 +569,7 @@ func _load_fighter_choice() -> void:
     skin_id=str(value.get("appearance",skin_id))
     remembered=value.get("appearances",{})
     practice_builds.restore(value.get("practiceBuilds",{}))
+    practice_builds.restore_settings(value.get("practiceSettings",{}))
  if remembered is Dictionary:
   for key in remembered:
    if not FighterRoster.resolve("fuhua",str(key),str(remembered[key])).is_empty():
@@ -572,9 +584,10 @@ func _save_fighter_choice() -> void:
  config.set_value("fighter","appearance",fighter.appearanceId)
  config.set_value("fighter","appearances",appearance_choices)
  config.set_value("practice","builds",practice_builds.saved)
+ config.set_value("practice","settings",practice_builds.settings())
  config.save(FIGHTER_SETTINGS)
  if OS.has_feature("web"):
-  var encoded: String=JSON.stringify({"style":fighter.styleId,"appearance":fighter.appearanceId,"appearances":appearance_choices,"practiceBuilds":practice_builds.saved})
+  var encoded: String=JSON.stringify({"style":fighter.styleId,"appearance":fighter.appearanceId,"appearances":appearance_choices,"practiceBuilds":practice_builds.saved,"practiceSettings":practice_builds.settings()})
   JavaScriptBridge.eval("try{localStorage.setItem('taixu.fighter',"+JSON.stringify(encoded)+");}catch(e){}",true)
 
 func _roster_snapshot() -> Dictionary:

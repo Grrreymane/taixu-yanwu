@@ -32,7 +32,7 @@ static func prepare(g,attack:Dictionary) -> void:
    attack.postureDamage+=30.0
    s.heavyUntil=-1.0
   elif kind=="ability" and g.time<float(s.chaseUntil):
-   if p.energy>=10.0:p.energy-=10.0
+   if p.energy>=10.0:g.spend_energy(10.0)
    s.chaseUntil=-1.0
  elif p.style=="hawk_of_the_fog":
   if kind=="light" and g.time<float(s.flashUntil):attack.damage*=1.10
@@ -113,7 +113,7 @@ static func contact(g,attack:Dictionary,foe:Dictionary) -> float:
     "mo_eclipse":
      var limit:=10.0 if Paths.has(p,"mo_long") else 6.0
      if p.eclipseRemaining>0 and p.energy>=15.0 and float(s.eclipseAdded)<limit:
-      p.energy-=15.0;p.eclipseRemaining+=2.0;s.eclipseAdded+=2.0
+      g.spend_energy(15.0);p.eclipseRemaining+=2.0;s.eclipseAdded+=2.0
     "mo_discharge":s.conductUntil=g.time+6.0
     "mo_heavy":
      if p.eclipseRemaining>0:s.heavyUntil=g.time+6.0
@@ -135,7 +135,7 @@ static func contact(g,attack:Dictionary,foe:Dictionary) -> float:
    if p.armorCore=="fo_flash":s.linkUntil=g.time+3.0
   if attack.get("fogLink",false) and first and int(attack.get("fogCharges",0))>0:
    var cost:=0.0 if Paths.has(p,"fo_step") else 10.0
-   if p.energy>=cost:p.energy-=cost;p.skillCooldown=0.0
+   if p.energy>=cost:g.spend_energy(cost);p.skillCooldown=0.0
    if Paths.has(p,"fo_breath") and int(attack.fogCharges)>=2:p.fogCharges=mini(3,int(p.fogCharges)+1)
   if attack.get("fogStorm",false) and first:
    var count:=0

@@ -26,6 +26,15 @@
 .bc-practice-entry{position:fixed;z-index:29;top:159px;right:22px;box-sizing:border-box;padding:4px 8px;border:1px solid #8aafc2;border-radius:5px;background:#123049ed;color:#fff;font:16px Battle,'Microsoft YaHei',sans-serif;cursor:pointer}
 .bc-practice-entry[hidden]{display:none}
 .bc-practice-entry:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.bc-practice-entry[aria-pressed=true]{border-color:#b9eaff;background:#254960}
+.bc-practice-settings{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:18px}
+.bc-practice-settings .bc-baseline{margin-top:0}
+.bc-enemy-choice{display:flex;align-items:center;gap:14px;font-size:18px;max-width:100%}
+.bc-enemy-choice label{flex-shrink:0}
+.bc-enemy-choice select{min-width:0;max-width:100%;padding:10px 30px 10px 14px;color:#fff;background:#132d40;border:1px solid #658aa1;border-radius:6px;font:18px Battle,'Microsoft YaHei',sans-serif;cursor:pointer}
+.bc-enemy-choice select:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.bc-enemy-info{flex:0 0 32px;height:32px;border:1px solid #62849b;border-radius:50%;color:#daedff;background:#102334;font:20px Georgia,serif;cursor:pointer}
+@media(max-width:480px){.bc-enemy-choice{width:100%;gap:8px}.bc-enemy-choice select{flex:1;padding-right:8px;font-size:16px}}
 .bc-practice .bc-title{margin-bottom:28px}
 .bc-practice .bc-select{height:270px;padding:24px}
 .bc-practice .bc-name{font-size:26px;margin-bottom:19px}

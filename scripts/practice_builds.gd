@@ -5,6 +5,19 @@ const Night=preload("res://scripts/night_paths.gd")
 var saved: Dictionary={}
 var style: String=""
 var draft: Dictionary={"core":"","perks":[]}
+var infinite_energy:bool=false
+var enemy_pattern:String="sword"
+var draft_enemy:String="sword"
+
+func restore_settings(value:Variant) -> void:
+ infinite_energy=false;enemy_pattern="sword"
+ if not value is Dictionary:return
+ if value.get("infiniteEnergy") is bool:infinite_energy=value.infiniteEnergy
+ var pattern:String=str(value.get("enemyPattern","sword"))
+ if Night.BOSS.has(pattern):enemy_pattern=pattern
+
+func settings() -> Dictionary:
+ return {"infiniteEnergy":infinite_energy,"enemyPattern":enemy_pattern}
 
 # Practice preferences never enter campaign rewards, checkpoints or rankings.
 func clean(style_id:String,value:Variant) -> Dictionary:
@@ -31,6 +44,10 @@ func selection(style_id:String) -> Dictionary:
 func begin(style_id:String) -> void:
  style=style_id
  draft=selection(style)
+ draft_enemy=enemy_pattern
+
+func choose_enemy(pattern:String) -> void:
+ if Night.BOSS.has(pattern):draft_enemy=pattern
 
 func choose(core:String) -> void:
  if core!="" and not Paths.valid(style,core):return
@@ -46,6 +63,7 @@ func toggle(id:String) -> void:
 
 func commit() -> void:
  saved[style]=clean(style,draft)
+ enemy_pattern=draft_enemy
 
 func apply(player:Dictionary,style_id:String) -> void:
  var loadout:Dictionary=selection(style_id)
@@ -55,7 +73,13 @@ func apply(player:Dictionary,style_id:String) -> void:
 func snapshot() -> Dictionary:
  return {"style":style,"core":draft.core,"selectedPerks":draft.perks.duplicate(),
   "options":Paths.options(style),"perks":perk_options(style,str(draft.core)),
-  "basics":Paths.BASICS.get(style,"")}
+  "basics":Paths.BASICS.get(style,""),"enemyPattern":draft_enemy,"enemyOptions":enemy_options()}
+
+static func enemy_options() -> Array:
+ var result:Array=[]
+ for id in Night.BOSS:
+  result.append({"id":id,"title":Night.BOSS[id].title,"description":Night.BOSS[id].description})
+ return result
 
 static func perk_options(style_id:String,core:String) -> Array:
  var rows:Array=[]

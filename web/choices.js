@@ -1,7 +1,7 @@
 /* Accessible web selection UI. Only forwards ordinary game actions. */
 (() => {
  'use strict';
- let root,grid,title,footer,extras,entry,infoDialog,lastKey='',mode='',locked=false,returnFocus=null;
+ let root,grid,title,footer,extras,entry,energyToggle,infoDialog,lastKey='',mode='',locked=false,returnFocus=null;
  const node=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text)n.textContent=text;return n};
  const send=(action)=>{if(!locked){locked=true;window.__godotAction?.(action)}};
  function init(){
@@ -12,13 +12,23 @@
   entry=node('button','bc-practice-entry','打法配置  B');entry.id='practice-build-entry';entry.hidden=true;
   entry.setAttribute('aria-label','自由对练打法配置');entry.setAttribute('aria-haspopup','dialog');entry.setAttribute('aria-controls','battle-choices');entry.setAttribute('aria-keyshortcuts','B');
   entry.addEventListener('click',()=>window.__godotAction?.('practice_build'));document.body.append(entry);
+  energyToggle=node('button','bc-practice-entry','无限能量：关');energyToggle.id='practice-energy';energyToggle.hidden=true;
+  energyToggle.setAttribute('aria-label','无限能量');energyToggle.title='SP 保持满值；大招持续时间、技能冷却与招式衔接保持原样。';
+  energyToggle.addEventListener('click',e=>{
+   window.__godotAction?.('practice_infinite_energy');
+   if(e.detail>0)document.getElementById('canvas')?.focus();
+  });document.body.append(energyToggle);
   infoDialog=node('dialog');infoDialog.id='battle-choice-info';infoDialog.setAttribute('aria-labelledby','bc-info-title');document.body.append(infoDialog);
   infoDialog.addEventListener('close',()=>returnFocus?.focus());
   window.addEventListener('keydown',e=>{
-   if(root.hidden)return;
+   if(root.hidden){
+    if((e.target===entry||e.target===energyToggle)&&['Enter',' '].includes(e.key))e.stopImmediatePropagation();
+    return;
+   }
    if(infoDialog.open){e.stopImmediatePropagation();return}
+   if(e.target.tagName==='SELECT'&&e.key!=='Tab'){e.stopImmediatePropagation();return}
    if(e.key==='Tab'){
-    const items=[...root.querySelectorAll('button:not(:disabled),input:not(:disabled)')],i=items.indexOf(document.activeElement);
+    const items=[...root.querySelectorAll('button:not(:disabled),input:not(:disabled),select:not(:disabled)')],i=items.indexOf(document.activeElement);
     if(e.shiftKey&&i<=0){items.at(-1)?.focus();e.preventDefault()}
     else if(!e.shiftKey&&(i<0||i===items.length-1)){items[0]?.focus();e.preventDefault()}
    }else if(['1','2','3'].includes(e.key)){
@@ -37,9 +47,18 @@
  }
  function practiceControls(s,focusId,entering){
   const build=s.practiceBuild;
+  const settings=node('div','bc-practice-settings');extras.append(settings);
   const baseline=node('button','bc-secondary bc-baseline','基础招式');baseline.id='bc-baseline';
   baseline.setAttribute('aria-label','基础招式，不使用核心与专属强化');baseline.setAttribute('aria-pressed',String(!build.core));
-  baseline.addEventListener('click',()=>window.__godotAction?.('practice_core:'));extras.append(baseline);
+  baseline.addEventListener('click',()=>window.__godotAction?.('practice_core:'));settings.append(baseline);
+  if(build.enemyOptions){
+   const enemy=node('div','bc-enemy-choice'),label=node('label',null,'小识招路'),select=node('select');select.id='bc-enemy-pattern';label.htmlFor=select.id;
+   build.enemyOptions.forEach(row=>{const option=node('option',null,row.title);option.value=row.id;select.append(option)});
+   select.value=build.enemyPattern;select.addEventListener('change',()=>window.__godotAction?.('practice_enemy:'+select.value));
+   const info=node('button','bc-enemy-info','i');info.setAttribute('aria-label','小识招路详情');
+   const selected=build.enemyOptions.find(row=>row.id===build.enemyPattern);info.title=selected?.description||'';
+   info.addEventListener('click',()=>details(info,selected.title,selected.description));enemy.append(label,select,info);settings.append(enemy);
+  }
   if(build.perks.length){
    const group=node('fieldset','bc-perks'),legend=node('legend',null,'专属强化'),list=node('div','bc-perk-grid');group.append(legend,list);
    build.perks.forEach(row=>{
@@ -61,11 +80,10 @@
   const practiceAvailable=s.campaign?.mode==='practice'&&['fight','cleared','failed'].includes(s.campaign?.phase)&&!s.story?.active;
   if(!root){if(!next&&!practiceAvailable)return;init()}
   entry.hidden=!practiceAvailable||!!next;
-  const entryRect=s.ui?.practiceBuildRect;
-  if(entryRect?.length===4){
-   const width=Math.max(144,entryRect[2]),height=Math.max(38,entryRect[3]);
-   entry.style.left=Math.max(8,Math.min(entryRect[0],window.innerWidth-width-16))+'px';entry.style.top=entryRect[1]+'px';entry.style.width=width+'px';entry.style.height=height+'px';entry.style.right='auto';
-  }
+  energyToggle.hidden=entry.hidden||!s.ui?.practiceEnergyRect;
+  energyToggle.textContent='无限能量：'+(s.infiniteEnergy?'开':'关');energyToggle.setAttribute('aria-pressed',String(!!s.infiniteEnergy));
+  positionPracticeControl(energyToggle,s.ui?.practiceEnergyRect);
+  positionPracticeControl(entry,s.ui?.practiceBuildRect);
   if(!next){
    if(!root.hidden){root.hidden=true;infoDialog.close();document.getElementById('canvas')?.removeAttribute('inert');document.getElementById('canvas')?.focus()}
    lastKey='';mode='';return;
@@ -118,4 +136,12 @@
   // Focus the neutral heading on entry; no upgrade is visually recommended.
   title.tabIndex=-1;if(!rerolling)title.focus();else secondary.disabled?title.focus():secondary.focus();
  };
+ function positionPracticeControl(button,rect){
+  if(rect?.length!==4)return;
+  const width=Math.max(144,rect[2]),height=Math.max(38,rect[3]);
+  let top=rect[1];
+  // Keep a usable touch target even when the game's canvas scales down.
+  if(button===entry&&!energyToggle.hidden)top=Math.max(top,parseFloat(energyToggle.style.top)+parseFloat(energyToggle.style.height)+6);
+  button.style.left=Math.max(8,Math.min(rect[0],window.innerWidth-width-16))+'px';button.style.top=top+'px';button.style.width=width+'px';button.style.height=height+'px';button.style.right='auto';
+ }
 })();

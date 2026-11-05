@@ -7,6 +7,8 @@ var title:Label
 var cards:Array[Button]=[]
 var perks:Array[CheckBox]=[]
 var baseline:CheckBox
+var enemy_label:Label
+var enemy_choice:OptionButton
 var perk_title:Label
 var apply_button:Button
 var cancel_button:Button
@@ -35,6 +37,13 @@ func _ready() -> void:
  baseline=CheckBox.new();baseline.text="基础招式";baseline.accessibility_name="基础招式，不使用核心与专属强化"
  _style_button(baseline)
  baseline.pressed.connect(func():action_requested.emit("practice_core:"));panel.add_child(baseline)
+ enemy_label=Label.new();enemy_label.text="小识招路";enemy_label.add_theme_font_size_override("font_size",20);panel.add_child(enemy_label)
+ enemy_choice=OptionButton.new();enemy_choice.accessibility_name="小识招路"
+ enemy_choice.add_theme_font_size_override("font_size",20);_style_button(enemy_choice);panel.add_child(enemy_choice)
+ for row in preload("res://scripts/practice_builds.gd").enemy_options():
+  enemy_choice.add_item(row.title)
+  enemy_choice.get_popup().set_item_tooltip(enemy_choice.item_count-1,row.description)
+ enemy_choice.item_selected.connect(func(index:int):action_requested.emit("practice_enemy:"+str(view.enemyOptions[index].id)))
  perk_title=Label.new();perk_title.text="专属强化";perk_title.add_theme_font_size_override("font_size",22);panel.add_child(perk_title)
  for i in 2:
   var box:=CheckBox.new();box.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
@@ -74,6 +83,10 @@ func present(value:Dictionary) -> void:
   cards[i].set_choice(row.title,row.description,view.basics if view.basics!="" else row.hint,i,"已选" if selected else "选用")
   cards[i].set_pressed_no_signal(selected)
  baseline.set_pressed_no_signal(view.core=="")
+ for i in view.enemyOptions.size():
+  if view.enemyOptions[i].id==view.enemyPattern:
+   enemy_choice.select(i)
+   enemy_choice.tooltip_text=str(view.enemyOptions[i].description)
  perk_title.visible=not view.perks.is_empty()
  for i in 2:
   perks[i].visible=i<view.perks.size()
@@ -96,6 +109,8 @@ func _resize() -> void:
  for i in 3:
   cards[i].position=Vector2(i*352,72);cards[i].size=Vector2(336,300)
  baseline.position=Vector2(0,389);baseline.size=Vector2(260,44)
+ enemy_label.position=Vector2(394,389);enemy_label.size=Vector2(140,44)
+ enemy_choice.position=Vector2(534,389);enemy_choice.size=Vector2(506,44)
  perk_title.position=Vector2(0,453);perk_title.size=Vector2(400,35)
  for i in 2:
   perks[i].position=Vector2(i*532,490);perks[i].size=Vector2(508,112)

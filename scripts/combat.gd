@@ -45,6 +45,7 @@ var ended := false
 var winner := ""
 var training := false
 var infinite_hp := false
+var infinite_energy := false
 var _sparring := false
 var hit_stop := 0.0
 var ultimate: Dictionary = {}
@@ -132,6 +133,7 @@ func reset() -> void:
  _legacy_mode=true
  _sparring=false
  infinite_hp=false
+ infinite_energy=false
  _pressure_level=1
  _encounter_rule.clear()
  _rng.seed=3103
@@ -143,14 +145,31 @@ func start() -> void:
  started=true
  _emit("start")
 
-func start_sparring() -> void:
+func start_sparring(pattern:String="") -> void:
  # The visible opponent is the real Sentience, including her second phase;
  # use the same weapon/turn scheduler as the boss rather than the old dummy AI.
  var dummy:=training
  var keep_infinite:=infinite_hp
- start_encounter({"playerX":-1.65,"pressureLevel":1,"training":dummy,"enemies":[{"id":"sparring_sentience","type":"boss","boss":true,"name":"识之律者","hp":180.0,"x":1.65,"damageScale":1.0}]},{"hp":120.0,"maxHp":120.0,"energy":100.0})
+ var keep_energy:=infinite_energy
+ var opponent:Dictionary={"id":"sparring_sentience","type":"boss","boss":true,"name":"识之律者","hp":180.0,"x":1.65,"damageScale":1.0}
+ if NightPaths.BOSS.has(pattern):
+  opponent.bossPattern=pattern
+  opponent.weaponCycle=NightPaths.BOSS[pattern].cycle.duplicate()
+  opponent.tactic="range" if pattern=="spear" else "press"
+ start_encounter({"playerX":-1.65,"pressureLevel":1,"training":dummy,"enemies":[opponent]},{"hp":120.0,"maxHp":120.0,"energy":100.0})
  _sparring=true
  set_infinite_hp(keep_infinite)
+ set_infinite_energy(keep_energy)
+
+func set_infinite_energy(enabled:bool) -> void:
+ if not _sparring:return
+ infinite_energy=enabled
+ if enabled:player.energy=100.0
+
+func spend_energy(amount:float) -> void:
+ # Only the practice player's SP is unlimited. Timings, burst durations,
+ # cooldowns, enemy turns and all authored animation events stay intact.
+ player.energy=100.0 if _sparring and infinite_energy else maxf(0.0,float(player.energy)-amount)
 
 func set_infinite_hp(enabled: bool) -> void:
  if not _sparring or ended: return
@@ -940,7 +959,7 @@ func _begin_ultimate() -> void:
  if player_profile=="night_squire":
   _begin_night_burst()
   return
- player.energy=maxf(0.0,float(player.energy)-ArmorMechanics.ultimate_cost(player,time))
+ spend_energy(ArmorMechanics.ultimate_cost(player,time))
  ArmorMechanics.ultimate_begin(self)
  _refresh_target()
  player.facing=1 if player.x<=enemy.x else -1
@@ -1018,7 +1037,7 @@ func _advance_ultimate(dt: float) -> void:
   _check_end()
 
 func _begin_night_burst() -> void:
- player.energy=0.0
+ spend_energy(float(player.energy))
  _refresh_target()
  player.facing=1 if player.x<=enemy.x else -1
  # ND_Ultra is a burst activation, not an arena-wide damage move. Its native
@@ -1297,7 +1316,7 @@ func _check_end() -> void:
  _emit("end",{"winner":winner})
 
 func snapshot() -> Dictionary:
- return {"player":player.duplicate(true),"enemy":enemy.duplicate(true),"enemies":enemies.duplicate(true),"enemyId":enemy.id,"time":time,"started":started,"paused":paused,"ended":ended,"winner":winner,"training":training,"infiniteHp":infinite_hp,"ultimate":not ultimate.is_empty(),"ultimateTime":ultimate.get("time",-1.0),"combo":combo_count,"hitStop":hit_stop,"stats":stats.duplicate(true)}
+ return {"player":player.duplicate(true),"enemy":enemy.duplicate(true),"enemies":enemies.duplicate(true),"enemyId":enemy.id,"time":time,"started":started,"paused":paused,"ended":ended,"winner":winner,"training":training,"infiniteHp":infinite_hp,"infiniteEnergy":infinite_energy,"ultimate":not ultimate.is_empty(),"ultimateTime":ultimate.get("time",-1.0),"combo":combo_count,"hitStop":hit_stop,"stats":stats.duplicate(true)}
 
 func _emit(kind: String,data: Dictionary={}) -> void:
  var output: Dictionary=data.duplicate()

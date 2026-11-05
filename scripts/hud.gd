@@ -200,6 +200,7 @@ var _armor_signature := ""
 var _mode_button: Button
 var _infinite_hp_button: Button
 var _practice_build_button: Button
+var _infinite_energy_button: Button
 var _pause_button: Button
 var _instruction: Label
 var _cinematic := Control.new()
@@ -309,6 +310,17 @@ func _ready() -> void:
 	_practice_build_button.accessibility_name = "自由对练打法配置"
 	_practice_build_button.add_theme_font_size_override("font_size", 16)
 	_practice_build_button.pressed.connect(func(): _request_action("practice_build"))
+	_infinite_energy_button = _rect_button(_ui, "无限能量：关")
+	_infinite_energy_button.name = "PracticeInfiniteEnergy"
+	_infinite_energy_button.accessibility_name = "无限能量"
+	_infinite_energy_button.add_theme_font_size_override("font_size",16)
+	_infinite_energy_button.toggle_mode = true
+	_infinite_energy_button.focus_mode = Control.FOCUS_ALL
+	_infinite_energy_button.gui_input.connect(func(event:InputEvent):
+		if (event is InputEventMouseButton or event is InputEventScreenTouch) and not event.pressed:
+			_infinite_energy_button.release_focus())
+	_infinite_energy_button.tooltip_text = "SP 保持满值；大招持续时间、技能冷却与招式衔接保持原样。"
+	_infinite_energy_button.pressed.connect(func(): _request_action("practice_infinite_energy"))
 	_layout()
 	_set_menu("intro", "")
 	_battle.visible = false
@@ -686,6 +698,7 @@ func presentation_snapshot() -> Dictionary:
 		"infiniteHpVisible":_infinite_hp_button.is_visible_in_tree(),
 		"practiceBuildRect":_rect_values(_viewport_pixel_rect(_practice_build_button)),
 		"practiceBuildVisible":_practice_build_button.is_visible_in_tree(),
+		"practiceEnergyRect":_rect_values(_viewport_pixel_rect(_infinite_energy_button)),
 		"resultButtons":_result_button_rects(),
 		"continueVisible":_menu_mode == "intro" and bool(_campaign.get("resume",{}).get("available",false)),
 		"continueRect":_rect_values(_viewport_pixel_rect(_menu_start)),
@@ -715,6 +728,10 @@ func _result_button_rects() -> Dictionary:
 	return result
 
 func handle_modal_input(event: InputEvent) -> bool:
+	if _infinite_energy_button.is_visible_in_tree() and _infinite_energy_button.has_focus() and event is InputEventKey and event.physical_keycode in [KEY_ENTER,KEY_SPACE]:
+		if event.pressed and not event.echo: _request_action("practice_infinite_energy")
+		get_viewport().set_input_as_handled()
+		return true
 	if is_instance_valid(_reward_detail) and _reward_detail.visible:return true
 	for card in _reward_buttons:
 		if card.detail.visible:return true
@@ -1329,7 +1346,8 @@ func _layout() -> void:
 	_place(_pause_button, w - 130, 27, 100, 39)
 	_place(_mode_button, w - 170, 79, 140, 33)
 	_place(_infinite_hp_button, w - 202, 119, 172, 33)
-	_place(_practice_build_button, w - 202, 159, 172, 38)
+	_place(_infinite_energy_button, w - 202, 159, 172, 38)
+	_place(_practice_build_button, w - 202, 203, 172, 38)
 	_place(_enemy_panel, (w - 500) * 0.5, 29, 500, 88)
 	_place(_stage_panel,26,24,300,180 if _campaign_mode == "trial" else 150)
 	_place(_player_panel, 36, h - 154, 290, 120)
@@ -1505,12 +1523,16 @@ func update_status(data: Dictionary) -> void:
 	_hp_text.text = "HP  %03d / %03d" % [roundi(hp),roundi(max_hp)]
 	if bool(data.get("infiniteHp",false)): _hp_text.text = "HP  无限"
 	_sp_text.text = "SP %03d" % roundi(energy)
+	if bool(data.get("infiniteEnergy",false)): _sp_text.text = "SP 无限"
 	var combo: int = int(data.get("combo", 0))
 	_combo.text = "%02d  连击" % combo if combo > 1 else ""
 	_mode_button.text = "木人练习  T" if bool(data.get("training", false)) else "实战对练  T"
 	_mode_button.visible = _campaign_mode == "practice" and _phase == "fight"
 	_infinite_hp_button.visible = _mode_button.visible
 	_practice_build_button.visible = _campaign_mode == "practice" and _phase in ["fight","cleared","failed"] and not OS.has_feature("web")
+	_infinite_energy_button.visible = _practice_build_button.visible
+	_infinite_energy_button.text = "无限能量：" + ("开" if bool(data.get("infiniteEnergy",false)) else "关")
+	_infinite_energy_button.set_pressed_no_signal(bool(data.get("infiniteEnergy",false)))
 	_infinite_hp_button.text = "双方无限血量：" + ("开" if bool(data.get("infiniteHp",false)) else "关")
 	var enemy_kind: String = str(enemy.get("type",""))
 	var boss: bool = bool(enemy.get("boss",false)) or enemy_kind == "boss"
