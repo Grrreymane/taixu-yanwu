@@ -9,7 +9,7 @@ from fontTools import subset
 from fontTools.ttLib import TTFont
 
 root=Path(__file__).resolve().parents[2]
-inputs=['web-shell.html','web/choices.js','scripts/armor_paths.gd','scripts/night_paths.gd','scripts/campaign.gd','scripts/reward_builds.gd','scripts/fighter_roster.gd']
+inputs=['web-shell.html','web/choices.js','scripts/practice_build_picker.gd','scripts/armor_paths.gd','scripts/night_paths.gd','scripts/campaign.gd','scripts/reward_builds.gd','scripts/fighter_roster.gd']
 text=''.join((root/p).read_text(encoding='utf-8') for p in inputs)
 points=set(range(32,127))|{ord(c) for c in text if ord(c)>127}
 source=root/'assets/fonts/hi3-sdk-zh-cn.ttf'

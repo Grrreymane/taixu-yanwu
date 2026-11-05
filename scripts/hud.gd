@@ -199,6 +199,7 @@ var _roster_signature := ""
 var _armor_signature := ""
 var _mode_button: Button
 var _infinite_hp_button: Button
+var _practice_build_button: Button
 var _pause_button: Button
 var _instruction: Label
 var _cinematic := Control.new()
@@ -303,6 +304,11 @@ func _ready() -> void:
 	_notice.add_theme_constant_override("shadow_offset_y", 2)
 	_build_victory()
 	_build_fighter_guide()
+	_practice_build_button = _rect_button(_ui, "打法配置  B")
+	_practice_build_button.name = "PracticeBuild"
+	_practice_build_button.accessibility_name = "自由对练打法配置"
+	_practice_build_button.add_theme_font_size_override("font_size", 16)
+	_practice_build_button.pressed.connect(func(): _request_action("practice_build"))
 	_layout()
 	_set_menu("intro", "")
 	_battle.visible = false
@@ -678,6 +684,8 @@ func presentation_snapshot() -> Dictionary:
 		"voiceToggleRect":_rect_values(_viewport_pixel_rect(_voice_button)),
 		"infiniteHpRect":_rect_values(_viewport_pixel_rect(_infinite_hp_button)),
 		"infiniteHpVisible":_infinite_hp_button.is_visible_in_tree(),
+		"practiceBuildRect":_rect_values(_viewport_pixel_rect(_practice_build_button)),
+		"practiceBuildVisible":_practice_build_button.is_visible_in_tree(),
 		"resultButtons":_result_button_rects(),
 		"continueVisible":_menu_mode == "intro" and bool(_campaign.get("resume",{}).get("available",false)),
 		"continueRect":_rect_values(_viewport_pixel_rect(_menu_start)),
@@ -1321,6 +1329,7 @@ func _layout() -> void:
 	_place(_pause_button, w - 130, 27, 100, 39)
 	_place(_mode_button, w - 170, 79, 140, 33)
 	_place(_infinite_hp_button, w - 202, 119, 172, 33)
+	_place(_practice_build_button, w - 202, 159, 172, 38)
 	_place(_enemy_panel, (w - 500) * 0.5, 29, 500, 88)
 	_place(_stage_panel,26,24,300,180 if _campaign_mode == "trial" else 150)
 	_place(_player_panel, 36, h - 154, 290, 120)
@@ -1501,6 +1510,7 @@ func update_status(data: Dictionary) -> void:
 	_mode_button.text = "木人练习  T" if bool(data.get("training", false)) else "实战对练  T"
 	_mode_button.visible = _campaign_mode == "practice" and _phase == "fight"
 	_infinite_hp_button.visible = _mode_button.visible
+	_practice_build_button.visible = _campaign_mode == "practice" and _phase in ["fight","cleared","failed"] and not OS.has_feature("web")
 	_infinite_hp_button.text = "双方无限血量：" + ("开" if bool(data.get("infiniteHp",false)) else "关")
 	var enemy_kind: String = str(enemy.get("type",""))
 	var boss: bool = bool(enemy.get("boss",false)) or enemy_kind == "boss"

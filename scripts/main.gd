@@ -28,6 +28,10 @@ const CharacterPreview=preload("res://scripts/character_preview.gd")
 const REGION_COLORS := [Color("48c6ef"),Color("69dbb6"),Color("f5b05f")]
 
 var night_picker=preload("res://scripts/night_core_picker.gd").new()
+var practice_builds=preload("res://scripts/practice_builds.gd").new()
+var practice_picker=preload("res://scripts/practice_build_picker.gd").new()
+var practice_view:Dictionary={}
+var practice_was_paused:bool=false
 var game=Combat.new()
 var campaign=Campaign.new()
 var fighter: Dictionary=FighterRoster.resolve()
@@ -116,6 +120,8 @@ func _ready() -> void:
  add_child(night_picker)
  night_picker.chosen.connect(func(id:String):_action("night_core:"+id))
  night_picker.cancelled.connect(func():_action("menu"))
+ add_child(practice_picker)
+ practice_picker.action_requested.connect(_action)
  hud.move_changed.connect(func(value: float): touch_move=value)
  hud.guard_changed.connect(func(value: bool): touch_guard=value)
  add_child(story)
@@ -168,6 +174,16 @@ func _js_action(arguments: Array) -> void:
  else: _action(command)
 
 func _input(event: InputEvent) -> void:
+ if practice_picker.visible:
+  if practice_picker.has_details():return
+  if event is InputEventKey and event.pressed and not event.echo:
+   if event.physical_keycode in [KEY_ESCAPE,KEY_B]:
+    _action("practice_build_cancel")
+    get_viewport().set_input_as_handled()
+   elif event.physical_keycode in [KEY_1,KEY_2,KEY_3]:
+    _action("practice_core:"+str(practice_view.options[event.physical_keycode-KEY_1].id))
+    get_viewport().set_input_as_handled()
+  return
  if night_picker.visible:
   if night_picker.has_details():return
   if event is InputEventKey and event.pressed and not event.echo:
@@ -202,7 +218,7 @@ func _input(event: InputEvent) -> void:
  if ready_to_play and event.physical_keycode!=KEY_M:
   music.unlock()
   voice.unlock()
- var actions: Dictionary={KEY_ENTER:"start",KEY_J:"light",KEY_K:"heavy",KEY_Q:"ultimate",KEY_E:"ability",KEY_L:"guard",KEY_SPACE:"dodge",KEY_ESCAPE:"pause",KEY_R:"restart",KEY_T:"training",KEY_1:"reward_0",KEY_2:"reward_1",KEY_3:"reward_2",KEY_M:"music"}
+ var actions: Dictionary={KEY_ENTER:"start",KEY_J:"light",KEY_K:"heavy",KEY_Q:"ultimate",KEY_E:"ability",KEY_L:"guard",KEY_SPACE:"dodge",KEY_ESCAPE:"pause",KEY_R:"restart",KEY_T:"training",KEY_B:"practice_build",KEY_1:"reward_0",KEY_2:"reward_1",KEY_3:"reward_2",KEY_M:"music"}
  if actions.has(event.physical_keycode):
   var command: String=actions[event.physical_keycode]
   if event.physical_keycode==KEY_ENTER:
@@ -221,6 +237,36 @@ func _clear_inputs() -> void:
 
 func _action(command: String) -> void:
  if not ready_to_play: return
+ if practice_picker.visible:
+  if command.begins_with("practice_core:"):
+   practice_builds.choose(command.trim_prefix("practice_core:"))
+   _refresh_practice_build()
+  elif command.begins_with("practice_perk:"):
+   practice_builds.toggle(command.trim_prefix("practice_perk:"))
+   _refresh_practice_build()
+  elif command=="practice_build_apply":
+   practice_builds.commit()
+   _save_fighter_choice()
+   _close_practice_build()
+   # Full existing reset also clears ink/fire marks, buffered moves, actors,
+   # KO and ultimate cameras. No separate hot-swap path can leak old effects.
+   _start_practice()
+  elif command in ["practice_build_cancel","practice_build"]:_close_practice_build()
+  elif command=="music":music.toggle()
+  elif command=="voice":voice.toggle()
+  elif command=="menu":
+   _close_practice_build()
+   _action("menu")
+  return
+ if command=="practice_build":
+  if campaign.mode=="practice" and campaign.phase in ["fight","cleared","failed"] and not story.active and not night_picker.visible:
+   practice_was_paused=game.paused
+   game.paused=true
+   _clear_inputs()
+   practice_builds.begin(str(fighter.styleId))
+   _refresh_practice_build()
+  return
+ if command.begins_with("practice_core:") or command.begins_with("practice_perk:") or command in ["practice_build_apply","practice_build_cancel"]:return
  if night_picker.visible:
   if command.begins_with("night_core:"):
    var core_id:String=command.trim_prefix("night_core:")
@@ -330,18 +376,7 @@ func _action(command: String) -> void:
   if command=="start" and campaign.phase!="menu": return
   _clear_inputs()
   if command=="practice" or (command=="restart" and campaign.mode=="practice"):
-   var preserve_training: bool=campaign.mode=="practice" and campaign.phase!="menu"
-   stage_countdown=0.0
-   _ranking("cancel")
-   campaign.begin_practice()
-   story.reset()
-   if not preserve_training: game.set_training(false)
-   game.start_sparring()
-   game.enemy.name="识之律者"
-   game.enemy.tint=Color("d96583")
-   arena.set_region(0)
-   effects.set_palette(REGION_COLORS[0])
-   _sync_actors()
+   _start_practice()
   else:
    game.paused=true
    night_picker.open(_bar_font,str(fighter.styleId))
@@ -367,6 +402,33 @@ func _action(command: String) -> void:
  elif command=="practice_infinite_hp":
   if campaign.mode=="practice": game.set_infinite_hp(not game.infinite_hp)
  else: game.action(command)
+
+func _refresh_practice_build() -> void:
+ practice_view=practice_builds.snapshot()
+ practice_picker.present(practice_view)
+
+func _close_practice_build() -> void:
+ practice_picker.hide()
+ practice_view={}
+ game.paused=practice_was_paused or not application_focused
+ _clear_inputs()
+
+func _start_practice() -> void:
+ var preserve_training:bool=campaign.mode=="practice" and campaign.phase!="menu"
+ _clear_inputs()
+ stage_countdown=0.0
+ _ranking("cancel")
+ campaign.begin_practice()
+ story.reset()
+ if not preserve_training:game.set_training(false)
+ game.start_sparring()
+ practice_builds.apply(game.player,str(fighter.styleId))
+ game.paused=not application_focused
+ game.enemy.name="识之律者"
+ game.enemy.tint=Color("d96583")
+ arena.set_region(0)
+ effects.set_palette(REGION_COLORS[0])
+ _sync_actors()
 
 func _start_trial(core_id:String="") -> void:
  campaign.begin_trial("",-1,FighterRoster.presentation_from_selection(fighter),core_id)
@@ -486,6 +548,7 @@ func _load_fighter_choice() -> void:
   style_id=str(config.get_value("fighter","style",style_id))
   skin_id=str(config.get_value("fighter","appearance",skin_id))
   remembered=config.get_value("fighter","appearances",{})
+  practice_builds.restore(config.get_value("practice","builds",{}))
  if OS.has_feature("web"):
   var saved: Variant=JavaScriptBridge.eval("(function(){try{return localStorage.getItem('taixu.fighter');}catch(e){return null;}})()",true)
   if saved is String:
@@ -494,6 +557,7 @@ func _load_fighter_choice() -> void:
     style_id=str(value.get("style",style_id))
     skin_id=str(value.get("appearance",skin_id))
     remembered=value.get("appearances",{})
+    practice_builds.restore(value.get("practiceBuilds",{}))
  if remembered is Dictionary:
   for key in remembered:
    if not FighterRoster.resolve("fuhua",str(key),str(remembered[key])).is_empty():
@@ -507,9 +571,10 @@ func _save_fighter_choice() -> void:
  config.set_value("fighter","style",fighter.styleId)
  config.set_value("fighter","appearance",fighter.appearanceId)
  config.set_value("fighter","appearances",appearance_choices)
+ config.set_value("practice","builds",practice_builds.saved)
  config.save(FIGHTER_SETTINGS)
  if OS.has_feature("web"):
-  var encoded: String=JSON.stringify({"style":fighter.styleId,"appearance":fighter.appearanceId,"appearances":appearance_choices})
+  var encoded: String=JSON.stringify({"style":fighter.styleId,"appearance":fighter.appearanceId,"appearances":appearance_choices,"practiceBuilds":practice_builds.saved})
   JavaScriptBridge.eval("try{localStorage.setItem('taixu.fighter',"+JSON.stringify(encoded)+");}catch(e){}",true)
 
 func _roster_snapshot() -> Dictionary:
@@ -759,7 +824,7 @@ func _process(delta: float) -> void:
  visual_time+=visual_dt
  if game.ended and campaign.phase=="fight" and not story.active:
   end_time+=0.0 if finish_freeze else visual_dt
-  if end_time>=end_delay and not knockout.active and not knockout_paused and knockout.focused:
+  if end_time>=end_delay and not knockout.active and not knockout_paused and knockout.focused and not practice_picker.visible:
    campaign.finish(game.snapshot())
    _save_local_progress()
    _clear_inputs()
@@ -771,7 +836,7 @@ func _process(delta: float) -> void:
    elif campaign.phase=="failed" and campaign.mode=="trial": _begin_story("defeat")
  story.tick(dt)
  boss_entrance.tick(dt,game.paused)
- victory.tick(dt)
+ victory.tick(0.0 if practice_picker.visible else dt)
  # Presentation changes only top-level fields; nested combat data is read-only.
  var pf: Dictionary=game.player.duplicate()
  if campaign.phase=="menu":
@@ -830,7 +895,7 @@ func _process(delta: float) -> void:
  # still finish on the presentation clock when the simulation is not running.
  var fx_dt: float=actor_delta
  if boss_entrance.active: fx_dt=dt if not game.paused and boss_entrance.focused else 0.0
- elif victory.visible: fx_dt=dt if victory.focused and not victory.paused else 0.0
+ elif victory.visible: fx_dt=dt if victory.focused and not victory.paused and not practice_picker.visible else 0.0
  effects.tick(fx_dt)
  sentience_effects.tick(fx_dt)
  combat_accent.tick(fx_dt)
@@ -877,6 +942,7 @@ func _process(delta: float) -> void:
  state.healthDisplay=health_display
  state.ko=ko_frame
  state.nightCoreChoice=night_picker.visible
+ state.practiceBuild=practice_view
  state.coreOptions=Combat.ArmorPaths.options(str(fighter.styleId)) if night_picker.visible else []
  state.coreBasics=Combat.ArmorPaths.BASICS.get(str(fighter.styleId),"") if night_picker.visible else ""
  state.campaign=campaign.snapshot(state)
@@ -892,7 +958,7 @@ func _process(delta: float) -> void:
  state.voice=voice_state
  state.music=music.snapshot()
  hud.update_status(state)
- hud.visible=not story.active and not boss_entrance.active and not night_picker.visible
+ hud.visible=not story.active and not boss_entrance.active and not night_picker.visible and not practice_picker.visible
  if OS.has_feature("web") and telemetry_time>0.10:
   telemetry_time=0.0
   player_pose=player.presentation_snapshot()

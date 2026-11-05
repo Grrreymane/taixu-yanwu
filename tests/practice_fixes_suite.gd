@@ -48,6 +48,7 @@ func _buttons_contract() -> void:
  for mode in ["practice","trial"]:
   for name in ["VictoryReplay","VictoryAgain","VictoryMenu","VictoryOtherMode"]:
    world._action("menu");world._action(mode)
+   if world.night_picker.visible:world._action("night_core:"+str(world.night_picker.core_ids[0]))
    if mode=="trial":world.campaign.stage_index=world.campaign.stages.size()-1;world._begin_encounter(false)
    _finish_fixture(world,true);world.victory.skip();_frames(world,2)
    await process_frame
@@ -55,6 +56,8 @@ func _buttons_contract() -> void:
    _check(button.is_visible_in_tree(),mode+" result button visible: "+name)
    var plays:int=world.victory.plays
    await _click(world,button)
+   if world.night_picker.visible and name in ["VictoryAgain","VictoryOtherMode"]:
+    world._action("night_core:"+str(world.night_picker.core_ids[0]))
    if name=="VictoryReplay":_check(world.victory.plays==plays+1 and world.victory.playing(),mode+" replay button activates across UI refresh")
    elif name=="VictoryMenu":_check(world.campaign.phase=="menu" and not world.victory.visible,mode+" return-home button activates across UI refresh")
    else:

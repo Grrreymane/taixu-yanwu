@@ -23,5 +23,27 @@
 #battle-choice-info p{white-space:pre-line;margin-bottom:26px}
 .bc-tooltip{position:absolute;z-index:2;bottom:66px;right:8px;width:min(310px,85vw);box-sizing:border-box;padding:16px 18px;background:#091e30;border:1px solid #9cc7e0;border-radius:6px;color:#e1edf5;font-size:16px;line-height:1.65;white-space:pre-line;box-shadow:0 8px 30px #0008;pointer-events:none}
 .bc-tooltip[hidden]{display:none}
+.bc-practice-entry{position:fixed;z-index:29;top:159px;right:22px;box-sizing:border-box;padding:4px 8px;border:1px solid #8aafc2;border-radius:5px;background:#123049ed;color:#fff;font:16px Battle,'Microsoft YaHei',sans-serif;cursor:pointer}
+.bc-practice-entry[hidden]{display:none}
+.bc-practice-entry:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.bc-practice .bc-title{margin-bottom:28px}
+.bc-practice .bc-select{height:270px;padding:24px}
+.bc-practice .bc-name{font-size:26px;margin-bottom:19px}
+.bc-practice .bc-effect{font-size:19px;line-height:1.6}
+.bc-practice [aria-pressed=true]{border-color:#b9eaff;background:#254960;box-shadow:inset 0 0 0 2px #b9eaff}
+.bc-extras:empty{display:none}
+.bc-baseline{margin-top:18px;padding:10px 22px}
+.bc-perks{border:0;padding:0;margin:26px 0 0;min-width:0}
+.bc-perks legend{font-size:22px;margin-bottom:16px;padding:0}
+.bc-perk-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.bc-perk{display:flex;align-items:flex-start;gap:14px;padding:20px;background:#132d40;border:1px solid #567b94;border-radius:8px;cursor:pointer}
+.bc-perk:has(input:checked){border-color:#b9eaff;background:#254960}
+.bc-perk input{width:22px;height:22px;flex:0 0 22px;margin:3px 0 0;accent-color:#b9eaff;cursor:pointer}
+.bc-perk input:focus-visible{outline:3px solid #fff;outline-offset:4px}
+.bc-perk-name{display:block;font-size:22px;margin-bottom:8px}
+.bc-perk-effect{display:block;font-size:18px;line-height:1.6;color:#e1edf5}
+.bc-primary{padding:11px 30px;border:1px solid #c5f0ff;border-radius:6px;background:#b9eaff;color:#10283c;font:18px Battle,'Microsoft YaHei',sans-serif;cursor:pointer}
+@media(max-width:760px){.bc-practice .bc-select{height:auto;min-height:160px}.bc-practice .bc-name{margin-bottom:12px}.bc-perk-grid{grid-template-columns:1fr;gap:12px}.bc-practice .bc-footer{gap:12px}.bc-practice .bc-secondary,.bc-primary{padding:12px 18px}.bc-practice-entry{top:112px;right:16px}}
+@media(max-height:800px){#battle-choices.bc-practice{place-items:start center}.bc-practice .bc-panel{margin:auto}}
 @media(max-width:760px){#battle-choices{padding:20px 16px}.bc-title{margin-bottom:24px}.bc-grid{grid-template-columns:1fr;gap:14px}.bc-select{height:auto;min-height:170px;padding:20px 24px}.bc-name{font-size:24px;margin-bottom:10px}.bc-effect{font-size:18px}.bc-action{padding-top:17px}.bc-footer{margin-top:20px}}
 @media(max-height:570px) and (min-width:761px){#battle-choices{padding:16px}.bc-title{margin-bottom:18px}.bc-select{height:270px;padding:22px}.bc-name{font-size:24px;margin-bottom:15px}.bc-effect{font-size:18px}.bc-footer{margin-top:18px}}
